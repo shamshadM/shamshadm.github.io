@@ -1,0 +1,22 @@
+# main links links
+main:
+  - title: "Publications"
+    url: /publications/
+    
+  - title: "Talks"
+    url: /talks/
+    
+  - title: "Research"
+    url: /research/
+    
+  - title: "Teaching"
+    url: /teaching/
+    
+  - title: "Biostatistics"
+    url: /biostatistics/
+    
+  - title: "Posts"
+    url: /posts/
+    
+  - title: "CV"
+    url: /cv/
