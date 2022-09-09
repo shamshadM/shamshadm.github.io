@@ -1,0 +1,12 @@
+*.gem
+.bundle
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
+.vss
+_asset_bundler_cache
+_site
+Gemfile.lock
+test
+CHANGELOG.md
+
