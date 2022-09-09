@@ -1,6 +1,10 @@
 /* ==========================================================================
    jQuery plugin settings and other scripts
    ========================================================================== */
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
 $(document).ready(function(){
    // Sticky footer
   var bumpIt = function() {
@@ -18,6 +22,7 @@ $(document).ready(function(){
       didResize = false;
       bumpIt();
     }
+<<<<<<< HEAD
   }, 250); 
   // FitVids init
   $("#main").fitVids();
@@ -36,16 +41,45 @@ $(document).ready(function(){
     } else {
       // unfix
       $(".sidebar").removeClass("sticky");
+=======
+  }, 250);
+  // FitVids init
+  $("#main").fitVids();
+
+  // init sticky sidebar
+  $(".sticky").Stickyfill();
+
+  var stickySideBar = function(){
+    var show = $(".author__urls-wrapper button").length === 0 ? $(window).width() > 1024 : !$(".author__urls-wrapper button").is(":visible");
+    // console.log("has button: " + $(".author__urls-wrapper button").length === 0);
+    // console.log("Window Width: " + windowWidth);
+    // console.log("show: " + show);
+    //old code was if($(window).width() > 1024)
+    if (show) {
+      // fix
+      Stickyfill.rebuild();
+      Stickyfill.init();
+      $(".author__urls").show();
+    } else {
+      // unfix
+      Stickyfill.stop();
+      $(".author__urls").hide();
+>>>>>>> dev
     }
   };
 
   stickySideBar();
 
+<<<<<<< HEAD
   $(window).resize(function() {
+=======
+  $(window).resize(function(){
+>>>>>>> dev
     stickySideBar();
   });
 
   // Follow menu drop down
+<<<<<<< HEAD
   $(".author__urls-wrapper").find("button").on("click", function() {
     $(".author__urls").toggleClass("is--visible");
     $(".author__urls-wrapper").find("button").toggleClass("open");
@@ -103,6 +137,19 @@ $(document).ready(function(){
   $(
     "a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif'],a[href$='.webp']"
   ).has("> img").addClass("image-popup");
+=======
+
+  $(".author__urls-wrapper button").on("click", function() {
+    $(".author__urls").fadeToggle("fast", function() {});
+    $(".author__urls-wrapper button").toggleClass("open");
+  });
+
+  // init smooth scroll
+  $("a").smoothScroll({offset: -20});
+
+  // add lightbox class to all image links
+  $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
+>>>>>>> dev
 
   // Magnific-Popup options
   $(".image-popup").magnificPopup({
@@ -112,6 +159,7 @@ $(document).ready(function(){
     //   }
     //   return true;
     // },
+<<<<<<< HEAD
     type: "image",
     tLoading: "Loading image #%curr%...",
     gallery: {
@@ -121,10 +169,22 @@ $(document).ready(function(){
     },
     image: {
       tError: '<a href="%url%">Image #%curr%</a> could not be loaded.'
+=======
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      tError: '<a href="%url%">Image #%curr%</a> could not be loaded.',
+>>>>>>> dev
     },
     removalDelay: 500, // Delay in milliseconds before popup is removed
     // Class that is added to body when popup is open.
     // make it unique to apply your CSS animations just to this exact popup
+<<<<<<< HEAD
     mainClass: "mfp-zoom-in",
     callbacks: {
       beforeOpen: function() {
@@ -133,12 +193,20 @@ $(document).ready(function(){
           "mfp-figure",
           "mfp-figure mfp-with-anim"
         );
+=======
+    mainClass: 'mfp-zoom-in',
+    callbacks: {
+      beforeOpen: function() {
+        // just a hack that adds mfp-anim class to markup
+        this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+>>>>>>> dev
       }
     },
     closeOnContentClick: true,
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
 
+<<<<<<< HEAD
   // Add anchors for headings
   $('.page__content').find('h1, h2, h3, h4, h5, h6').each(function() {
     var id = $(this).attr('id');
@@ -152,3 +220,6 @@ $(document).ready(function(){
     }
   });
 });
+=======
+});
+>>>>>>> dev
