@@ -4,7 +4,7 @@
 .jekyll-metadata
 .sass-cache
 .vss
-_asset_bundler_cache
+node_modules
 _site
 Gemfile.lock
 test
