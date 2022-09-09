@@ -7,7 +7,7 @@ $(document).ready(function() {
   var bumpIt = function() {
     $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
   };
-  
+
   bumpIt();
   $(window).resize(
     jQuery.throttle(250, function() {
@@ -17,7 +17,7 @@ $(document).ready(function() {
 
   // FitVids init
   $("#main").fitVids();
-  
+
   // Sticky sidebar
   var stickySideBar = function() {
     var show =
