@@ -1,0 +1,13 @@
+*.gem
+.bundle
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
+.vss
+node_modules
+_site
+Gemfile.lock
+test
+CHANGELOG.md
+**/vendor/
+

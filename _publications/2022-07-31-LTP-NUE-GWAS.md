@@ -1,0 +1,18 @@
+---
+title: "Preliminary Dissection of Grain Yield and Related Traits at Diferential Nitrogen Levels in Diverse Pre-Breeding Wheat Germplasm Through Association Mapping"
+collection: publications
+permalink: /publication/2022-07-31-LTP-NUE-GWAS
+excerpt: 'Development of nutrient efficient cultivars depends on effective identification and utilization of genetic variation. We characterized a set of 276 pre-breeding lines (PBLs) for several traits at different levels of nitrogen application. These PBLs originate from synthetic wheats and landraces. We witnessed significant variation in various traits among PBLs to different nitrogen doses. There was ~ 4–18% variation range in different agronomic traits in response to nitrogen application, with the highest variation for the biological yield (BY) and the harvest index. Among various agronomic traits measured, plant height, tiller number, and BY showed a positive correlation with nitrogen applications. GWAS analysis detected 182 marker-trait associations (MTAs) (at p-value < 0.001), out of which 8 MTAs on chromosomes 5D, 4A, 6A, 1B, and 5B explained more than 10% phenotypic variance. Out of all, 40 MTAs observed for differential nitrogen application response were contributed by the synthetic derivatives. Moreover, 20 PBLs exhibited significantly higher grain yield than checks and can be selected as potential donors for improved plant nitrogen use efficiency (pNUE).'
+date: 2022-07-31
+venue: 'Molecular Biotechnology'
+clink: 'https://doi.org/10.1007/s12033-022-00535-8'
+purl: '/files/research/Y_Gene_Transfer.pdf'
+citation: 'Sharma, A., Arif, M. A. R., <b>Shamshad, M.</b>, Rawale, K. S., Brar, A., Burgueno, J., … Singh, S. (2022). &quot;Preliminary Dissection of Grain Yield and Related Traits at Differential Nitrogen Levels in Diverse Pre-Breeding Wheat Germplasm Through Association Mapping&quot;.<i> Molecular Biotechnology</i>. Retrieved from https://doi.org/10.1007/s12033-022-00535-8'
+pubtype: 'journal'
+---
+
+<a href='/files/research/Y_Gene_Transfer.pdf'>Download PDF here</a>
+
+Abstract: Development of nutrient efficient cultivars depends on effective identification and utilization of genetic variation. We characterized a set of 276 pre-breeding lines (PBLs) for several traits at different levels of nitrogen application. These PBLs originate from synthetic wheats and landraces. We witnessed significant variation in various traits among PBLs to different nitrogen doses. There was ~ 4–18% variation range in different agronomic traits in response to nitrogen application, with the highest variation for the biological yield (BY) and the harvest index. Among various agronomic traits measured, plant height, tiller number, and BY showed a positive correlation with nitrogen applications. GWAS analysis detected 182 marker-trait associations (MTAs) (at p-value < 0.001), out of which 8 MTAs on chromosomes 5D, 4A, 6A, 1B, and 5B explained more than 10% phenotypic variance. Out of all, 40 MTAs observed for differential nitrogen application response were contributed by the synthetic derivatives. Moreover, 20 PBLs exhibited significantly higher grain yield than checks and can be selected as potential donors for improved plant nitrogen use efficiency (pNUE).
+
+Recommended citation: Sharma, A., Arif, M. A. R., <b>Shamshad, M.</b>, Rawale, K. S., Brar, A., Burgueno, J., … Singh, S. (2022). "Preliminary Dissection of Grain Yield and Related Traits at Differential Nitrogen Levels in Diverse Pre-Breeding Wheat Germplasm Through Association Mapping".<i> Molecular Biotechnology</i>. Retrieved from https://doi.org/10.1007/s12033-022-00535-8
