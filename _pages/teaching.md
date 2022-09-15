@@ -4,7 +4,6 @@ layout: single
 permalink: /teaching/
 header:
   overlay_image: /header/teaching.jpg
-  caption: "Photo by [Alexander Grey]"
   classes: wide 
 ---
 

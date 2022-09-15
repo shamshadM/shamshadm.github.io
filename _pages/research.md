@@ -5,7 +5,6 @@ permalink: /research/
 author_profile: true
 header:
   overlay_image: /header/ux-indonesia.jpg 
-  caption: "Photo by [Joel Filipe](https://unsplash.com/@gabiontheroad) on [Unsplash](https://unsplash.com)"
   classes: wide
 ---
 

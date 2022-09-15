@@ -5,7 +5,6 @@ permalink: /resume/
 author_profile: true
 header:
   overlay_image: /header/resume.jpg
-  caption: "Photo by [Kelly](https://unsplash.com/@kellysikkema) on [Unsplash](https://unsplash.com)"
 redirect_from:
   - /resume
 ---

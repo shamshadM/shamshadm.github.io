@@ -5,7 +5,6 @@ permalink: /publications/
 author_profile: true
 header:
     overlay_image: /header/pub.jpg
-    caption: "Photo by [Joel Filipe](https://unsplash.com/@joelfilip) on [Unsplash](https://unsplash.com)"
 page_excerpts: true
 classes: wide
 redirect_from: 
