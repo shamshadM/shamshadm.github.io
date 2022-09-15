@@ -1,6 +1,6 @@
 ---
 title: "Undergraduate Teaching Assistant"
-collection: courses
+collection: teaching
 layout: single
 type: "Undergraduate Courses"
 permalink: /teaching/2018-undergraduate-courses
