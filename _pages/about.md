@@ -20,26 +20,21 @@ I am passionate about Agriculture and cutting edge technologies. I have solid un
 
 I have professional Expertise in Plant Breeding, Quatitative Genetics, Geneomics and computational biology. I strong skills in Experimental Design, Data Analysis and Visualization in: R, SAS, jmp SAS, python, UNIX/Linux, HTML/CSS, Git and GitHub. I have worked experiences in DNA extration, PCR, Gel Electrophoresis, Microscopy.
 
-<figure style="width: 32%" class="align-right">
+<figure style="width: 24%" class="align-right">
   <img src="/images/crisat-hyderabad.jpg" alt="">
 </figure> 
 
 #### Education
 
-<i class="fa-solid fa-graduation-cap"></i> PhD in Plant Breeding & Genetics, 2019
-  - Punjab Agricultural University
+<i class="fa-solid fa-graduation-cap"></i> PhD in Plant Breeding & Genetics, 2019,  Punjab Agricultural University
 
-<i class="fa-solid fa-building-columns"></i> Exchange Student, Biosciences, 2018
-  - University of Bristol
+<i class="fa-solid fa-building-columns"></i> Exchange Student, Biosciences, 2018, University of Bristol
 
-<i class="fa-solid fa-building-columns"></i> Visting Scholar, Life Sciences, 2018
-  - University of Nottigham
+<i class="fa-solid fa-building-columns"></i> Visting Scholar, Life Sciences, 2018, University of Nottigham
 
-<i class="fa-solid fa-graduation-cap"></i> MSc in Plant Breeding & Genetics, 2014
-  - Punjab Agricultural University
+<i class="fa-solid fa-graduation-cap"></i> MSc in Plant Breeding & Genetics, 2014, Punjab Agricultural University
 
-<i class="fa-solid fa-graduation-cap"></i> BSc in Agriculture [Crop Science], 2012
-  - Punjab Agricultural University
+<i class="fa-solid fa-graduation-cap"></i> BSc in Agriculture [Crop Science], 2012, Punjab Agricultural University
 
 
 ### Interests:
