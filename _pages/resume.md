@@ -14,7 +14,7 @@ redirect_from:
 
 {% include base_path %}
 
-<hr>
+***
 
 <h1> Career Objective </h1>
 

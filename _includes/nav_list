@@ -2,7 +2,7 @@
 {% assign navigation = site.data.navigation[include.nav] %}
 
 <nav class="nav__list">
-  {% if page.sidebar.title %}<header><h4 class="nav__title" style="padding: 0;">{{ page.sidebar.title }}</h4></header>{% endif %}
+  {% if page.sidebar.title %}<header><h3 class="nav__title" style="padding: 0;">{{ page.sidebar.title }}</h3></header>{% endif %}
   <ul>
     {% for nav in navigation %}
       <li>
@@ -14,7 +14,7 @@
             {% assign domain = base_path %}
           {% endif %}
 
-          <a href="{{ domain }}{{ nav.url }}"><span class="nav__sub-title">{{ nav.title }}</span></a>
+          <a href="{{ nav.url | relative_url }}"><span class="nav__sub-title">{{ nav.title }}</span></a>
         {% else %}
           <span class="nav__sub-title">{{ nav.title }}</span>
         {% endif %}
@@ -22,8 +22,8 @@
         {% if nav.children != null %}
         <ul>
           {% for child in nav.children %}
-            {% comment %}internal/external URL check{% endcomment %}
-            {% if child.url contains "://" %}
+            <li><a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>{{ child.title }}</a></li>
+           {% if child.url contains "://" %}
               {% assign domain = "" %}
             {% else %}
               {% assign domain = base_path %}
