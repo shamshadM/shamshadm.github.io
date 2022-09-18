@@ -18,8 +18,8 @@ main:
   - title: "Resume"
     url: /resume/
 
-  - title: "Archieve"
-    url: /year-archive/
+  - title: "Tags"
+    url: /tags/
 
   - title: "Portfolio"
     url: /collection-archive/
