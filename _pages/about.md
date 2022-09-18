@@ -27,15 +27,15 @@ I have professional Expertise in Plant Breeding, Quatitative Genetics, Geneomics
 #### Education
 
 <i class="fa-solid fa-graduation-cap"></i> PhD in Plant Breeding & Genetics, Punjab Agricultural University, 2019
-
+<br>
 <i class="fa-solid fa-building-columns"></i> Exchange Student, Biosciences, University of Bristol, 2018
-
-<i class="fa-solid fa-building-columns"></i> Visting Scholar, Life Sciences, University of Nottigham, 2018
-
+<br>
+<i class="fa-solid fa-building-columns"></i> Visting Scholar, Life Sciences, University of Nottingham, 2018
+<br>
 <i class="fa-solid fa-graduation-cap"></i> MSc in Plant Breeding & Genetics, Punjab Agricultural University, 2014
-
+<br>
 <i class="fa-solid fa-graduation-cap"></i> BSc in Agriculture [Crop Science], Punjab Agricultural University, 2012
-
+<br>
 
 ### Interests:
 * Breeding and Genetics                       
