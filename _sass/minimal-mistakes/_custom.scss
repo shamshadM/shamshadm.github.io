@@ -53,7 +53,14 @@
 
 .edu {
   padding: 0;
-  line-height: 0.01;
+  line-height: 0.25;
   display: -ms-flexbox;
-  } 
-
+  font-size: normal;
+  font-weight: bold;
+   } 
+ 
+ .edu ul{
+    font-style: italic;
+  font-size: medium;
+  font-weight: normal;
+  }

@@ -554,7 +554,7 @@
 
     &:hover {
       color: $text-color;
-      background: $lighter-gray;                                  
+      background:mix(#000, $link-color, 5%);                                  
     }
   }
 

@@ -20,28 +20,28 @@ I am passionate about Agriculture and cutting edge technologies. I have solid un
 
 I have professional Expertise in Plant Breeding, Quatitative Genetics, Geneomics and computational biology. I strong skills in Experimental Design, Data Analysis and Visualization in: R, SAS, jmp SAS, python, UNIX/Linux, HTML/CSS, Git and GitHub. I have worked experiences in DNA extration, PCR, Gel Electrophoresis, Microscopy.
 
+<div class="edu">
 <figure style="width: 24%" class="align-right">
   <img src="/images/crisat-hyderabad.jpg" alt="">
 </figure> 
 
-#### Education
+<h4>Education</h4> 
 
-<div class="edu">
+<span class="fa-solid fa-graduation-cap"></span> PhD in Plant Breeding & Genetics 
+ <ul>Punjab Agricultural University, 2019</ul>
 
-<h6><i class="fa-solid fa-graduation-cap"></i> PhD in Plant Breeding & Genetics </h6>
-Punjab Agricultural University, 2019
+<span class="fa-solid fa-building-columns"></span> Exchange Student 
+ <ul>Biosciences, University of Bristol, 2018</ul>
 
-<h6><i class="fa-solid fa-building-columns"></i> Exchange Student </h6>
-Biosciences, University of Bristol, 2018
+<span class="fa-solid fa-building-columns"></span> Visting Scholar
+<ul>Life Sciences, University of Nottingham, 2018</ul>
 
-<h6><i class="fa-solid fa-building-columns"></i> Visting Scholar</h6>
-Life Sciences, University of Nottingham, 2018
+<span class="fa-solid fa-graduation-cap"></span> MSc in Plant Breeding & Genetics
+ <ul>Punjab Agricultural University, 2014</ul>
 
-<h6><i class="fa-solid fa-graduation-cap"></i> MSc in Plant Breeding & Genetics</h6>
- Punjab Agricultural University, 2014
-
-<h6> <i class="fa-solid fa-graduation-cap"></i> 
-BSc in  Agriculture [Crop Science]</h6>Punjab Agricultural University, 2012
+ <span class="fa-solid fa-graduation-cap"></span> 
+BSc in  Agriculture [Crop Science]
+<ul>Punjab Agricultural University, 2012</ul>
  </div>
 
 ### Interests:
