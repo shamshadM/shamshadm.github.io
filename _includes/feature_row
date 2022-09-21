@@ -24,7 +24,7 @@
               {% if f.image_path contains "://" %}
                 "{{ f.image_path }}"
               {% else %}
-                <img src="{{ f.image_path | prepend: "/images/" | relative_url }}"
+                "{{ f.image_path | prepend: "/images/" | relative_url }}"
               {% endif %}
             alt="{% if f.alt %}{{ f.alt }}{% endif %}">
             {% if f.image_caption %}
