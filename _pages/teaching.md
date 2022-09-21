@@ -11,14 +11,17 @@ Research plays a central role in my teaching as students improve their analytica
 
 ### General Teaching Materials
 {% for post in site.teaching reversed %}
-{% if post.collection == 'Genral' %}
+{% if post.type == 'General' %}
   {% include archive-single.html %}
   {% endif %}
 {% endfor %}
 
 ### Teaching Courses
+
 {% for post in site.teaching reversed %}
-{% if post.type == 'Undergraduate Courses' or "Graduate course" %}
+{% if post.type == 'Undergraduate Courses' %}
+  {% include archive-single.html %}
+  {% elsif post.type == "Graduate course" %}
   {% include archive-single.html %}
   {% endif %}
 {% endfor %}
