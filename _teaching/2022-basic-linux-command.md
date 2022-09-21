@@ -4,15 +4,15 @@ layout: single
 collection: teaching
 type: 'General'
 permalink: /teaching/2022-basic-linux-command
-date: 2018-02-08
+date: 2022-09-22
 excerpt: 'UNIX Tutorial for Beginners'
 
 feature_row:
-  - image_path: '/unix/logo.jpg'
+  - image_path: /unix/logo.jpg
     alt: "UNIX Tutorial One"
     title: "UNIX Tutorial One"
     excerpt: "Unix is a computer Operating System which is capable of handling activities from multiple users at the same time. The development of Unix started around 1969 at AT&T Bell Labs by Ken Thompson and Dennis Ritchie"
-    url: "/teaching/unix/unix1/"
+    url: "/files/unix/unix1"
     btn_label: "Read More"
     btn_class: "btn--primary"
 #   - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
