@@ -5,7 +5,7 @@
 .sass-cache
 .vss
 node_modules
-_site
+_site/
 Gemfile.lock
 test
 CHANGELOG.md
