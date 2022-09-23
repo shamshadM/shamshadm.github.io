@@ -2,9 +2,11 @@
 title: "Basic Linux command"
 layout: single
 collection: teaching
-type: 'General'
+type: 'Bioinformatics'
+classes: wide
 permalink: /teaching/2022-basic-linux-command
-date: 2022-09-22
+venue: "Punjab Agricultural University, Plant Breeding and Genetics"
+date: 2022-09-20
 
 feature_row:
   - image_path: /unix/logo1.webp
@@ -28,54 +30,58 @@ feature_row:
     url: "/files/unix/unix3"
     btn_label: "Read More"
     btn_class: "btn--primary"
-#   - image_path: /unix/logo1.jpg
-#     alt: "UNIX Tutorial One"
-#     title: "UNIX Tutorial One"
-#     excerpt: "When you first login, your current working directory is your home directory. 
-#   Your home directory has the same name as your user-name, for example, student-data, 
-#   and it is where your personal files and subdirectories are saved."
-#     url: "/files/unix/unix4"
-#     btn_label: "Read More"
-#     btn_class: "btn--primary"
-#   - image_path: /unix/logo1.jpg
-#     alt: "UNIX Tutorial One"
-#     title: "UNIX Tutorial One"
-#     excerpt: "When you first login, your current working directory is your home directory. 
-#   Your home directory has the same name as your user-name, for example, student-data, 
-#   and it is where your personal files and subdirectories are saved."
-#     url: "/files/unix/unix5"
-#     btn_label: "Read More"
-#     btn_class: "btn--primary"
-#   - image_path: /unix/logo1.jpg
-#     alt: "UNIX Tutorial One"
-#     title: "UNIX Tutorial One"
-#     excerpt: "When you first login, your current working directory is your home directory. 
-#   Your home directory has the same name as your user-name, for example, student-data, 
-#   and it is where your personal files and subdirectories are saved."
-#     url: "/files/unix/unix6"
-#     btn_label: "Read More"
-#     btn_class: "btn--primary"
-# feature_row1:
-#   - image_path: /unix/logo1.jpg
-#     alt: "placeholder image 2"
-#     title: "Placeholder Image Right Aligned"
-#     excerpt: 'This is some sample content that goes here with **Markdown** formatting. Right aligned with `type="right"`'
-#     url: "#test-link"
-#     btn_label: "Read More"
-#     btn_class: "btn--inverse"
-# feature_row2:
-#   - image_path: /unix/logo1.jpg
-#     alt: "placeholder image 2"
-#     title: "Placeholder Image Center Aligned"
-#     excerpt: 'This is some sample content that goes here with **Markdown** formatting. Centered with `type="center"`'
-#     url: "#test-link"
-#     btn_label: "Read More"
-#     btn_class: "btn--inverse"
-
+  - image_path: /unix/Streams۱.webp
+    alt: "Input-Output Redirections"
+    title: "Input-Output Redirections"
+    excerpt: "In Linux, each process has three communication channels: standard input, standard output, and standard error. These communication channels help users interact with the processes on a Linux system"
+    url: "/files/unix/unix4"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - image_path: /unix/Putorius-Feature-Default.jpg
+    alt: "Linux Wildcards"
+    title: "Linux Wildcards"
+    excerpt: "A wildcard in Linux means it might be a symbol or set of symbols representing other characters. It is generally used in substituting any string or a character. Wildcards are mainly used to increase the efficiency and flexibility of searches in Linux."
+    url: "/files/unix/unix5"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - image_path: /unix/Linux-File-Permissions.webp
+    alt: "Linux File Access Permissions"
+    title: "Linux File Access Permissions"
+    excerpt: "Most file systems include attributes of files and directories that control the ability of users to read, change, navigate, and execute the contents of the file system."
+    url: "/files/unix/unix6"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - image_path: /unix/linux-tar-gz.webp
+    alt: "UNIX Useful commands"
+    title: "UNIX Useful commands"
+    excerpt: "Learn how to check disk space in Linux using the df and du command, including available disk space, used disk space and total disk space. we also learn compress utility which reduces the size of files using adaptive Lempel-Ziv coding. Each file is renamed to the same name plus the extension .Z."
+    url: "/files/unix/unix7"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - image_path: /unix/install-software.webp
+    alt: "Compiling UNIX software packages"
+    title: "Compiling UNIX software packages"
+    excerpt: "The Unix command for compiling C code is gcc. This is a compiler from Gnu for Linux. If you are using a Unix machine like Solaris you may need to use the command cc.) When you compile your program the compiler produces a file containing binary code which is directly readable by the machine you are on."
+    url: "/files/unix/unix8"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - image_path: /unix/unix.webp
+    alt: "UNIX Variables"
+    title: "UNIX Variables"
+    excerpt: "Variables are a way of passing information from the shell to programs when you run them. Programs look `in the environment` for particular variables and if they are found will use the values stored. Some are set by the system, others by you, yet others by the shell, or any program that loads another program."
+    url: "/files/unix/unix9"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 ---
+
+Linux is a family of free and open-source operating systems based on the Linux kernel. Operating systems based on Linux are known as Linux distributions or distros. Examples include Debian, Ubuntu, Fedora, CentOS, Gentoo, Arch Linux, and many others.
+
+The Linux kernel has been under active development since 1991, and has proven to be extremely versatile and adaptable. You can find computers that run Linux in a wide variety of contexts all over the world, from web servers to cell phones. Today, 90% of all cloud infrastructure and 74% of the world’s smartphones are powered by Linux.
+
+However, newcomers to Linux may find it somewhat difficult to approach, as Linux filesystems have a different structure than those found on Windows or MacOS. Additionally, Linux-based operating systems depend heavily on working with the command line interface, while most personal computers rely on graphical interfaces.
+
+This guide serves as an introduction to important command line concepts and skills and equips newcomers to learn more about Linux.
 
 {% include feature_row id="intro" type="center" %}
 
 {% include feature_row %}
-<!-- {% include feature_row id="feature_row1" type="left" %}
-{% include feature_row id="feature_row2" type="left" %} -->

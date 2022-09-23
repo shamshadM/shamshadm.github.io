@@ -11,7 +11,7 @@ Research plays a central role in my teaching as students improve their analytica
 
 ### General Teaching Materials
 {% for post in site.teaching reversed %}
-{% if post.type == 'General' %}
+{% if post.type == 'Bioinformatics' %}
   {% include archive-single.html %}
   {% endif %}
 {% endfor %}
