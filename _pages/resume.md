@@ -1,8 +1,9 @@
 ---
-layout: archive
+layout: single
 title: "Resume"
 permalink: /resume/
 author_profile: true
+classes: wide
 header:
   overlay_image: /header/resume.jpg
 redirect_from:
