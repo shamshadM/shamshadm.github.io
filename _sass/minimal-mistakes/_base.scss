@@ -28,7 +28,7 @@ h4,
 h5,
 h6 {
   margin: 1em 0 1em;
-  line-height: 1.4;
+  line-height: 1.2;
   font-family: $header-font-family;
   font-weight: bold;
 }
@@ -64,8 +64,8 @@ small,
 }
 
 p {
-  margin-top: 2em;               
-  margin-bottom: 2em;
+  margin-top: 1em;               
+  margin-bottom: 1em;
 }
 
 u,
@@ -155,7 +155,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: $monospace,  $serif;
+  font-family: $monospace, $serif;
    font-size: 0.95em;                                      
 }
 
@@ -187,19 +187,19 @@ hr {
   display: block;
   margin: 1em 0;
   border: 0;
-  border-top: 2px solid $border-color;
+  border-top: 1px solid $border-color;
 }
 
 /* lists */
 
 ul li,
 ol li {
-  margin-bottom: 0.6em;
+  margin-bottom: 0.5em;
 }
 
 li ul,
 li ol {
-  margin-top: 0.6em;
+  margin-top: 0.5em;
 }
 
 ul li {
@@ -219,12 +219,12 @@ figure {
   -webkit-box-align: start;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin: 2em 0;
+  margin: 0.5em 0;
 
   img,
   iframe,
   .fluid-width-video-wrapper {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
   }
 
   img {
