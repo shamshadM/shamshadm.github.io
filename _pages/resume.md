@@ -6,8 +6,6 @@ author_profile: true
 classes: wide
 header:
   overlay_image: /header/resume.jpg
-redirect_from:
-  - /resume
 ---
 
 <embed type="application/pdf" src="/files/pdf/Mohammad_Shamshad_Resume.pdf" width="100%" height="100%">

@@ -7,8 +7,8 @@ header:
     overlay_image: /header/pub.jpg
 page_excerpts: true
 classes: wide
-redirect_from: 
-  - /files/reasearch/
+# redirect_from: 
+#   - /files/reasearch/
 ---
 
 ****

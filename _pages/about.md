@@ -6,9 +6,6 @@ author_profile: true
 classes: wide
 header:
     overlay_image: /header/hifi-new-unsplash.jpg
-# redirect_from: 
-#   - /about/
-#   # - /about.html
 ---
 
 I work as a post-doctoral researcher in the **[Transforming India's Green Revolution by Research and Empowerment for Sustainable food Supplies](https://tigr2ess.globalfood.cam.ac.uk/fps/FP3)** at the [Plant Breeding and Genetics, PAU](https://www.pau.edu/coa/index.php?_act=manageDepartments&DO=viewDepartment&intLinkID=9) in Ludhiana, India.
