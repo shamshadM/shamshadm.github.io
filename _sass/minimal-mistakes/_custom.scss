@@ -42,13 +42,13 @@
 /* Toggle theme setting */
 
 .togglefa {
-  float: inline-start;
+  float: inline-end;
   padding: auto;
   overflow: hidden;
-  padding-left: 1rem;
-  display: flex;
-  height: 45px;
+   display: flex;
+  height: 33px;
   align-items: center;
+  -webkit-animation: alternate;
 }		
 
 .edu {
