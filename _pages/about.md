@@ -10,11 +10,11 @@ header:
 
 I work as a post-doctoral researcher in the **[Transforming India's Green Revolution by Research and Empowerment for Sustainable food Supplies](https://tigr2ess.globalfood.cam.ac.uk/fps/FP3)** at the [Plant Breeding and Genetics, PAU](https://www.pau.edu/coa/index.php?_act=manageDepartments&DO=viewDepartment&intLinkID=9) in Ludhiana, India.
 
-My work focus on the developement and evaluation of high yielding, diseases resistance, and abiotic stress tolerance crops. `shamshad.in` is my personal blog to keep track of my projects and different HOWTOs related to data and tech. 
+My work focus on the development and evaluation of high-yielding, diseases resistance, and abiotic stress tolerance crops. `shamshad.in` is my blog to keep track of my projects and different HOWTOs related to data and tech. 
 
-I am passionate about Agriculture and cutting edge technologies. I have solid understanding and rigorous hands on experience in field of plant breeding, quatitative genetics, computational biology and hight throughput phenotyping, which I earned during my academic and reaserach work with plant breeder/geneticists, bioinformaticists, pathologist in my undergraduate, graduate and postdoctoral career. 
+I am passionate about Agriculture and cutting-edge technologies. I have a solid understanding and rigorous hands-on experience in field of plant breeding, quantitative genetics, computational biology and high throughput phenotyping, which I earned during my academic and research work with plant breeder/geneticists, bioinformaticists, and pathologists in my undergraduate, graduate and postdoctoral career. 
 
-I have professional Expertise in Plant Breeding, Quatitative Genetics, Geneomics and computational biology. I strong skills in Experimental Design, Data Analysis and Visualization in: R, SAS, jmp SAS, python, UNIX/Linux, HTML/CSS, Git and GitHub. I have worked experiences in DNA extration, PCR, Gel Electrophoresis, Microscopy.
+I have professional Expertise in Plant Breeding, Quantitative Genetics, Genomics and computational biology. I am passionate about Experimental Design, Data Analysis and Visualization using R, SAS, jmp SAS, python, UNIX/Linux, HTML/CSS, Git and GitHub. I have worked experience in DNA extraction, PCR, Gel Electrophoresis, and Microscopy.
 
 <div class="edu">
 <figure style="width: 35%" class="align-right">
