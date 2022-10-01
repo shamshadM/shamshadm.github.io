@@ -21,7 +21,8 @@ Comming soon
 <hr>
 
 {% if site.author.googlescholar %}
-  You can also find my articles on <u><a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</u>
+ I have collaborated to manuscripts published in high quality peer-reviewed scientific journals. 
+ <a href="{{site.author.googlescholar}}">you can see my Google Scholar profile</a>.
 {% endif %}
 
 {% include base_path %}
