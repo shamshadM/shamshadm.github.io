@@ -17,7 +17,7 @@ I am passionate about Agriculture and cutting edge technologies. I have solid un
 I have professional Expertise in Plant Breeding, Quatitative Genetics, Geneomics and computational biology. I strong skills in Experimental Design, Data Analysis and Visualization in: R, SAS, jmp SAS, python, UNIX/Linux, HTML/CSS, Git and GitHub. I have worked experiences in DNA extration, PCR, Gel Electrophoresis, Microscopy.
 
 <div class="edu">
-<figure style="width: 24%" class="align-right">
+<figure style="width: 35%" class="align-right">
   <img src="/images/crisat-hyderabad.jpg" alt="">
 </figure> 
 
