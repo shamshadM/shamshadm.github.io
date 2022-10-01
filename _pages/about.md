@@ -27,10 +27,10 @@ I have professional Expertise in Plant Breeding, Quantitative Genetics, Genomics
  <ul>Punjab Agricultural University, 2019</ul>
 
 <span class="fa-solid fa-building-columns"></span> Exchange Student 
- <ul>Biosciences, University of Bristol, 2018</ul>
+ <ul>Life Sciences, University of Bristol, 2018</ul>
 
 <span class="fa-solid fa-building-columns"></span> Visting Scholar
-<ul>Life Sciences, University of Nottingham, 2018</ul>
+<ul>Biosciences, University of Nottingham, 2018</ul>
 
 <span class="fa-solid fa-graduation-cap"></span> MSc in Plant Breeding & Genetics
  <ul>Punjab Agricultural University, 2014</ul>
