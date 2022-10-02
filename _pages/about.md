@@ -18,7 +18,7 @@ I have professional Expertise in Plant Breeding, Quantitative Genetics, Genomics
 
 <div class="edu">
 <figure  class="align-right">
-  <img id="about-me" src="/images/crisat-hyderabad.jpg" alt="">
+  <img id="about-me" src="/images/Shamshad_Rattan.jpg" alt="about-me">
 </figure> 
 
 <h4>Education</h4> 
