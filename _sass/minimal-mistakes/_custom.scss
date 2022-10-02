@@ -42,7 +42,7 @@
 /* Toggle theme setting */
 
 .togglefa {
-  float: inline-end;
+  float: inline-start;
   padding: auto;
   overflow: hidden;
    display: flex;
@@ -53,12 +53,17 @@
 .edu {
   padding: 0em;
   line-height: 1em;
-  display: -ms-flexbox;
   font-size: normal;
-   } 
- 
+} 
+
+#about-me{
+  border: 2px solid rgb(130, 130,130);
+  height: auto;
+  width: auto;
+}
+
  .edu ul{
-    font-style: italic;
+  font-style: italic;
   font-size: medium;
   font-weight: normal;
   }
