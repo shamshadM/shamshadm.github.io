@@ -104,6 +104,7 @@ Add the following line AFTER the list of other commands.
 set history = 200
 ```
 Save the file and force the shell to reread its .cshrc file buy using the shell source command.
+
 ```scss
 $ source .cshrc
 ```
@@ -123,6 +124,7 @@ You can add it to the end of your existing path (the **$path** represents this) 
 $ set path = ($path ~/units174/bin)
 ```
 Test that this worked by trying to run units in any directory other that where units is actually located.
+
 ```scss
 $ cd; units
 ```

@@ -7,14 +7,14 @@ author_profile: true
 toc: true
 ---
 
- ![Unix files sytem](/images/unix/linux-cp-command.png)
+![Unix files sytem](/images/unix/linux-cp-command.png)
 
 ---
 ## Copying Files
 ---
 ### cp (copy)
 
-cp stands for copy. This command is used to copy files or group of files or directory. It creates an exact image of a file on a disk with different file name. cp command require at least two filenames in its arguments. The cp do copy of file1 file2 is the command which makes a copy of **file1** in the current working directory and calls it **file2**
+cp stands for copy. This command is used to copy files or group of files or directory. It creates an exact image of a file on a disk with different file name. cp command require at least two filenames in its arguments. The cp do copy of `file1` `file2` is the command which makes a copy of **file1** in the current working directory and calls it **file2**
 
 ```scss
 $ cp [OPTION] Source Destination
@@ -40,7 +40,7 @@ The above command means copy the file **science.txt** to the current directory, 
 
 > Note: The directory **/vol/examples/tutorial/** is an area to which everyone in the department has read and copy access. If you are from outside the University, you can grab a copy of the file [here](science.txt). Use 'File/Save As..' from the menu bar to save it into your **unixstuff** directory.
 
-:loudspeaker: <b> Exercise </b> 
+<b> :loudspeaker: Exercise</b> 
 
 Create a backup of your **science.txt** file by copying it to a file called **science.bak**
 
@@ -98,7 +98,7 @@ At the prompt, type
 ```scss
 $ clear
 ```
-This will clear all text and leave you with the % prompt at the top of the window.
+This will clear all text and leave you with the $ prompt at the top of the window.
 
 ### cat (concatenate)
 
@@ -114,7 +114,7 @@ The command less writes the contents of a file onto the screen a page at a time.
 ```scss
 $ less science.txt
 ```
-Press the `[space-bar]` if you want to see another page, type `[q]` if you want to quit reading. As you can see, less is used in preference to cat for long files.
+Press the **`space-bar`** if you want to see another page, type **`q`** if you want to quit reading. As you can see, less is used in preference to cat for long files.
 
 ### head
 
@@ -128,7 +128,7 @@ Then type
 ```scss
 $ head -5 science.txt
 ```
-What difference did the -5 do to the head command?
+:loudspeaker: What difference did the -5 do to the head command?
 
 ### tail
 
@@ -138,7 +138,7 @@ Clear the screen and type
 ```scss
 $ tail science.txt
 ```
-How can you view the last 15 lines of the file?
+:loudspeaker: How can you view the last 15 lines of the file?
 
 ---
 ## Searching the contents of a file
@@ -146,7 +146,7 @@ How can you view the last 15 lines of the file?
 
 ### Simple searching using less
 
-Using less, you can search though a text file for a keyword (pattern). For example, to search through **science.txt** for the word 'science', type
+Using less, you can search though a text file for a keyword (pattern). For example, to search through **science.txt** for the word `science`, type
 ```scss
 $ less science.txt
 ```
@@ -163,7 +163,7 @@ $ grep science science.txt
 ```
 As you can see, grep has printed out each line containg the word science.
 
-:loudspeaker: Or has it????
+<b>:loudspeaker: Or has it?</b>
 
 Try typing
 ```scss
@@ -207,18 +207,18 @@ To find out how many lines the file has, type
 ```scss
 $ wc -l science.txt
 ```
-
-<h2> Summary </h2>
+---
+<b> Summary</b>
 
 | code                          | Function                                    			   |                                             
 | :-------------                |:------------------------------------------: 			   |
-| cp file1 file2  			    |   copy file1 and call it file2                           |
-| mv file1 file2  			    |  move or rename file1 to file2                           |
-| rm file         			    |  remove a file                                           |
-| rmdir directory 			    |  remove a directory                                      |
-| cat file        			    |  display a file                                          |
-| more file       			    | display a file a page at a time                          |
-| head file       			    | display the first few lines of a file                    |
-| tail file       			    | display the last few lines of a file                     |
-| grep 'keyword' file search    | a file for keywords                                      |
-| wc file					    | count number of lines/words/characters in file           |
+| `cp file1 file2` 			    |   copy file1 and call it file2                           |
+| `mv file1 file2` 			    |  move or rename file1 to file2                           |
+| `rm file` 			        |  remove a file                                           |
+| `rmdir directory` 			|  remove a directory                                      |
+| `cat file` 			        |  display a file                                          |
+| `more file` 			        | display a file a page at a time                          |
+| `head file` 			        | display the first few lines of a file                    |
+| `tail file` 			        | display the last few lines of a file                     |
+| `grep [keyword file] search`  | a file for keywords                                      |
+| `wc file`					    | count number of lines/words/characters in file           |

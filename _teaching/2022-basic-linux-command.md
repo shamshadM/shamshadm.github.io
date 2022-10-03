@@ -30,7 +30,7 @@ feature_row:
     url: "/files/unix/unix3"
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - image_path: /unix/Streams۱.webp
+  - image_path: /unix/Streams.webp
     alt: "Input-Output Redirections"
     title: "Input-Output Redirections"
     excerpt: "In Linux, each process has three communication channels: standard input, standard output, and standard error. These communication channels help users interact with the processes on a Linux system"

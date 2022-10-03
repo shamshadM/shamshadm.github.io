@@ -74,7 +74,7 @@ will give you the commands with keyword in their manual page header. For example
 $ apropos copy
 ```
 
-<h2>Summary </h2>
+<b>Summary </b>
 
 | code           | Function                            |
 | -------------  | :------------------------------:    |

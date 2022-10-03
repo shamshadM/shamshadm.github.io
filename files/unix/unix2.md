@@ -24,7 +24,7 @@ The files are listed in alphabetical order in as many columns as can fit across 
 OUTPUT
 cache  db  empty  games  lib  local  lock  log  mail  opt  run  spool  tmp
 ``` 
- There may be no files visible in your home directory, in which case, the UNIX prompt will be returned. Alternatively, there may already be some files inserted by the System Administrator when your account was created.
+There may be no files visible in your home directory, in which case, the UNIX prompt will be returned. Alternatively, there may already be some files inserted by the System Administrator when your account was created.
 
 **ls** does not, in fact, cause all the files in your home directory to be listed, but only those ones whose name does not begin with a dot (.) Files beginning with a dot (.) are known as hidden files and usually contain important program configuration information. They are hidden because you should not change them unless you are very familiar with UNIX!!!
 
@@ -38,9 +38,8 @@ $ ls -a
 
 ### mkdir (make directory) 
 
-We will now make a subdirectory in your home directory to hold the files you 
-  will be creating and using in the course of this tutorial. To make a subdirectory 
-  called **unixstuff** in your current working directory type
+We will now make a subdirectory in your home directory to hold the files you will be creating and using in the course of this tutorial. To make a subdirectory called **unixstuff** in your current working directory type
+
 ```scss
 $ mkdir unixstuff 
 ```
@@ -58,9 +57,9 @@ $ cd unixstuff
 ```
 Type `ls` to see the contents (which should be empty)
 
-<h3>Exercise 1a</h3>
+<b>:loudspeaker: Exercise </b>
 
-Q1. Make another directory inside the **unixstuff** directory called 
+Make another directory inside the **unixstuff** directory called 
   **backups**?
 
 ## The directories . and ..
@@ -75,11 +74,10 @@ In UNIX, (**.**) means the current directory, so typing
 ```scss
 $ cd .
 ```
-    NOTE: there is a space between cd and the dot
+> NOTE: there is a space between cd and the dot
 
 means stay where you are (the **unixstuff** directory). 
-This may not seem very useful at first, but using (**.**) as the name of the current directory will save a lot of typing, as we shall see later 
-  in the tutorial.
+This may not seem very useful at first, but using (**.**) as the name of the current directory will save a lot of typing, as we shall see later in the tutorial.
 
 <b>&nbsp;</b>
  (**..**) means the parent of the current directory, so typing 
@@ -90,9 +88,9 @@ $ cd ..
 will take you one directory up the hierarchy (back to your home directory). Try it now.
 > Note: typing `cd` with no argument always returns you to your home directory. This is very useful if you are lost in the file system.
 
-## 1.5 Pathnames
+## Pathnames
 ### *pwd* (print working directory)
-Pathnames enable you to work out where you are in relation to the whole file-system. For example, to find out the absolute pathname of your home-directory, type `**cd**` to get back to your home-directory and then type
+Pathnames enable you to work out where you are in relation to the whole file-system. For example, to find out the absolute pathname of your home-directory, type **cd** to get back to your home-directory and then type
 
 ```scss
 $ pwd 
@@ -105,13 +103,15 @@ which means that ee91ab (your home directory) is in the directory eebeng99 (the 
 can be shortened to 
 **/user/eebeng99/ee91ab**
 
-<b>Exercise 1b</b>
+<b>:loudspeaker: Exercise</b>
 
-Q2. Use the commands **ls**, **pwd** and **cd** to explore the file system.
+Use the commands **ls**, **pwd** and **cd** to explore the file system.
 (Remember, if you get lost, type **cd** by itself to return to your home-directory)
 
-## 1.6 More about home directories and pathnames
+## More about home directories and pathnames
+
 ### Understanding pathnames
+
 First type **cd** to get back to your home-directory, then type
 
 ```scss
@@ -125,7 +125,8 @@ Now type
 $ ls backups
 ```
 You will get a message like this -
->> backups: No such file or directory 
+> backups: No such file or directory 
+
 The reason is, **backups** is not in your current working directory. To use a command on a file (or directory) not in the current working directory (the directory you are currently in), you must either <samp>cd</samp> to the correct directory, or specify its full pathname. To list the contents of your backups directory, you must type 
 
 ```scss
@@ -155,7 +156,7 @@ $  ls ~/..
 ``` 
 :loudspeaker: would list ?
 
-<h2>Summary </h2>
+<b>Summary </b>
 
 | code           | Function                                       |                                             
 | ------------- |:------------------------------------------:     |

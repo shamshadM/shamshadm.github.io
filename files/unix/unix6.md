@@ -92,7 +92,7 @@ To give read and write permissions on the file **biglist** to all,
 $ chmod a+rw biglist
 ```
 
-### :loudspeaker: Exercise 
+<b> :loudspeaker: Exercise </b>
 
 Try changing access permissions on the file **science.txt** and on the directory **backups**
 
@@ -213,7 +213,7 @@ $ kill -9 20077
 ```
 > Note: It is not possible to kill off other users' processes !!!
 
-<h2>Summary </h2>
+<b>Summary </b>
 
 | code           | Function       |
 | --- | --- |

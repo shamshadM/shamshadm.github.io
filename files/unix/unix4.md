@@ -7,7 +7,7 @@ author_profile: true
 toc: true
 ---
 
-![Unix files sytem](/images/unix/Streams1.webp)
+![Unix files sytem](/images/unix/Streams.webp)
 
 ## Redirection  
 ---
@@ -23,9 +23,9 @@ Then type a few words on the keyboard and press the `[Return]` key.
 
 Finally hold the `[Ctrl]` key down and press `[d]` (written as ^D for short) to end the input.
 
-:loudspeaker: What has happened?
+<b>:loudspeaker: What has happened?</b>
 
-If you run the cat command without specifing a file to read, it reads the standard input (the keyboard), and on receiving the'end of file' (^D), copies it to the standard output (the screen).
+If you run the cat command without specifing a file to read, it reads the standard input (the keyboard), and on receiving the **end of file** (^D), copies it to the standard output (the screen).
 
 In UNIX, we can redirect both the input and the output of commands.
 
@@ -54,10 +54,11 @@ To read the contents of the file, type
 ```scss
 $ cat list1
 ```
-<b>:loudspeaker: Exercise </b>
+<b>:loudspeaker: Exercise</b>
+
 Using the above method, create another file called **list2** containing the following fruit: orange, plum, mango, grapefruit. Read the contents of **list2**
 
-The form >> appends standard output to a file. So to add more items to the file **list1**, type
+The form `>>` appends standard output to a file. So to add more items to the file **list1**, type
 ```scss
 $ cat >> list1
 ```
@@ -159,7 +160,7 @@ Using pipes, print all lines of **list1** and **list2** containing the letter 'p
 
 [Answer available here](pipeanswer.html)
 
-<h2>Summary </h2>
+<b>Summary </b>
 
 | code           | Function       |
 | --- | :---: |
