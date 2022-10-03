@@ -42,7 +42,7 @@ BSc in  Agriculture [Crop Science]
 
 ### Interests:
 * Breeding and Genetics   
-* AI in Plant Breeding
+* AI for Plant Breeding
 * High throughput Phenotyping                    
 * Knowledge sharing
 * Data Science
