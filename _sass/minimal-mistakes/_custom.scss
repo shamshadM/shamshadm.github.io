@@ -41,14 +41,24 @@
 
 /* Toggle theme setting */
 
-.togglefa {
-  float: inline-start;
-  padding: auto;
+.toggle-switch {
+  display: flex;
+  flex-wrap: wrap;
   overflow: hidden;
-   display: flex;
-  height: 33px;
-  align-items: center;
+  padding: auto;
+  height: auto;
+  justify-content: center;
+  border-radius: 40%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }		
+
+.toggle-switch:hover{
+  background-color: $background-color;
+  padding: 0.1rem 0.1rem;
+}
 
 .edu {
   padding: 0em;
@@ -58,8 +68,10 @@
 
 #about-me{
   border: 2px solid rgb(130, 130,130);
+  float: right;
   height: auto;
   width: auto;
+  margin: 8px;
 }
 
  .edu ul{
