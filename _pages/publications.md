@@ -4,17 +4,14 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 header:
-    overlay_image: /header/pub.jpg
+    overlay_image: /header/pub.webp
 page_excerpts: true
 classes: wide
-# redirect_from: 
-#   - /files/reasearch/
 ---
 
-****
-### Pre-prints 
-
-****
+<hr>
+<h2><img src="/images/pub/Publications.webp" height="40" width="40"> Pre-prints </h2>
+<hr>
 Comming soon
 
 

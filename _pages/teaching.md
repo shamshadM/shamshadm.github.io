@@ -3,7 +3,7 @@ title: "Teaching"
 layout: single
 permalink: /teaching/
 header:
-  overlay_image: /header/teaching.jpg
+  overlay_image: /header/teaching.webp
   classes: wide 
 ---
 
