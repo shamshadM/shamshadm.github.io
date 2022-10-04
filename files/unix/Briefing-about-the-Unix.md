@@ -1,8 +1,8 @@
 ---
+layout: single
 title: 'Briefing about the Unix'
 date: 2022-09-22
-permalink: /files/unix/unix1
-layout: single
+permalink: /files/unix/Briefing-about-the-Unix
 author_profile: true
 toc: true
 ---

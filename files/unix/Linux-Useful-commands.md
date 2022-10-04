@@ -1,8 +1,10 @@
 ---
-title: 'Unix useful commands'
-date: 2022-09-23
-permalink: /files/unix/unix7
 layout: single
+title: 'Linux useful commands'
+date: 2022-09-23
+permalink: /files/unix/Linux-Useful-commands
+type: 'Bioinformatics'
+venue: Online
 author_profile: true
 toc: true
 ---

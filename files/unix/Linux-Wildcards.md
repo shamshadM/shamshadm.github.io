@@ -1,8 +1,8 @@
 ---
+layout: single
 title: 'Linux Wildcards'
 date: 2022-09-23
-permalink: /files/unix/unix5
-layout: single
+permalink: /files/unix/Linux-Wildcards
 author_profile: true
 toc: true
 ---

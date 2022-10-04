@@ -1,8 +1,8 @@
 ---
+layout: single
 title: 'Listing files and Directories'
 date: 2022-09-22
-permalink: /files/unix/unix2
-layout: single
+permalink: /files/unix/ListingFilesAndDirectories
 author_profile: true
 toc: true
 ---

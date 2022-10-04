@@ -1,8 +1,8 @@
 ---
+layout: single
 title: 'Compiling UNIX software packages'
 date: 2022-09-23
-permalink: /files/unix/unix8
-layout: single
+permalink: /files/unix/Compiling-UNIX-software-packages
 author_profile: true
 toc: true
 ---

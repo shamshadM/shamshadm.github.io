@@ -1,8 +1,8 @@
 ---
+layout: single
 title: 'Input-Output Redirection'
 date: 2022-09-23
-permalink: /files/unix/unix4
-layout: single
+permalink: /files/unix/Input-Output-Redirections
 author_profile: true
 toc: true
 ---

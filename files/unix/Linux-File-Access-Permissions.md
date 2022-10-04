@@ -1,8 +1,10 @@
 ---
+layout: single
 title: 'File system security (access rights)'
 date: 2022-09-23
-permalink: /files/unix/unix6
-layout: single
+permalink: /files/unix/Linux-File-Access-Permissions
+type: 'Bioinformatics'
+venue: Online
 author_profile: true
 toc: true
 ---

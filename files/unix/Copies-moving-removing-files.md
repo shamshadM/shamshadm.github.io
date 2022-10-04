@@ -1,8 +1,8 @@
 ---
+layout: single
 title: 'Copies and moving of files'
 date: 2022-09-22
-permalink: /files/unix/unix3
-layout: single
+permalink: /files/unix/Copies-moving-removing-files
 author_profile: true
 toc: true
 ---

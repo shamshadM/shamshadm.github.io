@@ -1,8 +1,8 @@
 ---
+layout: single
 title: 'UNIX Variables'
 date: 2022-09-23
-permalink: /files/unix/unix9
-layout: single
+permalink: /files/unix/UNIX-Variables
 author_profile: true
 toc: true
 ---
