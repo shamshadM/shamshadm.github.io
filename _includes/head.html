@@ -42,3 +42,7 @@
     <script src="{{ script | relative_url }}"></script>
   {% endfor %}
 {% endif %}
+
+{% if page.keywords %}
+<meta name="keywords" content="{{ page.keywords | join: ', ' | escape }}">
+{% endif %}

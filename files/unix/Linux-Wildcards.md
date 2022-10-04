@@ -7,7 +7,7 @@ author_profile: true
 toc: true
 ---
 
-![Unix files sytem](/images/unix/Putorius-Feature-Default.jpg)
+![Unix files sytem](/images/unix/Putorius-Feature-Default.webp)
 
 ## Wildcards
 ---

@@ -1,28 +1,28 @@
 ---
-title: "Basic Linux command"
+title: "Linux / Unix tutorial for beginners"
 layout: single
 type: 'Bioinformatics'
 classes: wide
-permalink: /files/2022-basic-linux-command
-venue: "Punjab Agricultural University, Plant Breeding and Genetics"
+permalink: /teaching/linux-tutorial
+venue: "Online"
 date: 2022-09-20
 
 feature_row:
-  - image_path: /unix/logo1.webp
-    alt: "Briefing about the Unix"
-    title: "Briefing about the Unix"
+  - image_path: /unix/logo.webp
+    alt: "Introduction about the Unix"
+    title: "Introduction about the Unix / Linux"
     excerpt: "Unix is a computer Operating System which is capable of handling activities from multiple users at the same time. The development of Unix started around 1969 by Ken Thompson and Dennis Ritchie."
-    url: "/files/unix/Briefing-about-the-Unix"
+    url: "/files/unix/Introduction-about-the-Unix"
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - image_path: /unix/Linux-Directory-Structure1.webp
+  - image_path: /unix/Linux-Directory-StructureS.webp
     alt: "Listing files and Directories"
     title: "Listing files and Directories"
     excerpt: "When you first login, your current working directory is your home directory. Your home directory has the same name as your user-name, for example, student-data, and it is where your personal files and subdirectories are saved."
     url: "/files/unix/ListingFilesAndDirectories"
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - image_path: /unix/GREP-Command-in-Linux.jpg
+  - image_path: /unix/GREP-Command-in-Linux.webp
     alt: "Copies, moving and removing of files"
     title: "Copies, moving and removing of files"
     excerpt: "Grep is a Linux / Unix command-line tool used to search for a string of characters in a specified file. The text search pattern is called a regular expression. When it finds a match, it prints the line with the result."
@@ -36,7 +36,7 @@ feature_row:
     url: "/files/unix/Input-Output-Redirections"
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - image_path: /unix/Putorius-Feature-Default.jpg
+  - image_path: /unix/Putorius-Feature-Default.webp
     alt: "Linux Wildcards"
     title: "Linux Wildcards"
     excerpt: "A wildcard in Linux means it might be a symbol or set of symbols representing other characters. It is generally used in substituting any string or a character. Wildcards are mainly used to increase the efficiency and flexibility of searches in Linux."
@@ -51,8 +51,8 @@ feature_row:
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: /unix/linux-tar-gz.webp
-    alt: "UNIX Useful commands"
-    title: "UNIX Useful commands"
+    alt: "Linux Useful commands"
+    title: "Linux Useful commands"
     excerpt: "Learn how to check disk space in Linux using the df and du command, including available disk space, used disk space and total disk space. we also learn compress utility which reduces the size of files using adaptive Lempel-Ziv coding. Each file is renamed to the same name plus the extension .Z."
     url: "/files/unix/Linux-Useful-commands"
     btn_label: "Read More"
@@ -80,6 +80,10 @@ The Linux kernel has been under active development since 1991, and has proven to
 However, newcomers to Linux may find it somewhat difficult to approach, as Linux filesystems have a different structure than those found on Windows or MacOS. Additionally, Linux-based operating systems depend heavily on working with the command line interface, while most personal computers rely on graphical interfaces.
 
 This guide serves as an introduction to important command line concepts and skills and equips newcomers to learn more about Linux.
+
+***
+## Linux Index
+***
 
 {% include feature_row id="intro" type="center" %}
 

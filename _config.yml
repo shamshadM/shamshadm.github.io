@@ -288,14 +288,9 @@ timezone: Asia/Kolkata # http://en.wikipedia.org/wiki/List_of_tz_database_time_z
 # Plugins
 plugins:
   - jekyll-archives
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-include-cache
-  - jekyll-paginate
   - jekyll-redirect-from
-  - jekyll-sitemap
   - jekyll-spaceship
-  - jemoji
+  - jekyll-seo-tag
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-feed

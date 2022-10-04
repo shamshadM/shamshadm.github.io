@@ -1,13 +1,13 @@
 ---
 layout: single
-title: 'Briefing about the Unix'
+title: 'Introduction about the Unix'
 date: 2022-09-22
-permalink: /files/unix/Briefing-about-the-Unix
+permalink: /files/unix/Introduction-about-the-Unix
 author_profile: true
 toc: true
 ---
 
- ![Unix files sytem](/images/unix/unix-main.png)
+ <img src="/images/unix/unix-main.webp" alt="Unix-Introduction" width="100%">
  
 ***
 ## Introduction
@@ -17,7 +17,7 @@ This briefing is intended to provide the learner with a basic overview of essent
 ***
 ## Why Unix?
 ***
-Unix allows direct communication with the computer via a terminal, hence being very interactive and giving the user direct control over the computer resources. Unix also gives users the ability to share data and programs among one another. The unix operating system has been evolved around since 1969 back, when there were no such a thing as graphical user infrence. There are several different shell languages. What we will be using in this course is a popular shell flavor called [BASH](https://www.howtogeek.com/68563/htg-explains-what-are-the-differences-between-linux-shells/)
+Unix allows direct communication with the computer via a terminal, hence being very interactive and giving the user direct control over the computer resources. Unix also gives users the ability to share data and programs among one another. The unix operating system has been evolved around since 1969 back, when there were no such a thing as graphical user infrence. There are several different shell languages. What we will be using in this course is a popular shell flavor called [BASH](https://www.howtogeek.com/68563/htg-explains-what-are-the-differences-between-linux-shells)
 UNIX systems also have a graphical user interface (GUI) similar to Microsoft Windows which provides an easy to use environment. However, knowledge of UNIX is required for operations which aren't covered by a graphical program, or for when there is no windows interface available, for example, in a telnet session.
 
 ***
@@ -84,5 +84,5 @@ All the files are grouped together in the directory structure. The file-system i
 ## Starting an UNIX terminal
 ***
 
-<img src="/images/unix/unix.png" width="100%" height="100%" alt="Bash Shell"/>
+<img src="/images/unix/unix-command.webp" width="100%" height="100%" alt="Bash Shell"/>
 

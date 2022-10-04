@@ -7,7 +7,7 @@ author_profile: true
 toc: true
 ---
 
-![Unix files sytem](/images/unix/linux-cp-command.png)
+![Unix files sytem](/images/unix/linux-cp-command.webp)
 
 ---
 ## Copying Files

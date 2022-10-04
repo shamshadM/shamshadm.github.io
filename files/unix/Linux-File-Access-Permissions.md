@@ -3,8 +3,6 @@ layout: single
 title: 'File system security (access rights)'
 date: 2022-09-23
 permalink: /files/unix/Linux-File-Access-Permissions
-type: 'Bioinformatics'
-venue: Online
 author_profile: true
 toc: true
 ---
@@ -20,7 +18,7 @@ $ ls -l (l for long listing!)
 
 You will see that you now get lots of details about the contents of your directory, similar to the example below.
 
-![File and directory access rights](/images/unix/file-permissions-4.gif)
+<img src="/images/unix/file-permissions-4.webp" alt= "file permission" width= "100%">
 
 Each file (and directory) has associated access rights, which may be found by typing `ls -l`. Also, `ls -lg` gives additional information as to which group owns the file (beng95 in the following example):
 ```scss

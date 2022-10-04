@@ -6,7 +6,7 @@ permalink: /files/unix/ListingFilesAndDirectories
 author_profile: true
 toc: true
 ---
- ![Unix files sytem](/images/unix/Linux-Directory-Structure1.webp)
+ ![Unix files sytem](/images/unix/Linux-Directory-StructureS.webp)
 
 ## Listing files and directories
 When you first login, your current working directory is your home directory. Your home directory has the same name as your user-name, for example, ee91ab, and it is where your personal files and subdirectories are saved.
