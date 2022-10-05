@@ -3,7 +3,7 @@ title: "Linux / Unix tutorial for beginners"
 layout: single
 type: 'Bioinformatics'
 classes: wide
-permalink: /teaching/linux-tutorial
+permalink: /teaching/linux-tutorial/
 venue: "Online"
 date: 2022-09-20
 metatags: noindex, follow

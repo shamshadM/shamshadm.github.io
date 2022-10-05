@@ -3,7 +3,15 @@ layout: single
 title: 'Introduction about the Unix'
 date: 2022-09-22
 permalink: /files/unix/Introduction-about-the-Unix
-author_profile: true
+excerpt: "Unix is a computer Operating System which is capable of handling activities from multiple users at the same time. The development of Unix started around 1969 by Ken Thompson and Dennis Ritchie."
+tags:
+  - Linux
+  - Unix operating system
+  - Shell
+keywords: 
+  - Linux
+  - Unix operating system
+  - Shell
 toc: true
 ---
 
