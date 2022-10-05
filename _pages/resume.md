@@ -6,6 +6,7 @@ author_profile: true
 classes: wide
 header:
   overlay_image: /header/resume.webp
+  og_image: /images/favicon/shamshad.webp
 ---
 
 <embed type="application/pdf" src="/files/pdf/Mohammad_Shamshad_Resume.pdf" width="125%" height="100%">

@@ -5,6 +5,7 @@ permalink: /research/
 author_profile: true
 header:
   overlay_image: /header/ux-indonesia.webp
+  og_image: /images/favicon/shamshad.webp
   classes: wide
 ---
 

@@ -4,6 +4,7 @@ layout: single
 permalink: /teaching/
 header:
   overlay_image: /header/teaching.webp
+  og_image: /images/favicon/shamshad.webp
   classes: wide 
 ---
 

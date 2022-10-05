@@ -6,6 +6,7 @@ author_profile: true
 classes: wide
 header:
     overlay_image: /header/hifi-new-unsplash.webp
+    og_image: /images/favicon/shamshad.webp
 ---
 
 I work as a post-doctoral researcher in the **[Transforming India's Green Revolution by Research and Empowerment for Sustainable food Supplies](https://tigr2ess.globalfood.cam.ac.uk/fps/FP3)** at the [Plant Breeding and Genetics, PAU](https://www.pau.edu/coa/index.php?_act=manageDepartments&DO=viewDepartment&intLinkID=9) in Ludhiana, India.
@@ -16,9 +17,9 @@ I am passionate about Agriculture and cutting-edge technologies. I have a solid 
 
 I have professional Expertise in Plant Breeding, Quantitative Genetics, Genomics and computational biology. I am passionate about Experimental Design, Data Analysis and Visualization using R, SAS, jmp SAS, python, UNIX/Linux, HTML/CSS, Git and GitHub. I have worked experience in DNA extraction, PCR, Gel Electrophoresis, and Microscopy.
 
-<div class="edu">
-  <img id="about-me" src="/images/Shamshad_Rattan.webp" alt="about-me">
+<img id="about-me" src="/images/Shamshad_Rattan.webp" alt="about-me">
 
+<div class="edu">
 <h4>Education</h4> 
 
 <span class="fa-solid fa-graduation-cap"></span> PhD in Plant Breeding & Genetics 
