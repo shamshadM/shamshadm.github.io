@@ -78,11 +78,12 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google" # false (default), "google", "google-universal", "custom"
+  provider               : google-gtag # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : "G-9XNMX5G57E"
+    tracking_id          : G-H8020H63F5
     anonymize_ip         : true
-
+    optimize_id          : 
+    allow_google_signals : false
 
 # Site Author
 author:
