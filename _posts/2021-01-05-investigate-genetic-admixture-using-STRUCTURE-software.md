@@ -1,21 +1,28 @@
 ---
-title: "Investigate genetic admixture using STRUCTURE software"
+title: "A tutorial on investigate genetic admixture using STRUCTURE software"
 date: 2021-01-05
-permalink: /posts/2021/01/structure/
+permalink: /posts/2021/01/investigate-genetic-admixture-using-STRUCTURE-software/
 excerpt_separator: <!--more-->
 toc: true
+header: 
+  og_image: "images/biostat/structure/structure-admixture.webp"
 tags: 
   - Structure software
   - Genetic Admixture
   - Genetic data
   - Population structure
+keywords:
+  - Structure software
+  - Genetic Admixture
+  - Genetic data
+  - Population structure 
 ---
 
 **Structure Software** is a freely available software package that one may use for rigorous investigation of `admixed individuals`; identification of `point of hybridization` and `migrants`; and estimate over all `structure` of a population using a commonly used genetic markers such as `SNPs` and `SSRs`. This software was developed by **Pritchard Lab** at **Stanford University** and can downloaded at this [link](https://web.stanford.edu/group/pritchardlab/structure.html).
 <!--more-->
 
 ***
-Download sample data set: [click here](https://shamshadm.github.io/images/biostat/structure/data_test_1.txt)
+Download sample data set: [click here](/images/biostat/structure/data_structure_1.txt)
 
 ***
 In this tutorial, I will show how to prepare `input` files and run the `Structure` software. For detail information, please read this article at this <a href="https://web.stanford.edu/group/pritchardlab/structure.html">link</a>
@@ -25,7 +32,7 @@ In this tutorial, I will show how to prepare `input` files and run the `Structur
 In this tutorial, I am using `numerical` SNP data as in `input` genotype file. One can convert their genotype data in numerical format in `TASSEL` software or any software package available as per ones convenience. The file needs to be foramtted properly as shown below in the image below and save it as `.txt` file.
 
 <p align="center">
-<img src="/images/biostat/structure/input.JPG" alt="Input File"/>
+<img src="/images/biostat/structure/input-structure.webp" alt="Input structure File"/>
 </p>
 
 ***
@@ -40,7 +47,7 @@ Once the input file with the correct header and format is ready, import the the 
 
 ***
 <p align="center">
-<img src="/images/biostat/structure/structure1.gif" alt="Import data"/>
+<img src="/images/biostat/structure/Import-structure.gif" alt="Import data in structure"/>
 </p>
 ***
 
@@ -49,7 +56,7 @@ Follow the steps shown in the below figure to run this step. **Please remember**
 
 ***
 <p align="center">
-<img src="/images/biostat/structure/structure2.gif" alt="Set parameters"/>
+<img src="/images/biostat/structure/Set-Parameter.gif" alt="Set parameters structure"/>
 </p>
 ***
 
@@ -58,7 +65,7 @@ Follow the steps shown in the below figure to run this step. **Please remember**
 
 ***
 <p align="center">
-<img src="/images/biostat/structure/structure3.gif" alt="Running the project"/>
+<img src="/images/biostat/structure/run-structure-project.gif" alt="Running the project structure"/>
 </p>
 
 
@@ -70,7 +77,7 @@ Follow the steps shown in the below figure to run this step. **Please remember**
 ***
 
 <p align="center">
-<img src="/images/biostat/structure/structure4.gif" alt="Viewing the results"/>
+<img src="/images/biostat/structure/structure-resultus.gif" alt="Viewing the structure results"/>
 </p>
 
 <!--more-->
@@ -78,7 +85,7 @@ Follow the steps shown in the below figure to run this step. **Please remember**
 `zip` all the result siles in the results folder.
 <!--more-->
 <p align="center">
-<img src="/images/biostat/structure/structure5.gif" alt="Viewing the results"/>
+<img src="/images/biostat/structure/structure-harvester.gif" alt="Files for Structure Harvester"/>
 </p>
 ***
 
@@ -88,7 +95,7 @@ One your web browser search for `structure harvester`, and click the first the s
 
 ***
 <p align="center">
-<img src="/images/biostat/structure/structure6.gif" alt="Running Structure Harvester"/>
+<img src="/images/biostat/structure/run-structure-harvester.gif" alt="Run Structure Harvester"/>
 </p>
 <!--more-->
 
@@ -96,23 +103,24 @@ One your web browser search for `structure harvester`, and click the first the s
 `Evanno table` highlights the significant `k` value that is estimated for this genotype data (see below figure). For this tutorial data set, the estimated from `k` is 3 subpopulation which is also supported by the `Delta K` plot, where a clear peak is see at `K = 3` (see Delta K plot below).
 
 <p align="center">
-<img src="/images/biostat/structure/ktable.JPG"/>
+<img src="/images/biostat/structure/ktable.webp"/>
 </p>
 <!--more-->
 <p align="center">
-<img src="/images/biostat/structure/deltaK.png">
+<img src="/images/biostat/structure/deltaK.webp">
 </p>
 
 **Therefore** the correct bar plot with correct number of sub-population (k) is 3, which can be plotted by following the steps shown in **1.4**
 <p align="center">
-<img src="/images/biostat/structure/finalstructure.jpg">
+<img src="/images/biostat/structure/structure-result-final.webp">
 </p>
   
 ***
 
 **Thank you** for reading this tutorial. If you have any questions or comments, please let me know by email.
 
-Happy Structure-ing !
+---
+Happy Structure-ing :smiley:
 <hr>
 <b> Bibliography </b>
 <ol>

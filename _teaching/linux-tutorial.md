@@ -6,6 +6,13 @@ classes: wide
 permalink: /teaching/linux-tutorial
 venue: "Online"
 date: 2022-09-20
+metatags: noindex, follow
+keywords: 
+  - Linux tutorial
+  - Unix
+  - Basic Linux commands
+  - Files and Directories
+  - Command Line Shell
 
 feature_row:
   - image_path: /unix/logo.webp
