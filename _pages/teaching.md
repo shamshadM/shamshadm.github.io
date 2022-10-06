@@ -2,6 +2,7 @@
 title: "Teaching"
 layout: single
 permalink: /teaching/
+published: true
 header:
   overlay_image: /header/photo-165.jpg
   og_image: /images/favicon/shamshad.webp

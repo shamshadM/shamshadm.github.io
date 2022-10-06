@@ -35,4 +35,5 @@ group :jekyll_plugins do
   gem 'jekyll-spaceship'
   gem 'webrick'
   gem 'faraday-retry'
+  gem "jekyll-last-modified-at"
 end
