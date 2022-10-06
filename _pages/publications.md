@@ -4,7 +4,7 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 header:
-    overlay_image: /header/pub.webp
+    overlay_image: /header/pub.jpg
     og_image: /images/favicon/shamshad.webp
 page_excerpts: true
 classes: wide

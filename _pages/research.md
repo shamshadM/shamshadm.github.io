@@ -4,7 +4,7 @@ title: "Research"
 permalink: /research/
 author_profile: true
 header:
-  overlay_image: /header/ux-indonesia.webp
+  overlay_image: /header/ux-indonesia.jpg
   og_image: /images/favicon/shamshad.webp
   classes: wide
 ---

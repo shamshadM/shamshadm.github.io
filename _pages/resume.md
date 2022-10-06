@@ -5,7 +5,7 @@ permalink: /resume/
 author_profile: true
 classes: wide
 header:
-  overlay_image: /header/resume.webp
+  overlay_image: /header/resume.jpg
   og_image: /images/favicon/shamshad.webp
 ---
 
