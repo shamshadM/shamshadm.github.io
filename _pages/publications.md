@@ -11,18 +11,18 @@ classes: wide
 ---
 
 <hr>
-<h2><img src="/images/pub/Publications.webp" height="40" width="40"> Pre-prints </h2>
+<i class="ai ai-ideas-repec ai-2x"> Pre-prints
 <hr>
 Comming soon
 
 
 <hr>
-<i class="ai ai-google-scholar-square ai-3x"></i>
 
 {% if site.author.googlescholar %}
- I have collaborated to manuscripts published in high quality peer-reviewed scientific journals. 
- <a href="{{site.author.googlescholar}}">you can see my Google Scholar profile</a>.
+<a href="{{site.author.googlescholar}}"><i class="ai ai-google-scholar ai-2x" ></i></a>
 {% endif %}
+I have collaborated to manuscripts published in high quality peer-reviewed scientific journals.
+
 
 {% include base_path %}
 
