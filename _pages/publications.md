@@ -17,6 +17,7 @@ Comming soon
 
 
 <hr>
+<i class="ai ai-google-scholar-square ai-3x"></i>
 
 {% if site.author.googlescholar %}
  I have collaborated to manuscripts published in high quality peer-reviewed scientific journals. 
