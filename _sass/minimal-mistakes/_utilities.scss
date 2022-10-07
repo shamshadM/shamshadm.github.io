@@ -207,7 +207,8 @@ body:hover .visually-hidden button {
   .fas,
   .fab,
   .far,
-  .fal {
+  .fal,
+  .ai {
     color: $text-color;
   }
 
@@ -323,6 +324,15 @@ body:hover .visually-hidden button {
   .fa-xing,
   .fa-xing-square {
     color: $xing-color;
+  }
+  .ai-google-scholar {
+    color: $google-scholar-color;
+  }
+  .ai-researchgate-square {
+    color: $researchgate-color;
+  }
+  .ai-orcid {
+    color: $orcid-color;
   }
 }
 

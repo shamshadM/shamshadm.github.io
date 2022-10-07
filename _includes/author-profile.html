@@ -53,7 +53,7 @@
         <li>
           <a href="mailto:{{ author.email }}" rel="me" class="u-email">
             <meta itemprop="email" content="{{ author.email }}" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</span>
+            <i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</span>
           </a>
         </li>
       {% endif %}
@@ -88,7 +88,7 @@
       {% if author.linkedin %}
         <li>
           <a href="https://www.linkedin.com/in/{{ author.linkedin }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span>
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span>
           </a>
         </li>
       {% endif %}
@@ -243,19 +243,24 @@
             <i class="fab fa-fw fa-vine" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</span>
     {% endif %} 
       {% if author.googlescholar %}
-      <li><a href="{{ author.googlescholar }}"><i class="ai ai-google-scholar ai-fw"></i> Google Scholar</a></li>
+      <li><a href="{{ author.googlescholar }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+        <i class="ai ai-fw ai-google-scholar" aria-hidden="true"></i><span class="label">Google Scholar</span></a></li>
       {% endif %}           
       {% if author.pubmed %}
-        <li><a href="{{ author.pubmed }}"><i class="ai ai-pubmed-square ai-fw"></i> PubMed</a></li>
+        <li><a href="{{ author.pubmed }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+          <i class="ai ai-fw ai-pubmed-square"></i><span class="label">PubMed</span></a></li>
       {% endif %}
       {% if author.orcid %}
-        <li><a href="{{ author.orcid }}"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
+        <li><a href="{{ author.orcid }}"  itemprop="sameAs" rel="nofollow noopener noreferrer me">
+          <i class="ai ai-fw ai-orcid"></i><span class="label">ORCID</span></a></li>
       {% endif %}
       {% if author.impactstory %}
-        <li><a href="{{ author.impactstory }}"><i class="ai ai-impactstory ai-fw"></i> Impactstory</a></li>
+        <li><a href="{{ author.impactstory }}"  itemprop="sameAs" rel="nofollow noopener noreferrer me">
+          <i class="ai ai-fw ai-impactstory"></i><span class="label">Impactstory</span></a></li>
       {% endif %}                                                                                             
        {% if author.wikipedia %}
-        <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i class="fab fa-fw fa-wikipedia-w" aria-hidden="true"></i> Wikipedia</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"  itemprop="sameAs" rel="nofollow noopener noreferrer me">
+          <i class="fab fa-fw fa-wikipedia-w" aria-hidden="true"></i><span class="label">Wikipedia</span></a></li>
       {% endif %}
           {% include author-profile-custom-links.html %}
     </ul>
