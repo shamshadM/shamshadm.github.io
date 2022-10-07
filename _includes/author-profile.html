@@ -64,6 +64,9 @@
             <i class="fab fa-fw fa-keybase" aria-hidden="true"></i><span class="label">Keybase</span>
           </a>
         </li>
+        {% endif %}
+       {% if author.researchgate %}
+        <li><a href="{{ author.researchgate }}"><i class="ai  ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
       {% endif %}
 
       {% if author.twitter %}
@@ -238,11 +241,23 @@
         <li>
           <a href="https://vine.co/u/{{ author.vine }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
             <i class="fab fa-fw fa-vine" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</span>
-          </a>
-        </li>
+    {% endif %} 
+      {% if author.googlescholar %}
+      <li><a href="{{ author.googlescholar }}"><i class="ai ai-google-scholar ai-fw"></i> Google Scholar</a></li>
+      {% endif %}           
+      {% if author.pubmed %}
+        <li><a href="{{ author.pubmed }}"><i class="ai ai-pubmed-square ai-fw"></i> PubMed</a></li>
       {% endif %}
-
-      {% include author-profile-custom-links.html %}
+      {% if author.orcid %}
+        <li><a href="{{ author.orcid }}"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
+      {% endif %}
+      {% if author.impactstory %}
+        <li><a href="{{ author.impactstory }}"><i class="ai ai-impactstory ai-fw"></i> Impactstory</a></li>
+      {% endif %}                                                                                             
+       {% if author.wikipedia %}
+        <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i class="fab fa-fw fa-wikipedia-w" aria-hidden="true"></i> Wikipedia</a></li>
+      {% endif %}
+          {% include author-profile-custom-links.html %}
     </ul>
   </div>
 </div>

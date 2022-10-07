@@ -5,7 +5,6 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-
 #theme add
 minimal_mistakes_skin    : "default" 
 minimal_mistakes_skin2   : "dark"
@@ -23,7 +22,7 @@ teaser                   :  # filename of teaser fallback teaser image placed in
 breadcrumbs              : # true, false (default)
 words_per_minute         : 160
 future                   : false
-read_more                : "enabled" # if enabled, adds "Read more" links to excerpts
+read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false #change to true to add link to talkmap on talks page
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
@@ -67,7 +66,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : /images/favicon/shamshad.webp # Open Graph/Twitter default site image # Open Graph/Twitter default site image
+og_image                 : /images/favicon/shamshad.webp # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -91,10 +90,12 @@ author:
   avatar           : "profile.png"
   bio              : "Post Doctoral Researcher"
   location         : "PAU, Ludhiana, India"
-  employer         : 
+  employer         :
+  pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=dI7V1a4AAAAJ&hl=en"
   email            : "shamshad.rattan@gmail.com"
   researchgate     : "https://www.researchgate.net/profile/Mohd-Shamshad"
+  uri              :                  
   bitbucket        :
   codepen          :
   dribbble         :
@@ -102,12 +103,12 @@ author:
   facebook         :
   foursquare       :
   github           : 
-  google_plus      :
+  gitlab           :
   keybase          :
   instagram        :
   lastfm           :
   linkedin         : "dr-m-shamshad-58b4321b1"
-  orcid            : 
+  orcid            : "https://orcid.org/0000-0002-5002-4575"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
@@ -118,18 +119,7 @@ author:
   weibo            :
   xing             :
   youtube          :
-#  wikipedia        :
-
-  links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://www.shamshad.in"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/DrShamshadM"
-    - label: "ResearchGate"
-      icon: "fab fa-researchgate"
-      url: "https://www.researchgate.net/profile/Mohd-Shamshad"
+#  wikipedia       :
 
 # Site Footer
 footer:
@@ -137,20 +127,18 @@ footer:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/DrShamshadM"
+    - label: "Google Scholar"
+      icon: "ai ai-google-scholar ai-fw"
+      url: "https://scholar.google.com/citations?user=dI7V1a4AAAAJ&hl=en"
     - label: "ResearchGate"
-      icon: "fab fa-researchgate"
+      icon: "ai ai-researchgate-square ai-fw"
       url: "https://www.researchgate.net/profile/Mohd-Shamshad"
-
 
 # Reading Files
 include:
   - .htaccess
   - _pages
   - files
-  - "*.pdf"
-  - "papers/*.pdf"
-  - "portfolio/papers/*.pdf"
-  - "portfolio/*.pdf"
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -289,18 +277,22 @@ timezone: Asia/Kolkata # http://en.wikipedia.org/wiki/List_of_tz_database_time_z
 # Plugins
 plugins:
   - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed                
   - jekyll-redirect-from
   - jekyll-spaceship
   - jekyll-seo-tag
   - jekyll-last-modified-at
 # mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-feed
-  - jekyll-gist
   - jekyll-include-cache
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
   - jemoji
+
 
 # Archives
 #  Type
@@ -329,6 +321,8 @@ tag_archive:
 #   permalinks:
 #     category: /categories/:name/
 #     tag: /tags/:name/
+
+
 # HTML Compression
 # - http://jch.penibelst.de/
 compress_html:
