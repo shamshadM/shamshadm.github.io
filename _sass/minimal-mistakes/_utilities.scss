@@ -325,13 +325,19 @@ body:hover .visually-hidden button {
   .fa-xing-square {
     color: $xing-color;
   }
-  .ai-google-scholar {
+
+  .ai-google-scholar,
+  .ai-google-scholar-square {
     color: $google-scholar-color;
   }
+
+  .ai-researchgate,
   .ai-researchgate-square {
     color: $researchgate-color;
   }
-  .ai-orcid {
+  
+  .ai-orcid,
+  .ai-orcid-square {
     color: $orcid-color;
   }
 }

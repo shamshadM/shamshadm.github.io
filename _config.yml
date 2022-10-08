@@ -128,7 +128,7 @@ footer:
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/DrShamshadM"
     - label: "Google Scholar"
-      icon: "ai ai-google-scholar ai-fw"
+      icon: "ai ai-google-scholar-square ai-fw"
       url: "https://scholar.google.com/citations?user=dI7V1a4AAAAJ&hl=en"
     - label: "ResearchGate"
       icon: "ai ai-researchgate-square ai-fw"
