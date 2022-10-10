@@ -19,8 +19,8 @@ I have professional Expertise in Plant Breeding, Quantitative Genetics, Genomics
 
 <img id="about-me" src="/images/Shamshad_Rattan.webp" alt="about-me">
 
-<div class="edu">
 <h4>Education</h4> 
+<div class="edu">
 
 <span class="fa-solid fa-graduation-cap"></span> PhD in Plant Breeding & Genetics 
  <ul>Punjab Agricultural University, 2019</ul>
@@ -38,14 +38,15 @@ I have professional Expertise in Plant Breeding, Quantitative Genetics, Genomics
 BSc in  Agriculture [Crop Science]
 <ul>Punjab Agricultural University, 2012</ul>
  </div>
-
-### Interests:
-* Breeding and Genetics   
-* AI for Plant Breeding
-* High throughput Phenotyping                    
-* Knowledge sharing
-* Data Science
-
+<div>
+<h4>Interests:</h4>
+<ul>
+<li> Breeding and Genetics</li>   
+<li> AI for Plant Breeding</li>                    
+<li> Knowledge sharing</li>
+<li> Data Science</li>
+</ul>
+</div>
 Apart from scientifically dealing with I have also enjoy with the coding, development of programs, and going with friends, and family. I grown up in India and Speak [Punjabi](https://en.wikipedia.org/wiki/Punjabi_language), English, [Hindi](https://en.wikipedia.org/wiki/Hindi), [Urdu](https://en.wikipedia.org/wiki/Urdu) and bit of French.
 
 
