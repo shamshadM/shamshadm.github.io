@@ -4,7 +4,7 @@ permalink: /year/
 layout: posts
 author_profile: true
 header:
-    overlay_image: /header/kelly-sikkema.webp
+    overlay_image: /header/years-archieves.webp
     og_image: /images/favicon/shamshad.webp
 ---
 

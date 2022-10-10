@@ -5,7 +5,7 @@ excerpt: ""
 author_profile: true
 classes: wide
 header:
-    overlay_image: /header/hifi-new-unsplash.webp
+    overlay_image: /header/hifi-new-unsplas.webp
     og_image: /images/favicon/shamshad.webp
 ---
 
