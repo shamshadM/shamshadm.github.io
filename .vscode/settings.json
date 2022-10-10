@@ -1,4 +1,5 @@
 {
     "editor.minimap.size": "fit",
-    "workbench.iconTheme": "vs-seti"
+    "workbench.iconTheme": "vs-seti",
+    "editor.mouseWheelZoom": true
 }
