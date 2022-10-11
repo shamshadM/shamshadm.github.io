@@ -4,7 +4,7 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 Copyright (c) 2015 Luke Jackson http://lukejacksonn.com
 */
 
-$(function() {
+$(document).ready(function() {
 
   var $btn = $("nav.greedy-nav .greedy-nav__toggle");
   var $vlinks = $("nav.greedy-nav .visible-links");
@@ -74,7 +74,7 @@ $(function() {
                    - /* toggle */ (numOfVisibleItems !== breakWidths.length ? $btn.outerWidth(true) : 0);
     requiredSpace = breakWidths[numOfVisibleItems - 1];
 
-    // There is not enought space
+    // There is not enough space
     if (requiredSpace > availableSpace) {
       $vlinks.children().last().prependTo($hlinks);
       numOfVisibleItems -= 1;
