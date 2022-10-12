@@ -4,7 +4,8 @@
 
    .page__footer {
     @include clearfix;
-    float: left;
+    display: grid;
+    grid-template-rows: auto auto;
     margin-left: 0;
     margin-right: 0;
     width: 100%;
