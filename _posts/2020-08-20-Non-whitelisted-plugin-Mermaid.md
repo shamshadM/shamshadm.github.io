@@ -4,6 +4,7 @@ excerpt_separator: <!--more-->
 date: 2020-08-20
 permalink: /posts/2020/08/non-whitelisted-plugin-Mermaid/
 toc: true
+categories: CI mermaid
 tags:
   - Mermaid
   - graph

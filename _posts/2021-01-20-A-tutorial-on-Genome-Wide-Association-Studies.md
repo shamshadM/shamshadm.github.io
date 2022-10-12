@@ -5,17 +5,10 @@ permalink: /posts/2021/01/A-tutorial-on-Genome-Wide-Association-Studies/
 excerpt_separator: <!--more-->
 toc: true
 number_sections: true
-comments: true
+categories: software TASSEL
 header: 
   og_image: "images/biostat/gwas/gwaslogo.webp"
 tags: 
-  - GWAS GUI
-  - TASSEL
-  - Genome-wide association analysis
-  - Linear model
-  - GLM
-  - MLM
-keywords: 
   - GWAS GUI
   - TASSEL
   - Genome-wide association analysis

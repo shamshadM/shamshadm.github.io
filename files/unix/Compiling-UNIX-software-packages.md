@@ -10,12 +10,6 @@ tags:
   - configration packages
   - Building packages in Linux
   - Run software in unix
-keywords: 
-    - Unix software
-    - make command
-    - configration packages
-    - Building packages in Linux
-    - Run software in unix
 toc: true
 ---
 

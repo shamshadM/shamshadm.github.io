@@ -1,4 +1,5 @@
 ---
+layout: home
 permalink: /
 title: "About"
 excerpt: ""
@@ -17,7 +18,7 @@ I am passionate about Agriculture and cutting-edge technologies. I have a solid 
 
 I have professional Expertise in Plant Breeding, Quantitative Genetics, Genomics and computational biology. I am passionate about Experimental Design, Data Analysis and Visualization using R, SAS, jmp SAS, python, UNIX/Linux, HTML/CSS, Git and GitHub. I have worked experience in DNA extraction, PCR, Gel Electrophoresis, and Microscopy.
 <hr>
-<img id="about-me" srcset="/images/Shamshad_Rattan.webp" loading='lazy' alt="about-me" height="100%" width="100%">
+<img id="about-me" src="/images/Shamshad_Rattan.webp" alt="about-me" height="100%" width="100%">
 <h4>Education</h4> 
 <hr>
 <div class="edu">
@@ -55,3 +56,4 @@ I am the person who takes initiative and stays curious.
 
 Feel free to [contact me](mailto: shamshad.rattan@gmail.com) if you find my blog useful, think I might be a good fit or simply would like to connect.
 {: .text-justify}
+<hr>

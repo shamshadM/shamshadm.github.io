@@ -3,6 +3,7 @@ title: 'Customizing an Academic Website'
 date: 2020-07-06
 permalink: /posts/2020/07/customizing-website/
 excerpt_separator: <!--more-->
+categories: website
 toc: true
 header: 
   og_image: "posts/customizing-website/preview.png"

@@ -7,7 +7,6 @@ header:
     overlay_image: /header/publications.webp
     og_image: /images/favicon/shamshad.webp
 page_excerpts: true
-classes: wide
 ---
 
 <hr>

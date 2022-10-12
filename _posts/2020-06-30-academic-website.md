@@ -4,6 +4,7 @@ date: 2020-06-30
 permalink: /posts/2020/06/academic-website/
 excerpt_separator: <!--more-->
 toc: true
+categories: website
 header: 
   og_image: "posts/creating-website/preview.png"
 tags:

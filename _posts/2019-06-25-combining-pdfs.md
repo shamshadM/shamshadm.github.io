@@ -4,6 +4,7 @@ date: 2019-06-26
 permalink: /posts/2019/06/combining-pdfs/
 excerpt_separator: <!--more-->
 toc: true
+categories: PDF
 number_sections: true
 tags:
   - references

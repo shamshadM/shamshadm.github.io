@@ -4,6 +4,7 @@ date: 2020-08-07
 permalink: /posts/2020/08/website-content/
 excerpt_separator: <!--more-->
 toc: true
+categories: website
 header: 
   og_image: "posts/website-content/preview.png"
 tags:

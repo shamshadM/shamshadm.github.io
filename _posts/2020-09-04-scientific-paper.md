@@ -3,6 +3,7 @@ title: 'Online submission of a scientific paper, a guideline for beginners'
 date: 2020-09-04
 permalink: /posts/2020/09/scientific-paper/
 excerpt_separator: <!--more-->
+categories: scientific writing
 toc: true
 tags:
   - Research Journal
