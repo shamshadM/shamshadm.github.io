@@ -24,7 +24,6 @@ group :jekyll_plugins do
   gem 'jekyll-paginate' 
   gem 'commonmarker'
   gem 'jekyll-gist'
-  gem 'jekyll-paginate'
   gem 'jekyll-seo-tag'
   gem 'kramdown-parser-gfm'
   gem 'jemoji'
