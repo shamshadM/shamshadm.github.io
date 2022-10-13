@@ -60,25 +60,32 @@
   padding: 0.1rem 0.1rem;
 }
 
+#about-me{
+  border: 2px solid rgb(130, 130,130);
+  display: block;
+  margin: 0 auto;
+  height: 100;
+  width: 100;
+  }
+
 .edu {
   padding: 0em;
   line-height: 1em;
   font-size: normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
 } 
 
-#about-me{
-  border: 2px solid rgb(130, 130,130);
-  float: right;
-  height: 25rem;
-  width: 20rem;
-  margin: 1.5em 0.5em 1.5em 1em;
-  }
-
- .edu ul{
+.edu p {
   font-style: italic;
-  font-size: medium;
-  font-weight: normal;
-  }
+  line-height: 1.5em;
+}
+
+.edu li {
+  line-height: 2em;
+}
 
   // new 404 page settings
   @import url("https://fonts.googleapis.com/css?family=Merriweather+Sans");
