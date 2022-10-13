@@ -21,7 +21,7 @@ gem "wdm" if Gem.win_platform?
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
-  gem 'jekyll-paginate' 
+  gem 'jekyll-paginate-v2' 
   gem 'commonmarker'
   gem 'jekyll-gist'
   gem 'jekyll-seo-tag'
@@ -36,4 +36,5 @@ group :jekyll_plugins do
   gem 'webrick'
   gem 'faraday-retry'
   gem 'jekyll-last-modified-at'
+  gem 'jekyll-gzip'
 end

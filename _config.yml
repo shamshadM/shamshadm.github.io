@@ -14,6 +14,7 @@ locale                   : "en-US"
 title                    : "M. Shamshad"
 title_separator          : "-"
 name                     : &name "M. Shamshad"
+port                     : 4000
 description              : &description "Postdoc in Plant Breeding and Genetics"
 url                      : https://shamshad.in # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -177,8 +178,10 @@ lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
+
 # Markdown Processing
 kramdown:
+  math_engine: mathjax
   input: GFM
   hard_wrap: false
   auto_ids: true
@@ -265,12 +268,15 @@ sass:
   sass_dir: _sass
   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
+permalink: /:categories/:title/
 
 # Outputting
-permalink: /:categories/:title/
-#paginate: 7 # amount of posts to show
+pagination: 
+    enabled: true
+    collection: 'posts'
+    per_page: 5 # amount of posts to show
+permalink: '/page/:num/'
 
-# paginate_path: /page:num/
 timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
@@ -279,7 +285,10 @@ plugins:
   - jekyll-archives
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed                
+  - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll-gzip
+  - jekyll-include-cache                
   - jekyll-redirect-from
   - jekyll-spaceship
   - jekyll-seo-tag
