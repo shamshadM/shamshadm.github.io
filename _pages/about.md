@@ -39,7 +39,7 @@ alt="about-me">
 BSc in  Agriculture [Crop Science]
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Punjab Agricultural University, 2012</p>
   </div>
-<div class="container-item"><h4>Interests:</h4>
+<div class="container-item" style="align-self: flex-start"><h4>Interests:</h4>
   <li>Breeding and Genetics</li>   
   <li>AI for Plant Breeding</li>                    
   <li>Knowledge sharing</li>
