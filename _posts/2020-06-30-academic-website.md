@@ -13,7 +13,7 @@ tags:
   - github
 ---
 
-If you're an academic, you need a website. Obviously I agree with this since you're reading this on my website, but if you don't have one, you should get one. Most universities these days provide a free option, usually powered by [WordPress](https://wordpress.org/) (both [WashU](https://sites.wustl.edu/) and [UNC](http://web.unc.edu/) use WordPress for their respective offerings). While these sites are quick to set up and come with the prestige of a `.edu` URL, they have several drawbacks that have been [extensively](https://townsendcenter.berkeley.edu/blog/personal-academic-webpages-how-tos-and-tips-better-site) [written](https://martinlea.com/four-reasons-why-faculty-profile-pages-are-no-substitute-for-personal-academic-website/) [on](https://theacademicdesigner.com/2019/personal-academic-website-benefits/).
+If you're an academic, you need a website. Obviously I agree with this since you're reading this on my website, but if you don't have one, you should get one. Most universities these days provide a free option, usually powered by [WordPress](https://wordpress.org/) (both [WashU](https://sites.wustl.edu/) and [UNC](https://web.unc.edu/) use WordPress for their respective offerings). While these sites are quick to set up and come with the prestige of a `.edu` URL, they have several drawbacks that have been [extensively](https://townsendcenter.berkeley.edu/blog/personal-academic-webpages-how-tos-and-tips-better-site) [written](https://martinlea.com/four-reasons-why-faculty-profile-pages-are-no-substitute-for-personal-academic-website/) [on](https://theacademicdesigner.com/2019/personal-academic-website-benefits/).
 <!--more-->
 If you're a junior scholar, having your own personal webpage is even more important:
 - If (when) you move institutions, you'll lose your website
@@ -24,7 +24,7 @@ Even if you stay at the same institution for the rest of your career, you're at 
 
 # My approach
 
-There are plenty of guides out there on how to create a personal website using tools like WordPress, [Wix](https://www.wix.com), or [Google Sites](https://www.sites.google.com/). The free versions of these tools often come with ads, or at the least a message telling you which tool was used to create the website. I take a different approach that requires some (minimal) coding experience, but produces a beautiful and professional website that is ad free. I use a [static site generator](https://www.staticgen.com/about) that produces HTML from easy to edit [Markdown](https://en.wikipedia.org/wiki/Markdown) files. Because the resulting site is static (it's just a collection of files with no interactivity where users can .e.g, fill out and submit forms) it can be hosted for free with [GitHub Pages](https://pages.github.com/). [Steven Miller](http://svmiller.com) has a nice rundown on all of the [advantages](http://svmiller.com/blog/2015/08/create-your-website-in-jekyll/#advantages) of this approach.
+There are plenty of guides out there on how to create a personal website using tools like WordPress, [Wix](https://www.wix.com), or [Google Sites](https://www.sites.google.com/). The free versions of these tools often come with ads, or at the least a message telling you which tool was used to create the website. I take a different approach that requires some (minimal) coding experience, but produces a beautiful and professional website that is ad free. I use a [static site generator](https://www.staticgen.com/about) that produces HTML from easy to edit [Markdown](https://en.wikipedia.org/wiki/Markdown) files. Because the resulting site is static (it's just a collection of files with no interactivity where users can .e.g, fill out and submit forms) it can be hosted for free with [GitHub Pages](https://pages.github.com/). [Steven Miller](https://svmiller.com) has a nice rundown on all of the [advantages](https://svmiller.com/blog/2015/08/create-your-website-in-jekyll/#advantages) of this approach.
 
 ## Who this guide is for
 
@@ -395,11 +395,11 @@ You want to go back to the settings page for your repo (the button with the <i c
 
 ![](/images/posts/creating-website/pages.png)
 
-Once you do this, the page should reload. Scroll back down to the "GitHub Pages" heading, and there should be a message at the top that "Your site is ready to be published at http://\<yourusername\>.github.io/". You can see what this looks like for me below
+Once you do this, the page should reload. Scroll back down to the "GitHub Pages" heading, and there should be a message at the top that "Your site is ready to be published at https://\<yourusername\>.github.io/". You can see what this looks like for me below
 
 ![](/images/posts/creating-website/publish.png)
 
-Now, here's where things may get a little tricky. Go to http://\<yourusername\>.github.io/ and see if there's a website there. If there is, skip down to the last section below. If not, go back to the settings page for your repo and see if there's still a "ready to be published" message. If there is, you may have to push an additional change to the repo to trigger building your site. Editing `_pages/about.md` to personalize the welcome message and short biography is a good candidate here. Once you've personalized your site's landing page, record the changes and push them to the repo
+Now, here's where things may get a little tricky. Go to https://\<yourusername\>.github.io/ and see if there's a website there. If there is, skip down to the last section below. If not, go back to the settings page for your repo and see if there's still a "ready to be published" message. If there is, you may have to push an additional change to the repo to trigger building your site. Editing `_pages/about.md` to personalize the welcome message and short biography is a good candidate here. Once you've personalized your site's landing page, record the changes and push them to the repo
 
 ```bash
 git add _pages/about.md
@@ -407,11 +407,11 @@ git commit -m "edit welcome page"
 git push
 ```
 
-Then head back to the repo's settings page and see if the "ready to be published" message has changed to "<i class="fa fa-fw fa-check" aria-hidden="true"></i> Your site is published at http://\<yourusername\>.github.io/". You can see what this looks like for my website below
+Then head back to the repo's settings page and see if the "ready to be published" message has changed to "<i class="fa fa-fw fa-check" aria-hidden="true"></i> Your site is published at https://\<yourusername\>.github.io/". You can see what this looks like for my website below
 
 ![](/images/posts/creating-website/published.png)
 
-You'll notice that the URL for my site is http:/shamshad.github.io. I'll cover how to get a custom domain name for your site in a future post.
+You'll notice that the URL for my site is https:/shamshad.in. I'll cover how to get a custom domain name for your site in a future post.
 
 # Next steps
 

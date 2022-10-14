@@ -65,7 +65,7 @@ To contribute to improving the quality and sustainability (both environmental an
 	[School of Biosciences, University of Nottingham, United kingdom (UK)](https://www.nottingham.ac.uk/biosciences/).
 	
 **Visting Student Exchange** <br/>
-	[School of Biological Sciences, University of Bristol, United kingdom (UK)](http://www.bristol.ac.uk/life-sciences/).
+	[School of Biological Sciences, University of Bristol, United kingdom (UK)](https://www.bristol.ac.uk/life-sciences/).
 	
 **Ph. D (INEW International Fellow and Graduate Research Assistantship)**<br/>
 	January 2016 to September 2019 <br/>
@@ -124,8 +124,8 @@ To contribute to improving the quality and sustainability (both environmental an
 
 * Travel Grant Award Indo UK project for the Nitrogen improvemet (INEW). [Link](https://www.cerealsdb.uk.net/cerealgenomics/INEW/)
 * Junior Research Fellowship Indo UK project for the Nitrogen improvemet (INEW). [Link](https://www.cerealsdb.uk.net/cerealgenomics/INEW/)
-* University Merit Certificate (M.Sc. Plant breeding & Genetics) (2014). [Link](http://www.pau.edu)
-* Qualified ASRB National Eligibility Test 2014, 2015 and 2016 for Assistant Professorship. [Link](http://www.asrb.org.in/)
+* University Merit Certificate (M.Sc. Plant breeding & Genetics) (2014). [Link](https://www.pau.edu)
+* Qualified ASRB National Eligibility Test 2014, 2015 and 2016 for Assistant Professorship. [Link](https://www.asrb.org.in/)
 
 ------
 
@@ -135,7 +135,7 @@ To contribute to improving the quality and sustainability (both environmental an
 * Work shop on Cereal data base, CerealsDB and use of snps array, database and emble plants. Life Sciences, School of Bioscience, University of Bristol. September 18-19, 2018. [Link](https://www.cerealsdb.uk.net/cerealgenomics/CerealsDB/workshop-2018.php)
 * Work shop Precision nitrogen nutrition in wheat: integrating genetics and precision agronomy for improving nitrogen use efficiency, March 1-5, 2018  Borlaug Institute for South Asia (CIMMYT), Ludhiana, India
 * workshop on Wheat genomic data analysis for improvement in nitrogen use efficiency. February 27 to March 2, 2019, ICAR- National Bureau of plant genic resources (NBPGR), New Delhi, India
-* Short term bioinformatics training (RNA-seq and DNA-seq). ArrayGen Technologies, India, Pune . 23 Oct-21 Nov. 2018. [Link](http://www.arraygen.com/workshop-training.php)
+* Short term bioinformatics training (RNA-seq and DNA-seq). ArrayGen Technologies, India, Pune . 23 Oct-21 Nov. 2018. [Link](https://www.arraygen.com/workshop-training.php)
 * Fundamental writing skills workshop researchers. ICRISAT, Hyderabad. January 2020.
 * Write Wining Grant Proposals, University of TIGR<sup>2</sup>ESS, ICRISAT, Hyderabad, January 18, 2020.
 

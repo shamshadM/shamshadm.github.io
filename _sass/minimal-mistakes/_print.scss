@@ -98,7 +98,6 @@
     border: 0;
     display: block;
     max-width: 100% !important;
-    vertical-align: middle;
   }
 
   hr {
@@ -174,7 +173,7 @@
     word-wrap: break-word;
   }
 
-  a[href^='http://']:after,
+  a[href^='https://']:after,
   a[href^='https://']:after,
   a[href^='ftp://']:after {
     content: " (" attr(href) ")";
