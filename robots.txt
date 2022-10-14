@@ -1,5 +1,4 @@
 user-agent: *
-Disallow: /wp-admin/
 Disallow: /* .pdf$
 Disallow: /404.html
 Sitemap: https://www.shamshad.in/sitemap.xml
