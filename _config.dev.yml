@@ -10,4 +10,4 @@ comments:
     shortname: "shamshad"
 
 sass:
-  style: expanded
+  style: compressed

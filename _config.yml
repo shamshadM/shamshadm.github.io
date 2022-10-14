@@ -337,3 +337,20 @@ compress_html:
   clippings: all
   ignore:
     envs: development    
+
+# - gzip related settings
+gzip:
+  extensions:
+    - '.html'
+    - '.css'
+    - '.js'
+    - '.ttf'
+    - '.woff'
+    - '.woff2'
+    - '.json'
+    - '.xml'
+    - '.svg'
+    - '.eot'
+    - '.atom'
+    - '.stl'
+    - '.svg'   
