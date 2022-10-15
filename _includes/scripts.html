@@ -5,10 +5,10 @@
     {% else %}
       {% capture script_path %}{{ script | relative_url }}{% endcapture %}
     {% endif %}
-    <script src="{{ script_path }}"></script>
+    <script async src="{{ script_path }}"></script>
   {% endfor %}
 {% else %}
-  <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
+  <script  async src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
   <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> -->
 {% endif %}
 
@@ -34,7 +34,7 @@
     {% else %}
       {% capture script_path %}{{ script | relative_url }}{% endcapture %}
     {% endif %}
-    <script src="{{ script_path }}"></script>
+    <script async src="{{ script_path }}"></script>
   {% endfor %}
 {% endif %}
 
