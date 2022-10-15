@@ -3,6 +3,7 @@ layout: single
 title: "Publications"
 permalink: /publications/
 author_profile: true
+classes: wide
 header:
     overlay_image: /header/publications.webp
     og_image: /images/favicon/shamshad.webp
