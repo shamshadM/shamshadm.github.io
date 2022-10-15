@@ -70,7 +70,7 @@
 
 .edu {
   padding: 0em;
-  line-height: 1em;
+  line-height: 1.5em;
   font-size: normal;
   display: flex;
   flex-direction: row;
@@ -80,7 +80,6 @@
 
 .edu p {
   font-style: italic;
-  line-height: 1.5em;
 }
 
 .edu li {
@@ -94,7 +93,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: "Merriweather Sans", sans-serif;
+    font-family: $global-font-family;
   }
   main #errorText {
     font-size: 22px;
