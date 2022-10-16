@@ -15,14 +15,14 @@ title                    : "M. Shamshad"
 title_separator          : "|"
 subtitle                 : # site taggline that appears blow site title in masthead
 name                     : &name "M. Shamshad"
-description              : &description "Postdoc in Plant Breeding and Genetics"
+description              : &description "I have dream..."
 port                     : 4000
 url                      : https://shamshad.in # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "shamshadM/mstutor"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : # true, false (default)
-words_per_minute         : 160
+words_per_minute         : 200
 future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false #change to true to add link to talkmap on talks page
@@ -90,8 +90,8 @@ analytics:
 author:
   name             : "M. Shamshad"
   avatar           : "/images/profile.webp"
-  bio              : "Post Doctoral Researcher"
-  location         : "PAU, Ludhiana, India"
+  bio              : "Hello!"
+  location         : "Punjab, India"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=dI7V1a4AAAAJ&hl=en"
@@ -151,7 +151,6 @@ exclude:
   - CHANGELOG
   - Capfile
   - Gemfile
-  - Gruntfile.js
   - LICENSE
   - README
   - Rakefile
