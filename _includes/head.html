@@ -9,9 +9,7 @@
 />
 {% endunless %}
 
-<!-- https://t.co/dKP3o1e -->
-<meta class="HandheldFriendly" content="true">
-<meta  name="MobileOptimized" content="320">
+<!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <script  async>
@@ -49,5 +47,3 @@
 {% if site.head_scripts %} {% for script in site.head_scripts %}
 <script async src="{{ script | relative_url }}"></script>
 {% endfor %} {% endif %}
-
-<meta http-equiv="cleartype" content="on">
