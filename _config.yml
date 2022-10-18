@@ -275,7 +275,7 @@ paginate: 6 # amount of posts to show
 pagination_path: /page:num/
 
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/Puerto_Rico # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
@@ -285,12 +285,12 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-gzip
   - jekyll-include-cache                
   - jekyll-redirect-from
   - jekyll-spaceship
   - jekyll-seo-tag
   - jekyll-last-modified-at
+  - jekyll-gzip
   - jekyll-brotli
 # mimic GitHub Pages with --safe
 whitelist:
