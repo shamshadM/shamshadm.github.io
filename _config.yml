@@ -270,7 +270,7 @@ paginate: 6 # amount of posts to show
 pagination_path: /page:num/
 
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Calcutta # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Plugins
 plugins:
