@@ -36,6 +36,5 @@ group :jekyll_plugins do
   gem 'webrick'
   gem 'faraday-retry'
   gem 'jekyll-last-modified-at'
-  gem 'jekyll-gzip'
   gem 'jekyll-brotli'
 end
