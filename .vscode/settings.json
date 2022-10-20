@@ -1,5 +1,8 @@
 {
     "editor.minimap.size": "fit",
     "workbench.iconTheme": "vs-seti",
-    "editor.mouseWheelZoom": true
+    "editor.mouseWheelZoom": true,
+    "cSpell.words": [
+        "browserconfig"
+    ]
 }
