@@ -9,7 +9,7 @@ header:
     og_image: /images/favicon/shamshad.webp
 ---
 
-I work as a post-doctoral researcher in the **[Transforming India's Green Revolution by Research and Empowerment for Sustainable food Supplies](https://tigr2ess.globalfood.cam.ac.uk/fps/FP3)** at the [Plant Breeding and Genetics, PAU](https://www.pau.edu/coa/index.php?_act=manageDepartments&DO=viewDepartment&intLinkID=9) in Ludhiana, India.
+I am from Malerkotla Punjab and work as a post-doctoral researcher in the **[Transforming India's Green Revolution by Research and Empowerment for Sustainable food Supplies](https://tigr2ess.globalfood.cam.ac.uk/fps/FP3)** at the [Plant Breeding and Genetics, PAU](https://www.pau.edu/coa/index.php?_act=manageDepartments&DO=viewDepartment&intLinkID=9) in Ludhiana, India.
 
 My work focus on the development and evaluation of high-yielding, diseases resistance, and abiotic stress tolerance crops. `shamshad.in` is my blog to keep track of my projects and different HOWTOs related to data and tech. 
 
@@ -23,20 +23,20 @@ I have professional Expertise in Plant Breeding, Quantitative Genetics, Genomics
 <div class="edu"> 
 <div class="container-item"><h4>Education</h4>
 <span class="fa-solid fa-graduation-cap"></span> PhD in Plant Breeding & Genetics 
- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Punjab Agricultural University, 2019</p>
+ <p>Punjab Agricultural University, 2019</p>
 
 <span class="fa-solid fa-building-columns"></span> Exchange Student 
- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Life Sciences, University of Bristol, 2018</p>
+ <p>Life Sciences, University of Bristol, 2018</p>
 
-<span class="fa-solid fa-building-columns"></span> Visting Scholar
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Biosciences, University of Nottingham, 2018</p>
+<span class="fa-solid fa-building-columns"></span> Visiting Scholar
+<p> Biosciences, University of Nottingham, 2018</p>
 
 <span class="fa-solid fa-graduation-cap"></span> MSc in Plant Breeding & Genetics
- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Punjab Agricultural University, 2014</p>
+ <p>Punjab Agricultural University, 2014</p>
 
  <span class="fa-solid fa-graduation-cap"></span> 
 BSc in  Agriculture [Crop Science]
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Punjab Agricultural University, 2012</p>
+<p>Punjab Agricultural University, 2012</p>
   </div>
 <div class="container-item"><h4>Interests:</h4>
   <li>Breeding and Genetics</li>   

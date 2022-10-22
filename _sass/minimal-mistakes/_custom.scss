@@ -70,7 +70,7 @@
 
 .edu {
   padding: 0em;
-  line-height: 1.5em;
+  line-height: 1.33em;
   font-size: normal;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
@@ -79,6 +79,8 @@
 
 .edu p {
   font-style: italic;
+  font-size: medium;
+  padding-left: 1.56rem;
 }
 
 .edu li {
