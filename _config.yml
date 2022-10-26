@@ -11,7 +11,7 @@ minimal_mistakes_skin2: "dark"
 
 # Site Settings
 locale: "en-US"
-title: "shamshad.in"
+title: "M. Shamshad"
 title_separator: "|"
 subtitle: # site taggline that appears blow site title in masthead
 name: &name "M. Shamshad"
@@ -21,7 +21,7 @@ url: https://shamshad.in # the base hostname & protocol for your site e.g. "http
 baseurl: "" # the subpath of your site, e.g. "/blog"
 repository: "shamshadM/mstutor"
 teaser: # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
-logo: /images/favicon/favicon.ico
+logo:  #/images/favicon/site-treaser.webp
 breadcrumbs: # true, false (default)
 words_per_minute: 200
 future: false
