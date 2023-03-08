@@ -82,6 +82,27 @@ $ ls (to check if it has deleted the file)
 
 You can use the rmdir command to remove a directory (make sure it is empty first). Try to remove the **backups** directory. You will not be able to since UNIX will not let you remove a non-empty directory.
 
+To permanently remove directory use either the `rmdir` or `rm` commands:
+
+```scss
+rmdir unixstuff or 
+rm -d unixstuff
+```
+The remove commands for various options
+
+| Command and Option	 |  Description |
+| :-------------                |:------------------------------------------	|
+| rm -d	| Remove an empty directory using the rm command. |
+|rm -r	| Remove a non-empty directory and its content.|
+|rm -f	| Ignore any prompt when deleting a write-protected file.|
+|rm -rf	| Ignore any prompt when deleting a write-protected non-empty folder.|
+|rm -i	| Output a prompt before deleting every file.
+|rm -I	| Output a prompt only once before deleting more than three files.|
+|rm *	| Wildcard that represents multiple characters. |
+|rm ?	| Wildcard that represents a single character. |
+|rmdir -p	| Remove an empty subdirectory and its parent directory.|
+|rmdir -v	| Print the information that the specified directory was deleted.|
+
 :loudspeaker: <b>Exercise</b>
 
 Create a directory called **tempstuff** using mkdir , then remove it using the rmdir command.
@@ -211,7 +232,7 @@ $ wc -l science.txt
 <b> Summary</b>
 
 | code                          | Function                                    			   |                                             
-| :-------------                |:------------------------------------------: 			   |
+| :-------------                |:------------------------------------------ 			   |
 | `cp file1 file2` 			    |   copy file1 and call it file2                           |
 | `mv file1 file2` 			    |  move or rename file1 to file2                           |
 | `rm file` 			        |  remove a file                                           |
