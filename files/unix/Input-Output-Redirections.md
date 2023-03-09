@@ -180,7 +180,7 @@ Using pipes, print all lines of **list1** and **list2** containing the letter 'p
 | code           | Function       |
 | --- | :--- |
 | command > file  | redirect standard output to a file |
-| command >> file | append standard output to a file |
+| command > > file | append standard output to a file |
 | command < file  | redirect standard input from a file |
 | command1 \| command2  | pipe the output of command1 to the input of command2 |
 | cat file1 file2 > file0 | concatenate file1 and file2 to file0 |
