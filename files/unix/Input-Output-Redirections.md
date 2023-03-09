@@ -151,7 +151,9 @@ One method to get a sorted list of names is to type,
 $ who > names.txt  
 $ sort < names.txt
 ```
-This is a bit slow and you have to remember to remove the temporary file called names when you have finished. What you really want to do is connect the output of the who command directly to the input of the sort command. This is exactly what pipes do. The symbol for a pipe is the vertical bar |
+This is a bit slow and you have to remember to remove the temporary file called names when you have finished. What you really want to do is connect the output of the who command directly to the input of the sort command. This is exactly what pipes do. 
+
+The symbol for a pipe is the vertical bar |
 
 For example, typing
 
