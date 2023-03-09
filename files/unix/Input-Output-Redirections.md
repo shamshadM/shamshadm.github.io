@@ -140,7 +140,6 @@ Use cat to read the contents of the file **slist**
 ---
 ## Pipes
 ---
-
 To see who is on the system with you, type
 
 ```scss
