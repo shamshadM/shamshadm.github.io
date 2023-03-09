@@ -51,6 +51,7 @@ apple
 What happens is the cat command reads the standard input (the keyboard) and the > redirects the output, which normally goes to the screen, into a file called **list1**
 
 To read the contents of the file, type
+
 ```scss
 $ cat list1
 ```
@@ -59,6 +60,7 @@ $ cat list1
 Using the above method, create another file called **list2** containing the following fruit: orange, plum, mango, grapefruit. Read the contents of **list2**
 
 The form `>>` appends standard output to a file. So to add more items to the file **list1**, type
+
 ```scss
 $ cat >> list1
 ```
@@ -73,14 +75,17 @@ orange
 ```
 
 To read the contents of the file, type
+
 ```scss
 $ cat list1
 ```
 
 You should now have two files. One contains six fruit, the other contains four fruit. We will now use the cat command to join (concatenate) **list1** and **list2** into a new file called **biglist**. Type
+
 ```scss
 $ cat list1 list2 > biglist
 ```
+
 What this is doing is reading the contents of **list1** and **list2** in turn, then outputing the text to the file **biglist**
 
 To read the contents of the new file, type
@@ -88,6 +93,7 @@ To read the contents of the new file, type
 ```scss
 $ cat biglist
 ```
+
 ---
 ## Redirecting the Input  
 ---
@@ -95,6 +101,7 @@ $ cat biglist
 We use the `<` symbol to redirect the input of a command.
 
 The command sort alphabetically or numerically sorts a list. Type
+
 ```scss
 $ sort
 ```
@@ -109,19 +116,22 @@ artichoke
 ```
 
 The output will be
+
 ```scss
 artichoke  
 beetroot  
 carrot
-``
+```
 
 Using `<` you can redirect the input to come from a file rather than the keyboard. For example, to sort the list of fruit, type
+
 ```scss
 $ sort < biglist
 ```
 and the sorted list will be output to the screen.
 
 To output the sorted list to a file, type,
+
 ```scss
 $ sort &lt; biglist &gt; slist
 ```
@@ -132,23 +142,27 @@ Use cat to read the contents of the file **slist**
 ---
 
 To see who is on the system with you, type
+
 ```scss
 $ who
 ```
 One method to get a sorted list of names is to type,
+
 ```scss
 $ who > names.txt  
 $ sort < names.txt
-``
+```
 This is a bit slow and you have to remember to remove the temporary file called names when you have finished. What you really want to do is connect the output of the who command directly to the input of the sort command. This is exactly what pipes do. The symbol for a pipe is the vertical bar |
 
 For example, typing
+
 ```scss
 $ who | sort
 ```
 will give the same result as above, but quicker and cleaner.
 
 To find out how many users are logged on, type
+
 ```scss
 $ who | wc -l  
 ```
