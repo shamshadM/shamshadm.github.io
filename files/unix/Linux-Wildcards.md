@@ -37,7 +37,7 @@ $ ls ?list
 
 We should note here that a directory is merely a special type of file. So the rules and conventions for naming files apply also to directories.
 
-In naming files, characters with special meanings such as **/ \* & $** , should be avoided. Also, avoid using spaces within names. The safest way to name a file is to use only alphanumeric characters, that is, letters and numbers, together with _ (underscore) and . (dot).
+In naming files, characters with special meanings such as `/ \* & $`, should be avoided. Also, avoid using spaces within names. The safest way to name a file is to use only alphanumeric characters, that is, letters and numbers, together with _ (underscore) and . (dot).
 
 File names conventionally start with a lower-case letter, and may end with a dot followed by a group of letters indicating the contents of the file. For example, all files consisting of C code may be named with the ending .c, for example, prog1.c . Then in order to list all files containing C code in your home directory, you need only type ls *.c in that directory.
 
@@ -51,9 +51,10 @@ For example, some compilers, unless given the appropriate option, produce compil
 
 ### On-line Manuals
 
-There are on-line manuals which gives information about most commands. The manual pages tell you which options a particular command can take, and how each option modifies the behaviour of the command. Type man command to read the manual page for a particular command.
+There are on-line manuals which gives information about most commands. The manual pages tell you which options a particular command can take, and how each option modifies the behavior of the command. Type man command to read the manual page for a particular command.
 
 For example, to find out more about the wc (word count) command, type
+
 ```scss
 $ man wc
 ```
@@ -76,10 +77,10 @@ $ apropos copy
 
 <b>Summary </b>
 
-| code           | Function                            |
-| -------------  | :------------------------------:    |
-| `*` | match any number of characters |
-| `?` | match one character |
-| `man command` | read the online manual page for a command |
-| `whatis command` | brief description of a command |
-| `apropos keyword` | match commands with keyword in their man pages |
+| code            | Function                                        |
+| --------------  | :------------------------------                 |
+| *               | match any number of characters                  |
+| ?               | match one character                             |
+| man command     | read the online manual page for a command       |
+| whatis command  | brief description of a command                  |
+| apropos keyword | match commands with keyword in their man pages  |
