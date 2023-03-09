@@ -178,13 +178,13 @@ Using pipes, print all lines of **list1** and **list2** containing the letter 'p
 <b>Summary </b>
 
 | code           | Function       |
-| --- | :---: |
-| ` command > file ` | redirect standard output to a file |
-| ` command >> file ` | append standard output to a file |
-| ` command < file ` | redirect standard input from a file |
-| ` command1 \| command2 ` | pipe the output of command1 to the input of command2 |
-| ` cat file1 file2 > file0 ` | concatenate file1 and file2 to file0 |
-| ` sort ` | sort data |
-| ` who ` | list users currently logged in |
-| ` a2ps -Pprinter textfile ` | print text file to named printer |
-| ` lpr -Pprinter psfile ` | print postscript file to named printer |
+| --- | :--- |
+| command > file  | redirect standard output to a file |
+| command >> file | append standard output to a file |
+| command < file  | redirect standard input from a file |
+| command1 \| command2  | pipe the output of command1 to the input of command2 |
+| cat file1 file2 > file0 | concatenate file1 and file2 to file0 |
+| sort  | sort data |
+| who  | list users currently logged in |
+| a2ps -Pprinter textfile | print text file to named printer |
+| lpr -Pprinter psfile  | print postscript file to named printer |
