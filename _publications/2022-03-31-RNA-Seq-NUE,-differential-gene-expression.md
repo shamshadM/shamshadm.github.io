@@ -7,7 +7,7 @@ date: 2022-03-31
 venue: 'Frontier in Genetics'
 clink: 'https://doi.org/10.3389/fgene.2022.853910'
 purl: '/files/research/RNA-seq.pdf'
-citation: 'Kaur, S., <b>Shamshad, M.</b>, Jindal, S., Kaur, A., Singh, S., sharma, A., &amp; Kaur, S. (2022). &quot;RNA-Seq-Based Transcriptomics Study to Investigate the Genes Governing Nitrogen Use Efficiency in Indian Wheat Cultivars&quot;. <i>Frontiers in Genetics</i>, 13(March), 1-15. Retrieved from https://doi.org/10.3389/fgene.2022.8539'
+citation: 'Kaur, S., <b>Shamshad, M.</b><sup>*</sup>, Jindal, S., Kaur, A., Singh, S., sharma, A., &amp; Kaur, S. (2022). &quot;RNA-Seq-Based Transcriptomics Study to Investigate the Genes Governing Nitrogen Use Efficiency in Indian Wheat Cultivars&quot;. <i>Frontiers in Genetics</i>, 13(March), 1-15. Retrieved from https://doi.org/10.3389/fgene.2022.8539'
 pubtype: 'journal'
 ---
 

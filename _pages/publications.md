@@ -56,5 +56,10 @@ I have collaborated to manuscripts published in high quality peer-reviewed scien
   {% endif %}
 {% endfor %} -->
 
+<hr>
+
+
+<sup>*</sup> Equal authorship
+
 
 
