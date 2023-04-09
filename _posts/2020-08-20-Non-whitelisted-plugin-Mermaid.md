@@ -23,13 +23,13 @@ The **first solution** is to use the mermaid API directly, it's inspired by this
 
 1. create a file `mermaid.html` inside the folder `_includes`. The file content could be found on the [mermaid js official website](https://mermaid-js.github.io/mermaid/#/n00b-gettingStarted?id=_3-calling-the-javascript-api).
 2. update the file `_includes/head.html` to include the new file `mermaid.html` with or without the condition on the var `page.mermaid`
-3. in post where we need to render the mermaid diagrams, just put the code in side a html div block by set the class to `mermaid` like: `<div class="mermaid"></div>`. If the step 2 has set a condition on the var `page.mermaid`, you need to aslo add a variable named `mermaid` and set its value to `true` in the post header.
+3. in post where we need to render the mermaid diagrams, just put the code in side a html div block by set the class to `mermaid` like: `<div class="mermaid"></div>`. If the step 2 has set a condition on the var `page.mermaid`, you need to also add a variable named `mermaid` and set its value to `true` in the post header.
 
 The **seconde solution** is to install the gem plugin [jekyll-mermaid](https://github.com/jasonbellamy/jekyll-mermaid) where the underlying implementation uses the mermaid API too, This is what I'm using as per this [commit](https://github.com/shamshadM/shamshadM.github.io/) it's a little bitter easier than the first solution.
 
 <hr>
 
-# Use of Mermaid to draw differnet Types of diagram
+# Use of Mermaid to draw different Types of diagram
 <hr>
 
 ## Flowchart
