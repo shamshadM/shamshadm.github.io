@@ -122,8 +122,8 @@ To contribute to improving the quality and sustainability (both environmental an
 
 ------ 
 
-* Travel Grant Award Indo UK project for the Nitrogen improvemet (INEW). [Link](https://www.cerealsdb.uk.net/cerealgenomics/INEW/)
-* Junior Research Fellowship Indo UK project for the Nitrogen improvemet (INEW). [Link](https://www.cerealsdb.uk.net/cerealgenomics/INEW/)
+* Travel Grant Award Indo UK project for the Nitrogen improvement (INEW). [Link](https://www.cerealsdb.uk.net/cerealgenomics/INEW/)
+* Junior Research Fellowship Indo UK project for the Nitrogen improvement (INEW). [Link](https://www.cerealsdb.uk.net/cerealgenomics/INEW/)
 * University Merit Certificate (M.Sc. Plant breeding & Genetics) (2014). [Link](https://www.pau.edu)
 * Qualified ASRB National Eligibility Test 2014, 2015 and 2016 for Assistant Professorship. [Link](https://www.asrb.org.in/)
 

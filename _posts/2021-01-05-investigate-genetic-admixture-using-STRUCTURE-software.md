@@ -25,7 +25,7 @@ In this tutorial, I will show how to prepare `input` files and run the `Structur
 
 ***
 ## Step 1: Preparing the Input file
-In this tutorial, I am using `numerical` SNP data as in `input` genotype file. One can convert their genotype data in numerical format in `TASSEL` software or any software package available as per ones convenience. The file needs to be foramtted properly as shown below in the image below and save it as `.txt` file.
+In this tutorial, I am using `numerical` SNP data as in `input` genotype file. One can convert their genotype data in numerical format in `TASSEL` software or any software package available as per ones convenience. The file needs to be formatted properly as shown below in the image below and save it as `.txt` file.
 
 <p align="center">
 <img src="/images/biostat/structure/input-structure.webp" alt="Input structure File"/>
@@ -78,7 +78,7 @@ Follow the steps shown in the below figure to run this step. **Please remember**
 
 <!--more-->
 ## 2.1 Preparing Files for Structure Harvester
-`zip` all the result siles in the results folder.
+`zip` all the result files in the results folder.
 <!--more-->
 <p align="center">
 <img src="/images/biostat/structure/structure-harvester.gif" alt="Files for Structure Harvester"/>

@@ -12,7 +12,7 @@ location: "Ludhiana, India"
 - Semester: Semester II
 - Team size: 2 TAs
 - My key role consisted of:
-  - Taught different cocept of Quantitative Genetics
+  - Taught different concept of Quantitative Genetics
   - Corrected students' homework
   - Held up recitation class
   - managed and arranged other TAs

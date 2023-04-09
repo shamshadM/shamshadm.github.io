@@ -3,6 +3,7 @@
     "workbench.iconTheme": "vs-seti",
     "editor.mouseWheelZoom": true,
     "cSpell.words": [
-        "browserconfig"
+        "browserconfig",
+        "ploidy"
     ]
 }

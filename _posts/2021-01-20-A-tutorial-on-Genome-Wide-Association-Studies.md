@@ -22,9 +22,9 @@ Genome-wide association studies (GWAS) increase their popularity among medical, 
 <!--more-->
 
 ## TASSEL
-__TASSEL__ aslo known as for the `Evaluate traits aSSociations, Evolutionary Patterns, and linkage disequilibrium.` It is a powerful statistical software to conduct `association mapping` such as `General Linear Model (GLM)` and `Mixed Linear Model (MLM)`. The Tassel has ability to handle a wide range of indels (insertion & deletions).
+__TASSEL__ also known as for the `Evaluate traits aSSociations, Evolutionary Patterns, and linkage disequilibrium.` It is a powerful statistical software to conduct `association mapping` such as `General Linear Model (GLM)` and `Mixed Linear Model (MLM)`. The Tassel has ability to handle a wide range of indels (insertion & deletions).
 
-The GUI (graphical user interface) version of TASSEL is very well built for anyone who does not have a background or experience in working in `command line`. I will show how to prepare `input` files and run assoication analysis in TASSEL. For detailed information on TASSEL, user's guide and further documentation please visit: 
+The GUI (graphical user interface) version of TASSEL is very well built for anyone who does not have a background or experience in working in `command line`. I will show how to prepare `input` files and run association analysis in TASSEL. For detailed information on TASSEL, user's guide and further documentation please visit: 
 [https://www.maizegenetics.net/tassel](https://www.maizegenetics.net/tassel)
 
 ## 1.0 Download and install TASSEL software 
@@ -102,7 +102,7 @@ Run the GLM analysis by selecting the `intersected` files following the steps be
 
 ---
 
-The output of the GLM analyis is produced ubder the `Result` node. The GLM association test can be evaluated by plotting `Q-Q plot` and the `Manhattan` plot as shown below. 
+The output of the GLM analysis is produced under the `Result` node. The GLM association test can be evaluated by plotting `Q-Q plot` and the `Manhattan` plot as shown below. 
 
 <center>
 <img src="/images/biostat/gwas/manhattan.png" width="auto" height="200" alt="GLM Manhattan plot">
@@ -118,7 +118,7 @@ From the above Q-Q plot, we can see that are several markers that appear to be f
 Mixed Linear Model used [Unified Mixed-Model Method for Association Mapping](https://www.nature.com/articles/ng1702). It helps to reduces Type I error in association mapping with complex pedigrees, families, founding effects and population structure.
 
 ### 4.1 Calculating Kinship matrix 
-Follow the below steps to calcuate the kinship matrix:
+Follow the below steps to calculate the kinship matrix:
 
 <center><img src="/images/biostat/gwas/kinship.gif"  alt="Kinship matrix"></center>
 
@@ -151,12 +151,12 @@ One may export the results in .txt format by the following the below steps:
 
 ### 4.3 Significance Threshold
 
-Bonferroni threshold can be deterimined to identify significantly markers associated with the trait  by using the below equation:
+Bonferroni threshold can be determined to identify significantly markers associated with the trait  by using the below equation:
 
 ```scss
 P ≤ 1/N (α =0.05)
 ```
-where, N is the total number of markers tested in association analysis) was used to identify the most significantly markers associated with the trait. Similarly, another way is to perform `FDR` (`False Discovey Rate`) correction method.
+where, N is the total number of markers tested in association analysis) was used to identify the most significantly markers associated with the trait. Similarly, another way is to perform `FDR` (`False Discovery Rate`) correction method.
 
 ---
 <center> <b>End of Tutorial</b></center>

@@ -16,6 +16,6 @@ location: "Ludhiana, India"
 - My key role consisted of:
   - Taught Theory and practice of plant Breeding to undergraduate students of Agriculture and Biotechnology
   - Corrected students' homework
-  - Held up recitation class for the cocept clearnce
+  - Held up recitation class for the concept clearance
 
-Skills that I learned and used: Teaching · Plant Breeding methods · Mode of pollination · Disease Resitance Breeding · Quality Breeding
+Skills that I learned and used: Teaching · Plant Breeding methods · Mode of pollination · Disease Resistance Breeding · Quality Breeding

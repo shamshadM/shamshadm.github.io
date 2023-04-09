@@ -37,8 +37,8 @@ feature_row:
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: /images/unix/Streams.webp
-    alt: "Input-Output Redirections"
-    title: "Input-Output Redirections"
+    alt: "Input-Output Redirection"
+    title: "Input-Output Redirection"
     excerpt: "In Linux, each process has three communication channels: standard input, standard output, and standard error. These communication channels help users interact with the processes on a Linux system"
     url: "/files/unix/Input-Output-Redirections"
     btn_label: "Read More"
@@ -84,7 +84,7 @@ Linux is a family of free and open-source operating systems based on the Linux k
 
 The Linux kernel has been under active development since 1991, and has proven to be extremely versatile and adaptable. You can find computers that run Linux in a wide variety of contexts all over the world, from web servers to cell phones. Today, 90% of all cloud infrastructure and 74% of the world’s smartphones are powered by Linux.
 
-However, newcomers to Linux may find it somewhat difficult to approach, as Linux filesystems have a different structure than those found on Windows or MacOS. Additionally, Linux-based operating systems depend heavily on working with the command line interface, while most personal computers rely on graphical interfaces.
+However, newcomers to Linux may find it somewhat difficult to approach, as Linux file systems have a different structure than those found on Windows or MacOS. Additionally, Linux-based operating systems depend heavily on working with the command line interface, while most personal computers rely on graphical interfaces.
 
 This guide serves as an introduction to important command line concepts and skills and equips newcomers to learn more about Linux.
 
