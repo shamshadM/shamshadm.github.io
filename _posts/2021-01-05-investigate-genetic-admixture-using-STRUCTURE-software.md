@@ -3,8 +3,8 @@ title: "A tutorial on investigate genetic admixture using STRUCTURE software"
 date: 2021-01-05
 permalink: /posts/2021/01/investigate-genetic-admixture-using-STRUCTURE-software/
 excerpt_separator: <!--more-->
+categories: Structure software
 toc: true
-categories: Software structure
 header: 
   og_image: "images/biostat/structure/structure-admixture.webp"
 tags: 

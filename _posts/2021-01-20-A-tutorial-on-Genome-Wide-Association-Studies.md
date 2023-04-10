@@ -3,9 +3,9 @@ title: "A tutorial on Genome-Wide Association Studies (GWAS) in Tassel (GUI)"
 date: 2021-01-20
 permalink: /posts/2021/01/A-tutorial-on-Genome-Wide-Association-Studies/
 excerpt_separator: <!--more-->
+categories: TASSEL software
 toc: true
 number_sections: true
-categories: software TASSEL
 header: 
   og_image: "images/biostat/gwas/gwaslogo.webp"
 tags: 

@@ -14,23 +14,23 @@ source "https://rubygems.org"
 # If you want to use Jekyll native, uncomment the line below.
 # To upgrade, run `bundle update`.
 
-gem "jekyll", ">=3.7", "<5.0"
+gem "jekyll", ">=4", "<6.0"
 gem 'tzinfo-data'
 gem "wdm" if Gem.win_platform?
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem 'jekyll-sitemap', "~> 1.1"
-  gem 'jekyll-paginate', "~> 1.1"
+  gem 'jekyll-sitemap'
+  gem 'jekyll-paginate'
   gem 'commonmarker'
-  gem 'jekyll-gist', "~> 1.5"
+  gem 'jekyll-gist'
   gem 'jekyll-seo-tag'
-  gem "kramdown", ">= 2.3.1"
+  gem "kramdown"
   gem "kramdown-parser-gfm"
-  gem 'hawkins'
+  # gem 'hawkins'
   gem 'jekyll-archives'
-  gem 'jekyll-feed', "~> 0.1"
-  gem 'jekyll-include-cache', "~> 0.1"
+  gem 'jekyll-feed'
+  gem 'jekyll-include-cache'
   gem 'jekyll-redirect-from'
   gem 'jekyll-spaceship'
   gem 'webrick'
