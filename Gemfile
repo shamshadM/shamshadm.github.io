@@ -27,7 +27,6 @@ group :jekyll_plugins do
   gem 'jekyll-seo-tag'
   gem "kramdown"
   gem "kramdown-parser-gfm"
-  # gem 'hawkins'
   gem 'jekyll-archives'
   gem 'jekyll-feed'
   gem 'jekyll-include-cache'
