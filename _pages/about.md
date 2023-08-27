@@ -9,7 +9,7 @@ header:
     og_image: /images/favicon/shamshad.webp
 ---
 
-I am from Malerkotla Punjab and work as a [Post-Doctoral Researcher](https://tigr2ess.globalfood.cam.ac.uk/staff/dr-mohammad-shamshad) in the **[Transforming India's Green Revolution by Research and Empowerment for Sustainable food Supplies](https://tigr2ess.globalfood.cam.ac.uk/fps/FP3)** at the [University of Cambridge](https://tigr2ess.globalfood.cam.ac.uk/staff/dr-mohammad-shamshad) at Cambridge, UK.
+I am from Malerkotla Punjab and work as a [Post-Doctoral Researcher](https://tigr2ess.globalfood.cam.ac.uk/staff/dr-mohammad-shamshad) in the **[Transforming India's Green Revolution by Research and Empowerment for Sustainable food Supplies](https://tigr2ess.globalfood.cam.ac.uk/fps/FP3)** at the [University of Cambridge](https://tigr2ess.globalfood.cam.ac.uk/staff/dr-mohammad-shamshad) in Cambridge, UK.
 
 My work focus on the development and evaluation of high-yielding, diseases resistance, and abiotic stress tolerance crops. `shamshad.in` is my blog to keep track of my projects and different HOW TOs related to data and tech. 
 
