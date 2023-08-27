@@ -9,7 +9,7 @@ header:
     og_image: /images/favicon/shamshad.webp
 ---
 
-I am from Malerkotla Punjab and work as a [Post-Doctoral Researcher](https://tigr2ess.globalfood.cam.ac.uk/staff/dr-mohammad-shamshad) in the **[Transforming India's Green Revolution by Research and Empowerment for Sustainable food Supplies](https://tigr2ess.globalfood.cam.ac.uk/fps/FP3)** at the [Plant Breeding and Genetics, PAU](https://www.pau.edu/coa/index.php?_act=manageDepartments&DO=viewDepartment&intLinkID=9) in Ludhiana, India.
+I am from Malerkotla Punjab and work as a [Post-Doctoral Researcher](https://tigr2ess.globalfood.cam.ac.uk/staff/dr-mohammad-shamshad) in the **[Transforming India's Green Revolution by Research and Empowerment for Sustainable food Supplies](https://tigr2ess.globalfood.cam.ac.uk/fps/FP3)** at the [University of Cambridge](https://tigr2ess.globalfood.cam.ac.uk/staff/dr-mohammad-shamshad) at Cambridge, UK.
 
 My work focus on the development and evaluation of high-yielding, diseases resistance, and abiotic stress tolerance crops. `shamshad.in` is my blog to keep track of my projects and different HOW TOs related to data and tech. 
 
@@ -23,14 +23,7 @@ I have professional Expertise in Plant Breeding, Quantitative Genetics, Genomics
 <div class="edu"> 
 <div class="container-item"><h4>Education</h4>
 <span class="fa-solid fa-graduation-cap"></span> PhD in Plant Breeding & Genetics 
- <p>Punjab Agricultural University, 2019</p>
-
-<span class="fa-solid fa-building-columns"></span> Exchange Student 
- <p>Life Sciences, University of Bristol, 2018</p>
-
-<span class="fa-solid fa-building-columns"></span> Visiting Scholar
-<p> Biosciences, University of Nottingham, 2018</p>
-
+ <p>Punjab Agricultural University, India, and University of Nottingham and University of Bristol, UK., 2019</p>
 <span class="fa-solid fa-graduation-cap"></span> MSc in Plant Breeding & Genetics
  <p>Punjab Agricultural University, 2014</p>
 
