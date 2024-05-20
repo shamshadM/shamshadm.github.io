@@ -205,7 +205,7 @@ To strip all the debug and line numbering information out of the binary file, us
 $ strip units
 $ ls -l
 ```
-As you can see, the file is now 36 kbytes - a third of its original size. Two thirds of the binary file was debug code !!!
+As you can see, the file is now 36 bytes - a third of its original size. Two thirds of the binary file was debug code !!!
 
 Check the file information again. 
 
