@@ -20,7 +20,8 @@ You will see that you now get lots of details about the contents of your directo
 
 <img src="/images/unix/file-permissions-4.webp" alt= "file permission" width= "100%">
 
-Each file (and directory) has associated access rights, which may be found by typing `ls -l`. Also, `ls -lg` gives additional information as to which group owns the file (beng95 in the following example):
+Each file (and directory) has associated access rights, which may be found by typing **ls -l**. Also, **ls -lg** gives additional information as to which group owns the file (beng95 in the following example):
+
 ```scss
 -rwxrw-r-- 1 ee51ab beng95 2450 Sept29 11:52 file1
 ```
@@ -98,6 +99,23 @@ Try changing access permissions on the file **science.txt** and on the directory
 
 Use ls -l to check that the permissions have changed.
 
+### chown (changing the ownership of a file)
+
+Just like **chmod**, only the owner of a file can use **chown**. This command is used to change the ownership of a file or directory. That is the user and group that owns a file can be changed. The format of the command is as follows:
+
+```scss
+$ chown <user> : <group> <filename>
+```
+So, if we wanted to change the owner of the file **biglist** to **newuser** and the group to **newgroup** we would do like so:
+
+```scss
+chown newuser:newgroup biglist
+```
+
+Also, a useful option when using chown on directories is the **-R** option. If **-R** is used, the new ownership will be applied to all files and subdirectories contained within the directory. Suppose that I have a folder named **sharedgroup** which is not accessible to the rest of my group, but I want the group to access to everything in it. In order to give the rest of the group access, I could run
+```scss
+chown -R mysuername:mygroup sharedgroup
+```
 ## Processes and Jobs
 ----------------------
 

@@ -14,15 +14,15 @@ toc: true
 ---
 ### cp (copy)
 
-cp stands for copy. This command is used to copy files or group of files or directory. It creates an exact image of a file on a disk with different file name. cp command require at least two filenames in its arguments. The cp do copy of `file1` `file2` is the command which makes a copy of **file1** in the current working directory and calls it **file2**
+cp stands for copy. This command is used to copy files or group of files or directory. It creates an exact image of a file on a disk with different file name. cp command require at least two filenames in its arguments. The **cp** do copy of **file1 file2** is the command which makes a copy of **file1** in the current working directory and calls it **file2**
 
 ```scss
 $ cp [OPTION] Source Destination
 $ cp [OPTION] Source Directory
 ```
-What we are going to do now, is to take a file stored in an open access area of the file system, and use the cp command to copy it to your unixstuff directory.
+What we are going to do now, is to take a file stored in an open access area of the file system, and use the **cp** command to copy it to your unixstuff directory.
 
-First, cd to your unixstuff directory.
+First, **cd** to your unixstuff directory.
 
 ```scss
 $ cd ~/unixstuff

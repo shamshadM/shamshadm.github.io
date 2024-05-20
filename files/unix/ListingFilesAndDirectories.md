@@ -13,6 +13,8 @@ When you first login, your current working directory is your home directory. You
 
 ```scss
 $ ls [OPTIONS] [FILES]
+
+**nobackup**
 ```
 When used with no options and arguments, ls displays out what is in your home directory, type 
 
@@ -32,7 +34,7 @@ To list all files in your home directory including those whose names begin  with
 ```scss
 $ ls -a
 ```
-**ls** is an example of a command which can take options: `-a` is an example of an option. The options change the behaviour of the command. There are online manual pages that tell you which options a particular command  can take, and how each option modifies the behaviour of the command.
+**ls** is an example of a command which can take options: **-a** is an example of an option. The options change the behavior of the command. There are online manual pages that tell you which options a particular command  can take, and how each option modifies the behavior of the command.
 
 ##  Making Directories 
 
@@ -49,9 +51,10 @@ $ ls
 ```
 ## Changing to a different directory&nbsp;
 ### cd (change directory)
-The command **cd `directory`** means change the current working directory to 'directory'. The current working directory may be thought of as the directory you are in, i.e. your current position in the file-system tree.
+The command **cd directory** means change the current working directory to 'directory'. The current working directory may be thought of as the directory you are in, i.e. your current position in the file-system tree.
 
 To change to the directory you have just made, type
+
 ```scss
 $ cd unixstuff 
 ```
@@ -86,10 +89,11 @@ This may not seem very useful at first, but using (**.**) as the name of the cur
 $ cd ..
 ```
 will take you one directory up the hierarchy (back to your home directory). Try it now.
-> Note: typing `cd` with no argument always returns you to your home directory. This is very useful if you are lost in the file system.
+> Note: typing **cd** with no argument always returns you to your home directory. This is very useful if you are lost in the file system.
 
 ## Pathnames
-### *pwd* (print working directory)
+
+### **pwd** (print working directory)
 Pathnames enable you to work out where you are in relation to the whole file-system. For example, to find out the absolute pathname of your home-directory, type **cd** to get back to your home-directory and then type
 
 ```scss
@@ -117,7 +121,7 @@ First type **cd** to get back to your home-directory, then type
 ```scss
 $ ls unixstuff
 ```
-to list the conents of your unixstuff directory.
+to list the contents of your unixstuff directory.
 
 Now type 
 

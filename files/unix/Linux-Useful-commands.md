@@ -17,20 +17,23 @@ All students are allocated a certain amount of disk space on the file system for
 
 To check your current quota and how much of it you have used, type
 ```scss
-$ quota -v
+$ fslquota
 ```
-### df
+### df 
 
 The df command reports on the space left on the file system. For example, to find out how much space is left on the fileserver, type
+
 ```scss
 $ df .
 ```
 ### du
 
-The du command outputs the number of kilobyes used by each subdirectory. Useful if you have gone over quota and you want to find out which directory has the most files. In your home-directory, type
+The du command outputs the number of kilobytes used by each subdirectory. Useful if you have gone over quota and you want to find out which directory has the most files. In your home-directory, type
 ```scss
 $ du
 ```
+>> Hint: By default, **df, du**, and many other Linux utilities list file sizes in bytes. This is fine, but the information is much more useful to a user if it is in units of KB, MB, or GB. The **-h** option will convert from bytes to one of these larger units and can be used with **df, du, ls** , and just about any other Linux utility.
+
 ### compress
 
 This reduces the size of a file, thus freeing valuable disk space. For example, type
