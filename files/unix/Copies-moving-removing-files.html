@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Copies and moving of files | M. Shamshad</title>
+<meta name="description" content="I have dream…">
+
+
+  <meta name="author" content="M. Shamshad">
+  
+  <meta property="article:author" content="M. Shamshad">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="M. Shamshad">
+<meta property="og:title" content="Copies and moving of files">
+<meta property="og:url" content="http://localhost:4000/files/unix/Copies-moving-removing-files">
+
+
+  <meta property="og:description" content="I have dream…">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/images/favicon/site-treaser.webp">
+
+
+
+  <meta name="twitter:site" content="@DrShamshadM">
+  <meta name="twitter:title" content="Copies and moving of files">
+  <meta name="twitter:description" content="I have dream…">
+  <meta name="twitter:url" content="http://localhost:4000/files/unix/Copies-moving-removing-files">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="http://localhost:4000/images/favicon/site-treaser.webp">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@DrShamshadM">
+  
+
+
+
+  <meta property="article:published_time" content="2022-09-22T00:00:00+05:30">
+
+
+
+  <meta property="article:modified_time" content="2024-05-20T22:52:43+05:30">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/files/unix/Copies-moving-removing-files">
+
+
+
+
+<script async type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "M. Shamshad",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="BD1FGtpPEYJphVV41YzUn-mrOqREjhO-JsWa4YZgj60">
+
+
+
+
+
+                                     
+<!-- end _includes/seo.html -->
+ 
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed">
+
+
+<!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script async>
+  document.documentElement.className =
+    document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css" id="theme_source">
+
+
+<link rel="stylesheet alternate" href="/assets/css/mainDark.css" id="theme_source_2">
+<script async>
+  let theme = sessionStorage.getItem("theme");
+  if (theme === "dark") {
+    sessionStorage.setItem("theme", "dark");
+    node1 = document.getElementById("theme_source");
+    node2 = document.getElementById("theme_source_2");
+    node1.setAttribute("rel", "stylesheet alternate");
+    node2.setAttribute("rel", "stylesheet");
+  } else {
+    sessionStorage.setItem("theme", "light");
+  }
+</script>
+
+
+
+
+    
+<!-- start custom head snippets -->			   
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png?v=565802">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon-76x76.png?v=565802">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-touch-icon-120x120.png?v=565802">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon-152x152.png?v=565802">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-180x180.png?v=565802">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=565802">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=565802">
+<link rel="manifest" href="/images/favicon/site.webmanifest?v=565802">
+<link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=565802" color="#00a7ff">
+<link rel="shortcut icon" href="/images/favicon/favicon.ico?v=565802">
+<meta name="apple-mobile-web-app-title" content="SM-Web">
+<meta name="application-name" content="SM-Web">
+<meta name="msapplication-TileColor" content="#00a300">
+<meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=565802">
+<meta name="theme-color" content="#ffffff">
+<!-- SEO tags -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Copies and moving of files | M. Shamshad</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Copies and moving of files">
+<meta name="author" content="M. Shamshad">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="I have dream…">
+<meta property="og:description" content="I have dream…">
+<link rel="canonical" href="http://localhost:4000/files/unix/Copies-moving-removing-files">
+<meta property="og:url" content="http://localhost:4000/files/unix/Copies-moving-removing-files">
+<meta property="og:site_name" content="M. Shamshad">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-09-22T00:00:00+05:30">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Copies and moving of files">
+<meta name="twitter:site" content="@DrShamshadM">
+<meta name="twitter:creator" content="@DrShamshadM">
+<meta name="google-site-verification" content="BD1FGtpPEYJphVV41YzUn-mrOqREjhO-JsWa4YZgj60">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-05-20T22:52:43+05:30","datePublished":"2022-09-22T00:00:00+05:30","description":"I have dream…","headline":"Copies and moving of files","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/files/unix/Copies-moving-removing-files"},"url":"http://localhost:4000/files/unix/Copies-moving-removing-files"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          M. Shamshad
+          
+        </a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/teaching/">Teaching</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/research/">Research</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/resume/">Resume</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li>
+</ul>
+         
+        <span class="fa-solid fa-moon toggle-switch" style="cursor: pointer;" aria-hidden="true" onclick="node1=document.getElementById('theme_source');node2=document.getElementById('theme_source_2');if(node1.getAttribute('rel')=='stylesheet'){node1.setAttribute('rel', 'stylesheet alternate'); node2.setAttribute('rel', 'stylesheet');sessionStorage.setItem('theme', 'dark');}else{node2.setAttribute('rel', 'stylesheet alternate'); node1.setAttribute('rel', 'stylesheet');sessionStorage.setItem('theme', 'light');} return false;"></span>
+        
+        
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+  <div class="author__avatar">
+   <a href="http://localhost:4000/">
+    	<img src="/images/profile.webp" alt="M. Shamshad" itemprop="image" class="u-photo">
+   </a>
+  </div>
+  
+
+  <div class="author__content">
+      <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">M. Shamshad</a>
+    </h3>
+	   
+      <div class="author__bio p-note" itemprop="description">
+        <p>Plant Breeding &amp;&amp; Data Science</p>
+
+      </div>
+       
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+              <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Ludhina, Punjab, India</span>
+        </li>     
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:shamshad.rattan@gmail.com" rel="me" class="u-email">
+            <meta itemprop="email" content="shamshad.rattan@gmail.com">
+            <i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+       
+        <li><a href="https://www.researchgate.net/profile/Mohd-Shamshad"><i class="ai  ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
+      
+
+      
+        <li>
+          <a href="https://twitter.com/DrShamshadM" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/dr-m-shamshad-58b4321b1" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+       
+      
+      <li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&hl=en" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+        <i class="ai ai-fw ai-google-scholar" aria-hidden="true"></i><span class="label">Google Scholar</span></a></li>
+                 
+      
+      
+                                                                                                   
+       
+          <!--
+  <li>
+    <a href="https://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Copies and moving of files">
+    
+    <meta itemprop="datePublished" content="2022-09-22T00:00:00+05:30">
+    <meta itemprop="dateModified" content="2024-05-20T22:52:43+05:30">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Copies and moving of files
+</h1>
+		 
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-09-22T00:00:00+05:30">September 22, 2022</time></p>
+        
+        
+             
+        <!--  -->
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+<li>
+<a href="#copying-files">Copying Files</a><ul><li><a href="#cp-copy">cp (copy)</a></li></ul>
+</li>
+<li>
+<a href="#moving-files">Moving files</a><ul><li><a href="#mv-move">mv (move)</a></li></ul>
+</li>
+<li>
+<a href="#removing-files-and-directories">Removing files and directories</a><ul><li><a href="#rm-remove-rmdir-remove-directory">rm (remove), rmdir (remove directory)</a></li></ul>
+</li>
+<li>
+<a href="#displaying-the-contents-of-a-file-on-the-screen">Displaying the contents of a file on the screen</a><ul>
+<li><a href="#clear-clear-screen">clear (clear screen)</a></li>
+<li><a href="#cat-concatenate">cat (concatenate)</a></li>
+<li><a href="#less">less</a></li>
+<li><a href="#head">head</a></li>
+<li><a href="#tail">tail</a></li>
+</ul>
+</li>
+<li>
+<a href="#searching-the-contents-of-a-file">Searching the contents of a file</a><ul>
+<li><a href="#simple-searching-using-less">Simple searching using less</a></li>
+<li><a href="#grep-dont-ask-why-it-is-called-grep">grep (don’t ask why it is called grep)</a></li>
+<li><a href="#wc-word-count">wc (word count)</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p><img src="/images/unix/linux-cp-command.webp" alt="Unix files sytem"></p>
+
+<hr>
+<h2 id="copying-files">Copying Files</h2>
+<hr>
+<h3 id="cp-copy">cp (copy)</h3>
+
+<p>cp stands for copy. This command is used to copy files or group of files or directory. It creates an exact image of a file on a disk with different file name. cp command require at least two filenames in its arguments. The cp do copy of <code class="language-plaintext highlighter-rouge">file1</code> <code class="language-plaintext highlighter-rouge">file2</code> is the command which makes a copy of <strong>file1</strong> in the current working directory and calls it <strong>file2</strong></p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">cp</span> <span class="o">[</span><span class="nt">OPTION</span><span class="o">]</span> <span class="nt">Source</span> <span class="nt">Destination</span>
+<span class="err">$</span> <span class="nt">cp</span> <span class="o">[</span><span class="nt">OPTION</span><span class="o">]</span> <span class="nt">Source</span> <span class="nt">Directory</span>
+</code></pre></div></div>
+<p>What we are going to do now, is to take a file stored in an open access area of the file system, and use the cp command to copy it to your unixstuff directory.</p>
+
+<p>First, cd to your unixstuff directory.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">cd</span> <span class="o">~/</span><span class="nt">unixstuff</span>
+</code></pre></div></div>
+
+<p>Then at the UNIX prompt, type,</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">cp</span> <span class="o">/</span><span class="nt">vol</span><span class="o">/</span><span class="nt">examples</span><span class="o">/</span><span class="nt">tutorial</span><span class="o">/</span><span class="nt">science</span><span class="nc">.txt</span> <span class="nc">.</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>Note: Don’t forget the dot (.) at the end. Remember, in UNIX, the dot means the current directory.</p>
+</blockquote>
+
+<p>The above command means copy the file <strong>science.txt</strong> to the current directory, keeping the name the same.</p>
+
+<blockquote>
+  <p>Note: The directory <strong>/vol/examples/tutorial/</strong> is an area to which everyone in the department has read and copy access. If you are from outside the University, you can grab a copy of the file <a href="science.txt">here</a>. Use ‘File/Save As..’ from the menu bar to save it into your <strong>unixstuff</strong> directory.</p>
+</blockquote>
+
+<p><b><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" raw="📢" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))">Exercise</b></p>
+
+<p>Create a backup of your <strong>science.txt</strong> file by copying it to a file called <strong>science.bak</strong></p>
+
+<hr>
+<h2 id="moving-files">Moving files</h2>
+<hr>
+<h3 id="mv-move">mv (move)</h3>
+
+<p>mv file1 file2 moves (or renames) <strong>file1</strong> to <strong>file2</strong></p>
+
+<p>To move a file from one place to another, use the mv command. This has the effect of moving rather than copying the file, so you end up with only one file rather than two.</p>
+
+<p>It can also be used to rename a file, by moving the file to the same directory, but giving it a different name.</p>
+
+<p>We are now going to move the file science.bak to your backup directory.</p>
+
+<p>First, change directories to your unixstuff directory (can you remember how?). Then, inside the <strong>unixstuff</strong> directory, type</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">mv</span> <span class="nt">science</span><span class="nc">.bak</span> <span class="nt">backups</span><span class="o">/</span><span class="nc">.</span>
+</code></pre></div></div>
+<p>Type <code class="language-plaintext highlighter-rouge">ls</code> and <code class="language-plaintext highlighter-rouge">ls backups</code> to see if it has worked.</p>
+
+<hr>
+<h2 id="removing-files-and-directories">Removing files and directories</h2>
+<hr>
+<h3 id="rm-remove-rmdir-remove-directory">rm (remove), rmdir (remove directory)</h3>
+
+<p>To delete (remove) a file, use the rm command. As an example, we are going to create a copy of the <strong>science.txt</strong> file then delete it.</p>
+
+<p>Inside your <strong>unixstuff</strong> directory, type</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">cp</span> <span class="nt">science</span><span class="nc">.txt</span> <span class="nt">tempfile</span><span class="nc">.txt</span>  
+<span class="err">$</span> <span class="nt">ls</span> <span class="o">(</span><span class="nt">to</span> <span class="nt">check</span> <span class="nt">if</span> <span class="nt">it</span> <span class="nt">has</span> <span class="nt">created</span> <span class="nt">the</span> <span class="nt">file</span><span class="o">)</span>  
+<span class="err">$</span> <span class="nt">rm</span> <span class="nt">tempfile</span><span class="nc">.txt</span>  
+<span class="err">$</span> <span class="nt">ls</span> <span class="o">(</span><span class="nt">to</span> <span class="nt">check</span> <span class="nt">if</span> <span class="nt">it</span> <span class="nt">has</span> <span class="nt">deleted</span> <span class="nt">the</span> <span class="nt">file</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p>You can use the rmdir command to remove a directory (make sure it is empty first). Try to remove the <strong>backups</strong> directory. You will not be able to since UNIX will not let you remove a non-empty directory.</p>
+
+<p>To permanently remove directory use either the <code class="language-plaintext highlighter-rouge">rmdir</code> or <code class="language-plaintext highlighter-rouge">rm</code> commands:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">rmdir</span> <span class="nt">unixstuff</span> <span class="nt">or</span> 
+<span class="nt">rm</span> <span class="nt">-d</span> <span class="nt">unixstuff</span>
+</code></pre></div></div>
+<p>The remove commands for various options</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Command and Option</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">rm -d</td>
+      <td style="text-align: left">Remove an empty directory using the rm command.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rm -r</td>
+      <td style="text-align: left">Remove a non-empty directory and its content.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rm -f</td>
+      <td style="text-align: left">Ignore any prompt when deleting a write-protected file.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rm -rf</td>
+      <td style="text-align: left">Ignore any prompt when deleting a write-protected non-empty folder.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rm -i</td>
+      <td style="text-align: left">Output a prompt before deleting every file.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rm -I</td>
+      <td style="text-align: left">Output a prompt only once before deleting more than three files.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rm *</td>
+      <td style="text-align: left">Wildcard that represents multiple characters.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rm ?</td>
+      <td style="text-align: left">Wildcard that represents a single character.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rmdir -p</td>
+      <td style="text-align: left">Remove an empty subdirectory and its parent directory.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rmdir -v</td>
+      <td style="text-align: left">Print the information that the specified directory was deleted.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" raw="📢" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))"><b>Exercise</b></p>
+
+<p>Create a directory called <strong>tempstuff</strong> using mkdir , then remove it using the rmdir command.</p>
+
+<hr>
+<h2 id="displaying-the-contents-of-a-file-on-the-screen">Displaying the contents of a file on the screen</h2>
+<hr>
+<h3 id="clear-clear-screen">clear (clear screen)</h3>
+
+<p>Before you start the next section, you may like to clear the terminal window of the previous commands so the output of the following commands can be clearly understood.</p>
+
+<p>At the prompt, type</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">clear</span>
+</code></pre></div></div>
+<p>This will clear all text and leave you with the $ prompt at the top of the window.</p>
+
+<h3 id="cat-concatenate">cat (concatenate)</h3>
+
+<p>The command cat can be used to display the contents of a file on the screen. Type:</p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">cat</span> <span class="nt">science</span><span class="nc">.txt</span>
+</code></pre></div></div>
+<p>As you can see, the file is longer than than the size of the window, so it scrolls past making it unreadable.</p>
+
+<h3 id="less">less</h3>
+
+<p>The command less writes the contents of a file onto the screen a page at a time. Type</p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">less</span> <span class="nt">science</span><span class="nc">.txt</span>
+</code></pre></div></div>
+<p>Press the <strong><code class="language-plaintext highlighter-rouge">space-bar</code></strong> if you want to see another page, type <strong><code class="language-plaintext highlighter-rouge">q</code></strong> if you want to quit reading. As you can see, less is used in preference to cat for long files.</p>
+
+<h3 id="head">head</h3>
+
+<p>The head command writes the first ten lines of a file to the screen.</p>
+
+<p>First clear the screen then type</p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">head</span> <span class="nt">science</span><span class="nc">.txt</span>
+</code></pre></div></div>
+<p>Then type</p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">head</span> <span class="nt">-5</span> <span class="nt">science</span><span class="nc">.txt</span>
+</code></pre></div></div>
+<p><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" raw="📢" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))">What difference did the -5 do to the head command?</p>
+
+<h3 id="tail">tail</h3>
+
+<p>The tail command writes the last ten lines of a file to the screen.</p>
+
+<p>Clear the screen and type</p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">tail</span> <span class="nt">science</span><span class="nc">.txt</span>
+</code></pre></div></div>
+<p><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" raw="📢" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))">How can you view the last 15 lines of the file?</p>
+
+<hr>
+<h2 id="searching-the-contents-of-a-file">Searching the contents of a file</h2>
+<hr>
+
+<h3 id="simple-searching-using-less">Simple searching using less</h3>
+
+<p>Using less, you can search though a text file for a keyword (pattern). For example, to search through <strong>science.txt</strong> for the word <code class="language-plaintext highlighter-rouge">science</code>, type</p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">less</span> <span class="nt">science</span><span class="nc">.txt</span>
+</code></pre></div></div>
+<p>then, still in less (i.e. don’t press [q] to quit), type a forward slash <code class="language-plaintext highlighter-rouge">[/]</code> followed by the word to search /science</p>
+
+<p>As you can see, less finds and highlights the keyword. Type <code class="language-plaintext highlighter-rouge">[n]</code> to search for the next occurrence of the word.</p>
+
+<h3 id="grep-dont-ask-why-it-is-called-grep">grep (don’t ask why it is called grep)</h3>
+
+<p>grep is one of many standard UNIX utilities. It searches files for specified words or patterns. First clear the screen, then type</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">grep</span> <span class="nt">science</span> <span class="nt">science</span><span class="nc">.txt</span>
+</code></pre></div></div>
+<p>As you can see, grep has printed out each line containg the word science.</p>
+
+<p><b><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" raw="📢" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))">Or has it?</b></p>
+
+<p>Try typing</p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">grep</span> <span class="nt">Science</span> <span class="nt">science</span><span class="nc">.txt</span>
+</code></pre></div></div>
+
+<p>The grep command is case sensitive; it distinguishes between Science and science.</p>
+
+<p>To ignore upper/lower case distinctions, use the -i option, i.e. type</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">grep</span> <span class="nt">-i</span> <span class="nt">science</span> <span class="nt">science</span><span class="nc">.txt</span>
+</code></pre></div></div>
+
+<p>To search for a phrase or pattern, you must enclose it in single quotes (the apostrophe symbol). For example to search for spinning top, type</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">grep</span> <span class="nt">-i</span> <span class="s1">'spinning top'</span> <span class="nt">science</span><span class="nc">.txt</span>
+</code></pre></div></div>
+<p>Some of the other options of grep are:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">\</span><span class="nt">-v</span> <span class="nt">display</span> <span class="nt">those</span> <span class="nt">lines</span> <span class="nt">that</span> <span class="nt">do</span> <span class="nt">NOT</span> <span class="nt">match</span>  
+<span class="err">\</span><span class="nt">-n</span> <span class="nt">precede</span> <span class="nt">each</span> <span class="nt">maching</span> <span class="nt">line</span> <span class="nt">with</span> <span class="nt">the</span> <span class="nt">line</span> <span class="nt">number</span>  
+<span class="err">\</span><span class="nt">-c</span> <span class="nt">print</span> <span class="nt">only</span> <span class="nt">the</span> <span class="nt">total</span> <span class="nt">count</span> <span class="nt">of</span> <span class="nt">matched</span> <span class="nt">lines</span>  
+</code></pre></div></div>
+
+<p>Try some of them and see the different results. Don’t forget, you can use more than one option at a time, for example, the number of lines without the words science or Science is</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">grep</span> <span class="nt">-ivc</span> <span class="nt">science</span> <span class="nt">science</span><span class="nc">.txt</span>
+</code></pre></div></div>
+
+<h3 id="wc-word-count">wc (word count)</h3>
+
+<p>A handy little utility is the wc command, short for word count. To do a word count on <strong>science.txt</strong>, type</p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">wc</span> <span class="nt">-w</span> <span class="nt">science</span><span class="nc">.txt</span>
+</code></pre></div></div>
+<p>To find out how many lines the file has, type</p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">wc</span> <span class="nt">-l</span> <span class="nt">science</span><span class="nc">.txt</span>
+</code></pre></div></div>
+<hr>
+<p><b> Summary</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">code</th>
+      <th style="text-align: left">Function</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">cp file1 file2</code></td>
+      <td style="text-align: left">copy file1 and call it file2</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">mv file1 file2</code></td>
+      <td style="text-align: left">move or rename file1 to file2</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">rm file</code></td>
+      <td style="text-align: left">remove a file</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">rmdir directory</code></td>
+      <td style="text-align: left">remove a directory</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">cat file</code></td>
+      <td style="text-align: left">display a file</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">more file</code></td>
+      <td style="text-align: left">display a file a page at a time</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">head file</code></td>
+      <td style="text-align: left">display the first few lines of a file</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">tail file</code></td>
+      <td style="text-align: left">display the last few lines of a file</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">grep [keyword file] search</code></td>
+      <td style="text-align: left">a file for keywords</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">wc file</code></td>
+      <td style="text-align: left">count number of lines/words/characters in file</td>
+    </tr>
+  </tbody>
+</table>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-05-20">May 20, 2024</time></p>
+
+
+      </footer>
+
+      
+
+      
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/DrShamshadM" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar</a></li>
+        
+      
+        
+          <li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" rel="nofollow noopener noreferrer"><i class="ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2024 M. Shamshad. Proudly hosted by <a href="https://github.com/" rel="nofollow">GitHub</a> &amp; <a href="https://shamshadpbg.github.io/" rel="prev:"><i class="ai ai-academia"></i> AyeShmMz</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js" defer></script>
+  <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

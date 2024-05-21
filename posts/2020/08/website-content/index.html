@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Adding Content to an Academic Website | M. Shamshad</title>
+<meta name="description" content="One thing I haven’t covered in my previous posts on creating and customizing an academic website is how to actually add content to your site. You know, the stuff that’s the reason why people go to your website in the first place? If you’ve followed those guides, your website should be professional looking and already feeling a little bit different from the stock template. However, adding new pages or tweaking the existing pages can be a little intimidating, and I realized I should probably walk through how to do so. Luckily Jekyll’s use of Markdown makes it really easy to add new content!">
+
+
+  <meta name="author" content="M. Shamshad">
+  
+  <meta property="article:author" content="M. Shamshad">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="M. Shamshad">
+<meta property="og:title" content="Adding Content to an Academic Website">
+<meta property="og:url" content="http://localhost:4000/posts/2020/08/website-content/">
+
+
+  <meta property="og:description" content="One thing I haven’t covered in my previous posts on creating and customizing an academic website is how to actually add content to your site. You know, the stuff that’s the reason why people go to your website in the first place? If you’ve followed those guides, your website should be professional looking and already feeling a little bit different from the stock template. However, adding new pages or tweaking the existing pages can be a little intimidating, and I realized I should probably walk through how to do so. Luckily Jekyll’s use of Markdown makes it really easy to add new content!">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/posts/website-content/preview.png">
+
+
+
+  <meta name="twitter:site" content="@DrShamshadM">
+  <meta name="twitter:title" content="Adding Content to an Academic Website">
+  <meta name="twitter:description" content="One thing I haven’t covered in my previous posts on creating and customizing an academic website is how to actually add content to your site. You know, the stuff that’s the reason why people go to your website in the first place? If you’ve followed those guides, your website should be professional looking and already feeling a little bit different from the stock template. However, adding new pages or tweaking the existing pages can be a little intimidating, and I realized I should probably walk through how to do so. Luckily Jekyll’s use of Markdown makes it really easy to add new content!">
+  <meta name="twitter:url" content="http://localhost:4000/posts/2020/08/website-content/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:4000/posts/website-content/preview.png">
+  
+
+  
+    <meta name="twitter:creator" content="@DrShamshadM">
+  
+
+
+
+  <meta property="article:published_time" content="2020-08-07T00:00:00+05:30">
+
+
+
+  <meta property="article:modified_time" content="2022-10-12T21:05:54+05:30">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/posts/2020/08/website-content/">
+
+
+
+
+<script async type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "M. Shamshad",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="BD1FGtpPEYJphVV41YzUn-mrOqREjhO-JsWa4YZgj60">
+
+
+
+
+
+                                     
+<!-- end _includes/seo.html -->
+ 
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed">
+
+
+<!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script async>
+  document.documentElement.className =
+    document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css" id="theme_source">
+
+
+<link rel="stylesheet alternate" href="/assets/css/mainDark.css" id="theme_source_2">
+<script async>
+  let theme = sessionStorage.getItem("theme");
+  if (theme === "dark") {
+    sessionStorage.setItem("theme", "dark");
+    node1 = document.getElementById("theme_source");
+    node2 = document.getElementById("theme_source_2");
+    node1.setAttribute("rel", "stylesheet alternate");
+    node2.setAttribute("rel", "stylesheet");
+  } else {
+    sessionStorage.setItem("theme", "light");
+  }
+</script>
+
+
+
+
+    
+<!-- start custom head snippets -->			   
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png?v=565802">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon-76x76.png?v=565802">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-touch-icon-120x120.png?v=565802">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon-152x152.png?v=565802">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-180x180.png?v=565802">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=565802">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=565802">
+<link rel="manifest" href="/images/favicon/site.webmanifest?v=565802">
+<link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=565802" color="#00a7ff">
+<link rel="shortcut icon" href="/images/favicon/favicon.ico?v=565802">
+<meta name="apple-mobile-web-app-title" content="SM-Web">
+<meta name="application-name" content="SM-Web">
+<meta name="msapplication-TileColor" content="#00a300">
+<meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=565802">
+<meta name="theme-color" content="#ffffff">
+<!-- SEO tags -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Adding Content to an Academic Website | M. Shamshad</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Adding Content to an Academic Website">
+<meta name="author" content="M. Shamshad">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="One thing I haven’t covered in my previous posts on creating and customizing an academic website is how to actually add content to your site. You know, the stuff that’s the reason why people go to your website in the first place? If you’ve followed those guides, your website should be professional looking and already feeling a little bit different from the stock template. However, adding new pages or tweaking the existing pages can be a little intimidating, and I realized I should probably walk through how to do so. Luckily Jekyll’s use of Markdown makes it really easy to add new content!">
+<meta property="og:description" content="One thing I haven’t covered in my previous posts on creating and customizing an academic website is how to actually add content to your site. You know, the stuff that’s the reason why people go to your website in the first place? If you’ve followed those guides, your website should be professional looking and already feeling a little bit different from the stock template. However, adding new pages or tweaking the existing pages can be a little intimidating, and I realized I should probably walk through how to do so. Luckily Jekyll’s use of Markdown makes it really easy to add new content!">
+<link rel="canonical" href="http://localhost:4000/posts/2020/08/website-content/">
+<meta property="og:url" content="http://localhost:4000/posts/2020/08/website-content/">
+<meta property="og:site_name" content="M. Shamshad">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-08-07T00:00:00+05:30">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Adding Content to an Academic Website">
+<meta name="twitter:site" content="@DrShamshadM">
+<meta name="twitter:creator" content="@DrShamshadM">
+<meta name="google-site-verification" content="BD1FGtpPEYJphVV41YzUn-mrOqREjhO-JsWa4YZgj60">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2022-10-12T21:05:54+05:30","datePublished":"2020-08-07T00:00:00+05:30","description":"One thing I haven’t covered in my previous posts on creating and customizing an academic website is how to actually add content to your site. You know, the stuff that’s the reason why people go to your website in the first place? If you’ve followed those guides, your website should be professional looking and already feeling a little bit different from the stock template. However, adding new pages or tweaking the existing pages can be a little intimidating, and I realized I should probably walk through how to do so. Luckily Jekyll’s use of Markdown makes it really easy to add new content!","headline":"Adding Content to an Academic Website","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/2020/08/website-content/"},"url":"http://localhost:4000/posts/2020/08/website-content/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          M. Shamshad
+          
+        </a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/teaching/">Teaching</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/research/">Research</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/resume/">Resume</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li>
+</ul>
+         
+        <span class="fa-solid fa-moon toggle-switch" style="cursor: pointer;" aria-hidden="true" onclick="node1=document.getElementById('theme_source');node2=document.getElementById('theme_source_2');if(node1.getAttribute('rel')=='stylesheet'){node1.setAttribute('rel', 'stylesheet alternate'); node2.setAttribute('rel', 'stylesheet');sessionStorage.setItem('theme', 'dark');}else{node2.setAttribute('rel', 'stylesheet alternate'); node1.setAttribute('rel', 'stylesheet');sessionStorage.setItem('theme', 'light');} return false;"></span>
+        
+        
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+  <div class="author__avatar">
+   <a href="http://localhost:4000/">
+    	<img src="/images/profile.webp" alt="M. Shamshad" itemprop="image" class="u-photo">
+   </a>
+  </div>
+  
+
+  <div class="author__content">
+      <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">M. Shamshad</a>
+    </h3>
+	   
+      <div class="author__bio p-note" itemprop="description">
+        <p>Plant Breeding &amp;&amp; Data Science</p>
+
+      </div>
+       
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+              <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Ludhina, Punjab, India</span>
+        </li>     
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:shamshad.rattan@gmail.com" rel="me" class="u-email">
+            <meta itemprop="email" content="shamshad.rattan@gmail.com">
+            <i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+       
+        <li><a href="https://www.researchgate.net/profile/Mohd-Shamshad"><i class="ai  ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
+      
+
+      
+        <li>
+          <a href="https://twitter.com/DrShamshadM" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/dr-m-shamshad-58b4321b1" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+       
+      
+      <li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&hl=en" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+        <i class="ai ai-fw ai-google-scholar" aria-hidden="true"></i><span class="label">Google Scholar</span></a></li>
+                 
+      
+      
+                                                                                                   
+       
+          <!--
+  <li>
+    <a href="https://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Adding Content to an Academic Website">
+    <meta itemprop="description" content="One thing I haven’t covered in my previous posts on creating and customizing an academic website is how to actually add content to your site. You know, the stuff that’s the reason why people go to your website in the first place? If you’ve followed those guides, your website should be professional looking and already feeling a little bit different from the stock template. However, adding new pages or tweaking the existing pages can be a little intimidating, and I realized I should probably walk through how to do so. Luckily Jekyll’s use of Markdown makes it really easy to add new content!">
+    <meta itemprop="datePublished" content="2020-08-07T00:00:00+05:30">
+    <meta itemprop="dateModified" content="2022-10-12T21:05:54+05:30">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Adding Content to an Academic Website
+</h1>
+		 
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  9 minute read
+	
+</p>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-08-07T00:00:00+05:30">August 07, 2020</time></p>
+        
+        
+             
+        <!--  -->
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+<li><a href="#content">Content</a></li>
+<li><a href="#first-steps">First steps</a></li>
+<li><a href="#fill-it-out">Fill it out</a></li>
+<li><a href="#you-cant-get-there-from-here">You can’t get there from here</a></li>
+<li><a href="#windows">Windows</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p>One thing I haven’t covered in my previous posts on <a href="/posts/2020/06/academic-website/">creating</a> and <a href="/posts/2020/07/customizing-website/">customizing</a> an academic website is how to actually add content to your site. You know, the stuff that’s the reason why people go to your website in the first place? If you’ve followed those guides, your website should be professional looking and already feeling a little bit different from the stock template. However, adding new pages or tweaking the existing pages can be a little intimidating, and I realized I should probably walk through how to do so. Luckily Jekyll’s use of Markdown makes it really easy to add new content!</p>
+
+<!--more-->
+
+<h2 id="content">Content</h2>
+
+<p>Editing the welcome page for your site (<code class="language-plaintext highlighter-rouge">_pages/about.md</code>) is relatively straightforward. Things get a little trickier if you want to build an entirely new page to your website. You’ll notice that I have a <a href="/software">software</a> page on my site that isn’t part of the <a href="https://academicpages.github.io/">academicpages</a> template. I’ll use that page as a running example to walk you through adding a new page to your site.</p>
+
+<h2 id="first-steps">First steps</h2>
+
+<p>First things first, we need to create a file for the page itself. The main pages for your website are generated from <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> files contained in the <code class="language-plaintext highlighter-rouge">_pages</code> directory. Create a new file called <code class="language-plaintext highlighter-rouge">software.md</code> in <code class="language-plaintext highlighter-rouge">_pages</code>. Now, open it up in RStudio or your text editor of choice. If you’ve looked at the <code class="language-plaintext highlighter-rouge">.md</code> files for other pages, you’ll notice that they all start with a similar block of text. This is a <a href="https://en.wikipedia.org/wiki/YAML">YAML</a> header that tells Jekyll the basic information needed to build the page. There are lots of different options you can include, but the only two you really need are the <code class="language-plaintext highlighter-rouge">permalink</code> for the page and its <code class="language-plaintext highlighter-rouge">title</code>. Add the following to the top of <code class="language-plaintext highlighter-rouge">software.md</code>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">permalink</span><span class="pi">:</span> <span class="s">/software/</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Software"</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>Anything after that second line of dashes will be translated into actual content on the page.</p>
+
+<h2 id="fill-it-out">Fill it out</h2>
+
+<p>Now we need to make our new page actually say something. My software page lists the R packages I’ve contributed to and includes links to miscellaneous other bits of code like functions for working with video data in Python or the LaTeX template I used for my dissertation. You can check out the <code class="language-plaintext highlighter-rouge">.md</code> source file for my software page on my <a href="https://raw.githubusercontent.com/jayrobwilliams/jayrobwilliams.github.io/master/_pages/software.md">GitHub</a>.</p>
+
+<p>A couple of things to notice:</p>
+
+<ul>
+  <li>You can create headings using pound signs
+    <ul>
+      <li>More pound signs produce smaller headings</li>
+    </ul>
+  </li>
+  <li>You can create links using standard Markdown syntax, e.g., <code class="language-plaintext highlighter-rouge">[link text](url)</code>
+    <ul>
+      <li>If you’re linking to a page generated from a source <code class="language-plaintext highlighter-rouge">.md</code> file in <code class="language-plaintext highlighter-rouge">_pages</code>, just put a slash before the page name and don’t include any extension, e.g., <code class="language-plaintext highlighter-rouge">[software](/software)</code>
+</li>
+    </ul>
+  </li>
+  <li>You can embed images by adding an exclamation point before the opening <code class="language-plaintext highlighter-rouge">[</code> in Markdown link syntax, e.g., <code class="language-plaintext highlighter-rouge">![](/images/profile.png)</code>
+</li>
+  <li>You can create code blocks like the ones on this page by enclosing text in triple backticks
+    <ul>
+      <li>Put the name of the programming language after the opening backticks to activate <a href="https://en.wikipedia.org/wiki/Syntax_highlighting">syntax highlighting</a>
+</li>
+    </ul>
+  </li>
+  <li>You can also embed raw HTML directly like I used to include three images next to one another</li>
+</ul>
+
+<p>These tools should be sufficient to let you build an awesome new page for your website. However, letting visitors actually get to your new page requires a little more work.</p>
+
+<h2 id="you-cant-get-there-from-here">You can’t get there from here</h2>
+
+<p>If you want to just add a link to your new page from an existing page, like the homepage, that’s easy and can be accomplished by adding a link to the Markdown source in <code class="language-plaintext highlighter-rouge">_pages/about.md</code>. That’s how I added my <a href="/teaching-materials">teaching materials</a> page; it’s just a link on my <a href="/teaching">teaching</a> page. But what about if you want your new page to be easily accessed from the fancy navigation bar at the top of the site?</p>
+
+<p>To do that, we’ll need to edit the files Jekyll uses to control navigation on the site. Open up <code class="language-plaintext highlighter-rouge">_data/navigation.yml</code> and get ready to add our new page to the to menu. This is what it looks like in the template:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># main links links</span>
+<span class="na">main</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Publications"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/publications/</span>
+
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Talks"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/talks/</span>    
+
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Teaching"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/teaching/</span>    
+    
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Portfolio"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/portfolio/</span>
+        
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Blog</span><span class="nv"> </span><span class="s">Posts"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/year-archive/</span>
+    
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">CV"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/cv/</span>
+    
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Guide"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/markdown/</span>
+</code></pre></div></div>
+
+<p>The order that items appear in top-to-bottom in this file is also the order they’ll appear in left-to-right in the navigation bar. So decide where you want your new page to go, and slot it in. This is what <code class="language-plaintext highlighter-rouge">_data/navigation.yml</code> looks like for my website:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># main links links</span>
+<span class="na">main</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Publications"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/publications/</span>
+    
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Research"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/research/</span>
+
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Teaching"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/teaching/</span>
+
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Software"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/software/</span>
+
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Posts"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/posts/</span>
+    
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">CV"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/cv/</span>
+</code></pre></div></div>
+
+<p>Again, you can check out the current version of this file for my site at my <a href="https://github.com/jayrobwilliams/jayrobwilliams.github.io/blob/master/_data/navigation.yml">GitHub</a> if you want. If I’ve changed anything in the navigation menu since I wrote this post, those changes will be reflected there.</p>
+
+<p>You’ll also notice that the Guide link is no longer there in my <code class="language-plaintext highlighter-rouge">_data/navigation.yml</code>. Removing elements from this file drops them from the navigation menu, so if there are any other pages in the template you don’t plan to use, go ahead and remove them now.</p>
+
+<p>Once you’re happy with your new page, it’s time to tell git about them, and then upload them to GitHub. You can do this with</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add _pages/software.md _data/navigation.yml
+git commit <span class="nt">-m</span> <span class="s2">"add software page"</span>
+git push
+</code></pre></div></div>
+
+<p>If you followed the guide on <a href="/posts/2020/06/academic-website/#uploading-changes-to-github">uploading changes to GitHub</a> in my post on <a href="/posts/2020/06/academic-website/">making an academic website</a>, all of the above code should run smoothly and in a few minutes you’ll have a new page on your website.</p>
+
+<h1 id="uploading-files">Uploading files</h1>
+
+<p>One of the advantages of using GitHub pages to host your website is that you don’t have to use Dropbox to host PDFs of your working papers and published articles, not to mention your CV. If you use Wix or WordPress, you may have to upload your files to Dropbox, and then link to them on your site. This process has three major downsides:</p>
+
+<ol>
+  <li>You have to update your website in two places to add or update a PDF</li>
+  <li>Google Scholar will ignore Dropbox links, so you won’t get a record of your scholarship online</li>
+  <li>If someone clicks a Dropbox while viewing your site on their phone or tablet, it may take them to the Dropbox app or pop up a message about the app not being installed</li>
+</ol>
+
+<p>All of these are less than ideal. Luckily, GitHub Pages has the capability to address all three already built in. When you make an update to your website and <code class="language-plaintext highlighter-rouge">git push</code> it to GitHub, <em>all</em> tracked files get uploaded with it. This means it’s super easy to upload your PDFs to your site and link directly to them. I’ll walk through how to do this with an example PDF called <code class="language-plaintext highlighter-rouge">working-paper.pdf</code>.</p>
+
+<p>First, copy the PDF into the <code class="language-plaintext highlighter-rouge">files/pdf</code> directory in your site’s directory. Next we need to tell git about this file, which we do with</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add files/pdf/working-paper.pdf
+git commit <span class="nt">-m</span> <span class="s2">"add working paper"</span>
+git push
+</code></pre></div></div>
+
+<p>Don’t forget to add a link to the paper somewhere on your research page so that visitors can access it. Here’s an example of what that link might look like: <code class="language-plaintext highlighter-rouge">[Working Paper](/files/pdf/working-paper.pdf)</code>. And if you want to use the <a href="/posts/2020/07/customizing-website/#pushing-buttons">fancy button</a> from my post on <a href="/posts/2020/07/customizing-website/">customizing your site</a>, you would do this: <code class="language-plaintext highlighter-rouge">[Working Paper](/files/pdf/working-paper.pdf){: .btn--research}</code>.</p>
+
+<h1 id="designing-for-mobile">Designing for mobile</h1>
+
+<p>One of the advantages of the <a href="https://academicpages.github.io/">academicpages</a> template is that it is <a href="https://en.wikipedia.org/wiki/Responsive_web_design">responsive</a>, meaning that layouts change automatically with screen size to present content in the most efficient manner. Take a look at my website on your phone to see how a smaller device changes the site’s layout. When you’re editing your website, it’s a good idea to periodically check how it appears on a phone, as it’s likely that a number of visitors to your site will view it on their phones.<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup></p>
+
+<p>To do so, you can use tools like Chrome’s <a href="https://developers.google.com/web/tools/chrome-devtools/device-mode">device mode</a>, but this can be annoying and doesn’t perfectly capture the experience of navigating your site on a small touchscreen. The best way to do that is, unsurprisingly, to use your actual phone. However, this requires a slight tweak to our usual <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code> command. We need to add a <code class="language-plaintext highlighter-rouge">--host</code> argument to the command, where the value of the argument is our computer’s IP address. There are many ways to look this up, but here are two quick ones you can execute from the terminal:</p>
+
+<ul>
+  <li>On MacOS: <code class="language-plaintext highlighter-rouge">ifconfig en0 | grep inet | grep -v inet6 | awk '{print $2}'</code>
+</li>
+  <li>On Linux: <code class="language-plaintext highlighter-rouge">hostname -I</code>
+</li>
+</ul>
+
+<p>What each of these will do is capture the <em>local</em> IP address of the computer. Often this will be something like <code class="language-plaintext highlighter-rouge">192.168.1.x</code> or <code class="language-plaintext highlighter-rouge">10.0.0.x</code>. This won’t let you access the site from outside your network over the internet, but it <em>will</em> let you access it locally on your own network. Once you’ve found your local IP address, you can serve your site on your local network, letting you view it on your phone or tablet. For example, my IP address is <code class="language-plaintext highlighter-rouge">192.168.1.6</code>, so putting it all together I get:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve <span class="nt">--host</span> 192.168.1.6
+</code></pre></div></div>
+
+<p>This is quite a lot to type, and your computer’s local IP address can change occasionally, so you can’t just keep putting in the same IP address each time. To save yourself some time by creating an <a href="https://en.wikipedia.org/wiki/Alias_(command)">alias</a> for the command. An alias is simply a way to refer to a longer command with a shorter label. To do this, you’ll need to edit your <code class="language-plaintext highlighter-rouge">.bash_profile</code> configuration file.<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> The easiest way to do this is to run</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano ~/.bash_profile
+</code></pre></div></div>
+
+<p>This will open up your <code class="language-plaintext highlighter-rouge">.bash_profile</code> in <a href="https://en.wikipedia.org/wiki/GNU_nano">nano</a>, a simple text editor.<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup> I’ve decided to call my aliased command <code class="language-plaintext highlighter-rouge">serve-site</code>, but you could call it anything you want. Scroll down to the end of the file and add either</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">alias </span>serve-site<span class="o">=</span><span class="s2">"bundle exec jekyll serve --host=</span><span class="si">$(</span>ifconfig en0 | <span class="nb">grep </span>inet | <span class="nb">grep</span> <span class="nt">-v</span> inet6 | <span class="nb">awk</span> <span class="s1">'{print $2}'</span><span class="si">)</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>for MacOS or</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">alias </span>serve-site<span class="o">=</span><span class="s2">"bundle exec jekyll serve --host=</span><span class="si">$(</span><span class="nb">hostname</span> <span class="nt">-I</span><span class="si">)</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>for Linux. Once you’ve added this line, save the file by pressing <kbd>ctrl</kbd>+<kbd>o</kbd> and then <kbd>enter</kbd> to use the existing filename, overwriting the old version of <code class="language-plaintext highlighter-rouge">.bash_profile</code>. Then press <kbd>ctrl</kbd>+<kbd>x</kbd> to close nano. The last step is to tell your terminal about this new alias. You can accomplish this with</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> ~/.bash_profile
+</code></pre></div></div>
+
+<p>regardless of whether you’re on Linux or MacOS. Now whenever you want to check out your website on a mobile device, you can just navigate to your website’s directory and use the new <code class="language-plaintext highlighter-rouge">serve-site</code> alias to launch it locally.</p>
+
+<h2 id="windows">Windows</h2>
+
+<p>If you’re trying to figure out how to do this on Windows, I haven’t forgotten about you, I just have no idea how to do this on Windows ¯\_(ツ)_/¯. My recommendation would be to do a lot of googling, or to install the <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">Windows Subsystem for Linux</a>, which will allow you to use a bash shell to interact with your files.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>As a senior faculty member once pointed out to me, the search committee member who didn’t fully read your application is most likely to pull up your website on their phone during a committee meeting. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>I’m assuming that you’re using bash as your shell. If you’re using a different shell, see <a href="https://kb.iu.edu/d/abdy">this list</a> for which configuration files you should be editing. Other shells may also define aliases in different ways. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>Feel free to use a different editor or use the <code class="language-plaintext highlighter-rouge">edit</code> command if you’ve set the default editor to your preferred editor. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-10-12">October 12, 2022</time></p>
+
+
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=DrShamshadM&text=Adding+Content+to+an+Academic+Website%20http%3A%2F%2Flocalhost%3A4000%2Fposts%2F2020%2F08%2Fwebsite-content%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F2020%2F08%2Fwebsite-content%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F2020%2F08%2Fwebsite-content%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="http://localhost:4000/posts/2020/07/customizing-website/" class="pagination--pager" title="Customizing an Academic Website
+">Previous</a>
+    
+    
+      <a href="http://localhost:4000/posts/2020/08/non-whitelisted-plugin-Mermaid/" class="pagination--pager" title="Add non-whitelisted plugins and Mermaid
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <div align="center" style="margin: 1em 0;">
+        <ins class="adsbygoogle" style="display:block; border-bottom: initial;" data-ad-client="ca-pub-7328585512091257" data-ad-slot="3049671934" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      </div>
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/posts/2021/01/A-tutorial-on-Genome-Wide-Association-Studies/" rel="permalink">A tutorial on Genome-Wide Association Studies (GWAS) in Tassel (GUI)
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  3 minute read
+	
+</p>
+    
+    
+    
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-01-20T00:00:00+05:30">January 20, 2021</time></p>
+        
+
+  
+    <p class="archive__item-excerpt" itemprop="description"></p>
+<p>Genome-wide association studies (GWAS) increase their popularity among medical, biological, and social sciences to identify the association between single nucleotide polymorphisms and phenotypic traits. This tutorial aims to provide a guidelines for conducing genome wide analysis in Tassel.</p>
+
+
+    
+
+    
+    
+
+      <!-- citation and icon code -->  
+      
+      
+      
+      
+      
+	 </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/posts/2021/01/investigate-genetic-admixture-using-STRUCTURE-software/" rel="permalink">A tutorial on investigate genetic admixture using STRUCTURE software
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  3 minute read
+	
+</p>
+    
+    
+    
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-01-05T00:00:00+05:30">January 05, 2021</time></p>
+        
+
+  
+    <p class="archive__item-excerpt" itemprop="description"></p>
+<p><strong>Structure Software</strong> is a freely available software package that one may use for rigorous investigation of <code class="language-plaintext highlighter-rouge">admixed individuals</code>; identification of <code class="language-plaintext highlighter-rouge">point of hybridization</code> and <code class="language-plaintext highlighter-rouge">migrants</code>; and estimate over all <code class="language-plaintext highlighter-rouge">structure</code> of a population using a commonly used genetic markers such as <code class="language-plaintext highlighter-rouge">SNPs</code> and <code class="language-plaintext highlighter-rouge">SSRs</code>. This software was developed by <strong>Pritchard Lab</strong> at <strong>Stanford University</strong> and can downloaded at this <a href="https://web.stanford.edu/group/pritchardlab/structure.html">link</a>.</p>
+
+    
+
+    
+    
+
+      <!-- citation and icon code -->  
+      
+      
+      
+      
+      
+	 </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/posts/2020/10/mapchart/" rel="permalink">Plot Genetic Linkage Maps using MapChart software
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  5 minute read
+	
+</p>
+    
+    
+    
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-10-10T00:00:00+05:30">October 10, 2020</time></p>
+        
+
+  
+    <p class="archive__item-excerpt" itemprop="description"></p>
+<p><strong>MapChart</strong> is a free software to plot publishing quality genetic linkage maps as well as QTLs. This software was developed at <strong>Wageningen University</strong> by <strong>Roeland E. Voorrips</strong>  and can be downloaded at this <a href="https://www.wur.nl/en/show/Mapchart.htm"> link </a>.</p>
+
+
+    
+
+    
+    
+
+      <!-- citation and icon code -->  
+      
+      
+      
+      
+      
+	 </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/posts/2020/09/scientific-paper/" rel="permalink">Online submission of a scientific paper, a guideline for beginners
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  5 minute read
+	
+</p>
+    
+    
+    
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-09-04T00:00:00+05:30">September 04, 2020</time></p>
+        
+
+  
+    <p class="archive__item-excerpt" itemprop="description"></p>
+<p>There exist some definite gaps “from performing of an experiment to the formulation of a hypothesis”. It is not necessary that a person good at lab work must be an expert in scientific writing too.</p>
+
+    
+
+    
+    
+
+      <!-- citation and icon code -->  
+      
+      
+      
+      
+      
+	 </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/DrShamshadM" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar</a></li>
+        
+      
+        
+          <li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" rel="nofollow noopener noreferrer"><i class="ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2024 M. Shamshad. Proudly hosted by <a href="https://github.com/" rel="nofollow">GitHub</a> &amp; <a href="https://shamshadpbg.github.io/" rel="prev:"><i class="ai ai-academia"></i> AyeShmMz</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js" defer></script>
+  <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> -->
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript">
+  	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  	var disqus_shortname = 'shamshad';
+
+  	/* * * DON'T EDIT BELOW THIS LINE * * */
+  	(function() {
+  		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  	})();
+
+  	/* * * DON'T EDIT BELOW THIS LINE * * */
+  	(function () {
+  		var s = document.createElement('script'); s.async = true;
+  		s.type = 'text/javascript';
+  		s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  		(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  	}());
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
