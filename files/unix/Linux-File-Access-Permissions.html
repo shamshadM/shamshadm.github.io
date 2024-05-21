@@ -51,7 +51,7 @@
 
 
 
-  <meta property="article:modified_time" content="2024-05-20T22:52:43+05:30">
+  <meta property="article:modified_time" content="2024-05-21T16:14:20+05:30">
 
 
 
@@ -161,7 +161,7 @@
 <meta name="twitter:creator" content="@DrShamshadM">
 <meta name="google-site-verification" content="BD1FGtpPEYJphVV41YzUn-mrOqREjhO-JsWa4YZgj60">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-05-20T22:52:43+05:30","datePublished":"2022-09-23T00:00:00+05:30","description":"I have dream…","headline":"File system security (access rights)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/files/unix/Linux-File-Access-Permissions"},"url":"http://localhost:4000/files/unix/Linux-File-Access-Permissions"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-05-21T16:14:20+05:30","datePublished":"2022-09-23T00:00:00+05:30","description":"I have dream…","headline":"File system security (access rights)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/files/unix/Linux-File-Access-Permissions"},"url":"http://localhost:4000/files/unix/Linux-File-Access-Permissions"}</script>
 <!-- End Jekyll SEO tag -->
 
 <!-- end custom head snippets -->
@@ -368,7 +368,7 @@
     <meta itemprop="headline" content="File system security (access rights)">
     
     <meta itemprop="datePublished" content="2022-09-23T00:00:00+05:30">
-    <meta itemprop="dateModified" content="2024-05-20T22:52:43+05:30">
+    <meta itemprop="dateModified" content="2024-05-21T16:14:20+05:30">
 
     <div class="page__inner-wrap">
       
@@ -401,7 +401,10 @@
 </ul>
 </li>
 <li>
-<a href="#changing-access-rights">Changing access rights</a><ul><li><a href="#chmod-changing-a-file-mode">chmod (changing a file mode)</a></li></ul>
+<a href="#changing-access-rights">Changing access rights</a><ul>
+<li><a href="#chmod-changing-a-file-mode">chmod (changing a file mode)</a></li>
+<li><a href="#chown-changing-the-ownership-of-a-file">chown (changing the ownership of a file)</a></li>
+</ul>
 </li>
 <li>
 <a href="#processes-and-jobs">Processes and Jobs</a><ul>
@@ -433,7 +436,8 @@
 
 <p><img src="/images/unix/file-permissions-4.webp" alt="file permission" width="100%"></p>
 
-<p>Each file (and directory) has associated access rights, which may be found by typing <code class="language-plaintext highlighter-rouge">ls -l</code>. Also, <code class="language-plaintext highlighter-rouge">ls -lg</code> gives additional information as to which group owns the file (beng95 in the following example):</p>
+<p>Each file (and directory) has associated access rights, which may be found by typing <strong>ls -l</strong>. Also, <strong>ls -lg</strong> gives additional information as to which group owns the file (beng95 in the following example):</p>
+
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">-rwxrw-r--</span><span class="err"> </span><span class="na">1</span><span class="err"> </span><span class="na">ee51ab</span><span class="err"> </span><span class="na">beng95</span><span class="err"> </span><span class="na">2450</span><span class="err"> </span><span class="na">Sept29</span><span class="err"> </span><span class="na">11</span><span class="p">:</span><span class="m">52</span> <span class="n">file1</span>
 </code></pre></div></div>
 <p>In the left-hand column is a 10 symbol string consisting of the symbols d, r, w, x, -, and, occasionally, s or S. If d is present, it will be at the left hand end of the string, and indicates a directory: otherwise - will be the starting symbol of the string.</p>
@@ -560,6 +564,20 @@
 
 <p>Use ls -l to check that the permissions have changed.</p>
 
+<h3 id="chown-changing-the-ownership-of-a-file">chown (changing the ownership of a file)</h3>
+
+<p>Just like <strong>chmod</strong>, only the owner of a file can use <strong>chown</strong>. This command is used to change the ownership of a file or directory. That is the user and group that owns a file can be changed. The format of the command is as follows:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$ </span><span class="na">chown</span><span class="err"> &lt;</span><span class="na">user</span><span class="err">&gt;</span> <span class="p">:</span> <span class="o">&lt;</span><span class="n">group</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">filename</span><span class="o">&gt;</span>
+</code></pre></div></div>
+<p>So, if we wanted to change the owner of the file <strong>biglist</strong> to <strong>newuser</strong> and the group to <strong>newgroup</strong> we would do like so:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">chown</span> <span class="nt">newuser</span><span class="nd">:newgroup</span> <span class="nt">biglist</span>
+</code></pre></div></div>
+
+<p>Also, a useful option when using chown on directories is the <strong>-R</strong> option. If <strong>-R</strong> is used, the new ownership will be applied to all files and subdirectories contained within the directory. Suppose that I have a folder named <strong>sharedgroup</strong> which is not accessible to the rest of my group, but I want the group to access to everything in it. In order to give the rest of the group access, I could run</p>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">chown</span> <span class="nt">-R</span> <span class="nt">mysuername</span><span class="nd">:mygroup</span> <span class="nt">sharedgroup</span>
+</code></pre></div></div>
 <h2 id="processes-and-jobs">Processes and Jobs</h2>
 <hr>
 
@@ -731,7 +749,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-05-20">May 20, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-05-21">May 21, 2024</time></p>
 
 
       </footer>

@@ -51,7 +51,7 @@
 
 
 
-  <meta property="article:modified_time" content="2024-05-20T22:52:43+05:30">
+  <meta property="article:modified_time" content="2024-05-21T16:14:20+05:30">
 
 
 
@@ -161,7 +161,7 @@
 <meta name="twitter:creator" content="@DrShamshadM">
 <meta name="google-site-verification" content="BD1FGtpPEYJphVV41YzUn-mrOqREjhO-JsWa4YZgj60">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-05-20T22:52:43+05:30","datePublished":"2022-09-23T00:00:00+05:30","description":"I have dream…","headline":"Linux Wildcards","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/files/unix/Linux-Wildcards"},"url":"http://localhost:4000/files/unix/Linux-Wildcards"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-05-21T16:14:20+05:30","datePublished":"2022-09-23T00:00:00+05:30","description":"I have dream…","headline":"Linux Wildcards","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/files/unix/Linux-Wildcards"},"url":"http://localhost:4000/files/unix/Linux-Wildcards"}</script>
 <!-- End Jekyll SEO tag -->
 
 <!-- end custom head snippets -->
@@ -368,7 +368,7 @@
     <meta itemprop="headline" content="Linux Wildcards">
     
     <meta itemprop="datePublished" content="2022-09-23T00:00:00+05:30">
-    <meta itemprop="dateModified" content="2024-05-20T22:52:43+05:30">
+    <meta itemprop="dateModified" content="2024-05-21T16:14:20+05:30">
 
     <div class="page__inner-wrap">
       
@@ -427,7 +427,7 @@
 <p>This will list all files in the current directory ending with <strong>….list</strong></p>
 
 <p>The character ? will match exactly one character.<br>
-So ls ?ouse will match files like <strong>house</strong> and <strong>mouse</strong>, but not <strong>grouse</strong>.<br>
+So <strong>ls ?ouse</strong> will match files like <strong>house</strong> and <strong>mouse</strong>, but not <strong>grouse</strong>.<br>
 Try typing</p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">ls</span> <span class="o">?</span><span class="nt">list</span>
 </code></pre></div></div>
@@ -436,22 +436,24 @@ Try typing</p>
 
 <p>We should note here that a directory is merely a special type of file. So the rules and conventions for naming files apply also to directories.</p>
 
-<p>In naming files, characters with special meanings such as <code class="language-plaintext highlighter-rouge">/ \* &amp; $</code>, should be avoided. Also, avoid using spaces within names. The safest way to name a file is to use only alphanumeric characters, that is, letters and numbers, together with _ (underscore) and . (dot).</p>
+<p>In naming files, characters with special meanings such as <strong>/ * &amp; %</strong>, should be avoided. Also, avoid using spaces within names. The safest way to name a file is to use only alphanumeric characters, that is, letters and numbers, together with _ (underscore) and . (dot).</p>
 
-<p>File names conventionally start with a lower-case letter, and may end with a dot followed by a group of letters indicating the contents of the file. For example, all files consisting of C code may be named with the ending .c, for example, prog1.c . Then in order to list all files containing C code in your home directory, you need only type ls *.c in that directory.</p>
+<p>File names conventionally start with a lower-case letter, and may end with a dot followed by a group of letters indicating the contents of the file. For example, all files consisting of C code may be named with the ending .c, for example, prog1.c . Then in order to list all files containing C code in your home directory, you need only type <strong>ls *.c</strong> in that directory.</p>
 
 <blockquote>
   <p><strong>Beware</strong>: some applications give the same name to all the output files they generate.</p>
 </blockquote>
 
-<p>For example, some compilers, unless given the appropriate option, produce compiled files named <strong>a.out</strong>. Should you forget to use that option, you are advised to rename the compiled file immediately, otherwise the next such file will overwrite it and it will be lost.</p>
+<blockquote>
+  <p>For example, some compilers, unless given the appropriate option, produce compiled files named <strong>a.out</strong>. Should you forget to use that option, you are advised to rename the compiled file immediately, otherwise the next such file will overwrite it and it will be lost.</p>
+</blockquote>
 
 <h2 id="getting-help">Getting Help</h2>
 <hr>
 
 <h3 id="on-line-manuals">On-line Manuals</h3>
 
-<p>There are on-line manuals which gives information about most commands. The manual pages tell you which options a particular command can take, and how each option modifies the behavior of the command. Type man command to read the manual page for a particular command.</p>
+<p>There are on-line manuals which gives information about most commands. The manual pages tell you which options a particular command can take, and how each option modifies the behavior of the command. Type <strong>man command</strong> to read the manual page for a particular command.</p>
 
 <p>For example, to find out more about the wc (word count) command, type</p>
 
@@ -469,6 +471,7 @@ Try typing</p>
 </code></pre></div></div>
 <p>will give you the commands with keyword in their manual page header. For example, try typing</p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">apropos</span> <span class="nt">copy</span>
+<span class="err">$</span> <span class="nt">apropos</span> <span class="nt">slurm</span>
 </code></pre></div></div>
 
 <p><b>Summary </b></p>
@@ -516,7 +519,7 @@ Try typing</p>
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-05-20">May 20, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-05-21">May 21, 2024</time></p>
 
 
       </footer>

@@ -51,7 +51,7 @@
 
 
 
-  <meta property="article:modified_time" content="2024-05-20T22:52:43+05:30">
+  <meta property="article:modified_time" content="2024-05-21T16:14:20+05:30">
 
 
 
@@ -161,7 +161,7 @@
 <meta name="twitter:creator" content="@DrShamshadM">
 <meta name="google-site-verification" content="BD1FGtpPEYJphVV41YzUn-mrOqREjhO-JsWa4YZgj60">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-05-20T22:52:43+05:30","datePublished":"2022-09-23T00:00:00+05:30","description":"I have dream…","headline":"UNIX Variables","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/files/unix/UNIX-Variables"},"url":"http://localhost:4000/files/unix/UNIX-Variables"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-05-21T16:14:20+05:30","datePublished":"2022-09-23T00:00:00+05:30","description":"I have dream…","headline":"UNIX Variables","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/files/unix/UNIX-Variables"},"url":"http://localhost:4000/files/unix/UNIX-Variables"}</script>
 <!-- End Jekyll SEO tag -->
 
 <!-- end custom head snippets -->
@@ -368,7 +368,7 @@
     <meta itemprop="headline" content="UNIX Variables">
     
     <meta itemprop="datePublished" content="2022-09-23T00:00:00+05:30">
-    <meta itemprop="dateModified" content="2024-05-20T22:52:43+05:30">
+    <meta itemprop="dateModified" content="2024-05-21T16:14:20+05:30">
 
     <div class="page__inner-wrap">
       
@@ -413,7 +413,7 @@
         
         <p><img src="/images/unix/unix.webp" alt="Unix files sytem"></p>
 
-<p>Variables are a way of passing information from the shell to programs when you run them. Programs look <strong><code class="language-plaintext highlighter-rouge">in the environment</code></strong> for particular variables and if they are found will use the values stored. Some are set by the system, others by you, yet others by the shell, or any program that loads another program.</p>
+<p>Variables are a way of passing information from the shell to programs when you run them. Programs look <strong>in the environment</strong> for particular variables and if they are found will use the values stored. Some are set by the system, others by you, yet others by the shell, or any program that loads another program.</p>
 
 <p>Standard UNIX variables are split into two categories, environment variables and shell variables. In broad terms, shell variables apply only to the current instance of the shell and are used to set short-term working conditions; environment variables have a farther reaching significance, and those set at login are valid for the duration of the session. By convention, environment variables have UPPER CASE and shell variables have lower case names.</p>
 <h2 id="environment-variables">Environment Variables</h2>
@@ -436,10 +436,11 @@
 
 <h3 id="finding-out-the-current-values-of-these-variables">Finding out the current values of these variables.</h3>
 
-<p>ENVIRONMENT variables are set using the setenv command, displayed using the printenv or env commands, and unset using the unsetenv command.</p>
+<p>Environment variables are set using the setenv command, displayed using the printenv or env commands, and unset using the unsetenv command.</p>
 
 <p>To show all values of these variables, type</p>
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">printenv</span> <span class="o">|</span> <span class="nt">less</span>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">env</span> <span class="o">|</span> <span class="nt">less</span>
+<span class="err">$</span> <span class="nt">printenv</span> <span class="o">|</span> <span class="nt">less</span>
 </code></pre></div></div>
 <h2 id="shell-variables">Shell Variables</h2>
 <hr>
@@ -542,7 +543,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-05-20">May 20, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-05-21">May 21, 2024</time></p>
 
 
       </footer>

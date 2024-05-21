@@ -51,7 +51,7 @@
 
 
 
-  <meta property="article:modified_time" content="2024-05-20T22:52:43+05:30">
+  <meta property="article:modified_time" content="2024-05-21T16:14:20+05:30">
 
 
 
@@ -161,7 +161,7 @@
 <meta name="twitter:creator" content="@DrShamshadM">
 <meta name="google-site-verification" content="BD1FGtpPEYJphVV41YzUn-mrOqREjhO-JsWa4YZgj60">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-05-20T22:52:43+05:30","datePublished":"2022-09-22T00:00:00+05:30","description":"I have dream…","headline":"Listing files and Directories","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/files/unix/ListingFilesAndDirectories"},"url":"http://localhost:4000/files/unix/ListingFilesAndDirectories"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-05-21T16:14:20+05:30","datePublished":"2022-09-22T00:00:00+05:30","description":"I have dream…","headline":"Listing files and Directories","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/files/unix/ListingFilesAndDirectories"},"url":"http://localhost:4000/files/unix/ListingFilesAndDirectories"}</script>
 <!-- End Jekyll SEO tag -->
 
 <!-- end custom head snippets -->
@@ -368,7 +368,7 @@
     <meta itemprop="headline" content="Listing files and Directories">
     
     <meta itemprop="datePublished" content="2022-09-22T00:00:00+05:30">
-    <meta itemprop="dateModified" content="2024-05-20T22:52:43+05:30">
+    <meta itemprop="dateModified" content="2024-05-21T16:14:20+05:30">
 
     <div class="page__inner-wrap">
       
@@ -422,6 +422,8 @@
 <p>When you first login, your current working directory is your home directory. Your home directory has the same name as your user-name, for example, ee91ab, and it is where your personal files and subdirectories are saved.</p>
 
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">ls</span> <span class="o">[</span><span class="nt">OPTIONS</span><span class="o">]</span> <span class="o">[</span><span class="nt">FILES</span><span class="o">]</span>
+
+<span class="o">**</span><span class="nt">nobackup</span><span class="o">**</span>
 </code></pre></div></div>
 <p>When used with no options and arguments, ls displays out what is in your home directory, type</p>
 
@@ -438,7 +440,7 @@
 <p>To list all files in your home directory including those whose names begin  with a dot, type</p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">ls</span> <span class="nt">-a</span>
 </code></pre></div></div>
-<p><strong>ls</strong> is an example of a command which can take options: <code class="language-plaintext highlighter-rouge">-a</code> is an example of an option. The options change the behaviour of the command. There are online manual pages that tell you which options a particular command  can take, and how each option modifies the behaviour of the command.</p>
+<p><strong>ls</strong> is an example of a command which can take options: <strong>-a</strong> is an example of an option. The options change the behavior of the command. There are online manual pages that tell you which options a particular command  can take, and how each option modifies the behavior of the command.</p>
 
 <h2 id="making-directories">Making Directories</h2>
 
@@ -453,9 +455,10 @@
 </code></pre></div></div>
 <h2 id="changing-to-a-different-directory">Changing to a different directory </h2>
 <h3 id="cd-change-directory">cd (change directory)</h3>
-<p>The command <strong>cd <code class="language-plaintext highlighter-rouge">directory</code></strong> means change the current working directory to ‘directory’. The current working directory may be thought of as the directory you are in, i.e. your current position in the file-system tree.</p>
+<p>The command <strong>cd directory</strong> means change the current working directory to ‘directory’. The current working directory may be thought of as the directory you are in, i.e. your current position in the file-system tree.</p>
 
 <p>To change to the directory you have just made, type</p>
+
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">cd</span> <span class="nt">unixstuff</span> 
 </code></pre></div></div>
 <p>Type <code class="language-plaintext highlighter-rouge">ls</code> to see the contents (which should be empty)</p>
@@ -489,12 +492,13 @@ This may not seem very useful at first, but using (<strong>.</strong>) as the na
 </code></pre></div></div>
 <p>will take you one directory up the hierarchy (back to your home directory). Try it now.</p>
 <blockquote>
-  <p>Note: typing <code class="language-plaintext highlighter-rouge">cd</code> with no argument always returns you to your home directory. This is very useful if you are lost in the file system.</p>
+  <p>Note: typing <strong>cd</strong> with no argument always returns you to your home directory. This is very useful if you are lost in the file system.</p>
 </blockquote>
 
 <h2 id="pathnames">Pathnames</h2>
+
 <h3 id="pwd-print-working-directory">
-<em>pwd</em> (print working directory)</h3>
+<strong>pwd</strong> (print working directory)</h3>
 <p>Pathnames enable you to work out where you are in relation to the whole file-system. For example, to find out the absolute pathname of your home-directory, type <strong>cd</strong> to get back to your home-directory and then type</p>
 
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">pwd</span> 
@@ -522,7 +526,7 @@ which means that ee91ab (your home directory) is in the directory eebeng99 (the 
 
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">ls</span> <span class="nt">unixstuff</span>
 </code></pre></div></div>
-<p>to list the conents of your unixstuff directory.</p>
+<p>to list the contents of your unixstuff directory.</p>
 
 <p>Now type</p>
 
@@ -616,7 +620,7 @@ which means that ee91ab (your home directory) is in the directory eebeng99 (the 
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-05-20">May 20, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-05-21">May 21, 2024</time></p>
 
 
       </footer>

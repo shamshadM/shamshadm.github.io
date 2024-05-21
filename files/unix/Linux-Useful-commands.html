@@ -51,7 +51,7 @@
 
 
 
-  <meta property="article:modified_time" content="2024-05-20T22:52:43+05:30">
+  <meta property="article:modified_time" content="2024-05-21T16:14:20+05:30">
 
 
 
@@ -161,7 +161,7 @@
 <meta name="twitter:creator" content="@DrShamshadM">
 <meta name="google-site-verification" content="BD1FGtpPEYJphVV41YzUn-mrOqREjhO-JsWa4YZgj60">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-05-20T22:52:43+05:30","datePublished":"2022-09-23T00:00:00+05:30","description":"I have dream…","headline":"Linux useful commands","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/files/unix/Linux-Useful-commands"},"url":"http://localhost:4000/files/unix/Linux-Useful-commands"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-05-21T16:14:20+05:30","datePublished":"2022-09-23T00:00:00+05:30","description":"I have dream…","headline":"Linux useful commands","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/files/unix/Linux-Useful-commands"},"url":"http://localhost:4000/files/unix/Linux-Useful-commands"}</script>
 <!-- End Jekyll SEO tag -->
 
 <!-- end custom head snippets -->
@@ -368,7 +368,7 @@
     <meta itemprop="headline" content="Linux useful commands">
     
     <meta itemprop="datePublished" content="2022-09-23T00:00:00+05:30">
-    <meta itemprop="dateModified" content="2024-05-20T22:52:43+05:30">
+    <meta itemprop="dateModified" content="2024-05-21T16:14:20+05:30">
 
     <div class="page__inner-wrap">
       
@@ -413,18 +413,25 @@
 <p>All students are allocated a certain amount of disk space on the file system for their personal files, usually about 100Mb. If you go over your quota, you are given 7 days to remove excess files.</p>
 
 <p>To check your current quota and how much of it you have used, type</p>
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">quota</span> <span class="nt">-v</span>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">fslquota</span>
 </code></pre></div></div>
 <h3 id="df">df</h3>
 
 <p>The df command reports on the space left on the file system. For example, to find out how much space is left on the fileserver, type</p>
+
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">df</span> <span class="nc">.</span>
 </code></pre></div></div>
 <h3 id="du">du</h3>
 
-<p>The du command outputs the number of kilobyes used by each subdirectory. Useful if you have gone over quota and you want to find out which directory has the most files. In your home-directory, type</p>
+<p>The du command outputs the number of kilobytes used by each subdirectory. Useful if you have gone over quota and you want to find out which directory has the most files. In your home-directory, type</p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">du</span>
 </code></pre></div></div>
+<blockquote>
+  <blockquote>
+    <p>Hint: By default, <strong>df, du</strong>, and many other Linux utilities list file sizes in bytes. This is fine, but the information is much more useful to a user if it is in units of KB, MB, or GB. The <strong>-h</strong> option will convert from bytes to one of these larger units and can be used with <strong>df, du, ls</strong> , and just about any other Linux utility.</p>
+  </blockquote>
+</blockquote>
+
 <h3 id="compress">compress</h3>
 
 <p>This reduces the size of a file, thus freeing valuable disk space. For example, type</p>
@@ -482,7 +489,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-05-20">May 20, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-05-21">May 21, 2024</time></p>
 
 
       </footer>
