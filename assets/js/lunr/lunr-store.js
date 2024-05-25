@@ -143,7 +143,7 @@ var store = [{
         "url": "/publication/2022-12-16-%C2%A0PULSE_project-Phyt",
         "teaser": null
       },{
-        "title": "Double Haploid Production",
+        "title": "Double Haploid Production in crop plants",
         "excerpt":"Double haploid (DH) production is a technique used in plant breeding to produce pure breeding lines quickly. Typically, a haploid plant (with half the usual number of chromosomes) is generated, often through the manipulation of the plant’s reproductive processes, such as through tissue culture techniques. These haploid plants are then...","categories": [],
         "tags": [],
         "url": "/research/dh-production/",
