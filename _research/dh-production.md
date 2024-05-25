@@ -1,5 +1,5 @@
 ---
-title: "Double Haploid Production"
+title: "Double Haploid Production in crop plants"
 layout: single-portfolio
 excerpt: "<img src ='/images/research/dh.webp' alt= ''>"
 collection: research
