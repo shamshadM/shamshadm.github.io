@@ -144,31 +144,25 @@ var store = [{
         "teaser": null
       },{
         "title": "Double Haploid Production",
-        "excerpt":" ","categories": [],
+        "excerpt":"Double haploid (DH) production is a technique used in plant breeding to produce pure breeding lines quickly. Typically, a haploid plant (with half the usual number of chromosomes) is generated, often through the manipulation of the plant’s reproductive processes, such as through tissue culture techniques. These haploid plants are then...","categories": [],
         "tags": [],
         "url": "/research/dh-production/",
         "teaser": null
       },{
-        "title": "Genotype into Environment Evaluation of Genotypes",
-        "excerpt":" ","categories": [],
+        "title": "Genotype x Environment Evaluation",
+        "excerpt":"Stage-specific genotype-by-environment interactions determine yield components in wheat” suggests that different stages of wheat growth may respond differently to environmental conditions, and these responses may vary depending on the genetic makeup of the wheat varieties and the specific environment in which they are grown Stage-specific interactions Different growth stages of...","categories": [],
         "tags": [],
         "url": "/research/ge/",
         "teaser": null
       },{
-        "title": "Hybrid Wheat Breeding",
-        "excerpt":" ","categories": [],
-        "tags": [],
-        "url": "/research/hybrid-breedin/",
-        "teaser": null
-      },{
-        "title": "Molecular Breeding",
-        "excerpt":" ","categories": [],
+        "title": "Molecular Breeding and its implications",
+        "excerpt":"Molecular breeding is an approach in plant and animal breeding that integrates molecular biology techniques with traditional breeding methods to accelerate the process of developing new and improved varieties or breeds. It leverages knowledge of the genetic makeup of organisms to make more precise and efficient breeding decisions. Here’s how...","categories": [],
         "tags": [],
         "url": "/research/molecular-breeding/",
         "teaser": null
       },{
         "title": "Quantitative Genetics for Plant Breeding",
-        "excerpt":"This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML.  ","categories": [],
+        "excerpt":"Quantitative genetics delves into the intricate inheritance patterns of complex traits governed by multiple genes and environmental factors. Unlike Mendelian genetics, which focuses on discrete traits controlled by single genes, quantitative genetics navigates the continuous variation observed in traits like yield, disease resistance, and quality. Through concepts like polygenic inheritance,...","categories": [],
         "tags": [],
         "url": "/research/qtpb/",
         "teaser": null
