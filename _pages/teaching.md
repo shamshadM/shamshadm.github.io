@@ -17,6 +17,7 @@ Research plays a central role in my teaching as students improve their analytica
   {% include archive-single.html %}
   {% endif %}
 {% endfor %}
+{% include paginator.html %}
 
 ### Teaching Courses
 
