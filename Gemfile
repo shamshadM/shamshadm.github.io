@@ -14,7 +14,7 @@ source "https://rubygems.org"
 # If you want to use Jekyll native, uncomment the line below.
 # To upgrade, run `bundle update`.
 
-gem "jekyll", ">=4", "<6.0"
+gem "jekyll"
 gem 'tzinfo-data'
 gem "wdm" if Gem.win_platform?
 
