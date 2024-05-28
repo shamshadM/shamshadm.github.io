@@ -3,5 +3,6 @@
   {%-if include.caption -%}
   <figcaption>
     {{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}
-  </figcaption>{%- endif -%}
+  </figcaption>
+  {%- endif -%}
 </figure>

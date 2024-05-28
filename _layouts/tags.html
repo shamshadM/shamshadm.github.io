@@ -4,6 +4,7 @@ layout: archive
 
 {{ content }}
 
+{% include posts-taxonomy.html taxonomies=site.tags %}
 {% assign tags_max = 0 %}
 {% for tag in site.tags %}
   {% if tag[1].size > tags_max %}
