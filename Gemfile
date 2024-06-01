@@ -22,6 +22,7 @@ gem "wdm" if Gem.win_platform?
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'jekyll-paginate'
+  gem 'posix-spawn'
   gem 'commonmarker'
   gem 'jekyll-gist'
   gem 'jekyll-seo-tag'

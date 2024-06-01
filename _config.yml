@@ -283,6 +283,7 @@ plugins:
   - jekyll-last-modified-at
   - jekyll-gzip
   - jekyll-brotli
+  - posix-spawn
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-include-cache
