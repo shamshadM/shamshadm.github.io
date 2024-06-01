@@ -1,37 +1,40 @@
-name: Build and Deploy a Jekyll Site to GitHub Pages
+name: Build and Deploy to Github Pages
 
 on:
   push:
     branches:
-      - master
+      - master  # Here source code branch is `master`, it could be other branch
 
 jobs:
-  jekyll:
-    runs-on: macos-latest
+  build_and_deploy:
+    runs-on: ubuntu-latest
     steps:
-      - name: 📂 setup
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-        # include the lines below if you are using jekyll-last-modified-at
-        # or if you would otherwise need to fetch the full commit history
-        # however this may be very slow for large repositories!
-        # with:
-        # fetch-depth: '0'
-      - name: 💎 setup ruby
-        uses: ruby/setup-ruby@v1
+      # Use GitHub Actions' cache to cache dependencies on servers
+      - uses: actions/cache@v4
         with:
-          ruby-version: 3.2
+          path: |
+            .asdf/**
+            vendor/bundle
+          key: ${{ runner.os }}-cache-${{ hashFiles('**/cache.key') }}
+          restore-keys: |
+            ${{ runner.os }}-cache-
 
-      - name: 🔨 install dependencies & build site
-        uses: limjh16/jekyll-action-ts@v2
+      # Use GitHub Deploy Action to build and deploy to Github
+      # For latest version: `jeffreytse/jekyll-deploy-action@master`
+      - uses: jeffreytse/jekyll-deploy-action@v0.6.0
         with:
-          enable_cache: true
-
-      - name: 🚀 deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          # if the repo you are deploying to is <username>.github.io, uncomment the line below.
-          # if you are including the line below, make sure your source files are NOT in the "main" branch:
-          # publish_branch: main
+          provider: 'github'         # Default is github
+          token: ${{ secrets.GITHUB_TOKEN }} # It's your Personal Access Token(PAT)
+          ssh_private_key: ''        # It's your SSH private key (SSH approach)
+          repository: ''             # Default is current repository
+          branch: 'gh-pages'         # Default is gh-pages for github provider
+          jekyll_src: './'           # Default is root directory
+          jekyll_cfg: '_config.yml'  # Default is _config.yml
+          jekyll_baseurl: ''         # Default is according to _config.yml
+          ruby_ver: ''               # Default is 3.2.0 version
+          bundler_ver: ''            # Default is compatible bundler version (~>2.5.0)
+          cname: ''                  # Default is to not use a cname
+          actor: ''                  # Default is the GITHUB_ACTOR
+          pre_build_commands: ''     # Installing additional dependencies (Arch Linux)

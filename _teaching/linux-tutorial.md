@@ -1,6 +1,6 @@
 ---
 title: "Linux / Unix tutorial for beginners"
-layout: single
+layout: home
 type: 'Bioinformatics'
 classes: wide
 permalink: /teaching/linux-tutorial/
