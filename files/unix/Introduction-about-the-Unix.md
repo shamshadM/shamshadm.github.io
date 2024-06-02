@@ -44,9 +44,9 @@ As an illustration of the way that the shell and the kernel work together, suppo
 
 The shell acts as an interface between the user and the kernel. When a user logs in, the login program checks the username and password, and then starts another program called the shell. The shell is a command line interpreter (CLI). It interprets the commands the user types in and arranges for them to be carried out. The commands are themselves programs: when they terminate, the shell gives the user another prompt (% on our systems).
 
-The adept user can customise his/her own shell, and users can use different shells on the same machine. Most accounts on our clusters have the **bash shell** by default.
+The adept user can customize his/her own shell, and users can use different shells on the same machine. Most accounts on our clusters have the **bash shell** by default.
 
-The bash and tcsh shells have certain features to help the user inputting commands.
+The bash and [tcsh](https://www.washington.edu/doit/technology-tips-csh-tcsh) shells have certain features to help the user inputting commands.
 
 Filename Completion - By typing part of the name of a command, filename or directory and pressing the **Tab** key, the shell will complete the rest of the name automatically. If the shell finds more than one name beginning with those letters you have typed, it will beep, prompting you to type a few more letters before pressing the tab key again.
 

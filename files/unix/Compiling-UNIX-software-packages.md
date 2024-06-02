@@ -13,7 +13,7 @@ tags:
 toc: true
 ---
 
-![Unix files sytem](/images/unix/install-software.webp)
+![Unix files system](/images/unix/install-software.webp)
 
 We have many open source and commercial software packages installed on our systems, which are available to all users. However, user are allowed to download and install small software packages in their own home directory, software usually only useful to them personally.
 

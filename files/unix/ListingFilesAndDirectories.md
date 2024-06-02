@@ -6,7 +6,7 @@ permalink: /files/unix/ListingFilesAndDirectories
 author_profile: true
 toc: true
 ---
- ![Unix files sytem](/images/unix/Linux-Directory-StructureS.webp)
+ ![Unix files system](/images/unix/Linux-Directory-StructureS.webp)
 
 ## Listing files and directories
 When you first login, your current working directory is your home directory. Your home directory has the same name as your user-name, for example, ee91ab, and it is where your personal files and subdirectories are saved.
@@ -22,6 +22,7 @@ When used with no options and arguments, ls displays out what is in your home di
 $ ls (short for list)
 ```
 The files are listed in alphabetical order in as many columns as can fit across your terminal:
+
 ```scss
 OUTPUT
 cache  db  empty  games  lib  local  lock  log  mail  opt  run  spool  tmp
@@ -31,6 +32,7 @@ There may be no files visible in your home directory, in which case, the UNIX pr
 **ls** does not, in fact, cause all the files in your home directory to be listed, but only those ones whose name does not begin with a dot (.) Files beginning with a dot (.) are known as hidden files and usually contain important program configuration information. They are hidden because you should not change them unless you are very familiar with UNIX!!!
 
 To list all files in your home directory including those whose names begin  with a dot, type
+
 ```scss
 $ ls -a
 ```
@@ -46,11 +48,14 @@ We will now make a subdirectory in your home directory to hold the files you wil
 $ mkdir unixstuff 
 ```
 To see the directory you have just created, type 
+
 ```scss
 $ ls
 ```
 ## Changing to a different directory&nbsp;
+
 ### cd (change directory)
+
 The command **cd directory** means change the current working directory to 'directory'. The current working directory may be thought of as the directory you are in, i.e. your current position in the file-system tree.
 
 To change to the directory you have just made, type
@@ -58,6 +63,7 @@ To change to the directory you have just made, type
 ```scss
 $ cd unixstuff 
 ```
+
 Type `ls` to see the contents (which should be empty)
 
 <b>:loudspeaker: Exercise </b>
@@ -74,6 +80,7 @@ $ ls -a
 As you can see, in the **unixstuff** directory (and in all other directories), there are two special directories called (**.**) and (**..**)
 
 In UNIX, (**.**) means the current directory, so typing 
+
 ```scss
 $ cd .
 ```

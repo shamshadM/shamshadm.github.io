@@ -7,7 +7,7 @@ author_profile: true
 toc: true
 ---
 
-![Unix files sytem](/images/unix/linux-cp-command.webp)
+![Unix files system](/images/unix/linux-cp-command.webp)
 
 ---
 ## Copying Files
@@ -127,7 +127,7 @@ The command cat can be used to display the contents of a file on the screen. Typ
 ```scss
 $ cat science.txt
 ```
-As you can see, the file is longer than than the size of the window, so it scrolls past making it unreadable.
+As you can see, the file is longer than the size of the window, so it scrolls past making it unreadable.
 
 ### less
 
@@ -182,7 +182,7 @@ grep is one of many standard UNIX utilities. It searches files for specified wor
 ```scss
 $ grep science science.txt
 ```
-As you can see, grep has printed out each line containg the word science.
+As you can see, grep has printed out each line containing the word science.
 
 <b>:loudspeaker: Or has it?</b>
 
@@ -208,7 +208,7 @@ Some of the other options of grep are:
 
 ```scss
 \-v display those lines that do NOT match  
-\-n precede each maching line with the line number  
+\-n precede each matching line with the line number  
 \-c print only the total count of matched lines  
 ```
 

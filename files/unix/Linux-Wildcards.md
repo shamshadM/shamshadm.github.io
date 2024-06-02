@@ -7,7 +7,7 @@ author_profile: true
 toc: true
 ---
 
-![Unix files sytem](/images/unix/Putorius-Feature-Default.webp)
+![Unix files system](/images/unix/Putorius-Feature-Default.webp)
 
 ## Wildcards
 ---
@@ -21,6 +21,7 @@ $ ls list*
 This will list all files in the current directory starting with **list....**
 
 Try typing
+
 ```scss
 $ ls *list
 ```
@@ -29,6 +30,7 @@ This will list all files in the current directory ending with **....list**
 The character ? will match exactly one character.  
 So **ls ?ouse** will match files like **house** and **mouse**, but not **grouse**.  
 Try typing
+
 ```scss
 $ ls ?list
 ```
@@ -59,6 +61,7 @@ For example, to find out more about the wc (word count) command, type
 $ man wc
 ```
 Alternatively
+
 ```scss
 $ whatis wc
 ```
@@ -67,10 +70,12 @@ gives a one-line description of the command, but omits any information about opt
 ### Apropos
 
 When you are not sure of the exact name of a command,
+
 ```scss
 $ apropos keyword
 ```
 will give you the commands with keyword in their manual page header. For example, try typing
+
 ```scss
 $ apropos copy
 $ apropos slurm

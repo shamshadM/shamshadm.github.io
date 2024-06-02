@@ -7,7 +7,7 @@ author_profile: true
 toc: true
 ---
 
-![Unix files sytem](/images/unix/unix.webp)
+![Unix files system](/images/unix/unix.webp)
 
 Variables are a way of passing information from the shell to programs when you run them. Programs look **in the environment** for particular variables and if they are found will use the values stored. Some are set by the system, others by you, yet others by the shell, or any program that loads another program.
 
@@ -57,6 +57,7 @@ More examples of shell variables are
 SHELL variables are both set and displayed using the set command. They can be unset by using the unset command.
 
 To show all values of these variables, type
+
 ```scss
 $ set | less
 ```
@@ -71,7 +72,7 @@ PATH and path specify directories to search for commands and programs. Both vari
 ## Using and setting variables
 ---
 
-Each time you login to a UNIX host, the system looks in your home directory for initialisation files. Information in these files is used to set up your working environment. The C and TC shells uses two files called .login and .cshrc (note that both file names begin with a dot).
+Each time you login to a UNIX host, the system looks in your home directory for initialization files. Information in these files is used to set up your working environment. The C and TC shells uses two files called .login and .cshrc (note that both file names begin with a dot).
 
 At login the C shell first reads **.cshrc** followed by **.login**
 
@@ -87,20 +88,24 @@ The guidelines are to set ENVIRONMENT variables in the **.login** file and SHELL
 ---
 
 For example, to change the number of shell commands saved in the history list, you need to set the shell variable history. It is set to 100 by default, but you can increase this if you wish.
+
 ```scss
 $ set history = 200
 ```
 Check this has worked by typing
+
 ```scss
 $ echo $history
 ```
 However, this has only set the variable for the lifetime of the current shell. If you open a new xterm window, it will only have the default history value set. To PERMANENTLY set the value of history, you will need to add the set command to the .cshrc file.
 
 First open the **.cshrc** file in a text editor. An easy, user-friendly editor to use is nedit.
+
 ```scss
 $ nedit ~/.cshrc
 ```
 Add the following line AFTER the list of other commands.
+
 ```scss
 set history = 200
 ```
@@ -110,6 +115,7 @@ Save the file and force the shell to reread its .cshrc file buy using the shell 
 $ source .cshrc
 ```
 Check this has worked by typing
+
 ```scss
 $ echo $history
 ```
@@ -120,7 +126,8 @@ When you type a command, your path (or PATH) variable defines in which directori
 
 For example, to run units, you either need to directly specify the units path (**~/units174/bin/units**), or you need to have the directory **~/units174/bin** in your path.
 
-You can add it to the end of your existing path (the **$path** represents this) by issuing the command:
+You can add it to the end of your existing path (the **$path** represents this) by issuing the command
+
 ```scss
 $ set path = ($path ~/units174/bin)
 ```
@@ -132,6 +139,7 @@ $ cd; units
 **HINT:** You can run multiple commands on one line by separating them with a semicolon.
 
 To add this path PERMANENTLY, add the following line to your .cshrc AFTER the list of other commands.
+
 ```scss
 set path = ($path ~/units174/bin)
 ```

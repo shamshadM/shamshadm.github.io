@@ -7,11 +7,12 @@ author_profile: true
 toc: true
 ---
 
-![Unix files sytem](/images/unix/filePermisions.webp)
+![Unix files system](/images/unix/filePermisions.webp)
 
 ## File system security (access rights)
 ---
 In your unixstuff directory, type
+
 ```scss
 $ ls -l (l for long listing!)
 ```
@@ -186,21 +187,26 @@ Typing fg with no job number foregrounds the last suspended process.
 It is sometimes necessary to kill a process (for example, when an executing program is in an infinite loop)
 
 To kill a job running in the foreground, type ^C (control c). For example, run
+
 ```scss
 $ sleep 100  
 ^C
 ```
 
 To kill a suspended or background process, type
+
 ```scss
 $ kill $jobnumber
 ```
 For example, run
+
 ```scss
 $ sleep 100 &  
 $ jobs
 ```
+
 If it is job number 4, type
+
 ```scss
 $ kill $4
 ```
@@ -209,6 +215,7 @@ To check whether this has worked, examine the job list again to see if the proce
 ### ps (process status)
 
 Alternatively, processes can be killed by finding their process numbers (PIDs) and using kill PID_number
+
 ```scss
 $ sleep 100 &  
 $ ps
@@ -220,12 +227,14 @@ PID TT S TIME COMMAND
 21873 pts/5 S 0:25 nedit
 ```
 To kill off the process sleep 100, type
+
 ```scss
 $ kill 20077
 ```
 and then type ps again to see if it has been removed from the list.
 
 If a process refuses to be killed, uses the **-9** option, i.e. type
+
 ```scss
 $ kill -9 20077
 ```
