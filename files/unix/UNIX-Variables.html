@@ -22,7 +22,8 @@
 <meta name="twitter:creator" content="@DrShamshadM">
 <meta property="article:published_time" content="2022-09-23T00:00:00+05:30">
 <meta property="article:modified_time" content="2024-05-20T15:42:13+05:30">
-<link rel="canonical" href="https://shamshad.in/files/unix/UNIX-Variables"> <script async type="application/ld+json"> { "@context": "https://schema.org", "@type": "Person", "name": "M. Shamshad", "url": "https://shamshad.in/" } </script><meta name="google-site-verification" content="BD1FGtpPEYJphVV41YzUn-mrOqREjhO-JsWa4YZgj60"> <!-- end _includes/seo.html --><link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed"> <!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr --><meta name="viewport" content="width=device-width, initial-scale=1.0"> <script async> document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, "") + " js "; </script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="canonical" href="https://shamshad.in/files/unix/UNIX-Variables">
+<meta name="google-site-verification" content="BD1FGtpPEYJphVV41YzUn-mrOqREjhO-JsWa4YZgj60"> <!-- end _includes/seo.html --><link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed"> <!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr --><meta name="viewport" content="width=device-width, initial-scale=1.0"> <script async> document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, "") + " js "; </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"> <!-- For all browsers --><link rel="stylesheet" href="/assets/css/main.css" id="theme_source">
 <link rel="stylesheet alternate" href="/assets/css/mainDark.css" id="theme_source_2"> <script async> let theme = sessionStorage.getItem("theme"); if (theme === "dark") { sessionStorage.setItem("theme", "dark"); node1 = document.getElementById("theme_source"); node2 = document.getElementById("theme_source_2"); node1.setAttribute("rel", "stylesheet alternate"); node2.setAttribute("rel", "stylesheet"); } else { sessionStorage.setItem("theme", "light"); } </script> <!-- start custom head snippets --><meta name="apple-mobile-web-app-capable" content="yes">
@@ -125,7 +126,7 @@
 <li><a href="#using-and-setting-variables">Using and setting variables</a></li>
 <li><a href="#setting-shell-variables-in-the-cshrc-file">Setting shell variables in the .cshrc file</a></li>
 <li><a href="#setting-the-path">Setting the path</a></li>
-</ul></nav></aside><p><img src="/images/unix/unix.webp" alt="Unix files sytem"></p>
+</ul></nav></aside><p><img src="/images/unix/unix.webp" alt="Unix files system"></p>
 <p>Variables are a way of passing information from the shell to programs when you run them. Programs look <strong>in the environment</strong> for particular variables and if they are found will use the values stored. Some are set by the system, others by you, yet others by the shell, or any program that loads another program.</p>
 <p>Standard UNIX variables are split into two categories, environment variables and shell variables. In broad terms, shell variables apply only to the current instance of the shell and are used to set short-term working conditions; environment variables have a farther reaching significance, and those set at login are valid for the duration of the session. By convention, environment variables have UPPER CASE and shell variables have lower case names.</p>
 <h2 id="environment-variables">Environment Variables</h2>
@@ -172,7 +173,7 @@
 <p>PATH and path specify directories to search for commands and programs. Both variables always represent the same directory list, and altering either automatically causes the other to be changed.</p>
 <h2 id="using-and-setting-variables">Using and setting variables</h2>
 <hr>
-<p>Each time you login to a UNIX host, the system looks in your home directory for initialisation files. Information in these files is used to set up your working environment. The C and TC shells uses two files called .login and .cshrc (note that both file names begin with a dot).</p>
+<p>Each time you login to a UNIX host, the system looks in your home directory for initialization files. Information in these files is used to set up your working environment. The C and TC shells uses two files called .login and .cshrc (note that both file names begin with a dot).</p>
 <p>At login the C shell first reads <strong>.cshrc</strong> followed by <strong>.login</strong></p>
 <p><strong>.login</strong> is to set conditions which will apply to the whole session and to perform actions that are relevant only at login.</p>
 <p><strong>.cshrc</strong> is used to set conditions and perform actions specific to the shell and to each invocation of it.</p>
@@ -203,7 +204,7 @@
 <hr>
 <p>When you type a command, your path (or PATH) variable defines in which directories the shell will look to find the command you typed. If the system returns a message saying <strong><code class="language-plaintext highlighter-rouge">command: Command not found</code></strong>, this indicates that either the command doesn’t exist at all on the system or it is simply not in your path.</p>
 <p>For example, to run units, you either need to directly specify the units path (<strong>~/units174/bin/units</strong>), or you need to have the directory <strong>~/units174/bin</strong> in your path.</p>
-<p>You can add it to the end of your existing path (the <strong>$path</strong> represents this) by issuing the command:</p>
+<p>You can add it to the end of your existing path (the <strong>$path</strong> represents this) by issuing the command</p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">set</span> <span class="nt">path</span> <span class="o">=</span> <span class="o">(</span><span class="err">$</span><span class="nt">path</span> <span class="o">~/</span><span class="nt">units174</span><span class="o">/</span><span class="nt">bin</span><span class="o">)</span>
 </code></pre></div></div>
 <p>Test that this worked by trying to run units in any directory other that where units is actually located.</p>
