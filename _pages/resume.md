@@ -9,9 +9,6 @@ header:
   og_image: /images/favicon/shamshad.webp
 ---
 
-<embed type="application/pdf" src="/files/pdf/Mohammad_Shamshad_Resume.pdf" width="100%" height="100%">
-
-
 {% include base_path %}
 
 ***
@@ -176,5 +173,8 @@ Quantitative Skills
 
 * Wet Lab Skills
 	*  DNA extractions, PCR, real-time PCR, electrophoresis, SSR marker and KASP marker genotyping
+
+------
+<embed type="application/pdf" src="/files/pdf/Mohammad_Shamshad_Resume.pdf" width="100%" height="100%">
 
 ------
