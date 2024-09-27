@@ -1,32 +1,121 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-<head>
+  <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8"> <!-- begin _includes/seo.html --><title>Compiling UNIX software packages | M. Shamshad</title>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Compiling UNIX software packages | M. Shamshad</title>
 <meta name="description" content="The Unix command for compiling C code is gcc. This is a compiler from Gnu for Linux. If you are using a Unix machine like Solaris you may need to use the command cc.) When you compile your program the compiler produces a file containing binary code which is directly readable by the machine you are on.">
-<meta name="author" content="M. Shamshad">
-<meta property="article:author" content="M. Shamshad">
+
+
+  <meta name="author" content="M. Shamshad">
+  
+  <meta property="article:author" content="M. Shamshad">
+  
+
+
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="M. Shamshad">
 <meta property="og:title" content="Compiling UNIX software packages">
-<meta property="og:url" content="https://shamshad.in/files/unix/Compiling-UNIX-software-packages/">
-<meta property="og:description" content="The Unix command for compiling C code is gcc. This is a compiler from Gnu for Linux. If you are using a Unix machine like Solaris you may need to use the command cc.) When you compile your program the compiler produces a file containing binary code which is directly readable by the machine you are on.">
-<meta property="og:image" content="https://shamshad.in/images/favicon/site-treaser.webp">
-<meta name="twitter:site" content="@DrShamshadM">
-<meta name="twitter:title" content="Compiling UNIX software packages">
-<meta name="twitter:description" content="The Unix command for compiling C code is gcc. This is a compiler from Gnu for Linux. If you are using a Unix machine like Solaris you may need to use the command cc.) When you compile your program the compiler produces a file containing binary code which is directly readable by the machine you are on.">
-<meta name="twitter:url" content="https://shamshad.in/files/unix/Compiling-UNIX-software-packages/">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://shamshad.in/images/favicon/site-treaser.webp">
-<meta name="twitter:creator" content="@DrShamshadM">
-<meta property="article:published_time" content="2022-09-23T00:00:00+05:30">
-<meta property="article:modified_time" content="2024-05-20T15:42:13+05:30">
-<link rel="canonical" href="https://shamshad.in/files/unix/Compiling-UNIX-software-packages/">
-<meta name="google-site-verification" content="BD1FGtpPEYJphVV41YzUn-mrOqREjhO-JsWa4YZgj60"> <!-- end _includes/seo.html --><link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed"> <!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr --><meta name="viewport" content="width=device-width, initial-scale=1.0"> <script async> document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, "") + " js "; </script><link rel="preconnect" href="https://fonts.googleapis.com">
+<meta property="og:url" content="http://localhost:4000/files/unix/Compiling-UNIX-software-packages/">
+
+
+  <meta property="og:description" content="The Unix command for compiling C code is gcc. This is a compiler from Gnu for Linux. If you are using a Unix machine like Solaris you may need to use the command cc.) When you compile your program the compiler produces a file containing binary code which is directly readable by the machine you are on.">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/images/favicon/site-treaser.webp">
+
+
+
+  <meta name="twitter:site" content="@DrShamshadM">
+  <meta name="twitter:title" content="Compiling UNIX software packages">
+  <meta name="twitter:description" content="The Unix command for compiling C code is gcc. This is a compiler from Gnu for Linux. If you are using a Unix machine like Solaris you may need to use the command cc.) When you compile your program the compiler produces a file containing binary code which is directly readable by the machine you are on.">
+  <meta name="twitter:url" content="http://localhost:4000/files/unix/Compiling-UNIX-software-packages/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="http://localhost:4000/images/favicon/site-treaser.webp">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@DrShamshadM">
+  
+
+
+
+  <meta property="article:published_time" content="2022-09-23T00:00:00+05:30">
+
+
+
+  <meta property="article:modified_time" content="2024-06-02T15:51:53+05:30">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/files/unix/Compiling-UNIX-software-packages/">
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="BD1FGtpPEYJphVV41YzUn-mrOqREjhO-JsWa4YZgj60">
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+ 
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed">
+
+
+<!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script async>
+  document.documentElement.className =
+    document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"> <!-- For all browsers --><link rel="stylesheet" href="/assets/css/main.css" id="theme_source">
-<link rel="stylesheet alternate" href="/assets/css/mainDark.css" id="theme_source_2"> <script async> let theme = sessionStorage.getItem("theme"); if (theme === "dark") { sessionStorage.setItem("theme", "dark"); node1 = document.getElementById("theme_source"); node2 = document.getElementById("theme_source_2"); node1.setAttribute("rel", "stylesheet alternate"); node2.setAttribute("rel", "stylesheet"); } else { sessionStorage.setItem("theme", "light"); } </script> <!-- start custom head snippets --><meta name="apple-mobile-web-app-capable" content="yes">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css" id="theme_source">
+
+
+<link rel="stylesheet alternate" href="/assets/css/mainDark.css" id="theme_source_2">
+<script async>
+  let theme = sessionStorage.getItem("theme");
+  if (theme === "dark") {
+    sessionStorage.setItem("theme", "dark");
+    node1 = document.getElementById("theme_source");
+    node2 = document.getElementById("theme_source_2");
+    node1.setAttribute("rel", "stylesheet alternate");
+    node2.setAttribute("rel", "stylesheet");
+  } else {
+    sessionStorage.setItem("theme", "light");
+  }
+</script>
+
+
+
+
+    
+<!-- start custom head snippets -->			   
+<meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png?v=565802">
 <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon-76x76.png?v=565802">
@@ -42,15 +131,19 @@
 <meta name="application-name" content="SM-Web">
 <meta name="msapplication-TileColor" content="#00a300">
 <meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=565802">
-<meta name="theme-color" content="#ffffff"> <!-- SEO tags --> <!-- Begin Jekyll SEO tag v2.8.0 --><title>Compiling UNIX software packages | M. Shamshad</title>
-<meta name="generator" content="Jekyll v4.3.3">
+<meta name="theme-color" content="#ffffff">
+
+<!-- SEO tags -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Compiling UNIX software packages | M. Shamshad</title>
+<meta name="generator" content="Jekyll v4.3.4">
 <meta property="og:title" content="Compiling UNIX software packages">
 <meta name="author" content="M. Shamshad">
 <meta property="og:locale" content="en_US">
 <meta name="description" content="The Unix command for compiling C code is gcc. This is a compiler from Gnu for Linux. If you are using a Unix machine like Solaris you may need to use the command cc.) When you compile your program the compiler produces a file containing binary code which is directly readable by the machine you are on.">
 <meta property="og:description" content="The Unix command for compiling C code is gcc. This is a compiler from Gnu for Linux. If you are using a Unix machine like Solaris you may need to use the command cc.) When you compile your program the compiler produces a file containing binary code which is directly readable by the machine you are on.">
-<link rel="canonical" href="https://shamshad.in/files/unix/Compiling-UNIX-software-packages/">
-<meta property="og:url" content="https://shamshad.in/files/unix/Compiling-UNIX-software-packages/">
+<link rel="canonical" href="http://localhost:4000/files/unix/Compiling-UNIX-software-packages/">
+<meta property="og:url" content="http://localhost:4000/files/unix/Compiling-UNIX-software-packages/">
 <meta property="og:site_name" content="M. Shamshad">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2022-09-23T00:00:00+05:30">
@@ -58,103 +151,345 @@
 <meta property="twitter:title" content="Compiling UNIX software packages">
 <meta name="twitter:site" content="@DrShamshadM">
 <meta name="twitter:creator" content="@DrShamshadM">
-<meta name="google-site-verification" content="BD1FGtpPEYJphVV41YzUn-mrOqREjhO-JsWa4YZgj60"> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-05-20T15:42:13+05:30","datePublished":"2022-09-23T00:00:00+05:30","description":"The Unix command for compiling C code is gcc. This is a compiler from Gnu for Linux. If you are using a Unix machine like Solaris you may need to use the command cc.) When you compile your program the compiler produces a file containing binary code which is directly readable by the machine you are on.","headline":"Compiling UNIX software packages","mainEntityOfPage":{"@type":"WebPage","@id":"https://shamshad.in/files/unix/Compiling-UNIX-software-packages/"},"url":"https://shamshad.in/files/unix/Compiling-UNIX-software-packages/"}</script> <!-- End Jekyll SEO tag --> <!-- end custom head snippets -->
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<meta name="google-site-verification" content="BD1FGtpPEYJphVV41YzUn-mrOqREjhO-JsWa4YZgj60">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-06-02T15:51:53+05:30","datePublished":"2022-09-23T00:00:00+05:30","description":"The Unix command for compiling C code is gcc. This is a compiler from Gnu for Linux. If you are using a Unix machine like Solaris you may need to use the command cc.) When you compile your program the compiler produces a file containing binary code which is directly readable by the machine you are on.","headline":"Compiling UNIX software packages","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/files/unix/Compiling-UNIX-software-packages/"},"url":"http://localhost:4000/files/unix/Compiling-UNIX-software-packages/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/13.1.1/math.js" integrity="sha512-fMI/ndUubOcpzblrAaOFszYIE2iDKua+Cxg9dZp3cAkhsRWEHHbKtFCElHEQ50viX502yj7nFEEcxq2SOTNrIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- end custom head snippets -->
+  <script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-<body class="layout--single">
-<nav class="skip-links"><ul>
-<li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
-<li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
-<li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
-</ul></nav><div class="masthead"><div class="masthead__inner-wrap"><div class="masthead__menu"><nav id="site-nav" class="greedy-nav"> <a class="site-title" href="/"> M. Shamshad </a><ul class="visible-links">
-<li class="masthead__menu-item"> <a href="/about/">About</a>
-</li>
-<li class="masthead__menu-item"> <a href="/teaching/">Teaching</a>
-</li>
-<li class="masthead__menu-item"> <a href="/publications/">Publications</a>
-</li>
-<li class="masthead__menu-item"> <a href="/talks/">Talks</a>
-</li>
-<li class="masthead__menu-item"> <a href="/research/">Research</a>
-</li>
-<li class="masthead__menu-item"> <a href="/resume/">Resume</a>
-</li>
-<li class="masthead__menu-item"> <a href="/tags/">Tags</a>
-</li>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          M. Shamshad
+          
+        </a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/teaching/">Teaching</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/research/">Research</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/resume/">Resume</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li>
 </ul>
-<span class="fa-solid fa-moon toggle-switch" style="cursor: pointer;" aria-hidden="true" onclick="node1=document.getElementById('theme_source');node2=document.getElementById('theme_source_2');if(node1.getAttribute('rel')=='stylesheet'){node1.setAttribute('rel', 'stylesheet alternate'); node2.setAttribute('rel', 'stylesheet');sessionStorage.setItem('theme', 'dark');}else{node2.setAttribute('rel', 'stylesheet alternate'); node1.setAttribute('rel', 'stylesheet');sessionStorage.setItem('theme', 'light');} return false;"></span> <button class="greedy-nav__toggle hidden" type="button"> <span class="visually-hidden">Toggle menu</span><div class="navicon"></div></button><ul class="hidden-links hidden"></ul></nav></div></div></div>
-<div class="initial-content"><div id="main" role="main">
-<div class="sidebar sticky"><div itemscope itemtype="https://schema.org/Person" class="h-card">
-<div class="author__avatar"> <a href="https://shamshad.in/"> <img src="/images/profile.webp" alt="M. Shamshad" itemprop="image" class="u-photo"> </a>
+         
+        <span class="fa-solid fa-moon toggle-switch" style="cursor: pointer;" aria-hidden="true" onclick="node1=document.getElementById('theme_source');node2=document.getElementById('theme_source_2');if(node1.getAttribute('rel')=='stylesheet'){node1.setAttribute('rel', 'stylesheet alternate'); node2.setAttribute('rel', 'stylesheet');sessionStorage.setItem('theme', 'dark');}else{node2.setAttribute('rel', 'stylesheet alternate'); node1.setAttribute('rel', 'stylesheet');sessionStorage.setItem('theme', 'light');} return false;"></span>
+        
+        
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
 </div>
-<div class="author__content">
-<h3 class="author__name p-name" itemprop="name"> <a class="u-url" rel="me" href="https://shamshad.in/" itemprop="url">M. Shamshad</a>
-</h3>
-<div class="author__bio p-note" itemprop="description"><p>Plant Breeding &amp;&amp; Data Science</p></div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+  <div class="author__avatar">
+   <a href="http://localhost:4000/">
+    	<img src="/images/profile.webp" alt="M. Shamshad" itemprop="image" class="u-photo">
+   </a>
+  </div>
+  
+
+  <div class="author__content">
+      <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">M. Shamshad</a>
+    </h3>
+	   
+      <div class="author__bio p-note" itemprop="description">
+        <p>Plant Breeding &amp;&amp; Data Science</p>
+
+      </div>
+       
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+              <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Ludhina, Punjab, India</span>
+        </li>     
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:shamshad.rattan@gmail.com" rel="me" class="u-email">
+            <meta itemprop="email" content="shamshad.rattan@gmail.com">
+            <i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+       
+        <li>
+<a href="https://www.researchgate.net/profile/Mohd-Shamshad" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+          <i class="ai  ai-researchgate-square" aria-hidden="true"></i><span class="label">ResearchGate</span>
+        </a>
+      </li>
+      
+
+      
+        <li>
+          <a href="https://twitter.com/DrShamshadM" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/dr-m-shamshad-58b4321b1" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+       
+      
+      <li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&hl=en" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+        <i class="ai ai-fw ai-google-scholar" aria-hidden="true"></i><span class="label">Google Scholar</span></a></li>
+                 
+      
+      
+                                                                                                   
+       
+          <!--
+  <li>
+    <a href="https://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
 </div>
-<div class="author__urls-wrapper"> <button class="btn btn--inverse">Follow</button><ul class="author__urls social-icons">
-<li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place"> <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Ludhina, Punjab, India</span>
-</li>
-<li> <a href="mailto:shamshad.rattan@gmail.com" rel="me" class="u-email"><meta itemprop="email" content="shamshad.rattan@gmail.com"> <i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span class="label">Email</span> </a>
-</li>
-<li><a href="https://www.researchgate.net/profile/Mohd-Shamshad"><i class="ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
-<li> <a href="https://twitter.com/DrShamshadM" itemprop="sameAs" rel="nofollow noopener noreferrer me"> <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span> </a>
-</li>
-<li> <a href="https://www.linkedin.com/in/dr-m-shamshad-58b4321b1" itemprop="sameAs" rel="nofollow noopener noreferrer me"> <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span> </a>
-</li>
-<li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&hl=en" itemprop="sameAs" rel="nofollow noopener noreferrer me"> <i class="ai ai-fw ai-google-scholar" aria-hidden="true"></i><span class="label">Google Scholar</span></a></li>
-<!--<li> <a href="https://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer"> <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link </a></li>-->
-</ul>
-</div>
-</div></div>
-<article class="page" itemscope itemtype="https://schema.org/CreativeWork"><meta itemprop="headline" content="Compiling UNIX software packages">
-<meta itemprop="description" content="The Unix command for compiling C code is gcc. This is a compiler from Gnu for Linux. If you are using a Unix machine like Solaris you may need to use the command cc.) When you compile your program the compiler produces a file containing binary code which is directly readable by the machine you are on.">
-<meta itemprop="datePublished" content="2022-09-23T00:00:00+05:30">
-<meta itemprop="dateModified" content="2024-05-20T15:42:13+05:30">
-<div class="page__inner-wrap">
-<header><h1 id="page-title" class="page__title" itemprop="headline">Compiling UNIX software packages</h1>
-<p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-09-23T00:00:00+05:30">September 23, 2022</time></p>
-<!-- --></header><section class="page__content" itemprop="text"><aside class="sidebar__right "><nav class="toc"><header><h4 class="nav__title">
-<i class="fas fa-file-alt"></i> On this page</h4></header><ul class="toc__menu">
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Compiling UNIX software packages">
+    <meta itemprop="description" content="The Unix command for compiling C code is gcc. This is a compiler from Gnu for Linux. If you are using a Unix machine like Solaris you may need to use the command cc.) When you compile your program the compiler produces a file containing binary code which is directly readable by the machine you are on.">
+    <meta itemprop="datePublished" content="2022-09-23T00:00:00+05:30">
+    <meta itemprop="dateModified" content="2024-06-02T15:51:53+05:30">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Compiling UNIX software packages
+</h1>
+		 
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-09-23T00:00:00+05:30">September 23, 2022</time></p>
+        
+        
+             
+        <!--  -->
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
 <li><a href="#compiling-source-code">Compiling Source Code</a></li>
 <li><a href="#make-and-the-makefile">make and the Makefile</a></li>
 <li><a href="#configure">configure</a></li>
-</ul></nav></aside><p><img src="/images/unix/install-software.webp" alt="Unix files system"></p>
-<p>We have many open source and commercial software packages installed on our systems, which are available to all users. However, user are allowed to download and install small software packages in their own home directory, software usually only useful to them personally.</p>
-<p>There are a number of steps needed to install the software.</p>
-<ul>
-<li>Locate and download the source code (which is usually compressed)</li>
-<li>Unpack the source code</li>
-<li>Compile the code</li>
-<li>Install the resulting executable</li>
-<li>Set paths to the installation directory</li>
 </ul>
+            </nav>
+          </aside>
+        
+        <p><img src="/images/unix/install-software.webp" alt="Unix files system"></p>
+
+<p>We have many open source and commercial software packages installed on our systems, which are available to all users. However, user are allowed to download and install small software packages in their own home directory, software usually only useful to them personally.</p>
+
+<p>There are a number of steps needed to install the software.</p>
+
+<ul>
+  <li>Locate and download the source code (which is usually compressed)</li>
+  <li>Unpack the source code</li>
+  <li>Compile the code</li>
+  <li>Install the resulting executable</li>
+  <li>Set paths to the installation directory</li>
+</ul>
+
 <p>Of the above steps, probably the most difficult is the compilation stage.</p>
+
 <h3 id="compiling-source-code">Compiling Source Code</h3>
+
 <p>All high-level language code must be converted into a form the computer understands. For example, C language source code is converted into a lower-level language called assembly language. The assembly language code made by the previous stage is then converted into object code which are fragments of code which the computer understands directly. The final stage in compiling a program involves linking the object code to code libraries which contain certain built-in functions. This final stage produces an executable program.</p>
+
 <p>To do all these steps by hand is complicated and beyond the capability of the ordinary user. A number of utilities and tools have been developed for programmers and end-users to simplify these steps.</p>
+
 <h3 id="make-and-the-makefile">make and the Makefile</h3>
+
 <p>The <strong>make</strong> command allows programmers to manage large programs or groups of programs. It aids in developing large programs by keeping track of which portions of the entire program have been changed, compiling only those parts of the program which have changed since the last compile.</p>
+
 <p>The <strong>make</strong> program gets its set of compile rules from a text file called <strong>Makefile</strong> which resides in the same directory as the source files. It contains information on how to compile the software, e.g. the optimization level, whether to include debugging info in the executable. It also contains information on where to install the finished compiled binaries (executables), manual pages, data files, dependent library files, configuration files, etc.</p>
+
 <p>Some packages require you to edit the Makefile by hand to set the final installation directory and any other parameters. However, many packages are now being distributed with the GNU configure utility.</p>
+
 <h3 id="configure">configure</h3>
+
 <p>As the number of UNIX variants increased, it became harder to write programs which could run on all variants. Developers frequently did not have access to every system, and the characteristics of some systems changed from version to version. The GNU configure and build system simplifies the building of programs distributed as source code. All programs are built using a simple, standardized, two step process. The program builder need not install any special tools in order to build the program.</p>
+
 <p>The <strong>configure</strong> shell script attempts to guess correct values for various system-dependent variables used during compilation. It uses those values to create a <strong>Makefile</strong> in each directory of the package.</p>
+
 <p>The simplest way to compile a package is:</p>
+
 <ol>
-<li><p><strong>cd</strong> to the directory containing the package’s source code.</p></li>
-<li><p>Type <strong>./configure</strong> to configure the package for your system.</p></li>
-<li><p>Type <strong>make</strong> to compile the package.</p></li>
-<li><p>Optionally, type <strong>make check</strong> to run any self-tests that come with the package.</p></li>
-<li><p>Type <strong>make install</strong> to install the programs and any data files and documentation.</p></li>
-<li><p>Optionally, type <strong>make clean</strong> to remove the program binaries and object files from the source code directory </p></li>
+  <li>
+    <p><strong>cd</strong> to the directory containing the package’s source code.</p>
+  </li>
+  <li>
+    <p>Type <strong>./configure</strong> to configure the package for your system.</p>
+  </li>
+  <li>
+    <p>Type <strong>make</strong> to compile the package.</p>
+  </li>
+  <li>
+    <p>Optionally, type <strong>make check</strong> to run any self-tests that come with the package.</p>
+  </li>
+  <li>
+    <p>Type <strong>make install</strong> to install the programs and any data files and documentation.</p>
+  </li>
+  <li>
+    <p>Optionally, type <strong>make clean</strong> to remove the program binaries and object files from the source code directory </p>
+  </li>
 </ol>
+
 <p>The configure utility supports a wide variety of options. You can usually use the <strong>–help</strong> option to get a list of interesting options for a particular configure script.</p>
+
 <p>The only generic options you are likely to use are the <strong>–prefix</strong> and <strong>–exec-prefix</strong> options. These options are used to specify the installation directories.  </p>
+
 <p>The directory named by the <strong>–prefix</strong> option will hold machine independent files such as documentation, data and configuration files.</p>
+
 <p>The directory named by the <strong>–exec-prefix</strong> option, (which is normally a subdirectory of the –prefix directory), will hold machine dependent files such as executables.</p>
+
 <h2 id="downloading-source-code">Downloading source code</h2>
+
 <p>For this example, we will download a piece of free software that converts between different units of measurements.</p>
+
 <p>First create a download directory </p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">mkdir</span> <span class="nt">download</span>
 <span class="err">$</span> <span class="nt">cd</span> <span class="nt">download</span>
@@ -162,13 +497,18 @@
 <p>Now use the <strong>wget</strong> command to download the file. The <strong>wget</strong> command downloads a file from a remote location (like the internet).</p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$ </span><span class="na">wget</span><span class="err"> </span><span class="na">http</span><span class="p">:</span><span class="o">//</span><span class="n">shamshad</span><span class="o">.</span><span class="n">in</span><span class="o">/</span><span class="n">files</span><span class="o">/</span><span class="n">unix</span><span class="o">/</span><span class="n">units-1</span><span class="mi">.87</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
 </code></pre></div></div>
+
 <p><a href="/files/unix/units-1.87.tar.gz">Download the software here</a> and save it to your new download directory.</p>
+
 <h2 id="extracting-the-source-code-">Extracting the source code  </h2>
+
 <p>Go into your <strong>download</strong> directory and list the contents. </p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">ls</span> <span class="nt">-l</span>
 </code></pre></div></div>
 <p>As you can see, the filename ends in tar.gz. The “tar” command turns several files and directories into one single tar file. This “gz” is then compressed using the gzip command (to create a tar.gz file).</p>
+
 <p>Using the <strong>tar</strong> command, we can extract all of the compressed files:</p>
+
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">tar</span> <span class="nt">-zxvf</span> <span class="nt">units-1</span><span class="nc">.87.tar.gz</span>
 </code></pre></div></div>
 <p>Again, list the contents of the <strong>download</strong> directory, then go to the <strong>units-1.87</strong> sub-directory. </p>
@@ -176,19 +516,30 @@
 </code></pre></div></div>
 <h2 id="configuring-and-creating-the-makefile-">Configuring and creating the Makefile  </h2>
 <hr>
+
 <p>The first thing to do is carefully read the <strong>README</strong> and <strong>INSTALL</strong> text files (use the <strong>less</strong> command). These contain important information on how to compile and run the software.</p>
+
 <p>The units package uses the GNU configure system to compile the source code. We will need to specify the installation directory, since the default will be the main system area which you will not have write permissions for. We need to create an install directory in your home directory.  </p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">mkdir</span> <span class="o">~/</span><span class="nt">units187</span>
 </code></pre></div></div>
 <p>Then run the configure utility setting the installation path to this.  </p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nc">.</span><span class="o">/</span><span class="nt">configure</span> <span class="nt">--prefix</span><span class="o">=</span><span class="err">$</span><span class="nt">HOME</span><span class="o">/</span><span class="nt">units187</span>
 </code></pre></div></div>
-<blockquote><p>NOTE: The <strong>$HOME</strong> variable is an example of an environment variable.The value of <strong>$HOME</strong> is the path to your home directory. Just type</p></blockquote>
+<blockquote>
+  <p>NOTE: The <strong>$HOME</strong> variable is an example of an environment variable.The value of <strong>$HOME</strong> is the path to your home directory. Just type</p>
+</blockquote>
+
 <p><strong>$ echo $HOME</strong></p>
-<blockquote><p>to show the contents of this variable. We will learn more about environment variables in a later chapter.</p></blockquote>
+
+<blockquote>
+  <p>to show the contents of this variable. We will learn more about environment variables in a later chapter.</p>
+</blockquote>
+
 <p>If configure has run correctly, it will have created a Makefile with all necessary options. You can view the Makefile if you wish (use the less command), but do not edit the contents of this.</p>
+
 <h2 id="building-the-package">Building the package </h2>
 <hr>
+
 <p>Now you can go ahead and build the package by running the make command. </p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">make</span>
 </code></pre></div></div>
@@ -199,76 +550,183 @@
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">make</span> <span class="nt">install</span>
 </code></pre></div></div>
 <p>This will install the files into the <strong>~/units187</strong> directory you created earlier.</p>
+
 <h2 id="running-the-software">Running the software</h2>
 <hr>
+
 <p>You are now ready to run the software (assuming everything worked). </p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">cd</span> <span class="o">~/</span><span class="nt">units187</span>
 </code></pre></div></div>
 <p>If you list the contents of the units directory, you will see a number of subdirectories.</p>
-<table><tbody>
-<tr>
-<td><code class="language-plaintext highlighter-rouge">bin </code></td>
-<td>The binary executables</td>
-</tr>
-<tr>
-<td><code class="language-plaintext highlighter-rouge">info </code></td>
-<td>GNU info formatted documentation</td>
-</tr>
-<tr>
-<td><code class="language-plaintext highlighter-rouge">man </code></td>
-<td>Man pages</td>
-</tr>
-<tr>
-<td><code class="language-plaintext highlighter-rouge">share </code></td>
-<td>Shared data files</td>
-</tr>
-</tbody></table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bin </code></td>
+      <td>The binary executables</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">info </code></td>
+      <td>GNU info formatted documentation</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">man </code></td>
+      <td>Man pages</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">share </code></td>
+      <td>Shared data files</td>
+    </tr>
+  </tbody>
+</table>
+
 <p>To run the program, change to the <strong>bin</strong> directory and type </p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nc">.</span><span class="o">/</span><span class="nt">units</span>
 </code></pre></div></div>
 <p>As an example, convert 6 feet to metres. </p>
-<blockquote><p><strong>You have: 6 feet</strong></p></blockquote>
-<blockquote><p><strong>You want: metres</strong> </p></blockquote>
+
+<blockquote>
+  <p><strong>You have: 6 feet</strong></p>
+</blockquote>
+
+<blockquote>
+  <p><strong>You want: metres</strong> </p>
+</blockquote>
+
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">*</span> <span class="nt">1</span><span class="nc">.8288</span>
 </code></pre></div></div>
 <p>If you get the answer 1.8288, congratulations, it worked.</p>
+
 <p>To view what units it can convert between, view the data file in the share directory (the list is quite comprehensive).</p>
+
 <p>To read the full documentation, change into the <strong>info</strong> directory and type </p>
+
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">info</span> <span class="nt">--file</span><span class="o">=</span><span class="nt">units</span><span class="nc">.info</span>
 </code></pre></div></div>
 <h2 id="stripping-unnecessary-code">Stripping unnecessary code</h2>
 <hr>
+
 <p>When a piece of software is being developed, it is useful for the programmer to include debugging information into the resulting executable. This way, if there are problems encountered when running the executable, the programmer can load the executable into a debugging software package and track down any software bugs.</p>
+
 <p>This is useful for the programmer, but unnecessary for the user. We can assume that the package, once finished and available for download has already been tested and debugged. However, when we compiled the software above, debugging information was still compiled into the final executable. Since it is unlikely that we are going to need this debugging information, we can strip it out of the final executable. One of the advantages of this is a much smaller executable, which should run slightly faster.</p>
+
 <p>What we are going to do is look at the before and after size of the binary file. First change into the <strong>bin</strong> directory of the units installation directory. </p>
+
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">cd</span> <span class="o">~/</span><span class="nt">units187</span><span class="o">/</span><span class="nt">bin</span>
 <span class="err">$</span> <span class="nt">ls</span> <span class="nt">-l</span>
 </code></pre></div></div>
 <p>As you can see, the file is over 100 kbytes in size. You can get more information on the type of file by using the file command. </p>
+
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">file</span> <span class="nt">units</span>
 </code></pre></div></div>
-<blockquote><p>units: ELF 32-bit LSB executable, Intel 80386, version 1, dynamically linked (uses shared libs), not stripped</p></blockquote>
+<blockquote>
+  <p>units: ELF 32-bit LSB executable, Intel 80386, version 1, dynamically linked (uses shared libs), not stripped</p>
+</blockquote>
+
 <p>To strip all the debug and line numbering information out of the binary file, use the strip command </p>
+
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">strip</span> <span class="nt">units</span>
 <span class="err">$</span> <span class="nt">ls</span> <span class="nt">-l</span>
 </code></pre></div></div>
 <p>As you can see, the file is now 36 bytes - a third of its original size. Two thirds of the binary file was debug code !!!</p>
+
 <p>Check the file information again. </p>
+
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">file</span> <span class="nt">units</span>
 </code></pre></div></div>
 <p>units: ELF 32-bit LSB executable, Intel 80386, version 1, dynamically linked (uses shared libs), stripped</p>
+
 <p>HINT: You can use the make command to install pre-stripped copies of all the binary files when you install the package.</p>
-<p>Instead of typing make install, simply type make install-strip</p></section><footer class="page__meta"><p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-05-20">May 20, 2024</time></p></footer>
-</div></article>
-</div></div>
-<div id="footer" class="page__footer"><footer> <!-- start custom footer snippets --> <!-- end custom footer snippets --><div class="page__footer-follow"><ul class="social-icons">
-<li><strong>Follow:</strong></li>
-<li><a href="https://twitter.com/DrShamshadM" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
-<li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar</a></li>
-<li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" rel="nofollow noopener noreferrer"><i class="ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
-<li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
-</ul></div>
-<div class="page__footer-copyright">© 2024 M. Shamshad. Proudly hosted by <a href="https://github.com/" rel="nofollow">GitHub</a> &amp; <a href="https://shamshadpbg.github.io/" rel="prev:"><i class="ai ai-academia"></i> AyeShmMz</a>.</div></footer></div>
-<script src="/assets/js/main.min.js" defer></script> <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> --> <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8020H63F5"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-H8020H63F5', { 'optimize_id': '', 'anonymize_ip': 'true', }); </script>
-</body>
+
+<p>Instead of typing make install, simply type make install-strip</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-06-02">June 2, 2024</time></p>
+
+
+      </footer>
+
+      
+
+      
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/DrShamshadM" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar</a></li>
+        
+      
+        
+          <li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" rel="nofollow noopener noreferrer"><i class="ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2024 M. Shamshad. Proudly hosted by <a href="https://github.com/" rel="nofollow">GitHub</a> &amp; <a href="https://shamshadpbg.github.io/" rel="prev:"><i class="ai ai-academia"></i> AyeShmMz</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js" defer></script>
+  <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
 </html>
