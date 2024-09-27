@@ -236,6 +236,8 @@ body:hover .visually-hidden button {
     $vine-color: ".fa-vine",
     $xing-color: ".fa-xing, .fa-xing-square",
     $youtube-color: ".fa-youtube",
+    $google-scholar-color: ".ai-google-scholar, .ai-google-scholar-square",
+    $researchgate-color: ".ai-researchgate, .ai-researchgate-square",
   ) {
     #{$icons} {
       color: $color;
