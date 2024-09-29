@@ -74,7 +74,7 @@ $(function() {
                    - /* toggle */ (numOfVisibleItems !== breakWidths.length ? $btn.outerWidth(true) : 0);
     requiredSpace = breakWidths[numOfVisibleItems - 1];
 
-    // There is not enough space
+    // There is not enought space
     if (requiredSpace > availableSpace) {
       $vlinks.children().last().prependTo($hlinks);
       numOfVisibleItems -= 1;

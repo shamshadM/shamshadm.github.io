@@ -37,7 +37,7 @@
 /* Mixins and functions */
 /* Magnific Popup CSS */
 .mfp-counter {
-  font-family: "PT Serif", Georgia, Times, serif;
+  font-family: Georgia, Times, serif;
 }
 
 .mfp-bg {
@@ -193,7 +193,7 @@ button::-moz-focus-inner {
   color: #fff;
   font-style: normal;
   font-size: 28px;
-  font-family: "PT Serif", Georgia, Times, serif;
+  font-family: Georgia, Times, serif;
 }
 .mfp-close:hover, .mfp-close:focus {
   opacity: 1;

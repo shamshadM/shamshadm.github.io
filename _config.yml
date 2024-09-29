@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 #theme add
-minimal_mistakes_skin: "default"
+minimal_mistakes_skin: "contrast"
 minimal_mistakes_skin2: "dark"
 
 # Site Settings
@@ -21,7 +21,7 @@ url: https://shamshad.in # the base hostname & protocol for your site e.g. "http
 baseurl: "" # the subpath of your site, e.g. "/blog"
 repository: "shamshadM/shamshadm.github.io"
 teaser: # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
-logo:  #/images/favicon/site-treaser.webp
+logo:  /images/favicon/site-treaser.webp
 breadcrumbs: # true, false (default)
 words_per_minute: 200
 future: false
@@ -136,6 +136,9 @@ footer:
     - label: "ResearchGate"
       icon: "ai ai-researchgate-square ai-fw"
       url: "https://www.researchgate.net/profile/Mohd-Shamshad"
+      
+# copy the code
+enable_copy_code_button: true
 
 # Reading Files
 include:
