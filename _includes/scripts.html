@@ -1,14 +1,10 @@
 {% if site.footer_scripts %}
   {% for script in site.footer_scripts %}
-    {% if script contains "://" %}
-      {% capture script_path %}{{ script }}{% endcapture %}
-    {% else %}
-      {% capture script_path %}{{ script | relative_url }}{% endcapture %}
-    {% endif %}
-    <script async src="{{ script_path }}"></script>
+    <script src="{{ script | relative_url }}"></script>
   {% endfor %}
 {% else %}
-  <script  src="{{ '/assets/js/main.min.js' | relative_url }}" defer></script>
+  <link rel="preload" href="/assets/js/main.min.js" as="script">
+  <script src="{{ '/assets/js/main.min.js' | relative_url }}" async></script>
   <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> -->
 {% endif %}
 
@@ -29,17 +25,6 @@
 
 {% if site.after_footer_scripts %}
   {% for script in site.after_footer_scripts %}
-    {% if script contains "://" %}
-      {% capture script_path %}{{ script }}{% endcapture %}
-    {% else %}
-      {% capture script_path %}{{ script | relative_url }}{% endcapture %}
-    {% endif %}
-    <script async src="{{ script_path }}"></script>
+  <script async src="{{ script | relative_url }}"></script>
   {% endfor %}
 {% endif %}
-
-{% if page.mathjax %}
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es2022"></script>
-<script id="MathJax-script" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/latest?tex-mml-chtml.js">
-</script>{% endif %}

@@ -38,4 +38,5 @@ group :jekyll_plugins do
   gem 'jekyll-last-modified-at'
   gem 'jekyll-gzip'
   gem 'jekyll-brotli'
+  gem 'jemoji'
 end
