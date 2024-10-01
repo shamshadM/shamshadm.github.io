@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 classes: wide
 header:
-    overlay_image: /header/publications.webp
+    overlay_image: /header/publications.jpeg
     og_image: /images/favicon/shamshad.webp
 page_excerpts: true
 ---

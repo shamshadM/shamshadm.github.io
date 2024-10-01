@@ -5,7 +5,7 @@ permalink: /research/
 author_profile: true
 classes: wide
 header:
-  overlay_image: /header/research.webp
+  overlay_image: /header/research.jpeg
   og_image: /images/favicon/shamshad.webp
 ---
 

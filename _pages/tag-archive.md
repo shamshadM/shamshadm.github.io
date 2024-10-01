@@ -4,7 +4,7 @@ permalink: /tags/
 layout: tags
 author_profile: true
 header:
-    overlay_image: /header/tag.webp
+    overlay_image: /header/tag.jpeg
     og_image: /images/favicon/shamshad.webp
 ---
 
