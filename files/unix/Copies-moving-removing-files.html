@@ -12,20 +12,17 @@
 <meta property="og:title" content="Copies and moving of files">
 <meta property="og:url" content="https://shamshad.in/files/unix/Copies-moving-removing-files">
 <meta property="og:description" content="I have dream…">
-<meta property="og:image" content="https://shamshad.in/images/favicon/site-treaser.jpeg">
 <meta name="twitter:site" content="@DrShamshadM">
 <meta name="twitter:title" content="Copies and moving of files">
 <meta name="twitter:description" content="I have dream…">
 <meta name="twitter:url" content="https://shamshad.in/files/unix/Copies-moving-removing-files">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://shamshad.in/images/favicon/site-treaser.jpeg">
 <meta name="twitter:creator" content="@DrShamshadM">
 <meta property="article:published_time" content="2022-09-22T00:00:00+05:30">
 <meta property="article:modified_time" content="2024-06-02T15:51:53+05:30">
 <link rel="canonical" href="https://shamshad.in/files/unix/Copies-moving-removing-files">
-<meta name="google-site-verification" content="BD1FGtpPEYJphVV41YzUn-mrOqREjhO-JsWa4YZgj60"> <!-- end _includes/seo.html --><link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed"> <!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr --><meta name="viewport" content="width=device-width, initial-scale=1.0"> <script async> document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, "") + " js "; </script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"> <!-- For all browsers --><link rel="stylesheet" href="/assets/css/main.css" id="theme_source">
+<meta name="google-site-verification" content="BD1FGtpPEYJphVV41YzUn-mrOqREjhO-JsWa4YZgj60"> <!-- end _includes/seo.html --><link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed"> <!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr --><meta name="viewport" content="width=device-width, initial-scale=1.0"> <script async> document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, "") + " js "; </script><link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"> <noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"> </noscript> <!-- For all browsers --><link rel="stylesheet" href="/assets/css/main.css" id="theme_source">
 <link rel="stylesheet alternate" href="/assets/css/mainDark.css" id="theme_source_2"> <script async> let theme = sessionStorage.getItem("theme"); if (theme === "dark") { sessionStorage.setItem("theme", "dark"); node1 = document.getElementById("theme_source"); node2 = document.getElementById("theme_source_2"); node1.setAttribute("rel", "stylesheet alternate"); node2.setAttribute("rel", "stylesheet"); } else { sessionStorage.setItem("theme", "light"); } </script> <!-- start custom head snippets --><meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png?v=565802">
@@ -84,7 +81,7 @@
 <span class="fa-solid fa-moon toggle-switch" type="button" style="cursor: pointer;" aria-hidden="true" onclick="node1 = document.getElementById('theme_source'); node2 = document.getElementById('theme_source_2'); if(node1.getAttribute('rel')=='stylesheet'){node1.setAttribute('rel', 'stylesheet alternate'); node2.setAttribute('rel', 'stylesheet'); sessionStorage.setItem('theme', 'dark');} else{node2.setAttribute('rel', 'stylesheet alternate'); node1.setAttribute('rel', 'stylesheet');sessionStorage.setItem('theme', 'light');} return false;"></span> <button class="greedy-nav__toggle hidden" type="button"> <span class="visually-hidden">Toggle menu</span><div class="navicon"></div></button><ul class="hidden-links hidden"></ul></nav></div></div></div>
 <div class="initial-content"><div id="main" role="main">
 <div class="sidebar sticky"><div itemscope itemtype="https://schema.org/Person" class="h-card">
-<div class="author__avatar"> <a href="https://shamshad.in/"> <img src="/images/profile.jpeg" alt="M. Shamshad" itemprop="image" class="u-photo"> </a>
+<div class="author__avatar"> <a href="https://shamshad.in/"> <img fetchpriority="high" src="/images/profile.jpeg" alt="M. Shamshad" itemprop="image" class="u-photo"> </a>
 </div>
 <div class="author__content">
 <h3 class="author__name p-name" itemprop="name"> <a class="u-url" rel="me" href="https://shamshad.in/" itemprop="url">M. Shamshad</a>
@@ -158,7 +155,7 @@
 <blockquote><p>Note: Don’t forget the dot (.) at the end. Remember, in UNIX, the dot means the current directory.</p></blockquote>
 <p>The above command means copy the file <strong>science.txt</strong> to the current directory, keeping the name the same.</p>
 <blockquote><p>Note: The directory <strong>/vol/examples/tutorial/</strong> is an area to which everyone in the department has read and copy access. If you are from outside the University, you can grab a copy of the file <a href="science.txt">here</a>. Use ‘File/Save As..’ from the menu bar to save it into your <strong>unixstuff</strong> directory.</p></blockquote>
-<p><b><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" raw="📢" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))">Exercise</b></p>
+<p><b> <img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" height="20" width="20"> Exercise</b></p>
 <p>Create a backup of your <strong>science.txt</strong> file by copying it to a file called <strong>science.bak</strong></p>
 <hr>
 <h2 id="moving-files">Moving files</h2>
@@ -237,7 +234,7 @@
 </tr>
 </tbody>
 </table>
-<p><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" raw="📢" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))"><b>Exercise</b></p>
+<p><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" height="20" width="20"> <b>Exercise</b></p>
 <p>Create a directory called <strong>tempstuff</strong> using mkdir , then remove it using the rmdir command.</p>
 <hr>
 <h2 id="displaying-the-contents-of-a-file-on-the-screen">Displaying the contents of a file on the screen</h2>
@@ -266,13 +263,13 @@
 <p>Then type</p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">head</span> <span class="nt">-5</span> <span class="nt">science</span><span class="nc">.txt</span>
 </code></pre></div></div>
-<p><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" raw="📢" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))">What difference did the -5 do to the head command?</p>
+<p><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" height="20" width="20"> What difference did the -5 do to the head command?</p>
 <h3 id="tail">tail</h3>
 <p>The tail command writes the last ten lines of a file to the screen.</p>
 <p>Clear the screen and type</p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">tail</span> <span class="nt">science</span><span class="nc">.txt</span>
 </code></pre></div></div>
-<p><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" raw="📢" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))">How can you view the last 15 lines of the file?</p>
+<p><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" height="20" width="20"> How can you view the last 15 lines of the file?</p>
 <hr>
 <h2 id="searching-the-contents-of-a-file">Searching the contents of a file</h2>
 <hr>
@@ -287,7 +284,7 @@
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">grep</span> <span class="nt">science</span> <span class="nt">science</span><span class="nc">.txt</span>
 </code></pre></div></div>
 <p>As you can see, grep has printed out each line containing the word science.</p>
-<p><b><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" raw="📢" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" style="vertical-align: middle; display: inline; max-width: 1em; visibility: hidden;" onload="this.style.visibility='visible'" onerror="this.replaceWith(this.getAttribute('raw'))">Or has it?</b></p>
+<p><b><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" height="20" width="20"> Or has it?</b></p>
 <p>Try typing</p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">grep</span> <span class="nt">Science</span> <span class="nt">science</span><span class="nc">.txt</span>
 </code></pre></div></div>
@@ -365,7 +362,7 @@
 </table></section><footer class="page__meta"><p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-06-02">June 2, 2024</time></p></footer>
 </div></article>
 </div></div>
-<div id="footer" class="page__footer"><footer> <!-- start custom footer snippets --> <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script> <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } }, tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true } }); </script> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/13.1.1/math.js" integrity="sha512-fMI/ndUubOcpzblrAaOFszYIE2iDKua+Cxg9dZp3cAkhsRWEHHbKtFCElHEQ50viX502yj7nFEEcxq2SOTNrIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> <!-- end custom head snippets --> <!-- end custom footer snippets --><div class="page__footer-follow"><ul class="social-icons">
+<div id="footer" class="page__footer"><footer> <!-- start custom footer snippets --> <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script> <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } }, tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true } }); </script><link rel="preload"> <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/13.1.1/math.js" integrity="sha512-fMI/ndUubOcpzblrAaOFszYIE2iDKua+Cxg9dZp3cAkhsRWEHHbKtFCElHEQ50viX502yj7nFEEcxq2SOTNrIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> <!-- end custom head snippets --> <!-- end custom footer snippets --><div class="page__footer-follow"><ul class="social-icons">
 <li><strong>Follow:</strong></li>
 <li><a href="https://twitter.com/DrShamshadM" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
 <li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar</a></li>
@@ -373,6 +370,6 @@
 <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
 </ul></div>
 <div class="page__footer-copyright">© 2024 M. Shamshad. Proudly hosted by <a href="https://github.com/" rel="nofollow">GitHub</a> &amp; <a href="https://shamshadpbg.github.io/" rel="prev:"><i class="ai ai-academia"></i>mmTheme</a>.</div></footer></div>
-<script src="/assets/js/main.min.js" defer></script> <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> --> <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8020H63F5"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-H8020H63F5', { 'optimize_id': '', 'anonymize_ip': 'true', }); </script>
+<link rel="preload" href="/assets/js/main.min.js" as="script"> <script src="/assets/js/main.min.js" async></script> <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> --> <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8020H63F5"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-H8020H63F5', { 'optimize_id': '', 'anonymize_ip': 'true', }); </script>
 </body>
 </html>

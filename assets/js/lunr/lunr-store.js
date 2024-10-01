@@ -42,7 +42,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Plot Genetic Linkage Maps using MapChart software",
-        "excerpt":"MapChart is a free software to plot publishing quality genetic linkage maps as well as QTLs. This software was developed at Wageningen University by Roeland E. Voorrips and can be downloaded at this link . In this tutorial, We are going to learn how to prepare input files and plot...","categories": ["QTL","maps"],
+        "excerpt":"MapChart is a free software to plot publishing quality genetic linkage maps as well as QTLs. This software was developed at Wageningen University by Roeland E. Voorrips and can be downloaded at this link . In this tutorial, We are going to learn how to prepare input files and plot...","categories": ["QTL","maps,","molecular","Analysis"],
         "tags": ["MapChart","Linkage Mapping","QTLs maps"],
         "url": "/posts/2020/10/mapchart/",
         "teaser": null
