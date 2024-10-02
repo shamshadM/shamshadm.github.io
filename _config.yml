@@ -92,7 +92,7 @@ author:
   name: "M. Shamshad"
   avatar: "/images/profile.jpeg"
   bio: "Plant Breeding && Data Science"
-  location: "Ludhina, Punjab, India"
+  location: "Ludhina, Punjab, India :india:"
   employer:
   pubmed:
   googlescholar: "https://scholar.google.com/citations?user=dI7V1a4AAAAJ&hl=en"
@@ -145,6 +145,7 @@ include:
   - .htaccess
   - _pages
   - files
+  - docs
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"

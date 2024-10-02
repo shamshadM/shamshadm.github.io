@@ -1,9 +1,11 @@
 ---
-layout: single
 title: 'UNIX Variables'
 date: 2022-09-23
-permalink: /files/unix/UNIX-Variables
-author_profile: true
+permalink: /docs/UNIX-Variables
+sidebar: 
+    title: 'UNIX Variables'
+    nav: Linux_tutorial
+author_profile: false
 toc: true
 ---
 

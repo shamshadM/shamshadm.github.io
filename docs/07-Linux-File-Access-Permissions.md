@@ -1,9 +1,11 @@
 ---
-layout: single
 title: 'File system security (access rights)'
 date: 2022-09-23
-permalink: /files/unix/Linux-File-Access-Permissions
-author_profile: true
+permalink: /docs/Linux-File-Access-Permissions
+sidebar:
+    title: 'File system security (access rights)'
+    nav: Linux_tutorial
+author_profile: false
 toc: true
 ---
 

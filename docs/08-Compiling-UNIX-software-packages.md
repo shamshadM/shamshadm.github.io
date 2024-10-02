@@ -1,16 +1,19 @@
 ---
-layout: single
 title: 'Compiling UNIX software packages'
 date: 2022-09-23
-permalink: /files/unix/Compiling-UNIX-software-packages/
+permalink: /docs/Compiling-UNIX-software-packages/
 excerpt: "The Unix command for compiling C code is gcc. This is a compiler from Gnu for Linux. If you are using a Unix machine like Solaris you may need to use the command cc.) When you compile your program the compiler produces a file containing binary code which is directly readable by the machine you are on."
+sidebar: 
+    title: 'Compiling UNIX software packages'
+    nav: Linux_tutorial
 tags:
   - Unix software
   - make command
-  - configration packages
+  - configuration packages
   - Building packages in Linux
   - Run software in unix
 toc: true
+author_profile: false
 ---
 
 ![Unix files system](/images/unix/install-software.webp)

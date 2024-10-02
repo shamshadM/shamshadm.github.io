@@ -1,9 +1,11 @@
 ---
-layout: single
-title: 'Introduction about the Unix'
-date: 2022-09-22
-permalink: /files/unix/Introduction-about-the-Unix
+title: "Introduction about the unix"
+permalink: /docs/Introduction-about-the-Unix
+sidebar:
+   title: 'Introduction about the Unix'
+   nav: Linux_tutorial
 excerpt: "Unix is a computer Operating System which is capable of handling activities from multiple users at the same time. The development of Unix started around 1969 by Ken Thompson and Dennis Ritchie."
+last_modified_at: 2022-06-07T08:48:05-04:00
 tags:
   - Linux
   - Unix operating system
@@ -12,10 +14,12 @@ keywords:
   - Linux
   - Unix operating system
   - Shell
+author_profile: false
 toc: true
 ---
 
  <img src="/images/unix/unix-main.webp" alt="Unix-Introduction" width="100%">
+
  
 ***
 ## Introduction

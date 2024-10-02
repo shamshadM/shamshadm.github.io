@@ -1,11 +1,13 @@
 ---
-layout: single
 title: 'Linux useful commands'
 date: 2022-09-23
-permalink: /files/unix/Linux-Useful-commands
+permalink: /docs/Linux-Useful-commands
 type: 'Bioinformatics'
 venue: Online
-author_profile: true
+sidebar: 
+    title: 'Linux useful commands'
+    nav: Linux_tutorial
+author_profile: false
 toc: true
 ---
 

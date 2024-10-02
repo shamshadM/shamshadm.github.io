@@ -2,8 +2,11 @@
 layout: single
 title: 'Linux Wildcards'
 date: 2022-09-23
-permalink: /files/unix/Linux-Wildcards
-author_profile: true
+permalink: /docs/Linux-Wildcards
+sidebar:
+    title: 'Linux Wildcards'
+    nav: Linux_tutorial
+author_profile: false
 toc: true
 ---
 

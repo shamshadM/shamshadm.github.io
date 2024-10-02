@@ -19,3 +19,34 @@ main:
 
   - title: "Tags"
     url: /tags/
+
+  - title: "Bioinformatics"
+    url: /docs/Linux_tutorial/
+
+# side menu links:
+# example navigation
+Linux_tutorial:
+  - title: Installing of linux distribution in PC laptop
+    children:
+        - title: Basic linux commands for the Beginner
+       
+  - title: Basic linux commands for the Beginner
+    children:
+        - title: "Introduction about the Unix Linux"
+          url: /docs/Introduction-about-the-Unix
+        - title: "Listing files and Directories"
+          url: /docs/ListingFilesAndDirectories
+        - title: "Copies, moving and removing of files"
+          url: /docs/Copies-moving-removing-files
+        - title: "Input-Output Redirection"
+          url: /docs/Input-Output-Redirections
+        - title: "Linux Wildcards"
+          url: /docs/Linux-Wildcards
+        - title: "Linux File Access Permissions"
+          url: /docs/Linux-File-Access-Permissions
+        - title: "Linux Useful commands"
+          url: /docs/Linux-Useful-commands
+        - title: "Compiling UNIX software packages"
+          url: /docs/Compiling-UNIX-software-packages
+        - title: "UNIX Variables"
+          url: /docs/UNIX-Variables

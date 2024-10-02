@@ -1,17 +1,19 @@
 ---
-layout: single
 title: 'Listing files and Directories'
 date: 2022-09-22
-permalink: /files/unix/ListingFilesAndDirectories
-author_profile: true
+permalink: /docs/ListingFilesAndDirectories
+sidebar:
+   title: 'Listing files and Directories'
+   nav: Linux_tutorial
 toc: true
+author_profile: false
 ---
  ![Unix files system](/images/unix/Linux-Directory-StructureS.webp)
 
-## Listing files and directories
+## Listing files and directories :file_folder:
 When you first login, your current working directory is your home directory. Your home directory has the same name as your user-name, for example, ee91ab, and it is where your personal files and subdirectories are saved.
 
-```scss
+```
 $ ls [OPTIONS] [FILES]
 
 **nobackup**

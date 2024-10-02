@@ -58,6 +58,7 @@
 
 #about-me{
   border: 2px solid rgb(130, 130,130);
+  padding: 2px;
   display: block;
   margin: 0 auto;
   height: 100;
@@ -65,23 +66,39 @@
   }
 
 .edu {
-  padding: 0em;
+  background-color: #f1c588;
+  border: 1px;
+  border-radius: 25px;
+  padding-left: 2em;
+  display: flex;
+  -ms-flex-item-align: auto;
   line-height: 1.33em;
   font-size: normal;
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-  column-gap: 4em;
+  column-gap: 5em;
 } 
+.edu h4 {
+color:#633306;
+}
 
 .edu p {
   font-style: italic;
-  font-size: medium;
+  font-size: bold;
   padding-left: 1.56rem;
-}
+    }
+.edu p :hover {
+      background-color:#ff8000;
+      padding: 4px;
+      border-radius: 5px;
 
-.edu li {
-  line-height: 2em;
-}
+    }
+#int {
+  line-height: 2.1em;
+  padding: 2px;
+  font-size: medium;
+  margin: 0;
+  text-decoration: double;
+ }
 
   // new 404 page settings
   main {
