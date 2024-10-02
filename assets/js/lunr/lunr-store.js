@@ -220,10 +220,4 @@ var store = [{
         "tags": [],
         "url": "/teaching/2018-Graduate%20Teaching%20Assistant",
         "teaser": null
-      },{
-        "title": "Linux / Unix tutorial for beginners",
-        "excerpt":"Linux is a family of free and open-source operating systems based on the Linux kernel. Operating systems based on Linux are known as Linux distributions or distros. Examples include Debian, Ubuntu, Fedora, CentOS, Gentoo, Arch Linux, and many others. The Linux kernel has been under active development since 1991, and...","categories": [],
-        "tags": [],
-        "url": "/teaching/linux-tutorial/",
-        "teaser": null
       }]
