@@ -70,12 +70,12 @@
   border: 1px;
   border-radius: 25px;
   padding-left: 2em;
-  display: flex;
-  -ms-flex-item-align: auto;
+  display: grid;
+  justify-content: center;
   line-height: 1.33em;
   font-size: normal;
   grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-  column-gap: 5em;
+  column-gap: 2em;
 } 
 .edu h4 {
 color:#633306;
@@ -84,7 +84,9 @@ color:#633306;
 .edu p {
   font-style: italic;
   font-size: bold;
+  margin: auto;
   padding-left: 1.56rem;
+  padding-right: 0;
     }
 .edu p :hover {
       background-color:#ff8000;
