@@ -41,8 +41,7 @@ BSc in  Agriculture [Crop Science]
 :keyboard: Data Science<br>
 :writing_hand: Writing<br>
 :national_park: Gardening<br>
-:computer: Learning<br>
-:weight_lifting_man: Gym
+:weight_lifting_man: Gym</br>
 </div>
  </div>
 </div>
