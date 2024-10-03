@@ -66,16 +66,18 @@
   }
 
 .edu {
-  background-color: #f1c588;
   border: 1px;
   border-radius: 25px;
-  padding-left: 2em;
+  padding-left: 5em;
+  padding-right: 1em;
+  padding-bottom: 1em;
   display: grid;
   justify-content: center;
   line-height: 1.33em;
-  font-size: normal;
+  font-size: $doc-font-size;
   grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
   column-gap: 2em;
+  background-color: #f8da9a;
 } 
 .edu h4 {
 color:#633306;
@@ -94,10 +96,10 @@ color:#633306;
       border-radius: 5px;
 
     }
-#int {
+#int ul{
   line-height: 2.1em;
   padding: 2px;
-  font-size: medium;
+  font-size: $doc-font-size-medium;
   margin: 0;
   text-decoration: double;
  }
