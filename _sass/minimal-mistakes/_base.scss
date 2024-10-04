@@ -65,8 +65,7 @@ small,
 }
 
 p {
-  margin-top: 1em;               
-  margin-bottom: 1em;
+  margin-bottom: 1.3em;
 }
 
 u,
@@ -109,19 +108,19 @@ abbr[data-original-title] {
 /* blockquotes */
 
 blockquote {
-  margin: 2em 1em 2em 0;
-  padding-left: 1em;
-  padding-right: 1em;
+  margin-block: 2em;
+  margin-inline-end: 1em;
+  padding-inline: 1em;
   font-style: italic;
-  border-left: 0.25em solid $primary-color;
+  border-inline-start: 0.25em solid $primary-color;
    font-size: 0.85em;
 
   cite {
     font-style: italic;
 
-    &:before {
+    &::before {
       content: "\2014";
-      padding-right: 5px;
+      padding-inline-end: 5px;
     }
   }
 }
@@ -220,7 +219,7 @@ figure {
   -webkit-box-align: start;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin: 0.5em 0;
+  margin: 2em 0;
 
   img,
   iframe,

@@ -24,6 +24,8 @@ teaser: # filename of teaser fallback teaser image placed in /images/, .e.g. "50
 logo:  /images/favicon/site-treaser.webp
 breadcrumbs: # true, false (default)
 words_per_minute: 200
+enable_copy_code_button  : true # true, false (default)
+copyright                : # "copyright" name, defaults to
 future: false
 mod: "%"
 read_more: "disabled" # if enabled, adds "Read more" links to excerpts
