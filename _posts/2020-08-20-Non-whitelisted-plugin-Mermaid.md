@@ -9,7 +9,6 @@ tags:
   - Mermaid
   - graph
   - non-whitelisted plugins
-use_mermaid: true
 ---
 GitHub Pages runs in `safe` mode and only allows [a set of whitelisted plugins](https://pages.github.com/versions/). To use the gem in GitHub Pages, one of the workarounds is to use CI (e.g. travis, github workflow) and deploy to your `gh-pages` branch like: [jekyll-deploy-action](https://github.com/jeffreytse/jekyll-deploy-action), and I use this plugin: [jekyll-spaceship](https://github.com/jeffreytse/jekyll-spaceship) in my github pages.
 <!--more-->
@@ -90,13 +89,13 @@ A sequence diagram or system sequence diagram (SSD) shows process interactions a
  <div class="mermaid">
 gantt
     title A Gantt Diagram
-    dateFormat  2022-08-20
+    dateFormat  YYYY-MM-DD
     section Section
-    A task           :a1, 2023-01-01, 30d
-    Another task     :after a1  , 20d
+    First Task       :a1, 2018-07-01, 30d
+    Another Task     :after a1, 20d
     section Another
-    Task in sec      :2024-01-12  , 12d
-    another task      : 24d
+    Second Task      :2018-07-12, 12d
+    Third Task       : 24d
  </div >
 
 ## Class Diagram 
