@@ -284,12 +284,10 @@ plugins:
   - jekyll-paginate
   - jekyll-include-cache
   - jekyll-redirect-from
-  - jekyll-spaceship
   - jekyll-seo-tag
   - jekyll-last-modified-at
   - jekyll-gzip
   - jekyll-brotli
-  - posix-spawn
   - jemoji
 
 # mimic GitHub Pages with --safe

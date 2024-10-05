@@ -22,7 +22,6 @@ gem "wdm" if Gem.win_platform?
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'jekyll-paginate'
-  gem 'posix-spawn'
   gem 'commonmarker'
   gem 'jekyll-gist'
   gem 'jekyll-seo-tag'
@@ -32,7 +31,6 @@ group :jekyll_plugins do
   gem 'jekyll-feed'
   gem 'jekyll-include-cache'
   gem 'jekyll-redirect-from'
-  gem 'jekyll-spaceship'
   gem 'webrick'
   gem 'faraday-retry'
   gem 'jekyll-last-modified-at'

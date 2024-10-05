@@ -44,7 +44,7 @@ GEM
     ffi (1.17.0-x86_64-linux-gnu)
     ffi (1.17.0-x86_64-linux-musl)
     forwardable-extended (2.6.0)
-    gemoji (3.0.1)
+    gemoji (4.1.0)
     google-protobuf (4.28.2-aarch64-linux)
       bigdecimal
       rake (>= 13)
@@ -103,11 +103,6 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-spaceship (0.10.2)
-      gemoji (~> 3.0)
-      jekyll (>= 3.6, < 5.0)
-      nokogiri (~> 1.6)
-      rainbow (~> 3.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     jemoji (0.13.0)
@@ -141,10 +136,8 @@ GEM
       sawyer (~> 0.9)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    posix-spawn (0.3.15)
     public_suffix (6.0.1)
     racc (1.8.1)
-    rainbow (3.1.1)
     rake (13.2.1)
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
@@ -202,11 +195,9 @@ DEPENDENCIES
   jekyll-redirect-from
   jekyll-seo-tag
   jekyll-sitemap
-  jekyll-spaceship
   jemoji
   kramdown
   kramdown-parser-gfm
-  posix-spawn
   tzinfo-data
   webrick
 
