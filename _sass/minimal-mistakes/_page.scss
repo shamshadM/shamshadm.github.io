@@ -209,6 +209,7 @@ body {
 
     .wrapper {
       padding-inline: 1em;
+
       @include breakpoint($x-large) {
         max-width: $x-large;
       }
@@ -245,16 +246,16 @@ body {
 .page__hero-caption {
   position: absolute;
   bottom: 0;
-  right: 0;
+  inset-inline-end: 0;
   margin: 0 auto;
   padding: 2px 5px;
   color: #fff;
   font-family: $caption-font-family;
-  font-size: 0.6em;
+  font-size: $type-size-7;
   background: #000;
   text-align: end;
   z-index: 5;
-  opacity: 0.4;
+  opacity: 0.5;
   border-radius: $border-radius 0 0 0;
 
   @include breakpoint($large) {
@@ -301,10 +302,10 @@ body {
    ========================================================================== */
 
 .page__meta {
-  margin-top: 1em;
+  margin-top: 2em;
   color: $muted-text-color;
   font-family: $sans-serif;
-  font-size: $type-size-8;
+  font-size: $type-size-6;
 
   p {
     margin: 0;
@@ -567,45 +568,4 @@ body {
     }
   }
     }
-
-    /* copy button on code
-      ======================================================================== */
-      pre {
-        .copy-button {
-          position: absolute;
-          top: 0.5em;
-          right: 0.5em;
-          z-index: 1;
-          background: none;
-          border: none;
-          border-radius: 0.1em;
-          padding: 0.2em 0.5em;
-          color: white;
-          opacity: 0.1;
-          transition: color 0.25s linear, opacity 0.25s linear;
-    
-          &:hover {
-            opacity: 1;
-          }
-    
-          &:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 2;
-          }
-        }
-    
-        &:hover .copy-button {
-          opacity: 0.6;
-    
-          &:hover {
-            opacity: 1;
-          }
-        }
-      }
-    
     

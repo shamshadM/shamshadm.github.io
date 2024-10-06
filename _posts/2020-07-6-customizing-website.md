@@ -33,7 +33,7 @@ My first order of business in customizing my site was thus to increase the font 
 
 The most relevant hit is a file called `_sass/syntax.scss`. The `_sass` directory is where you'll find lots of options to change the appearance of your site since it contains the [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) code that determines much of how your site looks. If you scroll through `_sass/syntax.scss`, this chunk of code controls how text is rendered in code boxes:
 
-```scss
+```shell
 .highlight {
   margin: 0;
   font-family: $monospace;

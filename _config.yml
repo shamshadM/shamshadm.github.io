@@ -166,7 +166,7 @@ exclude:
   - node_modules
   - package.json
   - tmp
-  - vendor
+  - vendor/
 keep_files:
   - .git
   - .svn
