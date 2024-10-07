@@ -45,9 +45,10 @@ graph TD;
     C-->D;
 </pre>
 
+> Another class of flow diagram
 <pre class="mermaid">
 flowchart TD
-    A[Christmas] -->|Get money| B(Go shopping)
+    A[Eid / Christmas / Dewali] -->|Get money| B(Go shopping)
     B --> C{Let me think}
     C -->|One| D[Laptop]
     C -->|Two| E[iPhone]
@@ -57,7 +58,7 @@ flowchart TD
 ## Pie chart Diagrams
 A pie chart (or a circle chart) is a circular statistical graphic, which is preided into slices to illustrate numerical proportion. In a pie chart, the arc length of each slice (and consequently its central angle and area), is proportional to the quantity it represents. While it is named for its resemblance to a pie which has been sliced, there are variations on the way it can be presented. The earliest known pie chart is generally credited to William Playfair's Statistical Breviary of 1801 -Wikipedia
 
-<pre class="mermaid" markdown="0">
+<pre class="mermaid" >
 pie
     title Key elements in Product X
     "Calcium" : 42.96
@@ -69,7 +70,7 @@ pie
 ## Sequence Diagram
 A sequence diagram or system sequence diagram (SSD) shows process interactions arranged in time sequence in the field of software engineering. It depicts the processes involved and the sequence of messages exchanged between the processes needed to carry out the functionality. Sequence diagrams are typically associated with use case realizations in the 4+1 architectural view model of the system under development. Sequence diagrams are sometimes called event diagrams or event scenarios.
 
-<pre class="mermaid" markdown="0">
+<pre class="mermaid" >
 sequenceDiagram
       participant Alice
       participant Bob
@@ -87,7 +88,7 @@ sequenceDiagram
  
  A Gantt chart is a type of bar chart that illustrates a project schedule. This chart lists the tasks to be performed on the vertical axis, and time intervals on the horizontal axis. The width of the horizontal bars in the graph shows the duration of each activity. Gantt charts illustrate the start and finish dates of the terminal elements and summary elements of a project. Terminal elements and summary elements constitute the work breakdown structure of the project. Modern Gantt charts also show the dependency (i.e., precedence network) relationships between activities. Gantt charts can be used to show current schedule status using percent-complete shadings and a vertical "TODAY" line.
 
- <pre class="mermaid" markdown="0">
+ <pre class="mermaid" >
 gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
@@ -104,7 +105,7 @@ In software engineering, a <b>class diagram</b> in the Unified Modeling Language
 
 The class diagram is the main building block of object-oriented modeling. It is used for general conceptual modeling of the structure of the application, and for detailed modeling, translating the models into programming code. Class diagrams can also be used for data modeling. The classes in a class diagram represent both the main elements, interactions in the application, and the classes to be programmed.
 
-<pre class="mermaid" markdown="0">
+<pre class="mermaid" >
 classDiagram
     Class01 <|-- AveryLongClass : Cool
     Class03 *-- Class04
@@ -119,12 +120,12 @@ classDiagram
     Class01 : int chimp
     Class01 : int gorilla
     Class08 <--> C2: Cool label
-</pre >
+</pre>
 
 ## Git Graph
 The collection of all commits in a repository forms what in mathematics is called a graph: visually, a set of objects with lines drawn between some pairs of them. In Git, the lines represent the commit parent relationship previously explained, and this structure is called the “commit graph” of the repository
 
-<pre class="mermaid" markdown="0">
+<pre class="mermaid">
 gitGraph
     commit
     commit
@@ -136,7 +137,7 @@ gitGraph
     merge develop
     commit
     commit
-</pre >
+</pre>
 
 ## State Diagram
 A state diagram is a type of diagram used in computer science and related fields to describe the behavior of systems. State diagrams require that the system described is composed of a finite number of states; sometimes, this is indeed the case, while at other times this is a reasonable abstraction. Many forms of state diagrams exist, which differ slightly and have different semantics.
@@ -149,23 +150,30 @@ stateDiagram-v2
     Moving --> Still
     Moving --> Crash
     Crash --> [*]
-  </pre >
+  </pre>
 
-## User Journey Diagram
-User journeys describe at a high level of detail exactly what steps different users take to complete a specific task within a system, application or website. This technique shows the current (as-is) user workflow, and reveals areas of improvement for the to-be workflow. (Wikipedia)
+## Mindmap
+A mind map is a diagram used to visually organize information into a hierarchy, showing relationships among pieces of the whole. It is often created around a single concept, drawn as an image in the center of a blank page, to which associated representations of ideas such as images, words and parts of words are added. Major ideas are connected directly to the central concept, and other ideas branch out from those major ideas.
 
  <pre class="mermaid">
-  journey
-      title My working day
-      section Go to work
-        Make tea: 5: Me
-        Go upstairs: 3: Me
-        Do work: 1: Me, Cat
-      section Go home
-        Go downstairs: 5: Me
-        Sit down: 3: Me
- </pre >
-
+ mindmap
+  root((mindmap))
+    Origins
+      Long history
+      ::icon(fa fa-book)
+      Popularization
+        British popular psychology author Tony Buzan
+    Research
+      On effectiveness<br/>and features
+      On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
+ </pre>
 ## ER Diagram 
 An entity–relationship model (or ER model) describes interrelated things of interest in a specific domain of knowledge. A basic ER model is composed of entity types (which classify the things of interest) and specifies relationships that can exist between entities (instances of those entity types). Wikipedia.
 
@@ -179,7 +187,7 @@ An entity–relationship model (or ER model) describes interrelated things of in
           ORDER ||--|{ ORDER-ITEM : includes
           PRODUCT-CATEGORY ||--|{ PRODUCT : contains
           PRODUCT ||--o{ ORDER-ITEM : "ordered in"
- </pre >
+ </pre>
 
 Mermaid is the best packages to draw the graphs, flowcharts, tables etc. You can find more about the mermaid on [Mermaid](https://mermaid-js.github.io/mermaid/#/)
 happy to see plugin mermaid :+1:!
