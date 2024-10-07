@@ -37,7 +37,7 @@ All Flowcharts are composed of nodes, the geometric shapes and edges, the arrows
 
 It can also accommodate different arrow types, multi directional arrows, and linking to and from subgraphs.
 
- <div class="mermaid">
+<div class="mermaid">
 graph TD;
     A-->B;
     A-->C;
@@ -45,42 +45,43 @@ graph TD;
     C-->D;
 </div>
 
- <div class="mermaid">
+## This is LR flow chart
+<div class="mermaid">
 flowchart LR
 A[Hard] -->|Text| B(Round)
 B --> C{Decision}
 C -->|One| D[Result 1]
 C -->|Two| E[Result 2]
- </div >
+</div >
 
 ## Pie chart Diagrams
 A pie chart (or a circle chart) is a circular statistical graphic, which is divided into slices to illustrate numerical proportion. In a pie chart, the arc length of each slice (and consequently its central angle and area), is proportional to the quantity it represents. While it is named for its resemblance to a pie which has been sliced, there are variations on the way it can be presented. The earliest known pie chart is generally credited to William Playfair's Statistical Breviary of 1801 -Wikipedia
 
-  <div class="mermaid">
+<div class="mermaid">
 pie showData
     title Key elements in Product X
     "Calcium" : 42.96
     "Potassium" : 50.05
     "Magnesium" : 10.01
     "Iron" :  5
-  </div >
+</div >
 
 ## Sequence Diagram
 A sequence diagram or system sequence diagram (SSD) shows process interactions arranged in time sequence in the field of software engineering. It depicts the processes involved and the sequence of messages exchanged between the processes needed to carry out the functionality. Sequence diagrams are typically associated with use case realizations in the 4+1 architectural view model of the system under development. Sequence diagrams are sometimes called event diagrams or event scenarios.
 
-  <div class="mermaid">
+<div class="mermaid">
     sequenceDiagram
     participant Alice
     participant Bob
     Alice->>John: Hello John, how are you?
     loop Healthcheck
-        John->>John: Fight against hypochondria
+    John->>John: Fight against hypochondria
     end
     Note right of John: Rational thoughts <br/>prevail!
     John-->>Alice: Great!
     John->>Bob: How about you?
     Bob-->>John: Jolly good!
-  </div >
+</div >
 
 ## Gantt Diagram 
  
@@ -96,14 +97,14 @@ gantt
     section Another
     Second Task      :2018-07-12, 12d
     Third Task       : 24d
- </div >
+</div >
 
 ## Class Diagram 
 In software engineering, a <b>class diagram</b> in the Unified Modeling Language (UML) is a type of static structure diagram that describes the structure of a system by showing the system's classes, their attributes, operations (or methods), and the relationships among objects.
 
 The class diagram is the main building block of object-oriented modeling. It is used for general conceptual modeling of the structure of the application, and for detailed modeling, translating the models into programming code. Class diagrams can also be used for data modeling. The classes in a class diagram represent both the main elements, interactions in the application, and the classes to be programmed.
 
- <div class="mermaid">
+<div class="mermaid">
 classDiagram
 Class01 <|-- AveryLongClass : Cool
 Class03 *-- Class04
@@ -118,12 +119,12 @@ Class01 : size()
 Class01 : int chimp
 Class01 : int gorilla
 Class08 <--> C2: Cool label
-  </div >
+</div >
 
 ## Git Graph
 The collection of all commits in a repository forms what in mathematics is called a graph: visually, a set of objects with lines drawn between some pairs of them. In Git, the lines represent the commit parent relationship previously explained, and this structure is called the “commit graph” of the repository
 
-  <div class="mermaid">
+<div class="mermaid">
 gitGraph
    commit
    commit
