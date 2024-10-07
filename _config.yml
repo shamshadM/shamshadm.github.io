@@ -141,6 +141,8 @@ footer:
       
 # copy the code
 enable_copy_code_button: true
+after_footer_scripts:
+  - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
 
 # Reading Files
 include:
