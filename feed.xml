@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://shamshad.in/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shamshad.in/" rel="alternate" type="text/html" /><updated>2024-10-07T13:47:17+05:30</updated><id>https://shamshad.in/feed.xml</id><title type="html">M. Shamshad</title><subtitle>I have dream...</subtitle><author><name>M. Shamshad</name><email>shamshad.rattan@gmail.com</email></author><entry><title type="html">A tutorial on Genome-Wide Association Studies (GWAS) in Tassel (GUI)</title><link href="https://shamshad.in/posts/2021/01/A-tutorial-on-Genome-Wide-Association-Studies/" rel="alternate" type="text/html" title="A tutorial on Genome-Wide Association Studies (GWAS) in Tassel (GUI)" /><published>2021-01-20T00:00:00+05:30</published><updated>2024-10-06T20:53:46+05:30</updated><id>https://shamshad.in/posts/2021/01/A-tutorial-on-Genome-Wide-Association-Studies</id><content type="html" xml:base="https://shamshad.in/posts/2021/01/A-tutorial-on-Genome-Wide-Association-Studies/"><![CDATA[<p>Genome-wide association studies (GWAS) increase their popularity among medical, biological, and social sciences to identify the association between single nucleotide polymorphisms and phenotypic traits. This tutorial aims to provide a guidelines for conducing genome wide analysis in Tassel.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://shamshad.in/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shamshad.in/" rel="alternate" type="text/html" /><updated>2024-10-07T14:56:29+05:30</updated><id>https://shamshad.in/feed.xml</id><title type="html">M. Shamshad</title><subtitle>I have dream...</subtitle><author><name>M. Shamshad</name><email>shamshad.rattan@gmail.com</email></author><entry><title type="html">A tutorial on Genome-Wide Association Studies (GWAS) in Tassel (GUI)</title><link href="https://shamshad.in/posts/2021/01/A-tutorial-on-Genome-Wide-Association-Studies/" rel="alternate" type="text/html" title="A tutorial on Genome-Wide Association Studies (GWAS) in Tassel (GUI)" /><published>2021-01-20T00:00:00+05:30</published><updated>2024-10-06T20:53:46+05:30</updated><id>https://shamshad.in/posts/2021/01/A-tutorial-on-Genome-Wide-Association-Studies</id><content type="html" xml:base="https://shamshad.in/posts/2021/01/A-tutorial-on-Genome-Wide-Association-Studies/"><![CDATA[<p>Genome-wide association studies (GWAS) increase their popularity among medical, biological, and social sciences to identify the association between single nucleotide polymorphisms and phenotypic traits. This tutorial aims to provide a guidelines for conducing genome wide analysis in Tassel.</p>
 
 <!--more-->
 
@@ -517,7 +517,7 @@ Papers that report experimental work are often structured chronologically in fiv
 <!--more-->
 Submit your prepared manuscript files in the respective journal. Almost all the journals have a very easy channel of paper submission and you can easily upload the files in the required sections. For instance, the Wiley online publishing group, all their journals have a very smooth pattern of submission, first, you upload title and abstract, secondly, the files (main document and supplementary), then authors list, followed by the reviewer’s recommendations and finally review and submit the manuscript. Being a student, you may find it difficult to recommend the reviewers yourself. I would suggest that consult your instructor, lab in charge, or supervisor for this purpose, they can better assign the reviewers (as per the institution’s policies). However, it is not compulsory that the editor will consider your suggested reviewers, these criteria vary from journal to journal.
 <!--more-->
-The journal editor will send you a submission confirmation email, shortly after you submit the article. The editor evaluates your paper based on specific criteria (such as the novelty of work, methodology, results, statistics, figure quality, formatting, etc.). The submission then passed on to reviewers (two or three reviewers) and you will be notified by an email once your paper considered for review. The reviewers responded back to editors by giving their positive or negative remarks and all these evaluations together contribute to making the final decision on your manuscript. The whole procedure may take 2-3 months or more. It depends on the different strategies of each journal/publishing group.</p>]]></content><author><name>M. Shamshad</name><email>shamshad.rattan@gmail.com</email></author><category term="scientific" /><category term="writing" /><category term="Research Journal" /><category term="Rough Draft" /><category term="Cover letter" /><summary type="html"><![CDATA[There exist some definite gaps “from performing of an experiment to the formulation of a hypothesis”. It is not necessary that a person good at lab work must be an expert in scientific writing too.]]></summary></entry><entry><title type="html">Add non-whitelisted plugins and Mermaid</title><link href="https://shamshad.in/posts/2020/08/non-whitelisted-plugin-Mermaid/" rel="alternate" type="text/html" title="Add non-whitelisted plugins and Mermaid" /><published>2020-08-20T00:00:00+05:30</published><updated>2024-10-07T13:05:22+05:30</updated><id>https://shamshad.in/posts/2020/08/Non-whitelisted-plugin-Mermaid</id><content type="html" xml:base="https://shamshad.in/posts/2020/08/non-whitelisted-plugin-Mermaid/"><![CDATA[<p>GitHub Pages runs in <code class="language-plaintext highlighter-rouge">safe</code> mode and only allows <a href="https://pages.github.com/versions/">a set of whitelisted plugins</a>. To use the gem in GitHub Pages, one of the workarounds is to use CI (e.g. travis, github workflow) and deploy to your <code class="language-plaintext highlighter-rouge">gh-pages</code> branch like: <a href="https://github.com/jeffreytse/jekyll-deploy-action">jekyll-deploy-action</a>, and I use this plugin: <a href="https://github.com/jeffreytse/jekyll-spaceship">jekyll-spaceship</a> in my github pages.
+The journal editor will send you a submission confirmation email, shortly after you submit the article. The editor evaluates your paper based on specific criteria (such as the novelty of work, methodology, results, statistics, figure quality, formatting, etc.). The submission then passed on to reviewers (two or three reviewers) and you will be notified by an email once your paper considered for review. The reviewers responded back to editors by giving their positive or negative remarks and all these evaluations together contribute to making the final decision on your manuscript. The whole procedure may take 2-3 months or more. It depends on the different strategies of each journal/publishing group.</p>]]></content><author><name>M. Shamshad</name><email>shamshad.rattan@gmail.com</email></author><category term="scientific" /><category term="writing" /><category term="Research Journal" /><category term="Rough Draft" /><category term="Cover letter" /><summary type="html"><![CDATA[There exist some definite gaps “from performing of an experiment to the formulation of a hypothesis”. It is not necessary that a person good at lab work must be an expert in scientific writing too.]]></summary></entry><entry><title type="html">Add non-whitelisted plugins and Mermaid</title><link href="https://shamshad.in/posts/2020/08/non-whitelisted-plugin-Mermaid/" rel="alternate" type="text/html" title="Add non-whitelisted plugins and Mermaid" /><published>2020-08-20T00:00:00+05:30</published><updated>2024-10-07T14:45:04+05:30</updated><id>https://shamshad.in/posts/2020/08/Non-whitelisted-plugin-Mermaid</id><content type="html" xml:base="https://shamshad.in/posts/2020/08/non-whitelisted-plugin-Mermaid/"><![CDATA[<p>GitHub Pages runs in <code class="language-plaintext highlighter-rouge">safe</code> mode and only allows <a href="https://pages.github.com/versions/">a set of whitelisted plugins</a>. To use the gem in GitHub Pages, one of the workarounds is to use CI (e.g. travis, github workflow) and deploy to your <code class="language-plaintext highlighter-rouge">gh-pages</code> branch like: <a href="https://github.com/jeffreytse/jekyll-deploy-action">jekyll-deploy-action</a>, and I use this plugin: <a href="https://github.com/jeffreytse/jekyll-spaceship">jekyll-spaceship</a> in my github pages.
 <!--more--></p>
 <h2 id="using-mermaid-in-github-pages">Using mermaid in github pages</h2>
 
@@ -530,7 +530,7 @@ The journal editor will send you a submission confirmation email, shortly after 
 <ol>
   <li>create a file <code class="language-plaintext highlighter-rouge">mermaid.html</code> inside the folder <code class="language-plaintext highlighter-rouge">_includes</code>. The file content could be found on the <a href="https://mermaid-js.github.io/mermaid/#/n00b-gettingStarted?id=_3-calling-the-javascript-api">mermaid js official website</a>.</li>
   <li>update the file <code class="language-plaintext highlighter-rouge">_includes/head.html</code> to include the new file <code class="language-plaintext highlighter-rouge">mermaid.html</code> with or without the condition on the var <code class="language-plaintext highlighter-rouge">page.mermaid</code></li>
-  <li>in post where we need to render the mermaid diagrams, just put the code in side a html div block by set the class to <code class="language-plaintext highlighter-rouge">mermaid</code> like: <code class="language-plaintext highlighter-rouge">&lt;div class="mermaid"&gt;&lt;/div&gt;</code>. If the step 2 has set a condition on the var <code class="language-plaintext highlighter-rouge">page.mermaid</code>, you need to also add a variable named <code class="language-plaintext highlighter-rouge">mermaid</code> and set its value to <code class="language-plaintext highlighter-rouge">true</code> in the post header.</li>
+  <li>in post where we need to render the mermaid diagrams, just put the code in side a html pre block by set the class to <code class="language-plaintext highlighter-rouge">mermaid</code> like: <code class="language-plaintext highlighter-rouge">&lt;pre class="mermaid"&gt;&lt;/pre&gt;</code>. If the step 2 has set a condition on the var <code class="language-plaintext highlighter-rouge">page.mermaid</code>, you need to also add a variable named <code class="language-plaintext highlighter-rouge">mermaid</code> and set its value to <code class="language-plaintext highlighter-rouge">true</code> in the post header.</li>
 </ol>
 
 <p>The <strong>seconde solution</strong> is to install the gem plugin <a href="https://github.com/jasonbellamy/jekyll-mermaid">jekyll-mermaid</a> where the underlying implementation uses the mermaid API too, This is what I’m using as per this <a href="https://github.com/shamshadM/shamshadM.github.io/">commit</a> it’s a little bitter easier than the first solution.</p>
@@ -546,38 +546,39 @@ The journal editor will send you a submission confirmation email, shortly after 
 
 <p>It can also accommodate different arrow types, multi directional arrows, and linking to and from subgraphs.</p>
 
-<div class="mermaid">
+<pre class="mermaid">
 graph TD;
     A--&gt;B;
     A--&gt;C;
     B--&gt;D;
     C--&gt;D;
-</div>
+</pre>
 
-<div class="mermaid">
-flowchart LR
-    A[Hard] --&gt;|Text| B(Round)
-    B --&gt; C{Decision}
-    C --&gt;|One| D[Result 1]
-    C --&gt;|Two| E[Result 2]
-</div>
+<pre class="mermaid">
+flowchart TD
+    A[Christmas] --&gt;|Get money| B(Go shopping)
+    B --&gt; C{Let me think}
+    C --&gt;|One| D[Laptop]
+    C --&gt;|Two| E[iPhone]
+    C --&gt;|Three| F[fa:fa-car Car]
+</pre>
 
 <h2 id="pie-chart-diagrams">Pie chart Diagrams</h2>
-<p>A pie chart (or a circle chart) is a circular statistical graphic, which is divided into slices to illustrate numerical proportion. In a pie chart, the arc length of each slice (and consequently its central angle and area), is proportional to the quantity it represents. While it is named for its resemblance to a pie which has been sliced, there are variations on the way it can be presented. The earliest known pie chart is generally credited to William Playfair’s Statistical Breviary of 1801 -Wikipedia</p>
+<p>A pie chart (or a circle chart) is a circular statistical graphic, which is preided into slices to illustrate numerical proportion. In a pie chart, the arc length of each slice (and consequently its central angle and area), is proportional to the quantity it represents. While it is named for its resemblance to a pie which has been sliced, there are variations on the way it can be presented. The earliest known pie chart is generally credited to William Playfair’s Statistical Breviary of 1801 -Wikipedia</p>
 
-<div class="mermaid">
+<pre class="mermaid">
 pie
     title Key elements in Product X
     "Calcium" : 42.96
     "Potassium" : 50.05
     "Magnesium" : 10.01
     "Iron" :  5
-</div>
+</pre>
 
 <h2 id="sequence-diagram">Sequence Diagram</h2>
 <p>A sequence diagram or system sequence diagram (SSD) shows process interactions arranged in time sequence in the field of software engineering. It depicts the processes involved and the sequence of messages exchanged between the processes needed to carry out the functionality. Sequence diagrams are typically associated with use case realizations in the 4+1 architectural view model of the system under development. Sequence diagrams are sometimes called event diagrams or event scenarios.</p>
 
-<div class="mermaid">
+<pre class="mermaid">
 sequenceDiagram
       participant Alice
       participant Bob
@@ -589,13 +590,13 @@ sequenceDiagram
       John--&gt;&gt;Alice: Great!
       John-&gt;&gt;Bob: How about you?
       Bob--&gt;&gt;John: Jolly good!
-</div>
+</pre>
 
 <h2 id="gantt-diagram">Gantt Diagram</h2>
 
 <p>A Gantt chart is a type of bar chart that illustrates a project schedule. This chart lists the tasks to be performed on the vertical axis, and time intervals on the horizontal axis. The width of the horizontal bars in the graph shows the duration of each activity. Gantt charts illustrate the start and finish dates of the terminal elements and summary elements of a project. Terminal elements and summary elements constitute the work breakdown structure of the project. Modern Gantt charts also show the dependency (i.e., precedence network) relationships between activities. Gantt charts can be used to show current schedule status using percent-complete shadings and a vertical “TODAY” line.</p>
 
-<div class="mermaid">
+<pre class="mermaid">
 gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
@@ -605,14 +606,14 @@ gantt
     section Another;
     Second Task      :2018-07-12, 12d
     Third Task       : 24d
-</div>
+</pre>
 
 <h2 id="class-diagram">Class Diagram</h2>
 <p>In software engineering, a <b>class diagram</b> in the Unified Modeling Language (UML) is a type of static structure diagram that describes the structure of a system by showing the system’s classes, their attributes, operations (or methods), and the relationships among objects.</p>
 
 <p>The class diagram is the main building block of object-oriented modeling. It is used for general conceptual modeling of the structure of the application, and for detailed modeling, translating the models into programming code. Class diagrams can also be used for data modeling. The classes in a class diagram represent both the main elements, interactions in the application, and the classes to be programmed.</p>
 
-<div class="mermaid">
+<pre class="mermaid">
 classDiagram
     Class01 &lt;|-- AveryLongClass : Cool
     Class03 *-- Class04
@@ -627,28 +628,29 @@ classDiagram
     Class01 : int chimp
     Class01 : int gorilla
     Class08 &lt;--&gt; C2: Cool label
-</div>
+</pre>
 
 <h2 id="git-graph">Git Graph</h2>
 <p>The collection of all commits in a repository forms what in mathematics is called a graph: visually, a set of objects with lines drawn between some pairs of them. In Git, the lines represent the commit parent relationship previously explained, and this structure is called the “commit graph” of the repository</p>
 
-<div class="mermaid">
+<pre class="mermaid">
 gitGraph
-   commit
-   commit
-   branch develop
-   commit
-   commit
-   commit
-   checkout main
-   commit
-   commit
-</div>
+    commit
+    commit
+    branch develop
+    checkout develop
+    commit
+    commit
+    checkout main
+    merge develop
+    commit
+    commit
+</pre>
 
 <h2 id="state-diagram">State Diagram</h2>
 <p>A state diagram is a type of diagram used in computer science and related fields to describe the behavior of systems. State diagrams require that the system described is composed of a finite number of states; sometimes, this is indeed the case, while at other times this is a reasonable abstraction. Many forms of state diagrams exist, which differ slightly and have different semantics.</p>
 
-<div class="mermaid">
+<pre class="mermaid">
 stateDiagram-v2
     [*] --&gt; Still
     Still --&gt; [*]
@@ -656,12 +658,12 @@ stateDiagram-v2
     Moving --&gt; Still
     Moving --&gt; Crash
     Crash --&gt; [*]
-  </div>
+  </pre>
 
 <h2 id="user-journey-diagram">User Journey Diagram</h2>
 <p>User journeys describe at a high level of detail exactly what steps different users take to complete a specific task within a system, application or website. This technique shows the current (as-is) user workflow, and reveals areas of improvement for the to-be workflow. (Wikipedia)</p>
 
-<div class="mermaid">
+<pre class="mermaid">
   journey
       title My working day
       section Go to work
@@ -671,12 +673,12 @@ stateDiagram-v2
       section Go home
         Go downstairs: 5: Me
         Sit down: 3: Me
- </div>
+ </pre>
 
 <h2 id="er-diagram">ER Diagram</h2>
 <p>An entity–relationship model (or ER model) describes interrelated things of interest in a specific domain of knowledge. A basic ER model is composed of entity types (which classify the things of interest) and specifies relationships that can exist between entities (instances of those entity types). Wikipedia.</p>
 
-<div class="mermaid">
+<pre class="mermaid">
  erDiagram
           CUSTOMER }|..|{ DELIVERY-ADDRESS : has
           CUSTOMER ||--o{ ORDER : places
@@ -686,7 +688,7 @@ stateDiagram-v2
           ORDER ||--|{ ORDER-ITEM : includes
           PRODUCT-CATEGORY ||--|{ PRODUCT : contains
           PRODUCT ||--o{ ORDER-ITEM : "ordered in"
- </div>
+ </pre>
 
 <p>Mermaid is the best packages to draw the graphs, flowcharts, tables etc. You can find more about the mermaid on <a href="https://mermaid-js.github.io/mermaid/#/">Mermaid</a>
 happy to see plugin mermaid :+1:!</p>]]></content><author><name>M. Shamshad</name><email>shamshad.rattan@gmail.com</email></author><category term="CI" /><category term="mermaid" /><category term="Mermaid" /><category term="graph" /><category term="non-whitelisted plugins" /><summary type="html"><![CDATA[GitHub Pages runs in safe mode and only allows a set of whitelisted plugins. To use the gem in GitHub Pages, one of the workarounds is to use CI (e.g. travis, github workflow) and deploy to your gh-pages branch like: jekyll-deploy-action, and I use this plugin: jekyll-spaceship in my github pages.]]></summary></entry><entry><title type="html">Adding Content to an Academic Website</title><link href="https://shamshad.in/posts/2020/08/website-content/" rel="alternate" type="text/html" title="Adding Content to an Academic Website" /><published>2020-08-07T00:00:00+05:30</published><updated>2024-10-06T20:53:46+05:30</updated><id>https://shamshad.in/posts/2020/08/website-content</id><content type="html" xml:base="https://shamshad.in/posts/2020/08/website-content/"><![CDATA[<p>One thing I haven’t covered in my previous posts on <a href="/posts/2020/06/academic-website/">creating</a> and <a href="/posts/2020/07/customizing-website/">customizing</a> an academic website is how to actually add content to your site. You know, the stuff that’s the reason why people go to your website in the first place? If you’ve followed those guides, your website should be professional looking and already feeling a little bit different from the stock template. However, adding new pages or tweaking the existing pages can be a little intimidating, and I realized I should probably walk through how to do so. Luckily Jekyll’s use of Markdown makes it really easy to add new content!</p>
