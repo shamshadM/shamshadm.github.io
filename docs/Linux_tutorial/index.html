@@ -1,49 +1,200 @@
-<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8" /> <!-- begin _includes/seo.html --><title>Introduction to Unix | M. Shamshad</title><meta name="description" content="How to quickly install and setup ubuntu linux"><meta name="author" content="M. Shamshad"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:site_name" content="M. Shamshad"><meta property="og:title" content="Introduction to Unix"><meta property="og:url" content="https://shamshad.in/docs/Linux_tutorial/"><meta property="og:description" content="How to quickly install and setup ubuntu linux"><meta name="twitter:site" content="@DrShamshadM"><meta name="twitter:title" content="Introduction to Unix"><meta name="twitter:description" content="How to quickly install and setup ubuntu linux"><meta name="twitter:url" content="https://shamshad.in/docs/Linux_tutorial/"><meta name="twitter:card" content="summary"><meta name="twitter:creator" content="@DrShamshadM"><link rel="canonical" href="https://shamshad.in/docs/Linux_tutorial/"> <!-- end _includes/seo.html --><link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed" /> <!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr --><meta name="viewport" content="width=device-width, initial-scale=1.0" /> <script async> document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, "") + " js "; </script> <!-- For all browsers --><link rel="stylesheet" href="/assets/css/main.css?v=" id="theme_source" /><link rel="stylesheet alternate" href="/assets/css/mainDark.css?v=" id="theme_source_2" /> <script async> let theme = sessionStorage.getItem("theme"); if (theme === "dark") { sessionStorage.setItem("theme", "dark"); node1 = document.getElementById("theme_source"); node2 = document.getElementById("theme_source_2"); node1.setAttribute("rel", "stylesheet alternate"); node2.setAttribute("rel", "stylesheet"); } else { sessionStorage.setItem("theme", "light"); } </script> <!-- start custom head snippets --><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="default" /><link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png?v=565802"><link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon-76x76.png?v=565802"><link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-touch-icon-120x120.png?v=565802"><link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon-152x152.png?v=565802"><link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-180x180.png?v=565802"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=565802"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=565802"><link rel="manifest" href="/images/favicon/site.webmanifest?v=565802"><link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=565802" color="#00a7ff"><link rel="shortcut icon" href="/images/favicon/favicon.ico?v=565802"><meta name="apple-mobile-web-app-title" content="SM-Web"><meta name="application-name" content="SM-Web"><meta name="msapplication-TileColor" content="#00a300"><meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=565802"><meta name="theme-color" content="#ffffff"> <!-- SEO tags --> <!-- Begin Jekyll SEO tag v2.8.0 --><title>Introduction to Unix | M. Shamshad</title><meta name="generator" content="Jekyll v4.3.4" /><meta property="og:title" content="Introduction to Unix" /><meta name="author" content="M. Shamshad" /><meta property="og:locale" content="en_US" /><meta name="description" content="How to quickly install and setup ubuntu linux" /><meta property="og:description" content="How to quickly install and setup ubuntu linux" /><link rel="canonical" href="https://shamshad.in/docs/Linux_tutorial/" /><meta property="og:url" content="https://shamshad.in/docs/Linux_tutorial/" /><meta property="og:site_name" content="M. Shamshad" /><meta property="og:type" content="website" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="Introduction to Unix" /><meta name="twitter:site" content="@DrShamshadM" /><meta name="twitter:creator" content="@DrShamshadM" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-10-06T20:53:46+05:30","description":"How to quickly install and setup ubuntu linux","headline":"Introduction to Unix","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://shamshad.in/images/favicon/site-treaser.webp"},"name":"M. Shamshad"},"url":"https://shamshad.in/docs/Linux_tutorial/"}</script> <!-- End Jekyll SEO tag --></head><body class="layout--single"><nav class="skip-links"><ul>
-<li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
-<li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
-<li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
-</ul></nav><div class="masthead"><div class="masthead__inner-wrap"><div class="masthead__menu"><nav id="site-nav" class="greedy-nav"> <a class="site-logo" href="/"><img src="/images/favicon/site-treaser.webp" alt="M. Shamshad"></a> <a class="site-title" href="/"> M. Shamshad </a><ul class="visible-links">
-<li class="masthead__menu-item"> <a href="/about/">About</a>
-</li>
-<li class="masthead__menu-item"> <a href="/teaching/">Teaching</a>
-</li>
-<li class="masthead__menu-item"> <a href="/publications/">Publications</a>
-</li>
-<li class="masthead__menu-item"> <a href="/talks/">Talks</a>
-</li>
-<li class="masthead__menu-item"> <a href="/research/">Research</a>
-</li>
-<li class="masthead__menu-item"> <a href="/resume/">Resume</a>
-</li>
-<li class="masthead__menu-item"> <a href="/tags/">Tags</a>
-</li>
-<li class="masthead__menu-item"> <a href="/docs/Linux_tutorial/">Bioinfo</a>
-</li>
+<!doctype html>
+<html lang="en-US" class="no-js">
+ <head>
+   <meta charset="utf-8">
+<!-- begin _includes/seo.html --><title>Introduction to Unix | M. Shamshad</title>
+<meta name="description" content="How to quickly install and setup ubuntu linux">
+ <meta name="author" content="M. Shamshad">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="M. Shamshad">
+<meta property="og:title" content="Introduction to Unix">
+<meta property="og:url" content="https://shamshad.in/docs/Linux_tutorial/">
+ <meta property="og:description" content="How to quickly install and setup ubuntu linux">
+ <meta name="twitter:site" content="@DrShamshadM">
+ <meta name="twitter:title" content="Introduction to Unix">
+ <meta name="twitter:description" content="How to quickly install and setup ubuntu linux">
+ <meta name="twitter:url" content="https://shamshad.in/docs/Linux_tutorial/">
+   <meta name="twitter:card" content="summary">
+   <meta name="twitter:creator" content="@DrShamshadM">
+<link rel="canonical" href="https://shamshad.in/docs/Linux_tutorial/">
+<!-- end _includes/seo.html -->
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed">
+<!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr --><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+<!-- For all browsers -->
+<link
+  rel="stylesheet"
+  href="/assets/css/main.css"
+  id="theme_source"
+/>
+<link
+  rel="stylesheet alternate"
+  href="/assets/css/mainDark.css"
+  id="theme_source_2"
+/>
+<script  async>
+  let theme = sessionStorage.getItem("theme");
+  if (theme === "dark") {
+    sessionStorage.setItem("theme", "dark");
+    node1 = document.getElementById("theme_source");
+    node2 = document.getElementById("theme_source_2");
+    node1.setAttribute("rel", "stylesheet alternate");
+    node2.setAttribute("rel", "stylesheet");
+  } else {
+    sessionStorage.setItem("theme", "light");
+  }
+</script>
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+<!-- start custom head snippets -->			   
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png?v=565802">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon-76x76.png?v=565802">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-touch-icon-120x120.png?v=565802">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon-152x152.png?v=565802">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-180x180.png?v=565802">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=565802">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=565802">
+<link rel="manifest" href="/images/favicon/site.webmanifest?v=565802">
+<link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=565802" color="#00a7ff">
+<link rel="shortcut icon" href="/images/favicon/favicon.ico?v=565802">
+<meta name="apple-mobile-web-app-title" content="SM-Web">
+<meta name="application-name" content="SM-Web">
+<meta name="msapplication-TileColor" content="#00a300">
+<meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=565802">
+<meta name="theme-color" content="#ffffff">
+<!-- SEO tags -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Introduction to Unix | M. Shamshad</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Introduction to Unix" />
+<meta name="author" content="M. Shamshad" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How to quickly install and setup ubuntu linux" />
+<meta property="og:description" content="How to quickly install and setup ubuntu linux" />
+<link rel="canonical" href="https://shamshad.in/docs/Linux_tutorial/" />
+<meta property="og:url" content="https://shamshad.in/docs/Linux_tutorial/" />
+<meta property="og:site_name" content="M. Shamshad" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Introduction to Unix" />
+<meta name="twitter:site" content="@DrShamshadM" />
+<meta name="twitter:creator" content="@DrShamshadM" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-10-06T20:53:46+05:30","description":"How to quickly install and setup ubuntu linux","headline":"Introduction to Unix","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://shamshad.in/images/favicon/site-treaser.webp"},"name":"M. Shamshad"},"url":"https://shamshad.in/docs/Linux_tutorial/"}</script>
+<!-- End Jekyll SEO tag -->
+ </head>
+ <body class="layout--single" dir="ltr">
+   <nav class="skip-links">
+ <ul>
+   <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+   <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+   <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+ </ul>
+</nav>
+<div class="masthead">
+ <div class="masthead__inner-wrap">
+   <div class="masthead__menu">
+     <nav id="site-nav" class="greedy-nav">
+          <a class="site-logo" href="/"><img src="/images/favicon/site-treaser.webp" alt="M. Shamshad"></a>
+        <a class="site-title" href="/">
+          M. Shamshad
+        </a>
+       <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/about/">About</a>
+           </li>
+<li class="masthead__menu-item">
+              <a href="/teaching/">Teaching</a>
+           </li>
+<li class="masthead__menu-item">
+              <a href="/publications/">Publications</a>
+           </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">Talks</a>
+           </li>
+<li class="masthead__menu-item">
+              <a href="/research/">Research</a>
+           </li>
+<li class="masthead__menu-item">
+              <a href="/resume/">Resume</a>
+           </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+           </li>
+<li class="masthead__menu-item">
+              <a href="/docs/Linux_tutorial/">Bioinfo</a>
+           </li>
 </ul>
-<span class="fa-solid fa-moon toggle-switch" type="button" style="cursor: pointer;" aria-hidden="true" onclick="node1 = document.getElementById('theme_source'); node2 = document.getElementById('theme_source_2'); if(node1.getAttribute('rel')=='stylesheet'){node1.setAttribute('rel', 'stylesheet alternate'); node2.setAttribute('rel', 'stylesheet'); sessionStorage.setItem('theme', 'dark');} else{node2.setAttribute('rel', 'stylesheet alternate'); node1.setAttribute('rel', 'stylesheet');sessionStorage.setItem('theme', 'light');} return false;"></span> <button class="greedy-nav__toggle hidden" type="button"> <span class="visually-hidden">Toggle menu</span><div class="navicon"></div></button><ul class="hidden-links hidden"></ul></nav></div></div></div><div class="initial-content"><div id="main" role="main">
-<div class="sidebar sticky"><nav class="nav__list"> <input id="ac-toc" name="accordion-toc" type="checkbox"> <label for="ac-toc">Toggle menu</label><ul class="nav__items">
-<li> <span class="nav__sub-title">Installing of linux distribution in PC laptop</span><ul><li><a href="">Basic linux commands for the Beginner</a></li></ul>
-</li>
-<li> <span class="nav__sub-title">Basic linux commands for the Beginner</span><ul>
-<li><a href="/docs/Introduction-about-the-Unix">Introduction about the Unix Linux</a></li>
-<li><a href="/docs/ListingFilesAndDirectories">Listing files and Directories</a></li>
-<li><a href="/docs/Copies-moving-removing-files">Copies, moving and removing of files</a></li>
-<li><a href="/docs/Input-Output-Redirections">Input-Output Redirection</a></li>
-<li><a href="/docs/Linux-Wildcards">Linux Wildcards</a></li>
-<li><a href="/docs/Linux-File-Access-Permissions">Linux File Access Permissions</a></li>
-<li><a href="/docs/Linux-Useful-commands">Linux Useful commands</a></li>
-<li><a href="/docs/Compiling-UNIX-software-packages">Compiling UNIX software packages</a></li>
-<li><a href="/docs/UNIX-Variables">UNIX Variables</a></li>
-</ul>
-</li>
-</ul></nav></div>
-<article class="page" itemscope itemtype="https://schema.org/CreativeWork"><meta itemprop="headline" content="Introduction to Unix">
-<meta itemprop="description" content="How to quickly install and setup ubuntu linux">
-<meta itemprop="dateModified" content="2024-10-06T20:53:46+05:30">
-<div class="page__inner-wrap">
-<header><h1 id="page-title" class="page__title" itemprop="headline"> <a href="https://shamshad.in/docs/Linux_tutorial/" itemprop="url">Introduction to Unix </a>
-</h1></header><section class="page__content" itemprop="text"><aside class="sidebar__right "><nav class="toc"><header><h4 class="nav__title">
-<i class="fas fa-file-alt"></i> On this page</h4></header><ul class="toc__menu">
+        <span class="fa-solid fa-moon toggle-switch" type="button" style="cursor: pointer;" aria-hidden="true" onclick="node1 = document.getElementById('theme_source');
+                 node2 = document.getElementById('theme_source_2');
+        if(node1.getAttribute('rel')=='stylesheet'){node1.setAttribute('rel', 'stylesheet alternate'); 
+            node2.setAttribute('rel', 'stylesheet');
+            sessionStorage.setItem('theme', 'dark');}
+            else{node2.setAttribute('rel', 'stylesheet alternate');
+            node1.setAttribute('rel', 'stylesheet');sessionStorage.setItem('theme', 'light');} 
+            return false;"></span>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+         <div class="navicon"></div>
+        </button>
+       <ul class="hidden-links hidden"></ul>
+     </nav>
+   </div>
+ </div>
+</div>
+   <div class="initial-content">
+<div id="main" role="main">
+ <div class="sidebar sticky">
+     <nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox">
+  <label for="ac-toc">Toggle menu</label>
+ <ul class="nav__items">
+       <li>
+            <span class="nav__sub-title">Installing of linux distribution in PC laptop</span>
+         <ul>
+             <li><a href="">Basic linux commands for the Beginner</a></li>
+         </ul>
+       </li>
+       <li>
+            <span class="nav__sub-title">Basic linux commands for the Beginner</span>
+         <ul>
+             <li><a href="/docs/Introduction-about-the-Unix">Introduction about the Unix Linux</a></li>
+             <li><a href="/docs/ListingFilesAndDirectories">Listing files and Directories</a></li>
+             <li><a href="/docs/Copies-moving-removing-files">Copies, moving and removing of files</a></li>
+             <li><a href="/docs/Input-Output-Redirections">Input-Output Redirection</a></li>
+             <li><a href="/docs/Linux-Wildcards">Linux Wildcards</a></li>
+             <li><a href="/docs/Linux-File-Access-Permissions">Linux File Access Permissions</a></li>
+             <li><a href="/docs/Linux-Useful-commands">Linux Useful commands</a></li>
+             <li><a href="/docs/Compiling-UNIX-software-packages">Compiling UNIX software packages</a></li>
+             <li><a href="/docs/UNIX-Variables">UNIX Variables</a></li>
+         </ul>
+       </li>
+ </ul>
+</nav>
+ </div>
+ <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+   <meta itemprop="headline" content="Introduction to Unix">
+   <meta itemprop="description" content="How to quickly install and setup ubuntu linux">
+   <meta itemprop="dateModified" content="2024-10-06T20:53:46+05:30">
+   <div class="page__inner-wrap">
+      <header>
+         <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://shamshad.in/docs/Linux_tutorial/" itemprop="url">Introduction to Unix
+</a>
+         </h1>	      
+       </header>
+     <section class="page__content" itemprop="text">
+         <aside class="sidebar__right ">
+           <nav class="toc">
+            <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+             <ul class="toc__menu">
 <li><a href="#the-kernel">The kernel</a></li>
 <li><a href="#the-standard-utility-programs">The standard utility programs</a></li>
 <li><a href="#the-system-configuration-files">The system configuration files</a></li>
@@ -62,12 +213,17 @@
 <li><a href="#your-username">Your username</a></li>
 <li><a href="#your-password">Your password</a></li>
 <li><a href="#logging-out">Logging Out</a></li>
-</ul></nav></aside><p>Unix is an operating system in the computer language program. The duty of an operating system is to orchestrate the various parts of computer– the processor, graphic processor unit, the on-board memory, the disk drives ssd, hdd, keyboard, mouse video monitors, etc to preform useful tasks. The operating system is the master controller of the computer, the glue that holds together all the component of system, including the administrators, programmers, applications and users. When you use the computer to do something for you, like start the applications, copy file, or display the content of a directory, it is the operating system that must perform those tasks for you. More than anything else, the operating system gives the computer its recognized characteristics. Distinguish between two computers would be difficult, they were running the same operating system. Conversely, two identical computers, running different operating system, would appears completely different to the user. Unix was created in the late 1960s, in the efforts of a multiuser, multitasking system for use by programmers. The philosophy behind the design of Unix was to provide simple, yet powerful utilities that could be together in a flexible manner to perform a wide variety of tasks.</p>
+</ul>
+           </nav>
+         </aside>
+       <p>Unix is an operating system in the computer language program. The duty of an operating system is to orchestrate the various parts of computer– the processor, graphic processor unit, the on-board memory, the disk drives ssd, hdd, keyboard, mouse video monitors, etc to preform useful tasks. The operating system is the master controller of the computer, the glue that holds together all the component of system, including the administrators, programmers, applications and users. When you use the computer to do something for you, like start the applications, copy file, or display the content of a directory, it is the operating system that must perform those tasks for you.
+More than anything else, the operating system gives the computer its recognized characteristics. Distinguish between two computers would be difficult, they were running the same operating system. Conversely, two identical computers, running different operating system, would appears completely different to the user.
+Unix was created in the late 1960s, in the efforts of a multiuser, multitasking system for use by programmers. The philosophy behind the design of Unix was to provide simple, yet powerful utilities that could be together in a flexible manner to perform a wide variety of tasks.</p>
 <p>The Unix operating system comprise three parts:</p>
 <ol>
-<li>The kernel,</li>
-<li>The standard utility programs,</li>
-<li>The system configuration files.</li>
+ <li>The kernel,</li>
+ <li>The standard utility programs,</li>
+ <li>The system configuration files.</li>
 </ol>
 <h2 id="the-kernel">The kernel</h2>
 <p>The kernel is the core of the Unix operating system. Basically, the kernel is a large program that is loaded into memory when the machine is turned on, and it controls the allocation of hardware resources from that point forward. The kernel knows what hardware resources are available (like the processor(s), the on-board memory, the disk drives, network interfaces, etc.), and it has the necessary programs to talk to all the devices connected to it.</p>
@@ -99,31 +255,89 @@
 <h1 id="section-3-logging-in-and-logging-out">Section 3: Logging In and Logging Out</h1>
 <p>To ensure security and organization on a system with many users, Unix machines employ a system of user accounts. The user accounting features of Unix provide a basis for analysis and control of system resources, preventing any user from taking up more than his or her share, and preventing unauthorized people from accessing the system. Every user of a Unix system must get permission by some access control mechanism.</p>
 <h2 id="logging-in">Logging in</h2>
-<p>Logging in to a Unix system requires two pieces of information: A username, and a password. When you sit down for a Unix session, you are given a login prompt that looks like this: login: Type your username at the login prompt, and press the return key. The system will then ask you for your password. When you type your password, the screen will not display what you type.</p>
+<p>Logging in to a Unix system requires two pieces of information: A username, and a password. When you sit down for a Unix session, you are given a login prompt that looks like this:
+   login:
+Type your username at the login prompt, and press the return key. The system will then ask you for your password. When you type your password, the screen will not display what you type.</p>
 <h2 id="your-username">Your username</h2>
-<p>Your username is assigned by the person who creates your account. At ISU, the standard username is the first four letters of your last name concatenated with the first four letters of your first name. Your username must be unique on the system where your account exists since it is the means by which you are identified on the system.</p>
+<p>Your username is assigned by the person who creates your account. At ISU, the standard username is the first four letters of your last name concatenated with the first four letters of your first name.
+Your username must be unique on the system where your account exists since it is the means by which you are identified on the system.</p>
 <h2 id="your-password">Your password</h2>
-<p>When your account is created, a password is assigned. The first thing you should do is change your password, using the passwd utility. To change your password, type the command passwd after you have logged in. The system will ask for your old password, to prevent someone else from sneaking up, and changing your password. Then it will ask for your new password. You will be asked to confirm your new password, to make sure that you didn’t mistype. It is very important that you choose a good password, so that someone else cannot guess it. Here are some rules for selecting a good password:</p>
+<p>When your account is created, a password is assigned. The first thing you should do is change your password, using the passwd utility. To change your password, type the command
+      passwd
+after you have logged in. The system will ask for your old password, to prevent someone else from sneaking up, and changing your password. Then it will ask for your new password. You will be asked to confirm your new password, to make sure that you didn’t mistype. It is very important that you choose a good password, so that someone else cannot guess it. Here are some rules for selecting a good password:</p>
 <ul>
-<li>Do not use any part of your name, your spouse’s name, your child’s name, your pet’s name, or anybody’s name. Do not use any backward spellings of any name, either.</li>
-<li>Do not use an easily-guessable number, like your phone number, your social security number, your address, license plate number, etc.</li>
-<li>Do not use any word that can be found in an English or foreign-language dictionary.</li>
-<li>Do not use all the same letter, or a simple sequence of keys on the keyboard, like qwerty.</li>
-<li>Do use a mix of upper-case and lower-case letters, numbers, and control characters.</li>
-<li>Do use at least six characters.</li>
-<li>If you have accounts on multiple machines, use a different password on each machine. Do not choose a password that is so difficult to remember that you must write it down.</li>
+ <li>Do not use any part of your name, your spouse’s name, your child’s name, your pet’s name, or anybody’s name. Do not use any backward spellings of any name, either.</li>
+ <li>Do not use an easily-guessable number, like your phone number, your social security number, your address, license plate number, etc.</li>
+ <li>Do not use any word that can be found in an English or foreign-language dictionary.</li>
+ <li>Do not use all the same letter, or a simple sequence of keys on the keyboard, like qwerty.</li>
+ <li>Do use a mix of upper-case and lower-case letters, numbers, and control characters.</li>
+ <li>Do use at least six characters.</li>
+ <li>If you have accounts on multiple machines, use a different password on each machine. Do not choose a password that is so difficult to remember that you must write it down.</li>
 </ul>
 <h2 id="logging-out">Logging Out</h2>
-<p>When you’re ready to quit, type the command exit Before you leave your terminal, make sure that you see the login prompt, indicating that you have successfully logged out. If you have left any unresolved processes, the Unix system will require you to resolve them before it will let you log out. Some shells will recognize other commands to log you out, like “logout” or even “bye”. It is always a good idea to clear the display before you log out, so that the next user doesn’t get a yours user of information about you, your work, or your user account. You can type the command</p>
-<p>clear right before you log out, or you can press the return key until all the information is scrolled off the screen.</p></section><footer class="page__meta"><p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-10-06">October 6, 2024</time></p></footer>
-</div></article>
-</div></div><div id="footer" class="page__footer"><footer> <!-- start custom footer snippets --> <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script> <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } }, tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true } }); </script> <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/13.1.1/math.js" integrity="sha512-fMI/ndUubOcpzblrAaOFszYIE2iDKua+Cxg9dZp3cAkhsRWEHHbKtFCElHEQ50viX502yj7nFEEcxq2SOTNrIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> <!-- end custom head snippets --> <!-- end custom footer snippets --><div class="page__footer-follow"><ul class="social-icons">
-<li><strong>Follow:</strong></li>
-<li><a href="https://twitter.com/DrShamshadM" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
-<li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&amp;hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar</a></li>
-<li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" rel="nofollow noopener noreferrer"><i class="ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
-<li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
-</ul></div>
+<p>When you’re ready to quit, type the command
+   exit
+Before you leave your terminal, make sure that you see the login prompt, indicating that you have successfully logged out. If you have left any unresolved processes, the Unix system will require you to resolve them before it will let you log out. Some shells will recognize other commands to log you out, like “logout” or even “bye”.
+It is always a good idea to clear the display before you log out, so that the next user doesn’t get a yours user of information about you, your work, or your user account. You can type the command</p>
+<p>clear
+right before you log out, or you can press the return key until all the information is scrolled off the screen.</p>
+     </section>
+     <footer class="page__meta">
+ <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-10-06">October 6, 2024</time></p>
+     </footer>
+   </div>
+ </article>
+</div>
+   </div>
+   <div id="footer" class="page__footer">
+     <footer>
+        <!-- start custom footer snippets -->
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/13.1.1/math.js" integrity="sha512-fMI/ndUubOcpzblrAaOFszYIE2iDKua+Cxg9dZp3cAkhsRWEHHbKtFCElHEQ50viX502yj7nFEEcxq2SOTNrIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- end custom head snippets -->
+<!-- end custom footer snippets -->
+       <div class="page__footer-follow">
+ <ul class="social-icons">
+     <li><strong>Follow:</strong></li>
+         <li><a href="https://twitter.com/DrShamshadM" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+         <li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&amp;hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar</a></li>
+         <li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" rel="nofollow noopener noreferrer"><i class="ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
+     <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+ </ul>
+</div>
 <div class="page__footer-copyright">
 <img class="emoji" title=":copyright:" alt=":copyright:" src="https://github.githubassets.com/images/icons/emoji/unicode/00a9.png" height="20" width="20"> 2024 M. Shamshad. Proudly hosted by <a href="https://github.com/" rel="nofollow">GitHub</a> &amp; <a href="https://shamshadpbg.github.io/" rel="prev:"><i class="ai ai-academia"></i>mmTheme</a>.</div>
-<link rel="preload" href="/assets/js/mermaid.min.js" as="script"> <script src="/assets/js/mermaid.min.js" async></script></footer></div><link rel="preload" href="/assets/js/main.min.js" as="script"> <script src="/assets/js/main.min.js" async></script> <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> --> <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8020H63F5"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-H8020H63F5', { 'optimize_id': '', 'anonymize_ip': 'true', }); </script></body></html>
+<link rel="preload" href="/assets/js/mermaid.min.js" as="script">
+<script src="/assets/js/mermaid.min.js" async></script>
+     </footer>
+   </div>
+<link rel="preload" href="/assets/js/main.min.js" as="script">
+  <script src="/assets/js/main.min.js" async></script>
+  <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H8020H63F5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ gtag('config', 'G-H8020H63F5',
+    {
+      'optimize_id': 'true',
+      'anonymize_ip': 'true', 
+    });
+</script>
+ </body>
+</html>
