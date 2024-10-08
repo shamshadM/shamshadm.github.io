@@ -18,9 +18,8 @@
   {% capture overlay_img_path %}{{ page.header.overlay_image }}{% endcapture %}
 {% elsif page.header.overlay_image %}
   {% capture overlay_img_path %}{{ page.header.overlay_image | prepend: "/images/" | prepend: base_path }}{% endcapture %}
-{% endif %}
 
-{% if page.header.overlay_filter contains "rgba" %}
+{% elsif page.header.overlay_filter contains "rgba" %}
   {% capture overlay_filter %}{{ page.header.overlay_filter }}{% endcapture %}
   {% capture overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}){% endcapture %}
 {% elsif page.header.overlay_filter %}
@@ -39,7 +38,7 @@
   style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}');{% endif %}">
   {% if page.header.overlay_color or page.header.overlay_image %}
     <div class="wrapper">
-     <h1 id="page-title" class="page__title" itemprop="headline">
+    <h1 id="page-title" class="page__title" itemprop="headline">
         {% if paginator and site.paginate_show_page_num %}
           {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
         {% else %}
@@ -68,7 +67,7 @@
       {% endif %}                               
     </div>
   {% else %}
-<img fetchpriority="high" src="{{ page.header.image | relative_url }}" alt="{{ image_description }}" class="page__hero-image">
+<img loading="eager" src="{{ page.header.image | relative_url }}" alt="{{ image_description }}" class="page__hero-image">
   {% endif %}
   {% if page.header.caption %}
     <span class="page__hero-caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>

@@ -1,32 +1,32 @@
-<meta charset="utf-8" />
+<meta charset="utf-8">
 
-{% include seo.html %} {% unless site.atom_feed.hide %}
-<link
-  href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"
-  type="application/atom+xml"
-  rel="alternate"
-  title="{{ site.title }} Feed"
-/>
+{% include seo.html %}
+{% unless site.atom_feed.hide %}
+  <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 {% endunless %}
 
 <!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{%- comment %} https://docs.google.com/presentation/d/1rmxwWa9P6_xHqonmh5ONXRS-jPc5XKbnv99Rjkhe04s/present {% endcomment -%}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script  async>
-  document.documentElement.className =
-    document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";
+<script async>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  {% if site.enable_copy_code_button -%}
+    window.enable_copy_code_button = true;
+  {%- endif %}
 </script>
+
 <!-- For all browsers -->
 <link
   rel="stylesheet"
-  href="{{ '/assets/css/main.css' | relative_url | append: '?v=' | append: site.git.last_commit.short_sha }}"
+  href="{{ '/assets/css/main.css' | relative_url }}"
   id="theme_source"
 />
 
 {% if site.minimal_mistakes_skin2 %}
 <link
   rel="stylesheet alternate"
-  href="{{ '/assets/css/mainDark.css' | relative_url | append: '?v=' | append: site.git.last_commit.short_sha }}"
+  href="{{ '/assets/css/mainDark.css' | relative_url }}"
   id="theme_source_2"
 />
 <script  async>
@@ -42,7 +42,10 @@
   }
 </script>
 {% endif %}
-
-{% if site.head_scripts %} {% for script in site.head_scripts %}
-<script rel="preload" async src="{{ script | relative_url }}"></script>
-{% endfor %} {% endif %}
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+{% if site.head_scripts %}
+  {% for script in site.head_scripts %}
+   <script src="{{ script | relative_url }}" async></script>
+  {% endfor %}
+{% endif %}

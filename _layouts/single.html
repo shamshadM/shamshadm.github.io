@@ -34,7 +34,7 @@ layout: default
           <h1 id="page-title" class="page__title" itemprop="headline">
             <a href="{{ page.url | absolute_url }}" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
           </h1>
-          {%- endif %}	
+          {%- endif %}	      
           {% include page__meta.html %}
         </header>
       {% endunless %}

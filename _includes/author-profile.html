@@ -7,30 +7,30 @@
 
   {% if author.avatar %}
   <div class="author__avatar">
-   <a href="{{ author.home| default: '/' | absolute_url }}">
+   <a href="{{ author.home | default: '/' | absolute_url }}">
     	<img fetchpriority="high" src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" itemprop="image" class="u-photo">
    </a>
   </div>
   {% endif %}
 
   <div class="author__content">
-      <h3 class="author__name p-name" itemprop="name">
+    <h3 class="author__name p-name" itemprop="name">
       <a class="u-url" rel="me" href="{{ author.home | default: '/' | absolute_url }}" itemprop="url">{{ author.name }}</a>
     </h3>
-	   {% if author.bio %}
+    {% if author.bio %}
       <div class="author__bio p-note" itemprop="description">
         {{ author.bio | markdownify }}
       </div>
-    {% endif %}   
+    {% endif %}
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">{{ site.data.ui-text[page.locale].follow_label | remove: ":" | default: "Follow" }}</button>
+    <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</button>
     <ul class="author__urls social-icons">
       {% if author.location %}
-              <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
           <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">{{ author.location }}</span>
-        </li>     
+        </li>
       {% endif %}
 
       {% if author.links %}
@@ -44,7 +44,7 @@
       {% if author.uri %}
         <li>
           <a href="{{ author.uri }}" itemprop="url" rel="me">
-            <i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[page.locale].website_label | default: "Website" }}</span>
+            <i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</span>
           </a>
         </li>
       {% endif %}
@@ -53,7 +53,7 @@
         <li>
           <a href="mailto:{{ author.email }}" rel="me" class="u-email">
             <meta itemprop="email" content="{{ author.email }}" />
-            <i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[page.locale].email_label | default: "Email" }}</span>
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</span>
           </a>
         </li>
       {% endif %}
@@ -91,7 +91,7 @@
       {% if author.linkedin %}
         <li>
           <a href="https://www.linkedin.com/in/{{ author.linkedin }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span>
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span>
           </a>
         </li>
       {% endif %}
@@ -265,7 +265,6 @@
         <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"  itemprop="sameAs" rel="nofollow noopener noreferrer me">
           <i class="fab fa-fw fa-wikipedia-w" aria-hidden="true"></i><span class="label">Wikipedia</span></a></li>
       {% endif %}
-          {% include author-profile-custom-links.html %}
     </ul>
   </div>
 </div>

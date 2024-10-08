@@ -12,7 +12,7 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: "list" }}__item">
+<div class="{{ include.type | default: 'list' }}__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
@@ -22,7 +22,7 @@
           {% else %}
             "{{ teaser | relative_path }}"
           {% endif %}
-          alt="">
+          alt="talks">
       </div>
     {% endif %}
     <h2 class="archive__item-title" itemprop="headline">
