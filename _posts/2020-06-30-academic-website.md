@@ -79,7 +79,7 @@ We've told GitHub that this repository is for our website, so now it's time to s
 Since we're going to host our website on GitHub, you'll need to make sure you have [Git](https://git-scm.com/) installed. Git is a version control system designed to let teams of programmers collaborate on projects seamlessly. For us, it's just going to be the way that we upload files for our webpage to GitHub. You can download Git from the [official downloads page](https://git-scm.com/downloads), but there are a couple of easier ways. If you're on MacOS, you can install Git via the Xcode Command Line Tools by running
 
 ```bash
-xcode-select --install
+sudo apt install git
 ```
 
 This has the advantage of also installing a Ruby development environment, which we'll need later. If you're on Windows, you should download [Git Bash](https://gitforwindows.org/). While the Git you'll get from the official website will work just fine, Git Bash emulates a Unix terminal, meaning that you'll use Unix commands instead of the Windows commands you'd use in `cmd.exe`. Why is this useful? I use MacOS and Linux, so this tutorial is written from that perspective. Beyond my laziness in not providing the equivalent Windows commands alongside the Unix ones, most Git related information you'll find online at places like [Stack Overflow](https://stackoverflow.com/questions/tagged/git) will be written for a Unix audience. By using Git Bash, you'll be able to follow any advice you find and not have to translate it into Windows commands. Most (all??) Linux distributions ship with Git, so you should be good to go if you're using Linux.
@@ -94,7 +94,7 @@ Find the green Clone or Download button on the right side of your repository's p
 
 Once you've done that, open a terminal and navigate to where you want your website's folder to live. I keep mine at the top level of my Dropbox, so I would type
 
-```bash
+```console
 cd ~/Dropbox
 ```
 
@@ -105,12 +105,14 @@ Do this by typing
 ```bash
 git clone https://github.com/<yourusername>/<yourusername>.github.io.git
 ```
+{: .no-copy}
 
 and running it. This will create a folder called `<yourusername>.github.io`, which is honestly kind of clunky and not instantly informative when you're scanning through your files. To give it a more informative name e.g, Website, run
 
 ```bash
 git clone https://github.com/<yourusername>/<yourusername>.github.io.git Website
 ```
+{: .no-copy}
 
 Adding `Website` at the end will clone the GitHub repo into a folder called 'Website' instead of `<yourusername>.github.io`.
 
@@ -193,10 +195,19 @@ Once we upload our modified files to GitHub (and tell GitHub to turn them into a
 To preview your website locally, you'll need to install Jekyll on your computer. The easiest way to do this is with [Bundler](https://bundler.io/). Bundler is a package manager for Ruby, which is the programming language that Jekyll is written in. This means that we need a full Ruby development environment to get Jekyll working to run our website locally. If you're on Windows, [RubyInstaller](https://rubyinstaller.org/) will give you everything you need. If you're on MacOS, your computer comes with Ruby, but not the development headers required for Bundler to work. If you installed Git via the Xcode Command Line tools earlier, you're good to go here. If not, you can install Ruby Ruby via [Homebrew](https://brew.sh) with
 
 ```bash
-brew install ruby
+sudo apt-get install ruby-full build-essential zlib1g-dev
 ```
 
 If you're on Linux, just install Ruby via your package manager. Once that's taken care of, it's time to install Bundler. Do so by running
+
+set up a gem installation directory for your user account. The following commands will add environment variables to your ~/.bashrc file to configure the gem installation path:
+
+```terminal
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
 
 ```bash
 gem install bundler
@@ -371,6 +382,7 @@ and then push using the remote name
 Your repo on github is the "remote" that your local Git needs access to. To fix this error, we just need to tell Git where to find the remote
 
 ```bash
+
 git remote add origin https://github.com/<yourusername>/<yourusername>.github.io.git
 git push -u origin master
 ```

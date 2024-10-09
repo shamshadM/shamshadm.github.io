@@ -118,6 +118,7 @@ git add _pages/software.md _data/navigation.yml
 git commit -m "add software page"
 git push
 ```
+{: .no-copy}
 
 If you followed the guide on [uploading changes to GitHub]({{ site.baseurl }}{% post_url 2020-06-30-academic-website %}#uploading-changes-to-github) in my post on [making an academic website]({{ site.baseurl }}{% post_url 2020-06-30-academic-website %}), all of the above code should run smoothly and in a few minutes you'll have a new page on your website.
 
