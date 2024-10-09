@@ -145,7 +145,7 @@
   
     // Add copy button for <pre> blocks
     var copyText = function (text) {
-      if (document.queryCommandEnabled("copy") && navigator.clipboard) {
+      if (document.getSelection("copy") && navigator.clipboard) {
         navigator.clipboard.writeText(text).then(
           () => true,
           () => console.error("Failed to copy text to clipboard: " + text)
@@ -158,7 +158,7 @@
         textarea.className = "clipboard-helper";
         textarea.style[isRTL ? "right" : "left"] = "-9999px";
         // Move element to the same position vertically
-        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        var yPosition = window.scrollY || document.documentElement.scrollTop;
         textarea.style.top = yPosition + "px";
   
         textarea.setAttribute("readonly", "");

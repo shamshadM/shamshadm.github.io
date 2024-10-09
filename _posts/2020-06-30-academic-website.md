@@ -39,6 +39,7 @@ In this tutorial, I use a couple of conventions to describe computer code and th
 ```
 highlighted code blocks like this
 ```
+{: .no-copy}
 
 with this icon <i class="fa fa-code" aria-hidden="true"></i> in the top right corner. These can denote either code you should enter and run, or the output of running a command. I will clearly state which of these options applies in any given case. Sometimes you will also see `inline code` like this, and again I'll note whether these represent code you should run, or the output of code.
 
