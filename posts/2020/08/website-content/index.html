@@ -21,7 +21,7 @@
    <meta name="twitter:image" content="https://shamshad.in/posts/website-content/preview.png">
    <meta name="twitter:creator" content="@DrShamshadM">
  <meta property="article:published_time" content="2020-08-07T00:00:00+05:30">
- <meta property="article:modified_time" content="2024-10-06T20:53:46+05:30">
+ <meta property="article:modified_time" content="2024-10-09T21:30:54+05:30">
 <link rel="canonical" href="https://shamshad.in/posts/2020/08/website-content/">
 <!-- end _includes/seo.html -->
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed">
@@ -92,7 +92,7 @@
 <meta name="twitter:site" content="@DrShamshadM" />
 <meta name="twitter:creator" content="@DrShamshadM" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-10-06T20:53:46+05:30","datePublished":"2020-08-07T00:00:00+05:30","description":"One thing I haven’t covered in my previous posts on creating and customizing an academic website is how to actually add content to your site. You know, the stuff that’s the reason why people go to your website in the first place? If you’ve followed those guides, your website should be professional looking and already feeling a little bit different from the stock template. However, adding new pages or tweaking the existing pages can be a little intimidating, and I realized I should probably walk through how to do so. Luckily Jekyll’s use of Markdown makes it really easy to add new content!","headline":"Adding Content to an Academic Website","mainEntityOfPage":{"@type":"WebPage","@id":"https://shamshad.in/posts/2020/08/website-content/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://shamshad.in/images/favicon/site-treaser.webp"},"name":"M. Shamshad"},"url":"https://shamshad.in/posts/2020/08/website-content/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-10-09T21:30:54+05:30","datePublished":"2020-08-07T00:00:00+05:30","description":"One thing I haven’t covered in my previous posts on creating and customizing an academic website is how to actually add content to your site. You know, the stuff that’s the reason why people go to your website in the first place? If you’ve followed those guides, your website should be professional looking and already feeling a little bit different from the stock template. However, adding new pages or tweaking the existing pages can be a little intimidating, and I realized I should probably walk through how to do so. Luckily Jekyll’s use of Markdown makes it really easy to add new content!","headline":"Adding Content to an Academic Website","mainEntityOfPage":{"@type":"WebPage","@id":"https://shamshad.in/posts/2020/08/website-content/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://shamshad.in/images/favicon/site-treaser.webp"},"name":"M. Shamshad"},"url":"https://shamshad.in/posts/2020/08/website-content/"}</script>
 <!-- End Jekyll SEO tag -->
  </head>
  <body class="layout--single" dir="ltr">
@@ -208,7 +208,7 @@
    <meta itemprop="headline" content="Adding Content to an Academic Website">
    <meta itemprop="description" content="One thing I haven’t covered in my previous posts on creating and customizing an academic website is how to actually add content to your site. You know, the stuff that’s the reason why people go to your website in the first place? If you’ve followed those guides, your website should be professional looking and already feeling a little bit different from the stock template. However, adding new pages or tweaking the existing pages can be a little intimidating, and I realized I should probably walk through how to do so. Luckily Jekyll’s use of Markdown makes it really easy to add new content!">
    <meta itemprop="datePublished" content="2020-08-07T00:00:00+05:30">
-   <meta itemprop="dateModified" content="2024-10-06T20:53:46+05:30">
+   <meta itemprop="dateModified" content="2024-10-09T21:30:54+05:30">
    <div class="page__inner-wrap">
       <header>
          <h1 id="page-title" class="page__title" itemprop="headline">
@@ -324,7 +324,7 @@
 <p>Again, you can check out the current version of this file for my site at my <a href="https://github.com/jayrobwilliams/jayrobwilliams.github.io/blob/master/_data/navigation.yml">GitHub</a> if you want. If I’ve changed anything in the navigation menu since I wrote this post, those changes will be reflected there.</p>
 <p>You’ll also notice that the Guide link is no longer there in my <code class="language-plaintext highlighter-rouge">_data/navigation.yml</code>. Removing elements from this file drops them from the navigation menu, so if there are any other pages in the template you don’t plan to use, go ahead and remove them now.</p>
 <p>Once you’re happy with your new page, it’s time to tell git about them, and then upload them to GitHub. You can do this with</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add _pages/software.md _data/navigation.yml
+<div class="language-bash no-copy highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add _pages/software.md _data/navigation.yml
 git commit <span class="nt">-m</span> <span class="s2">"add software page"</span>
 git push
 </code></pre></div></div>
@@ -400,7 +400,7 @@ git push
       <a href="/categories/#website" class="page__taxonomy-item p-category" rel="tag">website</a>
     </span>
  </p>
- <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-10-06">October 6, 2024</time></p>
+ <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-10-09">October 9, 2024</time></p>
      </footer>
      <section class="page__share">
  <h4 class="page__share-title">Share on</h4>
@@ -494,21 +494,6 @@ git push
    <div id="footer" class="page__footer">
      <footer>
         <!-- start custom footer snippets -->
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: {
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    },
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
-</script>
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/13.1.1/math.js" integrity="sha512-fMI/ndUubOcpzblrAaOFszYIE2iDKua+Cxg9dZp3cAkhsRWEHHbKtFCElHEQ50viX502yj7nFEEcxq2SOTNrIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- end custom head snippets -->
 <!-- end custom footer snippets -->
        <div class="page__footer-follow">

@@ -21,7 +21,7 @@
    <meta name="twitter:image" content="https://shamshad.in/posts/creating-website/preview.png">
    <meta name="twitter:creator" content="@DrShamshadM">
  <meta property="article:published_time" content="2020-06-30T00:00:00+05:30">
- <meta property="article:modified_time" content="2024-10-06T20:53:46+05:30">
+ <meta property="article:modified_time" content="2024-10-09T21:30:54+05:30">
 <link rel="canonical" href="https://shamshad.in/posts/2020/06/academic-website/">
 <!-- end _includes/seo.html -->
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed">
@@ -92,7 +92,7 @@
 <meta name="twitter:site" content="@DrShamshadM" />
 <meta name="twitter:creator" content="@DrShamshadM" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-10-06T20:53:46+05:30","datePublished":"2020-06-30T00:00:00+05:30","description":"If you’re an academic, you need a website. Obviously I agree with this since you’re reading this on my website, but if you don’t have one, you should get one. Most universities these days provide a free option, usually powered by WordPress (both WashU and UNC use WordPress for their respective offerings). While these sites are quick to set up and come with the prestige of a .edu URL, they have several drawbacks that have been extensively written on.","headline":"Building an Academic Website","mainEntityOfPage":{"@type":"WebPage","@id":"https://shamshad.in/posts/2020/06/academic-website/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://shamshad.in/images/favicon/site-treaser.webp"},"name":"M. Shamshad"},"url":"https://shamshad.in/posts/2020/06/academic-website/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-10-09T21:30:54+05:30","datePublished":"2020-06-30T00:00:00+05:30","description":"If you’re an academic, you need a website. Obviously I agree with this since you’re reading this on my website, but if you don’t have one, you should get one. Most universities these days provide a free option, usually powered by WordPress (both WashU and UNC use WordPress for their respective offerings). While these sites are quick to set up and come with the prestige of a .edu URL, they have several drawbacks that have been extensively written on.","headline":"Building an Academic Website","mainEntityOfPage":{"@type":"WebPage","@id":"https://shamshad.in/posts/2020/06/academic-website/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://shamshad.in/images/favicon/site-treaser.webp"},"name":"M. Shamshad"},"url":"https://shamshad.in/posts/2020/06/academic-website/"}</script>
 <!-- End Jekyll SEO tag -->
  </head>
  <body class="layout--single" dir="ltr">
@@ -208,7 +208,7 @@
    <meta itemprop="headline" content="Building an Academic Website">
    <meta itemprop="description" content="If you’re an academic, you need a website. Obviously I agree with this since you’re reading this on my website, but if you don’t have one, you should get one. Most universities these days provide a free option, usually powered by WordPress (both WashU and UNC use WordPress for their respective offerings). While these sites are quick to set up and come with the prestige of a .edu URL, they have several drawbacks that have been extensively written on.">
    <meta itemprop="datePublished" content="2020-06-30T00:00:00+05:30">
-   <meta itemprop="dateModified" content="2024-10-06T20:53:46+05:30">
+   <meta itemprop="dateModified" content="2024-10-09T21:30:54+05:30">
    <div class="page__inner-wrap">
       <header>
          <h1 id="page-title" class="page__title" itemprop="headline">
@@ -297,7 +297,7 @@ If you’re a junior scholar, having your own personal webpage is even more impo
 <p><img src="/images/posts/creating-website/zoolander.gif" alt="" class="align-center"></p>
 <h2 id="git">Git</h2>
 <p>Since we’re going to host our website on GitHub, you’ll need to make sure you have <a href="https://git-scm.com/">Git</a> installed. Git is a version control system designed to let teams of programmers collaborate on projects seamlessly. For us, it’s just going to be the way that we upload files for our webpage to GitHub. You can download Git from the <a href="https://git-scm.com/downloads">official downloads page</a>, but there are a couple of easier ways. If you’re on MacOS, you can install Git via the Xcode Command Line Tools by running</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xcode-select <span class="nt">--install</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>git
 </code></pre></div></div>
 <p>This has the advantage of also installing a Ruby development environment, which we’ll need later. If you’re on Windows, you should download <a href="https://gitforwindows.org/">Git Bash</a>. While the Git you’ll get from the official website will work just fine, Git Bash emulates a Unix terminal, meaning that you’ll use Unix commands instead of the Windows commands you’d use in <code class="language-plaintext highlighter-rouge">cmd.exe</code>. Why is this useful? I use MacOS and Linux, so this tutorial is written from that perspective. Beyond my laziness in not providing the equivalent Windows commands alongside the Unix ones, most Git related information you’ll find online at places like <a href="https://stackoverflow.com/questions/tagged/git">Stack Overflow</a> will be written for a Unix audience. By using Git Bash, you’ll be able to follow any advice you find and not have to translate it into Windows commands. Most (all??) Linux distributions ship with Git, so you should be good to go if you’re using Linux.</p>
 <p>Now that you’ve got Git, you can download the files that will make up your website to your compute. To do that, we’ll <em>clone</em> the repository from GitHub to our computer.</p>
@@ -307,14 +307,14 @@ If you’re a junior scholar, having your own personal webpage is even more impo
 <p>Find the green Clone or Download button on the right side of your repository’s page (highlighted in green below). When you click it, a dialog will pop up that contains the URL you will use to clone your repository to your computer. Click the clipboard icon to the right, and the URL will be copied to your clipboard.</p>
 <p><img src="/images/posts/creating-website/clone.png" alt=""></p>
 <p>Once you’ve done that, open a terminal and navigate to where you want your website’s folder to live. I keep mine at the top level of my Dropbox, so I would type</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/Dropbox
-</code></pre></div></div>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">cd ~/Dropbox
+</span></code></pre></div></div>
 <p>to navigate there. Use the <code class="language-plaintext highlighter-rouge">pwd</code> command to verify you’re in the right place; if you’re also putting your website at the top level of your dropbox, the output should be <code class="language-plaintext highlighter-rouge">/Users/&lt;yourusername&gt;/Dropbox/</code>. Now it’s time to clone our GitHub repo to our computer and create our local repo.</p>
 <p>Do this by typing</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/&lt;yourusername&gt;/&lt;yourusername&gt;.github.io.git
+<div class="language-bash no-copy highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/&lt;yourusername&gt;/&lt;yourusername&gt;.github.io.git
 </code></pre></div></div>
 <p>and running it. This will create a folder called <code class="language-plaintext highlighter-rouge">&lt;yourusername&gt;.github.io</code>, which is honestly kind of clunky and not instantly informative when you’re scanning through your files. To give it a more informative name e.g, Website, run</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/&lt;yourusername&gt;/&lt;yourusername&gt;.github.io.git Website
+<div class="language-bash no-copy highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/&lt;yourusername&gt;/&lt;yourusername&gt;.github.io.git Website
 </code></pre></div></div>
 <p>Adding <code class="language-plaintext highlighter-rouge">Website</code> at the end will clone the GitHub repo into a folder called ‘Website’ instead of <code class="language-plaintext highlighter-rouge">&lt;yourusername&gt;.github.io</code>.</p>
 <h1 id="making-it-yours">Making it yours</h1>
@@ -386,9 +386,15 @@ If you’re a junior scholar, having your own personal webpage is even more impo
 <h2 id="previewing-your-website">Previewing your website</h2>
 <p>Once we upload our modified files to GitHub (and tell GitHub to turn them into a website, which we’ll cover below), they’re out there on the internet for everyone to see. If you’re like me, you’ll make a lot of mistakes when working on your website. There’s no need to broadcast all of those mistakes to the world, and we can avoid this very easily by previewing our website locally. What this means is building the site from the various <code class="language-plaintext highlighter-rouge">.md</code> files, rendering it to HTML, and then viewing it. We can do all of that on our computer without ever having to put it online.</p>
 <p>To preview your website locally, you’ll need to install Jekyll on your computer. The easiest way to do this is with <a href="https://bundler.io/">Bundler</a>. Bundler is a package manager for Ruby, which is the programming language that Jekyll is written in. This means that we need a full Ruby development environment to get Jekyll working to run our website locally. If you’re on Windows, <a href="https://rubyinstaller.org/">RubyInstaller</a> will give you everything you need. If you’re on MacOS, your computer comes with Ruby, but not the development headers required for Bundler to work. If you installed Git via the Xcode Command Line tools earlier, you’re good to go here. If not, you can install Ruby Ruby via <a href="https://brew.sh">Homebrew</a> with</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>ruby
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>ruby-full build-essential zlib1g-dev
 </code></pre></div></div>
 <p>If you’re on Linux, just install Ruby via your package manager. Once that’s taken care of, it’s time to install Bundler. Do so by running</p>
+<p>set up a gem installation directory for your user account. The following commands will add environment variables to your ~/.bashrc file to configure the gem installation path:</p>
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">echo '#</span><span class="w"> </span>Install Ruby Gems to ~/gems<span class="s1">' &gt;&gt; ~/.bashrc
+</span><span class="gp">echo 'export GEM_HOME="$</span><span class="s1">HOME/gems"'</span> <span class="o">&gt;&gt;</span> ~/.bashrc
+<span class="gp">echo 'export PATH="$</span>HOME/gems/bin:<span class="nv">$PATH</span><span class="s2">"' &gt;&gt; ~/.bashrc
+</span><span class="go">source ~/.bashrc
+</span></code></pre></div></div>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>bundler
 </code></pre></div></div>
 <p>in a terminal. If you’ve navigated away from the directory where your website is located (which is <code class="language-plaintext highlighter-rouge">~/Dropbox/Website</code> for me), head back there now. Do this with</p>
@@ -508,7 +514,8 @@ and then push using the remote name
     git push &lt;name&gt;
 </code></pre></div></div>
 <p>Your repo on github is the “remote” that your local Git needs access to. To fix this error, we just need to tell Git where to find the remote</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin https://github.com/&lt;yourusername&gt;/&lt;yourusername&gt;.github.io.git
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+git remote add origin https://github.com/&lt;yourusername&gt;/&lt;yourusername&gt;.github.io.git
 git push <span class="nt">-u</span> origin master
 </code></pre></div></div>
 <p>The next step is to go to GitHub and check our your changed file. Head back to your repository (https://github.com/&lt;yourusername&gt;/&lt;yourusername&gt;.github.io, as a reminder) and click the commits button at the bottom left (highlighted in green below).</p>
@@ -571,7 +578,7 @@ git push
       <a href="/categories/#website" class="page__taxonomy-item p-category" rel="tag">website</a>
     </span>
  </p>
- <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-10-06">October 6, 2024</time></p>
+ <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-10-09">October 9, 2024</time></p>
      </footer>
      <section class="page__share">
  <h4 class="page__share-title">Share on</h4>
@@ -665,21 +672,6 @@ git push
    <div id="footer" class="page__footer">
      <footer>
         <!-- start custom footer snippets -->
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: {
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    },
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
-</script>
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/13.1.1/math.js" integrity="sha512-fMI/ndUubOcpzblrAaOFszYIE2iDKua+Cxg9dZp3cAkhsRWEHHbKtFCElHEQ50viX502yj7nFEEcxq2SOTNrIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- end custom head snippets -->
 <!-- end custom footer snippets -->
        <div class="page__footer-follow">
