@@ -37,4 +37,5 @@ group :jekyll_plugins do
   gem 'jekyll-gzip'
   gem 'jekyll-brotli'
   gem 'jemoji'
+  gem 'puma'
 end
