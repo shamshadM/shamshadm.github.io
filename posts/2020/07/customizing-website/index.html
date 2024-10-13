@@ -1,244 +1,64 @@
-<!doctype html>
-<html lang="en-US" class="no-js">
- <head>
-   <meta charset="utf-8">
-<!-- begin _includes/seo.html --><title>Customizing an Academic Website | M. Shamshad</title>
-<meta name="description" content="This is a followup to my previous post on creating an academic website. If you’ve followed that guide, you should have a website that’s professional-looking and informative, but it’s probably lacking something to really make it feel like your own. There are an infinite number of ways you could customize the academicpages template (many of them far, far beyond my abilities) but I’m going to walk you through the process I used to start tweaking my website. The goal here isn’t to tell you how you should personalize your website, but to give you the tools to learn how to implement whatever changes you want to make.">
- <meta name="author" content="M. Shamshad">
- <meta property="article:author" content="M. Shamshad">
-<meta property="og:type" content="article">
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="M. Shamshad">
-<meta property="og:title" content="Customizing an Academic Website">
-<meta property="og:url" content="https://shamshad.in/posts/2020/07/customizing-website/">
- <meta property="og:description" content="This is a followup to my previous post on creating an academic website. If you’ve followed that guide, you should have a website that’s professional-looking and informative, but it’s probably lacking something to really make it feel like your own. There are an infinite number of ways you could customize the academicpages template (many of them far, far beyond my abilities) but I’m going to walk you through the process I used to start tweaking my website. The goal here isn’t to tell you how you should personalize your website, but to give you the tools to learn how to implement whatever changes you want to make.">
- <meta property="og:image" content="https://shamshad.in/posts/customizing-website/preview.png">
- <meta name="twitter:site" content="@DrShamshadM">
- <meta name="twitter:title" content="Customizing an Academic Website">
- <meta name="twitter:description" content="This is a followup to my previous post on creating an academic website. If you’ve followed that guide, you should have a website that’s professional-looking and informative, but it’s probably lacking something to really make it feel like your own. There are an infinite number of ways you could customize the academicpages template (many of them far, far beyond my abilities) but I’m going to walk you through the process I used to start tweaking my website. The goal here isn’t to tell you how you should personalize your website, but to give you the tools to learn how to implement whatever changes you want to make.">
- <meta name="twitter:url" content="https://shamshad.in/posts/2020/07/customizing-website/">
-   <meta name="twitter:card" content="summary_large_image">
-   <meta name="twitter:image" content="https://shamshad.in/posts/customizing-website/preview.png">
-   <meta name="twitter:creator" content="@DrShamshadM">
- <meta property="article:published_time" content="2020-07-06T00:00:00+05:30">
- <meta property="article:modified_time" content="2024-10-06T20:53:46+05:30">
-<link rel="canonical" href="https://shamshad.in/posts/2020/07/customizing-website/">
-<!-- end _includes/seo.html -->
-<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed">
-<!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr --><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script async>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-  window.enable_copy_code_button = true;
-</script>
-<!-- For all browsers -->
-<link
-  rel="stylesheet"
-  href="/assets/css/main.css"
-  id="theme_source"
-/>
-<link
-  rel="stylesheet alternate"
-  href="/assets/css/mainDark.css"
-  id="theme_source_2"
-/>
-<script  async>
-  let theme = sessionStorage.getItem("theme");
-  if (theme === "dark") {
-    sessionStorage.setItem("theme", "dark");
-    node1 = document.getElementById("theme_source");
-    node2 = document.getElementById("theme_source_2");
-    node1.setAttribute("rel", "stylesheet alternate");
-    node2.setAttribute("rel", "stylesheet");
-  } else {
-    sessionStorage.setItem("theme", "light");
-  }
-</script>
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
-<!-- start custom head snippets -->			   
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="default" />
-<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png?v=565802">
-<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon-76x76.png?v=565802">
-<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-touch-icon-120x120.png?v=565802">
-<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon-152x152.png?v=565802">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-180x180.png?v=565802">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=565802">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=565802">
-<link rel="manifest" href="/images/favicon/site.webmanifest?v=565802">
-<link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=565802" color="#00a7ff">
-<link rel="shortcut icon" href="/images/favicon/favicon.ico?v=565802">
-<meta name="apple-mobile-web-app-title" content="SM-Web">
-<meta name="application-name" content="SM-Web">
-<meta name="msapplication-TileColor" content="#00a300">
-<meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=565802">
-<meta name="theme-color" content="#ffffff">
-<!-- SEO tags -->
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Customizing an Academic Website | M. Shamshad</title>
-<meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Customizing an Academic Website" />
-<meta name="author" content="M. Shamshad" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="This is a followup to my previous post on creating an academic website. If you’ve followed that guide, you should have a website that’s professional-looking and informative, but it’s probably lacking something to really make it feel like your own. There are an infinite number of ways you could customize the academicpages template (many of them far, far beyond my abilities) but I’m going to walk you through the process I used to start tweaking my website. The goal here isn’t to tell you how you should personalize your website, but to give you the tools to learn how to implement whatever changes you want to make." />
-<meta property="og:description" content="This is a followup to my previous post on creating an academic website. If you’ve followed that guide, you should have a website that’s professional-looking and informative, but it’s probably lacking something to really make it feel like your own. There are an infinite number of ways you could customize the academicpages template (many of them far, far beyond my abilities) but I’m going to walk you through the process I used to start tweaking my website. The goal here isn’t to tell you how you should personalize your website, but to give you the tools to learn how to implement whatever changes you want to make." />
-<link rel="canonical" href="https://shamshad.in/posts/2020/07/customizing-website/" />
-<meta property="og:url" content="https://shamshad.in/posts/2020/07/customizing-website/" />
-<meta property="og:site_name" content="M. Shamshad" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-07-06T00:00:00+05:30" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Customizing an Academic Website" />
-<meta name="twitter:site" content="@DrShamshadM" />
-<meta name="twitter:creator" content="@DrShamshadM" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-10-06T20:53:46+05:30","datePublished":"2020-07-06T00:00:00+05:30","description":"This is a followup to my previous post on creating an academic website. If you’ve followed that guide, you should have a website that’s professional-looking and informative, but it’s probably lacking something to really make it feel like your own. There are an infinite number of ways you could customize the academicpages template (many of them far, far beyond my abilities) but I’m going to walk you through the process I used to start tweaking my website. The goal here isn’t to tell you how you should personalize your website, but to give you the tools to learn how to implement whatever changes you want to make.","headline":"Customizing an Academic Website","mainEntityOfPage":{"@type":"WebPage","@id":"https://shamshad.in/posts/2020/07/customizing-website/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://shamshad.in/images/favicon/site-treaser.webp"},"name":"M. Shamshad"},"url":"https://shamshad.in/posts/2020/07/customizing-website/"}</script>
-<!-- End Jekyll SEO tag -->
- </head>
- <body class="layout--single" dir="ltr">
-   <nav class="skip-links">
- <ul>
-   <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
-   <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
-   <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
- </ul>
-</nav>
-<div class="masthead">
- <div class="masthead__inner-wrap">
-   <div class="masthead__menu">
-     <nav id="site-nav" class="greedy-nav">
-          <a class="site-logo" href="/"><img src="/images/favicon/site-treaser.webp" alt="M. Shamshad"></a>
-        <a class="site-title" href="/">
-          M. Shamshad
-        </a>
-       <ul class="visible-links">
-<li class="masthead__menu-item">
-              <a href="/about/">About</a>
-           </li>
-<li class="masthead__menu-item">
-              <a href="/teaching/">Teaching</a>
-           </li>
-<li class="masthead__menu-item">
-              <a href="/publications/">Publications</a>
-           </li>
-<li class="masthead__menu-item">
-              <a href="/talks/">Talks</a>
-           </li>
-<li class="masthead__menu-item">
-              <a href="/research/">Research</a>
-           </li>
-<li class="masthead__menu-item">
-              <a href="/resume/">Resume</a>
-           </li>
-<li class="masthead__menu-item">
-              <a href="/tags/">Tags</a>
-           </li>
-<li class="masthead__menu-item">
-              <a href="/docs/Linux_tutorial/">Bioinfo</a>
-           </li>
+<!doctype html><html lang="en-US" class="no-js"><head><meta charset="utf-8"> <!-- begin _includes/seo.html --><title>Customizing an Academic Website | M. Shamshad</title><meta name="description" content="This is a followup to my previous post on creating an academic website. If you’ve followed that guide, you should have a website that’s professional-looking and informative, but it’s probably lacking something to really make it feel like your own. There are an infinite number of ways you could customize the academicpages template (many of them far, far beyond my abilities) but I’m going to walk you through the process I used to start tweaking my website. The goal here isn’t to tell you how you should personalize your website, but to give you the tools to learn how to implement whatever changes you want to make."><meta name="author" content="M. Shamshad"><meta property="article:author" content="M. Shamshad"><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta property="og:site_name" content="M. Shamshad"><meta property="og:title" content="Customizing an Academic Website"><meta property="og:url" content="https://shamshad.in/posts/2020/07/customizing-website/"><meta property="og:description" content="This is a followup to my previous post on creating an academic website. If you’ve followed that guide, you should have a website that’s professional-looking and informative, but it’s probably lacking something to really make it feel like your own. There are an infinite number of ways you could customize the academicpages template (many of them far, far beyond my abilities) but I’m going to walk you through the process I used to start tweaking my website. The goal here isn’t to tell you how you should personalize your website, but to give you the tools to learn how to implement whatever changes you want to make."><meta property="og:image" content="https://shamshad.in/posts/customizing-website/preview.png"><meta name="twitter:site" content="@DrShamshadM"><meta name="twitter:title" content="Customizing an Academic Website"><meta name="twitter:description" content="This is a followup to my previous post on creating an academic website. If you’ve followed that guide, you should have a website that’s professional-looking and informative, but it’s probably lacking something to really make it feel like your own. There are an infinite number of ways you could customize the academicpages template (many of them far, far beyond my abilities) but I’m going to walk you through the process I used to start tweaking my website. The goal here isn’t to tell you how you should personalize your website, but to give you the tools to learn how to implement whatever changes you want to make."><meta name="twitter:url" content="https://shamshad.in/posts/2020/07/customizing-website/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://shamshad.in/posts/customizing-website/preview.png"><meta name="twitter:creator" content="@DrShamshadM"><meta property="article:published_time" content="2020-07-06T00:00:00+05:30"><meta property="article:modified_time" content="2024-10-06T20:53:46+05:30"><link rel="canonical" href="https://shamshad.in/posts/2020/07/customizing-website/"> <!-- end _includes/seo.html --><link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed"> <!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr --><meta name="viewport" content="width=device-width, initial-scale=1.0"> <script defer> document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js '; window.enable_copy_code_button = true; </script> <!-- For all browsers --><link rel="stylesheet" href="/assets/css/main.css" id="theme_source" /><link rel="stylesheet alternate" href="/assets/css/mainDark.css" id="theme_source_2" /> <script async> let theme = sessionStorage.getItem("theme"); if (theme === "dark") { sessionStorage.setItem("theme", "dark"); node1 = document.getElementById("theme_source"); node2 = document.getElementById("theme_source_2"); node1.setAttribute("rel", "stylesheet alternate"); node2.setAttribute("rel", "stylesheet"); } else { sessionStorage.setItem("theme", "light"); } </script><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> <noscript><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript> <!-- start custom head snippets --><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="default" /><link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png?v=565802"><link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon-76x76.png?v=565802"><link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-touch-icon-120x120.png?v=565802"><link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon-152x152.png?v=565802"><link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-180x180.png?v=565802"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=565802"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=565802"><link rel="manifest" href="/images/favicon/site.webmanifest?v=565802"><link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=565802" color="#00a7ff"><link rel="shortcut icon" href="/images/favicon/favicon.ico?v=565802"><meta name="apple-mobile-web-app-title" content="SM-Web"><meta name="application-name" content="SM-Web"><meta name="msapplication-TileColor" content="#00a300"><meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=565802"><meta name="theme-color" content="#ffffff"> <!-- SEO tags --> <!-- Begin Jekyll SEO tag v2.8.0 --><title>Customizing an Academic Website | M. Shamshad</title><meta name="generator" content="Jekyll v4.3.4" /><meta property="og:title" content="Customizing an Academic Website" /><meta name="author" content="M. Shamshad" /><meta property="og:locale" content="en_US" /><meta name="description" content="This is a followup to my previous post on creating an academic website. If you’ve followed that guide, you should have a website that’s professional-looking and informative, but it’s probably lacking something to really make it feel like your own. There are an infinite number of ways you could customize the academicpages template (many of them far, far beyond my abilities) but I’m going to walk you through the process I used to start tweaking my website. The goal here isn’t to tell you how you should personalize your website, but to give you the tools to learn how to implement whatever changes you want to make." /><meta property="og:description" content="This is a followup to my previous post on creating an academic website. If you’ve followed that guide, you should have a website that’s professional-looking and informative, but it’s probably lacking something to really make it feel like your own. There are an infinite number of ways you could customize the academicpages template (many of them far, far beyond my abilities) but I’m going to walk you through the process I used to start tweaking my website. The goal here isn’t to tell you how you should personalize your website, but to give you the tools to learn how to implement whatever changes you want to make." /><link rel="canonical" href="https://shamshad.in/posts/2020/07/customizing-website/" /><meta property="og:url" content="https://shamshad.in/posts/2020/07/customizing-website/" /><meta property="og:site_name" content="M. Shamshad" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2020-07-06T00:00:00+05:30" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="Customizing an Academic Website" /><meta name="twitter:site" content="@DrShamshadM" /><meta name="twitter:creator" content="@DrShamshadM" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-10-06T20:53:46+05:30","datePublished":"2020-07-06T00:00:00+05:30","description":"This is a followup to my previous post on creating an academic website. If you’ve followed that guide, you should have a website that’s professional-looking and informative, but it’s probably lacking something to really make it feel like your own. There are an infinite number of ways you could customize the academicpages template (many of them far, far beyond my abilities) but I’m going to walk you through the process I used to start tweaking my website. The goal here isn’t to tell you how you should personalize your website, but to give you the tools to learn how to implement whatever changes you want to make.","headline":"Customizing an Academic Website","mainEntityOfPage":{"@type":"WebPage","@id":"https://shamshad.in/posts/2020/07/customizing-website/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://shamshad.in/images/favicon/site-treaser.webp"},"name":"M. Shamshad"},"url":"https://shamshad.in/posts/2020/07/customizing-website/"}</script> <!-- End Jekyll SEO tag --></head><body class="layout--single" dir="ltr"><nav class="skip-links"><ul>
+<li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+<li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+<li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+</ul></nav><div class="masthead"><div class="masthead__inner-wrap"><div class="masthead__menu"><nav id="site-nav" class="greedy-nav"> <a class="site-logo" href="/"><img src="/images/favicon/site-treaser.webp" alt="M. Shamshad"></a> <a class="site-title" href="/"> M. Shamshad </a><ul class="visible-links">
+<li class="masthead__menu-item"> <a href="/about/">About</a>
+</li>
+<li class="masthead__menu-item"> <a href="/teaching/">Teaching</a>
+</li>
+<li class="masthead__menu-item"> <a href="/publications/">Publications</a>
+</li>
+<li class="masthead__menu-item"> <a href="/talks/">Talks</a>
+</li>
+<li class="masthead__menu-item"> <a href="/research/">Research</a>
+</li>
+<li class="masthead__menu-item"> <a href="/resume/">Resume</a>
+</li>
+<li class="masthead__menu-item"> <a href="/tags/">Tags</a>
+</li>
+<li class="masthead__menu-item"> <a href="/docs/Linux_tutorial/">Bioinfo</a>
+</li>
 </ul>
-        <span class="fa-solid fa-moon toggle-switch" type="button" style="cursor: pointer;" aria-hidden="true" onclick="node1 = document.getElementById('theme_source');
-                 node2 = document.getElementById('theme_source_2');
-        if(node1.getAttribute('rel')=='stylesheet'){node1.setAttribute('rel', 'stylesheet alternate'); 
-            node2.setAttribute('rel', 'stylesheet');
-            sessionStorage.setItem('theme', 'dark');}
-            else{node2.setAttribute('rel', 'stylesheet alternate');
-            node1.setAttribute('rel', 'stylesheet');sessionStorage.setItem('theme', 'light');} 
-            return false;"></span>
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">Toggle menu</span>
-         <div class="navicon"></div>
-        </button>
-       <ul class="hidden-links hidden"></ul>
-     </nav>
-   </div>
- </div>
+<span class="fa-solid fa-moon toggle-switch" type="button" style="cursor: pointer;" aria-hidden="true" onclick="node1 = document.getElementById('theme_source'); node2 = document.getElementById('theme_source_2'); if(node1.getAttribute('rel')=='stylesheet'){node1.setAttribute('rel', 'stylesheet alternate'); node2.setAttribute('rel', 'stylesheet'); sessionStorage.setItem('theme', 'dark');} else{node2.setAttribute('rel', 'stylesheet alternate'); node1.setAttribute('rel', 'stylesheet');sessionStorage.setItem('theme', 'light');} return false;"></span> <button class="greedy-nav__toggle hidden" type="button"> <span class="visually-hidden">Toggle menu</span><div class="navicon"></div></button><ul class="hidden-links hidden"></ul></nav></div></div></div><div class="initial-content"><div id="main" role="main">
+<div class="sidebar sticky"><div itemscope itemtype="https://schema.org/Person" class="h-card">
+<div class="author__avatar"> <a href="https://shamshad.in/"> <img loading="eager" src="/images/profile.jpeg" alt="M. Shamshad" itemprop="image" class="u-photo"> </a>
 </div>
-   <div class="initial-content">
-<div id="main" role="main">
- <div class="sidebar sticky">
-<div itemscope itemtype="https://schema.org/Person" class="h-card">
- <div class="author__avatar">
-   <a href="https://shamshad.in/">
-    	<img loading="eager" src="/images/profile.jpeg" alt="M. Shamshad" itemprop="image" class="u-photo">
-   </a>
- </div>
- <div class="author__content">
-   <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="https://shamshad.in/" itemprop="url">M. Shamshad</a>
-   </h3>
-     <div class="author__bio p-note" itemprop="description">
-       <p>Plant Breeding &amp;&amp; Data Science</p>
-     </div>
- </div>
- <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-   <ul class="author__urls social-icons">
-       <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Ludhina, Punjab, India <img class="emoji" title=":india:" alt=":india:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ee-1f1f3.png" height="20" width="20"></span>
-       </li>
-       <li>
-          <a href="mailto:shamshad.rattan@gmail.com" rel="me" class="u-email">
-           <meta itemprop="email" content="shamshad.rattan@gmail.com">
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
-          </a>
-       </li>
-       <li>
-<a href="https://www.researchgate.net/profile/Mohd-Shamshad" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-          <i class="ai  ai-researchgate-square" aria-hidden="true"></i><span class="label">ResearchGate</span>
-        </a>
-     </li>
-       <li>
-          <a href="https://twitter.com/DrShamshadM" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
-          </a>
-       </li>
-       <li>
-          <a href="https://www.linkedin.com/in/dr-m-shamshad-58b4321b1" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span>
-          </a>
-       </li>
-     <li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&amp;hl=en" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-        <i class="ai ai-fw ai-google-scholar-square" aria-hidden="true"></i><span class="label">Google Scholar</span></a></li>
-   </ul>
- </div>
+<div class="author__content">
+<h3 class="author__name p-name" itemprop="name"> <a class="u-url" rel="me" href="https://shamshad.in/" itemprop="url">M. Shamshad</a>
+</h3>
+<div class="author__bio p-note" itemprop="description"><p>Plant Breeding &amp;&amp; Data Science</p></div>
 </div>
- </div>
- <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-   <meta itemprop="headline" content="Customizing an Academic Website">
-   <meta itemprop="description" content="This is a followup to my previous post on creating an academic website. If you’ve followed that guide, you should have a website that’s professional-looking and informative, but it’s probably lacking something to really make it feel like your own. There are an infinite number of ways you could customize the academicpages template (many of them far, far beyond my abilities) but I’m going to walk you through the process I used to start tweaking my website. The goal here isn’t to tell you how you should personalize your website, but to give you the tools to learn how to implement whatever changes you want to make.">
-   <meta itemprop="datePublished" content="2020-07-06T00:00:00+05:30">
-   <meta itemprop="dateModified" content="2024-10-06T20:53:46+05:30">
-   <div class="page__inner-wrap">
-      <header>
-         <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="https://shamshad.in/posts/2020/07/customizing-website/" itemprop="url">Customizing an Academic Website
-</a>
-         </h1>	      
- <p class="page__meta">
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-          8 minute read
-      </span>
- </p>
-       </header>
-     <section class="page__content" itemprop="text">
-         <aside class="sidebar__right ">
-           <nav class="toc">
-            <header><h4 class="nav__title">
-<i class="fas fa-file-alt"></i> On this page</h4></header>
-             <ul class="toc__menu">
+<div class="author__urls-wrapper"> <button class="btn btn--inverse">Follow</button><ul class="author__urls social-icons">
+<li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place"> <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Ludhina, Punjab, India <img class="emoji" title=":india:" alt=":india:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ee-1f1f3.png" height="20" width="20"></span>
+</li>
+<li> <a href="mailto:shamshad.rattan@gmail.com" rel="me" class="u-email"><meta itemprop="email" content="shamshad.rattan@gmail.com"> <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span> </a>
+</li>
+<li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" itemprop="sameAs" rel="nofollow noopener noreferrer me"> <i class="ai ai-researchgate-square" aria-hidden="true"></i><span class="label">ResearchGate</span> </a></li>
+<li> <a href="https://twitter.com/DrShamshadM" itemprop="sameAs" rel="nofollow noopener noreferrer me"> <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span> </a>
+</li>
+<li> <a href="https://www.linkedin.com/in/dr-m-shamshad-58b4321b1" itemprop="sameAs" rel="nofollow noopener noreferrer me"> <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span> </a>
+</li>
+<li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&amp;hl=en" itemprop="sameAs" rel="nofollow noopener noreferrer me"> <i class="ai ai-fw ai-google-scholar-square" aria-hidden="true"></i><span class="label">Google Scholar</span></a></li>
+</ul>
+</div>
+</div></div>
+<article class="page" itemscope itemtype="https://schema.org/CreativeWork"><meta itemprop="headline" content="Customizing an Academic Website">
+<meta itemprop="description" content="This is a followup to my previous post on creating an academic website. If you’ve followed that guide, you should have a website that’s professional-looking and informative, but it’s probably lacking something to really make it feel like your own. There are an infinite number of ways you could customize the academicpages template (many of them far, far beyond my abilities) but I’m going to walk you through the process I used to start tweaking my website. The goal here isn’t to tell you how you should personalize your website, but to give you the tools to learn how to implement whatever changes you want to make.">
+<meta itemprop="datePublished" content="2020-07-06T00:00:00+05:30">
+<meta itemprop="dateModified" content="2024-10-06T20:53:46+05:30">
+<div class="page__inner-wrap">
+<header><h1 id="page-title" class="page__title" itemprop="headline"> <a href="https://shamshad.in/posts/2020/07/customizing-website/" itemprop="url">Customizing an Academic Website </a>
+</h1>
+<p class="page__meta"> <span class="page__meta-readtime"> <i class="far fa-clock" aria-hidden="true"></i> 8 minute read </span></p></header><section class="page__content" itemprop="text"><aside class="sidebar__right "><nav class="toc"><header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header><ul class="toc__menu">
 <li><a href="#easier-on-the-eyes">Easier on the eyes</a></li>
 <li><a href="#fixing-fancy-icons">Fixing fancy icons</a></li>
 <li><a href="#adding-some-color">Adding some color</a></li>
 <li><a href="#pushing-buttons">Pushing buttons</a></li>
 <li><a href="#going-forward">Going forward</a></li>
-</ul>
-           </nav>
-         </aside>
-       <p>This is a followup to my previous post on <a href="/posts/2020/06/academic-website/">creating an academic website</a>. If you’ve followed that guide, you should have a website that’s professional-looking and informative, but it’s probably lacking <em>something</em> to really make it feel like your own. There are an infinite number of ways you could customize the <a href="https://academicpages.github.io/">academicpages template</a> (many of them far, far beyond my abilities) but I’m going to walk you through the process I used to start tweaking my website. The goal here isn’t to tell you how you should personalize your website, but to give you the tools to learn how to implement whatever changes you want to make.</p>
-<!--more-->
-<p>You’ll notice that the differences between my website and the template aren’t limited to my mug in the sidebar on the left. These differences are especially apparent if you compare my <a href="https://jayrobwilliams.com/publications/">publications</a> page with the <a href="https://academicpages.github.io/publications/">template’s</a>. You’ll notice on my page that article titles no longer link to separate pages and I’ve got fancy icons like <i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i> to link to my PDF copy and <i class="fa fa-fw fa-link" aria-hidden="true"></i> to link to the version of record.</p>
+</ul></nav></aside><p>This is a followup to my previous post on <a href="/posts/2020/06/academic-website/">creating an academic website</a>. If you’ve followed that guide, you should have a website that’s professional-looking and informative, but it’s probably lacking <em>something</em> to really make it feel like your own. There are an infinite number of ways you could customize the <a href="https://academicpages.github.io/">academicpages template</a> (many of them far, far beyond my abilities) but I’m going to walk you through the process I used to start tweaking my website. The goal here isn’t to tell you how you should personalize your website, but to give you the tools to learn how to implement whatever changes you want to make.</p>
+<!--more--><p>You’ll notice that the differences between my website and the template aren’t limited to my mug in the sidebar on the left. These differences are especially apparent if you compare my <a href="https://jayrobwilliams.com/publications/">publications</a> page with the <a href="https://academicpages.github.io/publications/">template’s</a>. You’ll notice on my page that article titles no longer link to separate pages and I’ve got fancy icons like <i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i> to link to my PDF copy and <i class="fa fa-fw fa-link" aria-hidden="true"></i> to link to the version of record.</p>
 <p>I’ve made several minor changes from the template to make my website feel a bit more like my own. These tweaks are varyingly difficult to accomplish, but they all involve a bit of trial and error. While academicpages is a great template, the accompanying documentation isn’t <em>particularly</em> useful if you want to make any changes that go beyond content into formatting. Thus, each new tweak I implement begins with something of a scavenger hunt.</p>
 <p>Essentially, you need to track down where in the source code of your website a variable is originally defined, and then edit it there. Luckily, RStudio makes this relative straightforward with its Find in Files function. You can access this special search from the Edit menu, or by pressing <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>c</kbd> on MacOS or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>c</kbd> otherwise. Once you’ve brought up the Find in Files dialog, enter the name of the variable you’re looking for in the ‘Find’ box and your website’s directory in the ‘Search in’ box (for me that’s <code class="language-plaintext highlighter-rouge">~/Dropbox/Website</code>).</p>
 <h1 id="easier-on-the-eyes">Easier on the eyes</h1>
@@ -342,15 +162,15 @@
 </code></pre></div></div>
 <p>The key parts are</p>
 <ul>
- <li>
+<li>
 <code class="language-plaintext highlighter-rouge">color: $link-color;</code>: use the site accent color for the text</li>
- <li>
+<li>
 <code class="language-plaintext highlighter-rouge">text-decoration: none !important;</code>: don’t underline the button text</li>
- <li>
+<li>
 <code class="language-plaintext highlighter-rouge">border: 1px solid;</code>: draw a one pixel border around the button</li>
- <li>
+<li>
 <code class="language-plaintext highlighter-rouge">border-color: $link-color;</code>: use the site accent color for the border</li>
- <li>
+<li>
 <code class="language-plaintext highlighter-rouge">border-radius: $border-radius;</code>: use a four pixel radius for the border (<code class="language-plaintext highlighter-rouge">$border-radius</code> is defined in <code class="language-plaintext highlighter-rouge">_sass/variables.scss</code>)</li>
 </ul>
 <p>To add a button to a page, you simply tack on <code class="language-plaintext highlighter-rouge">{: .btn--research}</code> after a link, like so</p>
@@ -359,173 +179,55 @@
 <h1 id="going-forward">Going forward</h1>
 <p>This is just a brief overview of the ways you can tweak your website from the base provided by the template. Let Google and Stack Overflow be your guides. There will be some trial and error, but the beauty of git is that even if you break something it’s easy to roll back to changes to when everything was working.</p>
 <p><img src="/images/posts/customizing-website/so.jpeg" alt="" width="50%" class="align-center"></p>
-<div class="footnotes" role="doc-endnotes">
- <ol>
-   <li id="fn:1" role="doc-endnote">
-     <p>You’ll notice that this button is <em>very</em> similar to the ones that the <a href="https://academic-demo.netlify.app/#publications">Hugo Academic theme</a> uses. Just because I don’t like the theme as a whole doesn’t mean there aren’t really elegant parts of it. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
-   </li>
- </ol>
+<div class="footnotes" role="doc-endnotes"><ol><li id="fn:1" role="doc-endnote"><p>You’ll notice that this button is <em>very</em> similar to the ones that the <a href="https://academic-demo.netlify.app/#publications">Hugo Academic theme</a> uses. Just because I don’t like the theme as a whole doesn’t mean there aren’t really elegant parts of it. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p></li></ol></div></section><footer class="page__meta"><p class="page__taxonomy"> <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong> <span itemprop="keywords"> <a href="/tags/#git" class="page__taxonomy-item p-category" rel="tag">git</a><span class="sep">, </span> <a href="/tags/#github" class="page__taxonomy-item p-category" rel="tag">github</a><span class="sep">, </span> <a href="/tags/#website" class="page__taxonomy-item p-category" rel="tag">website</a> </span></p>
+<p class="page__taxonomy"> <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong> <span itemprop="keywords"> <a href="/categories/#website" class="page__taxonomy-item p-category" rel="tag">website</a> </span></p>
+<p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-10-06">October 6, 2024</time></p></footer><section class="page__share"><h4 class="page__share-title">Share on</h4>
+<a href="https://twitter.com/intent/tweet?via=DrShamshadM&amp;text=Customizing+an+Academic+Website%20https%3A%2F%2Fshamshad.in%2Fposts%2F2020%2F07%2Fcustomizing-website%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a> <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fshamshad.in%2Fposts%2F2020%2F07%2Fcustomizing-website%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a> <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://shamshad.in/posts/2020/07/customizing-website/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a></section><nav class="pagination"> <a href="https://shamshad.in/posts/2020/06/academic-website/" class="pagination--pager" title="Building an Academic Website ">Previous</a> <a href="https://shamshad.in/posts/2020/08/website-content/" class="pagination--pager" title="Adding Content to an Academic Website ">Next</a></nav>
 </div>
-     </section>
-     <footer class="page__meta">
- <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
-    <span itemprop="keywords">
-      <a href="/tags/#git" class="page__taxonomy-item p-category" rel="tag">git</a><span class="sep">, </span>
-      <a href="/tags/#github" class="page__taxonomy-item p-category" rel="tag">github</a><span class="sep">, </span>
-      <a href="/tags/#website" class="page__taxonomy-item p-category" rel="tag">website</a>
-    </span>
- </p>
- <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
-    <span itemprop="keywords">
-      <a href="/categories/#website" class="page__taxonomy-item p-category" rel="tag">website</a>
-    </span>
- </p>
- <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-10-06">October 6, 2024</time></p>
-     </footer>
-     <section class="page__share">
- <h4 class="page__share-title">Share on</h4>
-  <a href="https://twitter.com/intent/tweet?via=DrShamshadM&amp;text=Customizing+an+Academic+Website%20https%3A%2F%2Fshamshad.in%2Fposts%2F2020%2F07%2Fcustomizing-website%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fshamshad.in%2Fposts%2F2020%2F07%2Fcustomizing-website%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://shamshad.in/posts/2020/07/customizing-website/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
-</section>
- <nav class="pagination">
-      <a href="https://shamshad.in/posts/2020/06/academic-website/" class="pagination--pager" title="Building an Academic Website
-">Previous</a>
-      <a href="https://shamshad.in/posts/2020/08/website-content/" class="pagination--pager" title="Adding Content to an Academic Website
-">Next</a>
- </nav>
-   </div>
-     <div class="page__comments">
-     <h4 class="page__comments-title">Leave a comment</h4>
-     <section id="disqus_thread"></section>
-</div>
- </article>
-<div class="page__related">
- <h2 class="page__related-title">You may also enjoy</h2>
- <div class="grid__wrapper">
-<div class="grid__item">
- <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-   <h2 class="archive__item-title" itemprop="headline">
-        <a href="https://shamshad.in/posts/2021/01/A-tutorial-on-Genome-Wide-Association-Studies/" rel="permalink">A tutorial on Genome-Wide Association Studies (GWAS) in Tassel (GUI)
-</a>
-   </h2>
-     <p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 
-	  3 minute read
-</p>
-        <p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-01-20T00:00:00+05:30">January 20, 2021</time></p>
-   <p class="archive__item-excerpt" itemprop="description"></p>
+<div class="page__comments">
+<h4 class="page__comments-title">Leave a comment</h4>
+<section id="disqus_thread"></section>
+</div></article><div class="page__related">
+<h2 class="page__related-title">You may also enjoy</h2>
+<div class="grid__wrapper">
+<div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2021/01/A-tutorial-on-Genome-Wide-Association-Studies/" rel="permalink">A tutorial on Genome-Wide Association Studies (GWAS) in Tassel (GUI) </a>
+</h2>
+<p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 3 minute read</p>
+<p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-01-20T00:00:00+05:30">January 20, 2021</time></p>
+<p class="archive__item-excerpt" itemprop="description"></p>
 <p>Genome-wide association studies (GWAS) increase their popularity among medical, biological, and social sciences to identify the association between single nucleotide polymorphisms and phenotypic traits. This tutorial aims to provide a guidelines for conducing genome wide analysis in Tassel.</p>
-
-      <!-- citation and icon code -->  
-	</article>
-</div>
-<div class="grid__item">
- <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-   <h2 class="archive__item-title" itemprop="headline">
-        <a href="https://shamshad.in/posts/2021/01/investigate-genetic-admixture-using-STRUCTURE-software/" rel="permalink">A tutorial on investigate genetic admixture using STRUCTURE software
-</a>
-   </h2>
-     <p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 
-	  3 minute read
-</p>
-        <p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-01-05T00:00:00+05:30">January 05, 2021</time></p>
-   <p class="archive__item-excerpt" itemprop="description"></p>
+<!-- citation and icon code --></article></div>
+<div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2021/01/investigate-genetic-admixture-using-STRUCTURE-software/" rel="permalink">A tutorial on investigate genetic admixture using STRUCTURE software </a>
+</h2>
+<p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 3 minute read</p>
+<p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-01-05T00:00:00+05:30">January 05, 2021</time></p>
+<p class="archive__item-excerpt" itemprop="description"></p>
 <p><strong>Structure Software</strong> is a freely available software package that one may use for rigorous investigation of <code class="language-plaintext highlighter-rouge">admixed individuals</code>; identification of <code class="language-plaintext highlighter-rouge">point of hybridization</code> and <code class="language-plaintext highlighter-rouge">migrants</code>; and estimate over all <code class="language-plaintext highlighter-rouge">structure</code> of a population using a commonly used genetic markers such as <code class="language-plaintext highlighter-rouge">SNPs</code> and <code class="language-plaintext highlighter-rouge">SSRs</code>. This software was developed by <strong>Pritchard Lab</strong> at <strong>Stanford University</strong> and can downloaded at this <a href="https://web.stanford.edu/group/pritchardlab/structure.html">link</a>.</p>
-
-      <!-- citation and icon code -->  
-	</article>
-</div>
-<div class="grid__item">
- <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-   <h2 class="archive__item-title" itemprop="headline">
-        <a href="https://shamshad.in/posts/2020/10/mapchart/" rel="permalink">Plot Genetic Linkage Maps using MapChart software
-</a>
-   </h2>
-     <p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 
-	  5 minute read
-</p>
-        <p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-10-10T00:00:00+05:30">October 10, 2020</time></p>
-   <p class="archive__item-excerpt" itemprop="description"></p>
-<p><strong>MapChart</strong> is a free software to plot publishing quality genetic linkage maps as well as QTLs. This software was developed at <strong>Wageningen University</strong> by <strong>Roeland E. Voorrips</strong>  and can be downloaded at this <a href="https://www.wur.nl/en/show/Mapchart.htm"> link </a>.</p>
-
-      <!-- citation and icon code -->  
-	</article>
-</div>
-<div class="grid__item">
- <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-   <h2 class="archive__item-title" itemprop="headline">
-        <a href="https://shamshad.in/posts/2020/09/scientific-paper/" rel="permalink">Online submission of a scientific paper, a guideline for beginners
-</a>
-   </h2>
-     <p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 
-	  5 minute read
-</p>
-        <p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-09-04T00:00:00+05:30">September 04, 2020</time></p>
-   <p class="archive__item-excerpt" itemprop="description"></p>
+<!-- citation and icon code --></article></div>
+<div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2020/10/mapchart/" rel="permalink">Plot Genetic Linkage Maps using MapChart software </a>
+</h2>
+<p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 5 minute read</p>
+<p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-10-10T00:00:00+05:30">October 10, 2020</time></p>
+<p class="archive__item-excerpt" itemprop="description"></p>
+<p><strong>MapChart</strong> is a free software to plot publishing quality genetic linkage maps as well as QTLs. This software was developed at <strong>Wageningen University</strong> by <strong>Roeland E. Voorrips</strong> and can be downloaded at this <a href="https://www.wur.nl/en/show/Mapchart.htm"> link </a>.</p>
+<!-- citation and icon code --></article></div>
+<div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2020/09/scientific-paper/" rel="permalink">Online submission of a scientific paper, a guideline for beginners </a>
+</h2>
+<p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 5 minute read</p>
+<p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-09-04T00:00:00+05:30">September 04, 2020</time></p>
+<p class="archive__item-excerpt" itemprop="description"></p>
 <p>There exist some definite gaps “from performing of an experiment to the formulation of a hypothesis”. It is not necessary that a person good at lab work must be an expert in scientific writing too.</p>
-
-      <!-- citation and icon code -->  
-	</article>
-</div>
- </div>
+<!-- citation and icon code --></article></div>
 </div>
 </div>
-   </div>
-   <div id="footer" class="page__footer">
-     <footer>
-        <!-- start custom footer snippets -->
-<!-- end custom head snippets -->
-<!-- end custom footer snippets -->
-       <div class="page__footer-follow">
- <ul class="social-icons">
-     <li><strong>Follow:</strong></li>
-         <li><a href="https://twitter.com/DrShamshadM" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
-         <li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&amp;hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar</a></li>
-         <li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" rel="nofollow noopener noreferrer"><i class="ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
-     <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
- </ul>
-</div>
+</div></div><div id="footer" class="page__footer"><footer> <!-- start custom footer snippets --> <!-- end custom head snippets --> <!-- end custom footer snippets --><div class="page__footer-follow"><ul class="social-icons">
+<li><strong>Follow:</strong></li>
+<li><a href="https://twitter.com/DrShamshadM" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+<li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&amp;hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar</a></li>
+<li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" rel="nofollow noopener noreferrer"><i class="ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
+<li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+</ul></div>
 <div class="page__footer-copyright">
 <img class="emoji" title=":copyright:" alt=":copyright:" src="https://github.githubassets.com/images/icons/emoji/unicode/00a9.png" height="20" width="20"> 2024 M. Shamshad. Proudly hosted by <a href="https://github.com/" rel="nofollow">GitHub</a> &amp; <a href="https://shamshadpbg.github.io/" rel="prev:"><i class="ai ai-academia"></i>mmTheme</a>.</div>
-<link rel="preload" href="/assets/js/mermaid.min.js" as="script">
-<script src="/assets/js/mermaid.min.js" async></script>
-     </footer>
-   </div>
-<link rel="preload" href="/assets/js/main.min.js" as="script">
-  <script src="/assets/js/main.min.js" async></script>
-  <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H8020H63F5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
- gtag('config', 'G-H8020H63F5',
-    {
-      'optimize_id': 'true',
-      'anonymize_ip': 'true', 
-    });
-</script>
-  <script type="text/javascript">
-  	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-  	var disqus_shortname = 'shamshad';
-  	/* * * DON'T EDIT BELOW THIS LINE * * */
-  	(function() {
-  		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  	})();
-  	/* * * DON'T EDIT BELOW THIS LINE * * */
-  	(function () {
-  		var s = document.createElement('script'); s.async = true;
-  		s.type = 'text/javascript';
-  		s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-  		(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-  	}());
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
- </body>
-</html>
+<link rel="preload" href="/assets/js/mermaid.min.js" defer as="script"> <script defer src="/assets/js/mermaid.min.js"></script></footer></div><link defer rel="preload" href="/assets/js/main.min.js" as="script"> <script defer src="/assets/js/main.min.js" async></script> <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> --> <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8020H63F5"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-H8020H63F5', { 'optimize_id': 'true', 'anonymize_ip': 'true', }); </script> <script type="text/javascript"> /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */ var disqus_shortname = 'shamshad'; /* * * DON'T EDIT BELOW THIS LINE * * */ (function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })(); /* * * DON'T EDIT BELOW THIS LINE * * */ (function () { var s = document.createElement('script'); s.async = true; s.type = 'text/javascript'; s.src = '//' + disqus_shortname + '.disqus.com/count.js'; (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s); }()); </script> <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript></body></html>

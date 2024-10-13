@@ -1,205 +1,50 @@
-<!doctype html>
-<html lang="en-US" class="no-js">
- <head>
-   <meta charset="utf-8">
-<!-- begin _includes/seo.html --><title>Linux Wildcards | M. Shamshad</title>
-<meta name="description" content="I have dream…">
- <meta name="author" content="M. Shamshad">
- <meta property="article:author" content="M. Shamshad">
-<meta property="og:type" content="article">
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="M. Shamshad">
-<meta property="og:title" content="Linux Wildcards">
-<meta property="og:url" content="https://shamshad.in/docs/Linux-Wildcards">
- <meta property="og:description" content="I have dream…">
- <meta name="twitter:site" content="@DrShamshadM">
- <meta name="twitter:title" content="Linux Wildcards">
- <meta name="twitter:description" content="I have dream…">
- <meta name="twitter:url" content="https://shamshad.in/docs/Linux-Wildcards">
-   <meta name="twitter:card" content="summary">
-   <meta name="twitter:creator" content="@DrShamshadM">
- <meta property="article:published_time" content="2022-09-23T00:00:00+05:30">
- <meta property="article:modified_time" content="2024-10-06T20:53:46+05:30">
-<link rel="canonical" href="https://shamshad.in/docs/Linux-Wildcards">
-<!-- end _includes/seo.html -->
-<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed">
-<!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr --><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script async>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-  window.enable_copy_code_button = true;
-</script>
-<!-- For all browsers -->
-<link
-  rel="stylesheet"
-  href="/assets/css/main.css"
-  id="theme_source"
-/>
-<link
-  rel="stylesheet alternate"
-  href="/assets/css/mainDark.css"
-  id="theme_source_2"
-/>
-<script  async>
-  let theme = sessionStorage.getItem("theme");
-  if (theme === "dark") {
-    sessionStorage.setItem("theme", "dark");
-    node1 = document.getElementById("theme_source");
-    node2 = document.getElementById("theme_source_2");
-    node1.setAttribute("rel", "stylesheet alternate");
-    node2.setAttribute("rel", "stylesheet");
-  } else {
-    sessionStorage.setItem("theme", "light");
-  }
-</script>
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
-<!-- start custom head snippets -->			   
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="default" />
-<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png?v=565802">
-<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon-76x76.png?v=565802">
-<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-touch-icon-120x120.png?v=565802">
-<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon-152x152.png?v=565802">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-180x180.png?v=565802">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=565802">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=565802">
-<link rel="manifest" href="/images/favicon/site.webmanifest?v=565802">
-<link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=565802" color="#00a7ff">
-<link rel="shortcut icon" href="/images/favicon/favicon.ico?v=565802">
-<meta name="apple-mobile-web-app-title" content="SM-Web">
-<meta name="application-name" content="SM-Web">
-<meta name="msapplication-TileColor" content="#00a300">
-<meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=565802">
-<meta name="theme-color" content="#ffffff">
-<!-- SEO tags -->
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Linux Wildcards | M. Shamshad</title>
-<meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Linux Wildcards" />
-<meta name="author" content="M. Shamshad" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="I have dream…" />
-<meta property="og:description" content="I have dream…" />
-<link rel="canonical" href="https://shamshad.in/docs/Linux-Wildcards" />
-<meta property="og:url" content="https://shamshad.in/docs/Linux-Wildcards" />
-<meta property="og:site_name" content="M. Shamshad" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-09-23T00:00:00+05:30" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Linux Wildcards" />
-<meta name="twitter:site" content="@DrShamshadM" />
-<meta name="twitter:creator" content="@DrShamshadM" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-10-06T20:53:46+05:30","datePublished":"2022-09-23T00:00:00+05:30","description":"I have dream…","headline":"Linux Wildcards","mainEntityOfPage":{"@type":"WebPage","@id":"https://shamshad.in/docs/Linux-Wildcards"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://shamshad.in/images/favicon/site-treaser.webp"},"name":"M. Shamshad"},"url":"https://shamshad.in/docs/Linux-Wildcards"}</script>
-<!-- End Jekyll SEO tag -->
- </head>
- <body class="layout--single" dir="ltr">
-   <nav class="skip-links">
- <ul>
-   <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
-   <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
-   <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
- </ul>
-</nav>
-<div class="masthead">
- <div class="masthead__inner-wrap">
-   <div class="masthead__menu">
-     <nav id="site-nav" class="greedy-nav">
-          <a class="site-logo" href="/"><img src="/images/favicon/site-treaser.webp" alt="M. Shamshad"></a>
-        <a class="site-title" href="/">
-          M. Shamshad
-        </a>
-       <ul class="visible-links">
-<li class="masthead__menu-item">
-              <a href="/about/">About</a>
-           </li>
-<li class="masthead__menu-item">
-              <a href="/teaching/">Teaching</a>
-           </li>
-<li class="masthead__menu-item">
-              <a href="/publications/">Publications</a>
-           </li>
-<li class="masthead__menu-item">
-              <a href="/talks/">Talks</a>
-           </li>
-<li class="masthead__menu-item">
-              <a href="/research/">Research</a>
-           </li>
-<li class="masthead__menu-item">
-              <a href="/resume/">Resume</a>
-           </li>
-<li class="masthead__menu-item">
-              <a href="/tags/">Tags</a>
-           </li>
-<li class="masthead__menu-item">
-              <a href="/docs/Linux_tutorial/">Bioinfo</a>
-           </li>
+<!doctype html><html lang="en-US" class="no-js"><head><meta charset="utf-8"> <!-- begin _includes/seo.html --><title>Linux Wildcards | M. Shamshad</title><meta name="description" content="I have dream…"><meta name="author" content="M. Shamshad"><meta property="article:author" content="M. Shamshad"><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta property="og:site_name" content="M. Shamshad"><meta property="og:title" content="Linux Wildcards"><meta property="og:url" content="https://shamshad.in/docs/Linux-Wildcards"><meta property="og:description" content="I have dream…"><meta name="twitter:site" content="@DrShamshadM"><meta name="twitter:title" content="Linux Wildcards"><meta name="twitter:description" content="I have dream…"><meta name="twitter:url" content="https://shamshad.in/docs/Linux-Wildcards"><meta name="twitter:card" content="summary"><meta name="twitter:creator" content="@DrShamshadM"><meta property="article:published_time" content="2022-09-23T00:00:00+05:30"><meta property="article:modified_time" content="2024-10-06T20:53:46+05:30"><link rel="canonical" href="https://shamshad.in/docs/Linux-Wildcards"> <!-- end _includes/seo.html --><link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed"> <!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr --><meta name="viewport" content="width=device-width, initial-scale=1.0"> <script defer> document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js '; window.enable_copy_code_button = true; </script> <!-- For all browsers --><link rel="stylesheet" href="/assets/css/main.css" id="theme_source" /><link rel="stylesheet alternate" href="/assets/css/mainDark.css" id="theme_source_2" /> <script async> let theme = sessionStorage.getItem("theme"); if (theme === "dark") { sessionStorage.setItem("theme", "dark"); node1 = document.getElementById("theme_source"); node2 = document.getElementById("theme_source_2"); node1.setAttribute("rel", "stylesheet alternate"); node2.setAttribute("rel", "stylesheet"); } else { sessionStorage.setItem("theme", "light"); } </script><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> <noscript><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript> <!-- start custom head snippets --><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="default" /><link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png?v=565802"><link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon-76x76.png?v=565802"><link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-touch-icon-120x120.png?v=565802"><link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon-152x152.png?v=565802"><link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-180x180.png?v=565802"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=565802"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=565802"><link rel="manifest" href="/images/favicon/site.webmanifest?v=565802"><link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=565802" color="#00a7ff"><link rel="shortcut icon" href="/images/favicon/favicon.ico?v=565802"><meta name="apple-mobile-web-app-title" content="SM-Web"><meta name="application-name" content="SM-Web"><meta name="msapplication-TileColor" content="#00a300"><meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=565802"><meta name="theme-color" content="#ffffff"> <!-- SEO tags --> <!-- Begin Jekyll SEO tag v2.8.0 --><title>Linux Wildcards | M. Shamshad</title><meta name="generator" content="Jekyll v4.3.4" /><meta property="og:title" content="Linux Wildcards" /><meta name="author" content="M. Shamshad" /><meta property="og:locale" content="en_US" /><meta name="description" content="I have dream…" /><meta property="og:description" content="I have dream…" /><link rel="canonical" href="https://shamshad.in/docs/Linux-Wildcards" /><meta property="og:url" content="https://shamshad.in/docs/Linux-Wildcards" /><meta property="og:site_name" content="M. Shamshad" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2022-09-23T00:00:00+05:30" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="Linux Wildcards" /><meta name="twitter:site" content="@DrShamshadM" /><meta name="twitter:creator" content="@DrShamshadM" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-10-06T20:53:46+05:30","datePublished":"2022-09-23T00:00:00+05:30","description":"I have dream…","headline":"Linux Wildcards","mainEntityOfPage":{"@type":"WebPage","@id":"https://shamshad.in/docs/Linux-Wildcards"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://shamshad.in/images/favicon/site-treaser.webp"},"name":"M. Shamshad"},"url":"https://shamshad.in/docs/Linux-Wildcards"}</script> <!-- End Jekyll SEO tag --></head><body class="layout--single" dir="ltr"><nav class="skip-links"><ul>
+<li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+<li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+<li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+</ul></nav><div class="masthead"><div class="masthead__inner-wrap"><div class="masthead__menu"><nav id="site-nav" class="greedy-nav"> <a class="site-logo" href="/"><img src="/images/favicon/site-treaser.webp" alt="M. Shamshad"></a> <a class="site-title" href="/"> M. Shamshad </a><ul class="visible-links">
+<li class="masthead__menu-item"> <a href="/about/">About</a>
+</li>
+<li class="masthead__menu-item"> <a href="/teaching/">Teaching</a>
+</li>
+<li class="masthead__menu-item"> <a href="/publications/">Publications</a>
+</li>
+<li class="masthead__menu-item"> <a href="/talks/">Talks</a>
+</li>
+<li class="masthead__menu-item"> <a href="/research/">Research</a>
+</li>
+<li class="masthead__menu-item"> <a href="/resume/">Resume</a>
+</li>
+<li class="masthead__menu-item"> <a href="/tags/">Tags</a>
+</li>
+<li class="masthead__menu-item"> <a href="/docs/Linux_tutorial/">Bioinfo</a>
+</li>
 </ul>
-        <span class="fa-solid fa-moon toggle-switch" type="button" style="cursor: pointer;" aria-hidden="true" onclick="node1 = document.getElementById('theme_source');
-                 node2 = document.getElementById('theme_source_2');
-        if(node1.getAttribute('rel')=='stylesheet'){node1.setAttribute('rel', 'stylesheet alternate'); 
-            node2.setAttribute('rel', 'stylesheet');
-            sessionStorage.setItem('theme', 'dark');}
-            else{node2.setAttribute('rel', 'stylesheet alternate');
-            node1.setAttribute('rel', 'stylesheet');sessionStorage.setItem('theme', 'light');} 
-            return false;"></span>
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">Toggle menu</span>
-         <div class="navicon"></div>
-        </button>
-       <ul class="hidden-links hidden"></ul>
-     </nav>
-   </div>
- </div>
-</div>
-   <div class="initial-content">
-<div id="main" role="main">
- <div class="sidebar sticky">
-     <nav class="nav__list">
- <h3 class="nav__title" style="padding-left: 0;">Linux Wildcards</h3>
-  <input id="ac-toc" name="accordion-toc" type="checkbox">
-  <label for="ac-toc">Toggle menu</label>
- <ul class="nav__items">
-       <li>
-            <span class="nav__sub-title">Installing of linux distribution in PC laptop</span>
-         <ul>
-             <li><a href="">Basic linux commands for the Beginner</a></li>
-         </ul>
-       </li>
-       <li>
-            <span class="nav__sub-title">Basic linux commands for the Beginner</span>
-         <ul>
-             <li><a href="/docs/Introduction-about-the-Unix">Introduction about the Unix Linux</a></li>
-             <li><a href="/docs/ListingFilesAndDirectories">Listing files and Directories</a></li>
-             <li><a href="/docs/Copies-moving-removing-files">Copies, moving and removing of files</a></li>
-             <li><a href="/docs/Input-Output-Redirections">Input-Output Redirection</a></li>
-             <li><a href="/docs/Linux-Wildcards" class="active">Linux Wildcards</a></li>
-             <li><a href="/docs/Linux-File-Access-Permissions">Linux File Access Permissions</a></li>
-             <li><a href="/docs/Linux-Useful-commands">Linux Useful commands</a></li>
-             <li><a href="/docs/Compiling-UNIX-software-packages">Compiling UNIX software packages</a></li>
-             <li><a href="/docs/UNIX-Variables">UNIX Variables</a></li>
-         </ul>
-       </li>
- </ul>
-</nav>
- </div>
- <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-   <meta itemprop="headline" content="Linux Wildcards">
-   <meta itemprop="datePublished" content="2022-09-23T00:00:00+05:30">
-   <meta itemprop="dateModified" content="2024-10-06T20:53:46+05:30">
-   <div class="page__inner-wrap">
-      <header>
-         <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="https://shamshad.in/docs/Linux-Wildcards" itemprop="url">Linux Wildcards
-</a>
-         </h1>	      
-       </header>
-     <section class="page__content" itemprop="text">
-         <aside class="sidebar__right ">
-           <nav class="toc">
-            <header><h4 class="nav__title">
-<i class="fas fa-file-alt"></i> On this page</h4></header>
-             <ul class="toc__menu">
+<span class="fa-solid fa-moon toggle-switch" type="button" style="cursor: pointer;" aria-hidden="true" onclick="node1 = document.getElementById('theme_source'); node2 = document.getElementById('theme_source_2'); if(node1.getAttribute('rel')=='stylesheet'){node1.setAttribute('rel', 'stylesheet alternate'); node2.setAttribute('rel', 'stylesheet'); sessionStorage.setItem('theme', 'dark');} else{node2.setAttribute('rel', 'stylesheet alternate'); node1.setAttribute('rel', 'stylesheet');sessionStorage.setItem('theme', 'light');} return false;"></span> <button class="greedy-nav__toggle hidden" type="button"> <span class="visually-hidden">Toggle menu</span><div class="navicon"></div></button><ul class="hidden-links hidden"></ul></nav></div></div></div><div class="initial-content"><div id="main" role="main">
+<div class="sidebar sticky"><nav class="nav__list"><h3 class="nav__title" style="padding-left: 0;">Linux Wildcards</h3>
+<input id="ac-toc" name="accordion-toc" type="checkbox"> <label for="ac-toc">Toggle menu</label><ul class="nav__items">
+<li> <span class="nav__sub-title">Installing of linux distribution in PC laptop</span><ul><li><a href="">Basic linux commands for the Beginner</a></li></ul>
+</li>
+<li> <span class="nav__sub-title">Basic linux commands for the Beginner</span><ul>
+<li><a href="/docs/Introduction-about-the-Unix">Introduction about the Unix Linux</a></li>
+<li><a href="/docs/ListingFilesAndDirectories">Listing files and Directories</a></li>
+<li><a href="/docs/Copies-moving-removing-files">Copies, moving and removing of files</a></li>
+<li><a href="/docs/Input-Output-Redirections">Input-Output Redirection</a></li>
+<li><a href="/docs/Linux-Wildcards" class="active">Linux Wildcards</a></li>
+<li><a href="/docs/Linux-File-Access-Permissions">Linux File Access Permissions</a></li>
+<li><a href="/docs/Linux-Useful-commands">Linux Useful commands</a></li>
+<li><a href="/docs/Compiling-UNIX-software-packages">Compiling UNIX software packages</a></li>
+<li><a href="/docs/UNIX-Variables">UNIX Variables</a></li>
+</ul>
+</li>
+</ul></nav></div>
+<article class="page" itemscope itemtype="https://schema.org/CreativeWork"><meta itemprop="headline" content="Linux Wildcards">
+<meta itemprop="datePublished" content="2022-09-23T00:00:00+05:30">
+<meta itemprop="dateModified" content="2024-10-06T20:53:46+05:30">
+<div class="page__inner-wrap">
+<header><h1 id="page-title" class="page__title" itemprop="headline"> <a href="https://shamshad.in/docs/Linux-Wildcards" itemprop="url">Linux Wildcards </a>
+</h1></header><section class="page__content" itemprop="text"><aside class="sidebar__right "><nav class="toc"><header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header><ul class="toc__menu">
 <li>
 <a href="#wildcards">Wildcards</a><ul><li><a href="#the-characters--and-">The characters * and ?</a></li></ul>
 </li>
@@ -210,10 +55,7 @@
 <li><a href="#apropos">Apropos</a></li>
 </ul>
 </li>
-</ul>
-           </nav>
-         </aside>
-       <p><img src="/images/unix/Putorius-Feature-Default.webp" alt="Unix files system"></p>
+</ul></nav></aside><p><img src="/images/unix/Putorius-Feature-Default.webp" alt="Unix files system"></p>
 <h2 id="wildcards">Wildcards</h2>
 <hr>
 <h3 id="the-characters--and-">The characters <code class="language-plaintext highlighter-rouge">*</code> and ?</h3>
@@ -225,9 +67,7 @@
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">ls</span> <span class="o">*</span><span class="nt">list</span>
 </code></pre></div></div>
 <p>This will list all files in the current directory ending with <strong>….list</strong></p>
-<p>The character ? will match exactly one character.<br>
-So <strong>ls ?ouse</strong> will match files like <strong>house</strong> and <strong>mouse</strong>, but not <strong>grouse</strong>.<br>
-Try typing</p>
+<p>The character ? will match exactly one character.<br> So <strong>ls ?ouse</strong> will match files like <strong>house</strong> and <strong>mouse</strong>, but not <strong>grouse</strong>.<br> Try typing</p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">ls</span> <span class="o">?</span><span class="nt">list</span>
 </code></pre></div></div>
 <h2 id="filename-conventions">Filename conventions</h2>
@@ -235,12 +75,8 @@ Try typing</p>
 <p>We should note here that a directory is merely a special type of file. So the rules and conventions for naming files apply also to directories.</p>
 <p>In naming files, characters with special meanings such as <strong>/ * &amp; %</strong>, should be avoided. Also, avoid using spaces within names. The safest way to name a file is to use only alphanumeric characters, that is, letters and numbers, together with _ (underscore) and . (dot).</p>
 <p>File names conventionally start with a lower-case letter, and may end with a dot followed by a group of letters indicating the contents of the file. For example, all files consisting of C code may be named with the ending .c, for example, prog1.c . Then in order to list all files containing C code in your home directory, you need only type <strong>ls *.c</strong> in that directory.</p>
-<blockquote>
- <p><strong>Beware</strong>: some applications give the same name to all the output files they generate.</p>
-</blockquote>
-<blockquote>
- <p>For example, some compilers, unless given the appropriate option, produce compiled files named <strong>a.out</strong>. Should you forget to use that option, you are advised to rename the compiled file immediately, otherwise the next such file will overwrite it and it will be lost.</p>
-</blockquote>
+<blockquote><p><strong>Beware</strong>: some applications give the same name to all the output files they generate.</p></blockquote>
+<blockquote><p>For example, some compilers, unless given the appropriate option, produce compiled files named <strong>a.out</strong>. Should you forget to use that option, you are advised to rename the compiled file immediately, otherwise the next such file will overwrite it and it will be lost.</p></blockquote>
 <h2 id="getting-help">Getting Help</h2>
 <hr>
 <h3 id="on-line-manuals">On-line Manuals</h3>
@@ -262,77 +98,41 @@ Try typing</p>
 </code></pre></div></div>
 <p><b>Summary </b></p>
 <table>
-<thead>
-   <tr>
-     <th>code</th>
-     <th style="text-align: left">Function</th>
-   </tr>
- </thead>
- <tbody>
-   <tr>
-     <td>*</td>
-     <td style="text-align: left">match any number of characters</td>
-   </tr>
-   <tr>
-     <td>?</td>
-     <td style="text-align: left">match one character</td>
-   </tr>
-   <tr>
-     <td>man command</td>
-     <td style="text-align: left">read the online manual page for a command</td>
-   </tr>
-   <tr>
-     <td>whatis command</td>
-     <td style="text-align: left">brief description of a command</td>
-   </tr>
-   <tr>
-     <td>apropos keyword</td>
-     <td style="text-align: left">match commands with keyword in their man pages</td>
-   </tr>
- </tbody>
-</table>
-     </section>
-     <footer class="page__meta">
- <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-10-06">October 6, 2024</time></p>
-     </footer>
-   </div>
- </article>
-</div>
-   </div>
-   <div id="footer" class="page__footer">
-     <footer>
-        <!-- start custom footer snippets -->
-<!-- end custom head snippets -->
-<!-- end custom footer snippets -->
-       <div class="page__footer-follow">
- <ul class="social-icons">
-     <li><strong>Follow:</strong></li>
-         <li><a href="https://twitter.com/DrShamshadM" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
-         <li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&amp;hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar</a></li>
-         <li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" rel="nofollow noopener noreferrer"><i class="ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
-     <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
- </ul>
-</div>
+<thead><tr>
+<th>code</th>
+<th style="text-align: left">Function</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>*</td>
+<td style="text-align: left">match any number of characters</td>
+</tr>
+<tr>
+<td>?</td>
+<td style="text-align: left">match one character</td>
+</tr>
+<tr>
+<td>man command</td>
+<td style="text-align: left">read the online manual page for a command</td>
+</tr>
+<tr>
+<td>whatis command</td>
+<td style="text-align: left">brief description of a command</td>
+</tr>
+<tr>
+<td>apropos keyword</td>
+<td style="text-align: left">match commands with keyword in their man pages</td>
+</tr>
+</tbody>
+</table></section><footer class="page__meta"><p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-10-06">October 6, 2024</time></p></footer>
+</div></article>
+</div></div><div id="footer" class="page__footer"><footer> <!-- start custom footer snippets --> <!-- end custom head snippets --> <!-- end custom footer snippets --><div class="page__footer-follow"><ul class="social-icons">
+<li><strong>Follow:</strong></li>
+<li><a href="https://twitter.com/DrShamshadM" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+<li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&amp;hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar</a></li>
+<li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" rel="nofollow noopener noreferrer"><i class="ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
+<li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+</ul></div>
 <div class="page__footer-copyright">
 <img class="emoji" title=":copyright:" alt=":copyright:" src="https://github.githubassets.com/images/icons/emoji/unicode/00a9.png" height="20" width="20"> 2024 M. Shamshad. Proudly hosted by <a href="https://github.com/" rel="nofollow">GitHub</a> &amp; <a href="https://shamshadpbg.github.io/" rel="prev:"><i class="ai ai-academia"></i>mmTheme</a>.</div>
-<link rel="preload" href="/assets/js/mermaid.min.js" as="script">
-<script src="/assets/js/mermaid.min.js" async></script>
-     </footer>
-   </div>
-<link rel="preload" href="/assets/js/main.min.js" as="script">
-  <script src="/assets/js/main.min.js" async></script>
-  <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H8020H63F5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
- gtag('config', 'G-H8020H63F5',
-    {
-      'optimize_id': 'true',
-      'anonymize_ip': 'true', 
-    });
-</script>
- </body>
-</html>
+<link rel="preload" href="/assets/js/mermaid.min.js" defer as="script"> <script defer src="/assets/js/mermaid.min.js"></script></footer></div><link defer rel="preload" href="/assets/js/main.min.js" as="script"> <script defer src="/assets/js/main.min.js" async></script> <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> --> <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8020H63F5"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-H8020H63F5', { 'optimize_id': 'true', 'anonymize_ip': 'true', }); </script></body></html>
