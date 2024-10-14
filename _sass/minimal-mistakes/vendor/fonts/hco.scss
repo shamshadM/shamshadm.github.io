@@ -1,0 +1,83 @@
+// Use a Sass map for easier configuration
+$gotham-config: (
+  "GothamPro": (
+    "gothampro",
+    (
+      100: ("Light", "LightItalic"),
+      400: (unset, "Italic"),
+      500: ("Medium", "MediumItalic"),
+      700: ("Bold", "BoldItalic"),
+      900: ("Black", "BlackItalic"),
+    )
+  ),
+  "GothamSSm": (
+    "gothamssm",
+    (
+      100: ("XLight", "XLightItalic"),
+      300: ("Light", "LightItalic"),
+      400: ("Book", "BookItalic"),
+      500: ("Medium", "MediumItalic"),
+      700: ("Bold", "BoldItalic"),
+      900: ("Black", "BlackItalic"),
+    )
+  ),
+  "GothamNarrSSm": (
+    "gothamnarrssm",
+    (
+      100: ("XLight", "XLightItalic"),
+      300: ("Light", "LightItalic"),
+      400: ("Book", "BookItalic"),
+      500: ("Medium", "MediumItalic"),
+      700: ("Bold", "BoldItalic"),
+      900: ("Black", "BlackItalic"),
+    )
+  ),
+  "GothamRnd": (
+    "gothamrnd",
+    (
+      100: ("Light", "LightItalic"),
+      400: ("Book", "BookItalic"),
+      500: ("Medium", "MediumItalic"),
+      700: ("Bold", "BoldItalic"),
+    )
+  ),
+  "GothamRndSSm": (
+    "gothamrnd",
+    (
+      100: ("Light", "LightItalic"),
+      400: ("Book", "BookItalic"),
+      500: ("Medium", "MediumItalic"),
+      700: ("Bold", "BoldItalic"),
+    )
+  ),
+);
+
+@mixin define-Gotham($family, $folder, $variant: unset, $font-weight: normal, $font-style: normal) {
+  @font-face {
+    $basename: $family;
+    @if $variant != unset {
+      $basename: "#{$basename}-#{$variant}";
+    }
+    $basepath: "#{$baseurl-StaticWebfonts}/#{$folder}/#{$basename}";
+
+    font-family: $family;
+    src: url("#{$basepath}.eot");
+    src: url("#{$basepath}.woff2") format("woff2"),
+        url("#{$basepath}.woff") format("woff"),
+        url("#{$basepath}.ttf") format("truetype"),
+        url("#{$basepath}.eot?#iefix") format("embedded-opentype");
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+@each $family, $config in $gotham-config {
+  $directory: nth($config, 1);
+  $variants: nth($config, 2);
+  @each $weight, $styles in $variants {
+    @include define-Gotham($family, $directory, nth($styles, 1), $weight, normal);
+    @if length($styles) >= 2 {
+      @include define-Gotham($family, $directory, nth($styles, 2), $weight, italic);
+    }
+  }
+}

@@ -1,0 +1,122 @@
+$baseurl-Amazon: "#{$baseurl-StaticWebfonts}/amazon";
+//$baseurl-Amazon: "https://cdn.jsdelivr.net/npm/amazon-fonts@1.0.1/fonts";
+$baseurl-AmazonEmber: "#{$baseurl-Amazon}/AmazonEmber";
+$baseurl-AmazonEmberCd: "#{$baseurl-Amazon}/AmazonEmberCd";
+$baseurl-AmazonEmberDisplay: "#{$baseurl-Amazon}/AmazonEmberDisplay";
+$baseurl-AmazonEmberMono: "#{$baseurl-Amazon}/AmazonEmberMono";
+$baseurl-BookerlyDisplay: "#{$baseurl-Amazon}/BookerlyDisplay";
+$baseurl-BookerlyLCD: "#{$baseurl-Amazon}/BookerlyLCD";
+
+$amazon-variantMap: (
+  "Rg": "Regular", "RgIt": "Italic", "It": "Italic",
+  "Md": "Medium", "MdIt": "Medium Italic",
+  "Bd": "Bold", "BdIt": "Bold Italic",
+  "He": "Heavy", "HeIt": "Heavy Italic",
+  "Lt": "Light", "LtIt": "Light Italic",
+  "Th": "Thin", "ThIt": "Thin Italic",
+);
+
+@function amazon-mapName($variant) {
+  @each $short, $long in $amazon-variantMap {
+    @if $variant == $short {
+      @return $long;
+    }
+  }
+}
+
+@function url-amazonfont($displayname, $baseurl, $variant) {
+  $localname: amazon-mapName($variant);
+  $allurls: local($displayname + " " + $localname),
+          url("#{$baseurl}_W_#{$variant}.eot") format("embedded-opentype"),
+          url("#{$baseurl}_W_#{$variant}.woff2") format("woff2"),
+          url("#{$baseurl}_W_#{$variant}.woff") format("woff"),
+          url("#{$baseurl}_#{$variant}.ttf") format("truetype");
+  @if $localname == "Regular" {
+    @return local($displayname), $allurls;
+  }
+  @return $allurls;
+}
+
+$amazon-config: (
+  "Amazon Ember": (
+    $baseurl-AmazonEmber,
+    "Amazon Ember",
+    (
+      ("Rg",   400, normal),
+      ("RgIt", 400, italic),
+      ("Bd",   700, normal),
+      ("BdIt", 700, italic),
+      ("He",   900, normal),
+      ("HeIt", 900, italic),
+      ("Lt",   300, normal),
+      ("LtIt", 300, italic),
+      ("Th",   100, normal),
+      ("ThIt", 100, italic),
+    )
+  ),
+  "Amazon Ember Condensed": (
+    $baseurl-AmazonEmberCd,
+    "Amazon Ember Cd RC",
+    (
+      ("Rg",   400, normal),
+      ("RgIt", 400, italic),
+      ("Bd",   700, normal),
+      ("BdIt", 700, italic),
+      ("Lt",   300, normal),
+      ("LtIt", 300, italic),
+      ("Th",   100, normal),
+      ("ThIt", 100, italic),
+    )
+  ),
+  "Amazon Ember Display": (
+    $baseurl-AmazonEmberDisplay,
+    "Amazon Ember Display",
+    (
+      ("Rg",   400, normal),
+      ("Bd",   700, normal),
+      ("He",   900, normal),
+      ("Lt",   300, normal),
+      ("Th",   100, normal),
+    )
+  ),
+  "Amazon Ember Mono": (
+    $baseurl-AmazonEmberMono,
+    "Amazon Ember Mono",
+    (
+      ("Rg",   400, unset),
+      ("Bd",   700, unset),
+    )
+  ),
+  "BookerlyLCD": (
+    $baseurl-BookerlyLCD,
+    "BookerlyLCD",
+    (
+      ("Rg",   400, normal),
+      ("It",   400, italic),
+      ("Bd",   700, normal),
+      ("BdIt", 700, italic),
+      ("Lt",   300, normal),
+      ("LtIt", 300, italic),
+    )
+  ),
+  "Bookerly Display": (
+    $baseurl-BookerlyDisplay,
+    "Bookerly Display",
+    (
+      ("Rg",   400, normal),
+      ("It",   400, italic),
+      ("Bd",   700, normal),
+      ("BdIt", 700, italic),
+    )
+  ),
+);
+
+@each $family, $config in $amazon-config {
+  $baseurl: nth($config, 1);
+  $installName: nth($config, 2);
+  $variants: nth($config, 3);
+  @each $variant, $weight, $style in $variants {
+    @include define-font-face($family, url-amazonfont($family, $baseurl, $variant), $weight, $style);
+  }
+}
+

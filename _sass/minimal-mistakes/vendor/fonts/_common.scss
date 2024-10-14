@@ -1,0 +1,17 @@
+$baseurl-StaticWebfonts: "webfonts";
+//$baseurl-iBugStaticWebfonts: "https://cdn.jsdelivr.net/gh/iBugOne/static/webfonts";
+
+@mixin define-font-face($family, $url, $weight: unset, $style: unset, $embed: false) {
+  @font-face {
+    font-family: $family;
+    @if $weight != unset {
+      font-weight: $weight;
+    }
+    @if $style != unset {
+      font-style: $style;
+    }
+    src: $url;
+
+    @content;
+  }
+}
