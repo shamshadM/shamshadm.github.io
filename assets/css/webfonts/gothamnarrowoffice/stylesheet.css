@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Gotham Office Narrow';
+    src: url('GothamNarrowOffice-Regular.eot');
+    src: local('Gotham Office Narrow Regular'), local('GothamNarrowOffice-Regular'),
+        url('GothamNarrowOffice-Regular.eot?#iefix') format('embedded-opentype'),
+        url('GothamNarrowOffice-Regular.woff2') format('woff2'),
+        url('GothamNarrowOffice-Regular.woff') format('woff'),
+        url('GothamNarrowOffice-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Office Narrow';
+    src: url('GothamNarrowOffice-Bold.eot');
+    src: local('Gotham Office Narrow Bold'), local('GothamNarrowOffice-Bold'),
+        url('GothamNarrowOffice-Bold.eot?#iefix') format('embedded-opentype'),
+        url('GothamNarrowOffice-Bold.woff2') format('woff2'),
+        url('GothamNarrowOffice-Bold.woff') format('woff'),
+        url('GothamNarrowOffice-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Office Narrow';
+    src: url('GothamNarrowOffice-BoldItalic.eot');
+    src: local('Gotham Office Narrow Bold Italic'), local('GothamNarrowOffice-BoldItalic'),
+        url('GothamNarrowOffice-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('GothamNarrowOffice-BoldItalic.woff2') format('woff2'),
+        url('GothamNarrowOffice-BoldItalic.woff') format('woff'),
+        url('GothamNarrowOffice-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham Office Narrow';
+    src: url('GothamNarrowOffice-Italic.eot');
+    src: local('Gotham Office Narrow Italic'), local('GothamNarrowOffice-Italic'),
+        url('GothamNarrowOffice-Italic.eot?#iefix') format('embedded-opentype'),
+        url('GothamNarrowOffice-Italic.woff2') format('woff2'),
+        url('GothamNarrowOffice-Italic.woff') format('woff'),
+        url('GothamNarrowOffice-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+

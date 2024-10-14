@@ -1,0 +1,216 @@
+@font-face {
+    font-family: 'Gotham Cond ExtraBlack';
+    src: url('GothamCond-XBlackItalic.eot');
+    src: local('Gotham Cond ExtraBlack Italic'), local('GothamCond-XBlackItalic'),
+        url('GothamCond-XBlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('GothamCond-XBlackItalic.woff2') format('woff2'),
+        url('GothamCond-XBlackItalic.woff') format('woff'),
+        url('GothamCond-XBlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham Cond';
+    src: url('GothamCond-BoldItalic.eot');
+    src: local('Gotham Cond Bold Italic'), local('GothamCond-BoldItalic'),
+        url('GothamCond-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('GothamCond-BoldItalic.woff2') format('woff2'),
+        url('GothamCond-BoldItalic.woff') format('woff'),
+        url('GothamCond-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham Cond';
+    src: url('GothamCond-Bold.eot');
+    src: local('Gotham Cond Bold'), local('GothamCond-Bold'),
+        url('GothamCond-Bold.eot?#iefix') format('embedded-opentype'),
+        url('GothamCond-Bold.woff2') format('woff2'),
+        url('GothamCond-Bold.woff') format('woff'),
+        url('GothamCond-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Cond Ultra';
+    src: url('GothamCond-UltraItalic.eot');
+    src: local('Gotham Cond Ultra Italic'), local('GothamCond-UltraItalic'),
+        url('GothamCond-UltraItalic.eot?#iefix') format('embedded-opentype'),
+        url('GothamCond-UltraItalic.woff2') format('woff2'),
+        url('GothamCond-UltraItalic.woff') format('woff'),
+        url('GothamCond-UltraItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham Cond';
+    src: url('GothamCond-XLightItalic.eot');
+    src: local('Gotham Cond ExtraLight Italic'), local('GothamCond-XLightItalic'),
+        url('GothamCond-XLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('GothamCond-XLightItalic.woff2') format('woff2'),
+        url('GothamCond-XLightItalic.woff') format('woff'),
+        url('GothamCond-XLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham Cond';
+    src: url('GothamCond-MediumItalic.eot');
+    src: local('Gotham Cond Medium Italic'), local('GothamCond-MediumItalic'),
+        url('GothamCond-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('GothamCond-MediumItalic.woff2') format('woff2'),
+        url('GothamCond-MediumItalic.woff') format('woff'),
+        url('GothamCond-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham Cond';
+    src: url('GothamCond-ThinItalic.eot');
+    src: local('Gotham Cond Thin Italic'), local('GothamCond-ThinItalic'),
+        url('GothamCond-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('GothamCond-ThinItalic.woff2') format('woff2'),
+        url('GothamCond-ThinItalic.woff') format('woff'),
+        url('GothamCond-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham Cond Ultra';
+    src: url('GothamCond-Ultra.eot');
+    src: local('Gotham Cond Ultra'), local('GothamCond-Ultra'),
+        url('GothamCond-Ultra.eot?#iefix') format('embedded-opentype'),
+        url('GothamCond-Ultra.woff2') format('woff2'),
+        url('GothamCond-Ultra.woff') format('woff'),
+        url('GothamCond-Ultra.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Cond';
+    src: url('GothamCond-Black.eot');
+    src: local('Gotham Cond Black'), local('GothamCond-Black'),
+        url('GothamCond-Black.eot?#iefix') format('embedded-opentype'),
+        url('GothamCond-Black.woff2') format('woff2'),
+        url('GothamCond-Black.woff') format('woff'),
+        url('GothamCond-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Cond';
+    src: url('GothamCond-Book.eot');
+    src: local('Gotham Cond Book'), local('GothamCond-Book'),
+        url('GothamCond-Book.eot?#iefix') format('embedded-opentype'),
+        url('GothamCond-Book.woff2') format('woff2'),
+        url('GothamCond-Book.woff') format('woff'),
+        url('GothamCond-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Cond';
+    src: url('GothamCond-BlackItalic.eot');
+    src: local('Gotham Cond Black Italic'), local('GothamCond-BlackItalic'),
+        url('GothamCond-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('GothamCond-BlackItalic.woff2') format('woff2'),
+        url('GothamCond-BlackItalic.woff') format('woff'),
+        url('GothamCond-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham Cond';
+    src: url('GothamCond-Thin.eot');
+    src: local('Gotham Cond Thin'), local('GothamCond-Thin'),
+        url('GothamCond-Thin.eot?#iefix') format('embedded-opentype'),
+        url('GothamCond-Thin.woff2') format('woff2'),
+        url('GothamCond-Thin.woff') format('woff'),
+        url('GothamCond-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Cond';
+    src: url('GothamCond-BookItalic.eot');
+    src: local('Gotham Cond Book Italic'), local('GothamCond-BookItalic'),
+        url('GothamCond-BookItalic.eot?#iefix') format('embedded-opentype'),
+        url('GothamCond-BookItalic.woff2') format('woff2'),
+        url('GothamCond-BookItalic.woff') format('woff'),
+        url('GothamCond-BookItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham Cond';
+    src: url('GothamCond-Medium.eot');
+    src: local('Gotham Cond Medium'), local('GothamCond-Medium'),
+        url('GothamCond-Medium.eot?#iefix') format('embedded-opentype'),
+        url('GothamCond-Medium.woff2') format('woff2'),
+        url('GothamCond-Medium.woff') format('woff'),
+        url('GothamCond-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Cond ExtraBlack';
+    src: url('GothamCond-XBlack.eot');
+    src: local('Gotham Cond ExtraBlack'), local('GothamCond-XBlack'),
+        url('GothamCond-XBlack.eot?#iefix') format('embedded-opentype'),
+        url('GothamCond-XBlack.woff2') format('woff2'),
+        url('GothamCond-XBlack.woff') format('woff'),
+        url('GothamCond-XBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Cond';
+    src: url('GothamCond-LightItalic.eot');
+    src: local('Gotham Cond Light Italic'), local('GothamCond-LightItalic'),
+        url('GothamCond-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('GothamCond-LightItalic.woff2') format('woff2'),
+        url('GothamCond-LightItalic.woff') format('woff'),
+        url('GothamCond-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham Cond';
+    src: url('GothamCond-XLight.eot');
+    src: local('Gotham Cond ExtraLight'), local('GothamCond-XLight'),
+        url('GothamCond-XLight.eot?#iefix') format('embedded-opentype'),
+        url('GothamCond-XLight.woff2') format('woff2'),
+        url('GothamCond-XLight.woff') format('woff'),
+        url('GothamCond-XLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Cond';
+    src: url('GothamCond-Light.eot');
+    src: local('Gotham Cond Light'), local('GothamCond-Light'),
+        url('GothamCond-Light.eot?#iefix') format('embedded-opentype'),
+        url('GothamCond-Light.woff2') format('woff2'),
+        url('GothamCond-Light.woff') format('woff'),
+        url('GothamCond-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
