@@ -46,7 +46,7 @@ BSc in  Agriculture [Crop Science]
  </div>
 </div>
 <hr>
-Apart from scientifically dealing :mosque: :recycle: with I have also enjoy :trophy: with the coding, development of programs :crossed_flags:, and going with friends :angel:, and family :family_man_woman_girl_girl:. I grown :egg: up in India :india: and Speak [Punjabi](https://en.wikipedia.org/wiki/Punjabi_language), English :gb:, [Hindi](https://en.wikipedia.org/wiki/Hindi), [Urdu](https://en.wikipedia.org/wiki/Urdu) and bit of French :fr:.
+Apart from scientifically dealing :mosque: :recycle: with I have also enjoy :trophy: with the coding, development of programs :crossed_flags:, and going with friends :angel:, and family :family_man_woman_girl_girl:. I grown :seedling: up in India :india: and Speak [Punjabi](https://en.wikipedia.org/wiki/Punjabi_language), English :gb:, [Hindi](https://en.wikipedia.org/wiki/Hindi), [Urdu](https://en.wikipedia.org/wiki/Urdu) and bit of French :fr:.
 
 
 I am the person who takes initiative :baby_bottle: and stays curious :eagle:.
