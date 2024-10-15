@@ -5175,6 +5175,7 @@ body {
 .author__avatar img {
   max-width: 110px;
   border-radius: 50%;
+  aspect-ratio: auto 9/16;
 }
 @media (min-width: 64em) {
   .author__avatar img {

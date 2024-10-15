@@ -3,7 +3,7 @@
     <script src="{{ script | relative_url }}"></script>
   {% endfor %}
 {% else %}
-  <link async rel="preload" href="/assets/js/main.min.js" as="script">
+  <link defer rel="preload" href="/assets/js/main.min.js" as="script">
   <script defer src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
   <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> -->
 {% endif %}
@@ -25,6 +25,6 @@
 
 {% if site.after_footer_scripts %}
   {% for script in site.after_footer_scripts %}
-  <script async src="{{ script | relative_url }}"></script>
+  <script defer src="{{ script | relative_url }}"></script>
   {% endfor %}
 {% endif %}
