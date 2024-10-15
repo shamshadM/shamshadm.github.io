@@ -118,5 +118,8 @@ $amazon-config: (
   @each $variant, $weight, $style in $variants {
     @include define-font-face($family, url-amazonfont($family, $baseurl, $variant), $weight, $style);
   }
+  @font-face {
+    font-display: swap;
+  }
 }
 
