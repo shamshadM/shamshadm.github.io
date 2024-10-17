@@ -223,9 +223,6 @@ color:#633306;
 .btn-outline-primary{
   color: $link-color;
   border-color: #007bff;
-}
-
-.btn {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -242,7 +239,7 @@ color:#633306;
   border-radius: .25rem;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
- .btn:hover {
+ .btn-outline-primary:hover {
   background-color: #b3cde0;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
  }
