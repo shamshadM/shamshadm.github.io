@@ -137,6 +137,9 @@ footer:
     - label: "ResearchGate"
       icon: "ai ai-researchgate-square ai-fw"
       url: "https://www.researchgate.net/profile/Mohd-Shamshad"
+
+after_footer_scripts:
+  - assets/js/mermaid.js
       
 # Reading Files
 include:

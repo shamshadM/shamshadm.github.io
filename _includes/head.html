@@ -31,7 +31,7 @@
 />
 <script defer>
   let theme = sessionStorage.getItem("theme");
-  if (theme === "dark") {
+  if (theme === "dark" || window.matchMedia('(prefers-color-scheme: dark)').matches) {
     sessionStorage.setItem("theme", "dark");
     node1 = document.getElementById("theme_source");
     node2 = document.getElementById("theme_source_2");
