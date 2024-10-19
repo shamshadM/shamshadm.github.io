@@ -41,7 +41,8 @@
   (twitter, $twitter-color),
   (linkedin, $linkedin-color),
   (researchgate, $researchgate-color),
-  (google-scholar, $google-scholar-color);
+  (google-scholar, $google-scholar-color),
+  (envelope, $emil-color);
 
   @each $buttoncolor, $color in $buttoncolors {
     &--#{$buttoncolor} {

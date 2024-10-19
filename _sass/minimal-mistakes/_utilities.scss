@@ -168,7 +168,7 @@ body:hover .visually-hidden button {
 
 .full {
   @include breakpoint($large) {
-    margin-inline-end: -1 * span(2.5 of 12) !important;
+    margin-inline-end: calc(-1 * span(2.5 of 12) ) !important;
   }
 }
 
@@ -224,6 +224,7 @@ body:hover .visually-hidden button {
     $youtube-color: ".fa-youtube",
     $google-scholar-color: ".ai-google-scholar, .ai-google-scholar-square",
     $researchgate-color: ".ai-researchgate, .ai-researchgate-square",
+    $emil-color: ".fa-envelope-square, .fa-envelope",
   ) {
     #{$icons} {
       color: $color;

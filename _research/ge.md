@@ -1,11 +1,11 @@
 ---
 title: "Genotype x Environment Evaluation"
 layout: single-portfolio
-excerpt: "<img src ='/images/research/GE.webp' alt= ''>"
+excerpt: "<img src ='/images/research/ge.webp' alt= ''>"
 collection: research
 order_number: 40
 header: 
-  og_image: "research/GE.webp"
+  og_image: "research/ge.webp"
 ---
 
 Stage-specific genotype-by-environment interactions determine yield components in wheat" suggests that different stages of wheat growth may respond differently to environmental conditions, and these responses may vary depending on the genetic makeup of the wheat varieties and the specific environment in which they are grown
