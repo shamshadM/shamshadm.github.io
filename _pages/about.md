@@ -21,28 +21,27 @@ I have professional Expertise in Plant Breeding :innocent:, Quantitative Genetic
 
 <hr>
 <div class="edu">
-<div class="container-item">
+<div class="university">
 <h4>Education <i class="fa-solid fa-school"></i></h4>
 <span class="fa-solid fa-graduation-cap"> PhD in Plant Breeding & Genetics, 2019 </span><br> 
 <p><a href="https://www.bristol.ac.uk/life-sciences/">University of Bristol :uk:</a><br> 
-<a href="https://www.nottingham.ac.uk/biosciences/">University of Nottingham :uk: </a><br>
+<a href="https://www.nottingham.ac.uk/biosciences/">University of Nottingham :uk:</a> <br>
 <a href="https://www.pau.edu/">Punjab Agricultural University:india:</a></p>
 <span class="fa-solid fa-graduation-cap"> MSc in Plant Breeding & Genetics</span>
 <p><a href="https://www.pau.edu/">Punjab Agricultural University, 2014 :india:</a></p>
 <span class="fa-solid fa-graduation-cap"> BSc in  Agriculture [Crop Science]</span> 
 <p><a href="https://www.pau.edu/">Punjab Agricultural University, 2012 :india:</a></p>
-  </div>
-<div class="container-item"><h4>Interests and Hobbies 🎨🖌️✨🎧</h4>
-<div id="int">
-:world_map: Breeding and Genetics<br>   
-:desktop_computer: AI for Plant Breeding <br>                   
-:seedling: Knowledge sharing<br>
-:keyboard: Data Science<br>
-:writing_hand: Writing<br>
-:national_park: Gardening<br>
-:weight_lifting_man: Gym</br>
 </div>
- </div>
+<div class="hobbies">
+<h4>Interests and Hobbies 🎨🖌️✨🎧</h4>
+<p>:world_map: Breeding and Genetics</p>   
+<p>:desktop_computer: AI for Plant Breeding </p>                   
+<p>:seedling: Knowledge sharing</p>
+<p>:keyboard: Data Science </p>
+<p>:writing_hand: Writing</p>
+<p>:national_park: Gardening</p>
+<p>:weight_lifting_man: Gym</p>
+</div>
 </div>
 <hr>
 Apart from scientifically dealing :mosque: :recycle: with I have also enjoy :trophy: with the coding, development of programs :crossed_flags:, and going with friends :angel:, and family :family_man_woman_girl_girl:. I grown :seedling: up in India :india: and Speak [Punjabi](https://en.wikipedia.org/wiki/Punjabi_language), English :gb:, [Hindi](https://en.wikipedia.org/wiki/Hindi), [Urdu](https://en.wikipedia.org/wiki/Urdu) and bit of French :fr:.

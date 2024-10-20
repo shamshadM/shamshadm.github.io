@@ -62,58 +62,44 @@
   border-radius: 1rem;
   display: block;
   margin: 0 auto;
-  height: 100%;
-  width: 100%;
+  height: 100;
+  width: 100;
 }
-
 .edu {
-  display: grid;
-  justify-content: center;
-  line-height: 1.8em;
-  font-size: $doc-font-size;
-  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-  column-gap: 2em;
-  border-inline: 0;
-  border-radius: 25px;
-  padding-left: 5em;
-  padding-right: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  line-height: 1.5em;
+  padding-left: 2em;
   padding-bottom: 1em;
   background-color: #0e5a11;
-
+  border-radius: 25px;
 }
-.edu h4 {
-  color: #faf0cc;
-  font-size: $doc-font-size-large;
-}
-
-.edu a { 
-  color: #b7f6f2;
-}
-
-.edu span {
-  font-size: $doc-font-size;
+.university {
   color: #faf0cc;
 }
-.edu p {
+.university a {
   font-style: italic;
-  font-size: $doc-font-size;
-  margin-inline: 0;
-  padding-left: 1.5em;
-  padding-inline-end: 0;
+  padding-inline-start: 1.5rem;
+  color: #faf0cc;
 }
 .edu p :hover {
   background-color: #d80420;
-  padding: 0.25rem;
+  transition: transform 0.8s;
+  transform: rotateY(180deg);
   border-radius: 0.5rem;
+  padding: 0.2rem;
+  margin-bottom: 0.2rem;
 
 }
-#int {
+.hobbies {
   color: #faf0cc;
-  line-height: 1.7rem;
+  line-height: 0.9rem;
   padding-inline: 0;
-  font-size: $doc-font-size;
+  font-size: 1rem;
   margin-inline: 0;
-  text-decoration: double;
 }
 
 // new 404 page settings
