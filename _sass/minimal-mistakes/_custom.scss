@@ -68,7 +68,7 @@
 .edu {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  column-gap: 1.5rem;
   align-items: flex-start;
   flex-wrap: wrap;
   line-height: 1.5em;
