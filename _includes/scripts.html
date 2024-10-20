@@ -3,8 +3,8 @@
     <script src="{{ script | relative_url }}"></script>
   {% endfor %}
 {% else %}
-  <link defer rel="preload" href="/assets/js/main.min.js" as="script">
-  <script defer src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
+  <link rel="preload" href="/assets/js/main.min.js" as="script">
+  <script async src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
   <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> -->
 {% endif %}
 
