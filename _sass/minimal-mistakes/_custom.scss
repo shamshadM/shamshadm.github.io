@@ -112,8 +112,27 @@
   font-size: $doc-font-size;
   margin-inline: 0;
   text-decoration: double;
-}
-
+  }
+  #int li:hover {
+    animation: bounce;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    background-color: #0026ff;
+    padding-left: 1em;
+    border-radius: 2em;
+  }
+  @keyframes bounce {
+    0%{
+      /* initial stage and final stage */
+      transform: scaleY(0);
+    }
+    50% {
+      transform: scaleY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 // new 404 page settings
 main {
   background: $background-color;

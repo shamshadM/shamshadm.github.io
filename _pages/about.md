@@ -34,13 +34,13 @@ I have professional Expertise in Plant Breeding :innocent:, Quantitative Genetic
   </div>
 <div class="container-item"><h4>Interests and Hobbies 🎨🖌️✨🎧</h4>
 <div id="int">
-:world_map: Breeding and Genetics<br>   
-:desktop_computer: AI for Plant Breeding <br>                   
-:seedling: Knowledge sharing<br>
-:keyboard: Data Science<br>
-:writing_hand: Writing<br>
-:national_park: Gardening<br>
-:weight_lifting_man: Gym</br>
+<li>:world_map: Breeding and Genetics<br></li>
+<li>:desktop_computer: AI for Plant Breeding<br></li>                  
+<li>:seedling: Knowledge sharing<br></li>
+<li>:keyboard: Data Science<br></li>
+<li>:writing_hand: Writing<br></li>
+<li>:national_park: Gardening<br></li>
+<li>:weight_lifting_man: Gym<br></li>
 </div>
  </div>
 </div>
