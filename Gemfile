@@ -20,18 +20,21 @@ gem "wdm" if Gem.win_platform?
 # If you have any plugins, put them here!
 group :jekyll_plugins do
 
+  gem 'jekyll-sitemap'
+  gem 'jekyll-paginate'
   gem 'commonmarker'
-  gem 'hawkins'
+  gem 'jekyll-gist'
+  gem 'jekyll-seo-tag'
+  gem "kramdown"
+  gem "kramdown-parser-gfm"
   gem 'jekyll-archives'
   gem 'jekyll-feed'
   gem 'jekyll-include-cache'
   gem 'jekyll-redirect-from'
-  gem 'jekyll-sitemap'
-  gem 'jekyll-spaceship'
   gem 'webrick'
   gem 'faraday-retry'
+  gem 'jekyll-last-modified-at'
   gem 'jekyll-gzip'
   gem 'jekyll-brotli'
   gem 'jemoji'
-  gem 'puma'
 end
