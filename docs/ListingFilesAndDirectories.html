@@ -1,347 +1,51 @@
-<!doctype html>
-
-<html lang="en-US" class="no-js">
-  <head>
-    <meta charset="utf-8">
-
-<!-- begin _includes/seo.html --><title>Listing files and Directories | M. Shamshad</title>
-<meta name="description" content="I have dream…">
-
-
-  <meta name="author" content="M. Shamshad">
-  
-  <meta property="article:author" content="M. Shamshad">
-  
-
-
-<meta property="og:type" content="article">
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="M. Shamshad">
-<meta property="og:title" content="Listing files and Directories">
-<meta property="og:url" content="https://shamshad.in/docs/ListingFilesAndDirectories">
-
-
-  <meta property="og:description" content="I have dream…">
-
-
-
-  <meta property="og:image" content="https://shamshad.in/images/favicon/site-treaser.webp">
-
-
-
-  <meta name="twitter:site" content="@DrShamshadM">
-  <meta name="twitter:title" content="Listing files and Directories">
-  <meta name="twitter:description" content="I have dream…">
-  <meta name="twitter:url" content="https://shamshad.in/docs/ListingFilesAndDirectories">
-
-  
-    <meta name="twitter:card" content="summary">
-    
-      <meta name="twitter:image" content="https://shamshad.in/images/favicon/site-treaser.webp">
-    
-  
-
-  
-    <meta name="twitter:creator" content="@DrShamshadM">
-  
-
-
-
-  <meta property="article:published_time" content="2022-09-22T00:00:00+05:30">
-
-
-
-  <meta property="article:modified_time" content="2024-10-06T20:53:46+05:30">
-
-
-
-  
-
-  
-
-
-<link rel="canonical" href="https://shamshad.in/docs/ListingFilesAndDirectories">
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- end _includes/seo.html -->
-
-
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed">
-
-
-<!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr --><meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<script defer>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-  window.enable_copy_code_button = true;
-</script>
-<link rel="stylesheet" href="/assets/academicons-1.9.4/css/academicons.min.css" fetchpriority="low"/>
-<!-- For all browsers -->
-<link
-  rel="stylesheet"
-  href="/assets/css/main.css"
-  id="theme_source"
-/>
-
-
-<link
-  rel="stylesheet alternate"
-  href="/assets/css/mainDark.css"
-  id="theme_source_2"
-/>
-<script defer>
-  let theme = sessionStorage.getItem("theme");
-  if (theme === "dark" || window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    sessionStorage.setItem("theme", "dark");
-    node1 = document.getElementById("theme_source");
-    node2 = document.getElementById("theme_source_2");
-    node1.setAttribute("rel", "stylesheet alternate");
-    node2.setAttribute("rel", "stylesheet");
-  } else {
-    sessionStorage.setItem("theme", "light");
-  }
-</script>
-
-
-    
-<!-- start custom head snippets -->			   
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="default" />
-<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png?v=565802">
-<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon-76x76.png?v=565802">
-<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-touch-icon-120x120.png?v=565802">
-<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon-152x152.png?v=565802">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-180x180.png?v=565802">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=565802">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=565802">
-<link rel="manifest" href="/images/favicon/site.webmanifest?v=565802">
-<link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=565802" color="#00a7ff">
-<link rel="shortcut icon" href="/images/favicon/favicon.ico?v=565802">
-<meta name="apple-mobile-web-app-title" content="SM-Web">
-<meta name="application-name" content="SM-Web">
-<meta name="msapplication-TileColor" content="#00a300">
-<meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=565802">
-<meta name="theme-color" content="#ffffff">
-
-<!-- SEO tags -->
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Listing files and Directories | M. Shamshad</title>
-<meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="Listing files and Directories" />
-<meta name="author" content="M. Shamshad" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="I have dream…" />
-<meta property="og:description" content="I have dream…" />
-<link rel="canonical" href="https://shamshad.in/docs/ListingFilesAndDirectories" />
-<meta property="og:url" content="https://shamshad.in/docs/ListingFilesAndDirectories" />
-<meta property="og:site_name" content="M. Shamshad" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-09-22T00:00:00+05:30" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Listing files and Directories" />
-<meta name="twitter:site" content="@DrShamshadM" />
-<meta name="twitter:creator" content="@DrShamshadM" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-10-06T20:53:46+05:30","datePublished":"2022-09-22T00:00:00+05:30","description":"I have dream…","headline":"Listing files and Directories","mainEntityOfPage":{"@type":"WebPage","@id":"https://shamshad.in/docs/ListingFilesAndDirectories"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://shamshad.in/images/favicon/site-treaser.webp"},"name":"M. Shamshad"},"url":"https://shamshad.in/docs/ListingFilesAndDirectories"}</script>
-<!-- End Jekyll SEO tag -->
-
-  </head>
-
-  <body class="layout--single" dir="ltr">
-    <nav class="skip-links">
-  <ul>
-    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
-    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
-    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
-  </ul>
-</nav>
-
-    
-
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        
-          <a class="site-logo" href="/"><img src="/images/favicon/site-treaser.webp" alt="M. Shamshad"></a>
-        
-        <a class="site-title" href="/">
-          M. Shamshad
-          
-        </a>
-        <ul class="visible-links">
-<li class="masthead__menu-item">
-              <a href="/about/">About</a>
-            </li>
-<li class="masthead__menu-item">
-              <a href="/teaching/">Teaching</a>
-            </li>
-<li class="masthead__menu-item">
-              <a href="/publications/">Publications</a>
-            </li>
-<li class="masthead__menu-item">
-              <a href="/talks/">Talks</a>
-            </li>
-<li class="masthead__menu-item">
-              <a href="/research/">Research</a>
-            </li>
-<li class="masthead__menu-item">
-              <a href="/resume/">Resume</a>
-            </li>
-<li class="masthead__menu-item">
-              <a href="/tags/">Tags</a>
-            </li>
-<li class="masthead__menu-item">
-              <a href="/docs/Linux_tutorial/">Bioinfo</a>
-            </li>
+<!doctype html><html lang="en-US" class="no-js"><head><meta charset="utf-8"> <!-- begin _includes/seo.html --><title>Listing files and Directories | M. Shamshad</title><meta name="description" content="I have dream…"><meta name="author" content="M. Shamshad"><meta property="article:author" content="M. Shamshad"><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta property="og:site_name" content="M. Shamshad"><meta property="og:title" content="Listing files and Directories"><meta property="og:url" content="https://shamshad.in/docs/ListingFilesAndDirectories"><meta property="og:description" content="I have dream…"><meta property="og:image" content="https://shamshad.in/images/favicon/site-treaser.webp"><meta name="twitter:site" content="@DrShamshadM"><meta name="twitter:title" content="Listing files and Directories"><meta name="twitter:description" content="I have dream…"><meta name="twitter:url" content="https://shamshad.in/docs/ListingFilesAndDirectories"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://shamshad.in/images/favicon/site-treaser.webp"><meta name="twitter:creator" content="@DrShamshadM"><meta property="article:published_time" content="2022-09-22T00:00:00+05:30"><meta property="article:modified_time" content="2024-10-06T20:53:46+05:30"><link rel="canonical" href="https://shamshad.in/docs/ListingFilesAndDirectories"> <!-- end _includes/seo.html --><link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed"> <!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr --><meta name="viewport" content="width=device-width, initial-scale=1.0"> <script defer> document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js '; window.enable_copy_code_button = true; </script><link rel="stylesheet" href="/assets/academicons-1.9.4/css/academicons.min.css" fetchpriority="low"/> <!-- For all browsers --><link rel="stylesheet" href="/assets/css/main.css" id="theme_source" /><link rel="stylesheet alternate" href="/assets/css/mainDark.css" id="theme_source_2" /> <script defer> let theme = sessionStorage.getItem("theme"); if (theme === "dark" || window.matchMedia('(prefers-color-scheme: dark)').matches) { sessionStorage.setItem("theme", "dark"); node1 = document.getElementById("theme_source"); node2 = document.getElementById("theme_source_2"); node1.setAttribute("rel", "stylesheet alternate"); node2.setAttribute("rel", "stylesheet"); } else { sessionStorage.setItem("theme", "light"); } </script> <!-- start custom head snippets --><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="default" /><link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png?v=565802"><link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon-76x76.png?v=565802"><link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-touch-icon-120x120.png?v=565802"><link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon-152x152.png?v=565802"><link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-180x180.png?v=565802"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=565802"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=565802"><link rel="manifest" href="/images/favicon/site.webmanifest?v=565802"><link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=565802" color="#00a7ff"><link rel="shortcut icon" href="/images/favicon/favicon.ico?v=565802"><meta name="apple-mobile-web-app-title" content="SM-Web"><meta name="application-name" content="SM-Web"><meta name="msapplication-TileColor" content="#00a300"><meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=565802"><meta name="theme-color" content="#ffffff"> <!-- SEO tags --> <!-- Begin Jekyll SEO tag v2.8.0 --><title>Listing files and Directories | M. Shamshad</title><meta name="generator" content="Jekyll v3.10.0" /><meta property="og:title" content="Listing files and Directories" /><meta name="author" content="M. Shamshad" /><meta property="og:locale" content="en_US" /><meta name="description" content="I have dream…" /><meta property="og:description" content="I have dream…" /><link rel="canonical" href="https://shamshad.in/docs/ListingFilesAndDirectories" /><meta property="og:url" content="https://shamshad.in/docs/ListingFilesAndDirectories" /><meta property="og:site_name" content="M. Shamshad" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2022-09-22T00:00:00+05:30" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="Listing files and Directories" /><meta name="twitter:site" content="@DrShamshadM" /><meta name="twitter:creator" content="@DrShamshadM" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"M. Shamshad"},"dateModified":"2024-10-06T20:53:46+05:30","datePublished":"2022-09-22T00:00:00+05:30","description":"I have dream…","headline":"Listing files and Directories","mainEntityOfPage":{"@type":"WebPage","@id":"https://shamshad.in/docs/ListingFilesAndDirectories"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://shamshad.in/images/favicon/site-treaser.webp"},"name":"M. Shamshad"},"url":"https://shamshad.in/docs/ListingFilesAndDirectories"}</script> <!-- End Jekyll SEO tag --></head><body class="layout--single" dir="ltr"><nav class="skip-links"><ul>
+<li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+<li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+<li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+</ul></nav><div class="masthead"><div class="masthead__inner-wrap"><div class="masthead__menu"><nav id="site-nav" class="greedy-nav"> <a class="site-logo" href="/"><img src="/images/favicon/site-treaser.webp" alt="M. Shamshad"></a> <a class="site-title" href="/"> M. Shamshad </a><ul class="visible-links">
+<li class="masthead__menu-item"> <a href="/about/">About</a>
+</li>
+<li class="masthead__menu-item"> <a href="/teaching/">Teaching</a>
+</li>
+<li class="masthead__menu-item"> <a href="/publications/">Publications</a>
+</li>
+<li class="masthead__menu-item"> <a href="/talks/">Talks</a>
+</li>
+<li class="masthead__menu-item"> <a href="/research/">Research</a>
+</li>
+<li class="masthead__menu-item"> <a href="/resume/">Resume</a>
+</li>
+<li class="masthead__menu-item"> <a href="/tags/">Tags</a>
+</li>
+<li class="masthead__menu-item"> <a href="/docs/Linux_tutorial/">Bioinfo</a>
+</li>
 </ul>
-
-        <span class="fa-solid fa-moon toggle-switch" type="button" style="cursor: pointer;" aria-hidden="true" onclick="node1 = document.getElementById('theme_source');
-                 node2 = document.getElementById('theme_source_2');
-        if(node1.getAttribute('rel')=='stylesheet'){node1.setAttribute('rel', 'stylesheet alternate'); 
-            node2.setAttribute('rel', 'stylesheet');
-            sessionStorage.setItem('theme', 'dark');}
-            else{node2.setAttribute('rel', 'stylesheet alternate');
-            node1.setAttribute('rel', 'stylesheet');sessionStorage.setItem('theme', 'light');} 
-            return false;"></span>
-
-        
-        
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">Toggle menu</span>
-          <div class="navicon"></div>
-        </button>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
-  </div>
-</div>
-
-
-    <div class="initial-content">
-      
-
-
-
-
-
-<div id="main" role="main">
-  
-  <div class="sidebar sticky">
-  
-  
-    
-      
-      
-      
-      
-    
-      
-      
-      
-      
-    
-    
-      <nav class="nav__list">
-  <h3 class="nav__title" style="padding-left: 0;">Listing files and Directories</h3>
-  <input id="ac-toc" name="accordion-toc" type="checkbox">
-  <label for="ac-toc">Toggle menu</label>
-  <ul class="nav__items">
-    
-      
-      
-        <li>
-          
-            <span class="nav__sub-title">Installing of linux distribution in PC laptop</span>
-          
-
-          
-          <ul>
-            
-              <li><a href="">Basic linux commands for the Beginner</a></li>
-            
-          </ul>
-          
-        </li>
-      
-        <li>
-          
-            <span class="nav__sub-title">Basic linux commands for the Beginner</span>
-          
-
-          
-          <ul>
-            
-              <li><a href="/docs/Introduction-about-the-Unix">Introduction about the Unix Linux</a></li>
-            
-              <li><a href="/docs/ListingFilesAndDirectories" class="active">Listing files and Directories</a></li>
-            
-              <li><a href="/docs/Copies-moving-removing-files">Copies, moving and removing of files</a></li>
-            
-              <li><a href="/docs/Input-Output-Redirections">Input-Output Redirection</a></li>
-            
-              <li><a href="/docs/Linux-Wildcards">Linux Wildcards</a></li>
-            
-              <li><a href="/docs/Linux-File-Access-Permissions">Linux File Access Permissions</a></li>
-            
-              <li><a href="/docs/Linux-Useful-commands">Linux Useful commands</a></li>
-            
-              <li><a href="/docs/Compiling-UNIX-software-packages">Compiling UNIX software packages</a></li>
-            
-              <li><a href="/docs/UNIX-Variables">UNIX Variables</a></li>
-            
-          </ul>
-          
-        </li>
-      
-    
-  </ul>
-</nav>
-    
-  
-  </div>
-
-
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Listing files and Directories">
-    
-    <meta itemprop="datePublished" content="2022-09-22T00:00:00+05:30">
-    <meta itemprop="dateModified" content="2024-10-06T20:53:46+05:30">
-
-    <div class="page__inner-wrap">
-      
-        <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="https://shamshad.in/docs/ListingFilesAndDirectories" itemprop="url">Listing files and Directories
-</a>
-          </h1>	      
-          
-
-   
-        
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-09-22T00:00:00+05:30">September 22, 2022</time></p>
-          
-       
-        </header>
-      
-
-      <section class="page__content" itemprop="text">
-        
-          <aside class="sidebar__right ">
-            <nav class="toc">
-              <header><h4 class="nav__title">
-<i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu">
+<span class="fa-solid fa-moon toggle-switch" type="button" style="cursor: pointer;" aria-hidden="true" onclick="node1 = document.getElementById('theme_source'); node2 = document.getElementById('theme_source_2'); if(node1.getAttribute('rel')=='stylesheet'){node1.setAttribute('rel', 'stylesheet alternate'); node2.setAttribute('rel', 'stylesheet'); sessionStorage.setItem('theme', 'dark');} else{node2.setAttribute('rel', 'stylesheet alternate'); node1.setAttribute('rel', 'stylesheet');sessionStorage.setItem('theme', 'light');} return false;"></span> <button class="greedy-nav__toggle hidden" type="button"> <span class="visually-hidden">Toggle menu</span><div class="navicon"></div></button><ul class="hidden-links hidden"></ul></nav></div></div></div><div class="initial-content"><div id="main" role="main">
+<div class="sidebar sticky"><nav class="nav__list"><h3 class="nav__title" style="padding-left: 0;">Listing files and Directories</h3>
+<input id="ac-toc" name="accordion-toc" type="checkbox"> <label for="ac-toc">Toggle menu</label><ul class="nav__items">
+<li> <span class="nav__sub-title">Installing of linux distribution in PC laptop</span><ul><li><a href="">Basic linux commands for the Beginner</a></li></ul>
+</li>
+<li> <span class="nav__sub-title">Basic linux commands for the Beginner</span><ul>
+<li><a href="/docs/Introduction-about-the-Unix">Introduction about the Unix Linux</a></li>
+<li><a href="/docs/ListingFilesAndDirectories" class="active">Listing files and Directories</a></li>
+<li><a href="/docs/Copies-moving-removing-files">Copies, moving and removing of files</a></li>
+<li><a href="/docs/Input-Output-Redirections">Input-Output Redirection</a></li>
+<li><a href="/docs/Linux-Wildcards">Linux Wildcards</a></li>
+<li><a href="/docs/Linux-File-Access-Permissions">Linux File Access Permissions</a></li>
+<li><a href="/docs/Linux-Useful-commands">Linux Useful commands</a></li>
+<li><a href="/docs/Compiling-UNIX-software-packages">Compiling UNIX software packages</a></li>
+<li><a href="/docs/UNIX-Variables">UNIX Variables</a></li>
+</ul>
+</li>
+</ul></nav></div>
+<article class="page" itemscope itemtype="https://schema.org/CreativeWork"><meta itemprop="headline" content="Listing files and Directories">
+<meta itemprop="datePublished" content="2022-09-22T00:00:00+05:30">
+<meta itemprop="dateModified" content="2024-10-06T20:53:46+05:30">
+<div class="page__inner-wrap">
+<header><h1 id="page-title" class="page__title" itemprop="headline"> <a href="https://shamshad.in/docs/ListingFilesAndDirectories" itemprop="url">Listing files and Directories </a>
+</h1>
+<p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-09-22T00:00:00+05:30">September 22, 2022</time></p></header><section class="page__content" itemprop="text"><aside class="sidebar__right "><nav class="toc"><header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header><ul class="toc__menu">
 <li><a href="#listing-files-and-directories-file_folder">Listing files and directories <img class="emoji" title=":file_folder:" alt=":file_folder:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4c1.png" height="20" width="20"></a></li>
 <li>
 <a href="#making-directories">Making Directories</a><ul><li><a href="#mkdir-make-directory">mkdir (make directory)</a></li></ul>
@@ -359,309 +63,145 @@
 <li><a href="#-your-home-directory">~ (your home directory)</a></li>
 </ul>
 </li>
-</ul>
-            </nav>
-          </aside>
-        
-        <p><img src="/images/unix/Linux-Directory-StructureS.webp" alt="Unix files system"></p>
-
+</ul></nav></aside><p><img src="/images/unix/Linux-Directory-StructureS.webp" alt="Unix files system"></p>
 <h2 id="listing-files-and-directories-file_folder">Listing files and directories <img class="emoji" title=":file_folder:" alt=":file_folder:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4c1.png" height="20" width="20">
 </h2>
 <p>When you first login, your current working directory is your home directory. Your home directory has the same name as your user-name, for example, ee91ab, and it is where your personal files and subdirectories are saved.</p>
-
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls [OPTIONS] [FILES]
 
 **nobackup**
 </code></pre></div></div>
 <p>When used with no options and arguments, ls displays out what is in your home directory, type</p>
-
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">ls</span> <span class="o">(</span><span class="nt">short</span> <span class="nt">for</span> <span class="nt">list</span><span class="o">)</span>
 </code></pre></div></div>
 <p>The files are listed in alphabetical order in as many columns as can fit across your terminal:</p>
-
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">OUTPUT</span>
 <span class="nt">cache</span>  <span class="nt">db</span>  <span class="nt">empty</span>  <span class="nt">games</span>  <span class="nt">lib</span>  <span class="nt">local</span>  <span class="nt">lock</span>  <span class="nt">log</span>  <span class="nt">mail</span>  <span class="nt">opt</span>  <span class="nt">run</span>  <span class="nt">spool</span>  <span class="nt">tmp</span>
 </code></pre></div></div>
 <p>There may be no files visible in your home directory, in which case, the UNIX prompt will be returned. Alternatively, there may already be some files inserted by the System Administrator when your account was created.</p>
-
 <p><strong>ls</strong> does not, in fact, cause all the files in your home directory to be listed, but only those ones whose name does not begin with a dot (.) Files beginning with a dot (.) are known as hidden files and usually contain important program configuration information. They are hidden because you should not change them unless you are very familiar with UNIX!!!</p>
-
-<p>To list all files in your home directory including those whose names begin  with a dot, type</p>
-
+<p>To list all files in your home directory including those whose names begin with a dot, type</p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">ls</span> <span class="nt">-a</span>
 </code></pre></div></div>
-<p><strong>ls</strong> is an example of a command which can take options: <strong>-a</strong> is an example of an option. The options change the behavior of the command. There are online manual pages that tell you which options a particular command  can take, and how each option modifies the behavior of the command.</p>
-
+<p><strong>ls</strong> is an example of a command which can take options: <strong>-a</strong> is an example of an option. The options change the behavior of the command. There are online manual pages that tell you which options a particular command can take, and how each option modifies the behavior of the command.</p>
 <h2 id="making-directories">Making Directories</h2>
-
 <h3 id="mkdir-make-directory">mkdir (make directory)</h3>
-
 <p>We will now make a subdirectory in your home directory to hold the files you will be creating and using in the course of this tutorial. To make a subdirectory called <strong>unixstuff</strong> in your current working directory type</p>
-
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">mkdir</span> <span class="nt">unixstuff</span> 
 </code></pre></div></div>
 <p>To see the directory you have just created, type</p>
-
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">ls</span>
 </code></pre></div></div>
 <h2 id="changing-to-a-different-directory">Changing to a different directory </h2>
-
 <h3 id="cd-change-directory">cd (change directory)</h3>
-
 <p>The command <strong>cd directory</strong> means change the current working directory to ‘directory’. The current working directory may be thought of as the directory you are in, i.e. your current position in the file-system tree.</p>
-
 <p>To change to the directory you have just made, type</p>
-
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">cd</span> <span class="nt">unixstuff</span> 
 </code></pre></div></div>
-
 <p>Type <code class="language-plaintext highlighter-rouge">ls</code> to see the contents (which should be empty)</p>
-
 <p><b><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" height="20" width="20"> Exercise </b></p>
-
-<p>Make another directory inside the <strong>unixstuff</strong> directory called 
-  <strong>backups</strong>?</p>
-
+<p>Make another directory inside the <strong>unixstuff</strong> directory called <strong>backups</strong>?</p>
 <h2 id="the-directories--and-">The directories . and ..</h2>
 <p>Still in the <strong>unixstuff</strong> directory, type</p>
-
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">ls</span> <span class="nt">-a</span>
 </code></pre></div></div>
 <p>As you can see, in the <strong>unixstuff</strong> directory (and in all other directories), there are two special directories called (<strong>.</strong>) and (<strong>..</strong>)</p>
-
 <p>In UNIX, (<strong>.</strong>) means the current directory, so typing</p>
-
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">cd</span> <span class="nc">.</span>
 </code></pre></div></div>
-<blockquote>
-  <p>NOTE: there is a space between cd and the dot</p>
-</blockquote>
-
-<p>means stay where you are (the <strong>unixstuff</strong> directory). 
-This may not seem very useful at first, but using (<strong>.</strong>) as the name of the current directory will save a lot of typing, as we shall see later in the tutorial.</p>
-
-<p><b> </b>
- (<strong>..</strong>) means the parent of the current directory, so typing</p>
-
+<blockquote><p>NOTE: there is a space between cd and the dot</p></blockquote>
+<p>means stay where you are (the <strong>unixstuff</strong> directory). This may not seem very useful at first, but using (<strong>.</strong>) as the name of the current directory will save a lot of typing, as we shall see later in the tutorial.</p>
+<p><b> </b> (<strong>..</strong>) means the parent of the current directory, so typing</p>
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">cd</span> <span class="nc">..</span>
 </code></pre></div></div>
 <p>will take you one directory up the hierarchy (back to your home directory). Try it now.</p>
-<blockquote>
-  <p>Note: typing <strong>cd</strong> with no argument always returns you to your home directory. This is very useful if you are lost in the file system.</p>
-</blockquote>
-
+<blockquote><p>Note: typing <strong>cd</strong> with no argument always returns you to your home directory. This is very useful if you are lost in the file system.</p></blockquote>
 <h2 id="pathnames">Pathnames</h2>
-
 <h3 id="pwd-print-working-directory">
 <strong>pwd</strong> (print working directory)</h3>
 <p>Pathnames enable you to work out where you are in relation to the whole file-system. For example, to find out the absolute pathname of your home-directory, type <strong>cd</strong> to get back to your home-directory and then type</p>
-
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">pwd</span> 
 </code></pre></div></div>
-<p>The full pathname will look something like this:
-<strong>/a/fservb/fservb/fservb22/eebeng99/ee91ab</strong>
-which means that ee91ab (your home directory) is in the directory eebeng99 (the group directory),which is located on the fservb file-server.</p>
-<blockquote>
-  <p>Note: <strong>/a/fservb/fservb/fservb22/eebeng99/ee91ab</strong></p>
-</blockquote>
-
-<p>can be shortened to 
-<strong>/user/eebeng99/ee91ab</strong></p>
-
+<p>The full pathname will look something like this: <strong>/a/fservb/fservb/fservb22/eebeng99/ee91ab</strong> which means that ee91ab (your home directory) is in the directory eebeng99 (the group directory),which is located on the fservb file-server.</p>
+<blockquote><p>Note: <strong>/a/fservb/fservb/fservb22/eebeng99/ee91ab</strong></p></blockquote>
+<p>can be shortened to <strong>/user/eebeng99/ee91ab</strong></p>
 <p><b><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" height="20" width="20"> Exercise</b></p>
-
-<p>Use the commands <strong>ls</strong>, <strong>pwd</strong> and <strong>cd</strong> to explore the file system.
-(Remember, if you get lost, type <strong>cd</strong> by itself to return to your home-directory)</p>
-
+<p>Use the commands <strong>ls</strong>, <strong>pwd</strong> and <strong>cd</strong> to explore the file system. (Remember, if you get lost, type <strong>cd</strong> by itself to return to your home-directory)</p>
 <h2 id="more-about-home-directories-and-pathnames">More about home directories and pathnames</h2>
-
 <h3 id="understanding-pathnames">Understanding pathnames</h3>
-
 <p>First type <strong>cd</strong> to get back to your home-directory, then type</p>
-
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">ls</span> <span class="nt">unixstuff</span>
 </code></pre></div></div>
 <p>to list the contents of your unixstuff directory.</p>
-
 <p>Now type</p>
-
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">ls</span> <span class="nt">backups</span>
 </code></pre></div></div>
 <p>You will get a message like this -</p>
-<blockquote>
-  <p>backups: No such file or directory</p>
-</blockquote>
-
+<blockquote><p>backups: No such file or directory</p></blockquote>
 <p>The reason is, <strong>backups</strong> is not in your current working directory. To use a command on a file (or directory) not in the current working directory (the directory you are currently in), you must either <samp>cd</samp> to the correct directory, or specify its full pathname. To list the contents of your backups directory, you must type</p>
-
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span>  <span class="nt">ls</span> <span class="nt">unixstuff</span><span class="o">/</span><span class="nt">backups</span> 
 </code></pre></div></div>
-
 <h3 id="-your-home-directory">~ (your home directory)</h3>
-
 <p>Home directories can also be referred to by the tilde <strong>~</strong> character. It can be used to specify paths starting at your home directory. So typing</p>
-
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">ls</span> <span class="o">~/</span><span class="nt">unixstuff</span>
 </code></pre></div></div>
 <p>will list the contents of your unixstuff directory, no matter where you currently are in the file system.</p>
-
 <p><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" height="20" width="20"> What do you think?</p>
-
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="nt">ls</span> <span class="o">~</span>
 </code></pre></div></div>
 <p><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" height="20" width="20"> would list</p>
-
 <p>What do you think?</p>
-
 <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span>  <span class="nt">ls</span> <span class="o">~/</span><span class="nc">..</span>
 </code></pre></div></div>
 <p><img class="emoji" title=":loudspeaker:" alt=":loudspeaker:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png" height="20" width="20"> would list ?</p>
-
 <p><b>Summary </b></p>
-
 <table>
-  <thead>
-    <tr>
-      <th>code</th>
-      <th style="text-align: center">Function</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>ls</td>
-      <td style="text-align: center">list files and directories</td>
-    </tr>
-    <tr>
-      <td>ls -a</td>
-      <td style="text-align: center">list all files and directories</td>
-    </tr>
-    <tr>
-      <td>mkdir</td>
-      <td style="text-align: center">make a directory</td>
-    </tr>
-    <tr>
-      <td>cd directory</td>
-      <td style="text-align: center">change to named directory</td>
-    </tr>
-    <tr>
-      <td>cd</td>
-      <td style="text-align: center">change to home-directory</td>
-    </tr>
-    <tr>
-      <td>cd ~</td>
-      <td style="text-align: center">change to home-directory</td>
-    </tr>
-    <tr>
-      <td>cd ..</td>
-      <td style="text-align: center">change to parent directory</td>
-    </tr>
-    <tr>
-      <td>pwd</td>
-      <td style="text-align: center">display the path of the current directory</td>
-    </tr>
-  </tbody>
-</table>
-
-
-    
-
-      
-  
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
-
-
-
-
-        
-
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-10-06">October 6, 2024</time></p>
-
-
-      </footer>
-
-      
-
-      
-
-
-    </div>
-
-    
-  </article>
-
-  
-  
-</div>
-
-    </div>
-
-    
-
-    <div id="footer" class="page__footer">
-      <footer>
-        <!-- start custom footer snippets -->
-<!-- end custom head snippets -->
-
-<!-- end custom footer snippets -->
-        <div class="page__footer-follow">
-  <ul class="social-icons">
-    
-      <li><strong>Follow:</strong></li>
-    
-
-    
-      
-        
-          <li><a href="https://twitter.com/DrShamshadM" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
-        
-      
-        
-          <li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&amp;hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar</a></li>
-        
-      
-        
-          <li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" rel="nofollow noopener noreferrer"><i class="ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
-        
-      
-    
-
-    
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
-    
-  </ul>
-</div>
-
+<thead><tr>
+<th>code</th>
+<th style="text-align: center">Function</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ls</td>
+<td style="text-align: center">list files and directories</td>
+</tr>
+<tr>
+<td>ls -a</td>
+<td style="text-align: center">list all files and directories</td>
+</tr>
+<tr>
+<td>mkdir</td>
+<td style="text-align: center">make a directory</td>
+</tr>
+<tr>
+<td>cd directory</td>
+<td style="text-align: center">change to named directory</td>
+</tr>
+<tr>
+<td>cd</td>
+<td style="text-align: center">change to home-directory</td>
+</tr>
+<tr>
+<td>cd ~</td>
+<td style="text-align: center">change to home-directory</td>
+</tr>
+<tr>
+<td>cd ..</td>
+<td style="text-align: center">change to parent directory</td>
+</tr>
+<tr>
+<td>pwd</td>
+<td style="text-align: center">display the path of the current directory</td>
+</tr>
+</tbody>
+</table></section><footer class="page__meta"><p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-10-06">October 6, 2024</time></p></footer>
+</div></article>
+</div></div><div id="footer" class="page__footer"><footer> <!-- start custom footer snippets --> <!-- end custom head snippets --> <!-- end custom footer snippets --><div class="page__footer-follow"><ul class="social-icons">
+<li><strong>Follow:</strong></li>
+<li><a href="https://twitter.com/DrShamshadM" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+<li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&amp;hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar</a></li>
+<li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" rel="nofollow noopener noreferrer"><i class="ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
+<li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+</ul></div>
 <div class="page__footer-copyright">© 2025 M. Shamshad. Proudly hosted by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
-
-
-
-<link defer rel="preload" href="/assets/js/mermaid.min.js" as="script">
-<script defer src="/assets/js/mermaid.min.js"></script>
-      </footer>
-    </div>
-
-    
-  <link defer rel="preload" href="/assets/js/main.min.js" as="script">
-  <script defer src="/assets/js/main.min.js"></script>
-  <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> -->
-
-
-
-
-
-
-
-
-  
-  <script defer src="/assets/js/mermaid.js"></script>
-  
-
-
-  </body>
-</html>
-
+<link defer rel="preload" href="/assets/js/mermaid.min.js" as="script"> <script defer src="/assets/js/mermaid.min.js"></script></footer></div><link defer rel="preload" href="/assets/js/main.min.js" as="script"> <script defer src="/assets/js/main.min.js"></script> <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> --> <script defer src="/assets/js/mermaid.js"></script></body></html>
