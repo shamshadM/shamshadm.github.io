@@ -100,7 +100,7 @@
   padding-inline-end: 0;
 }
 .edu p :hover {
-  background-color: #d80420;
+  background-color: #0026ff;
   padding: 4px;
   border-radius: 5px;
 
@@ -119,6 +119,7 @@
     animation-iteration-count: infinite;
     background-color: #0026ff;
     padding-left: 1em;
+    padding-right: 0;
     border-radius: 2em;
   }
   @keyframes bounce {
@@ -133,6 +134,7 @@
       transform: translateY(0);
     }
   }
+
 // new 404 page settings
 main {
   background: $background-color;
@@ -150,7 +152,7 @@ main #errorLink {
   font-size: 20px;
   padding: 12px;
   border: 1px solid;
-  color: $muted-text-color;
+  color: $stanford-red;
   background-color: transparent;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
@@ -158,7 +160,7 @@ main #errorLink {
 main #errorLink:hover,
 main #errorLink:active {
   color: $text-color;
-  background: $link-color;
+  background: $masthead-link-color-hover;
 }
 main #g6219 {
   transform-origin: 85px 4px;
