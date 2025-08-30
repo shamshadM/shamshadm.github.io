@@ -47,7 +47,7 @@
   justify-content: flex-end;
   flex-wrap: wrap;
   overflow: hidden;
-  border-radius: 40%;
+  border-radius: 50%;
   padding: 0.1rem 0.1rem;
 
   &:hover {
@@ -55,7 +55,7 @@
   }
 }
 
-
+// Photo for about me
 #about-me {
   border: 2px solid rgb(130, 130, 130);
   padding: 2px;
@@ -65,21 +65,31 @@
   width: 100;
 }
 
+// Education settings
 .edu {
+  display: grid;
+  justify-content: space-evenly;
+  overflow: hidden;
+  gap: 1em;
   border: 1px;
   border-radius: 25px;
-  padding-left: 5em;
+  padding-left: 3em;
   padding-right: 1em;
-  padding-bottom: 1em;
-  display: grid;
-  justify-content: center;
+  padding-bottom: 2em;
   line-height: 1.8em;
   font-size: $doc-font-size;
-  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
   column-gap: 2em;
   background-color: #0e5a11;
 }
-.edu h4 {
+
+@media (min-width: 768px ) { /* Adjust breakpoint as needed */
+  .edu {
+    grid-template-columns:repeat(2, 1fr); /* Create two equal-width columns */
+    /* Or, for specific layout: grid-template-columns: 1fr 2fr; */
+  }
+}
+
+.edu h3 {
   color: #faf0cc;
   font-size: $doc-font-size-large;
 }
@@ -113,14 +123,18 @@
   margin-inline: 0;
   text-decoration: double;
   }
+
+  #int li{
+    list-style-type: square;
+  }  
   #int li:hover {
-    animation: bounce;
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite;
-    background-color: #0026ff;
-    padding-left: 1em;
-    padding-right: 0;
-    border-radius: 2em;
+       text-decoration: underline;
+       background-color: #0026ff;
+       border-radius: 2em;
+       padding: 2px;
+       animation: bounce;
+       animation-duration: 0.5s;
+       animation-iteration-count: infinite;
   }
   @keyframes bounce {
     0%{

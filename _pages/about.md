@@ -22,7 +22,7 @@ I have professional Expertise in Plant Breeding :innocent:, Quantitative Genetic
 <hr>
 <div class="edu">
 <div class="container-item">
-<h4>Education <i class="fa-solid fa-school"></i></h4>
+<h3>Education <i class="fa-solid fa-school"></i></h3>
 <span class="fa-solid fa-graduation-cap"> PhD in Plant Breeding & Genetics, 2019 </span><br> 
 <p><a href="https://www.bristol.ac.uk/life-sciences/">University of Bristol :uk:</a><br> 
 <a href="https://www.nottingham.ac.uk/biosciences/">University of Nottingham :uk: </a><br>
@@ -32,7 +32,7 @@ I have professional Expertise in Plant Breeding :innocent:, Quantitative Genetic
 <span class="fa-solid fa-graduation-cap"> BSc in  Agriculture [Crop Science]</span> 
 <p><a href="https://www.pau.edu/">Punjab Agricultural University, 2012 :india:</a></p>
   </div>
-<div class="container-item"><h4>Interests and Hobbies 🎨🖌️✨🎧</h4>
+<div class="container-item"><h3>Interests and Hobbies 👨‍💻📝🪴🏋️</h3>
 <div id="int">
 <li>:world_map: Breeding and Genetics<br></li>
 <li>:desktop_computer: AI for Plant Breeding<br></li>                  
@@ -49,7 +49,7 @@ Apart from scientifically dealing :mosque: :recycle: with I have also enjoy :tro
 
 I am the person who takes initiative :baby_bottle: and stays curious :eagle:.
 
-Feel free to [contact me](mailto: shamshad.rattan@gmail.com):envelope_with_arrow: if you find my blog useful, think I might be a good fit or simply would like to connect :medal_sports:.
+Feel free to [contact me](mailto: shamshad.rattan@gmail.com) :envelope_with_arrow: if you find my blog useful, think I might be a good fit or simply would like to connect :medal_sports:.
 {: .text-justify}
 
 <hr>
