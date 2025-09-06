@@ -119,12 +119,14 @@
   color: #faf0cc;
   line-height: 1.7em;
   padding: 2px;
-  font-size: $doc-font-size;
+  font-size: $doc-font-size-medium;
   margin-inline: 0;
   text-decoration: double;
   }
 
   #int li{
+    margin-left: 1.2em;
+    padding-left: 0.5em;
     list-style-type: square;
   }  
   #int li:hover {

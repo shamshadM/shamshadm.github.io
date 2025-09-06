@@ -34,15 +34,15 @@ I have professional Expertise in Plant Breeding :innocent:, Quantitative Genetic
   </div>
 <div class="container-item"><h3>Interests and Hobbies 👨‍💻📝🪴🏋️</h3>
 <div id="int">
-<li>:world_map: Breeding and Genetics<br></li>
-<li>:desktop_computer: AI for Plant Breeding<br></li>                  
-<li>:seedling: Knowledge sharing<br></li>
-<li>:keyboard: Data Science<br></li>
-<li>:writing_hand: Writing<br></li>
-<li>:national_park: Gardening<br></li>
-<li>:weight_lifting_man: Gym<br></li>
+  <li>:world_map: Breeding and Genetics<br></li>
+  <li>:desktop_computer: AI for Plant Breeding<br></li>                  
+  <li>:seedling: Knowledge sharing<br></li>
+  <li>:keyboard: Data Science<br></li>
+  <li>:writing_hand: Writing<br></li>
+  <li>:national_park: Gardening<br></li>
+  <li>:weight_lifting_man: Gym<br></li>
 </div>
- </div>
+</div>
 </div>
 <hr>
 Apart from scientifically dealing :mosque: :recycle: with I have also enjoy :trophy: with the coding, development of programs :crossed_flags:, and going with friends :angel:, and family :family_man_woman_girl_girl:. I grown :seedling: up in India :india: and Speak [Punjabi](https://en.wikipedia.org/wiki/Punjabi_language), English :gb:, [Hindi](https://en.wikipedia.org/wiki/Hindi), [Urdu](https://en.wikipedia.org/wiki/Urdu) and bit of French :fr:.
