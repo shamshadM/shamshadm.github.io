@@ -175,16 +175,5 @@ Quantitative Skills
 	*  DNA extractions, PCR, real-time PCR, electrophoresis, SSR marker and KASP marker genotyping
 
 ------
-  <div id="viewer" style="width: 100%; height: 500px;"></div>
-  <script type="text/javascript" src="https://cloudpdf.io/viewer.min.js"></script>
-  <script>
-    const config = { 
-      documentId: '87406694-7376-4d16-81b2-81132b414e1a',
-      darkMode: true, 
-    };
-    CloudPDF(config, document.getElementById('viewer')).then((instance) => {
-      
-    });
-  </script>
-
+<iframe src="https://drive.google.com/file/d/1PitDNdXiNqPTjLkKePm1px9A2NetjhvY/preview" width="100%" height="600px"></iframe>
 ------
