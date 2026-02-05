@@ -8,7 +8,7 @@ header:
   overlay_image: /header/About.webp
   og_image: /images/favicon/shamshad.webp
 ---
-Hi! I'm Mohammad Shamshad work as a Plant Breeder at **[Punjab Agricultural University (PAU), Ludhiana](https://www.pau.edu/), India** :india:, with joint appointments at the **[Regional Research Station, Faridkot](https://pau.edu/outstations/index.php?_act=manageOutstationData&DO=viewHomePage&intLinkID=3)**, and the **[Department of Plant Breeding and Genetics, PAU](https://pauwp.pau.edu/plant-breeding-genetics-home/)**. Im leads cotton breeding research programs focused on the development of high-yielding, resilient cultivars aimed at enhancing agricultural productivity and contributing to societal welfare
+Hi! I'm Mohammad Shamshad work as a Plant Breeder at **[Punjab Agricultural University (PAU), Ludhiana](https://www.pau.edu/), India** :india:, with joint appointments at the **[Regional Research Station, Faridkot](https://pau.edu/outstations/index.php?_act=manageOutstationData&DO=viewHomePage&intLinkID=3)**, and the **[Department of Plant Breeding and Genetics, PAU](https://pauwp.pau.edu/plant-breeding-genetics-home/)**. I'm leads cotton breeding research programs focused on the development of high-yielding, resilient cultivars aimed at enhancing agricultural productivity and contributing to societal welfare
 
 I had previously worked as a [Post-Doctoral Researcher](https://tigr2ess.globalfood.cam.ac.uk/staff/dr-mohammad-shamshad) in the **[Transforming India's Green Revolution by Research and Empowerment for Sustainable food Supplies](https://tigr2ess.globalfood.cam.ac.uk/fps/FP3)** at the [University of Cambridge](https://tigr2ess.globalfood.cam.ac.uk/staff/dr-mohammad-shamshad) in Cambridge :uk:.
 
