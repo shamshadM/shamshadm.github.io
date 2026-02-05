@@ -13,11 +13,11 @@ Research plays a central role in my teaching as students improve their analytica
 
 ### General Teaching Materials
 <div class="stat">
-<a href="/algorithm/" class="btn btn-outline-primary"><i class="fas fa-square-root-alt"></i> Static Summary</a>
+<a href="/_teaching/summary" class="btn btn-outline-primary"><i class="fas fa-square-root-alt"></i> Static Summary</a>
 
 <br>
 
-<a href="/_teaching/designs/" class="btn btn-outline-primary"><i class="fas fa-sitemap"></i> Field Experiments Analysis</a> 
+<a href="/_teaching/designs" class="btn btn-outline-primary"><i class="fas fa-sitemap"></i> Field Experiments Analysis</a> 
 <br>
 
 </div>
