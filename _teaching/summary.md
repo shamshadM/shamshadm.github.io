@@ -3,7 +3,7 @@ title: "Summary Descriptive Statistics"
 collection: teaching
 layout: single
 type: "Basic understanding of data"
-permalink: /_teaching/summary
+permalink: /teaching/summary
 venue: "Punjab Agricultural University, Plant Breeding and Genetics"
 date: 2025-09-11
 location: "Ludhiana, India"

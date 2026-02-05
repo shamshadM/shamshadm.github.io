@@ -3,7 +3,7 @@ title: "Field experimental analysis"
 collection: teaching
 layout: single
 type: "Experimental Design analysis"
-permalink: /_teaching/designs
+permalink: /teaching/designs
 venue: "Punjab Agricultural University, Plant Breeding and Genetics"
 date: 2025-09-11
 location: "Ludhiana, India"
