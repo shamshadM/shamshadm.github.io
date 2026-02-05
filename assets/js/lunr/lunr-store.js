@@ -224,12 +224,12 @@ var store = [{
         "title": "Field experimental analysis",
         "excerpt":"Field experimental analysis is a research method that uses controlled interventions within a real-world setting to study cause-and-effect relationships. Unlike a lab experiment, which maximizes control in an artificial environment, a field experiment prioritizes testing an intervention in a natural setting to improve the real-world applicability of its findings. This...","categories": [],
         "tags": [],
-        "url": "/_teaching/designs",
+        "url": "/teaching/designs",
         "teaser": null
       },{
         "title": "Summary Descriptive Statistics",
         "excerpt":"Field experimental analysis is a research method that uses controlled interventions within a real-world setting to study cause-and-effect relationships. Unlike a lab experiment, which maximizes control in an artificial environment, a field experiment prioritizes testing an intervention in a natural setting to improve the real-world applicability of its findings. This...","categories": [],
         "tags": [],
-        "url": "/_teaching/summary",
+        "url": "/teaching/summary",
         "teaser": null
       }]
