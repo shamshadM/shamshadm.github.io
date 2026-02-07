@@ -8,13 +8,11 @@
 
 .sidebar {
   @include clearfix();
-  // @include breakpoint(max-width $large) {
-  //   /* fix z-index order of follow links */
-  //   position: relative;
-  //   z-index: 10;
-  //   -webkit-transform: translate3d(0, 0, 0);
-  //   transform: translate3d(0, 0, 0);
-  // }
+  margin-bottom: 1em;
+
+  @media (orientation: portrait) {
+    margin-top: 5em;    
+  }
 
   @include breakpoint($large) {
     float: inline-start;

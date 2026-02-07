@@ -269,7 +269,7 @@ main #g6219 {
 }
 
 .btn-outline-primary {
-  color: $link-color;
+  color: $text-color;
   border-color: #007bff;
   display: inline-block;
   font-weight: 400;
@@ -288,6 +288,6 @@ main #g6219 {
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 .btn-outline-primary:hover {
-  background-color: #b3cde0;
+  background-color: $primary-btn-hover;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }

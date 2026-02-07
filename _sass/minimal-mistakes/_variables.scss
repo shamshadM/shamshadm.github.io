@@ -93,6 +93,7 @@ $danger-color: #ee5f5b !default;
 $info-color:  $stanford-light-red; //#52adc8 !default;
 $focus-color: $primary-color !default;
 $active-color: mix(#fff, $primary-color, 80%) !default;
+$primary-btn-hover: mix(#fff, $success-color, 60%) !default;
 
 /* YIQ color contrast */
 $yiq-contrasted-dark-default: $dark-gray  !default;
@@ -131,7 +132,7 @@ $orcid-color: #a6ce39;
 $emil-color: #0072c6;
 
 /* links */
-$link-color:mix(#000 $info-color, 20%)  !default;
+$link-color:mix(#000, $info-color, 20%)  !default;
 $link-color-hover: mix(#000, $link-color, 25%) !default;
 $link-color-visited: mix(#fff, $link-color, 15%) !default;
 $masthead-link-color: $primary-color  !default;
