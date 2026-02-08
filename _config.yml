@@ -6,11 +6,10 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 #theme add
-minimal_mistakes_skin: "contrast"
-minimal_mistakes_skin2: "dark"
 
 # Site Settings
 locale: "en-US"
+site_theme: "contrast"
 title: "M. Shamshad"
 title_separator: "|"
 subtitle: # site taggline that appears blow site title in masthead

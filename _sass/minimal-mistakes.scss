@@ -1,47 +1,47 @@
 /* Copyright comment*/
 
 /* Variables */
-@import "minimal-mistakes/variables";
+@import "variables";
 
 /* Mixins and functions */
-@import "minimal-mistakes/vendor/breakpoint/breakpoint";
+@import "vendor/breakpoint/breakpoint";
 @include breakpoint-set("to ems", true);
-@import "minimal-mistakes/vendor/magnific-popup/magnific-popup"; // Magnific Popup
-@import "minimal-mistakes/vendor/susy/susy";
-@import "minimal-mistakes/mixins";
+@import "vendor/magnific-popup/magnific-popup"; // Magnific Popup
+@import "vendor/susy/susy";
+@import "include/mixins";
 
 /* Core CSS */
-@import "minimal-mistakes/reset";
-@import "minimal-mistakes/base";
-@import "minimal-mistakes/forms";
-@import "minimal-mistakes/tables";
-@import "minimal-mistakes/animations";
+@import "layout/reset";
+@import "layout/base";
+@import "layout/forms";
+@import "layout/tables";
+@import "layout/animations";
 
 /* Components */
-@import "minimal-mistakes/buttons";
-@import "minimal-mistakes/notices";
-@import "minimal-mistakes/masthead";
-@import "minimal-mistakes/navigation";
-@import "minimal-mistakes/footer";
-@import "minimal-mistakes/search";
-@import "minimal-mistakes/syntax";
+@import "layout/buttons";
+@import "layout/notices";
+@import "layout/masthead";
+@import "layout/navigation";
+@import "layout/footer";
+@import "layout/search";
+@import "syntax";
 
 /* Utility classes */
-@import "minimal-mistakes/utilities";
+@import "include/utilities";
 
 /* Layout specific */
-@import "minimal-mistakes/page";
-@import "minimal-mistakes/archive";
-@import "minimal-mistakes/sidebar";
-@import "minimal-mistakes/print";
+@import "layout/page";
+@import "layout/archive";
+@import "layout/sidebar";
+@import "layout/print";
 
-@import "minimal-mistakes/vendor/font-awesome/6/scss/fontawesome";
-@import "minimal-mistakes/vendor/font-awesome/6/scss/solid";
-@import "minimal-mistakes/vendor/font-awesome/6/scss/brands";
-@import "minimal-mistakes/vendor/font-awesome/6/scss/v4-shims";
-@import "minimal-mistakes/vendor/font-awesome/6/scss/regular";
-@import "minimal-mistakes/vendor/fonts/common";
-@import "minimal-mistakes/vendor/fonts/amazon";
-@import "minimal-mistakes/vendor/fonts/google";
+@import "vendor/font-awesome/6/scss/fontawesome";
+@import "vendor/font-awesome/6/scss/solid";
+@import "vendor/font-awesome/6/scss/brands";
+@import "vendor/font-awesome/6/scss/v4-shims";
+@import "vendor/font-awesome/6/scss/regular";
+@import "vendor/fonts/common";
+@import "vendor/fonts/amazon";
+@import "vendor/fonts/google";
 
-@import "minimal-mistakes/custom";
+@import "layout/custom";
