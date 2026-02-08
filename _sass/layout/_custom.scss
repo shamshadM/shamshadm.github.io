@@ -79,7 +79,6 @@
   line-height: 1.8em;
   font-size: $doc-font-size;
   column-gap: 2em;
-  background-color: #0e5a11;
 }
 
 @media (min-width: 768px ) { /* Adjust breakpoint as needed */
@@ -90,17 +89,12 @@
 }
 
 .edu h3 {
-  color: #faf0cc;
   font-size: $doc-font-size-large;
-}
-
-.edu a { 
-  color: #b7f6f2;
 }
 
 .edu span {
   font-size: $doc-font-size;
-  color: #faf0cc;
+
 }
 .edu p {
   font-style: italic;
@@ -110,13 +104,12 @@
   padding-inline-end: 0;
 }
 .edu p :hover {
-  background-color: #0026ff;
+  background-color: $primary-btn-hover;
   padding: 4px;
   border-radius: 5px;
 
 }
 #int {
-  color: #faf0cc;
   line-height: 1.7em;
   padding: 2px;
   font-size: $doc-font-size-medium;
@@ -131,7 +124,7 @@
   }  
   #int li:hover {
        text-decoration: underline;
-       background-color: #0026ff;
+       background-color: $primary-btn-hover;
        border-radius: 2em;
        padding: 2px;
        animation: bounce;

@@ -9,7 +9,7 @@
 
 # Site Settings
 locale: "en-US"
-site_theme: "contrast"
+site_theme: "default"
 title: "M. Shamshad"
 title_separator: "|"
 subtitle: # site taggline that appears blow site title in masthead
