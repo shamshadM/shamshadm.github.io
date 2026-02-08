@@ -6,4 +6,65 @@ search: false
 @charset "utf-8";
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+/* Define the default (Light) values */
+/* Define our dynamic palette */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1c1c1e;
+  --link-color: #007bff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1d1d1f;
+  --text-color: #f0f0f2;
+  --link-color: #61afef;
+}
+
+/* OVERRIDE MINIMAL MISTAKES CLASSES MANUALLY */
+/* This avoids the Sass "not a color" error because we aren't using Sass variables here */
+
+[data-theme="dark"] {
+  body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+  }
+
+  .masthead, .page__footer, .sidebar {
+    background-color: var(--bg-color) !important;
+    border-bottom-color: #333 !important;
+  }
+
+  .page__title, .archive__item-title, .page__content {
+    color: var(--text-color) !important;
+  }
+
+  a {
+    color: var(--link-color) !important;
+  }
+  /* Sidebar and Masthead */
+  .masthead, .initial-content, .search-content, .sidebar {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+  }
+
+  /* Greedy Nav (The menu items) */
+  .greedy-nav {
+    background-color: var(--bg-color) !important;
+    
+    a {
+      color: var(--text-color) !important;
+    }
+
+    .visible-links li a:before {
+      background-color: var(--link-color) !important; /* The underline on hover */
+    }
+  }
+
+  /* Table of Contents & Buttons */
+  .toc {
+    background-color: var(--bg-color) !important;
+    border: 1px solid #333 !important;
+  }
+
+}
 @import "minimal-mistakes"; // main partials

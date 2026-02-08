@@ -18,5 +18,12 @@
 <meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=565802">
 <meta name="theme-color" content="#ffffff">
 
+<script>
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+</script>
+
 <!-- SEO tags -->
 {% seo %}

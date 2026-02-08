@@ -22,26 +22,6 @@
   href="{{ '/assets/css/main.css' | relative_url }}"
   id="theme_source"
 />
-
-{% if site.minimal_mistakes_skin2 %}
-<link
-  rel="stylesheet alternate"
-  href="{{ '/assets/css/mainDark.css' | relative_url }}"
-  id="theme_source_2"
-/>
-<script defer>
-  let theme = sessionStorage.getItem("theme");
-  if (theme === "dark" || window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    sessionStorage.setItem("theme", "dark");
-    node1 = document.getElementById("theme_source");
-    node2 = document.getElementById("theme_source_2");
-    node1.setAttribute("rel", "stylesheet alternate");
-    node2.setAttribute("rel", "stylesheet");
-  } else {
-    sessionStorage.setItem("theme", "light");
-  }
-</script>
-{% endif %}
 {% if site.head_scripts %}
   {% for script in site.head_scripts %}
    <script src="{{ script | relative_url }}" defer></script>
