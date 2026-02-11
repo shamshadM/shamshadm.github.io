@@ -3,4 +3,5 @@
 .jekyll-metadata
 .sass-cache
 .vss
+_site/
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Jekyll
