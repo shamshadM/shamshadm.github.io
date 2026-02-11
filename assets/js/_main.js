@@ -1,3 +1,10 @@
+//  Theme change don't popup
+ const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+
+
 /* ==========================================================================
    jQuery plugin settings and other scripts
    ========================================================================== */
@@ -232,3 +239,30 @@
         });
     }
   });
+
+  // Dark theme setting
+      document.addEventListener('DOMContentLoaded', () => {
+  const toggleBtn = document.getElementById('theme-toggle');
+  const icon = document.getElementById('theme-icon');
+  
+  // Set initial icon state based on current theme
+  if (document.documentElement.getAttribute('data-theme') === 'dark') {
+    icon.classList.replace('fa-moon', 'fa-sun');
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const newTheme = isDark ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Swap icons
+    if (newTheme === 'dark') {
+      icon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+      icon.classList.replace('fa-sun', 'fa-moon');
+    }
+  });
+}); 
+
