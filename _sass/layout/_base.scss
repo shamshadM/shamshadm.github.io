@@ -11,7 +11,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: $text-color;
+  color: var(--global-text-color);
   font-family: $global-font-family;
   line-height: 1.5;
 
@@ -71,7 +71,7 @@ p {
 u,
 ins {
   text-decoration: none;
-  border-bottom: 1px solid $text-color;
+  border-bottom: 1px solid var(--global-text-color);
   a {
     color: inherit;
   }
@@ -102,7 +102,7 @@ abbr[title],
 abbr[data-original-title] {
   text-decoration: none;
   cursor: help;
-  border-bottom: 1px dotted $text-color;
+  border-bottom: 1px dotted var(--global-text-color);
 }
 
 /* blockquotes */
@@ -112,7 +112,7 @@ blockquote {
   margin-inline-end: 1em;
   padding-inline: 1em;
   font-style: italic;
-  border-inline-start: 0.25em solid $primary-color;
+  border-inline-start: 0.25em solid var(--global-base-color);
    font-size: 0.85em;
 
   cite {
@@ -133,11 +133,11 @@ a {
   }
 
   &:visited {
-    color: $link-color-visited;
+    color: (--global-link-color-visited);
   }
 
   &:hover {
-    color: $link-color-hover;
+    color: var(--global-link-color-hover);
     outline: 0;
   }
 }
@@ -171,7 +171,7 @@ td > code {
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
   font-size: 0.9em;
-  background: $code-background-color;
+  background: var(--global-code-background-color);
   border-radius: $border-radius;
 
   &:before,
@@ -269,7 +269,7 @@ figure {
 
 figcaption {
   margin-bottom: 0.5em;
-  color: $muted-text-color;
+  color: var(--global-text-color-light);
   font-family: $caption-font-family;
   font-size: $type-size-6;
 
@@ -278,7 +278,7 @@ figcaption {
     transition: $global-transition;
 
     &:hover {
-      color: $link-color-hover;
+      color: var(--global-link-color-hover);
     }
   }
 }

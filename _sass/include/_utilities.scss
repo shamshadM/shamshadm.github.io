@@ -194,7 +194,7 @@ body:hover .visually-hidden button {
   .fab,
   .far,
   .fal {
-    color: $text-color;
+    color: var(--global-text-color);
   }
 
   @each $color, $icons in (
@@ -240,7 +240,7 @@ body:hover .visually-hidden button {
   position: relative;
   width: $navicon-width;
   height: $navicon-height;
-  background: $primary-color;
+  background: var(--global-base-color);
   margin: auto;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -252,7 +252,7 @@ body:hover .visually-hidden button {
     inset-inline-start: 0;
     width: $navicon-width;
     height: $navicon-height;
-    background: $primary-color;
+    background: var(--global-base-color);
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
@@ -301,7 +301,7 @@ body:hover .visually-hidden button {
       width: 100%;
       height: 100%;
       opacity: 0;
-      background-color: $background-color;
+      background-color: var(--global-bg-color);
       -webkit-transition: $global-transition;
       transition: $global-transition;
       pointer-events: none;
@@ -398,7 +398,7 @@ body:hover .visually-hidden button {
   min-height: 0;
   z-index: 9999;
   background: #fff;
-  border: 1px solid $border-color;
+  border: 1px solid var(--global-border-color);
   border-radius: $border-radius;
   box-shadow: $box-shadow;
 
@@ -413,7 +413,7 @@ body:hover .visually-hidden button {
 
   &__actions {
     padding: 0.5em 1em;
-    border-top: 1px solid $border-color;
+    border-top: 1px solid var(--global-border-color);
   }
 }
 

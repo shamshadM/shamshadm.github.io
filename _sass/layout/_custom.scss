@@ -41,17 +41,36 @@
 
 /* Toggle theme setting */
 
-.toggle-switch {
-  background-color: $background-color;
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  overflow: hidden;
-  border-radius: 50%;
-  padding: 0.1rem 0.1rem;
+#theme-toggle {
+  a {
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 6px; // Increased padding to account for thicker line
+    text-decoration: none;
+    overflow: visible;
 
-  &:hover {
-    color: $masthead-link-color-hover;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      
+      // --- THICKNESS SETTINGS ---
+      height: 5px;            // Change this to 3px, 5px, etc.
+      border-radius: 1rem;    // Optional: rounds the ends of the thick line
+      // --------------------------
+
+      background-color: currentColor;
+      transform: scaleX(0);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
   }
 }
 
@@ -104,7 +123,7 @@
   padding-inline-end: 0;
 }
 .edu p :hover {
-  background-color: $primary-btn-hover;
+  background-color: var(--global-masthead-link-color-hover);
   padding: 4px;
   border-radius: 5px;
 
@@ -122,31 +141,10 @@
     padding-left: 0.5em;
     list-style-type: square;
   }  
-  #int li:hover {
-       text-decoration: underline;
-       background-color: $primary-btn-hover;
-       border-radius: 2em;
-       padding: 2px;
-       animation: bounce;
-       animation-duration: 0.5s;
-       animation-iteration-count: infinite;
-  }
-  @keyframes bounce {
-    0%{
-      /* initial stage and final stage */
-      transform: scaleY(0);
-    }
-    50% {
-      transform: scaleY(-20px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
 
 // new 404 page settings
 main {
-  background: $background-color;
+  background: var(--global-bg-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -168,8 +166,8 @@ main #errorLink {
 }
 main #errorLink:hover,
 main #errorLink:active {
-  color: $text-color;
-  background: $masthead-link-color-hover;
+  color: var(--global-text-color);
+  background: var(--global-masthead-link-color-hover);
 }
 main #g6219 {
   transform-origin: 85px 4px;
@@ -262,7 +260,7 @@ main #g6219 {
 }
 
 .btn-outline-primary {
-  color: $text-color;
+  color: var(--global-text-color);
   border-color: #007bff;
   display: inline-block;
   font-weight: 400;
@@ -273,7 +271,7 @@ main #g6219 {
   -ms-user-select: none;
   user-select: none;
   background-color: transparent;
-  border: 1px $link-color solid;
+  border: 1px var(--global-btn-color) solid;
   padding: .375rem .75rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -281,6 +279,6 @@ main #g6219 {
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 .btn-outline-primary:hover {
-  background-color: $primary-btn-hover;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  background-color: var(--global-masthead-link-color-hover);
+  transition: color .15s ease-in-out, var(--global-bg-color) .15s ease-in-out, var(--global-border-color) .15s ease-in-out, box-shadow .15s ease-in-out;
 }
