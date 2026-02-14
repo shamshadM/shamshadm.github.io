@@ -47,13 +47,19 @@
     display: flex;
     justify-content: center;
     position: relative;
-    padding-bottom: 6px; // Increased padding to account for thicker line
+    // padding-bottom: 0.05em; // Increased padding to account for thicker line
     text-decoration: none;
     overflow: visible;
-
+    /* Prevents the "I-beam" cursor and text selection */
+    user-select: none;
+   -webkit-user-select: none; /* Safari */
+  
+    /* Removes the tap highlight on mobile devices */
+    -webkit-tap-highlight-color: transparent;
     &::after {
       content: '';
       position: absolute;
+      top: 1.1em;
       left: 0;
       bottom: 0;
       width: 100%;
@@ -74,6 +80,11 @@
   }
 }
 
+/* Ensure the icon itself doesn't trigger a cursor */
+#theme-icon {
+  pointer-events: none;
+}
+
 // Photo for about me
 #about-me {
   border: 2px solid rgb(130, 130, 130);
@@ -91,10 +102,6 @@
   overflow: hidden;
   gap: 1em;
   border: 1px;
-  border-radius: 25px;
-  padding-left: 3em;
-  padding-right: 1em;
-  padding-bottom: 2em;
   line-height: 1.8em;
   font-size: $doc-font-size;
   column-gap: 2em;
