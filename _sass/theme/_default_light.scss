@@ -9,17 +9,17 @@ $light-primary-color        : mix(#fff, $primary-color, 50%);
 $lighter-primary-color      : mix(#fff, $primary-color, 90%);
 $background                 : #ffffff;
 $background-light           : #fafafa;
-$background-lighter        : #ffffff;
-$text                      : #000000;
-$text-muted                : #404040;
-$link                      : #0000ff;
-$link-dark                 : #0000cc;
-$link-light                : #3333ff;
-$footer                    : #ffdb58;
-$border                    : #c0c0c0;
-$border-dark               : #808080;
-$selection-bg              : #b3d4fc;
-$selection-text            : #000000;
+$background-lighter         : #ffffff;
+$text                       : #000000;
+$text-muted                 : #404040;
+$link                       : #8c1515;
+$link-dark                  : #0000cc;
+$link-light                 : #3333ff;
+$footer                     : #ffdb58;
+$border                     : #c0c0c0;
+$border-dark                : #808080;
+$selection-bg               : #175e54;
+$selection-text             : #000000;
 
 /* Color codes used for the site */
 $danger-color               : #ff0000;
@@ -89,10 +89,4 @@ $sidebar-screen-min-width   : 1024px;
 
 :not([data-theme="dark"]) footer {
   color: #000000;
-}
-
-// Do not change the color of the social icons in the feed icons
-.page__footer-follow .social-icons i:not(.fa-rss-square),
-.page__footer-follow .social-icons .svg-inline--fa:not(.fa-rss-square) {
-  color: inherit;
 }
