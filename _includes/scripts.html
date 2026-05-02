@@ -1,6 +1,6 @@
 {% if site.footer_scripts %}
   {% for script in site.footer_scripts %}
-    <script src="{{ script | relative_url }}"></script>
+    <script defer src="{{ script | relative_url }}"></script>
   {% endfor %}
 {% else %}
   <link defer rel="preload" href="/assets/js/main.min.js" as="script">
