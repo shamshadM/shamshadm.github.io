@@ -5,21 +5,21 @@
     	<title>Leaflet debug page</title>
 
     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0-beta.3/leaflet.css" />
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0-beta.3/leaflet.js"></script>
+    	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0-beta.3/leaflet.js"></script>
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     	<link rel="stylesheet" href="leaflet_dist/screen.css" />
 
     	<link rel="stylesheet" href="leaflet_dist/MarkerCluster.css" />
     	<link rel="stylesheet" href="leaflet_dist/MarkerCluster.Default.css" />
-    	<script src="leaflet_dist/leaflet.markercluster-src.js"></script>
-    	<script src="org-locations.js"></script>
+    	<script defer src="leaflet_dist/leaflet.markercluster-src.js"></script>
+    	<script defer src="org-locations.js"></script>
 
     </head>
     <body>
 
     	<div id="map"></div>
     	<span>Mouse over a cluster to see the bounds of its children and click a cluster to zoom to those bounds</span>
-    	<script type="text/javascript">
+    	<script defer type="text/javascript">
     		var tiles = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
               maxZoom: 18,
               attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
