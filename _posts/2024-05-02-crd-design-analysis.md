@@ -1,7 +1,7 @@
 ---
 title: "Completely Randomized Design (CRD): Theory & Complete R Analysis"
 date: 2024-05-02
-permalink: /posts/2026/05/crd-design-analysis/
+permalink: /posts/2024/05/crd-design-analysis/
 excerpt_separator: <!--more-->
 categories: [statistics, R, field-experiments]
 tags: [CRD, ANOVA, post-hoc, R, experimental-design]

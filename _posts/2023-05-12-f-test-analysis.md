@@ -1,7 +1,7 @@
 ---
 title: "F-Test: Theory, Variants & Complete R Analysis"
 date: 2023-05-12
-permalink: /posts/2025/05/f-test-analysis/
+permalink: /posts/2023/05/f-test-analysis/
 excerpt_separator: <!--more-->
 categories: [statistics, R]
 number_sections: true
