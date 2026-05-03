@@ -59,6 +59,42 @@ var store = [{
         "url": "/posts/2021/01/A-tutorial-on-Genome-Wide-Association-Studies/",
         "teaser": null
       },{
+        "title": "Z-Test and t-Test: Theory, Hypotheses & Complete R Analysis",
+        "excerpt":"Hypothesis testing is the formal procedure for deciding whether sample data provide sufficient evidence to reject a claim about a population parameter. The Z-test and t-test are the two workhorses for testing means. This post covers the theory, assumptions, null (H0) / alternative hypotheses (H1), test statistics, and full R...","categories": ["statistics","R"],
+        "tags": ["z-test","t-test","hypothesis-testing","inference","R"],
+        "url": "/posts/2022/05/z-test-t-test-analysis/",
+        "teaser": null
+      },{
+        "title": "F-Test: Theory, Variants & Complete R Analysis",
+        "excerpt":"The F-test is a family of statistical tests built on the F-distribution — the ratio of two independent chi-squared variables divided by their degrees of freedom. It answers three fundamental questions in applied statistics: Are two population variances equal? (Variance ratio test) Do several group means differ? (One-way ANOVA) Does...","categories": ["statistics","R"],
+        "tags": ["f-test","anova","variance","hypothesis-testing","R"],
+        "url": "/posts/2025/05/f-test-analysis/",
+        "teaser": null
+      },{
+        "title": "Completely Randomized Design (CRD): Theory & Complete R Analysis",
+        "excerpt":"The Completely Randomized Design (CRD) is the simplest experimental design. Treatments are assigned to experimental units purely at random, with no restrictions. It is the starting point for understanding all other designs (RCBD, Latin Square, Alpha-lattice) and remains widely used in controlled laboratory and greenhouse experiments. — 1. When to...","categories": ["statistics","R","field-experiments"],
+        "tags": ["CRD","ANOVA","post-hoc","R","experimental-design"],
+        "url": "/posts/2026/05/crd-design-analysis/",
+        "teaser": null
+      },{
+        "title": "Randomized Complete Block Design (RCBD): Theory & Complete R Analysis",
+        "excerpt":"The Randomized Complete Block Design (RCBD) is the most widely used experimental design in agricultural, biological, and environmental research. It extends the CRD by introducing blocks — groups of homogeneous experimental units — to account for a single known source of environmental variation (soil fertility gradient, slope, irrigation, temperature, etc.)....","categories": ["statistics","R","field-experiments"],
+        "tags": ["RCBD","blocking","ANOVA","post-hoc","mixed-model","field-experiments","R"],
+        "url": "/posts/2025/04/rcbd-design-analysis/",
+        "teaser": null
+      },{
+        "title": "Latin Square Design (LSD): Theory & Complete R Analysis",
+        "excerpt":"The Latin Square Design (LSD) extends blocking to two simultaneous directions of environmental variation. By controlling both a row gradient and a column gradient, it achieves greater error reduction than RCBD while using the same number of experimental units. It is the design of choice when two orthogonal sources of...","categories": ["statistics","R","field-experiments"],
+        "tags": ["latin-square","two-way-blocking","ANOVA","field-experiments","R"],
+        "url": "/posts/2026/01/latin-square-design/",
+        "teaser": null
+      },{
+        "title": "Alpha (α) Lattice Design: Theory, Layout & Complete R Analysis",
+        "excerpt":"The Alpha (α) Lattice Design — introduced by Patterson &amp; Williams (1976) — is an incomplete block design built for large-scale experiments where the number of treatments exceeds the practical block size. It is the standard design for plant breeding trials evaluating hundreds of genotypes, offering superior error control over...","categories": ["statistics","R","field-experiments"],
+        "tags": ["alpha-lattice","incomplete-block","ANOVA","mixed-model","BLUPs","plant-breeding","R"],
+        "url": "/posts/2026/02/alpha-lattice-design/",
+        "teaser": null
+      },{
         "title": "Assessment of Genetic Diversity in Sunflower (<i>Helianthus annuus </i>L.) Germplasm",
         "excerpt":"Download PDF here Abstract: The present investigation was carried out at the research fields of the oilseeds Sections Department of Plant Breeding and Genetics Punjab Agricultural University, Ludhiana, India. The material for present study consisted of 31 germplasm lines. The material was raised in two rows with three replications each...","categories": [],
         "tags": [],
@@ -221,15 +257,15 @@ var store = [{
         "url": "/teaching/2018-Graduate%20Teaching%20Assistant",
         "teaser": null
       },{
-        "title": "Field experimental analysis",
-        "excerpt":"Field experimental analysis is a research method that uses controlled interventions within a real-world setting to study cause-and-effect relationships. Unlike a lab experiment, which maximizes control in an artificial environment, a field experiment prioritizes testing an intervention in a natural setting to improve the real-world applicability of its findings. This...","categories": [],
-        "tags": [],
-        "url": "/teaching/designs",
-        "teaser": null
-      },{
         "title": "Summary Descriptive Statistics",
         "excerpt":"Field experimental analysis is a research method that uses controlled interventions within a real-world setting to study cause-and-effect relationships. Unlike a lab experiment, which maximizes control in an artificial environment, a field experiment prioritizes testing an intervention in a natural setting to improve the real-world applicability of its findings. This...","categories": [],
         "tags": [],
         "url": "/teaching/summary",
+        "teaser": null
+      },{
+        "title": "Field experimental analysis",
+        "excerpt":"Test of significance The Statistical procedures, which are used to know whether differences under study are significant or non-significant are called test of significance. Some well known and commonly used test of significant are Z-test, t-test and F-test. If \\(\\mu = H_0\\) is the null hypothesis than \\(\\mu \\ne H_0\\)...","categories": ["statistics","agronomy","R"],
+        "tags": ["RCBD","alpha-lattice","augmented-design","honeycomb","field-experiments","R"],
+        "url": "/teaching/designs",
         "teaser": null
       }]
