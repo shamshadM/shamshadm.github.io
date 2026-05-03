@@ -68,13 +68,13 @@ var store = [{
         "title": "F-Test: Theory, Variants & Complete R Analysis",
         "excerpt":"The F-test is a family of statistical tests built on the F-distribution — the ratio of two independent chi-squared variables divided by their degrees of freedom. It answers three fundamental questions in applied statistics: Are two population variances equal? (Variance ratio test) Do several group means differ? (One-way ANOVA) Does...","categories": ["statistics","R"],
         "tags": ["f-test","anova","variance","hypothesis-testing","R"],
-        "url": "/posts/2025/05/f-test-analysis/",
+        "url": "/posts/2023/05/f-test-analysis/",
         "teaser": null
       },{
         "title": "Completely Randomized Design (CRD): Theory & Complete R Analysis",
         "excerpt":"The Completely Randomized Design (CRD) is the simplest experimental design. Treatments are assigned to experimental units purely at random, with no restrictions. It is the starting point for understanding all other designs (RCBD, Latin Square, Alpha-lattice) and remains widely used in controlled laboratory and greenhouse experiments. — 1. When to...","categories": ["statistics","R","field-experiments"],
         "tags": ["CRD","ANOVA","post-hoc","R","experimental-design"],
-        "url": "/posts/2026/05/crd-design-analysis/",
+        "url": "/posts/2024/05/crd-design-analysis/",
         "teaser": null
       },{
         "title": "Randomized Complete Block Design (RCBD): Theory & Complete R Analysis",
