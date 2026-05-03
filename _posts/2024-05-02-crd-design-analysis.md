@@ -6,7 +6,6 @@ excerpt_separator: <!--more-->
 categories: [statistics, R, field-experiments]
 tags: [CRD, ANOVA, post-hoc, R, experimental-design]
 number_sections: true
-author: "Dr. Mohammad Shamshad"
 toc: true
 math: true
 ---

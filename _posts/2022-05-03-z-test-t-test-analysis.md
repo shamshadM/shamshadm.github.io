@@ -6,7 +6,6 @@ excerpt_separator: <!--more-->
 categories: [statistics, R]
 tags: [z-test, t-test, hypothesis-testing, inference, R]
 number_sections: true
-author: "Dr. Mohammad Shamshad"
 toc: true
 math: true
 ---

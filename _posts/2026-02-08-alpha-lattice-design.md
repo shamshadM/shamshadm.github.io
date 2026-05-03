@@ -6,7 +6,6 @@ excerpt_separator: <!--more-->
 categories: [statistics, R, field-experiments]
 tags: [alpha-lattice, incomplete-block, ANOVA, mixed-model, BLUPs, plant-breeding, R]
 number_sections: true
-author: "Dr. Mohammad Shamshad"
 toc: true
 math: true
 ---

@@ -68,6 +68,7 @@ By integrating theoretical concepts with practical computational tools, this gui
 ## Randomized Complete Block Design (RCBD)
 
 **Randomized Complete Block Design (RCBD)** is one of the most widely used experimental designs in agricultural and biological research, particularly when there is known or suspected variability in the experimental field. In RCBD, the entire set of treatments is arranged into groups called **blocks**, where each block is relatively homogeneous with respect to environmental conditions such as soil fertility, moisture, or slope. Every treatment appears exactly once within each block, ensuring that comparisons among treatments are made under similar conditions. The allocation of treatments within each block is done randomly, which helps eliminate bias and ensures the validity of statistical inference.
+{: .text-justify}
 
 The primary advantage of RCBD lies in its ability to **control variability** by isolating the effect of nuisance factors through blocking. By accounting for block-to-block variation, the design reduces experimental error and increases the precision of treatment comparisons. The statistical analysis of RCBD is typically carried out using **Analysis of Variance (ANOVA)**, where the total variation is partitioned into components due to treatments, blocks, and random error. If the treatment effect is found to be statistically significant, it indicates that the differences among treatment means are not due to chance alone. Overall, RCBD is highly efficient, simple to implement, and particularly suitable for field experiments where environmental heterogeneity exists in one direction. A detailed and systematic explanation can be found in the [Blog Post Section](/posts/2025/04/rcbd-design-analysis/)
 {: .text-justify}
@@ -107,118 +108,40 @@ A detailed and systematic explanation can be found in the [Blog Post Section](/p
 **Augmented Design (Augmented Block Design)** is an experimental design widely used in agricultural research when a large number of new treatments (such as genotypes or varieties or clones) need to be evaluated but resources are insufficient to replicate all of them. In this design, a set of standard or check treatments is replicated across all blocks, while the new treatments are unreplicated and appear only once. The primary purpose of including replicated checks is to account for environmental variability across blocks and to provide a basis for adjusting the performance of unreplicated entries. This makes the design particularly useful in early-stage plant breeding trials, where hundreds of new lines must be screened efficiently.
 {: .text-justify}
 
-The structure of an augmented design typically involves dividing the experimental area into blocks, each containing all the check treatments and a subset of new treatments. Since the new entries are not replicated, their raw observations may be influenced by local environmental conditions. To address this, statistical adjustments are made using the performance of the replicated checks within each block, thereby improving the accuracy of comparisons. The analysis is commonly performed using analysis of variance (ANOVA) models tailored for augmented designs, or specialized methods available in statistical software like R (e.g., using packages such as agricolae). Overall, the augmented design provides a practical balance between resource constraints and the need for reliable evaluation, enabling researchers to efficiently identify promising treatments for further testing.
+The structure of an augmented design typically involves dividing the experimental area into blocks, each containing all the check treatments and a subset of new treatments. Since the new entries are not replicated, their raw observations may be influenced by local environmental conditions. To address this, statistical adjustments are made using the performance of the replicated checks within each block, thereby improving the accuracy of comparisons. The analysis is commonly performed using analysis of variance (ANOVA) models tailored for augmented designs, or specialized methods available in statistical software like R (e.g., using packages such as agricolae). Overall, the augmented design provides a practical balance between resource constraints and the need for reliable evaluation, enabling researchers to efficiently identify promising treatments for further testing. A detailed and systematic explanation can be found in the [Blog Post Section](/posts/2026/02/augmented-design-analysis/)
 {: .text-justify}
-
-```r
-# ── Augmented RCBD ────────────────────────────────────────────────────────
-n_checks  <- 3
-n_test    <- 30
-n_blocks  <- 5
-
-checks <- paste0("Check", 1:n_checks)
-tests  <- paste0("Geno",  1:n_test)
-
-aug_data <- data.frame(
-  Block     = rep(paste0("B", 1:n_blocks), each = n_test / n_blocks + n_checks),
-  Treatment = c(rep(tests,  length.out = n_test),
-                rep(checks, n_blocks)),
-  Type      = c(rep("Test", n_test), rep("Check", n_blocks * n_checks))
-) |>
-  mutate(Yield = ifelse(Type == "Check",
-                        25 + as.integer(factor(Treatment)) * 3 +
-                             as.integer(factor(Block)) * 1.5 + rnorm(n(), 0, 2),
-                        20 + rnorm(n(), 0, 4)))
-
-# Adjusted means using checks
-model_aug <- lm(Yield ~ Treatment + Block, data = aug_data)
-adj_means <- emmeans(model_aug, ~ Treatment, data = aug_data)
-summary(adj_means) |> arrange(emmean) |> tail(10)
-```
 
 ---
 
 ## Partially Replicated (p-rep) Design
 
-p-rep designs replicate a fraction of entries (typically 20–30 %) to estimate error, while the
-rest appear once. Widely used in plant breeding Stage 1 trials.
+**Partially Replicated Design (P-rep design)** is a modern and highly efficient experimental design used in agricultural and plant breeding research when evaluating a large number of treatments under limited resources. In this design, only a **subset of treatments is replicated**, while the remaining treatments are included **only once** (unreplicated). This approach provides a practical balance between the need for replication (to estimate experimental error) and the constraint of limited field space, labor, or budget.
+{: .text-justify}
 
-```r
-# ── p-rep via DiGGer / FielDHub ───────────────────────────────────────────
-if (!requireNamespace("FielDHub", quietly = TRUE)){
-  install.packages("FielDHub")
-}
-library(FielDHub)
+The key idea behind the P-rep design is to strategically select certain treatments—often referred to as **checks or key entries**—for replication across the experiment. These replicated treatments serve as a basis for estimating environmental variability and improving the precision of comparisons among all treatments. The unreplicated treatments, although observed only once, are statistically adjusted using information borrowed from the replicated entries through advanced modeling techniques. This makes the design particularly useful in early-stage breeding programs where hundreds or thousands of genotypes must be screened efficiently.
+{: .text-justify}
 
-prep <- partially_replicated(
-  nrows     = 10,
-  ncols     = 15,
-  repGens   = c(0.30),    # 30 % of entries replicated twice
-  repUnits  = c(2),
-  nUn       = 150,
-  seed      = 101
-)
+Unlike traditional designs such as RCBD or lattice designs, the P-rep design relies heavily on **mixed-effects models** for analysis. In these models, treatment effects may be considered fixed or random, and spatial or block effects are incorporated to account for field heterogeneity. In R, packages such as `lme4`, `asreml`, or `SpATS` are commonly used to analyze P-rep data, allowing for more accurate estimation of treatment performance through techniques like **Best Linear Unbiased Prediction (BLUP)**.
+{: .text-justify}
 
-# Field layout
-plot(prep)
-
-# Attach simulated phenotype
-prep_data        <- prep$fieldBook
-set.seed(5)
-prep_data$Yield  <- 40 + rnorm(nrow(prep_data), 0, 5)
-
-# Spatial model (SpATS)
-if (!requireNamespace("SpATS", quietly = TRUE)) install.packages("SpATS")
-library(SpATS)
-
-spatial_model <- SpATS(
-  response  = "Yield",
-  genotype  = "ENTRY",
-  genotype.as.random = TRUE,
-  fixed     = NULL,
-  spatial   = SAP(Row, Col),
-  data      = prep_data,
-  control   = list(tolerance = 1e-04)
-)
-summary(spatial_model)
-BLUPs_prep <- predict(spatial_model, which = "ENTRY")
-head(BLUPs_prep[order(-BLUPs_prep$predicted.values), ], 10)
-```
+Overall, the P-rep design offers significant advantages in terms of flexibility and resource efficiency. It enables researchers to evaluate a large number of treatments with improved precision compared to fully unreplicated designs, while avoiding the high cost of complete replication. However, careful planning and appropriate statistical analysis are essential to ensure reliable results. A detailed and systematic explanation can be found in the [Blog Post Section](/posts/2026/03/p-rep-design-analysis/)
+{: .text-justify}
 
 ---
 
 ## Spatial Analysis with AR1 × AR1 Model
 
-Real field data typically exhibit **spatial autocorrelation**. Fitting a first-order autoregressive
-process in both row and column directions is the modern standard.
+R**Spatial Analysis with AR1 × AR1 Model** is a powerful statistical approach used in field experiments to account for **spatial correlation** among observations. In agricultural trials, experimental units (plots) are arranged in rows and columns, and measurements taken from nearby plots are often more similar than those farther apart due to underlying environmental gradients such as soil fertility, moisture, or management practices. Traditional designs like RCBD assume independence of errors, which is often violated in practice. The AR1 × AR1 (first-order autoregressive in both directions) model explicitly captures this spatial dependence, leading to more accurate estimation of treatment effects and improved statistical efficiency.
+{: .text-justify}
 
-```r
-# ── ASReml-R (commercial) or sommer (free) ────────────────────────────────
-if (!requireNamespace("sommer", quietly = TRUE)) install.packages("sommer")
-library(sommer)
+The AR1 × AR1 model assumes that correlation between observations decreases exponentially with distance in both the **row direction (horizontal)** and the **column direction (vertical)**. It introduces two parameters: one for row-wise correlation (ρ<sub>row</sub>) and one for column-wise correlation (ρ<sub>col</sub>). The covariance structure of the residuals is modeled as the **Kronecker product** of two AR1 processes, one for rows and one for columns. This means that plots closer together have higher correlation, while those farther apart are less correlated. By incorporating this structure into the model, spatial trends that are not captured by blocking alone can be effectively controlled.
+{: .text-justify}
 
-# Simulate spatially correlated field
-n_row <- 20; n_col <- 15
-field_df <- expand.grid(Row = 1:n_row, Col = 1:n_col) |>
-  mutate(
-    Genotype = sample(paste0("G", 1:50), n_row * n_col, replace = TRUE),
-    Yield    = 30 + as.integer(factor(Genotype)) * 0.2 +
-                    0.5 * Row - 0.3 * Col + rnorm(n(), 0, 3)
-  )
+In practice, spatial analysis using the AR1 × AR1 model is implemented through **mixed-effects models**, where treatment effects are typically considered fixed, and spatially correlated residuals are modeled explicitly. In R, packages such as `nlme`, `asreml`, or `SpATS` are commonly used. For example, using `nlme`, one can specify a correlation structure with `corAR1()` for both rows and columns within a generalized least squares (GLS) or linear mixed model framework. The model estimates the spatial correlation parameters along with treatment effects, providing adjusted means that are less biased by field heterogeneity.
+{: .text-justify}
 
-# Genotype as random, spatial residuals via us() or AR1
-ar1_model <- mmer(
-  fixed   = Yield ~ 1,
-  random  = ~ vsr(Genotype),
-  rcov    = ~ vsr(units),
-  data    = field_df,
-  verbose = FALSE
-)
-
-# GBLUPs
-gblups <- randef(ar1_model)$`u:Genotype`
-head(sort(gblups, decreasing = TRUE), 5)
-```
+The advantages of using an AR1 × AR1 spatial model include **reduced residual variance**, **increased precision of treatment comparisons**, and **better control of field trends** compared to traditional designs. It is particularly beneficial in large field trials, plant breeding experiments, and situations where spatial variability is continuous rather than discrete. However, it requires careful model specification, sufficient data structure (regular grid layout), and appropriate software tools. Overall, spatial analysis using the AR1 × AR1 model represents a modern and robust approach to improving the quality and reliability of conclusions drawn from field experiments.A detailed and systematic explanation can be found in the [Blog Post Section](/posts/2026/05/spatial-ar1-analysis/)
+{: .text-justify}
 
 ---
 
@@ -324,7 +247,7 @@ cat("Heritability estimate (HC):", round(h2_hc, 3), "\n")
 
 ---
 
-## 8. Comparison of Designs
+## Comparison of Designs
 
 | Feature | RCBD | Alpha Lattice | p-rep | Honeycomb |
 |---|---|---|---|---|
@@ -337,7 +260,7 @@ cat("Heritability estimate (HC):", round(h2_hc, 3), "\n")
 
 ---
 
-## 9. Full Pipeline Utility Functions
+## Full Pipeline Utility Functions
 
 ```r
 # ── Wrapper: run any design ANOVA and return LSD groups ───────────────────
@@ -358,7 +281,7 @@ analyse_design(ls_long,    "Row", "Col")           # Latin Square
 
 ---
 
-## 10. References & Further Reading
+## References & Further Reading
 
 - Fasoulas, A. C. (1988). *The Honeycomb Methodology of Plant Breeding*. Thessaloniki.
 - Kempton, R. A., & Fox, P. N. (Eds.) (1997). *Statistical Methods for Plant Variety Evaluation*. Chapman & Hall.

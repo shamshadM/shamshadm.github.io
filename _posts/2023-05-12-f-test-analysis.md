@@ -6,7 +6,6 @@ excerpt_separator: <!--more-->
 categories: [statistics, R]
 number_sections: true
 tags: [f-test, anova, variance, hypothesis-testing, R]
-author: "Dr. Mohammad Shamshad"
 toc: true
 math: true
 ---

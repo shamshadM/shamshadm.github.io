@@ -6,7 +6,6 @@ excerpt_separator: <!--more-->
 categories: [statistics, R, field-experiments]
 tags: [latin-square, two-way-blocking, ANOVA, field-experiments, R]
 number_sections: true
-author: "Dr. Mohammad Shamshad"
 toc: true
 math: true
 ---
