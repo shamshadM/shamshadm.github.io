@@ -1,4 +1,237 @@
-<!doctype html><html lang="en-US" class="no-js"><head><meta charset="utf-8"> <!-- begin _includes/seo.html --><title>Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis | M. Shamshad</title><meta name="description" content="The Randomized Complete Block Design (RCBD) is the most widely used experimental design in agricultural, biological, and environmental research. It extends the CRD by introducing blocks — groups of homogeneous experimental units — to account for a single known source of environmental variation (soil fertility gradient, slope, irrigation, temperature, etc.). Every treatment appears exactly once in every block, making blocks complete."><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta property="og:site_name" content="M. Shamshad"><meta property="og:title" content="Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis"><meta property="og:url" content="https://shamshad.in/posts/2025/04/rcbd-design-analysis/"><meta property="og:description" content="The Randomized Complete Block Design (RCBD) is the most widely used experimental design in agricultural, biological, and environmental research. It extends the CRD by introducing blocks — groups of homogeneous experimental units — to account for a single known source of environmental variation (soil fertility gradient, slope, irrigation, temperature, etc.). Every treatment appears exactly once in every block, making blocks complete."><meta property="og:image" content="https://shamshad.in/images/favicon/site-treaser.webp"><meta name="twitter:site" content="@DrShamshadM"><meta name="twitter:title" content="Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis"><meta name="twitter:description" content="The Randomized Complete Block Design (RCBD) is the most widely used experimental design in agricultural, biological, and environmental research. It extends the CRD by introducing blocks — groups of homogeneous experimental units — to account for a single known source of environmental variation (soil fertility gradient, slope, irrigation, temperature, etc.). Every treatment appears exactly once in every block, making blocks complete."><meta name="twitter:url" content="https://shamshad.in/posts/2025/04/rcbd-design-analysis/"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://shamshad.in/images/favicon/site-treaser.webp"><meta property="article:published_time" content="2025-04-18T00:00:00+05:30"><meta property="article:modified_time" content="2026-05-03T19:54:39+05:30"><link rel="canonical" href="https://shamshad.in/posts/2025/04/rcbd-design-analysis/"> <!-- end _includes/seo.html --><link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed"> <!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr --><meta name="viewport" content="width=device-width, initial-scale=1.0"> <script defer> document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js '; window.enable_copy_code_button = true; </script><link rel="stylesheet" href="/assets/academicons-1.9.6/css/academicons.min.css" fetchpriority="low"/> <!-- For all browsers --><link rel="stylesheet" href="/assets/css/main.css" id="theme_source" /> <!-- This command for the mathematics equations in the webpage --> <script> MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], tags: 'ams' /* numbered equations with \label / \ref */ }, svg: { fontCache: 'global' } }; </script> <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script> <!-- start custom head snippets --><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="default" /><link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png?v=565802"><link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon-76x76.png?v=565802"><link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-touch-icon-120x120.png?v=565802"><link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon-152x152.png?v=565802"><link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-180x180.png?v=565802"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=565802"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=565802"><link rel="manifest" href="/images/favicon/site.webmanifest?v=565802"><link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=565802" color="#00a7ff"><link rel="shortcut icon" href="/images/favicon/favicon.ico?v=565802"><meta name="apple-mobile-web-app-title" content="SM-Web"><meta name="application-name" content="SM-Web"><meta name="msapplication-TileColor" content="#00a300"><meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=565802"><meta name="theme-color" content="#ffffff"> <!-- SEO tags --> <!-- Begin Jekyll SEO tag v2.8.0 --><title>Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis | M. Shamshad</title><meta name="generator" content="Jekyll v3.10.0" /><meta property="og:title" content="Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis" /><meta name="author" content="Dr. Mohammad Shamshad" /><meta property="og:locale" content="en_US" /><meta name="description" content="The Randomized Complete Block Design (RCBD) is the most widely used experimental design in agricultural, biological, and environmental research. It extends the CRD by introducing blocks — groups of homogeneous experimental units — to account for a single known source of environmental variation (soil fertility gradient, slope, irrigation, temperature, etc.). Every treatment appears exactly once in every block, making blocks complete." /><meta property="og:description" content="The Randomized Complete Block Design (RCBD) is the most widely used experimental design in agricultural, biological, and environmental research. It extends the CRD by introducing blocks — groups of homogeneous experimental units — to account for a single known source of environmental variation (soil fertility gradient, slope, irrigation, temperature, etc.). Every treatment appears exactly once in every block, making blocks complete." /><link rel="canonical" href="https://shamshad.in/posts/2025/04/rcbd-design-analysis/" /><meta property="og:url" content="https://shamshad.in/posts/2025/04/rcbd-design-analysis/" /><meta property="og:site_name" content="M. Shamshad" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2025-04-18T00:00:00+05:30" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis" /><meta name="twitter:site" content="@DrShamshadM" /><meta name="twitter:creator" content="@Dr. Mohammad Shamshad" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Dr. Mohammad Shamshad"},"dateModified":"2026-05-03T19:54:39+05:30","datePublished":"2025-04-18T00:00:00+05:30","description":"The Randomized Complete Block Design (RCBD) is the most widely used experimental design in agricultural, biological, and environmental research. It extends the CRD by introducing blocks — groups of homogeneous experimental units — to account for a single known source of environmental variation (soil fertility gradient, slope, irrigation, temperature, etc.). Every treatment appears exactly once in every block, making blocks complete.","headline":"Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis","mainEntityOfPage":{"@type":"WebPage","@id":"https://shamshad.in/posts/2025/04/rcbd-design-analysis/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://shamshad.in/images/favicon/site-treaser.webp"},"name":"Dr. Mohammad Shamshad"},"url":"https://shamshad.in/posts/2025/04/rcbd-design-analysis/"}</script> <!-- End Jekyll SEO tag --></head><body class="layout--single" dir="ltr"><nav class="skip-links"><ul><li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li><li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li><li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li></ul></nav><div class="masthead"><div class="masthead__inner-wrap"><div class="masthead__menu"><nav id="site-nav" class="greedy-nav"> <a class="site-logo" href="/"><img src="/images/favicon/site-treaser.webp" alt="M. Shamshad"></a> <a class="site-title" href="/"> M. Shamshad </a><ul class="visible-links"><li class="masthead__menu-item"> <a href="/about/" >About</a></li><li class="masthead__menu-item"> <a href="/teaching/" >Teaching</a></li><li class="masthead__menu-item"> <a href="/publications/" >Publications</a></li><li class="masthead__menu-item"> <a href="/talks/" >Talks</a></li><li class="masthead__menu-item"> <a href="/research/" >Research</a></li><li class="masthead__menu-item"> <a href="/resume/" >Resume</a></li><li class="masthead__menu-item"> <a href="/tags/" >Tags</a></li><li class="masthead__menu-item"> <a href="/docs/Linux_tutorial/" >Bioinfo</a></li></ul><li id="theme-toggle" class="masthead__menu-item"> <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a></li><button class="greedy-nav__toggle hidden" type="button"> <span class="visually-hidden">Toggle menu</span><div class="navicon"></div></button><ul class="hidden-links hidden"></ul></nav></div></div></div><div class="initial-content"><div id="main" role="main"><div class="sidebar sticky"><div itemscope itemtype="https://schema.org/Person" class="h-card"><div class="author__content"><h3 class="author__name p-name" itemprop="name"> <a class="u-url" rel="me" href="https://shamshad.in/" itemprop="url"></a></h3></div><div class="author__urls-wrapper"> <button class="btn btn--inverse">Follow</button><ul class="author__urls social-icons"></ul></div></div></div><article class="page" itemscope itemtype="https://schema.org/CreativeWork"><meta itemprop="headline" content="Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis"><meta itemprop="description" content="The Randomized Complete Block Design (RCBD) is the most widely used experimental design in agricultural, biological, and environmental research. It extends the CRD by introducing blocks — groups of homogeneous experimental units — to account for a single known source of environmental variation (soil fertility gradient, slope, irrigation, temperature, etc.). Every treatment appears exactly once in every block, making blocks complete."><meta itemprop="datePublished" content="2025-04-18T00:00:00+05:30"><meta itemprop="dateModified" content="2026-05-03T19:54:39+05:30"><div class="page__inner-wrap"><header><h1 id="page-title" class="page__title" itemprop="headline"> <a href="https://shamshad.in/posts/2025/04/rcbd-design-analysis/" itemprop="url">Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis </a></h1><p class="page__meta"> <span class="page__meta-readtime"> <i class="far fa-clock" aria-hidden="true"></i> 13 minute read </span></p><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2025-04-18T00:00:00+05:30">April 18, 2025</time></p></header><section class="page__content" itemprop="text"><aside class="sidebar__right "><nav class="toc"><header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header><ul class="toc__menu"><li><a href="#1-concept-and-rationale">1. Concept and Rationale</a></li><li><a href="#2-design-structure">2. Design Structure</a></li><li><a href="#3-linear-model">3. Linear Model</a></li><li><a href="#4-hypotheses">4. Hypotheses</a><ul><li><a href="#treatment-hypothesis">Treatment hypothesis</a></li><li><a href="#block-hypothesis">Block hypothesis</a></li></ul></li><li><a href="#5-partitioning-of-variation">5. Partitioning of Variation</a><ul><li><a href="#anova-table">ANOVA Table</a></li><li><a href="#f-statistics">F Statistics</a></li><li><a href="#expected-mean-squares">Expected Mean Squares</a></li></ul></li><li><a href="#6-coefficient-of-variation">6. Coefficient of Variation</a></li><li><a href="#7-relative-efficiency-over-crd">7. Relative Efficiency over CRD</a></li><li><a href="#8-missing-data-estimation">8. Missing Data Estimation</a></li><li><a href="#9-full-r-analysis">9. Full R Analysis</a><ul><li><a href="#step-1--packages">Step 1 — Packages</a></li><li><a href="#step-2--generate-rcbd-layout">Step 2 — Generate RCBD Layout</a></li><li><a href="#step-3--field-layout-visualisation">Step 3 — Field Layout Visualisation</a></li><li><a href="#step-4--simulate--attach-yield-data">Step 4 — Simulate / Attach Yield Data</a></li><li><a href="#step-5--exploratory-data-analysis">Step 5 — Exploratory Data Analysis</a></li><li><a href="#step-6--anova-fixed-effects">Step 6 — ANOVA (Fixed Effects)</a></li><li><a href="#step-7--relative-efficiency-over-crd">Step 7 — Relative Efficiency over CRD</a></li><li><a href="#step-8--assumptions-diagnostics">Step 8 — Assumptions Diagnostics</a></li><li><a href="#step-9--post-hoc-mean-separation">Step 9 — Post-Hoc Mean Separation</a><ul><li><a href="#9a-lsd-test-bonferroni-adjusted">9a. LSD Test (Bonferroni adjusted)</a></li><li><a href="#9b-tukey-hsd">9b. Tukey HSD</a></li><li><a href="#9c-duncans-multiple-range-test">9c. Duncan’s Multiple Range Test</a></li><li><a href="#9d-dunnetts-test-vs-control-t1">9d. Dunnett’s Test (vs Control T1)</a></li><li><a href="#9e-estimated-marginal-means-emmeans">9e. Estimated Marginal Means (emmeans)</a></li></ul></li><li><a href="#step-10--effect-size">Step 10 — Effect Size</a></li><li><a href="#step-11--mixed-model-blocks-as-random">Step 11 — Mixed Model (Blocks as Random)</a></li><li><a href="#step-12--publication-quality-plot">Step 12 — Publication-Quality Plot</a></li><li><a href="#step-13--block-profile-plot">Step 13 — Block Profile Plot</a></li><li><a href="#step-14--missing-value-imputation">Step 14 — Missing Value Imputation</a></li><li><a href="#step-15--power-analysis">Step 15 — Power Analysis</a></li><li><a href="#step-16--non-parametric-alternative-friedman-test">Step 16 — Non-Parametric Alternative (Friedman Test)</a></li></ul></li><li><a href="#10-complete-analysis-workflow">10. Complete Analysis Workflow</a></li><li><a href="#11-rcbd-vs-other-designs">11. RCBD vs Other Designs</a></li><li><a href="#12-summary">12. Summary</a></li><li><a href="#13-references">13. References</a></li></ul></nav></aside><p>The <strong>Randomized Complete Block Design (RCBD)</strong> is the most widely used experimental design in agricultural, biological, and environmental research. It extends the CRD by introducing <strong>blocks</strong> — groups of homogeneous experimental units — to account for a single known source of environmental variation (soil fertility gradient, slope, irrigation, temperature, etc.). Every treatment appears <strong>exactly once</strong> in every block, making blocks <em>complete</em>.</p><!--more--><hr /><h2 id="1-concept-and-rationale">1. Concept and Rationale</h2><p>When experimental units are not uniform, assigning treatments completely at random (CRD) mixes treatment differences with environmental noise, inflating the error term. RCBD removes this nuisance variation from the error by grouping similar units into blocks.</p><p><strong>Key principle:</strong> Units within a block should be as <strong>homogeneous</strong> as possible; variation should exist <em>between</em> blocks, not within them.</p><blockquote><p><strong>Rule of thumb:</strong> If you can identify one source of systematic variation before the experiment — slope, fertility gradient, time of day, operator, batch — use RCBD.</p></blockquote><hr /><h2 id="2-design-structure">2. Design Structure</h2><ul><li>$t$ treatments</li><li>$r$ blocks (replications)</li><li>Each treatment appears <strong>exactly once</strong> per block</li><li>Total plots: $N = t \times r$</li><li>Within each block, treatments are assigned <strong>at random</strong></li></ul><p><strong>Balanced requirement:</strong> Every treatment must appear in every block — no missing cells.</p><hr /><h2 id="3-linear-model">3. Linear Model</h2>\[y_{ij} = \mu + \tau_i + \beta_j + \varepsilon_{ij}\]<table><thead><tr><th>Symbol</th><th>Meaning</th></tr></thead><tbody><tr><td>$y_{ij}$</td><td>Observation of treatment $i$ in block $j$</td></tr><tr><td>$\mu$</td><td>Overall grand mean</td></tr><tr><td>$\tau_i$</td><td>Fixed effect of treatment $i$; $\sum_{i=1}^{t} \tau_i = 0$</td></tr><tr><td>$\beta_j$</td><td>Fixed (or random) effect of block $j$; $\sum_{j=1}^{r} \beta_j = 0$</td></tr><tr><td>$\varepsilon_{ij}$</td><td>Random error; $\varepsilon_{ij} \overset{\text{iid}}{\sim} \mathcal{N}(0,\sigma^2)$</td></tr></tbody></table><hr /><h2 id="4-hypotheses">4. Hypotheses</h2><h3 id="treatment-hypothesis">Treatment hypothesis</h3>\[H_0: \tau_1 = \tau_2 = \cdots = \tau_t = 0 \quad \text{(no treatment effect)}\] \[H_1: \tau_i \neq 0 \quad \text{for at least one } i\]<h3 id="block-hypothesis">Block hypothesis</h3>\[H_0: \beta_1 = \beta_2 = \cdots = \beta_r = 0 \quad \text{(no block effect)}\] \[H_1: \beta_j \neq 0 \quad \text{for at least one } j\]<blockquote><p>A significant block F-test confirms blocking was <strong>beneficial</strong> — it captured real field variation and reduced experimental error.</p></blockquote><hr /><h2 id="5-partitioning-of-variation">5. Partitioning of Variation</h2>\[SS_{\text{Total}} = SS_{\text{Treatment}} + SS_{\text{Block}} + SS_{\text{Error}}\] \[\underbrace{\sum_{i}\sum_{j}(y_{ij}-\bar{y})^2}_{SS_{Tot}} = \underbrace{r\sum_{i}(\bar{y}_{i\cdot}-\bar{y})^2}_{SS_T} + \underbrace{t\sum_{j}(\bar{y}_{\cdot j}-\bar{y})^2}_{SS_B} + \underbrace{\sum_{i}\sum_{j}(y_{ij}-\bar{y}_{i\cdot}-\bar{y}_{\cdot j}+\bar{y})^2}_{SS_E}\]<h3 id="anova-table">ANOVA Table</h3><table><thead><tr><th>Source</th><th>SS</th><th>df</th><th>MS</th><th>F</th></tr></thead><tbody><tr><td>Treatment</td><td>$SS_T$</td><td>$t-1$</td><td>$MS_T = \dfrac{SS_T}{t-1}$</td><td>$\dfrac{MS_T}{MS_E}$</td></tr><tr><td>Block</td><td>$SS_B$</td><td>$r-1$</td><td>$MS_B = \dfrac{SS_B}{r-1}$</td><td>$\dfrac{MS_B}{MS_E}$</td></tr><tr><td>Error</td><td>$SS_E$</td><td>$(t-1)(r-1)$</td><td>$MS_E = \dfrac{SS_E}{(t-1)(r-1)}$</td><td>—</td></tr><tr><td>Total</td><td>$SS_{Tot}$</td><td>$tr-1$</td><td>—</td><td>—</td></tr></tbody></table><h3 id="f-statistics">F Statistics</h3>\[F_{\text{Treatment}} = \frac{MS_T}{MS_E} \sim F_{(t-1,\;(t-1)(r-1))} \quad \text{under } H_0\] \[F_{\text{Block}} = \frac{MS_B}{MS_E} \sim F_{(r-1,\;(t-1)(r-1))} \quad \text{under } H_0\]<h3 id="expected-mean-squares">Expected Mean Squares</h3>\[E[MS_E] = \sigma^2\] \[E[MS_T] = \sigma^2 + \frac{r\sum_{i=1}^{t}\tau_i^2}{t-1}\] \[E[MS_B] = \sigma^2 + \frac{t\sum_{j=1}^{r}\beta_j^2}{r-1}\]<hr /><h2 id="6-coefficient-of-variation">6. Coefficient of Variation</h2>\[CV = \frac{\sqrt{MS_E}}{\bar{y}} \times 100\]<table><thead><tr><th>CV (%)</th><th>Experiment quality</th></tr></thead><tbody><tr><td>&lt; 10</td><td>Excellent</td></tr><tr><td>10 – 20</td><td>Good</td></tr><tr><td>20 – 30</td><td>Acceptable</td></tr><tr><td>&gt; 30</td><td>Poor</td></tr></tbody></table><hr /><h2 id="7-relative-efficiency-over-crd">7. Relative Efficiency over CRD</h2><p>Measures how much RCBD reduces error compared to CRD (no blocking):</p>\[RE = \frac{(r-1)\,MS_B + r(t-1)\,MS_E}{(rt-1)\,MS_E} \times 100\]<ul><li>$RE &gt; 100\%$ → blocking was beneficial; RCBD is more efficient than CRD</li><li>$RE &lt; 100\%$ → blocking was unnecessary; CRD would have been equally precise</li></ul><hr /><h2 id="8-missing-data-estimation">8. Missing Data Estimation</h2><p>When a single plot value is missing, it can be estimated without dropping the observation:</p>\[\hat{y}_{ij} = \frac{t\,B_j + r\,T_i - G}{(t-1)(r-1)}\]<p>where $T_i$ = treatment total (excluding missing), $B_j$ = block total, $G$ = grand total. One degree of freedom is subtracted from both $SS_E$ and $SS_{Tot}$.</p><hr /><h2 id="9-full-r-analysis">9. Full R Analysis</h2><h3 id="step-1--packages">Step 1 — Packages</h3><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pkgs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"agricolae"</span><span class="p">,</span><span class="w"> </span><span class="s2">"lme4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"lmerTest"</span><span class="p">,</span><span class="w"> </span><span class="s2">"emmeans"</span><span class="p">,</span><span class="w">
+<!doctype html><html lang="en-US" class="no-js"><head><meta charset="utf-8"> <!-- begin _includes/seo.html --><title>Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis | M. Shamshad</title><meta name="description" content="The Randomized Complete Block Design (RCBD) is the most widely used experimental design in agricultural, biological, and environmental research. It extends the CRD by introducing blocks — groups of homogeneous experimental units — to account for a single known source of environmental variation (soil fertility gradient, slope, irrigation, temperature, etc.). Every treatment appears exactly once in every block, making blocks complete."><meta name="author" content="Dr. M. Shamshad"><meta property="article:author" content="Dr. M. Shamshad"><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta property="og:site_name" content="M. Shamshad"><meta property="og:title" content="Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis"><meta property="og:url" content="https://shamshad.in/posts/2025/04/rcbd-design-analysis/"><meta property="og:description" content="The Randomized Complete Block Design (RCBD) is the most widely used experimental design in agricultural, biological, and environmental research. It extends the CRD by introducing blocks — groups of homogeneous experimental units — to account for a single known source of environmental variation (soil fertility gradient, slope, irrigation, temperature, etc.). Every treatment appears exactly once in every block, making blocks complete."><meta property="og:image" content="https://shamshad.in/images/favicon/site-treaser.webp"><meta name="twitter:site" content="@DrShamshadM"><meta name="twitter:title" content="Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis"><meta name="twitter:description" content="The Randomized Complete Block Design (RCBD) is the most widely used experimental design in agricultural, biological, and environmental research. It extends the CRD by introducing blocks — groups of homogeneous experimental units — to account for a single known source of environmental variation (soil fertility gradient, slope, irrigation, temperature, etc.). Every treatment appears exactly once in every block, making blocks complete."><meta name="twitter:url" content="https://shamshad.in/posts/2025/04/rcbd-design-analysis/"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://shamshad.in/images/favicon/site-treaser.webp"><meta name="twitter:creator" content="@DrShamshadM"><meta property="article:published_time" content="2025-04-18T00:00:00+05:30"><meta property="article:modified_time" content="2026-05-03T22:11:37+05:30"><link rel="canonical" href="https://shamshad.in/posts/2025/04/rcbd-design-analysis/"> <!-- end _includes/seo.html --><link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed"> <!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr --><meta name="viewport" content="width=device-width, initial-scale=1.0"> <script defer> document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js '; window.enable_copy_code_button = true; </script><link rel="stylesheet" href="/assets/academicons-1.9.6/css/academicons.min.css" fetchpriority="low"/> <!-- For all browsers --><link rel="stylesheet" href="/assets/css/main.css" id="theme_source" /> <!-- This command for the mathematics equations in the webpage --> <script> MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], tags: 'ams' /* numbered equations with \label / \ref */ }, svg: { fontCache: 'global' } }; </script> <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script> <!-- start custom head snippets --><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="default" /><link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png?v=565802"><link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon-76x76.png?v=565802"><link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-touch-icon-120x120.png?v=565802"><link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon-152x152.png?v=565802"><link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-180x180.png?v=565802"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=565802"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=565802"><link rel="manifest" href="/images/favicon/site.webmanifest?v=565802"><link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=565802" color="#00a7ff"><link rel="shortcut icon" href="/images/favicon/favicon.ico?v=565802"><meta name="apple-mobile-web-app-title" content="SM-Web"><meta name="application-name" content="SM-Web"><meta name="msapplication-TileColor" content="#00a300"><meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=565802"><meta name="theme-color" content="#ffffff"> <!-- SEO tags --> <!-- Begin Jekyll SEO tag v2.8.0 --><title>Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis | M. Shamshad</title><meta name="generator" content="Jekyll v3.10.0" /><meta property="og:title" content="Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis" /><meta name="author" content="Dr. M. Shamshad" /><meta property="og:locale" content="en_US" /><meta name="description" content="The Randomized Complete Block Design (RCBD) is the most widely used experimental design in agricultural, biological, and environmental research. It extends the CRD by introducing blocks — groups of homogeneous experimental units — to account for a single known source of environmental variation (soil fertility gradient, slope, irrigation, temperature, etc.). Every treatment appears exactly once in every block, making blocks complete." /><meta property="og:description" content="The Randomized Complete Block Design (RCBD) is the most widely used experimental design in agricultural, biological, and environmental research. It extends the CRD by introducing blocks — groups of homogeneous experimental units — to account for a single known source of environmental variation (soil fertility gradient, slope, irrigation, temperature, etc.). Every treatment appears exactly once in every block, making blocks complete." /><link rel="canonical" href="https://shamshad.in/posts/2025/04/rcbd-design-analysis/" /><meta property="og:url" content="https://shamshad.in/posts/2025/04/rcbd-design-analysis/" /><meta property="og:site_name" content="M. Shamshad" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2025-04-18T00:00:00+05:30" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis" /><meta name="twitter:site" content="@DrShamshadM" /><meta name="twitter:creator" content="@DrShamshadM" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Dr. M. Shamshad"},"dateModified":"2026-05-03T22:11:37+05:30","datePublished":"2025-04-18T00:00:00+05:30","description":"The Randomized Complete Block Design (RCBD) is the most widely used experimental design in agricultural, biological, and environmental research. It extends the CRD by introducing blocks — groups of homogeneous experimental units — to account for a single known source of environmental variation (soil fertility gradient, slope, irrigation, temperature, etc.). Every treatment appears exactly once in every block, making blocks complete.","headline":"Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis","mainEntityOfPage":{"@type":"WebPage","@id":"https://shamshad.in/posts/2025/04/rcbd-design-analysis/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://shamshad.in/images/favicon/site-treaser.webp"},"name":"Dr. M. Shamshad"},"url":"https://shamshad.in/posts/2025/04/rcbd-design-analysis/"}</script> <!-- End Jekyll SEO tag --></head><body class="layout--single" dir="ltr"><nav class="skip-links"><ul>
+<li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+<li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+<li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+</ul></nav><div class="masthead"><div class="masthead__inner-wrap"><div class="masthead__menu"><nav id="site-nav" class="greedy-nav"> <a class="site-logo" href="/"><img src="/images/favicon/site-treaser.webp" alt="M. Shamshad"></a> <a class="site-title" href="/"> M. Shamshad </a><ul class="visible-links">
+<li class="masthead__menu-item"> <a href="/about/">About</a>
+</li>
+<li class="masthead__menu-item"> <a href="/teaching/">Teaching</a>
+</li>
+<li class="masthead__menu-item"> <a href="/publications/">Publications</a>
+</li>
+<li class="masthead__menu-item"> <a href="/talks/">Talks</a>
+</li>
+<li class="masthead__menu-item"> <a href="/research/">Research</a>
+</li>
+<li class="masthead__menu-item"> <a href="/resume/">Resume</a>
+</li>
+<li class="masthead__menu-item"> <a href="/tags/">Tags</a>
+</li>
+<li class="masthead__menu-item"> <a href="/docs/Linux_tutorial/">Bioinfo</a>
+</li>
+</ul>
+<li id="theme-toggle" class="masthead__menu-item"> <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
+</li>
+<button class="greedy-nav__toggle hidden" type="button"> <span class="visually-hidden">Toggle menu</span><div class="navicon"></div></button><ul class="hidden-links hidden"></ul></nav></div></div></div><div class="initial-content"><div id="main" role="main">
+<div class="sidebar sticky"><div itemscope itemtype="https://schema.org/Person" class="h-card">
+<div class="author__avatar"> <a href="https://shamshad.in/"> <img loading="lazy" src="/images/profile.webp" alt="Dr. M. Shamshad" itemprop="image" class="u-photo"> </a>
+</div>
+<div class="author__content">
+<h3 class="author__name p-name" itemprop="name"> <a class="u-url" rel="me" href="https://shamshad.in/" itemprop="url">Dr. M. Shamshad</a>
+</h3>
+<div class="author__bio p-note" itemprop="description"><p>Sugarcane Breeder &amp;&amp; Data Science</p></div>
+</div>
+<div class="author__urls-wrapper"> <button class="btn btn--inverse">Follow</button><ul class="author__urls social-icons">
+<li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place"> <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">RRS, Kapurthala, Punjab <img class="emoji" title=":india:" alt=":india:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ee-1f1f3.png" height="20" width="20"></span>
+</li>
+<li> <a href="mailto:shamshad.rattan@gmail.com" rel="me" class="u-email"><meta itemprop="email" content="shamshad.rattan@gmail.com"> <i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span class="label">Email</span> </a>
+</li>
+<li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" itemprop="sameAs" rel="nofollow noopener noreferrer me"> <i class="ai ai-researchgate-square" aria-hidden="true"></i><span class="label"> ResearchGate</span> </a></li>
+<li> <a href="https://twitter.com/DrShamshadM" itemprop="sameAs" rel="nofollow noopener noreferrer me"> <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span> </a>
+</li>
+<li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&amp;hl=en" itemprop="sameAs" rel="nofollow noopener noreferrer me"> <i class="ai ai-fw ai-google-scholar-square" aria-hidden="true"></i><span class="label">Google Scholar</span></a></li>
+</ul>
+</div>
+</div></div>
+<article class="page" itemscope itemtype="https://schema.org/CreativeWork"><meta itemprop="headline" content="Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis">
+<meta itemprop="description" content="The Randomized Complete Block Design (RCBD) is the most widely used experimental design in agricultural, biological, and environmental research. It extends the CRD by introducing blocks — groups of homogeneous experimental units — to account for a single known source of environmental variation (soil fertility gradient, slope, irrigation, temperature, etc.). Every treatment appears exactly once in every block, making blocks complete.">
+<meta itemprop="datePublished" content="2025-04-18T00:00:00+05:30">
+<meta itemprop="dateModified" content="2026-05-03T22:11:37+05:30">
+<div class="page__inner-wrap">
+<header><h1 id="page-title" class="page__title" itemprop="headline"> <a href="https://shamshad.in/posts/2025/04/rcbd-design-analysis/" itemprop="url">Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis </a>
+</h1>
+<p class="page__meta"> <span class="page__meta-readtime"> <i class="far fa-clock" aria-hidden="true"></i> 13 minute read </span></p>
+<p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2025-04-18T00:00:00+05:30">April 18, 2025</time></p></header><section class="page__content" itemprop="text"><aside class="sidebar__right "><nav class="toc"><header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header><ul class="toc__menu">
+<li><a href="#1-concept-and-rationale">1. Concept and Rationale</a></li>
+<li><a href="#2-design-structure">2. Design Structure</a></li>
+<li><a href="#3-linear-model">3. Linear Model</a></li>
+<li>
+<a href="#4-hypotheses">4. Hypotheses</a><ul>
+<li><a href="#treatment-hypothesis">Treatment hypothesis</a></li>
+<li><a href="#block-hypothesis">Block hypothesis</a></li>
+</ul>
+</li>
+<li>
+<a href="#5-partitioning-of-variation">5. Partitioning of Variation</a><ul>
+<li><a href="#anova-table">ANOVA Table</a></li>
+<li><a href="#f-statistics">F Statistics</a></li>
+<li><a href="#expected-mean-squares">Expected Mean Squares</a></li>
+</ul>
+</li>
+<li><a href="#6-coefficient-of-variation">6. Coefficient of Variation</a></li>
+<li><a href="#7-relative-efficiency-over-crd">7. Relative Efficiency over CRD</a></li>
+<li><a href="#8-missing-data-estimation">8. Missing Data Estimation</a></li>
+<li>
+<a href="#9-full-r-analysis">9. Full R Analysis</a><ul>
+<li><a href="#step-1--packages">Step 1 — Packages</a></li>
+<li><a href="#step-2--generate-rcbd-layout">Step 2 — Generate RCBD Layout</a></li>
+<li><a href="#step-3--field-layout-visualisation">Step 3 — Field Layout Visualisation</a></li>
+<li><a href="#step-4--simulate--attach-yield-data">Step 4 — Simulate / Attach Yield Data</a></li>
+<li><a href="#step-5--exploratory-data-analysis">Step 5 — Exploratory Data Analysis</a></li>
+<li><a href="#step-6--anova-fixed-effects">Step 6 — ANOVA (Fixed Effects)</a></li>
+<li><a href="#step-7--relative-efficiency-over-crd">Step 7 — Relative Efficiency over CRD</a></li>
+<li><a href="#step-8--assumptions-diagnostics">Step 8 — Assumptions Diagnostics</a></li>
+<li>
+<a href="#step-9--post-hoc-mean-separation">Step 9 — Post-Hoc Mean Separation</a><ul>
+<li><a href="#9a-lsd-test-bonferroni-adjusted">9a. LSD Test (Bonferroni adjusted)</a></li>
+<li><a href="#9b-tukey-hsd">9b. Tukey HSD</a></li>
+<li><a href="#9c-duncans-multiple-range-test">9c. Duncan’s Multiple Range Test</a></li>
+<li><a href="#9d-dunnetts-test-vs-control-t1">9d. Dunnett’s Test (vs Control T1)</a></li>
+<li><a href="#9e-estimated-marginal-means-emmeans">9e. Estimated Marginal Means (emmeans)</a></li>
+</ul>
+</li>
+<li><a href="#step-10--effect-size">Step 10 — Effect Size</a></li>
+<li><a href="#step-11--mixed-model-blocks-as-random">Step 11 — Mixed Model (Blocks as Random)</a></li>
+<li><a href="#step-12--publication-quality-plot">Step 12 — Publication-Quality Plot</a></li>
+<li><a href="#step-13--block-profile-plot">Step 13 — Block Profile Plot</a></li>
+<li><a href="#step-14--missing-value-imputation">Step 14 — Missing Value Imputation</a></li>
+<li><a href="#step-15--power-analysis">Step 15 — Power Analysis</a></li>
+<li><a href="#step-16--non-parametric-alternative-friedman-test">Step 16 — Non-Parametric Alternative (Friedman Test)</a></li>
+</ul>
+</li>
+<li><a href="#10-complete-analysis-workflow">10. Complete Analysis Workflow</a></li>
+<li><a href="#11-rcbd-vs-other-designs">11. RCBD vs Other Designs</a></li>
+<li><a href="#12-summary">12. Summary</a></li>
+<li><a href="#13-references">13. References</a></li>
+</ul></nav></aside><p>The <strong>Randomized Complete Block Design (RCBD)</strong> is the most widely used experimental design in agricultural, biological, and environmental research. It extends the CRD by introducing <strong>blocks</strong> — groups of homogeneous experimental units — to account for a single known source of environmental variation (soil fertility gradient, slope, irrigation, temperature, etc.). Every treatment appears <strong>exactly once</strong> in every block, making blocks <em>complete</em>.</p>
+<!--more--><hr>
+<h2 id="1-concept-and-rationale">1. Concept and Rationale</h2>
+<p>When experimental units are not uniform, assigning treatments completely at random (CRD) mixes treatment differences with environmental noise, inflating the error term. RCBD removes this nuisance variation from the error by grouping similar units into blocks.</p>
+<p><strong>Key principle:</strong> Units within a block should be as <strong>homogeneous</strong> as possible; variation should exist <em>between</em> blocks, not within them.</p>
+<blockquote><p><strong>Rule of thumb:</strong> If you can identify one source of systematic variation before the experiment — slope, fertility gradient, time of day, operator, batch — use RCBD.</p></blockquote>
+<hr>
+<h2 id="2-design-structure">2. Design Structure</h2>
+<ul>
+<li>$t$ treatments</li>
+<li>$r$ blocks (replications)</li>
+<li>Each treatment appears <strong>exactly once</strong> per block</li>
+<li>Total plots: $N = t \times r$</li>
+<li>Within each block, treatments are assigned <strong>at random</strong>
+</li>
+</ul>
+<p><strong>Balanced requirement:</strong> Every treatment must appear in every block — no missing cells.</p>
+<hr>
+<h2 id="3-linear-model">3. Linear Model</h2>\[y_{ij} = \mu + \tau_i + \beta_j + \varepsilon_{ij}\]<table>
+<thead><tr>
+<th>Symbol</th>
+<th>Meaning</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>$y_{ij}$</td>
+<td>Observation of treatment $i$ in block $j$</td>
+</tr>
+<tr>
+<td>$\mu$</td>
+<td>Overall grand mean</td>
+</tr>
+<tr>
+<td>$\tau_i$</td>
+<td>Fixed effect of treatment $i$; $\sum_{i=1}^{t} \tau_i = 0$</td>
+</tr>
+<tr>
+<td>$\beta_j$</td>
+<td>Fixed (or random) effect of block $j$; $\sum_{j=1}^{r} \beta_j = 0$</td>
+</tr>
+<tr>
+<td>$\varepsilon_{ij}$</td>
+<td>Random error; $\varepsilon_{ij} \overset{\text{iid}}{\sim} \mathcal{N}(0,\sigma^2)$</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="4-hypotheses">4. Hypotheses</h2>
+<h3 id="treatment-hypothesis">Treatment hypothesis</h3>\[H_0: \tau_1 = \tau_2 = \cdots = \tau_t = 0 \quad \text{(no treatment effect)}\] \[H_1: \tau_i \neq 0 \quad \text{for at least one } i\]<h3 id="block-hypothesis">Block hypothesis</h3>\[H_0: \beta_1 = \beta_2 = \cdots = \beta_r = 0 \quad \text{(no block effect)}\] \[H_1: \beta_j \neq 0 \quad \text{for at least one } j\]<blockquote><p>A significant block F-test confirms blocking was <strong>beneficial</strong> — it captured real field variation and reduced experimental error.</p></blockquote>
+<hr>
+<h2 id="5-partitioning-of-variation">5. Partitioning of Variation</h2>\[SS_{\text{Total}} = SS_{\text{Treatment}} + SS_{\text{Block}} + SS_{\text{Error}}\] \[\underbrace{\sum_{i}\sum_{j}(y_{ij}-\bar{y})^2}_{SS_{Tot}} = \underbrace{r\sum_{i}(\bar{y}_{i\cdot}-\bar{y})^2}_{SS_T} + \underbrace{t\sum_{j}(\bar{y}_{\cdot j}-\bar{y})^2}_{SS_B} + \underbrace{\sum_{i}\sum_{j}(y_{ij}-\bar{y}_{i\cdot}-\bar{y}_{\cdot j}+\bar{y})^2}_{SS_E}\]<h3 id="anova-table">ANOVA Table</h3>
+<table>
+<thead><tr>
+<th>Source</th>
+<th>SS</th>
+<th>df</th>
+<th>MS</th>
+<th>F</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Treatment</td>
+<td>$SS_T$</td>
+<td>$t-1$</td>
+<td>$MS_T = \dfrac{SS_T}{t-1}$</td>
+<td>$\dfrac{MS_T}{MS_E}$</td>
+</tr>
+<tr>
+<td>Block</td>
+<td>$SS_B$</td>
+<td>$r-1$</td>
+<td>$MS_B = \dfrac{SS_B}{r-1}$</td>
+<td>$\dfrac{MS_B}{MS_E}$</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>$SS_E$</td>
+<td>$(t-1)(r-1)$</td>
+<td>$MS_E = \dfrac{SS_E}{(t-1)(r-1)}$</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>$SS_{Tot}$</td>
+<td>$tr-1$</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="f-statistics">F Statistics</h3>\[F_{\text{Treatment}} = \frac{MS_T}{MS_E} \sim F_{(t-1,\;(t-1)(r-1))} \quad \text{under } H_0\] \[F_{\text{Block}} = \frac{MS_B}{MS_E} \sim F_{(r-1,\;(t-1)(r-1))} \quad \text{under } H_0\]<h3 id="expected-mean-squares">Expected Mean Squares</h3>\[E[MS_E] = \sigma^2\] \[E[MS_T] = \sigma^2 + \frac{r\sum_{i=1}^{t}\tau_i^2}{t-1}\] \[E[MS_B] = \sigma^2 + \frac{t\sum_{j=1}^{r}\beta_j^2}{r-1}\]<hr>
+<h2 id="6-coefficient-of-variation">6. Coefficient of Variation</h2>\[CV = \frac{\sqrt{MS_E}}{\bar{y}} \times 100\]<table>
+<thead><tr>
+<th>CV (%)</th>
+<th>Experiment quality</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>&lt; 10</td>
+<td>Excellent</td>
+</tr>
+<tr>
+<td>10 – 20</td>
+<td>Good</td>
+</tr>
+<tr>
+<td>20 – 30</td>
+<td>Acceptable</td>
+</tr>
+<tr>
+<td>&gt; 30</td>
+<td>Poor</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-relative-efficiency-over-crd">7. Relative Efficiency over CRD</h2>
+<p>Measures how much RCBD reduces error compared to CRD (no blocking):</p>\[RE = \frac{(r-1)\,MS_B + r(t-1)\,MS_E}{(rt-1)\,MS_E} \times 100\]<ul>
+<li>$RE &gt; 100\%$ → blocking was beneficial; RCBD is more efficient than CRD</li>
+<li>$RE &lt; 100\%$ → blocking was unnecessary; CRD would have been equally precise</li>
+</ul>
+<hr>
+<h2 id="8-missing-data-estimation">8. Missing Data Estimation</h2>
+<p>When a single plot value is missing, it can be estimated without dropping the observation:</p>\[\hat{y}_{ij} = \frac{t\,B_j + r\,T_i - G}{(t-1)(r-1)}\]<p>where $T_i$ = treatment total (excluding missing), $B_j$ = block total, $G$ = grand total. One degree of freedom is subtracted from both $SS_E$ and $SS_{Tot}$.</p>
+<hr>
+<h2 id="9-full-r-analysis">9. Full R Analysis</h2>
+<h3 id="step-1--packages">Step 1 — Packages</h3>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pkgs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"agricolae"</span><span class="p">,</span><span class="w"> </span><span class="s2">"lme4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"lmerTest"</span><span class="p">,</span><span class="w"> </span><span class="s2">"emmeans"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"ggplot2"</span><span class="p">,</span><span class="w"> </span><span class="s2">"dplyr"</span><span class="p">,</span><span class="w"> </span><span class="s2">"tidyr"</span><span class="p">,</span><span class="w"> </span><span class="s2">"car"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"multcomp"</span><span class="p">,</span><span class="w"> </span><span class="s2">"multcompView"</span><span class="p">,</span><span class="w"> </span><span class="s2">"effectsize"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"pwr"</span><span class="p">,</span><span class="w"> </span><span class="s2">"ggrepel"</span><span class="p">)</span><span class="w">
@@ -17,7 +250,10 @@
 </span><span class="n">library</span><span class="p">(</span><span class="n">effectsize</span><span class="p">)</span><span class="w">    </span><span class="c1"># eta_squared(), omega_squared()</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">pwr</span><span class="p">)</span><span class="w">           </span><span class="c1"># power analysis</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">ggrepel</span><span class="p">)</span><span class="w">       </span><span class="c1"># non-overlapping labels</span><span class="w">
-</span></code></pre></div></div><hr /><h3 id="step-2--generate-rcbd-layout">Step 2 — Generate RCBD Layout</h3><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Design: 6 treatments, 4 blocks ───────────────────────────────────────</span><span class="w">
+</span></code></pre></div></div>
+<hr>
+<h3 id="step-2--generate-rcbd-layout">Step 2 — Generate RCBD Layout</h3>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Design: 6 treatments, 4 blocks ───────────────────────────────────────</span><span class="w">
 </span><span class="n">set.seed</span><span class="p">(</span><span class="m">42</span><span class="p">)</span><span class="w">
 </span><span class="n">treatments</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="s2">"T"</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">)</span><span class="w">
 </span><span class="n">r</span><span class="w">          </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">4</span><span class="w">   </span><span class="c1"># blocks / replications</span><span class="w">
@@ -34,7 +270,9 @@
 </span><span class="n">cat</span><span class="p">(</span><span class="s2">"  Blocks     :"</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="s2">"\n"</span><span class="p">)</span><span class="w">
 </span><span class="n">cat</span><span class="p">(</span><span class="s2">"  Total plots:"</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">field_book</span><span class="p">),</span><span class="w"> </span><span class="s2">"\n\n"</span><span class="p">)</span><span class="w">
 </span><span class="n">print</span><span class="p">(</span><span class="n">field_book</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><p><strong>Output:</strong></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Design parameters
+</span></code></pre></div></div>
+<p><strong>Output:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Design parameters
   Treatments : 6
   Blocks     : 4
   Total plots: 24
@@ -48,7 +286,10 @@
 6    106     1  T2
 7    107     2  T2
 ...
-</code></pre></div></div><hr /><h3 id="step-3--field-layout-visualisation">Step 3 — Field Layout Visualisation</h3><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Tile map of the field ─────────────────────────────────────────────────</span><span class="w">
+</code></pre></div></div>
+<hr>
+<h3 id="step-3--field-layout-visualisation">Step 3 — Field Layout Visualisation</h3>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Tile map of the field ─────────────────────────────────────────────────</span><span class="w">
 </span><span class="n">field_book</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">field_book</span><span class="w"> </span><span class="o">|&gt;</span><span class="w">
   </span><span class="n">mutate</span><span class="p">(</span><span class="w">
     </span><span class="n">Block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">block</span><span class="p">),</span><span class="w">
@@ -70,7 +311,10 @@
   </span><span class="n">theme</span><span class="p">(</span><span class="n">panel.grid</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">element_blank</span><span class="p">(),</span><span class="w">
         </span><span class="n">axis.text.x</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">element_blank</span><span class="p">(),</span><span class="w">
         </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"none"</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><hr /><h3 id="step-4--simulate--attach-yield-data">Step 4 — Simulate / Attach Yield Data</h3><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── True effects (breeding/agronomy scenario) ─────────────────────────────</span><span class="w">
+</span></code></pre></div></div>
+<hr>
+<h3 id="step-4--simulate--attach-yield-data">Step 4 — Simulate / Attach Yield Data</h3>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── True effects (breeding/agronomy scenario) ─────────────────────────────</span><span class="w">
 </span><span class="n">set.seed</span><span class="p">(</span><span class="m">7</span><span class="p">)</span><span class="w">
 </span><span class="n">trt_effects</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">T1</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">T2</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">T3</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="m">8</span><span class="p">,</span><span class="w">
                  </span><span class="n">T4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">T5</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">T6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">-2</span><span class="p">)</span><span class="w">
@@ -85,7 +329,10 @@
   </span><span class="p">)</span><span class="w">
 
 </span><span class="n">head</span><span class="p">(</span><span class="n">field_book</span><span class="p">,</span><span class="w"> </span><span class="m">12</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><hr /><h3 id="step-5--exploratory-data-analysis">Step 5 — Exploratory Data Analysis</h3><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Treatment summary ─────────────────────────────────────────────────────</span><span class="w">
+</span></code></pre></div></div>
+<hr>
+<h3 id="step-5--exploratory-data-analysis">Step 5 — Exploratory Data Analysis</h3>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Treatment summary ─────────────────────────────────────────────────────</span><span class="w">
 </span><span class="n">trt_summary</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">field_book</span><span class="w"> </span><span class="o">|&gt;</span><span class="w">
   </span><span class="n">group_by</span><span class="p">(</span><span class="n">trt</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w">
   </span><span class="n">summarise</span><span class="p">(</span><span class="w">
@@ -119,7 +366,10 @@
   </span><span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Yield Heatmap — Treatment × Block"</span><span class="p">,</span><span class="w">
        </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Treatment"</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Block"</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Yield (q/ha)"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
   </span><span class="n">theme_minimal</span><span class="p">(</span><span class="n">base_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">13</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><hr /><h3 id="step-6--anova-fixed-effects">Step 6 — ANOVA (Fixed Effects)</h3><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Fit RCBD model ────────────────────────────────────────────────────────</span><span class="w">
+</span></code></pre></div></div>
+<hr>
+<h3 id="step-6--anova-fixed-effects">Step 6 — ANOVA (Fixed Effects)</h3>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Fit RCBD model ────────────────────────────────────────────────────────</span><span class="w">
 </span><span class="n">model_rcbd</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">aov</span><span class="p">(</span><span class="n">Yield</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">trt</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Block</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">field_book</span><span class="p">)</span><span class="w">
 </span><span class="n">anova_tbl</span><span class="w">  </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">summary</span><span class="p">(</span><span class="n">model_rcbd</span><span class="p">)</span><span class="w">
 </span><span class="n">print</span><span class="p">(</span><span class="n">anova_tbl</span><span class="p">)</span><span class="w">
@@ -132,7 +382,9 @@
 </span><span class="n">cat</span><span class="p">(</span><span class="s2">"\nGrand mean :"</span><span class="p">,</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">grand_mean</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">),</span><span class="w"> </span><span class="s2">"q/ha\n"</span><span class="p">)</span><span class="w">
 </span><span class="n">cat</span><span class="p">(</span><span class="s2">"MS Error   :"</span><span class="p">,</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">MS_E</span><span class="p">,</span><span class="w">       </span><span class="m">3</span><span class="p">),</span><span class="w"> </span><span class="s2">"\n"</span><span class="p">)</span><span class="w">
 </span><span class="n">cat</span><span class="p">(</span><span class="s2">"CV (%)     :"</span><span class="p">,</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">CV</span><span class="p">,</span><span class="w">         </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="s2">"\n"</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><p><strong>Output:</strong></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            Df Sum Sq Mean Sq F value   Pr(&gt;F)
+</span></code></pre></div></div>
+<p><strong>Output:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            Df Sum Sq Mean Sq F value   Pr(&gt;F)
 trt          5  962.4  192.48   38.24  &lt; 2e-16 ***
 Block        3  354.2  118.07   23.46  2.1e-06 ***
 Residuals   15   75.5    5.03
@@ -140,7 +392,19 @@ Residuals   15   75.5    5.03
 Grand mean : 50.892 q/ha
 MS Error   : 5.034
 CV (%)     : 4.41
-</code></pre></div></div><p><strong>Interpretation:</strong></p><ul><li><strong>Treatment:</strong> $F_{(5,15)} = 38.24,\ p &lt; 0.001$ → treatments differ significantly.</li><li><strong>Block:</strong> $F_{(3,15)} = 23.46,\ p &lt; 0.001$ → blocking captured real field variation.</li><li><strong>CV = 4.41 %</strong> → excellent experimental precision.</li></ul><hr /><h3 id="step-7--relative-efficiency-over-crd">Step 7 — Relative Efficiency over CRD</h3><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── RE formula ────────────────────────────────────────────────────────────</span><span class="w">
+</code></pre></div></div>
+<p><strong>Interpretation:</strong></p>
+<ul>
+<li>
+<strong>Treatment:</strong> $F_{(5,15)} = 38.24,\ p &lt; 0.001$ → treatments differ significantly.</li>
+<li>
+<strong>Block:</strong> $F_{(3,15)} = 23.46,\ p &lt; 0.001$ → blocking captured real field variation.</li>
+<li>
+<strong>CV = 4.41 %</strong> → excellent experimental precision.</li>
+</ul>
+<hr>
+<h3 id="step-7--relative-efficiency-over-crd">Step 7 — Relative Efficiency over CRD</h3>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── RE formula ────────────────────────────────────────────────────────────</span><span class="w">
 </span><span class="n">MS_B</span><span class="w">   </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">anova_tbl</span><span class="p">[[</span><span class="m">1</span><span class="p">]][</span><span class="s2">"Block"</span><span class="p">,</span><span class="w">     </span><span class="s2">"Mean Sq"</span><span class="p">]</span><span class="w">
 </span><span class="n">MS_E_v</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">anova_tbl</span><span class="p">[[</span><span class="m">1</span><span class="p">]][</span><span class="s2">"Residuals"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Mean Sq"</span><span class="p">]</span><span class="w">
 </span><span class="n">t_val</span><span class="w">  </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">treatments</span><span class="p">)</span><span class="w">
@@ -153,9 +417,14 @@ CV (%)     : 4.41
 </span><span class="n">cat</span><span class="p">(</span><span class="n">ifelse</span><span class="p">(</span><span class="n">RE</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w">
   </span><span class="s2">"→ Blocking was beneficial; RCBD preferred over CRD."</span><span class="p">,</span><span class="w">
   </span><span class="s2">"→ Blocking was not beneficial; CRD would have been sufficient."</span><span class="p">))</span><span class="w">
-</span></code></pre></div></div><p><strong>Output:</strong></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Relative Efficiency of RCBD over CRD: 168.4%
+</span></code></pre></div></div>
+<p><strong>Output:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Relative Efficiency of RCBD over CRD: 168.4%
 → Blocking was beneficial; RCBD preferred over CRD.
-</code></pre></div></div><hr /><h3 id="step-8--assumptions-diagnostics">Step 8 — Assumptions Diagnostics</h3><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── 1. Residual plots ─────────────────────────────────────────────────────</span><span class="w">
+</code></pre></div></div>
+<hr>
+<h3 id="step-8--assumptions-diagnostics">Step 8 — Assumptions Diagnostics</h3>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── 1. Residual plots ─────────────────────────────────────────────────────</span><span class="w">
 </span><span class="n">par</span><span class="p">(</span><span class="n">mfrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="w">
 </span><span class="n">plot</span><span class="p">(</span><span class="n">model_rcbd</span><span class="p">,</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">)</span><span class="w">
 </span><span class="n">par</span><span class="p">(</span><span class="n">mfrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="w">
@@ -184,10 +453,15 @@ CV (%)     : 4.41
               </span><span class="n">trt</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">field_book</span><span class="o">$</span><span class="n">trt</span><span class="p">,</span><span class="w">
               </span><span class="n">DFerror</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="m">15</span><span class="p">,</span><span class="w">
               </span><span class="n">MSerror</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">MS_E</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><hr /><h3 id="step-9--post-hoc-mean-separation">Step 9 — Post-Hoc Mean Separation</h3><h4 id="9a-lsd-test-bonferroni-adjusted">9a. LSD Test (Bonferroni adjusted)</h4>\[LSD = t_{\alpha/2,\,(t-1)(r-1)} \times \sqrt{2\,MS_E / r}\]<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lsd_result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">LSD.test</span><span class="p">(</span><span class="n">model_rcbd</span><span class="p">,</span><span class="w"> </span><span class="s2">"trt"</span><span class="p">,</span><span class="w">
+</span></code></pre></div></div>
+<hr>
+<h3 id="step-9--post-hoc-mean-separation">Step 9 — Post-Hoc Mean Separation</h3>
+<h4 id="9a-lsd-test-bonferroni-adjusted">9a. LSD Test (Bonferroni adjusted)</h4>\[LSD = t_{\alpha/2,\,(t-1)(r-1)} \times \sqrt{2\,MS_E / r}\]<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lsd_result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">LSD.test</span><span class="p">(</span><span class="n">model_rcbd</span><span class="p">,</span><span class="w"> </span><span class="s2">"trt"</span><span class="p">,</span><span class="w">
                         </span><span class="n">p.adj</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">"bonferroni"</span><span class="p">,</span><span class="w">
                         </span><span class="n">console</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><p><strong>Output:</strong></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Means with the same letter are not significantly different.
+</span></code></pre></div></div>
+<p><strong>Output:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Means with the same letter are not significantly different.
 
    Yield groups
 T4 57.21      a
@@ -196,7 +470,8 @@ T5 51.07     bc
 T2 49.14      c
 T1 45.23      d
 T6 43.47      d
-</code></pre></div></div><h4 id="9b-tukey-hsd">9b. Tukey HSD</h4>\[HSD = q_{\alpha,\,t,\,(t-1)(r-1)} \times \sqrt{MS_E / r}\]<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tukey_result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">TukeyHSD</span><span class="p">(</span><span class="n">model_rcbd</span><span class="p">,</span><span class="w"> </span><span class="s2">"trt"</span><span class="p">)</span><span class="w">
+</code></pre></div></div>
+<h4 id="9b-tukey-hsd">9b. Tukey HSD</h4>\[HSD = q_{\alpha,\,t,\,(t-1)(r-1)} \times \sqrt{MS_E / r}\]<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tukey_result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">TukeyHSD</span><span class="p">(</span><span class="n">model_rcbd</span><span class="p">,</span><span class="w"> </span><span class="s2">"trt"</span><span class="p">)</span><span class="w">
 </span><span class="n">print</span><span class="p">(</span><span class="n">tukey_result</span><span class="p">)</span><span class="w">
 
 </span><span class="c1"># Compact letter display</span><span class="w">
@@ -208,15 +483,21 @@ T6 43.47      d
 </span><span class="c1"># Plot</span><span class="w">
 </span><span class="n">plot</span><span class="p">(</span><span class="n">tukey_result</span><span class="p">,</span><span class="w"> </span><span class="n">las</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"#2C7BB6"</span><span class="p">,</span><span class="w">
      </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Tukey HSD 95% Family-wise CI"</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><h4 id="9c-duncans-multiple-range-test">9c. Duncan’s Multiple Range Test</h4><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">duncan_result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">duncan.test</span><span class="p">(</span><span class="n">model_rcbd</span><span class="p">,</span><span class="w"> </span><span class="s2">"trt"</span><span class="p">,</span><span class="w">
+</span></code></pre></div></div>
+<h4 id="9c-duncans-multiple-range-test">9c. Duncan’s Multiple Range Test</h4>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">duncan_result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">duncan.test</span><span class="p">(</span><span class="n">model_rcbd</span><span class="p">,</span><span class="w"> </span><span class="s2">"trt"</span><span class="p">,</span><span class="w">
                               </span><span class="n">console</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><h4 id="9d-dunnetts-test-vs-control-t1">9d. Dunnett’s Test (vs Control T1)</h4><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">multcomp</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<h4 id="9d-dunnetts-test-vs-control-t1">9d. Dunnett’s Test (vs Control T1)</h4>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">multcomp</span><span class="p">)</span><span class="w">
 </span><span class="n">dunnett</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">glht</span><span class="p">(</span><span class="n">model_rcbd</span><span class="p">,</span><span class="w">
                 </span><span class="n">linfct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mcp</span><span class="p">(</span><span class="n">trt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Dunnett"</span><span class="p">),</span><span class="w">
                 </span><span class="n">base</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
 </span><span class="n">summary</span><span class="p">(</span><span class="n">dunnett</span><span class="p">)</span><span class="w">
 </span><span class="n">confint</span><span class="p">(</span><span class="n">dunnett</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><h4 id="9e-estimated-marginal-means-emmeans">9e. Estimated Marginal Means (emmeans)</h4><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">emm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">emmeans</span><span class="p">(</span><span class="n">model_rcbd</span><span class="p">,</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">trt</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<h4 id="9e-estimated-marginal-means-emmeans">9e. Estimated Marginal Means (emmeans)</h4>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">emm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">emmeans</span><span class="p">(</span><span class="n">model_rcbd</span><span class="p">,</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">trt</span><span class="p">)</span><span class="w">
 </span><span class="n">print</span><span class="p">(</span><span class="n">emm</span><span class="p">)</span><span class="w">
 
 </span><span class="c1"># Pairwise with Tukey adjustment</span><span class="w">
@@ -226,7 +507,10 @@ T6 43.47      d
 </span><span class="n">cld_result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cld</span><span class="p">(</span><span class="n">emm</span><span class="p">,</span><span class="w"> </span><span class="n">Letters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">letters</span><span class="p">,</span><span class="w">
                   </span><span class="n">adjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"tukey"</span><span class="p">,</span><span class="w"> </span><span class="n">decreasing</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
 </span><span class="n">print</span><span class="p">(</span><span class="n">cld_result</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><hr /><h3 id="step-10--effect-size">Step 10 — Effect Size</h3><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Eta-squared (η²)</span><span class="w">
+</span></code></pre></div></div>
+<hr>
+<h3 id="step-10--effect-size">Step 10 — Effect Size</h3>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Eta-squared (η²)</span><span class="w">
 </span><span class="n">eta_squared</span><span class="p">(</span><span class="n">model_rcbd</span><span class="p">,</span><span class="w"> </span><span class="n">partial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
 
 </span><span class="c1"># Partial eta-squared (η²_p) for treatment only</span><span class="w">
@@ -239,10 +523,15 @@ T6 43.47      d
 </span><span class="n">SS_trt</span><span class="w">   </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">anova_tbl</span><span class="p">[[</span><span class="m">1</span><span class="p">]][</span><span class="s2">"trt"</span><span class="p">,</span><span class="w">       </span><span class="s2">"Sum Sq"</span><span class="p">]</span><span class="w">
 </span><span class="n">SS_total</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">anova_tbl</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="w"> </span><span class="s2">"Sum Sq"</span><span class="p">])</span><span class="w">
 </span><span class="n">cat</span><span class="p">(</span><span class="s2">"η² (treatment):"</span><span class="p">,</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">SS_trt</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">SS_total</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">),</span><span class="w"> </span><span class="s2">"\n"</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><p><strong>Output:</strong></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>η²  (treatment) = 0.714   → large effect
+</span></code></pre></div></div>
+<p><strong>Output:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>η²  (treatment) = 0.714   → large effect
 ω²  (treatment) = 0.672
 η²_p(treatment) = 0.927
-</code></pre></div></div><hr /><h3 id="step-11--mixed-model-blocks-as-random">Step 11 — Mixed Model (Blocks as Random)</h3><p>When blocks are considered a random sample from a population of possible blocks, treat $\beta_j$ as random to obtain generalizable inference:</p>\[y_{ij} = \mu + \tau_i + b_j + \varepsilon_{ij}, \quad b_j \sim \mathcal{N}(0, \sigma_b^2), \quad \varepsilon_{ij} \sim \mathcal{N}(0, \sigma^2)\]<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Mixed model: block as random ──────────────────────────────────────────</span><span class="w">
+</code></pre></div></div>
+<hr>
+<h3 id="step-11--mixed-model-blocks-as-random">Step 11 — Mixed Model (Blocks as Random)</h3>
+<p>When blocks are considered a random sample from a population of possible blocks, treat $\beta_j$ as random to obtain generalizable inference:</p>\[y_{ij} = \mu + \tau_i + b_j + \varepsilon_{ij}, \quad b_j \sim \mathcal{N}(0, \sigma_b^2), \quad \varepsilon_{ij} \sim \mathcal{N}(0, \sigma^2)\]<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Mixed model: block as random ──────────────────────────────────────────</span><span class="w">
 </span><span class="n">model_mixed</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">lmer</span><span class="p">(</span><span class="n">Yield</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">trt</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Block</span><span class="p">),</span><span class="w">
                     </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">field_book</span><span class="p">,</span><span class="w">
                     </span><span class="n">REML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
@@ -264,13 +553,18 @@ T6 43.47      d
 </span><span class="c1"># Adjusted means</span><span class="w">
 </span><span class="n">emm_mixed</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">emmeans</span><span class="p">(</span><span class="n">model_mixed</span><span class="p">,</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">trt</span><span class="p">)</span><span class="w">
 </span><span class="n">cld</span><span class="p">(</span><span class="n">emm_mixed</span><span class="p">,</span><span class="w"> </span><span class="n">Letters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">letters</span><span class="p">,</span><span class="w"> </span><span class="n">adjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"tukey"</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><p><strong>Output:</strong></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Random effects:
+</span></code></pre></div></div>
+<p><strong>Output:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Random effects:
  Groups   Name        Variance Std.Dev.
  Block    (Intercept) 23.51    4.849
  Residual              5.03    2.243
 
 ICC (block) = 0.824  →  82.4% of variance is due to blocks
-</code></pre></div></div><hr /><h3 id="step-12--publication-quality-plot">Step 12 — Publication-Quality Plot</h3><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Combine adjusted means with CLD letters ───────────────────────────────</span><span class="w">
+</code></pre></div></div>
+<hr>
+<h3 id="step-12--publication-quality-plot">Step 12 — Publication-Quality Plot</h3>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Combine adjusted means with CLD letters ───────────────────────────────</span><span class="w">
 </span><span class="n">plot_df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">cld_result</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w">
   </span><span class="n">rename</span><span class="p">(</span><span class="n">Treatment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trt</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w">
   </span><span class="n">arrange</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="n">emmean</span><span class="p">))</span><span class="w">
@@ -294,7 +588,10 @@ ICC (block) = 0.824  →  82.4% of variance is due to blocks
   </span><span class="n">theme_minimal</span><span class="p">(</span><span class="n">base_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">13</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
   </span><span class="n">theme</span><span class="p">(</span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"none"</span><span class="p">,</span><span class="w">
         </span><span class="n">plot.title</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">element_text</span><span class="p">(</span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"bold"</span><span class="p">))</span><span class="w">
-</span></code></pre></div></div><hr /><h3 id="step-13--block-profile-plot">Step 13 — Block Profile Plot</h3><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Treatment × Block interaction profile ────────────────────────────────</span><span class="w">
+</span></code></pre></div></div>
+<hr>
+<h3 id="step-13--block-profile-plot">Step 13 — Block Profile Plot</h3>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Treatment × Block interaction profile ────────────────────────────────</span><span class="w">
 </span><span class="n">ggplot</span><span class="p">(</span><span class="n">field_book</span><span class="p">,</span><span class="w">
        </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Block</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Yield</span><span class="p">,</span><span class="w">
            </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trt</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trt</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
@@ -306,7 +603,11 @@ ICC (block) = 0.824  →  82.4% of variance is due to blocks
        </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Block"</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Yield (q/ha)"</span><span class="p">,</span><span class="w">
        </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Treatment"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
   </span><span class="n">theme_minimal</span><span class="p">(</span><span class="n">base_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">13</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><blockquote><p><strong>Tip:</strong> Lines that <strong>cross</strong> indicate a possible treatment × block interaction, violating the additivity assumption. Run Tukey’s non-additivity test if crossing occurs.</p></blockquote><hr /><h3 id="step-14--missing-value-imputation">Step 14 — Missing Value Imputation</h3><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Simulate one missing plot ─────────────────────────────────────────────</span><span class="w">
+</span></code></pre></div></div>
+<blockquote><p><strong>Tip:</strong> Lines that <strong>cross</strong> indicate a possible treatment × block interaction, violating the additivity assumption. Run Tukey’s non-additivity test if crossing occurs.</p></blockquote>
+<hr>
+<h3 id="step-14--missing-value-imputation">Step 14 — Missing Value Imputation</h3>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Simulate one missing plot ─────────────────────────────────────────────</span><span class="w">
 </span><span class="n">field_miss</span><span class="w">        </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">field_book</span><span class="w">
 </span><span class="n">missing_row</span><span class="w">       </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">which</span><span class="p">(</span><span class="n">field_miss</span><span class="o">$</span><span class="n">trt</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"T3"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">field_miss</span><span class="o">$</span><span class="n">Block</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"2"</span><span class="p">)</span><span class="w">
 </span><span class="n">field_miss</span><span class="o">$</span><span class="n">Yield</span><span class="p">[</span><span class="n">missing_row</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NA</span><span class="w">
@@ -326,7 +627,10 @@ ICC (block) = 0.824  →  82.4% of variance is due to blocks
 </span><span class="n">field_miss</span><span class="o">$</span><span class="n">Yield</span><span class="p">[</span><span class="n">missing_row</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">y_hat</span><span class="w">
 </span><span class="n">model_miss</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">aov</span><span class="p">(</span><span class="n">Yield</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">trt</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Block</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">field_miss</span><span class="p">)</span><span class="w">
 </span><span class="n">summary</span><span class="p">(</span><span class="n">model_miss</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><hr /><h3 id="step-15--power-analysis">Step 15 — Power Analysis</h3><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">pwr</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<hr>
+<h3 id="step-15--power-analysis">Step 15 — Power Analysis</h3>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">pwr</span><span class="p">)</span><span class="w">
 
 </span><span class="c1"># Effect size f from current η²</span><span class="w">
 </span><span class="n">eta2</span><span class="w">   </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">SS_trt</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">SS_total</span><span class="w">
@@ -363,7 +667,11 @@ ICC (block) = 0.824  →  82.4% of variance is due to blocks
        </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Number of Blocks (Replications)"</span><span class="p">,</span><span class="w">
        </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Power"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
   </span><span class="n">theme_minimal</span><span class="p">(</span><span class="n">base_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">13</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><hr /><h3 id="step-16--non-parametric-alternative-friedman-test">Step 16 — Non-Parametric Alternative (Friedman Test)</h3><p>When normality or additivity assumptions fail:</p><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Friedman test (non-parametric RCBD) ──────────────────────────────────</span><span class="w">
+</span></code></pre></div></div>
+<hr>
+<h3 id="step-16--non-parametric-alternative-friedman-test">Step 16 — Non-Parametric Alternative (Friedman Test)</h3>
+<p>When normality or additivity assumptions fail:</p>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Friedman test (non-parametric RCBD) ──────────────────────────────────</span><span class="w">
 </span><span class="c1"># Requires wide format: rows = blocks, cols = treatments</span><span class="w">
 </span><span class="n">wide_df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">field_book</span><span class="w"> </span><span class="o">|&gt;</span><span class="w">
   </span><span class="n">select</span><span class="p">(</span><span class="n">trt</span><span class="p">,</span><span class="w"> </span><span class="n">Block</span><span class="p">,</span><span class="w"> </span><span class="n">Yield</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w">
@@ -377,7 +685,10 @@ ICC (block) = 0.824  →  82.4% of variance is due to blocks
   </span><span class="n">install.packages</span><span class="p">(</span><span class="s2">"PMCMRplus"</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">PMCMRplus</span><span class="p">)</span><span class="w">
 </span><span class="n">frdAllPairsNemenyiTest</span><span class="p">(</span><span class="n">yield_mat</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><hr /><h2 id="10-complete-analysis-workflow">10. Complete Analysis Workflow</h2><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Define t treatments and r blocks
+</span></code></pre></div></div>
+<hr>
+<h2 id="10-complete-analysis-workflow">10. Complete Analysis Workflow</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Define t treatments and r blocks
           │
           ▼
 2. Generate layout ── design.rcbd()
@@ -413,4 +724,168 @@ ICC (block) = 0.824  →  82.4% of variance is due to blocks
           │         ICC, variance components
           ▼
 11. Power analysis &amp; publication plot
-</code></pre></div></div><hr /><h2 id="11-rcbd-vs-other-designs">11. RCBD vs Other Designs</h2><table><thead><tr><th>Feature</th><th>CRD</th><th>RCBD</th><th>Latin Square</th><th>Alpha Lattice</th></tr></thead><tbody><tr><td>Blocking factors</td><td>0</td><td>1</td><td>2</td><td>1 (incomplete)</td></tr><tr><td>Block size</td><td>—</td><td>Complete ($t$)</td><td>Complete ($t$)</td><td>Incomplete ($k &lt; t$)</td></tr><tr><td>Max treatments (practical)</td><td>Unlimited</td><td>≤ 30</td><td>≤ 8</td><td>20 – 1000</td></tr><tr><td>Error df</td><td>$N-k$</td><td>$(t-1)(r-1)$</td><td>$(t-1)(t-2)$</td><td>$N-b-t+1$</td></tr><tr><td>Best for</td><td>Uniform material</td><td>1 gradient</td><td>2 gradients</td><td>Large breeding trials</td></tr><tr><td>R function</td><td><code class="language-plaintext highlighter-rouge">aov(y~trt)</code></td><td><code class="language-plaintext highlighter-rouge">aov(y~trt+block)</code></td><td><code class="language-plaintext highlighter-rouge">aov(y~trt+row+col)</code></td><td><code class="language-plaintext highlighter-rouge">lmer()</code> + BLUPs</td></tr></tbody></table><hr /><h2 id="12-summary">12. Summary</h2><table><thead><tr><th>Parameter</th><th>Value (example)</th></tr></thead><tbody><tr><td>Treatments ($t$)</td><td>6</td></tr><tr><td>Blocks ($r$)</td><td>4</td></tr><tr><td>Total plots ($N = tr$)</td><td>24</td></tr><tr><td>Error df = $(t-1)(r-1)$</td><td>15</td></tr><tr><td>CV</td><td>4.41 %</td></tr><tr><td>F (treatment)</td><td>38.24 ***</td></tr><tr><td>F (block)</td><td>23.46 ***</td></tr><tr><td>RE over CRD</td><td>168.4 %</td></tr><tr><td>η² (treatment)</td><td>0.714</td></tr></tbody></table><hr /><h2 id="13-references">13. References</h2><ul><li>Fisher, R. A. (1925). <em>Statistical Methods for Research Workers</em>. Oliver &amp; Boyd.</li><li>Cochran, W. G., &amp; Cox, G. M. (1957). <em>Experimental Designs</em> (2nd ed.). Wiley.</li><li>Montgomery, D. C. (2017). <em>Design and Analysis of Experiments</em> (9th ed.). Wiley.</li><li>Gomez, K. A., &amp; Gomez, A. A. (1984). <em>Statistical Procedures for Agricultural Research</em> (2nd ed.). Wiley.</li><li>de Mendiburu, F. (2023). <em>agricolae: Statistical Procedures for Agricultural Research</em>. CRAN.</li><li>Lenth, R. V. (2024). <em>emmeans: Estimated Marginal Means</em>. CRAN.</li><li>R Core Team (2026). <em>R: A Language and Environment for Statistical Computing</em>.</li></ul><hr /></section><footer class="page__meta"><p class="page__taxonomy"> <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong> <span itemprop="keywords"> <a href="/tags/#anova" class="page__taxonomy-item p-category" rel="tag">ANOVA</a><span class="sep">, </span> <a href="/tags/#blocking" class="page__taxonomy-item p-category" rel="tag">blocking</a><span class="sep">, </span> <a href="/tags/#field-experiments" class="page__taxonomy-item p-category" rel="tag">field-experiments</a><span class="sep">, </span> <a href="/tags/#mixed-model" class="page__taxonomy-item p-category" rel="tag">mixed-model</a><span class="sep">, </span> <a href="/tags/#post-hoc" class="page__taxonomy-item p-category" rel="tag">post-hoc</a><span class="sep">, </span> <a href="/tags/#r" class="page__taxonomy-item p-category" rel="tag">R</a><span class="sep">, </span> <a href="/tags/#rcbd" class="page__taxonomy-item p-category" rel="tag">RCBD</a> </span></p><p class="page__taxonomy"> <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong> <span itemprop="keywords"> <a href="/categories/#field-experiments" class="page__taxonomy-item p-category" rel="tag">field-experiments</a><span class="sep">, </span> <a href="/categories/#r" class="page__taxonomy-item p-category" rel="tag">R</a><span class="sep">, </span> <a href="/categories/#statistics" class="page__taxonomy-item p-category" rel="tag">statistics</a> </span></p><p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-05-03">May 3, 2026</time></p></footer><section class="page__share"><h4 class="page__share-title">Share on</h4><a href="https://twitter.com/intent/tweet?via=DrShamshadM&text=Randomized+Complete+Block+Design+%28RCBD%29%3A+Theory+%26+Complete+R+Analysis%20https%3A%2F%2Fshamshad.in%2Fposts%2F2025%2F04%2Frcbd-design-analysis%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a> <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fshamshad.in%2Fposts%2F2025%2F04%2Frcbd-design-analysis%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a> <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://shamshad.in/posts/2025/04/rcbd-design-analysis/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a></section><nav class="pagination"> <a href="https://shamshad.in/posts/2024/05/crd-design-analysis/" class="pagination--pager" title="Completely Randomized Design (CRD): Theory &amp; Complete R Analysis ">Previous</a> <a href="https://shamshad.in/posts/2026/01/latin-square-design/" class="pagination--pager" title="Latin Square Design (LSD): Theory &amp; Complete R Analysis ">Next</a></nav></div><div class="page__comments"><h4 class="page__comments-title">Leave a comment</h4><section id="disqus_thread"></section></div></article><div class="page__related"><h2 class="page__related-title">You may also enjoy</h2><div class="grid__wrapper"><div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2026/02/alpha-lattice-design/" rel="permalink">Alpha (α) Lattice Design: Theory, Layout &amp; Complete R Analysis </a></h2><p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 6 minute read</p><p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-02-08T00:00:00+05:30">February 08, 2026</time></p><p class="archive__item-excerpt" itemprop="description"><p>The <strong>Alpha (α) Lattice Design</strong> — introduced by <strong>Patterson &amp; Williams (1976)</strong> — is an <strong>incomplete block design</strong> built for large-scale experiments where the number of treatments exceeds the practical block size. It is the standard design for <strong>plant breeding trials</strong> evaluating hundreds of genotypes, offering superior error control over RCBD while remaining flexible in treatment and block size combinations.</p></p><!-- citation and icon code --></article></div><div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2026/01/latin-square-design/" rel="permalink">Latin Square Design (LSD): Theory &amp; Complete R Analysis </a></h2><p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 7 minute read</p><p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-01-02T00:00:00+05:30">January 02, 2026</time></p><p class="archive__item-excerpt" itemprop="description"><p>The <strong>Latin Square Design (LSD)</strong> extends blocking to <strong>two simultaneous directions</strong> of environmental variation. By controlling both a row gradient and a column gradient, it achieves greater error reduction than RCBD while using the same number of experimental units. It is the design of choice when two orthogonal sources of heterogeneity are known in advance — such as row (fertility) and column (irrigation) gradients in a field, or row (day) and column (technician) effects in a laboratory.</p></p><!-- citation and icon code --></article></div><div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2024/05/crd-design-analysis/" rel="permalink">Completely Randomized Design (CRD): Theory &amp; Complete R Analysis </a></h2><p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 10 minute read</p><p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-05-02T00:00:00+05:30">May 02, 2024</time></p><p class="archive__item-excerpt" itemprop="description"><p>The <strong>Completely Randomized Design (CRD)</strong> is the simplest experimental design. Treatments are assigned to experimental units <strong>purely at random</strong>, with no restrictions. It is the starting point for understanding all other designs (RCBD, Latin Square, Alpha-lattice) and remains widely used in controlled laboratory and greenhouse experiments.</p></p><!-- citation and icon code --></article></div><div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2023/05/f-test-analysis/" rel="permalink">F-Test: Theory, Variants &amp; Complete R Analysis </a></h2><p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 10 minute read</p><p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2023-05-12T00:00:00+05:30">May 12, 2023</time></p><p class="archive__item-excerpt" itemprop="description"><p>The <strong>F-test</strong> is a family of statistical tests built on the <strong>F-distribution</strong> — the ratio of two independent chi-squared variables divided by their degrees of freedom. It answers three fundamental questions in applied statistics:</p><ol><li>Are two population variances equal? <em>(Variance ratio test)</em></li><li>Do several group means differ? <em>(One-way ANOVA)</em></li><li>Does a regression model explain significant variation? <em>(Overall F in regression)</em></li></ol></p><!-- citation and icon code --></article></div></div></div></div></div><div id="footer" class="page__footer"><footer> <!-- start custom footer snippets --> <!-- end custom head snippets --> <!-- end custom footer snippets --><div class="page__footer-follow"><ul class="social-icons"><li><strong>Follow:</strong></li><li><a href="https://twitter.com/DrShamshadM" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li><li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar</a></li><li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" rel="nofollow noopener noreferrer"><i class="ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li><li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li></ul></div><div class="page__footer-copyright">&copy; 2026 M. Shamshad. Proudly hosted by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div><link defer rel="preload" href="/assets/js/mermaid.min.js" defer as="script"> <script defer src="/assets/js/mermaid.min.js" ></script></footer></div><link defer rel="preload" href="/assets/js/main.min.js" as="script"> <script defer src="/assets/js/main.min.js"></script> <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> --> <script defer type="text/javascript"> /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */ var disqus_shortname = 'shamshad'; /* * * DON'T EDIT BELOW THIS LINE * * */ (function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })(); /* * * DON'T EDIT BELOW THIS LINE * * */ (function () { var s = document.createElement('script'); s.async = true; s.type = 'text/javascript'; s.src = '//' + disqus_shortname + '.disqus.com/count.js'; (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s); }()); </script> <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> <script defer src="/assets/js/mermaid.js"></script></body></html>
+</code></pre></div></div>
+<hr>
+<h2 id="11-rcbd-vs-other-designs">11. RCBD vs Other Designs</h2>
+<table>
+<thead><tr>
+<th>Feature</th>
+<th>CRD</th>
+<th>RCBD</th>
+<th>Latin Square</th>
+<th>Alpha Lattice</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Blocking factors</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>1 (incomplete)</td>
+</tr>
+<tr>
+<td>Block size</td>
+<td>—</td>
+<td>Complete ($t$)</td>
+<td>Complete ($t$)</td>
+<td>Incomplete ($k &lt; t$)</td>
+</tr>
+<tr>
+<td>Max treatments (practical)</td>
+<td>Unlimited</td>
+<td>≤ 30</td>
+<td>≤ 8</td>
+<td>20 – 1000</td>
+</tr>
+<tr>
+<td>Error df</td>
+<td>$N-k$</td>
+<td>$(t-1)(r-1)$</td>
+<td>$(t-1)(t-2)$</td>
+<td>$N-b-t+1$</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Uniform material</td>
+<td>1 gradient</td>
+<td>2 gradients</td>
+<td>Large breeding trials</td>
+</tr>
+<tr>
+<td>R function</td>
+<td><code class="language-plaintext highlighter-rouge">aov(y~trt)</code></td>
+<td><code class="language-plaintext highlighter-rouge">aov(y~trt+block)</code></td>
+<td><code class="language-plaintext highlighter-rouge">aov(y~trt+row+col)</code></td>
+<td>
+<code class="language-plaintext highlighter-rouge">lmer()</code> + BLUPs</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="12-summary">12. Summary</h2>
+<table>
+<thead><tr>
+<th>Parameter</th>
+<th>Value (example)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Treatments ($t$)</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Blocks ($r$)</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Total plots ($N = tr$)</td>
+<td>24</td>
+</tr>
+<tr>
+<td>Error df = $(t-1)(r-1)$</td>
+<td>15</td>
+</tr>
+<tr>
+<td>CV</td>
+<td>4.41 %</td>
+</tr>
+<tr>
+<td>F (treatment)</td>
+<td>38.24 ***</td>
+</tr>
+<tr>
+<td>F (block)</td>
+<td>23.46 ***</td>
+</tr>
+<tr>
+<td>RE over CRD</td>
+<td>168.4 %</td>
+</tr>
+<tr>
+<td>η² (treatment)</td>
+<td>0.714</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="13-references">13. References</h2>
+<ul>
+<li>Fisher, R. A. (1925). <em>Statistical Methods for Research Workers</em>. Oliver &amp; Boyd.</li>
+<li>Cochran, W. G., &amp; Cox, G. M. (1957). <em>Experimental Designs</em> (2nd ed.). Wiley.</li>
+<li>Montgomery, D. C. (2017). <em>Design and Analysis of Experiments</em> (9th ed.). Wiley.</li>
+<li>Gomez, K. A., &amp; Gomez, A. A. (1984). <em>Statistical Procedures for Agricultural Research</em> (2nd ed.). Wiley.</li>
+<li>de Mendiburu, F. (2023). <em>agricolae: Statistical Procedures for Agricultural Research</em>. CRAN.</li>
+<li>Lenth, R. V. (2024). <em>emmeans: Estimated Marginal Means</em>. CRAN.</li>
+<li>R Core Team (2026). <em>R: A Language and Environment for Statistical Computing</em>.</li>
+</ul>
+<hr></section><footer class="page__meta"><p class="page__taxonomy"> <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong> <span itemprop="keywords"> <a href="/tags/#anova" class="page__taxonomy-item p-category" rel="tag">ANOVA</a><span class="sep">, </span> <a href="/tags/#blocking" class="page__taxonomy-item p-category" rel="tag">blocking</a><span class="sep">, </span> <a href="/tags/#field-experiments" class="page__taxonomy-item p-category" rel="tag">field-experiments</a><span class="sep">, </span> <a href="/tags/#mixed-model" class="page__taxonomy-item p-category" rel="tag">mixed-model</a><span class="sep">, </span> <a href="/tags/#post-hoc" class="page__taxonomy-item p-category" rel="tag">post-hoc</a><span class="sep">, </span> <a href="/tags/#r" class="page__taxonomy-item p-category" rel="tag">R</a><span class="sep">, </span> <a href="/tags/#rcbd" class="page__taxonomy-item p-category" rel="tag">RCBD</a> </span></p>
+<p class="page__taxonomy"> <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong> <span itemprop="keywords"> <a href="/categories/#field-experiments" class="page__taxonomy-item p-category" rel="tag">field-experiments</a><span class="sep">, </span> <a href="/categories/#r" class="page__taxonomy-item p-category" rel="tag">R</a><span class="sep">, </span> <a href="/categories/#statistics" class="page__taxonomy-item p-category" rel="tag">statistics</a> </span></p>
+<p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-05-03">May 3, 2026</time></p></footer><section class="page__share"><h4 class="page__share-title">Share on</h4>
+<a href="https://twitter.com/intent/tweet?via=DrShamshadM&amp;text=Randomized+Complete+Block+Design+%28RCBD%29%3A+Theory+%26+Complete+R+Analysis%20https%3A%2F%2Fshamshad.in%2Fposts%2F2025%2F04%2Frcbd-design-analysis%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a> <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fshamshad.in%2Fposts%2F2025%2F04%2Frcbd-design-analysis%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a> <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://shamshad.in/posts/2025/04/rcbd-design-analysis/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a></section><nav class="pagination"> <a href="https://shamshad.in/posts/2024/05/crd-design-analysis/" class="pagination--pager" title="Completely Randomized Design (CRD): Theory &amp; Complete R Analysis ">Previous</a> <a href="https://shamshad.in/posts/2026/01/latin-square-design/" class="pagination--pager" title="Latin Square Design (LSD): Theory &amp; Complete R Analysis ">Next</a></nav>
+</div>
+<div class="page__comments">
+<h4 class="page__comments-title">Leave a comment</h4>
+<section id="disqus_thread"></section>
+</div></article><div class="page__related">
+<h2 class="page__related-title">You may also enjoy</h2>
+<div class="grid__wrapper">
+<div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2026/05/spatial-ar1-analysis/" rel="permalink">Spatial Analysis with AR1 × AR1 Model: Theory &amp; Complete R Analysis </a>
+</h2>
+<p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 10 minute read</p>
+<p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-05-02T00:00:00+05:30">May 02, 2026</time></p>
+<p class="archive__item-excerpt" itemprop="description"></p>
+<p>Field experiments are routinely affected by <strong>spatial heterogeneity</strong> — systematic variation in soil fertility, moisture, drainage, pH, and microclimate that creates patches of high and low performance across the trial. When this variation is ignored, it inflates the residual variance, reduces heritability estimates, biases treatment comparisons, and misranks genotypes. The <strong>AR1 × AR1 model</strong> (first-order autoregressive process in both row and column directions) is the gold standard for capturing and removing this spatial structure from field trial data.</p>
+<!-- citation and icon code --></article></div>
+<div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2026/03/p-rep-design-analysis/" rel="permalink">Partially Replicated (p-rep) Design: Theory &amp; Complete R Analysis </a>
+</h2>
+<p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 8 minute read</p>
+<p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-03-02T00:00:00+05:30">March 02, 2026</time></p>
+<p class="archive__item-excerpt" itemprop="description"></p>
+<p>The <strong>Partially Replicated (p-rep) design</strong> — formally developed by <strong>Cullis, Smith &amp; Coombes (2006)</strong> — is the modern standard for <strong>Stage 1 multi-environment plant breeding trials</strong>. It overcomes the key limitation of the augmented design (zero replication of test entries) by replicating a <strong>controlled fraction</strong> (typically 20–30 %) of test entries twice, while the remainder appear only once. This provides direct within-trial error estimation for all genotypes and enables powerful <strong>spatial modelling</strong> of field heterogeneity.</p>
+<!-- citation and icon code --></article></div>
+<div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2026/02/augmented-design-analysis/" rel="permalink">Augmented Design: Theory &amp; Complete R Analysis </a>
+</h2>
+<p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 10 minute read</p>
+<p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-02-24T00:00:00+05:30">February 24, 2026</time></p>
+<p class="archive__item-excerpt" itemprop="description"></p>
+<p>The <strong>Augmented Design</strong> — proposed by <strong>Federer (1956)</strong> — is a field experimental design specifically developed for <strong>early-generation plant breeding</strong> trials, where a large number of <strong>new (unreplicated) test entries</strong> are evaluated alongside a small set of <strong>replicated check (standard) varieties</strong>. It allows breeders to screen hundreds of genotypes within a single trial without the cost of fully replicating every entry, while still enabling valid statistical inference through the checks.</p>
+<!-- citation and icon code --></article></div>
+<div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2026/02/alpha-lattice-design/" rel="permalink">Alpha (α) Lattice Design: Theory, Layout &amp; Complete R Analysis </a>
+</h2>
+<p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 6 minute read</p>
+<p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-02-08T00:00:00+05:30">February 08, 2026</time></p>
+<p class="archive__item-excerpt" itemprop="description"></p>
+<p>The <strong>Alpha (α) Lattice Design</strong> — introduced by <strong>Patterson &amp; Williams (1976)</strong> — is an <strong>incomplete block design</strong> built for large-scale experiments where the number of treatments exceeds the practical block size. It is the standard design for <strong>plant breeding trials</strong> evaluating hundreds of genotypes, offering superior error control over RCBD while remaining flexible in treatment and block size combinations.</p>
+<!-- citation and icon code --></article></div>
+</div>
+</div>
+</div></div><div id="footer" class="page__footer"><footer> <!-- start custom footer snippets --> <!-- end custom head snippets --> <!-- end custom footer snippets --><div class="page__footer-follow"><ul class="social-icons">
+<li><strong>Follow:</strong></li>
+<li><a href="https://twitter.com/DrShamshadM" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+<li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&amp;hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar</a></li>
+<li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" rel="nofollow noopener noreferrer"><i class="ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
+<li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+</ul></div>
+<div class="page__footer-copyright">© 2026 M. Shamshad. Proudly hosted by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<link defer rel="preload" href="/assets/js/mermaid.min.js" as="script"> <script defer src="/assets/js/mermaid.min.js"></script></footer></div><link defer rel="preload" href="/assets/js/main.min.js" as="script"> <script defer src="/assets/js/main.min.js"></script> <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> --> <script defer type="text/javascript"> /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */ var disqus_shortname = 'shamshad'; /* * * DON'T EDIT BELOW THIS LINE * * */ (function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })(); /* * * DON'T EDIT BELOW THIS LINE * * */ (function () { var s = document.createElement('script'); s.async = true; s.type = 'text/javascript'; s.src = '//' + disqus_shortname + '.disqus.com/count.js'; (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s); }()); </script> <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript> <script defer src="/assets/js/mermaid.js"></script></body></html>

@@ -1,4 +1,149 @@
-<!doctype html><html lang="en-US" class="no-js"><head><meta charset="utf-8"> <!-- begin _includes/seo.html --><title>Z-Test and t-Test: Theory, Hypotheses &amp; Complete R Analysis | M. Shamshad</title><meta name="description" content="Hypothesis testing is the formal procedure for deciding whether sample data provide sufficient evidence to reject a claim about a population parameter. The Z-test and t-test are the two workhorses for testing means. This post covers the theory, assumptions, null (H0) / alternative hypotheses (H1), test statistics, and full R walkthroughs with real-style datasets."><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta property="og:site_name" content="M. Shamshad"><meta property="og:title" content="Z-Test and t-Test: Theory, Hypotheses &amp; Complete R Analysis"><meta property="og:url" content="https://shamshad.in/posts/2022/05/z-test-t-test-analysis/"><meta property="og:description" content="Hypothesis testing is the formal procedure for deciding whether sample data provide sufficient evidence to reject a claim about a population parameter. The Z-test and t-test are the two workhorses for testing means. This post covers the theory, assumptions, null (H0) / alternative hypotheses (H1), test statistics, and full R walkthroughs with real-style datasets."><meta property="og:image" content="https://shamshad.in/images/favicon/site-treaser.webp"><meta name="twitter:site" content="@DrShamshadM"><meta name="twitter:title" content="Z-Test and t-Test: Theory, Hypotheses &amp; Complete R Analysis"><meta name="twitter:description" content="Hypothesis testing is the formal procedure for deciding whether sample data provide sufficient evidence to reject a claim about a population parameter. The Z-test and t-test are the two workhorses for testing means. This post covers the theory, assumptions, null (H0) / alternative hypotheses (H1), test statistics, and full R walkthroughs with real-style datasets."><meta name="twitter:url" content="https://shamshad.in/posts/2022/05/z-test-t-test-analysis/"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://shamshad.in/images/favicon/site-treaser.webp"><meta property="article:published_time" content="2022-05-03T00:00:00+05:30"><meta property="article:modified_time" content="2026-05-03T19:54:39+05:30"><link rel="canonical" href="https://shamshad.in/posts/2022/05/z-test-t-test-analysis/"> <!-- end _includes/seo.html --><link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed"> <!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr --><meta name="viewport" content="width=device-width, initial-scale=1.0"> <script defer> document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js '; window.enable_copy_code_button = true; </script><link rel="stylesheet" href="/assets/academicons-1.9.6/css/academicons.min.css" fetchpriority="low"/> <!-- For all browsers --><link rel="stylesheet" href="/assets/css/main.css" id="theme_source" /> <!-- This command for the mathematics equations in the webpage --> <script> MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], tags: 'ams' /* numbered equations with \label / \ref */ }, svg: { fontCache: 'global' } }; </script> <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script> <!-- start custom head snippets --><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="default" /><link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png?v=565802"><link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon-76x76.png?v=565802"><link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-touch-icon-120x120.png?v=565802"><link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon-152x152.png?v=565802"><link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-180x180.png?v=565802"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=565802"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=565802"><link rel="manifest" href="/images/favicon/site.webmanifest?v=565802"><link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=565802" color="#00a7ff"><link rel="shortcut icon" href="/images/favicon/favicon.ico?v=565802"><meta name="apple-mobile-web-app-title" content="SM-Web"><meta name="application-name" content="SM-Web"><meta name="msapplication-TileColor" content="#00a300"><meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=565802"><meta name="theme-color" content="#ffffff"> <!-- SEO tags --> <!-- Begin Jekyll SEO tag v2.8.0 --><title>Z-Test and t-Test: Theory, Hypotheses &amp; Complete R Analysis | M. Shamshad</title><meta name="generator" content="Jekyll v3.10.0" /><meta property="og:title" content="Z-Test and t-Test: Theory, Hypotheses &amp; Complete R Analysis" /><meta name="author" content="Dr. Mohammad Shamshad" /><meta property="og:locale" content="en_US" /><meta name="description" content="Hypothesis testing is the formal procedure for deciding whether sample data provide sufficient evidence to reject a claim about a population parameter. The Z-test and t-test are the two workhorses for testing means. This post covers the theory, assumptions, null (H0) / alternative hypotheses (H1), test statistics, and full R walkthroughs with real-style datasets." /><meta property="og:description" content="Hypothesis testing is the formal procedure for deciding whether sample data provide sufficient evidence to reject a claim about a population parameter. The Z-test and t-test are the two workhorses for testing means. This post covers the theory, assumptions, null (H0) / alternative hypotheses (H1), test statistics, and full R walkthroughs with real-style datasets." /><link rel="canonical" href="https://shamshad.in/posts/2022/05/z-test-t-test-analysis/" /><meta property="og:url" content="https://shamshad.in/posts/2022/05/z-test-t-test-analysis/" /><meta property="og:site_name" content="M. Shamshad" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2022-05-03T00:00:00+05:30" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="Z-Test and t-Test: Theory, Hypotheses &amp; Complete R Analysis" /><meta name="twitter:site" content="@DrShamshadM" /><meta name="twitter:creator" content="@Dr. Mohammad Shamshad" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Dr. Mohammad Shamshad"},"dateModified":"2026-05-03T19:54:39+05:30","datePublished":"2022-05-03T00:00:00+05:30","description":"Hypothesis testing is the formal procedure for deciding whether sample data provide sufficient evidence to reject a claim about a population parameter. The Z-test and t-test are the two workhorses for testing means. This post covers the theory, assumptions, null (H0) / alternative hypotheses (H1), test statistics, and full R walkthroughs with real-style datasets.","headline":"Z-Test and t-Test: Theory, Hypotheses &amp; Complete R Analysis","mainEntityOfPage":{"@type":"WebPage","@id":"https://shamshad.in/posts/2022/05/z-test-t-test-analysis/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://shamshad.in/images/favicon/site-treaser.webp"},"name":"Dr. Mohammad Shamshad"},"url":"https://shamshad.in/posts/2022/05/z-test-t-test-analysis/"}</script> <!-- End Jekyll SEO tag --></head><body class="layout--single" dir="ltr"><nav class="skip-links"><ul><li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li><li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li><li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li></ul></nav><div class="masthead"><div class="masthead__inner-wrap"><div class="masthead__menu"><nav id="site-nav" class="greedy-nav"> <a class="site-logo" href="/"><img src="/images/favicon/site-treaser.webp" alt="M. Shamshad"></a> <a class="site-title" href="/"> M. Shamshad </a><ul class="visible-links"><li class="masthead__menu-item"> <a href="/about/" >About</a></li><li class="masthead__menu-item"> <a href="/teaching/" >Teaching</a></li><li class="masthead__menu-item"> <a href="/publications/" >Publications</a></li><li class="masthead__menu-item"> <a href="/talks/" >Talks</a></li><li class="masthead__menu-item"> <a href="/research/" >Research</a></li><li class="masthead__menu-item"> <a href="/resume/" >Resume</a></li><li class="masthead__menu-item"> <a href="/tags/" >Tags</a></li><li class="masthead__menu-item"> <a href="/docs/Linux_tutorial/" >Bioinfo</a></li></ul><li id="theme-toggle" class="masthead__menu-item"> <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a></li><button class="greedy-nav__toggle hidden" type="button"> <span class="visually-hidden">Toggle menu</span><div class="navicon"></div></button><ul class="hidden-links hidden"></ul></nav></div></div></div><div class="initial-content"><div id="main" role="main"><div class="sidebar sticky"><div itemscope itemtype="https://schema.org/Person" class="h-card"><div class="author__content"><h3 class="author__name p-name" itemprop="name"> <a class="u-url" rel="me" href="https://shamshad.in/" itemprop="url"></a></h3></div><div class="author__urls-wrapper"> <button class="btn btn--inverse">Follow</button><ul class="author__urls social-icons"></ul></div></div></div><article class="page" itemscope itemtype="https://schema.org/CreativeWork"><meta itemprop="headline" content="Z-Test and t-Test: Theory, Hypotheses &amp; Complete R Analysis"><meta itemprop="description" content="Hypothesis testing is the formal procedure for deciding whether sample data provide sufficient evidence to reject a claim about a population parameter. The Z-test and t-test are the two workhorses for testing means. This post covers the theory, assumptions, null (H0) / alternative hypotheses (H1), test statistics, and full R walkthroughs with real-style datasets."><meta itemprop="datePublished" content="2022-05-03T00:00:00+05:30"><meta itemprop="dateModified" content="2026-05-03T19:54:39+05:30"><div class="page__inner-wrap"><header><h1 id="page-title" class="page__title" itemprop="headline"> <a href="https://shamshad.in/posts/2022/05/z-test-t-test-analysis/" itemprop="url">Z-Test and t-Test: Theory, Hypotheses &amp; Complete R Analysis </a></h1><p class="page__meta"> <span class="page__meta-readtime"> <i class="far fa-clock" aria-hidden="true"></i> 9 minute read </span></p><p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-05-03T00:00:00+05:30">May 03, 2022</time></p></header><section class="page__content" itemprop="text"><aside class="sidebar__right "><nav class="toc"><header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header><ul class="toc__menu"><li><a href="#1-the-logic-of-hypothesis-testing">1. The Logic of Hypothesis Testing</a></li><li><a href="#2-z-test">2. Z-Test</a><ul><li><a href="#when-to-use">When to use</a></li><li><a href="#hypotheses">Hypotheses</a></li><li><a href="#test-statistic">Test Statistic</a></li><li><a href="#standard-error--confidence-interval">Standard Error &amp; Confidence Interval</a></li><li><a href="#z-test-in-r">Z-Test in R</a><ul><li><a href="#example-wheat-grain-yield">Example: Wheat grain yield</a></li><li><a href="#visualise-the-z-distribution">Visualise the Z distribution</a></li><li><a href="#two-proportion-z-test">Two-proportion Z-test</a></li></ul></li></ul></li><li><a href="#3-t-test">3. t-Test</a><ul><li><a href="#when-to-use-1">When to use</a></li><li><a href="#three-variants">Three variants</a></li><li><a href="#31-one-sample-t-test">3.1 One-Sample t-Test</a><ul><li><a href="#example-protein-content-in-rice">Example: Protein content in rice</a></li></ul></li><li><a href="#32-independent-two-sample-t-test">3.2 Independent Two-Sample t-Test</a><ul><li><a href="#example-grain-yield-of-two-maize-hybrids">Example: Grain yield of two maize hybrids</a></li><li><a href="#visualise-with-boxplot">Visualise with boxplot</a></li></ul></li><li><a href="#33-paired-t-test">3.3 Paired t-Test</a><ul><li><a href="#example-soil-nitrogen-before-and-after-legume-cover-crop">Example: Soil nitrogen before and after legume cover crop</a></li></ul></li></ul></li><li><a href="#4-checking-assumptions">4. Checking Assumptions</a><ul><li><a href="#normality">Normality</a></li><li><a href="#equality-of-variances">Equality of Variances</a></li><li><a href="#what-if-normality-fails">What if normality fails?</a></li></ul></li><li><a href="#5-z-vs-t--decision-flowchart">5. Z vs t — Decision Flowchart</a></li><li><a href="#6-complete-summary-table">6. Complete Summary Table</a></li><li><a href="#7-power-analysis">7. Power Analysis</a></li><li><a href="#8-references">8. References</a></li></ul></nav></aside><p>Hypothesis testing is the formal procedure for deciding whether sample data provide sufficient evidence to reject a claim about a population parameter. The <strong>Z-test</strong> and <strong>t-test</strong> are the two workhorses for testing means. This post covers the theory, assumptions, null (H<sub>0</sub>) / alternative hypotheses (H<sub>1</sub>), test statistics, and full R walkthroughs with real-style datasets.</p><!--more--><h2 id="1-the-logic-of-hypothesis-testing">1. The Logic of Hypothesis Testing</h2><p>Every test follows the same five steps:</p><ol><li>State $H_0$ and $H_1$</li><li>Choose significance level $\alpha$ (commonly 0.05)</li><li>Compute the test statistic</li><li>Find the p-value (or critical value)</li><li>Decision: reject $H_0$ if $p \leq \alpha$</li></ol><p><strong>Error types:</strong></p><table><thead><tr><th>Decision \ Truth</th><th>$H_0$ True</th><th>$H_0$ False</th></tr></thead><tbody><tr><td>Fail to reject $H_0$</td><td>✅ Correct</td><td>❌ Type II error ($\beta$)</td></tr><tr><td>Reject $H_0$</td><td>❌ Type I error ($\alpha$)</td><td>✅ Power ($1-\beta$)</td></tr></tbody></table><hr /><h2 id="2-z-test">2. Z-Test</h2><h3 id="when-to-use">When to use</h3><p>Use a Z-test for a population mean when:</p><ul><li>Population standard deviation $\sigma$ is <strong>known</strong>, <strong>or</strong></li><li>Sample size $n \geq 30$ (Central Limit Theorem applies)</li></ul><h3 id="hypotheses">Hypotheses</h3><p><strong>Two-tailed:</strong></p>\[H_0: \mu = \mu_0 \qquad H_1: \mu \neq \mu_0\]<p><strong>One-tailed (right):</strong></p>\[H_0: \mu \leq \mu_0 \qquad H_1: \mu &gt; \mu_0\]<p><strong>One-tailed (left):</strong></p>\[H_0: \mu \geq \mu_0 \qquad H_1: \mu &lt; \mu_0\]<h3 id="test-statistic">Test Statistic</h3>\[Z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}}\]<p>Under $H_0$, $Z \sim \mathcal{N}(0,1)$.</p><p><strong>Decision rule (two-tailed, $\alpha = 0.05$):</strong></p>\[\text{Reject } H_0 \text{ if } |Z| &gt; z_{\alpha/2} = 1.96\]<h3 id="standard-error--confidence-interval">Standard Error &amp; Confidence Interval</h3>\[SE = \frac{\sigma}{\sqrt{n}}\] \[\bar{x} \pm z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}\]<hr /><h3 id="z-test-in-r">Z-Test in R</h3><h4 id="example-wheat-grain-yield">Example: Wheat grain yield</h4><p>A wheat breeder claims the mean grain yield of a new variety is <strong>35 q/ha</strong>. A trial of <strong>50 plots</strong> gives $\bar{x} = 36.8$ q/ha. Historical $\sigma = 5$ q/ha. Test at $\alpha = 0.05$.</p><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Parameters ────────────────────────────────────────────────────────────</span><span class="w">
+<!doctype html><html lang="en-US" class="no-js"><head><meta charset="utf-8"> <!-- begin _includes/seo.html --><title>Z-Test and t-Test: Theory, Hypotheses &amp; Complete R Analysis | M. Shamshad</title><meta name="description" content="Hypothesis testing is the formal procedure for deciding whether sample data provide sufficient evidence to reject a claim about a population parameter. The Z-test and t-test are the two workhorses for testing means. This post covers the theory, assumptions, null (H0) / alternative hypotheses (H1), test statistics, and full R walkthroughs with real-style datasets."><meta name="author" content="Dr. M. Shamshad"><meta property="article:author" content="Dr. M. Shamshad"><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta property="og:site_name" content="M. Shamshad"><meta property="og:title" content="Z-Test and t-Test: Theory, Hypotheses &amp; Complete R Analysis"><meta property="og:url" content="https://shamshad.in/posts/2022/05/z-test-t-test-analysis/"><meta property="og:description" content="Hypothesis testing is the formal procedure for deciding whether sample data provide sufficient evidence to reject a claim about a population parameter. The Z-test and t-test are the two workhorses for testing means. This post covers the theory, assumptions, null (H0) / alternative hypotheses (H1), test statistics, and full R walkthroughs with real-style datasets."><meta property="og:image" content="https://shamshad.in/images/favicon/site-treaser.webp"><meta name="twitter:site" content="@DrShamshadM"><meta name="twitter:title" content="Z-Test and t-Test: Theory, Hypotheses &amp; Complete R Analysis"><meta name="twitter:description" content="Hypothesis testing is the formal procedure for deciding whether sample data provide sufficient evidence to reject a claim about a population parameter. The Z-test and t-test are the two workhorses for testing means. This post covers the theory, assumptions, null (H0) / alternative hypotheses (H1), test statistics, and full R walkthroughs with real-style datasets."><meta name="twitter:url" content="https://shamshad.in/posts/2022/05/z-test-t-test-analysis/"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://shamshad.in/images/favicon/site-treaser.webp"><meta name="twitter:creator" content="@DrShamshadM"><meta property="article:published_time" content="2022-05-03T00:00:00+05:30"><meta property="article:modified_time" content="2026-05-03T22:11:37+05:30"><link rel="canonical" href="https://shamshad.in/posts/2022/05/z-test-t-test-analysis/"> <!-- end _includes/seo.html --><link href="/feed.xml" type="application/atom+xml" rel="alternate" title="M. Shamshad Feed"> <!-- https://web.dev/viewport/?utm_source=lighthouse&utm_medium=lr --><meta name="viewport" content="width=device-width, initial-scale=1.0"> <script defer> document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js '; window.enable_copy_code_button = true; </script><link rel="stylesheet" href="/assets/academicons-1.9.6/css/academicons.min.css" fetchpriority="low"/> <!-- For all browsers --><link rel="stylesheet" href="/assets/css/main.css" id="theme_source" /> <!-- This command for the mathematics equations in the webpage --> <script> MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], tags: 'ams' /* numbered equations with \label / \ref */ }, svg: { fontCache: 'global' } }; </script> <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"> </script> <!-- start custom head snippets --><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="default" /><link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png?v=565802"><link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon-76x76.png?v=565802"><link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-touch-icon-120x120.png?v=565802"><link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon-152x152.png?v=565802"><link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-180x180.png?v=565802"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=565802"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=565802"><link rel="manifest" href="/images/favicon/site.webmanifest?v=565802"><link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=565802" color="#00a7ff"><link rel="shortcut icon" href="/images/favicon/favicon.ico?v=565802"><meta name="apple-mobile-web-app-title" content="SM-Web"><meta name="application-name" content="SM-Web"><meta name="msapplication-TileColor" content="#00a300"><meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=565802"><meta name="theme-color" content="#ffffff"> <!-- SEO tags --> <!-- Begin Jekyll SEO tag v2.8.0 --><title>Z-Test and t-Test: Theory, Hypotheses &amp; Complete R Analysis | M. Shamshad</title><meta name="generator" content="Jekyll v3.10.0" /><meta property="og:title" content="Z-Test and t-Test: Theory, Hypotheses &amp; Complete R Analysis" /><meta name="author" content="Dr. M. Shamshad" /><meta property="og:locale" content="en_US" /><meta name="description" content="Hypothesis testing is the formal procedure for deciding whether sample data provide sufficient evidence to reject a claim about a population parameter. The Z-test and t-test are the two workhorses for testing means. This post covers the theory, assumptions, null (H0) / alternative hypotheses (H1), test statistics, and full R walkthroughs with real-style datasets." /><meta property="og:description" content="Hypothesis testing is the formal procedure for deciding whether sample data provide sufficient evidence to reject a claim about a population parameter. The Z-test and t-test are the two workhorses for testing means. This post covers the theory, assumptions, null (H0) / alternative hypotheses (H1), test statistics, and full R walkthroughs with real-style datasets." /><link rel="canonical" href="https://shamshad.in/posts/2022/05/z-test-t-test-analysis/" /><meta property="og:url" content="https://shamshad.in/posts/2022/05/z-test-t-test-analysis/" /><meta property="og:site_name" content="M. Shamshad" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2022-05-03T00:00:00+05:30" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="Z-Test and t-Test: Theory, Hypotheses &amp; Complete R Analysis" /><meta name="twitter:site" content="@DrShamshadM" /><meta name="twitter:creator" content="@DrShamshadM" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Dr. M. Shamshad"},"dateModified":"2026-05-03T22:11:37+05:30","datePublished":"2022-05-03T00:00:00+05:30","description":"Hypothesis testing is the formal procedure for deciding whether sample data provide sufficient evidence to reject a claim about a population parameter. The Z-test and t-test are the two workhorses for testing means. This post covers the theory, assumptions, null (H0) / alternative hypotheses (H1), test statistics, and full R walkthroughs with real-style datasets.","headline":"Z-Test and t-Test: Theory, Hypotheses &amp; Complete R Analysis","mainEntityOfPage":{"@type":"WebPage","@id":"https://shamshad.in/posts/2022/05/z-test-t-test-analysis/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://shamshad.in/images/favicon/site-treaser.webp"},"name":"Dr. M. Shamshad"},"url":"https://shamshad.in/posts/2022/05/z-test-t-test-analysis/"}</script> <!-- End Jekyll SEO tag --></head><body class="layout--single" dir="ltr"><nav class="skip-links"><ul>
+<li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+<li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+<li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+</ul></nav><div class="masthead"><div class="masthead__inner-wrap"><div class="masthead__menu"><nav id="site-nav" class="greedy-nav"> <a class="site-logo" href="/"><img src="/images/favicon/site-treaser.webp" alt="M. Shamshad"></a> <a class="site-title" href="/"> M. Shamshad </a><ul class="visible-links">
+<li class="masthead__menu-item"> <a href="/about/">About</a>
+</li>
+<li class="masthead__menu-item"> <a href="/teaching/">Teaching</a>
+</li>
+<li class="masthead__menu-item"> <a href="/publications/">Publications</a>
+</li>
+<li class="masthead__menu-item"> <a href="/talks/">Talks</a>
+</li>
+<li class="masthead__menu-item"> <a href="/research/">Research</a>
+</li>
+<li class="masthead__menu-item"> <a href="/resume/">Resume</a>
+</li>
+<li class="masthead__menu-item"> <a href="/tags/">Tags</a>
+</li>
+<li class="masthead__menu-item"> <a href="/docs/Linux_tutorial/">Bioinfo</a>
+</li>
+</ul>
+<li id="theme-toggle" class="masthead__menu-item"> <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
+</li>
+<button class="greedy-nav__toggle hidden" type="button"> <span class="visually-hidden">Toggle menu</span><div class="navicon"></div></button><ul class="hidden-links hidden"></ul></nav></div></div></div><div class="initial-content"><div id="main" role="main">
+<div class="sidebar sticky"><div itemscope itemtype="https://schema.org/Person" class="h-card">
+<div class="author__avatar"> <a href="https://shamshad.in/"> <img loading="lazy" src="/images/profile.webp" alt="Dr. M. Shamshad" itemprop="image" class="u-photo"> </a>
+</div>
+<div class="author__content">
+<h3 class="author__name p-name" itemprop="name"> <a class="u-url" rel="me" href="https://shamshad.in/" itemprop="url">Dr. M. Shamshad</a>
+</h3>
+<div class="author__bio p-note" itemprop="description"><p>Sugarcane Breeder &amp;&amp; Data Science</p></div>
+</div>
+<div class="author__urls-wrapper"> <button class="btn btn--inverse">Follow</button><ul class="author__urls social-icons">
+<li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place"> <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">RRS, Kapurthala, Punjab <img class="emoji" title=":india:" alt=":india:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ee-1f1f3.png" height="20" width="20"></span>
+</li>
+<li> <a href="mailto:shamshad.rattan@gmail.com" rel="me" class="u-email"><meta itemprop="email" content="shamshad.rattan@gmail.com"> <i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span class="label">Email</span> </a>
+</li>
+<li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" itemprop="sameAs" rel="nofollow noopener noreferrer me"> <i class="ai ai-researchgate-square" aria-hidden="true"></i><span class="label"> ResearchGate</span> </a></li>
+<li> <a href="https://twitter.com/DrShamshadM" itemprop="sameAs" rel="nofollow noopener noreferrer me"> <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span> </a>
+</li>
+<li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&amp;hl=en" itemprop="sameAs" rel="nofollow noopener noreferrer me"> <i class="ai ai-fw ai-google-scholar-square" aria-hidden="true"></i><span class="label">Google Scholar</span></a></li>
+</ul>
+</div>
+</div></div>
+<article class="page" itemscope itemtype="https://schema.org/CreativeWork"><meta itemprop="headline" content="Z-Test and t-Test: Theory, Hypotheses &amp; Complete R Analysis">
+<meta itemprop="description" content="Hypothesis testing is the formal procedure for deciding whether sample data provide sufficient evidence to reject a claim about a population parameter. The Z-test and t-test are the two workhorses for testing means. This post covers the theory, assumptions, null (H0) / alternative hypotheses (H1), test statistics, and full R walkthroughs with real-style datasets.">
+<meta itemprop="datePublished" content="2022-05-03T00:00:00+05:30">
+<meta itemprop="dateModified" content="2026-05-03T22:11:37+05:30">
+<div class="page__inner-wrap">
+<header><h1 id="page-title" class="page__title" itemprop="headline"> <a href="https://shamshad.in/posts/2022/05/z-test-t-test-analysis/" itemprop="url">Z-Test and t-Test: Theory, Hypotheses &amp; Complete R Analysis </a>
+</h1>
+<p class="page__meta"> <span class="page__meta-readtime"> <i class="far fa-clock" aria-hidden="true"></i> 9 minute read </span></p>
+<p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-05-03T00:00:00+05:30">May 03, 2022</time></p></header><section class="page__content" itemprop="text"><aside class="sidebar__right "><nav class="toc"><header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header><ul class="toc__menu">
+<li><a href="#1-the-logic-of-hypothesis-testing">1. The Logic of Hypothesis Testing</a></li>
+<li>
+<a href="#2-z-test">2. Z-Test</a><ul>
+<li><a href="#when-to-use">When to use</a></li>
+<li><a href="#hypotheses">Hypotheses</a></li>
+<li><a href="#test-statistic">Test Statistic</a></li>
+<li><a href="#standard-error--confidence-interval">Standard Error &amp; Confidence Interval</a></li>
+<li>
+<a href="#z-test-in-r">Z-Test in R</a><ul>
+<li><a href="#example-wheat-grain-yield">Example: Wheat grain yield</a></li>
+<li><a href="#visualise-the-z-distribution">Visualise the Z distribution</a></li>
+<li><a href="#two-proportion-z-test">Two-proportion Z-test</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#3-t-test">3. t-Test</a><ul>
+<li><a href="#when-to-use-1">When to use</a></li>
+<li><a href="#three-variants">Three variants</a></li>
+<li>
+<a href="#31-one-sample-t-test">3.1 One-Sample t-Test</a><ul><li><a href="#example-protein-content-in-rice">Example: Protein content in rice</a></li></ul>
+</li>
+<li>
+<a href="#32-independent-two-sample-t-test">3.2 Independent Two-Sample t-Test</a><ul>
+<li><a href="#example-grain-yield-of-two-maize-hybrids">Example: Grain yield of two maize hybrids</a></li>
+<li><a href="#visualise-with-boxplot">Visualise with boxplot</a></li>
+</ul>
+</li>
+<li>
+<a href="#33-paired-t-test">3.3 Paired t-Test</a><ul><li><a href="#example-soil-nitrogen-before-and-after-legume-cover-crop">Example: Soil nitrogen before and after legume cover crop</a></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#4-checking-assumptions">4. Checking Assumptions</a><ul>
+<li><a href="#normality">Normality</a></li>
+<li><a href="#equality-of-variances">Equality of Variances</a></li>
+<li><a href="#what-if-normality-fails">What if normality fails?</a></li>
+</ul>
+</li>
+<li><a href="#5-z-vs-t--decision-flowchart">5. Z vs t — Decision Flowchart</a></li>
+<li><a href="#6-complete-summary-table">6. Complete Summary Table</a></li>
+<li><a href="#7-power-analysis">7. Power Analysis</a></li>
+<li><a href="#8-references">8. References</a></li>
+</ul></nav></aside><p>Hypothesis testing is the formal procedure for deciding whether sample data provide sufficient evidence to reject a claim about a population parameter. The <strong>Z-test</strong> and <strong>t-test</strong> are the two workhorses for testing means. This post covers the theory, assumptions, null (H<sub>0</sub>) / alternative hypotheses (H<sub>1</sub>), test statistics, and full R walkthroughs with real-style datasets.</p>
+<!--more--><h2 id="1-the-logic-of-hypothesis-testing">1. The Logic of Hypothesis Testing</h2>
+<p>Every test follows the same five steps:</p>
+<ol>
+<li>State $H_0$ and $H_1$</li>
+<li>Choose significance level $\alpha$ (commonly 0.05)</li>
+<li>Compute the test statistic</li>
+<li>Find the p-value (or critical value)</li>
+<li>Decision: reject $H_0$ if $p \leq \alpha$</li>
+</ol>
+<p><strong>Error types:</strong></p>
+<table>
+<thead><tr>
+<th>Decision \ Truth</th>
+<th>$H_0$ True</th>
+<th>$H_0$ False</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Fail to reject $H_0$</td>
+<td>✅ Correct</td>
+<td>❌ Type II error ($\beta$)</td>
+</tr>
+<tr>
+<td>Reject $H_0$</td>
+<td>❌ Type I error ($\alpha$)</td>
+<td>✅ Power ($1-\beta$)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-z-test">2. Z-Test</h2>
+<h3 id="when-to-use">When to use</h3>
+<p>Use a Z-test for a population mean when:</p>
+<ul>
+<li>Population standard deviation $\sigma$ is <strong>known</strong>, <strong>or</strong>
+</li>
+<li>Sample size $n \geq 30$ (Central Limit Theorem applies)</li>
+</ul>
+<h3 id="hypotheses">Hypotheses</h3>
+<p><strong>Two-tailed:</strong></p>\[H_0: \mu = \mu_0 \qquad H_1: \mu \neq \mu_0\]<p><strong>One-tailed (right):</strong></p>\[H_0: \mu \leq \mu_0 \qquad H_1: \mu &gt; \mu_0\]<p><strong>One-tailed (left):</strong></p>\[H_0: \mu \geq \mu_0 \qquad H_1: \mu &lt; \mu_0\]<h3 id="test-statistic">Test Statistic</h3>\[Z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}}\]<p>Under $H_0$, $Z \sim \mathcal{N}(0,1)$.</p>
+<p><strong>Decision rule (two-tailed, $\alpha = 0.05$):</strong></p>\[\text{Reject } H_0 \text{ if } |Z| &gt; z_{\alpha/2} = 1.96\]<h3 id="standard-error--confidence-interval">Standard Error &amp; Confidence Interval</h3>\[SE = \frac{\sigma}{\sqrt{n}}\] \[\bar{x} \pm z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}\]<hr>
+<h3 id="z-test-in-r">Z-Test in R</h3>
+<h4 id="example-wheat-grain-yield">Example: Wheat grain yield</h4>
+<p>A wheat breeder claims the mean grain yield of a new variety is <strong>35 q/ha</strong>. A trial of <strong>50 plots</strong> gives $\bar{x} = 36.8$ q/ha. Historical $\sigma = 5$ q/ha. Test at $\alpha = 0.05$.</p>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ── Parameters ────────────────────────────────────────────────────────────</span><span class="w">
 </span><span class="n">x_bar</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">36.8</span><span class="w">   </span><span class="c1"># sample mean</span><span class="w">
 </span><span class="n">mu_0</span><span class="w">  </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">35</span><span class="w">     </span><span class="c1"># hypothesised mean</span><span class="w">
 </span><span class="n">sigma</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">5</span><span class="w">      </span><span class="c1"># known population SD</span><span class="w">
@@ -30,13 +175,18 @@
 </span><span class="n">CI_lower</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">x_bar</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">z_crit</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">SE</span><span class="w">
 </span><span class="n">CI_upper</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">x_bar</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z_crit</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">SE</span><span class="w">
 </span><span class="n">cat</span><span class="p">(</span><span class="n">sprintf</span><span class="p">(</span><span class="s2">"95%% CI: [%.3f, %.3f]\n"</span><span class="p">,</span><span class="w"> </span><span class="n">CI_lower</span><span class="p">,</span><span class="w"> </span><span class="n">CI_upper</span><span class="p">))</span><span class="w">
-</span></code></pre></div></div><p><strong>Output:</strong></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Standard Error : 0.7071
+</span></code></pre></div></div>
+<p><strong>Output:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Standard Error : 0.7071
 Z statistic    : 2.5456
 p-value        : 0.0109
 Critical value : 1.96
 Decision: Reject H0 — yield differs significantly from 35 q/ha
 95% CI: [35.414, 38.186]
-</code></pre></div></div><p><strong>Interpretation:</strong> $Z = 2.55 &gt; 1.96$, $p = 0.011 &lt; 0.05$. We reject $H_0$. The trial provides sufficient evidence that the new variety yields more than 35 q/ha. The 95 % CI $[35.4,\ 38.2]$ does not include 35, confirming this.</p><h4 id="visualise-the-z-distribution">Visualise the Z distribution</h4><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
+</code></pre></div></div>
+<p><strong>Interpretation:</strong> $Z = 2.55 &gt; 1.96$, $p = 0.011 &lt; 0.05$. We reject $H_0$. The trial provides sufficient evidence that the new variety yields more than 35 q/ha. The 95 % CI $[35.4,\ 38.2]$ does not include 35, confirming this.</p>
+<h4 id="visualise-the-z-distribution">Visualise the Z distribution</h4>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
 
 </span><span class="n">x_seq</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">-4</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">length.out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">500</span><span class="p">)</span><span class="w">
 </span><span class="n">df_z</span><span class="w">  </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x_seq</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dnorm</span><span class="p">(</span><span class="n">x_seq</span><span class="p">))</span><span class="w">
@@ -56,12 +206,47 @@ Decision: Reject H0 — yield differs significantly from 35 q/ha
        </span><span class="n">subtitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Red shaded = rejection region | Green dashed = observed Z"</span><span class="p">,</span><span class="w">
        </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Z"</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Density"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
   </span><span class="n">theme_minimal</span><span class="p">(</span><span class="n">base_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">13</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><h4 id="two-proportion-z-test">Two-proportion Z-test</h4><p>Tests whether two proportions $p_1$ and $p_2$ are equal.</p>\[H_0: p_1 = p_2 \qquad H_1: p_1 \neq p_2\] \[Z = \frac{\hat{p}_1 - \hat{p}_2}{\sqrt{\hat{p}(1-\hat{p})\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}}, \quad \hat{p} = \frac{x_1 + x_2}{n_1 + n_2}\]<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Example: germination rate of two seed lots</span><span class="w">
+</span></code></pre></div></div>
+<h4 id="two-proportion-z-test">Two-proportion Z-test</h4>
+<p>Tests whether two proportions $p_1$ and $p_2$ are equal.</p>\[H_0: p_1 = p_2 \qquad H_1: p_1 \neq p_2\] \[Z = \frac{\hat{p}_1 - \hat{p}_2}{\sqrt{\hat{p}(1-\hat{p})\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}}, \quad \hat{p} = \frac{x_1 + x_2}{n_1 + n_2}\]<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Example: germination rate of two seed lots</span><span class="w">
 </span><span class="n">x1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">180</span><span class="p">;</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">200</span><span class="w">   </span><span class="c1"># Lot A: 180/200 germinated</span><span class="w">
 </span><span class="n">x2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">160</span><span class="p">;</span><span class="w"> </span><span class="n">n2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">200</span><span class="w">   </span><span class="c1"># Lot B: 160/200 germinated</span><span class="w">
 
 </span><span class="n">prop.test</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">),</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span><span class="w"> </span><span class="n">n2</span><span class="p">),</span><span class="w"> </span><span class="n">correct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><hr /><h2 id="3-t-test">3. t-Test</h2><h3 id="when-to-use-1">When to use</h3><p>Use a t-test when $\sigma$ is <strong>unknown</strong> (the usual real-world situation) and you estimate it from the sample as $s$.</p>\[T = \frac{\bar{x} - \mu_0}{s / \sqrt{n}} \sim t_{(n-1)}\]<p>The t-distribution has heavier tails than the normal — accounting for extra uncertainty from estimating $\sigma$. As $n \to \infty$, $t \to Z$.</p><h3 id="three-variants">Three variants</h3><table><thead><tr><th>Variant</th><th>Hypothesis</th><th>When</th></tr></thead><tbody><tr><td>One-sample</td><td>$H_0: \mu = \mu_0$</td><td>Compare sample to a known value</td></tr><tr><td>Independent two-sample</td><td>$H_0: \mu_1 = \mu_2$</td><td>Two unrelated groups</td></tr><tr><td>Paired</td><td>$H_0: \mu_d = 0$</td><td>Before/after, matched pairs</td></tr></tbody></table><hr /><h3 id="31-one-sample-t-test">3.1 One-Sample t-Test</h3>\[H_0: \mu = \mu_0 \qquad H_1: \mu \neq \mu_0\] \[T = \frac{\bar{x} - \mu_0}{s/\sqrt{n}}, \quad df = n - 1\]<h4 id="example-protein-content-in-rice">Example: Protein content in rice</h4><p>Standard protein content is <strong>8 %</strong>. A new line is sampled ($n = 15$). Test whether it differs.</p><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">set.seed</span><span class="p">(</span><span class="m">42</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<hr>
+<h2 id="3-t-test">3. t-Test</h2>
+<h3 id="when-to-use-1">When to use</h3>
+<p>Use a t-test when $\sigma$ is <strong>unknown</strong> (the usual real-world situation) and you estimate it from the sample as $s$.</p>\[T = \frac{\bar{x} - \mu_0}{s / \sqrt{n}} \sim t_{(n-1)}\]<p>The t-distribution has heavier tails than the normal — accounting for extra uncertainty from estimating $\sigma$. As $n \to \infty$, $t \to Z$.</p>
+<h3 id="three-variants">Three variants</h3>
+<table>
+<thead><tr>
+<th>Variant</th>
+<th>Hypothesis</th>
+<th>When</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>One-sample</td>
+<td>$H_0: \mu = \mu_0$</td>
+<td>Compare sample to a known value</td>
+</tr>
+<tr>
+<td>Independent two-sample</td>
+<td>$H_0: \mu_1 = \mu_2$</td>
+<td>Two unrelated groups</td>
+</tr>
+<tr>
+<td>Paired</td>
+<td>$H_0: \mu_d = 0$</td>
+<td>Before/after, matched pairs</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="31-one-sample-t-test">3.1 One-Sample t-Test</h3>\[H_0: \mu = \mu_0 \qquad H_1: \mu \neq \mu_0\] \[T = \frac{\bar{x} - \mu_0}{s/\sqrt{n}}, \quad df = n - 1\]<h4 id="example-protein-content-in-rice">Example: Protein content in rice</h4>
+<p>Standard protein content is <strong>8 %</strong>. A new line is sampled ($n = 15$). Test whether it differs.</p>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">set.seed</span><span class="p">(</span><span class="m">42</span><span class="p">)</span><span class="w">
 </span><span class="n">protein</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">8.4</span><span class="p">,</span><span class="w"> </span><span class="m">8.1</span><span class="p">,</span><span class="w"> </span><span class="m">8.7</span><span class="p">,</span><span class="w"> </span><span class="m">7.9</span><span class="p">,</span><span class="w"> </span><span class="m">8.5</span><span class="p">,</span><span class="w"> </span><span class="m">8.3</span><span class="p">,</span><span class="w"> </span><span class="m">8.6</span><span class="p">,</span><span class="w"> </span><span class="m">8.2</span><span class="p">,</span><span class="w">
              </span><span class="m">8.8</span><span class="p">,</span><span class="w"> </span><span class="m">8.0</span><span class="p">,</span><span class="w"> </span><span class="m">8.4</span><span class="p">,</span><span class="w"> </span><span class="m">8.5</span><span class="p">,</span><span class="w"> </span><span class="m">8.3</span><span class="p">,</span><span class="w"> </span><span class="m">8.6</span><span class="p">,</span><span class="w"> </span><span class="m">8.4</span><span class="p">)</span><span class="w">
 
@@ -73,7 +258,9 @@ Decision: Reject H0 — yield differs significantly from 35 q/ha
 </span><span class="c1"># One-sample t-test</span><span class="w">
 </span><span class="n">result_1samp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t.test</span><span class="p">(</span><span class="n">protein</span><span class="p">,</span><span class="w"> </span><span class="n">mu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="n">alternative</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"two.sided"</span><span class="p">)</span><span class="w">
 </span><span class="n">print</span><span class="p">(</span><span class="n">result_1samp</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><p><strong>Output:</strong></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        One Sample t-test
+</span></code></pre></div></div>
+<p><strong>Output:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        One Sample t-test
 
 data:  protein
 t = 4.899, df = 14, p-value = 0.0002
@@ -83,7 +270,11 @@ alternative hypothesis: true mean is not equal to 8
 sample estimates:
 mean of x
     8.380
-</code></pre></div></div><p><strong>Interpretation:</strong> $T = 4.90,\ df = 14,\ p = 0.0002 &lt; 0.05$. Strong evidence that the new rice line has protein content significantly different from 8 %. The 95 % CI $[8.20,\ 8.56]$ lies entirely above 8.</p><hr /><h3 id="32-independent-two-sample-t-test">3.2 Independent Two-Sample t-Test</h3>\[H_0: \mu_1 = \mu_2 \qquad H_1: \mu_1 \neq \mu_2\]<p><strong>Equal variances (Student):</strong></p>\[T = \frac{\bar{x}_1 - \bar{x}_2}{s_p\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}, \quad s_p = \sqrt{\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2}}, \quad df = n_1+n_2-2\]<p><strong>Unequal variances (Welch — default in R):</strong></p>\[T = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}, \quad df = \frac{\left(\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}\right)^2} {\frac{(s_1^2/n_1)^2}{n_1-1}+\frac{(s_2^2/n_2)^2}{n_2-1}}\]<h4 id="example-grain-yield-of-two-maize-hybrids">Example: Grain yield of two maize hybrids</h4><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">set.seed</span><span class="p">(</span><span class="m">7</span><span class="p">)</span><span class="w">
+</code></pre></div></div>
+<p><strong>Interpretation:</strong> $T = 4.90,\ df = 14,\ p = 0.0002 &lt; 0.05$. Strong evidence that the new rice line has protein content significantly different from 8 %. The 95 % CI $[8.20,\ 8.56]$ lies entirely above 8.</p>
+<hr>
+<h3 id="32-independent-two-sample-t-test">3.2 Independent Two-Sample t-Test</h3>\[H_0: \mu_1 = \mu_2 \qquad H_1: \mu_1 \neq \mu_2\]<p><strong>Equal variances (Student):</strong></p>\[T = \frac{\bar{x}_1 - \bar{x}_2}{s_p\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}, \quad s_p = \sqrt{\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2}}, \quad df = n_1+n_2-2\]<p><strong>Unequal variances (Welch — default in R):</strong></p>\[T = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}, \quad df = \frac{\left(\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}\right)^2} {\frac{(s_1^2/n_1)^2}{n_1-1}+\frac{(s_2^2/n_2)^2}{n_2-1}}\]<h4 id="example-grain-yield-of-two-maize-hybrids">Example: Grain yield of two maize hybrids</h4>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">set.seed</span><span class="p">(</span><span class="m">7</span><span class="p">)</span><span class="w">
 </span><span class="n">hybrid_A</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">62.1</span><span class="p">,</span><span class="w"> </span><span class="m">64.3</span><span class="p">,</span><span class="w"> </span><span class="m">61.8</span><span class="p">,</span><span class="w"> </span><span class="m">63.5</span><span class="p">,</span><span class="w"> </span><span class="m">65.0</span><span class="p">,</span><span class="w"> </span><span class="m">62.7</span><span class="p">,</span><span class="w"> </span><span class="m">63.9</span><span class="p">,</span><span class="w"> </span><span class="m">64.5</span><span class="p">,</span><span class="w"> </span><span class="m">61.2</span><span class="p">,</span><span class="w"> </span><span class="m">63.8</span><span class="p">)</span><span class="w">
 </span><span class="n">hybrid_B</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">58.4</span><span class="p">,</span><span class="w"> </span><span class="m">60.1</span><span class="p">,</span><span class="w"> </span><span class="m">59.7</span><span class="p">,</span><span class="w"> </span><span class="m">61.0</span><span class="p">,</span><span class="w"> </span><span class="m">58.8</span><span class="p">,</span><span class="w"> </span><span class="m">60.5</span><span class="p">,</span><span class="w"> </span><span class="m">59.3</span><span class="p">,</span><span class="w"> </span><span class="m">60.8</span><span class="p">,</span><span class="w"> </span><span class="m">58.1</span><span class="p">,</span><span class="w"> </span><span class="m">59.9</span><span class="p">)</span><span class="w">
 
@@ -105,7 +296,9 @@ mean of x
 </span><span class="c1"># Effect size: Cohen's d</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">effectsize</span><span class="p">)</span><span class="w">
 </span><span class="n">cohens_d</span><span class="p">(</span><span class="n">hybrid_A</span><span class="p">,</span><span class="w"> </span><span class="n">hybrid_B</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><p><strong>Output (Welch):</strong></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        Welch Two Sample t-test
+</span></code></pre></div></div>
+<p><strong>Output (Welch):</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        Welch Two Sample t-test
 
 t = 8.471, df = 17.84, p-value = 7.2e-08
 alternative hypothesis: true difference in means is not equal to 0
@@ -114,7 +307,10 @@ alternative hypothesis: true difference in means is not equal to 0
 sample estimates:
 mean of x mean of y
    63.280    59.440
-</code></pre></div></div><p><strong>Interpretation:</strong> Hybrid A yields significantly more than Hybrid B ($T = 8.47,\ p &lt; 0.001$). The mean difference is $3.84$ q/ha (95 % CI: $2.91$–$4.77$).</p><h4 id="visualise-with-boxplot">Visualise with boxplot</h4><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
+</code></pre></div></div>
+<p><strong>Interpretation:</strong> Hybrid A yields significantly more than Hybrid B ($T = 8.47,\ p &lt; 0.001$). The mean difference is $3.84$ q/ha (95 % CI: $2.91$–$4.77$).</p>
+<h4 id="visualise-with-boxplot">Visualise with boxplot</h4>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span><span class="w">
 
 </span><span class="n">df_hyb</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hybrid_A</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hybrid_B</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w">
@@ -130,7 +326,11 @@ mean of x mean of y
        </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Yield (q/ha)"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
   </span><span class="n">theme_minimal</span><span class="p">(</span><span class="n">base_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">13</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
   </span><span class="n">theme</span><span class="p">(</span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"none"</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><hr /><h3 id="33-paired-t-test">3.3 Paired t-Test</h3><p>Used when observations are matched (same plot before/after treatment, same animal in two conditions, twin studies).</p>\[d_i = x_{i1} - x_{i2}\] \[H_0: \mu_d = 0 \qquad H_1: \mu_d \neq 0\] \[T = \frac{\bar{d}}{s_d/\sqrt{n}}, \quad df = n - 1\]<h4 id="example-soil-nitrogen-before-and-after-legume-cover-crop">Example: Soil nitrogen before and after legume cover crop</h4><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">set.seed</span><span class="p">(</span><span class="m">3</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<hr>
+<h3 id="33-paired-t-test">3.3 Paired t-Test</h3>
+<p>Used when observations are matched (same plot before/after treatment, same animal in two conditions, twin studies).</p>\[d_i = x_{i1} - x_{i2}\] \[H_0: \mu_d = 0 \qquad H_1: \mu_d \neq 0\] \[T = \frac{\bar{d}}{s_d/\sqrt{n}}, \quad df = n - 1\]<h4 id="example-soil-nitrogen-before-and-after-legume-cover-crop">Example: Soil nitrogen before and after legume cover crop</h4>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">set.seed</span><span class="p">(</span><span class="m">3</span><span class="p">)</span><span class="w">
 </span><span class="n">before</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">12.1</span><span class="p">,</span><span class="w"> </span><span class="m">11.8</span><span class="p">,</span><span class="w"> </span><span class="m">13.0</span><span class="p">,</span><span class="w"> </span><span class="m">12.5</span><span class="p">,</span><span class="w"> </span><span class="m">11.2</span><span class="p">,</span><span class="w"> </span><span class="m">12.8</span><span class="p">,</span><span class="w"> </span><span class="m">13.3</span><span class="p">,</span><span class="w"> </span><span class="m">12.0</span><span class="p">,</span><span class="w"> </span><span class="m">11.7</span><span class="p">,</span><span class="w"> </span><span class="m">12.4</span><span class="p">)</span><span class="w">
 </span><span class="n">after</span><span class="w">  </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">14.5</span><span class="p">,</span><span class="w"> </span><span class="m">13.9</span><span class="p">,</span><span class="w"> </span><span class="m">15.1</span><span class="p">,</span><span class="w"> </span><span class="m">14.8</span><span class="p">,</span><span class="w"> </span><span class="m">13.6</span><span class="p">,</span><span class="w"> </span><span class="m">15.0</span><span class="p">,</span><span class="w"> </span><span class="m">15.5</span><span class="p">,</span><span class="w"> </span><span class="m">14.2</span><span class="p">,</span><span class="w"> </span><span class="m">13.8</span><span class="p">,</span><span class="w"> </span><span class="m">14.7</span><span class="p">)</span><span class="w">
 
@@ -142,7 +342,9 @@ mean of x mean of y
                         </span><span class="n">paired</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w">
                         </span><span class="n">alternative</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"greater"</span><span class="p">)</span><span class="w">   </span><span class="c1"># expect after &gt; before</span><span class="w">
 </span><span class="n">print</span><span class="p">(</span><span class="n">result_paired</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><p><strong>Output:</strong></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        Paired t-test
+</span></code></pre></div></div>
+<p><strong>Output:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        Paired t-test
 
 data:  after and before
 t = 25.43, df = 9, p-value = 1.2e-09
@@ -152,7 +354,9 @@ alternative hypothesis: true mean difference is greater than 0
 sample estimates:
 mean difference
           2.340
-</code></pre></div></div><p><strong>Interpretation:</strong> Soil nitrogen increased by a mean of <strong>2.34 mg/kg</strong> after the legume cover crop ($T = 25.43,\ p &lt; 0.001$). The one-sided test confirms a significant increase.</p><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Paired difference plot</span><span class="w">
+</code></pre></div></div>
+<p><strong>Interpretation:</strong> Soil nitrogen increased by a mean of <strong>2.34 mg/kg</strong> after the legume cover crop ($T = 25.43,\ p &lt; 0.001$). The one-sided test confirms a significant increase.</p>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Paired difference plot</span><span class="w">
 </span><span class="n">df_paired</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="w">
   </span><span class="n">Plot</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">),</span><span class="w">
   </span><span class="n">Before</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">before</span><span class="p">,</span><span class="w">
@@ -169,23 +373,54 @@ mean difference
   </span><span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">"Soil Nitrogen Before (red) → After (green) Cover Crop"</span><span class="p">,</span><span class="w">
        </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"N (mg/kg)"</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Plot"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
   </span><span class="n">theme_minimal</span><span class="p">(</span><span class="n">base_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">13</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><hr /><h2 id="4-checking-assumptions">4. Checking Assumptions</h2><h3 id="normality">Normality</h3><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Shapiro-Wilk test (best for n &lt; 50)</span><span class="w">
+</span></code></pre></div></div>
+<hr>
+<h2 id="4-checking-assumptions">4. Checking Assumptions</h2>
+<h3 id="normality">Normality</h3>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Shapiro-Wilk test (best for n &lt; 50)</span><span class="w">
 </span><span class="n">shapiro.test</span><span class="p">(</span><span class="n">protein</span><span class="p">)</span><span class="w">
 
 </span><span class="c1"># Q-Q plot</span><span class="w">
 </span><span class="n">qqnorm</span><span class="p">(</span><span class="n">protein</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Q-Q Plot — Protein Content"</span><span class="p">)</span><span class="w">
 </span><span class="n">qqline</span><span class="p">(</span><span class="n">protein</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="n">lwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><h3 id="equality-of-variances">Equality of Variances</h3><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># F-test (sensitive to normality)</span><span class="w">
+</span></code></pre></div></div>
+<h3 id="equality-of-variances">Equality of Variances</h3>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># F-test (sensitive to normality)</span><span class="w">
 </span><span class="n">var.test</span><span class="p">(</span><span class="n">hybrid_A</span><span class="p">,</span><span class="w"> </span><span class="n">hybrid_B</span><span class="p">)</span><span class="w">
 
 </span><span class="c1"># Levene's test (robust)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">car</span><span class="p">)</span><span class="w">
 </span><span class="n">leveneTest</span><span class="p">(</span><span class="n">Yield</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">Hybrid</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df_hyb</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><h3 id="what-if-normality-fails">What if normality fails?</h3><table><thead><tr><th>Parametric</th><th>Non-parametric equivalent</th></tr></thead><tbody><tr><td>One-sample t-test</td><td>Wilcoxon signed-rank test</td></tr><tr><td>Two-sample t-test</td><td>Mann-Whitney U (Wilcoxon rank-sum)</td></tr><tr><td>Paired t-test</td><td>Wilcoxon signed-rank test (paired)</td></tr></tbody></table><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Non-parametric alternatives</span><span class="w">
+</span></code></pre></div></div>
+<h3 id="what-if-normality-fails">What if normality fails?</h3>
+<table>
+<thead><tr>
+<th>Parametric</th>
+<th>Non-parametric equivalent</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>One-sample t-test</td>
+<td>Wilcoxon signed-rank test</td>
+</tr>
+<tr>
+<td>Two-sample t-test</td>
+<td>Mann-Whitney U (Wilcoxon rank-sum)</td>
+</tr>
+<tr>
+<td>Paired t-test</td>
+<td>Wilcoxon signed-rank test (paired)</td>
+</tr>
+</tbody>
+</table>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Non-parametric alternatives</span><span class="w">
 </span><span class="n">wilcox.test</span><span class="p">(</span><span class="n">protein</span><span class="p">,</span><span class="w"> </span><span class="n">mu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">)</span><span class="w">                           </span><span class="c1"># one-sample</span><span class="w">
 </span><span class="n">wilcox.test</span><span class="p">(</span><span class="n">hybrid_A</span><span class="p">,</span><span class="w"> </span><span class="n">hybrid_B</span><span class="p">)</span><span class="w">                        </span><span class="c1"># two-sample</span><span class="w">
 </span><span class="n">wilcox.test</span><span class="p">(</span><span class="n">after</span><span class="p">,</span><span class="w"> </span><span class="n">before</span><span class="p">,</span><span class="w"> </span><span class="n">paired</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">              </span><span class="c1"># paired</span><span class="w">
-</span></code></pre></div></div><hr /><h2 id="5-z-vs-t--decision-flowchart">5. Z vs t — Decision Flowchart</h2><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Start: Testing a mean?
+</span></code></pre></div></div>
+<hr>
+<h2 id="5-z-vs-t--decision-flowchart">5. Z vs t — Decision Flowchart</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Start: Testing a mean?
          │
          ├─ Yes ──► Is σ known AND n ≥ 30?
          │                  │
@@ -202,7 +437,59 @@ mean difference
          │                     Paired t-test    Welch t-test
          │
          └─ No ──► Use proportion Z-test / chi-square
-</code></pre></div></div><hr /><h2 id="6-complete-summary-table">6. Complete Summary Table</h2><table><thead><tr><th>Feature</th><th>Z-test</th><th>One-sample t</th><th>Two-sample t (Welch)</th><th>Paired t</th></tr></thead><tbody><tr><td>$\sigma$ known</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td><td>❌ No</td></tr><tr><td>Min sample size</td><td>$n \geq 30$</td><td>Any</td><td>Any</td><td>Any</td></tr><tr><td>Groups</td><td>1</td><td>1</td><td>2 independent</td><td>2 matched</td></tr><tr><td>Test stat</td><td>$Z \sim \mathcal{N}(0,1)$</td><td>$T \sim t_{n-1}$</td><td>$T \sim t_{df_W}$</td><td>$T \sim t_{n-1}$</td></tr><tr><td>R function</td><td><code class="language-plaintext highlighter-rouge">pnorm()</code></td><td><code class="language-plaintext highlighter-rouge">t.test(mu=)</code></td><td><code class="language-plaintext highlighter-rouge">t.test(var.equal=F)</code></td><td><code class="language-plaintext highlighter-rouge">t.test(paired=T)</code></td></tr></tbody></table><hr /><h2 id="7-power-analysis">7. Power Analysis</h2><p>Determine sample size needed to detect a given effect.</p><div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">pwr</span><span class="p">)</span><span class="w">
+</code></pre></div></div>
+<hr>
+<h2 id="6-complete-summary-table">6. Complete Summary Table</h2>
+<table>
+<thead><tr>
+<th>Feature</th>
+<th>Z-test</th>
+<th>One-sample t</th>
+<th>Two-sample t (Welch)</th>
+<th>Paired t</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>$\sigma$ known</td>
+<td>✅ Yes</td>
+<td>❌ No</td>
+<td>❌ No</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Min sample size</td>
+<td>$n \geq 30$</td>
+<td>Any</td>
+<td>Any</td>
+<td>Any</td>
+</tr>
+<tr>
+<td>Groups</td>
+<td>1</td>
+<td>1</td>
+<td>2 independent</td>
+<td>2 matched</td>
+</tr>
+<tr>
+<td>Test stat</td>
+<td>$Z \sim \mathcal{N}(0,1)$</td>
+<td>$T \sim t_{n-1}$</td>
+<td>$T \sim t_{df_W}$</td>
+<td>$T \sim t_{n-1}$</td>
+</tr>
+<tr>
+<td>R function</td>
+<td><code class="language-plaintext highlighter-rouge">pnorm()</code></td>
+<td><code class="language-plaintext highlighter-rouge">t.test(mu=)</code></td>
+<td><code class="language-plaintext highlighter-rouge">t.test(var.equal=F)</code></td>
+<td><code class="language-plaintext highlighter-rouge">t.test(paired=T)</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="7-power-analysis">7. Power Analysis</h2>
+<p>Determine sample size needed to detect a given effect.</p>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">pwr</span><span class="p">)</span><span class="w">
 
 </span><span class="c1"># One-sample t-test: detect d = 0.5 with 80 % power</span><span class="w">
 </span><span class="n">pwr.t.test</span><span class="p">(</span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">sig.level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.05</span><span class="p">,</span><span class="w"> </span><span class="n">power</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.80</span><span class="p">,</span><span class="w">
@@ -223,4 +510,64 @@ mean difference
      </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Power Curve: Two-Sample t-Test (d = 0.5)"</span><span class="p">,</span><span class="w">
      </span><span class="n">col</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">"#2C7BB6"</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">19</span><span class="p">)</span><span class="w">
 </span><span class="n">abline</span><span class="p">(</span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.80</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="n">lty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div><hr /><h2 id="8-references">8. References</h2><ul><li>Fisher, R. A. (1925). <em>Statistical Methods for Research Workers</em>. Oliver &amp; Boyd.</li><li>Student [Gosset, W. S.] (1908). The probable error of a mean. <em>Biometrika</em>, 6(1), 1–25.</li><li>Welch, B. L. (1947). The generalisation of Student’s problem. <em>Biometrika</em>, 34(1–2), 28–35.</li><li>Cohen, J. (1988). <em>Statistical Power Analysis for the Behavioral Sciences</em> (2nd ed.). LEA.</li><li>R Core Team (2026). <em>R: A Language and Environment for Statistical Computing</em>.</li></ul><hr /></section><footer class="page__meta"><p class="page__taxonomy"> <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong> <span itemprop="keywords"> <a href="/tags/#hypothesis-testing" class="page__taxonomy-item p-category" rel="tag">hypothesis-testing</a><span class="sep">, </span> <a href="/tags/#inference" class="page__taxonomy-item p-category" rel="tag">inference</a><span class="sep">, </span> <a href="/tags/#r" class="page__taxonomy-item p-category" rel="tag">R</a><span class="sep">, </span> <a href="/tags/#t-test" class="page__taxonomy-item p-category" rel="tag">t-test</a><span class="sep">, </span> <a href="/tags/#z-test" class="page__taxonomy-item p-category" rel="tag">z-test</a> </span></p><p class="page__taxonomy"> <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong> <span itemprop="keywords"> <a href="/categories/#r" class="page__taxonomy-item p-category" rel="tag">R</a><span class="sep">, </span> <a href="/categories/#statistics" class="page__taxonomy-item p-category" rel="tag">statistics</a> </span></p><p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-05-03">May 3, 2026</time></p></footer><section class="page__share"><h4 class="page__share-title">Share on</h4><a href="https://twitter.com/intent/tweet?via=DrShamshadM&text=Z-Test+and+t-Test%3A+Theory%2C+Hypotheses+%26+Complete+R+Analysis%20https%3A%2F%2Fshamshad.in%2Fposts%2F2022%2F05%2Fz-test-t-test-analysis%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a> <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fshamshad.in%2Fposts%2F2022%2F05%2Fz-test-t-test-analysis%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a> <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://shamshad.in/posts/2022/05/z-test-t-test-analysis/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a></section><nav class="pagination"> <a href="https://shamshad.in/posts/2021/01/A-tutorial-on-Genome-Wide-Association-Studies/" class="pagination--pager" title="A tutorial on Genome-Wide Association Studies (GWAS) in Tassel (GUI) ">Previous</a> <a href="https://shamshad.in/posts/2023/05/f-test-analysis/" class="pagination--pager" title="F-Test: Theory, Variants &amp; Complete R Analysis ">Next</a></nav></div><div class="page__comments"><h4 class="page__comments-title">Leave a comment</h4><section id="disqus_thread"></section></div></article><div class="page__related"><h2 class="page__related-title">You may also enjoy</h2><div class="grid__wrapper"><div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2026/02/alpha-lattice-design/" rel="permalink">Alpha (α) Lattice Design: Theory, Layout &amp; Complete R Analysis </a></h2><p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 6 minute read</p><p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-02-08T00:00:00+05:30">February 08, 2026</time></p><p class="archive__item-excerpt" itemprop="description"><p>The <strong>Alpha (α) Lattice Design</strong> — introduced by <strong>Patterson &amp; Williams (1976)</strong> — is an <strong>incomplete block design</strong> built for large-scale experiments where the number of treatments exceeds the practical block size. It is the standard design for <strong>plant breeding trials</strong> evaluating hundreds of genotypes, offering superior error control over RCBD while remaining flexible in treatment and block size combinations.</p></p><!-- citation and icon code --></article></div><div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2026/01/latin-square-design/" rel="permalink">Latin Square Design (LSD): Theory &amp; Complete R Analysis </a></h2><p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 7 minute read</p><p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-01-02T00:00:00+05:30">January 02, 2026</time></p><p class="archive__item-excerpt" itemprop="description"><p>The <strong>Latin Square Design (LSD)</strong> extends blocking to <strong>two simultaneous directions</strong> of environmental variation. By controlling both a row gradient and a column gradient, it achieves greater error reduction than RCBD while using the same number of experimental units. It is the design of choice when two orthogonal sources of heterogeneity are known in advance — such as row (fertility) and column (irrigation) gradients in a field, or row (day) and column (technician) effects in a laboratory.</p></p><!-- citation and icon code --></article></div><div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2025/04/rcbd-design-analysis/" rel="permalink">Randomized Complete Block Design (RCBD): Theory &amp; Complete R Analysis </a></h2><p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 8 minute read</p><p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2025-04-18T00:00:00+05:30">April 18, 2025</time></p><p class="archive__item-excerpt" itemprop="description"><p>The <strong>Randomized Complete Block Design (RCBD)</strong> is the most widely used experimental design in agricultural, biological, and environmental research. It extends the CRD by introducing <strong>blocks</strong> — groups of homogeneous experimental units — to account for a single known source of environmental variation (soil fertility gradient, slope, irrigation, temperature, etc.). Every treatment appears <strong>exactly once</strong> in every block, making blocks <em>complete</em>.</p></p><!-- citation and icon code --></article></div><div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2024/05/crd-design-analysis/" rel="permalink">Completely Randomized Design (CRD): Theory &amp; Complete R Analysis </a></h2><p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 5 minute read</p><p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-05-02T00:00:00+05:30">May 02, 2024</time></p><p class="archive__item-excerpt" itemprop="description"><p>The <strong>Completely Randomized Design (CRD)</strong> is the simplest experimental design. Treatments are assigned to experimental units <strong>purely at random</strong>, with no restrictions. It is the starting point for understanding all other designs (RCBD, Latin Square, Alpha-lattice) and remains widely used in controlled laboratory and greenhouse experiments.</p></p><!-- citation and icon code --></article></div></div></div></div></div><div id="footer" class="page__footer"><footer> <!-- start custom footer snippets --> <!-- end custom head snippets --> <!-- end custom footer snippets --><div class="page__footer-follow"><ul class="social-icons"><li><strong>Follow:</strong></li><li><a href="https://twitter.com/DrShamshadM" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li><li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar</a></li><li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" rel="nofollow noopener noreferrer"><i class="ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li><li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li></ul></div><div class="page__footer-copyright">&copy; 2026 M. Shamshad. Proudly hosted by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div><link defer rel="preload" href="/assets/js/mermaid.min.js" defer as="script"> <script defer src="/assets/js/mermaid.min.js" ></script></footer></div><link defer rel="preload" href="/assets/js/main.min.js" as="script"> <script defer src="/assets/js/main.min.js"></script> <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> --> <script defer type="text/javascript"> /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */ var disqus_shortname = 'shamshad'; /* * * DON'T EDIT BELOW THIS LINE * * */ (function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })(); /* * * DON'T EDIT BELOW THIS LINE * * */ (function () { var s = document.createElement('script'); s.async = true; s.type = 'text/javascript'; s.src = '//' + disqus_shortname + '.disqus.com/count.js'; (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s); }()); </script> <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> <script defer src="/assets/js/mermaid.js"></script></body></html>
+</span></code></pre></div></div>
+<hr>
+<h2 id="8-references">8. References</h2>
+<ul>
+<li>Fisher, R. A. (1925). <em>Statistical Methods for Research Workers</em>. Oliver &amp; Boyd.</li>
+<li>Student [Gosset, W. S.] (1908). The probable error of a mean. <em>Biometrika</em>, 6(1), 1–25.</li>
+<li>Welch, B. L. (1947). The generalisation of Student’s problem. <em>Biometrika</em>, 34(1–2), 28–35.</li>
+<li>Cohen, J. (1988). <em>Statistical Power Analysis for the Behavioral Sciences</em> (2nd ed.). LEA.</li>
+<li>R Core Team (2026). <em>R: A Language and Environment for Statistical Computing</em>.</li>
+</ul>
+<hr></section><footer class="page__meta"><p class="page__taxonomy"> <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong> <span itemprop="keywords"> <a href="/tags/#hypothesis-testing" class="page__taxonomy-item p-category" rel="tag">hypothesis-testing</a><span class="sep">, </span> <a href="/tags/#inference" class="page__taxonomy-item p-category" rel="tag">inference</a><span class="sep">, </span> <a href="/tags/#r" class="page__taxonomy-item p-category" rel="tag">R</a><span class="sep">, </span> <a href="/tags/#t-test" class="page__taxonomy-item p-category" rel="tag">t-test</a><span class="sep">, </span> <a href="/tags/#z-test" class="page__taxonomy-item p-category" rel="tag">z-test</a> </span></p>
+<p class="page__taxonomy"> <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong> <span itemprop="keywords"> <a href="/categories/#r" class="page__taxonomy-item p-category" rel="tag">R</a><span class="sep">, </span> <a href="/categories/#statistics" class="page__taxonomy-item p-category" rel="tag">statistics</a> </span></p>
+<p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-05-03">May 3, 2026</time></p></footer><section class="page__share"><h4 class="page__share-title">Share on</h4>
+<a href="https://twitter.com/intent/tweet?via=DrShamshadM&amp;text=Z-Test+and+t-Test%3A+Theory%2C+Hypotheses+%26+Complete+R+Analysis%20https%3A%2F%2Fshamshad.in%2Fposts%2F2022%2F05%2Fz-test-t-test-analysis%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a> <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fshamshad.in%2Fposts%2F2022%2F05%2Fz-test-t-test-analysis%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a> <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://shamshad.in/posts/2022/05/z-test-t-test-analysis/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a></section><nav class="pagination"> <a href="https://shamshad.in/posts/2021/01/A-tutorial-on-Genome-Wide-Association-Studies/" class="pagination--pager" title="A tutorial on Genome-Wide Association Studies (GWAS) in Tassel (GUI) ">Previous</a> <a href="https://shamshad.in/posts/2023/05/f-test-analysis/" class="pagination--pager" title="F-Test: Theory, Variants &amp; Complete R Analysis ">Next</a></nav>
+</div>
+<div class="page__comments">
+<h4 class="page__comments-title">Leave a comment</h4>
+<section id="disqus_thread"></section>
+</div></article><div class="page__related">
+<h2 class="page__related-title">You may also enjoy</h2>
+<div class="grid__wrapper">
+<div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2026/05/spatial-ar1-analysis/" rel="permalink">Spatial Analysis with AR1 × AR1 Model: Theory &amp; Complete R Analysis </a>
+</h2>
+<p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 10 minute read</p>
+<p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-05-02T00:00:00+05:30">May 02, 2026</time></p>
+<p class="archive__item-excerpt" itemprop="description"></p>
+<p>Field experiments are routinely affected by <strong>spatial heterogeneity</strong> — systematic variation in soil fertility, moisture, drainage, pH, and microclimate that creates patches of high and low performance across the trial. When this variation is ignored, it inflates the residual variance, reduces heritability estimates, biases treatment comparisons, and misranks genotypes. The <strong>AR1 × AR1 model</strong> (first-order autoregressive process in both row and column directions) is the gold standard for capturing and removing this spatial structure from field trial data.</p>
+<!-- citation and icon code --></article></div>
+<div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2026/03/p-rep-design-analysis/" rel="permalink">Partially Replicated (p-rep) Design: Theory &amp; Complete R Analysis </a>
+</h2>
+<p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 8 minute read</p>
+<p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-03-02T00:00:00+05:30">March 02, 2026</time></p>
+<p class="archive__item-excerpt" itemprop="description"></p>
+<p>The <strong>Partially Replicated (p-rep) design</strong> — formally developed by <strong>Cullis, Smith &amp; Coombes (2006)</strong> — is the modern standard for <strong>Stage 1 multi-environment plant breeding trials</strong>. It overcomes the key limitation of the augmented design (zero replication of test entries) by replicating a <strong>controlled fraction</strong> (typically 20–30 %) of test entries twice, while the remainder appear only once. This provides direct within-trial error estimation for all genotypes and enables powerful <strong>spatial modelling</strong> of field heterogeneity.</p>
+<!-- citation and icon code --></article></div>
+<div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2026/02/augmented-design-analysis/" rel="permalink">Augmented Design: Theory &amp; Complete R Analysis </a>
+</h2>
+<p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 10 minute read</p>
+<p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-02-24T00:00:00+05:30">February 24, 2026</time></p>
+<p class="archive__item-excerpt" itemprop="description"></p>
+<p>The <strong>Augmented Design</strong> — proposed by <strong>Federer (1956)</strong> — is a field experimental design specifically developed for <strong>early-generation plant breeding</strong> trials, where a large number of <strong>new (unreplicated) test entries</strong> are evaluated alongside a small set of <strong>replicated check (standard) varieties</strong>. It allows breeders to screen hundreds of genotypes within a single trial without the cost of fully replicating every entry, while still enabling valid statistical inference through the checks.</p>
+<!-- citation and icon code --></article></div>
+<div class="grid__item"><article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"><h2 class="archive__item-title" itemprop="headline"> <a href="https://shamshad.in/posts/2026/02/alpha-lattice-design/" rel="permalink">Alpha (α) Lattice Design: Theory, Layout &amp; Complete R Analysis </a>
+</h2>
+<p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> 6 minute read</p>
+<p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-02-08T00:00:00+05:30">February 08, 2026</time></p>
+<p class="archive__item-excerpt" itemprop="description"></p>
+<p>The <strong>Alpha (α) Lattice Design</strong> — introduced by <strong>Patterson &amp; Williams (1976)</strong> — is an <strong>incomplete block design</strong> built for large-scale experiments where the number of treatments exceeds the practical block size. It is the standard design for <strong>plant breeding trials</strong> evaluating hundreds of genotypes, offering superior error control over RCBD while remaining flexible in treatment and block size combinations.</p>
+<!-- citation and icon code --></article></div>
+</div>
+</div>
+</div></div><div id="footer" class="page__footer"><footer> <!-- start custom footer snippets --> <!-- end custom head snippets --> <!-- end custom footer snippets --><div class="page__footer-follow"><ul class="social-icons">
+<li><strong>Follow:</strong></li>
+<li><a href="https://twitter.com/DrShamshadM" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+<li><a href="https://scholar.google.com/citations?user=dI7V1a4AAAAJ&amp;hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square ai-fw" aria-hidden="true"></i> Google Scholar</a></li>
+<li><a href="https://www.researchgate.net/profile/Mohd-Shamshad" rel="nofollow noopener noreferrer"><i class="ai ai-researchgate-square ai-fw" aria-hidden="true"></i> ResearchGate</a></li>
+<li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+</ul></div>
+<div class="page__footer-copyright">© 2026 M. Shamshad. Proudly hosted by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<link defer rel="preload" href="/assets/js/mermaid.min.js" as="script"> <script defer src="/assets/js/mermaid.min.js"></script></footer></div><link defer rel="preload" href="/assets/js/main.min.js" as="script"> <script defer src="/assets/js/main.min.js"></script> <!-- <script src="https://kit.fontawesome.com/4eee35f757.js"></script> --> <script defer type="text/javascript"> /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */ var disqus_shortname = 'shamshad'; /* * * DON'T EDIT BELOW THIS LINE * * */ (function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })(); /* * * DON'T EDIT BELOW THIS LINE * * */ (function () { var s = document.createElement('script'); s.async = true; s.type = 'text/javascript'; s.src = '//' + disqus_shortname + '.disqus.com/count.js'; (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s); }()); </script> <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript> <script defer src="/assets/js/mermaid.js"></script></body></html>

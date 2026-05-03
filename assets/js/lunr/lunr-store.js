@@ -95,6 +95,24 @@ var store = [{
         "url": "/posts/2026/02/alpha-lattice-design/",
         "teaser": null
       },{
+        "title": "Augmented Design: Theory & Complete R Analysis",
+        "excerpt":"The Augmented Design — proposed by Federer (1956) — is a field experimental design specifically developed for early-generation plant breeding trials, where a large number of new (unreplicated) test entries are evaluated alongside a small set of replicated check (standard) varieties. It allows breeders to screen hundreds of genotypes within...","categories": ["statistics","R","field-experiments"],
+        "tags": ["augmented-design","check-varieties","plant-breeding","ANOVA","BLUPs","R"],
+        "url": "/posts/2026/02/augmented-design-analysis/",
+        "teaser": null
+      },{
+        "title": "Partially Replicated (p-rep) Design: Theory & Complete R Analysis",
+        "excerpt":"The Partially Replicated (p-rep) design — formally developed by Cullis, Smith &amp; Coombes (2006) — is the modern standard for Stage 1 multi-environment plant breeding trials. It overcomes the key limitation of the augmented design (zero replication of test entries) by replicating a controlled fraction (typically 20–30 %) of test...","categories": ["statistics","R","field-experiments"],
+        "tags": ["p-rep","partially-replicated","plant-breeding","spatial-analysis","BLUPs","SpATS","FielDHub","R"],
+        "url": "/posts/2026/03/p-rep-design-analysis/",
+        "teaser": null
+      },{
+        "title": "Spatial Analysis with AR1 × AR1 Model: Theory & Complete R Analysis",
+        "excerpt":"Field experiments are routinely affected by spatial heterogeneity — systematic variation in soil fertility, moisture, drainage, pH, and microclimate that creates patches of high and low performance across the trial. When this variation is ignored, it inflates the residual variance, reduces heritability estimates, biases treatment comparisons, and misranks genotypes. The...","categories": ["statistics","R","field-experiments"],
+        "tags": ["spatial-analysis","AR1","autocorrelation","mixed-model","BLUPs","sommer","SpATS","ASReml","field-experiments","R"],
+        "url": "/posts/2026/05/spatial-ar1-analysis/",
+        "teaser": null
+      },{
         "title": "Assessment of Genetic Diversity in Sunflower (<i>Helianthus annuus </i>L.) Germplasm",
         "excerpt":"Download PDF here Abstract: The present investigation was carried out at the research fields of the oilseeds Sections Department of Plant Breeding and Genetics Punjab Agricultural University, Ludhiana, India. The material for present study consisted of 31 germplasm lines. The material was raised in two rows with three replications each...","categories": [],
         "tags": [],
