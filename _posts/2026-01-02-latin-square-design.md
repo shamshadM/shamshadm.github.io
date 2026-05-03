@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Latin Square Design (LSD): Theory & Complete R Analysis"
 date: 2026-01-02
 permalink: /posts/2026/01/latin-square-design/
