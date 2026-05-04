@@ -113,6 +113,12 @@ var store = [{
         "url": "/posts/2026/05/spatial-ar1-analysis/",
         "teaser": null
       },{
+        "title": "Honeycomb Design Analysis in R",
+        "excerpt":"The Honeycomb (HC) design, developed by Fasoulas (1988) and later extended by Kyriakou and Fasoulas, is a field layout method used in plant breeding to improve the efficiency of mass selection under field variability. In this design, plants are arranged in a triangular (hexagonal) grid, so that each plant is...","categories": ["r","geometry","structural-analysis","data-visualization"],
+        "tags": ["r","ggplot2","hexagon","tessellation","honeycomb","geometry","structural-mechanics"],
+        "url": "/posts/2026/05/honeycomb-design-analysis/",
+        "teaser": null
+      },{
         "title": "Assessment of Genetic Diversity in Sunflower (<i>Helianthus annuus </i>L.) Germplasm",
         "excerpt":"Download PDF here Abstract: The present investigation was carried out at the research fields of the oilseeds Sections Department of Plant Breeding and Genetics Punjab Agricultural University, Ludhiana, India. The material for present study consisted of 31 germplasm lines. The material was raised in two rows with three replications each...","categories": [],
         "tags": [],
