@@ -80,3 +80,10 @@ $BREAKPOINTS: () !default;
     @return map-get($BREAKPOINTS, $name);
   }
 }
+
+// custom breakout for Mathjax
+@media (max-width: 600px) {
+  .MathJax {
+    font-size: 70% !important;
+  }
+}

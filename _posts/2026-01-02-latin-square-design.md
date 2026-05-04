@@ -108,13 +108,24 @@ $$H_1: \gamma_k \neq 0 \quad \text{for at least one } k$$
 
 ## 6. Partitioning of Variation
 
-$$SS_{\text{Total}} = SS_{\text{Treatment}} + SS_{\text{Row}} + SS_{\text{Column}} + SS_{\text{Error}}$$
-
-$$\sum_{i}\sum_{j}\sum_{k}(y_{ijk}-\bar{y})^2
-= t\sum_{i}(\bar{y}_{i..}-\bar{y})^2
-+ t\sum_{j}(\bar{y}_{.j.}-\bar{y})^2
-+ t\sum_{k}(\bar{y}_{..k}-\bar{y})^2
-+ SS_E$$
+$$
+SS_{\text{Total}} =
+\begin{aligned}[t]
+& SS_{\text{Treatment}} \\
+& +\; SS_{\text{Row}} \\
+& +\; SS_{\text{Column}} \\
+& +\; SS_{\text{Error}}
+\end{aligned}
+$$
+$$
+\sum_{i}\sum_{j}\sum_{k}(y_{ijk}-\bar{y})^2
+= \begin{aligned}[t]
+& t\sum_{i}(\bar{y}_{i..}-\bar{y})^2 \\
+& +\; t\sum_{j}(\bar{y}_{.j.}-\bar{y})^2 \\
+& +\; t\sum_{k}(\bar{y}_{..k}-\bar{y})^2 \\
+& +\; SS_E
+\end{aligned}
+$$
 
 ### ANOVA Table
 

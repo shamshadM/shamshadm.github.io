@@ -79,10 +79,15 @@ $$H_1: \beta_j \neq 0 \quad \text{for at least one } j$$
 
 $$SS_{\text{Total}} = SS_{\text{Treatment}} + SS_{\text{Block}} + SS_{\text{Error}}$$
 
-$$\underbrace{\sum_{i}\sum_{j}(y_{ij}-\bar{y})^2}_{SS_{Tot}}
-= \underbrace{r\sum_{i}(\bar{y}_{i\cdot}-\bar{y})^2}_{SS_T}
-+ \underbrace{t\sum_{j}(\bar{y}_{\cdot j}-\bar{y})^2}_{SS_B}
-+ \underbrace{\sum_{i}\sum_{j}(y_{ij}-\bar{y}_{i\cdot}-\bar{y}_{\cdot j}+\bar{y})^2}_{SS_E}$$
+$$
+\begin{aligned}
+\underbrace{\sum_{i}\sum_{j}(y_{ij}-\bar{y})^2}_{SS_{\text{Tot}}}
+&= \underbrace{r\sum_{i}(\bar{y}_{i\cdot}-\bar{y})^2}_{SS_T} \\
+&\quad +\; \underbrace{t\sum_{j}(\bar{y}_{\cdot j}-\bar{y})^2}_{SS_B} \\
+&\quad +\; \underbrace{\sum_{i}\sum_{j}
+(y_{ij}-\bar{y}_{i\cdot}-\bar{y}_{\cdot j}+\bar{y})^2}_{SS_E}
+\end{aligned}
+$$
 
 ### ANOVA Table
 

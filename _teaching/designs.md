@@ -14,6 +14,7 @@ math: true
 ---
 ## Test of significance
  The Statistical procedures, which are used to know whether differences under study are significant or non-significant are called test of significance. Some well known and commonly used test of significant are Z-test, t-test and F-test.
+{: .text-justify}
 
  If $$\mu = H_0$$ is the null hypothesis than
 
@@ -21,31 +22,34 @@ $$\mu \ne  H_0$$ or $$\mu > H_0$$ or $$\mu < H_0$$ is the alternative hypothesis
 
 ### Two-tailed and one-tailed hypothesis
 Two sided alternative hypothesis has region of rejection in both tails of sampling distribution of test statistic and one sided alternative hypothesis has rejection region, either in the let tail or right tail of the sampling distribution of test statistic.
+{: .text-justify}
 
 ### Errors in testing of hypothesis
 As decision is based on sample information, so we are likely to make two types of errors in testing of hypothesis. These are 
+{: .text-justify}
 
 >**Type I Error** is the error committed in rejecting a null hypothesis ($$\ H_0$$), when it is true.<br>
 **Type II Error** is the error committed in not rejecting a false null hypothesis.
 
 ### Level of significance 
 It is the maximum probability of type I error; which is experimenter is willing to risk in testing a null hypothesis. It is denoted as $\alpha$.
-
-For testing significance of difference between population mean and sample mean or between two sample means, either Z-test or t-test applied.
-A detailed and systematic explanation can be found in the [Blog Post Section](/posts/2022/05/z-test-t-test-analysis/)
+{: .text-justify}
+For testing significance of difference between population mean and sample mean or between two sample means, either Z-test or t-test applied. A detailed and systematic explanation of Z-test and t-test can be found in the [Blog Post Section](/posts/2022/05/z-test-t-test-analysis/)
+{: .text-justify}
 
 ---
 ## Analysis of variance and F-test
-The method of partitioning total variation into components due to different causes is known as analysis of variance and the table showing the various mean squares together with he corresponding degree o freedom is called analysis of variance (ANOVA) table. The analysis of variance provides a ready means of testing significance of differences between class mean. Suppose we have two genotypes, A and B and data on a particular character were recorded for a number of plants in each genotypes. We want to know whether the genotypes differ with respect to that character or not. This can be done by both t-test and F-test. The F-test and t-test are in fact identical, since for a single degree of freedom of the numerator, the F ratio is identically equal to t<sup>2</sup>. 
-However, F-test has a wider application than t-tet as it also provides an overall test of several differences, whereas, t-test provides test of a single differences.
+The method of partitioning total variation into components due to different causes is known as analysis of variance and the table showing the various mean squares together with he corresponding degree of freedom is called analysis of variance (ANOVA) table. The analysis of variance provides a ready means of testing significance of differences between class mean. Suppose we have two genotypes, A and B and data on a particular character were recorded for a number of plants in each genotypes. We want to know whether the genotypes differ with respect to that character or not. This can be done by both t-test and F-test. The F-test and t-test are in fact identical, since for a single degree of freedom of the numerator, the F ratio is identically equal to t<sup>2</sup>. 
+However, F-test has a wider application than t-test as it also provides an overall test of several differences, whereas, t-test provides test of a single differences.
 {: .text-justify}
+
 ### F-test
-F-test is used to test whether the two independent estimates of population variance differ significantly or whether the two samples may be regarded as drawn from the normal population having the same variance. A detailed and systematic explanation can be found in the [Blog Post Section](/posts/2023/05/f-test-analysis/)
+F-test is used to test whether the two independent estimates of population variance differ significantly or whether the two samples may be regarded as drawn from the normal population having the same variance. A detailed and systematic explanation of F-test can be found in the [Blog Post Section](/posts/2023/05/f-test-analysis/)
 {: .text-justify}
 ---
 
 ## Completely Randomized Design (CRD)
-The Completely Randomized Design (CRD) is the simplest experimental design. Treatments are assigned to experimental units purely at random, with no restrictions. It is the starting point for understanding all other designs (RCBD, Latin Square, Alpha-lattice) and remains widely used in controlled laboratory and greenhouse experiments.A detailed and systematic explanation can be found in the [Blog Post Section](/posts/2024/05/crd-design-analysis/)
+The Completely Randomized Design (CRD) is the simplest experimental design. Treatments are assigned to experimental units purely at random, with no restrictions. It is the starting point for understanding all other designs (RCBD, Latin Square, Alpha-lattice) and remains widely used in controlled laboratory and greenhouse experiments. A comprehensive and structured explanation of CRD is available in the [Blog Post Section](/posts/2024/05/crd-design-analysis/)
 {: .text-justify}
 
 # Comprehensive Analysis of Field Experiments in R
@@ -70,7 +74,7 @@ By integrating theoretical concepts with practical computational tools, this gui
 **Randomized Complete Block Design (RCBD)** is one of the most widely used experimental designs in agricultural and biological research, particularly when there is known or suspected variability in the experimental field. In RCBD, the entire set of treatments is arranged into groups called **blocks**, where each block is relatively homogeneous with respect to environmental conditions such as soil fertility, moisture, or slope. Every treatment appears exactly once within each block, ensuring that comparisons among treatments are made under similar conditions. The allocation of treatments within each block is done randomly, which helps eliminate bias and ensures the validity of statistical inference.
 {: .text-justify}
 
-The primary advantage of RCBD lies in its ability to **control variability** by isolating the effect of nuisance factors through blocking. By accounting for block-to-block variation, the design reduces experimental error and increases the precision of treatment comparisons. The statistical analysis of RCBD is typically carried out using **Analysis of Variance (ANOVA)**, where the total variation is partitioned into components due to treatments, blocks, and random error. If the treatment effect is found to be statistically significant, it indicates that the differences among treatment means are not due to chance alone. Overall, RCBD is highly efficient, simple to implement, and particularly suitable for field experiments where environmental heterogeneity exists in one direction. A detailed and systematic explanation can be found in the [Blog Post Section](/posts/2025/04/rcbd-design-analysis/)
+The primary advantage of RCBD lies in its ability to **control variability** by isolating the effect of nuisance factors through blocking. By accounting for block-to-block variation, the design reduces experimental error and increases the precision of treatment comparisons. The statistical analysis of RCBD is typically carried out using **Analysis of Variance (ANOVA)**, where the total variation is partitioned into components due to treatments, blocks, and random error. If the treatment effect is found to be statistically significant, it indicates that the differences among treatment means are not due to chance alone. Overall, RCBD is highly efficient, simple to implement, and particularly suitable for field experiments where environmental heterogeneity exists in one direction. A detailed and systematic explanation of RCBD can be found in the [Blog Post Section](/posts/2025/04/rcbd-design-analysis/)
 {: .text-justify}
 
 > **Tip:** If block F-value is not significant, blocking reduced power with no benefit — consider
@@ -82,7 +86,7 @@ The primary advantage of RCBD lies in its ability to **control variability** by 
 
 **Latin Square Design (LSD)** is an experimental design used when there are **two sources of variability** that need to be controlled simultaneously, in addition to the treatment effects. It is particularly useful in agricultural and biological experiments where variation may occur in two directions—for example, **soil fertility gradients running both north–south and east–west**. The design arranges treatments in a square layout such that the number of treatments equals the number of rows and columns, and each treatment appears **exactly once in every row and every column**. This dual control of variation makes LSD more efficient than designs like RCBD when two directional sources of heterogeneity are present. 
 {: .text-justify}
-In a Latin Square Design with *t* treatments, the experimental field is divided into a *t × t* grid. Treatments are assigned in such a way that no treatment repeats within the same row or column, and randomization is applied to rows, columns, and treatment allocation to avoid bias. The statistical model includes effects for treatments, rows, and columns, allowing the total variation to be partitioned into these components along with random error. Analysis is typically performed using **Analysis of Variance (ANOVA)**, where significance of treatment effects is tested after accounting for row and column variations. While LSD is highly efficient in controlling two sources of variability, it has limitations: it requires the number of treatments to equal the number of rows and columns, and missing data can complicate analysis. Despite these constraints, it remains a powerful design when experimental conditions vary in two directions. A detailed and systematic explanation can be found in the [Blog Post Section](/posts/2026/01/latin-square-design/)
+In a Latin Square Design with *t* treatments, the experimental field is divided into a *t × t* grid. Treatments are assigned in such a way that no treatment repeats within the same row or column, and randomization is applied to rows, columns, and treatment allocation to avoid bias. The statistical model includes effects for treatments, rows, and columns, allowing the total variation to be partitioned into these components along with random error. Analysis is typically performed using **Analysis of Variance (ANOVA)**, where significance of treatment effects is tested after accounting for row and column variations. While LSD is highly efficient in controlling two sources of variability, it has limitations: it requires the number of treatments to equal the number of rows and columns, and missing data can complicate analysis. Despite these constraints, it remains a powerful design when experimental conditions vary in two directions. A detailed and systematic explanation Latin square Design can be found in the [Blog Post Section](/posts/2026/01/latin-square-design/)
 {: .text-justify}
 
 >**Constraint:** Requires equal number of rows, columns, and treatments. Best for $p \leq 8$.<br>
@@ -91,15 +95,13 @@ In a Latin Square Design with *t* treatments, the experimental field is divided 
 ---
 
 ## Alpha (α) Lattice Design
-
 **Alpha Lattice Design (α-lattice design)** is an advanced incomplete block design widely used in agricultural research, particularly in plant breeding trials where a large number of treatments (e.g., genotypes) need to be evaluated efficiently. When the number of treatments becomes too large for designs like RCBD to remain effective, the experimental error increases due to within-block heterogeneity. The alpha lattice design addresses this issue by arranging treatments into **incomplete blocks**, each containing only a subset of the total treatments, while still maintaining an overall balanced structure across replications.
 {: .text-justify}
 
 In this design, treatments are grouped into smaller blocks within each replication, and each replication contains all treatments, but distributed across multiple incomplete blocks. This structure helps control local variability more effectively than complete block designs, as comparisons are made within relatively homogeneous small blocks. The term “alpha” refers to the method of generating the design, which ensures near-balance in the occurrence and pairing of treatments across blocks. Although not all treatment pairs appear together in every block, the design is constructed so that statistical efficiency remains high.
 {: .text-justify}
 
-The analysis of an alpha lattice design is typically conducted using **mixed-effects models**, where blocks within replications are treated as random effects and treatments as fixed effects. In R, packages such as `agricolae`, `lme4`, or `asreml` are commonly used for analysis. The model accounts for variation due to replications, incomplete blocks, and residual error, allowing for more precise estimation of treatment effects. Overall, the alpha lattice design provides a powerful and flexible approach for handling large-scale experiments, improving accuracy while managing practical constraints such as land, labor, and environmental variability.
-A detailed and systematic explanation can be found in the [Blog Post Section](/posts/2026/02/alpha-lattice-design/)
+The analysis of an alpha lattice design is typically conducted using **mixed-effects models**, where blocks within replications are treated as random effects and treatments as fixed effects. In R, packages such as `agricolae`, `lme4`, or `asreml` are commonly used for analysis. The model accounts for variation due to replications, incomplete blocks, and residual error, allowing for more precise estimation of treatment effects. Overall, the alpha lattice design provides a powerful and flexible approach for handling large-scale experiments, improving accuracy while managing practical constraints such as land, labor, and environmental variability. A detailed and systematic explanation of Alpha (α) lattice Design can be found in the [Blog Post Section](/posts/2026/02/alpha-lattice-design/)
 {: .text-justify}
 ---
 
@@ -108,7 +110,7 @@ A detailed and systematic explanation can be found in the [Blog Post Section](/p
 **Augmented Design (Augmented Block Design)** is an experimental design widely used in agricultural research when a large number of new treatments (such as genotypes or varieties or clones) need to be evaluated but resources are insufficient to replicate all of them. In this design, a set of standard or check treatments is replicated across all blocks, while the new treatments are unreplicated and appear only once. The primary purpose of including replicated checks is to account for environmental variability across blocks and to provide a basis for adjusting the performance of unreplicated entries. This makes the design particularly useful in early-stage plant breeding trials, where hundreds of new lines must be screened efficiently.
 {: .text-justify}
 
-The structure of an augmented design typically involves dividing the experimental area into blocks, each containing all the check treatments and a subset of new treatments. Since the new entries are not replicated, their raw observations may be influenced by local environmental conditions. To address this, statistical adjustments are made using the performance of the replicated checks within each block, thereby improving the accuracy of comparisons. The analysis is commonly performed using analysis of variance (ANOVA) models tailored for augmented designs, or specialized methods available in statistical software like R (e.g., using packages such as agricolae). Overall, the augmented design provides a practical balance between resource constraints and the need for reliable evaluation, enabling researchers to efficiently identify promising treatments for further testing. A detailed and systematic explanation can be found in the [Blog Post Section](/posts/2026/02/augmented-design-analysis/)
+The structure of an augmented design typically involves dividing the experimental area into blocks, each containing all the check treatments and a subset of new treatments. Since the new entries are not replicated, their raw observations may be influenced by local environmental conditions. To address this, statistical adjustments are made using the performance of the replicated checks within each block, thereby improving the accuracy of comparisons. The analysis is commonly performed using analysis of variance (ANOVA) models tailored for augmented designs, or specialized methods available in statistical software like R (e.g., using packages such as agricolae). Overall, the augmented design provides a practical balance between resource constraints and the need for reliable evaluation, enabling researchers to efficiently identify promising treatments for further testing. A detailed and systematic explanation of Augmented Design can be found in the [Blog Post Section](/posts/2026/02/augmented-design-analysis/)
 {: .text-justify}
 
 ---
@@ -124,14 +126,14 @@ The key idea behind the P-rep design is to strategically select certain treatmen
 Unlike traditional designs such as RCBD or lattice designs, the P-rep design relies heavily on **mixed-effects models** for analysis. In these models, treatment effects may be considered fixed or random, and spatial or block effects are incorporated to account for field heterogeneity. In R, packages such as `lme4`, `asreml`, or `SpATS` are commonly used to analyze P-rep data, allowing for more accurate estimation of treatment performance through techniques like **Best Linear Unbiased Prediction (BLUP)**.
 {: .text-justify}
 
-Overall, the P-rep design offers significant advantages in terms of flexibility and resource efficiency. It enables researchers to evaluate a large number of treatments with improved precision compared to fully unreplicated designs, while avoiding the high cost of complete replication. However, careful planning and appropriate statistical analysis are essential to ensure reliable results. A detailed and systematic explanation can be found in the [Blog Post Section](/posts/2026/03/p-rep-design-analysis/)
+Overall, the P-rep design offers significant advantages in terms of flexibility and resource efficiency. It enables researchers to evaluate a large number of treatments with improved precision compared to fully unreplicated designs, while avoiding the high cost of complete replication. However, careful planning and appropriate statistical analysis are essential to ensure reliable results. A detailed and systematic explanation of partial replicated design can be found in the [Blog Post Section](/posts/2026/03/p-rep-design-analysis/)
 {: .text-justify}
 
 ---
 
 ## Spatial Analysis with AR1 × AR1 Model
 
-R**Spatial Analysis with AR1 × AR1 Model** is a powerful statistical approach used in field experiments to account for **spatial correlation** among observations. In agricultural trials, experimental units (plots) are arranged in rows and columns, and measurements taken from nearby plots are often more similar than those farther apart due to underlying environmental gradients such as soil fertility, moisture, or management practices. Traditional designs like RCBD assume independence of errors, which is often violated in practice. The AR1 × AR1 (first-order autoregressive in both directions) model explicitly captures this spatial dependence, leading to more accurate estimation of treatment effects and improved statistical efficiency.
+**Spatial Analysis with AR1 × AR1 Model** is a powerful statistical approach used in field experiments to account for **spatial correlation** among observations. In agricultural trials, experimental units (plots) are arranged in rows and columns, and measurements taken from nearby plots are often more similar than those farther apart due to underlying environmental gradients such as soil fertility, moisture, or management practices. Traditional designs like RCBD assume independence of errors, which is often violated in practice. The AR1 × AR1 (first-order autoregressive in both directions) model explicitly captures this spatial dependence, leading to more accurate estimation of treatment effects and improved statistical efficiency.
 {: .text-justify}
 
 The AR1 × AR1 model assumes that correlation between observations decreases exponentially with distance in both the **row direction (horizontal)** and the **column direction (vertical)**. It introduces two parameters: one for row-wise correlation (ρ<sub>row</sub>) and one for column-wise correlation (ρ<sub>col</sub>). The covariance structure of the residuals is modeled as the **Kronecker product** of two AR1 processes, one for rows and one for columns. This means that plots closer together have higher correlation, while those farther apart are less correlated. By incorporating this structure into the model, spatial trends that are not captured by blocking alone can be effectively controlled.
@@ -140,110 +142,16 @@ The AR1 × AR1 model assumes that correlation between observations decreases exp
 In practice, spatial analysis using the AR1 × AR1 model is implemented through **mixed-effects models**, where treatment effects are typically considered fixed, and spatially correlated residuals are modeled explicitly. In R, packages such as `nlme`, `asreml`, or `SpATS` are commonly used. For example, using `nlme`, one can specify a correlation structure with `corAR1()` for both rows and columns within a generalized least squares (GLS) or linear mixed model framework. The model estimates the spatial correlation parameters along with treatment effects, providing adjusted means that are less biased by field heterogeneity.
 {: .text-justify}
 
-The advantages of using an AR1 × AR1 spatial model include **reduced residual variance**, **increased precision of treatment comparisons**, and **better control of field trends** compared to traditional designs. It is particularly beneficial in large field trials, plant breeding experiments, and situations where spatial variability is continuous rather than discrete. However, it requires careful model specification, sufficient data structure (regular grid layout), and appropriate software tools. Overall, spatial analysis using the AR1 × AR1 model represents a modern and robust approach to improving the quality and reliability of conclusions drawn from field experiments.A detailed and systematic explanation can be found in the [Blog Post Section](/posts/2026/05/spatial-ar1-analysis/)
+The advantages of using an AR1 × AR1 spatial model include **reduced residual variance**, **increased precision of treatment comparisons**, and **better control of field trends** compared to traditional designs. It is particularly beneficial in large field trials, plant breeding experiments, and situations where spatial variability is continuous rather than discrete. However, it requires careful model specification, sufficient data structure (regular grid layout), and appropriate software tools. Overall, spatial analysis using the AR1 × AR1 model represents a modern and robust approach to improving the quality and reliability of conclusions drawn from field experiments. A detailed and systematic explanation can be found in the [Blog Post Section](/posts/2026/05/spatial-ar1-analysis/)
 {: .text-justify}
 
 ---
 
 ## Honeycomb Design
-
-The **Honeycomb (HC)** design, developed by **Fasoulas (1988)** and extended by Kyriakou & Fasoulas,
-is used for **mass selection** in plant breeding. Plants are arranged in a triangular grid; each
-plant competes only with its six nearest neighbours.
-
-### Design Principle
-
-Each plant $i$ is compared against the mean of its **moving ring of 6 neighbours**. A selection
-index is computed as:
-
-$$HC_i = \frac{y_i}{\bar{y}_{N_i}}$$
-
-where $y_i$ is the yield of plant $i$ and $\bar{y}_{N_i}$ is the mean yield of its 6 neighbours.
-
-### Layout Generation
-
-```r
-# ── Honeycomb grid coordinates ────────────────────────────────────────────
-honeycomb_coords <- function(nrow, ncol) {
-  coords <- data.frame(Plant = integer(), X = numeric(), Y = numeric())
-  id <- 1L
-  for (r in 1:nrow) {
-    for (c in 1:ncol) {
-      x <- c + ifelse(r %% 2 == 0, 0.5, 0)
-      y <- r * (sqrt(3) / 2)
-      coords <- rbind(coords, data.frame(Plant = id, X = x, Y = y))
-      id <- id + 1L
-    }
-  }
-  coords
-}
-
-hc_grid <- honeycomb_coords(20, 15)
-
-# Simulate plant yields
-set.seed(99)
-hc_grid$Yield <- rnorm(nrow(hc_grid), mean = 50, sd = 8)
-
-# Visualise layout
-ggplot(hc_grid, aes(X, Y, colour = Yield)) +
-  geom_point(size = 3, shape = 16) +
-  scale_colour_viridis_c(option = "plasma") +
-  coord_equal() +
-  labs(title = "Honeycomb Field Layout", colour = "Yield (g)") +
-  theme_minimal(base_size = 13)
-```
-
-### Neighbour Identification & Selection Index
-
-```r
-# ── Find 6 nearest neighbours ─────────────────────────────────────────────
-library(FNN)   # fast kNN
-
-coords_mat <- as.matrix(hc_grid[, c("X", "Y")])
-nn_idx     <- get.knnx(coords_mat, coords_mat, k = 7)$nn.index
-# Column 1 is the point itself; columns 2–7 are the 6 neighbours
-
-hc_grid$NeighbourMean <- apply(nn_idx[, 2:7], 1, function(idx) {
-  mean(hc_grid$Yield[idx])
-})
-
-# HC selection index
-hc_grid$HC_index <- hc_grid$Yield / hc_grid$NeighbourMean
-
-# Select top 10 % (strongest relative performers)
-threshold   <- quantile(hc_grid$HC_index, 0.90)
-hc_grid$Selected <- hc_grid$HC_index >= threshold
-
-cat("Plants selected:", sum(hc_grid$Selected), "\n")
-cat("Mean yield – selected:    ", round(mean(hc_grid$Yield[hc_grid$Selected]),  2), "\n")
-cat("Mean yield – not selected:", round(mean(hc_grid$Yield[!hc_grid$Selected]), 2), "\n")
-```
-
-### Visualise Selection
-
-```r
-ggplot(hc_grid, aes(X, Y, colour = HC_index, shape = Selected, size = Selected)) +
-  geom_point() +
-  scale_colour_viridis_c(option = "magma") +
-  scale_shape_manual(values = c(`FALSE` = 16, `TRUE` = 17)) +
-  scale_size_manual( values  = c(`FALSE` = 2,  `TRUE` = 4))  +
-  coord_equal() +
-  labs(title  = "Honeycomb Selection (top 10 %)",
-       colour = "HC Index",
-       shape  = "Selected",
-       size   = "Selected") +
-  theme_minimal(base_size = 13)
-```
-
-### Heritability Estimate Under Honeycomb Design
-
-```r
-# ── Plant-level heritability (Fasoulas method) ────────────────────────────
-# Var(genotype) estimated via regression of plant on neighbour mean
-lm_hc  <- lm(Yield ~ NeighbourMean, data = hc_grid)
-h2_hc  <- summary(lm_hc)$r.squared
-cat("Heritability estimate (HC):", round(h2_hc, 3), "\n")
-```
+The Honeycomb (HC) design, developed by **Fasoulas (1988)** and later extended by **Kyriakou and Fasoulas**, is a field layout method used in plant breeding to improve the efficiency of mass selection under field variability. In this design, plants are arranged in a **triangular (hexagonal) grid**, so that each plant is surrounded by exactly six nearest neighbours at equal distances. This uniform spatial arrangement ensures that every plant experiences a similar level of competition, reducing environmental bias caused by uneven spacing or directional field effects.
+{: .text-justify}
+The main idea of the HC design is to enhance the accuracy of selecting superior plants by controlling local competition and micro-environmental variation without requiring heavy replication. Because each plant is compared primarily with its immediate neighbours, breeders can better distinguish genetic performance from environmental noise. This makes the design particularly useful in early-generation selection, where large populations are evaluated and only a small number of superior individuals are retained for further breeding. A detailed and systematic explanation of honeycomb design can be found in the [Blog Post](/posts/2026/05/honeycomb-design-analysis/)
+{: .text-justify}
 
 ---
 

@@ -162,13 +162,15 @@ $$\mathbf{y} \sim \mathcal{N}\!\left(\mathbf{X}\boldsymbol{\tau},\;
 Parameters $(\sigma_g^2, \sigma_s^2, \rho_r, \rho_c, \sigma_n^2)$ are estimated by
 maximising the **restricted log-likelihood**:
 
-$$\ell_R(\boldsymbol{\theta}) = -\frac{1}{2}\left[
-\log|\mathbf{V}| +
-\log|\mathbf{X}^\top\mathbf{V}^{-1}\mathbf{X}| +
-(\mathbf{y} - \mathbf{X}\hat{\boldsymbol{\tau}})^\top
-\mathbf{V}^{-1}
+$$
+\ell_R(\boldsymbol{\theta}) = -\frac{1}{2}\Bigg[
+\begin{aligned}
+&\log|\mathbf{V}| \;+\; \log|\mathbf{X}^\top \mathbf{V}^{-1} \mathbf{X}| \\
+&+\; (\mathbf{y} - \mathbf{X}\hat{\boldsymbol{\tau}})^\top \mathbf{V}^{-1}
 (\mathbf{y} - \mathbf{X}\hat{\boldsymbol{\tau}})
-\right]$$
+\end{aligned}
+\Bigg]
+$$
 
 where $\mathbf{V} = \text{Var}(\mathbf{y})$.
 
