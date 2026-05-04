@@ -22,7 +22,7 @@ fundamental questions in applied statistics:
 
 ## 1. The F-Distribution
 
-If $U \sim \chi^2_{d_1}$ and $V \sim \chi^2_{d_2}$ are independent, then:
+If $$U \sim \chi^2_{d_1}$$ and $$V \sim \chi^2_{d_2}$$ are independent, then:
 
 $$F = \frac{U/d_1}{V/d_2} \sim F_{(d_1,\, d_2)}$$
 
