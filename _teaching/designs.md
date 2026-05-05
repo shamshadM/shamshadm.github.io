@@ -1,13 +1,16 @@
 ---
-title: "Field experimental analysis"
+title: "Experimental Analysis"
 collection: teaching
-layout: single
 type: "Experimental Design analysis using R"
-permalink: /teaching/designs
+permalink: /teaching/designs/
 venue: "Punjab Agricultural University, Plant Breeding and Genetics"
 categories: [statistics, agronomy, R]
 tags: [RCBD, alpha-lattice, augmented-design, honeycomb, field-experiments, R]
 date: 2026-05-02
+header:
+  overlay_image: /experimentAnalysis.webp
+  overlay_filter: 0.3
+excerpt: "" 
 location: "Ludhiana, India"
 toc: true
 math: true
@@ -21,7 +24,7 @@ math: true
 $$\mu \ne  H_0$$ or $$\mu > H_0$$ or $$\mu < H_0$$ is the alternative hypothesis.
 
 ### Two-tailed and one-tailed hypothesis
-Two sided alternative hypothesis has region of rejection in both tails of sampling distribution of test statistic and one sided alternative hypothesis has rejection region, either in the let tail or right tail of the sampling distribution of test statistic.
+Two sided alternative hypothesis has region of rejection in both tails of sampling distribution of test statistic and one sided alternative hypothesis has rejection region, either in the left tail or right tail of the sampling distribution of test statistic.
 {: .text-justify}
 
 ### Errors in testing of hypothesis
@@ -39,7 +42,7 @@ For testing significance of difference between population mean and sample mean o
 
 ---
 ## Analysis of variance and F-test
-The method of partitioning total variation into components due to different causes is known as analysis of variance and the table showing the various mean squares together with he corresponding degree of freedom is called analysis of variance (ANOVA) table. The analysis of variance provides a ready means of testing significance of differences between class mean. Suppose we have two genotypes, A and B and data on a particular character were recorded for a number of plants in each genotypes. We want to know whether the genotypes differ with respect to that character or not. This can be done by both t-test and F-test. The F-test and t-test are in fact identical, since for a single degree of freedom of the numerator, the F ratio is identically equal to t<sup>2</sup>. 
+The method of partitioning total variation into components due to different causes is known as analysis of variance and the table showing the various mean squares together with the corresponding degree of freedom is called analysis of variance (ANOVA) table. The analysis of variance provides a ready means of testing significance of differences between class mean. Suppose we have two genotypes, A and B and data on a particular character were recorded for a number of plants in each genotypes. We want to know whether the genotypes differ with respect to that character or not. This can be done by both t-test and F-test. The F-test and t-test are in fact identical, since for a single degree of freedom of the numerator, the F ratio is identically equal to t<sup>2</sup>. 
 However, F-test has a wider application than t-test as it also provides an overall test of several differences, whereas, t-test provides test of a single differences.
 {: .text-justify}
 

@@ -37,7 +37,7 @@ comments:
     server: # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
     appid:
-    num_posts: 10  #(default)
+    num_posts: # 5  #(default)
     colorscheme: # "light" (default), "dark"
 staticman:
   allowedFields: ["name", "email", "url", "message"]
@@ -282,7 +282,7 @@ timezone: Asia/Kolkata # https://en.wikipedia.org/wiki/List_of_tz_database_time_
 
 
 # Pagination with jekyll-paginate
-paginate: 5 # amount of posts to show
+paginate: 10 # amount of posts to show
 pagination_path: "/page:num/"
 
 # Pagination with jekyll-paginate-v2
