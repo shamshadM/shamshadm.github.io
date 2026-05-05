@@ -281,15 +281,15 @@ var store = [{
         "url": "/teaching/2018-Graduate%20Teaching%20Assistant",
         "teaser": null
       },{
-        "title": "Summary Descriptive Statistics",
-        "excerpt":"Field experimental analysis is a research method that uses controlled interventions within a real-world setting to study cause-and-effect relationships. Unlike a lab experiment, which maximizes control in an artificial environment, a field experiment prioritizes testing an intervention in a natural setting to improve the real-world applicability of its findings. This...","categories": [],
-        "tags": [],
-        "url": "/teaching/summary",
-        "teaser": null
-      },{
-        "title": "Field experimental analysis",
+        "title": "Experimental Analysis",
         "excerpt":"Test of significance The Statistical procedures, which are used to know whether differences under study are significant or non-significant are called test of significance. Some well known and commonly used test of significant are Z-test, t-test and F-test. If \\(\\mu = H_0\\) is the null hypothesis than \\(\\mu \\ne H_0\\)...","categories": ["statistics","agronomy","R"],
         "tags": ["RCBD","alpha-lattice","augmented-design","honeycomb","field-experiments","R"],
-        "url": "/teaching/designs",
+        "url": "/teaching/designs/",
+        "teaser": null
+      },{
+        "title": "Statistical Summary in R: A Complete Guide",
+        "excerpt":"Prerequisites: Basic R knowledge, R (≥ 4.0) installed, optionally RStudio. Packages used: dplyr, skimr, psych, ggplot2 Why Statistical Summaries Matter Before building models or drawing conclusions, you need to understand your data. Statistical summaries answer three core questions: Question Statistic Where is the data centered? Mean, Median, Mode How spread...","categories": ["R","Statistics","Data Analysis"],
+        "tags": ["r-programming","statistics","data-science","summary","exploratory-data-analysis"],
+        "url": "/teaching/summary",
         "teaser": null
       }]
