@@ -5,18 +5,17 @@ permalink: /posts/2026/05/honeycomb-design-analysis/
 categories: [r, geometry, structural-analysis, data-visualization]
 tags: [r, ggplot2, hexagon, tessellation, honeycomb, geometry, structural-mechanics]
 description: "A comprehensive guide to honeycomb hexagonal lattice design analysis in R — covering geometry, structural efficiency, tessellation plotting, and Gibson–Ashby mechanics."
+excerpt_separator: <!--more-->
 header:
   overlay_image: /honeycomb-banner.webp
-  overlay_filter: 0.7
-excerpt: "" 
-excerpt_separator: <!--more-->
+  overlay_filter: 0.3
 number_sections: true
 math: true
 toc: true
 ---
-
-The Honeycomb (HC) design, developed by **Fasoulas (1988)** and later extended by **Kyriakou and Fasoulas**, is a field layout method used in plant breeding to improve the efficiency of mass selection under field variability. In this design, plants are arranged in a **triangular (hexagonal) grid**, so that each plant is surrounded by exactly six nearest neighbours at equal distances. This uniform spatial arrangement ensures that every plant experiences a similar level of competition, reducing environmental bias caused by uneven spacing or directional field effects.
+The Honeycomb (HC) design, developed by **Fasoulas (1988)** and later extended by **Kyriakou and Fasoulas**, is a field layout method used in plant breeding to improve the efficiency of mass selection under field variability. 
 <!--more-->
+In this design, plants are arranged in a **triangular (hexagonal) grid**, so that each plant is surrounded by exactly six nearest neighbours at equal distances. This uniform spatial arrangement ensures that every plant experiences a similar level of competition, reducing environmental bias caused by uneven spacing or directional field effects.
 
 The main idea of the HC design is to enhance the accuracy of selecting superior plants by controlling local competition and micro-environmental variation without requiring heavy replication. Because each plant is compared primarily with its immediate neighbours, breeders can better distinguish genetic performance from environmental noise. This makes the design particularly useful in early-generation selection, where large populations are evaluated and only a small number of superior individuals are retained for further breeding.
 {: .txt-justify}
