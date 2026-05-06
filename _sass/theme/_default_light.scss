@@ -20,6 +20,7 @@ $border                     : #c0c0c0;
 $border-dark                : #808080;
 $selection-bg               : #175e54;
 $selection-text             : #000000;
+$tbl-header                 : #ffffff;
 
 /* Color codes used for the site */
 $danger-color               : #ff0000;
@@ -61,6 +62,7 @@ $sidebar-screen-min-width   : 1024px;
   --global-selection-text-color       : #{$selection-text};
   --global-btn-color                  : #{$primary-color};
   --global-navicon-link-color-hover   : #{$darker-primary-color};
+  --global-tbl-header-color           : #{$tbl-header};
 }
 
 /* Text selection styling for light theme */
