@@ -28,7 +28,7 @@ main:
 Linux_tutorial:
   - title: Installing of linux distribution in PC laptop
     children:
-        - title: Basic linux commands for the Beginner
+        - title: ""
        
   - title: Basic linux commands for the Beginner
     children:

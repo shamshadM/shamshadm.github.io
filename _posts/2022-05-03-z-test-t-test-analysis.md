@@ -249,8 +249,17 @@ $$H_0: \mu_1 = \mu_2 \qquad H_1: \mu_1 \neq \mu_2$$
 
 **Equal variances (Student):**
 
-$$T = \frac{\bar{x}_1 - \bar{x}_2}{s_p\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}, \quad
-s_p = \sqrt{\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2}}, \quad df = n_1+n_2-2$$
+$$
+\begin{aligned}
+T &= \frac{\bar{x}_1 - \bar{x}_2}{s_p\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} \\
+\\
+
+s_p &= \sqrt{\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2}} \\
+\\
+
+df &= n_1 + n_2 - 2
+\end{aligned}
+$$
 
 **Unequal variances (Welch — default in R):**
 
