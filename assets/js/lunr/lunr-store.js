@@ -290,6 +290,6 @@ var store = [{
         "title": "Statistical Summary in R: A Complete Guide",
         "excerpt":"Prerequisites: Basic R knowledge, R (≥ 4.0) installed, optionally RStudio. Packages used: dplyr, skimr, psych, ggplot2 Why Statistical Summaries Matter Before building models or drawing conclusions, you need to understand your data. Statistical summaries answer three core questions: Question Statistic Where is the data centered? Mean, Median, Mode How spread...","categories": ["R","Statistics","Data Analysis"],
         "tags": ["r-programming","statistics","data-science","summary","exploratory-data-analysis"],
-        "url": "/teaching/summary",
+        "url": "/teaching/summary/",
         "teaser": null
       }]
