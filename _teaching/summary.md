@@ -3,7 +3,7 @@ title: "Statistical Summary in R: A Complete Guide"
 date: 2026-05-05
 categories: [R, Statistics, Data Analysis]
 tags: [r-programming, statistics, data-science, summary, exploratory-data-analysis]
-permalink: /teaching/summary
+permalink: /teaching/summary/
 description: "Learn how to compute and interpret statistical summaries in R using base functions, dplyr, skimr, and more."
 header:
   overlay_image: /eS/r-stats-banner.webp
