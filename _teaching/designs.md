@@ -8,7 +8,7 @@ categories: [statistics, agronomy, R]
 tags: [RCBD, alpha-lattice, augmented-design, honeycomb, field-experiments, R]
 date: 2026-05-02
 header:
-  overlay_image: /experimentAnalysis.webp
+  overlay_image: /eS/experimentAnalysis.webp
   overlay_filter: 0.3
 excerpt: "" 
 location: "Ludhiana, India"

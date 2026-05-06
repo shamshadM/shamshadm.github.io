@@ -6,7 +6,7 @@ tags: [r-programming, statistics, data-science, summary, exploratory-data-analys
 permalink: /teaching/summary
 description: "Learn how to compute and interpret statistical summaries in R using base functions, dplyr, skimr, and more."
 header:
-  overlay_image: /r-stats-banner.webp
+  overlay_image: /eS/r-stats-banner.webp
   overlay-filter: 0.3
 excerpt: "" 
 toc: true
