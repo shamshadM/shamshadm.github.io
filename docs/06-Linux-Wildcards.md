@@ -2,7 +2,7 @@
 layout: single
 title: 'Linux Wildcards'
 date: 2022-09-23
-permalink: /docs/Linux-Wildcards
+permalink: /docs/Linux-Wildcards/
 sidebar:
     title: 'Linux Wildcards'
     nav: Linux_tutorial

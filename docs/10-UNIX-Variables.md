@@ -1,7 +1,7 @@
 ---
 title: 'UNIX Variables'
 date: 2022-09-23
-permalink: /docs/UNIX-Variables
+permalink: /docs/UNIX-Variables/
 sidebar: 
     title: 'UNIX Variables'
     nav: Linux_tutorial

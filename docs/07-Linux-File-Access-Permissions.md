@@ -1,7 +1,7 @@
 ---
 title: 'File system security (access rights)'
 date: 2022-09-23
-permalink: /docs/Linux-File-Access-Permissions
+permalink: /docs/Linux-File-Access-Permissions/
 sidebar:
     title: 'File system security (access rights)'
     nav: Linux_tutorial

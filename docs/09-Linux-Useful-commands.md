@@ -1,7 +1,7 @@
 ---
 title: 'Linux useful commands'
 date: 2022-09-23
-permalink: /docs/Linux-Useful-commands
+permalink: /docs/Linux-Useful-commands/
 type: 'Bioinformatics'
 venue: Online
 sidebar: 

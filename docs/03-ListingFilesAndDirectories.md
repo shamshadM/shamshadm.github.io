@@ -1,7 +1,7 @@
 ---
 title: 'Listing files and Directories'
 date: 2022-09-22
-permalink: /docs/ListingFilesAndDirectories
+permalink: /docs/ListingFilesAndDirectories/
 sidebar:
    title: 'Listing files and Directories'
    nav: Linux_tutorial

@@ -2,7 +2,7 @@
 layout: single
 title: 'Copies and moving of files'
 date: 2022-09-22
-permalink: /docs/Copies-moving-removing-files
+permalink: /docs/Copies-moving-removing-files/
 sidebar:
    title: 'Copies and moving of files'
    nav: Linux_tutorial

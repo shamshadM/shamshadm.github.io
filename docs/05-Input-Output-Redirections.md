@@ -2,7 +2,7 @@
 layout: single
 title: 'Input-Output Redirection'
 date: 2022-09-23
-permalink: /docs/Input-Output-Redirections
+permalink: /docs/Input-Output-Redirections/
 sidebar:
     title: 'Input-Output Redirection'
     nav: Linux_tutorial

@@ -1,6 +1,6 @@
 ---
 title: "Introduction about the unix"
-permalink: /docs/Introduction-about-the-Unix
+permalink: /docs/Introduction-about-the-Unix/
 sidebar:
    title: 'Introduction about the Unix'
    nav: Linux_tutorial
