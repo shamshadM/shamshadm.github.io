@@ -1,0 +1,47 @@
+/* Copyright comment*/
+
+/* Variables */
+@import "variables";
+
+/* Mixins and functions */
+@import "vendor/breakpoint/breakpoint";
+@include breakpoint-set("to ems", true);
+@import "vendor/magnific-popup/magnific-popup"; // Magnific Popup
+@import "vendor/susy/susy";
+@import "include/mixins";
+
+/* Core CSS */
+@import "layout/reset";
+@import "layout/base";
+@import "layout/forms";
+@import "layout/tables";
+@import "layout/animations";
+
+/* Components */
+@import "layout/buttons";
+@import "layout/notices";
+@import "layout/masthead";
+@import "layout/navigation";
+@import "layout/footer";
+@import "layout/search";
+@import "syntax";
+
+/* Utility classes */
+@import "include/utilities";
+
+/* Layout specific */
+@import "layout/page";
+@import "layout/archive";
+@import "layout/sidebar";
+@import "layout/print";
+
+@import "vendor/font-awesome/6/scss/fontawesome";
+@import "vendor/font-awesome/6/scss/solid";
+@import "vendor/font-awesome/6/scss/brands";
+@import "vendor/font-awesome/6/scss/v4-shims";
+@import "vendor/font-awesome/6/scss/regular";
+@import "vendor/fonts/common";
+@import "vendor/fonts/amazon";
+@import "vendor/fonts/google";
+
+@import "layout/custom";
