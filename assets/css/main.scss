@@ -7,4 +7,4 @@ search: false
 
 @import "theme/{{ site.site_theme | default: 'contrast' | append: '_light' }}",
         "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}"; // skin
-@import "minimal-mistakes"; // main partials
+@import "minimal-partials"; // main partials
