@@ -81,9 +81,38 @@
       a {
         white-space: nowrap;
       }
+      :hover{
+        color: var(--global-base-color);
+      }
     }
   }
 
-  .link {
-    color: aqua;
+ .page__footer-copyright {
+  a{
+     color: var( --global-link-color);
+  }
+  }
+    
+  // footer badge settings
+@keyframes slideIn {
+  from {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+  .footer-badge {
+    font-size: $doc-font-size;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 5px 14px;
+    border-radius: 999px;
+    border: 2px solid var(--global-link-color-hover);
+    color: var(--global-text-color);
+    background: transparent;
+    animation: slideIn 2s ease-out infinite;
   }

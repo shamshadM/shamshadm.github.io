@@ -7,6 +7,7 @@ categories: [statistics, R, field-experiments]
 tags: [augmented-design, check-varieties, plant-breeding, ANOVA, BLUPs, R]
 number_sections: true
 toc: true
+toc_sticky: true
 math: true
 ---
 

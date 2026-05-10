@@ -6,6 +6,7 @@ sidebar:
    title: 'Listing files and Directories'
    nav: Linux_tutorial
 toc: true
+toc_sticky: true
 author_profile: false
 ---
  ![Unix files system](/images/unix/Linux-Directory-StructureS.webp)

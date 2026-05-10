@@ -7,6 +7,7 @@ categories: [statistics, R, field-experiments]
 tags: [latin-square, two-way-blocking, ANOVA, field-experiments, R]
 number_sections: true
 toc: true
+toc_sticky: true
 math: true
 ---
 

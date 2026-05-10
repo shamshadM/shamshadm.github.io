@@ -12,8 +12,9 @@ tags:
   - configuration packages
   - Building packages in Linux
   - Run software in unix
-toc: true
 author_profile: false
+toc: true
+toc_sticky: true
 ---
 
 ![Unix files system](/images/unix/install-software.webp)

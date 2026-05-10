@@ -13,7 +13,9 @@ header:
 excerpt: "" 
 location: "Ludhiana, India"
 toc: true
+toc_sticky: true
 math: true
+
 ---
 ## Test of significance
  The Statistical procedures, which are used to know whether differences under study are significant or non-significant are called test of significance. Some well known and commonly used test of significant are Z-test, t-test and F-test.

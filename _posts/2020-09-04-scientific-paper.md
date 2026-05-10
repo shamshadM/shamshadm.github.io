@@ -5,6 +5,7 @@ permalink: /posts/2020/09/scientific-paper/
 excerpt_separator: <!--more-->
 categories: scientific writing
 toc: true
+toc_sticky: true
 tags:
   - Research Journal
   - Rough Draft

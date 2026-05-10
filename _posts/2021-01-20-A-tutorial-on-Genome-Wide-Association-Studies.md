@@ -4,7 +4,6 @@ date: 2021-01-20
 permalink: /posts/2021/01/A-tutorial-on-Genome-Wide-Association-Studies/
 excerpt_separator: <!--more-->
 categories: TASSEL software
-toc: true
 number_sections: true
 header: 
   og_image: "images/biostat/gwas/gwaslogo.webp"
@@ -15,6 +14,8 @@ tags:
   - Linear model
   - GLM
   - MLM
+toc: true
+toc_sticky: true
 ---
 
 Genome-wide association studies (GWAS) increase their popularity among medical, biological, and social sciences to identify the association between single nucleotide polymorphisms and phenotypic traits. This tutorial aims to provide a guidelines for conducing genome wide analysis in Tassel.

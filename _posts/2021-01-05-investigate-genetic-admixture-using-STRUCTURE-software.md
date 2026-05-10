@@ -4,7 +4,6 @@ date: 2021-01-05
 permalink: /posts/2021/01/investigate-genetic-admixture-using-STRUCTURE-software/
 excerpt_separator: <!--more-->
 categories: Structure software
-toc: true
 header: 
   og_image: "images/biostat/structure/structure-admixture.webp"
 tags: 
@@ -12,6 +11,8 @@ tags:
   - Genetic Admixture
   - Genetic data
   - Population structure
+toc: true
+toc_sticky: true
 ---
 
 **Structure Software** is a freely available software package that one may use for rigorous investigation of `admixed individuals`; identification of `point of hybridization` and `migrants`; and estimate over all `structure` of a population using a commonly used genetic markers such as `SNPs` and `SSRs`. This software was developed by **Pritchard Lab** at **Stanford University** and can downloaded at this [link](https://web.stanford.edu/group/pritchardlab/structure.html).

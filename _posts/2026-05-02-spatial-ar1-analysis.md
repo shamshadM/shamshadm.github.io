@@ -8,6 +8,7 @@ tags: [spatial-analysis, AR1, autocorrelation, mixed-model, BLUPs,
        sommer, SpATS, ASReml, field-experiments, R]
 number_sections: true
 toc: true
+toc_sticky: true
 math: true
 ---
 

@@ -9,6 +9,7 @@ excerpt_separator: <!--more-->
 number_sections: true
 math: true
 toc: true
+toc_sticky: true
 ---
 The Honeycomb (HC) design, developed by **Fasoulas (1988)** and later extended by **Kyriakou and Fasoulas**, is a field layout method used in plant breeding to improve the efficiency of mass selection under field variability. In this design, plants are arranged in a **triangular (hexagonal) grid**, so that each plant is surrounded by exactly six nearest neighbours at equal distances. This uniform spatial arrangement ensures that every plant experiences a similar level of competition, reducing environmental bias caused by uneven spacing or directional field effects.
 <!--more-->

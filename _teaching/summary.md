@@ -10,6 +10,7 @@ header:
   overlay-filter: 0.3
 excerpt: "" 
 toc: true
+toc_sticky: true
 ---
 
 > **Prerequisites:** Basic R knowledge, R (≥ 4.0) installed, optionally RStudio.  
@@ -329,15 +330,6 @@ full_summary(mtcars, group_var = "cyl")
 | Count NAs | `sum(is.na(x))` |
 | Rich summary | `skimr::skim(df)` |
 | Group summary | `dplyr::group_by() %>% summarise()` |
-
----
-
-## Further Reading
-
-- [R for Data Science — Exploratory Data Analysis](https://r4ds.hadley.nz/eda)  
-- [`skimr` documentation](https://docs.ropensci.org/skimr/)  
-- [`dplyr` reference](https://dplyr.tidyverse.org/)  
-- [ggplot2 gallery](https://r-graph-gallery.com/)
 
 ---
 

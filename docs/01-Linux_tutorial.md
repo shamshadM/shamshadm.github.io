@@ -6,6 +6,7 @@ sidebar:
    nav: Linux_tutorial
 excerpt: "How to quickly install and setup ubuntu linux"
 toc: true
+toc_sticky: true
 ---
 
 Unix is an operating system in the computer language program. The duty of an operating system is to orchestrate the various parts of computer-- the processor, graphic processor unit, the on-board memory, the disk drives ssd, hdd, keyboard, mouse video monitors, etc to preform useful tasks. The operating system is the master controller of the computer, the glue that holds together all the component of system, including the administrators, programmers, applications and users. When you use the computer to do something for you, like start the applications, copy file, or display the content of a directory, it is the operating system that must perform those tasks for you.

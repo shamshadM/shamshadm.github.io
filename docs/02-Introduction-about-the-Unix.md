@@ -16,6 +16,7 @@ keywords:
   - Shell
 author_profile: false
 toc: true
+toc_sticky: true
 ---
 
  <img src="/images/unix/unix-main.webp" alt="Unix-Introduction" width="100%">

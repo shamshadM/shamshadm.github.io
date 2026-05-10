@@ -7,6 +7,7 @@ categories: [statistics, R]
 number_sections: true
 tags: [f-test, anova, variance, hypothesis-testing, R]
 toc: true
+toc_sticky: true
 math: true
 ---
 

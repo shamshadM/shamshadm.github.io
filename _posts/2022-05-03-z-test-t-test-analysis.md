@@ -7,6 +7,7 @@ categories: [statistics, R]
 tags: [z-test, t-test, hypothesis-testing, inference, R]
 number_sections: true
 toc: true
+toc_sticky: true
 math: true
 ---
 

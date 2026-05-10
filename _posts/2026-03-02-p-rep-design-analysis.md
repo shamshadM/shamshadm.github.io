@@ -8,6 +8,7 @@ tags: [p-rep, partially-replicated, plant-breeding, spatial-analysis, BLUPs,
        SpATS, FielDHub, R]
 number_sections: true
 toc: true
+toc_sticky: true
 math: true
 ---
 

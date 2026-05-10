@@ -9,6 +9,7 @@ sidebar:
     nav: Linux_tutorial
 author_profile: false
 toc: true
+toc_sticky: true
 ---
 
 ![Unix files system](/images/unix/linux-tar-gz.webp)

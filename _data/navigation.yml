@@ -28,25 +28,27 @@ main:
 Linux_tutorial:
   - title: Installing of linux distribution in PC laptop
     children:
-        - title: ""
-       
+        - title: "Linux Installation Guide: Fresh"
+          url: /docs/linux-Installation-Guide_fresh/
+        - title: "Linux Installation Guide : WSL"
+          url: /docs/linux-Installation-Guide_WSL/
   - title: Basic linux commands for the Beginner
     children:
         - title: "Introduction about the Unix Linux"
-          url: /docs/Introduction-about-the-Unix
+          url: /docs/Introduction-about-the-Unix/
         - title: "Listing files and Directories"
-          url: /docs/ListingFilesAndDirectories
+          url: /docs/ListingFilesAndDirectories/
         - title: "Copies, moving and removing of files"
-          url: /docs/Copies-moving-removing-files
+          url: /docs/Copies-moving-removing-files/
         - title: "Input-Output Redirection"
-          url: /docs/Input-Output-Redirections
+          url: /docs/Input-Output-Redirections/
         - title: "Linux Wildcards"
-          url: /docs/Linux-Wildcards
+          url: /docs/Linux-Wildcards/
         - title: "Linux File Access Permissions"
-          url: /docs/Linux-File-Access-Permissions
+          url: /docs/Linux-File-Access-Permissions/
         - title: "Linux Useful commands"
-          url: /docs/Linux-Useful-commands
+          url: /docs/Linux-Useful-commands/
         - title: "Compiling UNIX software packages"
-          url: /docs/Compiling-UNIX-software-packages
+          url: /docs/Compiling-UNIX-software-packages/
         - title: "UNIX Variables"
-          url: /docs/UNIX-Variables
+          url: /docs/UNIX-Variables/

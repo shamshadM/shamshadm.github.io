@@ -7,6 +7,7 @@ categories: [statistics, R, field-experiments]
 tags: [alpha-lattice, incomplete-block, ANOVA, mixed-model, BLUPs, plant-breeding, R]
 number_sections: true
 toc: true
+toc_sticky: true
 math: true
 ---
 
