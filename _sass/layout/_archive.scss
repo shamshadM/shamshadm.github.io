@@ -119,10 +119,10 @@
 }
 
 .portfolio_caption {
-  color: $dark-gray;
+  color: $dark-primary-color;
   font-family: $caption-font-family;
   font-size: $type-size-8;
-  background: #fff;
+  background: var(--global-bg-color);
   text-align: left;
   z-index: 5;
   opacity: 0.5;
@@ -133,7 +133,7 @@
   }
 
   a {
-    color: $dark-gray;
+    color: $dark-primary-color;
     text-decoration: none;
   }
 }

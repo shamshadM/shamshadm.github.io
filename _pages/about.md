@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "Professional Profile"
 permalink: /about/
 excerpt: "Plant Breeder & Geneticist | Punjab Agricultural University | University of Cambridge Alumnus"
 author_profile: true
@@ -65,7 +65,7 @@ Professional expertise in Plant Breeding, Quantitative Genetics, Genomics, and C
 > Classes VI–VIII · Islamia Senior Secondary School, Malerkotla (Urdu medium)<br>
 > Classes I–V · Local Madrasa, Jamalpura, Malerkotla (Urdu medium)
 
-Beyond scientific pursuits 🕌 ♻️, interests include coding and program development 🚩, as well as spending time with friends 😇 and family 👥. Raised in India 🇮🇳, with proficiency in Punjabi, English 🇬🇧, Hindi, and Urdu, along with basic knowledge of French 🇫🇷. Known for taking initiative 🍼 and maintaining a curious mindset 🦅.
+Beyond scientific pursuits 🕌 ♻️, interests include coding and program development 🚩, as well as spending time with friends 😇 and family :family:. Raised in India 🇮🇳, with proficiency in Punjabi, English 🇬🇧, Hindi, and Urdu, along with basic knowledge of French 🇫🇷. Known for taking initiative 🍼 and maintaining a curious mindset 🦅.
 {: .text-justify}
 
 Feel free to [contact me](mailto:shamshad.rattan@gmail.com) 📩 if you find my blog useful, think I might be a good fit, or simply want to connect 🏅.

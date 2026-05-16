@@ -6,8 +6,9 @@ $primary-color              : #00c5cd;
 $dark-primary-color         : mix(#000, $primary-color, 40%);
 $darker-primary-color       : mix(#000, $primary-color, 60%);
 $light-primary-color        : mix(#fff, $primary-color, 50%);
+$active-color               : mix(#fff, $primary-color, 80%);
 $lighter-primary-color      : mix(#fff, $primary-color, 90%);
-$background                 : #292a2d;
+$background-color           : #292a2d;
 $background-light           : #302b25;
 $background-lighter         : #48413a;
 $text                       : #e4d4c8;
@@ -16,9 +17,11 @@ $link                       : #2dd4bf;
 $link-dark                  : #e4d4c8;
 $link-light                 : #b4a490;
 $footer                     : #252627;
-$border                     : #48413a;
+$border-color               : #48413a;
 $border-light               : #5c5346;
-$tbl-header                 : #333;
+$selection-bg               : #0a0909;
+$selection-text             : #fdfdff;
+$tbl-header                 : #333333;
 
 /* Color codes used for the site */
 $danger-color               : #d35c5c;
@@ -40,9 +43,10 @@ $sidebar-screen-min-width   : 1024px;
 /* Dark theme for the site */
 [data-theme="dark"] {
   --global-base-color                 : #{$primary-color};
-  --global-bg-color                   : #{$background};
+  --global-bg-color                   : #{$background-color};
+  --global-form-bg-color              : #{$lighter-primary-color};
   --global-footer-bg-color            : #{$footer};
-  --global-border-color               : #{$border};
+  --global-border-color               : #{$border-color};
   --global-dark-border-color          : #{$border-light};
   --global-code-background-color      : #{$background-light};
   --global-code-text-color            : #{$text-muted};

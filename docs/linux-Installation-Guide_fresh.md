@@ -1,13 +1,15 @@
 ---
 title: "Linux Installation Guide: Fresh PC / Laptop"
 permalink: /docs/linux-Installation-Guide_fresh/
-description: "A comprehensive step-by-step guide for installing Linux distributions on a fresh PC / Laptop"
-date: 2026-05-09
+sidebar: 
+    nav: Linux_tutorial
+excerpt: "A comprehensive step-by-step guide for installing Linux distributions on a fresh PC / Laptop"
 categories: [linux, installation, wsl, tutorial]
 tags: [ubuntu, debian, fedora, arch, dual-boot, virtualbox, fresh-install]
 toc: true
 toc_label: "Linux Installation Guide"
 toc_sticky: true
+author_profile: false
 ---
 
 # 🐧 Linux Installation Guide

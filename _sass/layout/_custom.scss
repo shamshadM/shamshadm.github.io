@@ -31,7 +31,7 @@
   width: 100%;
   opacity: 0;
   transition: .3s ease;
-  background-color: $dark-gray;
+  background-color: $dark-primary-color;
 }
 
 /* When you mouse over the container, fade in the overlay */
@@ -174,7 +174,7 @@ main #errorLink {
   font-size: 20px;
   padding: 12px;
   border: 1px solid;
-  color: $stanford-red;
+  color: var(-global-base-color);
   background-color: transparent;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
@@ -296,4 +296,9 @@ main #g6219 {
 .btn-outline-primary:hover {
   background-color: var(--global-masthead-link-color-hover);
   transition: color .15s ease-in-out, var(--global-bg-color) .15s ease-in-out, var(--global-border-color) .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.mermaid {
+    display: flex;
+    justify-content: center;
 }

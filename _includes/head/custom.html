@@ -1,5 +1,11 @@
 {% include base_path %}
-<!-- start custom head snippets -->			   
+<!-- start custom head snippets -->	
+ <meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.excerpt }}">
+<meta property="og:image" content="{{ page.header.teaser }}"> 
+
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png?v=565802">

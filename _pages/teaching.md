@@ -1,5 +1,5 @@
 ---
-title: "Teaching"
+title: "Teaching & Mentorship"
 layout: single
 permalink: /teaching/
 published: true

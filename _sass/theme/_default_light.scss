@@ -2,25 +2,26 @@
    CONTRAST THEME - LIGHT VERSION
    ========================================================================== */
 /* Color codes used for the theme */
-$primary-color              : #ff0026;
+$primary-color              : #ff0078;
 $dark-primary-color         : mix(#000, $primary-color, 40%);
 $darker-primary-color       : mix(#000, $primary-color, 60%);
 $light-primary-color        : mix(#fff, $primary-color, 50%);
+$active-color               : mix(#fff, $primary-color, 80%);
 $lighter-primary-color      : mix(#fff, $primary-color, 90%);
-$background                 : #ffffff;
-$background-light           : #fafafa;
+$background-color           : #f8fafc;
+$background-light           : #fbfcfd;
 $background-lighter         : #ffffff;
-$text                       : #000000;
-$text-muted                 : #404040;
-$link                       : #8c1515;
-$link-dark                  : #0000cc;
-$link-light                 : #3333ff;
-$footer                     : #ffdb58;
-$border                     : #c0c0c0;
+$text                       : #0F172A;
+$text-muted                 : #475569;
+$link                       : #5927e5;
+$link-dark                  : #0066ff;
+$link-light                 : #10B981;
+$footer                     : #f1f5f9;
+$border-color               : #e2e8f0;
 $border-dark                : #808080;
-$selection-bg               : #175e54;
-$selection-text             : #000000;
-$tbl-header                 : #ffffff;
+$selection-bg               : #008b74;
+$selection-text             : #0F172A;
+$tbl-header                 : #fbfcfd;
 
 /* Color codes used for the site */
 $danger-color               : #ff0000;
@@ -42,9 +43,10 @@ $sidebar-screen-min-width   : 1024px;
 /* Light theme for the site */
 :root {
   --global-base-color                 : #{$primary-color};
-  --global-bg-color                   : #{$background};
+  --global-bg-color                   : #{$background-color};
+  --global-form-bg-color              : #{$lighter-primary-color};
   --global-footer-bg-color            : #{$footer};
-  --global-border-color               : #{$border};
+  --global-border-color               : #{$border-color};
   --global-dark-border-color          : #{$border-dark};
   --global-code-background-color      : #{$background-light};
   --global-code-text-color            : #{$text};
@@ -56,7 +58,7 @@ $sidebar-screen-min-width   : 1024px;
   --global-masthead-link-color-hover  : #{$primary-color};
   --global-text-color                 : #{$text};
   --global-text-color-light           : #{$text-muted};
-  --global-thead-color                : #{$border};
+  --global-thead-color                : #{$border-color};
   --global-toc-bg-color               : #{$background-light};
   --global-selection-bg-color         : #{$selection-bg};
   --global-selection-text-color       : #{$selection-text};

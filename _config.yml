@@ -14,7 +14,8 @@ title: "M. Shamshad"
 title_separator: "|"
 subtitle: # site taggline that appears blow site title in masthead
 name: &name "M. Shamshad"
-description: &description "I have dream..."
+description: &description "Sugarcane Breeder and Computational Biology Researcher
+  specializing in GWAS, population genetics, and bioinformatics tutorials."
 port: 4000
 url: https://shamshad.in # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: "" # the subpath of your site, e.g. "/blog"
@@ -22,7 +23,7 @@ repository: "shamshadM/shamshadm.github.io"
 teaser: # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 logo:  /images/favicon/site-treaser.webp
 breadcrumbs: # true, false (default)
-words_per_minute: 200
+words_per_minute: 180
 enable_copy_code_button  : true # true, false (default)
 copyright                : # "copyright" name, defaults to
 future: false
@@ -91,9 +92,9 @@ analytics:
 author:
   name: "Dr. M. Shamshad"
   avatar: "/images/profile.webp"
-  bio: "Sugarcane Breeder && Data Science"
-  location: "RRS, Kapurthala, Punjab :india:"
-  employer: "Regional Research Station, Kapurthala, PAU"
+  bio: "Sugarcane breeder and computational biology researcher"
+  location: "India :india:"
+  employer: "P.A.U.-RRS, Kapurthala"
   pubmed:
   googlescholar: "https://scholar.google.com/citations?user=dI7V1a4AAAAJ&hl=en"
   email: "shamshad.rattan@gmail.com"
@@ -131,10 +132,10 @@ footer:
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/DrShamshadM"
     - label: "Google Scholar"
-      icon: "ai ai-google-scholar-square ai-fw"
+      icon: "ai ai-google-scholar ai-fw icon-pad-right"
       url: "https://scholar.google.com/citations?user=dI7V1a4AAAAJ&hl=en"
     - label: "ResearchGate"
-      icon: "ai ai-researchgate-square ai-fw"
+      icon: "fab fa-fw fa-researchgate icon-pad-right"
       url: "https://www.researchgate.net/profile/Mohd-Shamshad"
 
 after_footer_scripts:

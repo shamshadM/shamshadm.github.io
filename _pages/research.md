@@ -1,5 +1,5 @@
 ---
-title: "Research"
+title: "Applied Research"
 layout: single
 permalink: /research/
 author_profile: true

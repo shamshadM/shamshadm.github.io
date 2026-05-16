@@ -1,13 +1,16 @@
 ---
 title: "Linux Installation Guide: Windows Subsystem for Linux (WSL)"
 permalink: /docs/linux-Installation-Guide_WSL/
-description: "A comprehensive step-by-step guide for installing Linux distributions on a Windows Subsystem for Linux (WSL)"
+sidebar: 
+   nav: Linux_tutorial
+excerpt: "A comprehensive step-by-step guide for installing Linux distributions on a Windows Subsystem for Linux (WSL)"
 date: 2026-05-09
 categories: [linux, installation, wsl, tutorial]
 tags: [ubuntu, debian, fedora, arch, wsl]
 toc: true
 toc_label: "Linux Installation Guide: WSL"
 toc_sticky: true
+author_profile: false
 ---
 
 ## Window Subsystem for Linux (WSL) Installation

@@ -223,7 +223,7 @@ body:hover .visually-hidden button {
     $xing-color: ".fa-xing, .fa-xing-square",
     $youtube-color: ".fa-youtube",
     $google-scholar-color: ".ai-google-scholar, .ai-google-scholar-square",
-    $researchgate-color: ".ai-researchgate, .ai-researchgate-square",
+    $researchgate-color: ".ai-researchgate, .ai-researchgate-square, .fa-researchgate",
     $emil-color: ".fa-envelope-square, .fa-envelope",
   ) {
     #{$icons} {
@@ -240,7 +240,7 @@ body:hover .visually-hidden button {
   position: relative;
   width: $navicon-width;
   height: $navicon-height;
-  background: var(--global-base-color);
+  background: var(--global-masthead-link-color);
   margin: auto;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -252,7 +252,7 @@ body:hover .visually-hidden button {
     inset-inline-start: 0;
     width: $navicon-width;
     height: $navicon-height;
-    background: var(--global-base-color);
+    background: var(--global-masthead-link-color);
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
@@ -322,7 +322,7 @@ body:hover .visually-hidden button {
   .navicon,
   .navicon:before,
   .navicon:after {
-    background: mix(#000, $primary-color, 25%);
+    background: var(--global-base-color);
   }
 
   &.close {
@@ -397,7 +397,7 @@ body:hover .visually-hidden button {
   margin-top: -150px;
   min-height: 0;
   z-index: 9999;
-  background: #fff;
+  background: var(--global-text-color);
   border: 1px solid var(--global-border-color);
   border-radius: $border-radius;
   box-shadow: $box-shadow;
@@ -422,12 +422,12 @@ body:hover .visually-hidden button {
    ========================================================================== */
 
 .footnote {
-  color: mix(#fff, $gray, 25%);
+  color: var(--global-text-color-light);
   text-decoration: none;
 }
 
 .footnotes {
-  color: mix(#fff, $gray, 25%);
+  color: var(--global-text-color-light);
 
   ol,
   li,
@@ -438,7 +438,7 @@ body:hover .visually-hidden button {
 }
 
 a.reversefootnote {
-  color: $gray;
+  color: var(--global-text-color-light);
   text-decoration: none;
 
   &:hover {
