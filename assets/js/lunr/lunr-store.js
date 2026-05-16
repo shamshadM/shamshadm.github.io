@@ -53,10 +53,10 @@ var store = [{
         "url": "/posts/2021/01/investigate-genetic-admixture-using-STRUCTURE-software/",
         "teaser": null
       },{
-        "title": "A tutorial on Genome-Wide Association Studies (GWAS) in Tassel (GUI)",
-        "excerpt":"Genome-wide association studies (GWAS) increase their popularity among medical, biological, and social sciences to identify the association between single nucleotide polymorphisms and phenotypic traits. This tutorial aims to provide a guidelines for conducing genome wide analysis in Tassel. TASSEL TASSEL also known as for the Evaluate traits aSSociations, Evolutionary Patterns,...","categories": ["TASSEL","software"],
+        "title": "GWAS in TASSEL: Step-by-Step Tutorial for Beginners",
+        "excerpt":"Genome-wide association studies (GWAS) increase their popularity among medical, biological, and social sciences to identify the association between single nucleotide polymorphisms and phenotypic traits. This tutorial aims to provide a guidelines for conducing genome wide analysis in Tassel. TASSEL TASSEL also known as for the Evaluate traits aSSociations, Evolutionary Patterns,...","categories": ["Bioinformatics","GWAS"],
         "tags": ["GWAS GUI","TASSEL","Genome-wide association analysis","Linear model","GLM","MLM"],
-        "url": "/posts/2021/01/A-tutorial-on-Genome-Wide-Association-Studies/",
+        "url": "/posts/2021/01/GWAS-TASSEL/",
         "teaser": null
       },{
         "title": "Z-Test and t-Test: Theory, Hypotheses & Complete R Analysis",
