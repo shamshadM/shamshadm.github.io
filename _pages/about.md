@@ -1,5 +1,5 @@
 ---
-title: "Professional Profile"
+title: "لَقَدْ خَلَقْنَا الْإِنسَانَ فِي كَبَدٍ"
 permalink: /about/
 excerpt: "Plant Breeder & Geneticist | Punjab Agricultural University | University of Cambridge Alumnus"
 author_profile: true

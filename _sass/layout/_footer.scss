@@ -106,11 +106,11 @@
 }
 
   .footer-badge {
+    display: flexbox;
     font-size: $doc-font-size;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    padding: 5px 14px;
-    border-radius: 999px;
+    font-weight: $type-size-2;
+    padding: 0.4rem;
+    border-radius: 2rem;
     border: 2px solid var(--global-link-color);
     color: var(--global-text-color);
     background: transparent;

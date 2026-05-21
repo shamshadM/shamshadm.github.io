@@ -56,7 +56,7 @@ F-test is used to test whether the two independent estimates of population varia
 ## Completely Randomized Design (CRD)
 The Completely Randomized Design (CRD) is the simplest experimental design. Treatments are assigned to experimental units purely at random, with no restrictions. It is the starting point for understanding all other designs (RCBD, Latin Square, Alpha-lattice) and remains widely used in controlled laboratory and greenhouse experiments. A comprehensive and structured explanation of CRD is available in the [Blog Post Section](/posts/2024/05/crd-design-analysis/)
 {: .text-justify}
-
+![CRD_design](/teaching/designs/CRD.png)
 # Comprehensive Analysis of Field Experiments in R
 Field experiments constitute the foundation of applied agricultural research, providing a systematic approach for evaluating treatments under real-world conditions. These experiments are essential for generating reliable and scientifically valid conclusions regarding crop performance, input efficiency, and environmental interactions.
 {: .text-justify}
@@ -78,6 +78,7 @@ By integrating theoretical concepts with practical computational tools, this gui
 
 **Randomized Complete Block Design (RCBD)** is one of the most widely used experimental designs in agricultural and biological research, particularly when there is known or suspected variability in the experimental field. In RCBD, the entire set of treatments is arranged into groups called **blocks**, where each block is relatively homogeneous with respect to environmental conditions such as soil fertility, moisture, or slope. Every treatment appears exactly once within each block, ensuring that comparisons among treatments are made under similar conditions. The allocation of treatments within each block is done randomly, which helps eliminate bias and ensures the validity of statistical inference.
 {: .text-justify}
+![Imag_RCBD](/teaching/designs/RCBD.png)
 
 The primary advantage of RCBD lies in its ability to **control variability** by isolating the effect of nuisance factors through blocking. By accounting for block-to-block variation, the design reduces experimental error and increases the precision of treatment comparisons. The statistical analysis of RCBD is typically carried out using **Analysis of Variance (ANOVA)**, where the total variation is partitioned into components due to treatments, blocks, and random error. If the treatment effect is found to be statistically significant, it indicates that the differences among treatment means are not due to chance alone. Overall, RCBD is highly efficient, simple to implement, and particularly suitable for field experiments where environmental heterogeneity exists in one direction. A detailed and systematic explanation of RCBD can be found in the [Blog Post Section](/posts/2025/04/rcbd-design-analysis/)
 {: .text-justify}
@@ -93,6 +94,7 @@ The primary advantage of RCBD lies in its ability to **control variability** by 
 {: .text-justify}
 In a Latin Square Design with *t* treatments, the experimental field is divided into a *t × t* grid. Treatments are assigned in such a way that no treatment repeats within the same row or column, and randomization is applied to rows, columns, and treatment allocation to avoid bias. The statistical model includes effects for treatments, rows, and columns, allowing the total variation to be partitioned into these components along with random error. Analysis is typically performed using **Analysis of Variance (ANOVA)**, where significance of treatment effects is tested after accounting for row and column variations. While LSD is highly efficient in controlling two sources of variability, it has limitations: it requires the number of treatments to equal the number of rows and columns, and missing data can complicate analysis. Despite these constraints, it remains a powerful design when experimental conditions vary in two directions. A detailed and systematic explanation Latin square Design can be found in the [Blog Post Section](/posts/2026/01/latin-square-design/)
 {: .text-justify}
+![Imag_LatinSquare](/teaching/designs/LatinSquare.png)
 
 >**Constraint:** Requires equal number of rows, columns, and treatments. Best for $p \leq 8$.<br>
 >When treatments exceed manageable block size, **incomplete block designs** are preferred. 
@@ -105,7 +107,7 @@ In a Latin Square Design with *t* treatments, the experimental field is divided 
 
 In this design, treatments are grouped into smaller blocks within each replication, and each replication contains all treatments, but distributed across multiple incomplete blocks. This structure helps control local variability more effectively than complete block designs, as comparisons are made within relatively homogeneous small blocks. The term “alpha” refers to the method of generating the design, which ensures near-balance in the occurrence and pairing of treatments across blocks. Although not all treatment pairs appear together in every block, the design is constructed so that statistical efficiency remains high.
 {: .text-justify}
-
+![Imag_alpha_lattice](/teaching/designs/alphaLattice.png)
 The analysis of an alpha lattice design is typically conducted using **mixed-effects models**, where blocks within replications are treated as random effects and treatments as fixed effects. In R, packages such as `agricolae`, `lme4`, or `asreml` are commonly used for analysis. The model accounts for variation due to replications, incomplete blocks, and residual error, allowing for more precise estimation of treatment effects. Overall, the alpha lattice design provides a powerful and flexible approach for handling large-scale experiments, improving accuracy while managing practical constraints such as land, labor, and environmental variability. A detailed and systematic explanation of Alpha (α) lattice Design can be found in the [Blog Post Section](/posts/2026/02/alpha-lattice-design/)
 {: .text-justify}
 ---
@@ -114,7 +116,7 @@ The analysis of an alpha lattice design is typically conducted using **mixed-eff
 
 **Augmented Design (Augmented Block Design)** is an experimental design widely used in agricultural research when a large number of new treatments (such as genotypes or varieties or clones) need to be evaluated but resources are insufficient to replicate all of them. In this design, a set of standard or check treatments is replicated across all blocks, while the new treatments are unreplicated and appear only once. The primary purpose of including replicated checks is to account for environmental variability across blocks and to provide a basis for adjusting the performance of unreplicated entries. This makes the design particularly useful in early-stage plant breeding trials, where hundreds of new lines must be screened efficiently.
 {: .text-justify}
-
+![Imag_augmented](/teaching/designs/augmented.png)
 The structure of an augmented design typically involves dividing the experimental area into blocks, each containing all the check treatments and a subset of new treatments. Since the new entries are not replicated, their raw observations may be influenced by local environmental conditions. To address this, statistical adjustments are made using the performance of the replicated checks within each block, thereby improving the accuracy of comparisons. The analysis is commonly performed using analysis of variance (ANOVA) models tailored for augmented designs, or specialized methods available in statistical software like R (e.g., using packages such as agricolae). Overall, the augmented design provides a practical balance between resource constraints and the need for reliable evaluation, enabling researchers to efficiently identify promising treatments for further testing. A detailed and systematic explanation of Augmented Design can be found in the [Blog Post Section](/posts/2026/02/augmented-design-analysis/)
 {: .text-justify}
 
@@ -157,6 +159,42 @@ The Honeycomb (HC) design, developed by **Fasoulas (1988)** and later extended b
 {: .text-justify}
 The main idea of the HC design is to enhance the accuracy of selecting superior plants by controlling local competition and micro-environmental variation without requiring heavy replication. Because each plant is compared primarily with its immediate neighbours, breeders can better distinguish genetic performance from environmental noise. This makes the design particularly useful in early-generation selection, where large populations are evaluated and only a small number of superior individuals are retained for further breeding. A detailed and systematic explanation of honeycomb design can be found in the [Blog Post](/posts/2026/05/honeycomb-design-analysis/)
 {: .text-justify}
+
+## Factorial Experimental Design
+A **Factorial Experimental Design** is an experimental strategy in which **two or more factors are varied simultaneously**, and all possible combinations of their levels are studied. This allows researchers to:
+
+- Estimate the **main effect** of each factor
+- Detect **interactions** between factors
+- Draw conclusions over a wide range of conditions
+- Use experimental resources more efficiently than one-factor-at-a-time (OFAT) experiments
+>**Key principle:** In a factorial design, every factor combination appears in the experiment — making it possible to separate the independent effect of each factor *and* assess how factors influence each other. 
+
+A detailed and systematic explanation of factorial experimental design can be found in the [Blog Post](/posts/2026/05/factorial-experimental-design/)
+
+## Split Plot Design
+A **Split Plot Design** is a type of experimental design used when one or more factors are difficult or expensive to randomize at the level of individual experimental units. It is widely used in agricultural field trials, industrial experiments, and manufacturing studies.
+
+The design partitions experimental units into two levels:
+
+- **Whole plots** — the larger units to which the hard-to-change factor (the *whole-plot factor*) is applied
+- **Subplots** — subdivisions of whole plots, to which the easy-to-change factor (the *subplot factor*) is applied
+
+>**Key idea:** Whole-plot factors are randomized among whole plots; subplot factors are randomized within each whole plot.
+
+The blog provides a detailed and systematic explanation of split plot design, including its concepts, structure, and applications — [Read the blog](/posts/2026/05/split-plot-design/)
+
+## Strip Plot Design
+A **Strip Plot Design** (also called a **Criss-Cross Design**) is an experimental layout used when **two factors are both difficult or costly to randomise** at the level of individual plots. It is a natural extension of the split plot concept but treats both factors symmetrically — neither is nested within the other.
+
+In a strip plot:
+
+- **Factor A** (the *row factor*) is applied to **horizontal strips** running across each block
+- **Factor B** (the *column factor*) is applied to **vertical strips** running down each block
+- The **intersection** of a row strip and a column strip forms the experimental unit for the interaction A×B
+
+>**Key idea:** Both factors are randomised within blocks in perpendicular directions. The interaction is estimated at the smallest unit — the intersection cell — which typically has the highest precision.
+
+The blog offers a comprehensive explanation of strip plot design, covering its structure, methodology, and practical applications — [Read the blog](/posts/2026/05/strip-plot-design/).
 
 ---
 
