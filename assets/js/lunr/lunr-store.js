@@ -134,7 +134,7 @@ var store = [{
         "title": "Strip Plot Design",
         "excerpt":"A Strip Plot Design (also called a Criss-Cross Design) is an experimental layout used when two factors are both difficult or costly to randomise at the level of individual plots. It is a natural extension of the split plot concept but treats both factors symmetrically — neither is nested within...","categories": ["experimental-design","statistics","agriculture"],
         "tags": ["strip-plot","criss-cross","anova","whole-plot","row-factor","column-factor","blocking","mixed-models","split-plot"],
-        "url": "/posts/2026/05/strip-plot-design.md",
+        "url": "/posts/2026/05/strip-plot-design/",
         "teaser": null
       },{
         "title": "Assessment of Genetic Diversity in Sunflower (<i>Helianthus annuus </i>L.) Germplasm",
