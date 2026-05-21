@@ -2,7 +2,7 @@
 title: "Strip Plot Design"
 subtitle: "A criss-cross arrangement for two hard-to-change factors"
 date: 2026-05-14
-permalink: /posts/2026/05/strip-plot-design.md
+permalink: /posts/2026/05/strip-plot-design/
 categories: [experimental-design, statistics, agriculture]
 tags: [strip-plot, criss-cross, anova, whole-plot, row-factor, column-factor, blocking, mixed-models, split-plot]
 excerpt_separator: <!--more-->
