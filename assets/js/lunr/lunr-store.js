@@ -119,6 +119,24 @@ var store = [{
         "url": "/posts/2026/05/honeycomb-design-analysis/",
         "teaser": null
       },{
+        "title": "Factorial Experimental Design",
+        "excerpt":"A Factorial Experimental Design is an experimental strategy in which two or more factors are varied simultaneously, and all possible combinations of their levels are studied. This allows researchers to: Estimate the main effect of each factor Detect interactions between factors Draw conclusions over a wide range of conditions Use...","categories": ["experimental-design","statistics"],
+        "tags": ["factorial","anova","interaction","two-way","three-way","full-factorial","fractional-factorial","main-effects","2k-design"],
+        "url": "/posts/2026/05/factorial-experimental-design/",
+        "teaser": null
+      },{
+        "title": "Split Plot Design",
+        "excerpt":"A Split Plot Design is a type of experimental design used when one or more factors are difficult or expensive to randomize at the level of individual experimental units. It is widely used in agricultural field trials, industrial experiments, and manufacturing studies. The design partitions experimental units into two levels:...","categories": ["experimental-design","statistics","agriculture"],
+        "tags": ["anova","split-plot","whole-plot","subplot","blocking","mixed-models"],
+        "url": "/posts/2026/05/split-plot-design/",
+        "teaser": null
+      },{
+        "title": "Strip Plot Design",
+        "excerpt":"A Strip Plot Design (also called a Criss-Cross Design) is an experimental layout used when two factors are both difficult or costly to randomise at the level of individual plots. It is a natural extension of the split plot concept but treats both factors symmetrically — neither is nested within...","categories": ["experimental-design","statistics","agriculture"],
+        "tags": ["strip-plot","criss-cross","anova","whole-plot","row-factor","column-factor","blocking","mixed-models","split-plot"],
+        "url": "/posts/2026/05/strip-plot-design.md",
+        "teaser": null
+      },{
         "title": "Assessment of Genetic Diversity in Sunflower (<i>Helianthus annuus </i>L.) Germplasm",
         "excerpt":"Download PDF here Abstract: The present investigation was carried out at the research fields of the oilseeds Sections Department of Plant Breeding and Genetics Punjab Agricultural University, Ludhiana, India. The material for present study consisted of 31 germplasm lines. The material was raised in two rows with three replications each...","categories": [],
         "tags": [],
