@@ -9,7 +9,7 @@ header:
   og_image: /images/favicon/shamshad.webp
 ---
 
-Hi! I am **Mohammad Shamshad** 🌾, born 🎂 into a humble farming family :family: in Jamalpura village, Malerkotla region of Punjab, India 🇮🇳, was raised in a close-knit rural environment deeply connected to agriculture 🌱. Early exposure to vegetable seedling production 🌱 and crop cultivation 🚜 within the family fostered a strong practical understanding of farming and village life, shaping interests 💡, values 📚, and long-term aspirations 🌿 ➝ 🌳 🏆.
+Hi! I am **Mohammad Shamshad** 🌾 born 🎂 into a humble farming family :family: in Jamalpura village, Malerkotla region of Punjab, India 🇮🇳, was raised in a close-knit rural environment deeply connected to agriculture. 🌱 Early exposure to vegetable seedling production 🌱 and crop cultivation 🚜 within the family fostered a strong practical understanding of farming and village life, shaping interests 💡, values 📚, and long-term aspirations 🌿 ➝ 🌳 🏆.
 {: .text-justify}
 
 > An educational journey marked by perseverance and adaptability 💪📚 began at a local madrasa 🕌, completing primary education up to Class V, followed by studies at Islamia Senior Secondary School 🏫 up to Class VIII in the Urdu medium 📝. A transition to the Punjabi medium for Classes IX and X at the same institution reflected adaptability and determination 🔄✨. With a strong interest in science 🔬🧪, higher secondary education (+1 and +2) was pursued in the Medical stream 🩺 at a Government Senior Secondary School, demonstrating resilience, adaptability, and a passion for learning 🌱🚀.

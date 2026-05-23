@@ -22,8 +22,9 @@ The design partitions experimental units into two levels:
 - **Whole plots** — the larger units to which the hard-to-change factor (the *whole-plot factor*) is applied
 - **Subplots** — subdivisions of whole plots, to which the easy-to-change factor (the *subplot factor*) is applied
 <!--more-->
+## What is a Split-Plot Design?
+A split-plot design is an experimental arrangement that uses two levels of randomization. In this method, one factor is randomly applied to large experimental units known as whole plots called main plot. These whole plots are further divided into smaller sections called sub-plots, where the levels of a second factor are assigned randomly.
 
-> **Key idea:** Whole-plot factors are randomized among whole plots; subplot factors are randomized within each whole plot.
 ---
 
 ## When to Use a Split Plot Design

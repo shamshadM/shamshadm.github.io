@@ -20,8 +20,8 @@ In a strip plot:
 - **Factor B** (the *column factor*) is applied to **vertical strips** running down each block
 - The **intersection** of a row strip and a column strip forms the experimental unit for the interaction A×B
 <!--more-->
-
-> **Key idea:** Both factors are randomised within blocks in perpendicular directions. The interaction is estimated at the smallest unit — the intersection cell — which typically has the highest precision.
+## Split plot Design
+Split-block designs are a type of experimental design in which two factors are applied independently in perpendicular directions. When only two factors are involved, Factor A is assigned to the whole plots in the same manner as in a traditional split-plot design. Factor B, however, is applied to strips that form another set of whole plots arranged orthogonally to those used for Factor A.
 ---
 
 ## Comparison with Related Designs
