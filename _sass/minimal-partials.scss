@@ -5,9 +5,6 @@
 
 /* Mixins and functions */
 @import "vendor/breakpoint/breakpoint";
-@include breakpoint-set("to ems", true);
-@import "vendor/magnific-popup/magnific-popup"; // Magnific Popup
-@import "vendor/susy/susy";
 @import "include/mixins";
 
 /* Core CSS */
