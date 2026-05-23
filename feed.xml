@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shamshad.in/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shamshad.in/" rel="alternate" type="text/html" /><updated>2026-05-21T21:00:54+05:30</updated><id>https://shamshad.in/feed.xml</id><title type="html">M. Shamshad</title><subtitle>Sugarcane Breeder and Computational Biology Researcher specializing in GWAS, population genetics, and bioinformatics tutorials.</subtitle><author><name>Dr. M. Shamshad</name><email>shamshad.rattan@gmail.com</email></author><entry><title type="html">Strip Plot Design</title><link href="https://shamshad.in/posts/2026/05/strip-plot-design/" rel="alternate" type="text/html" title="Strip Plot Design" /><published>2026-05-14T00:00:00+05:30</published><updated>2026-05-21T20:50:57+05:30</updated><id>https://shamshad.in/posts/2026/05/strip-plot-design</id><content type="html" xml:base="https://shamshad.in/posts/2026/05/strip-plot-design/"><![CDATA[<p>A <strong>Strip Plot Design</strong> (also called a <strong>Criss-Cross Design</strong>) is an experimental layout used when <strong>two factors are both difficult or costly to randomise</strong> at the level of individual plots. It is a natural extension of the split plot concept but treats both factors symmetrically — neither is nested within the other.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shamshad.in/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shamshad.in/" rel="alternate" type="text/html" /><updated>2026-05-23T20:36:24+05:30</updated><id>https://shamshad.in/feed.xml</id><title type="html">M. Shamshad</title><subtitle>Sugarcane Breeder and Computational Biology Researcher specializing in GWAS, population genetics, and bioinformatics tutorials.</subtitle><author><name>Dr. M. Shamshad</name><email>shamshad.rattan@gmail.com</email></author><entry><title type="html">Strip Plot Design</title><link href="https://shamshad.in/posts/2026/05/strip-plot-design/" rel="alternate" type="text/html" title="Strip Plot Design" /><published>2026-05-14T00:00:00+05:30</published><updated>2026-05-23T20:31:21+05:30</updated><id>https://shamshad.in/posts/2026/05/strip-plot-design</id><content type="html" xml:base="https://shamshad.in/posts/2026/05/strip-plot-design/"><![CDATA[<p>A <strong>Strip Plot Design</strong> (also called a <strong>Criss-Cross Design</strong>) is an experimental layout used when <strong>two factors are both difficult or costly to randomise</strong> at the level of individual plots. It is a natural extension of the split plot concept but treats both factors symmetrically — neither is nested within the other.</p>
 
 <p>In a strip plot:</p>
 
@@ -6,12 +6,12 @@
   <li><strong>Factor A</strong> (the <em>row factor</em>) is applied to <strong>horizontal strips</strong> running across each block</li>
   <li><strong>Factor B</strong> (the <em>column factor</em>) is applied to <strong>vertical strips</strong> running down each block</li>
   <li>The <strong>intersection</strong> of a row strip and a column strip forms the experimental unit for the interaction A×B
-<!--more--></li>
+<!--more-->
+    <h2 id="split-plot-design">Split plot Design</h2>
+    <p>Split-block designs are a type of experimental design in which two factors are applied independently in perpendicular directions. When only two factors are involved, Factor A is assigned to the whole plots in the same manner as in a traditional split-plot design. Factor B, however, is applied to strips that form another set of whole plots arranged orthogonally to those used for Factor A.
+—</p>
+  </li>
 </ul>
-
-<blockquote>
-  <h2 id="key-idea-both-factors-are-randomised-within-blocks-in-perpendicular-directions-the-interaction-is-estimated-at-the-smallest-unit--the-intersection-cell--which-typically-has-the-highest-precision"><strong>Key idea:</strong> Both factors are randomised within blocks in perpendicular directions. The interaction is estimated at the smallest unit — the intersection cell — which typically has the highest precision.</h2>
-</blockquote>
 
 <h2 id="comparison-with-related-designs">Comparison with Related Designs</h2>
 
@@ -730,19 +730,20 @@ Y_{ijk} =\;&amp; \mu + \rho_i + \alpha_j + \delta_{ij} \\
   <li>Piepho, H.P., Büchse, A., &amp; Emrich, K. (2003). A Hitchhiker’s Guide to Mixed Models for Randomized Experiments. <em>Journal of Agronomy and Crop Science</em>, 189(5), 310–322.</li>
 </ol>
 
-<hr />]]></content><author><name>Dr. M. Shamshad</name><email>shamshad.rattan@gmail.com</email></author><category term="experimental-design" /><category term="statistics" /><category term="agriculture" /><category term="strip-plot" /><category term="criss-cross" /><category term="anova" /><category term="whole-plot" /><category term="row-factor" /><category term="column-factor" /><category term="blocking" /><category term="mixed-models" /><category term="split-plot" /><summary type="html"><![CDATA[A Strip Plot Design (also called a Criss-Cross Design) is an experimental layout used when two factors are both difficult or costly to randomise at the level of individual plots. It is a natural extension of the split plot concept but treats both factors symmetrically — neither is nested within the other. In a strip plot: Factor A (the row factor) is applied to horizontal strips running across each block Factor B (the column factor) is applied to vertical strips running down each block The intersection of a row strip and a column strip forms the experimental unit for the interaction A×B]]></summary></entry><entry><title type="html">Split Plot Design</title><link href="https://shamshad.in/posts/2026/05/split-plot-design/" rel="alternate" type="text/html" title="Split Plot Design" /><published>2026-05-13T00:00:00+05:30</published><updated>2026-05-21T15:25:25+05:30</updated><id>https://shamshad.in/posts/2026/05/split-plot-design</id><content type="html" xml:base="https://shamshad.in/posts/2026/05/split-plot-design/"><![CDATA[<p>A <strong>Split Plot Design</strong> is a type of experimental design used when one or more factors are difficult or expensive to randomize at the level of individual experimental units. It is widely used in agricultural field trials, industrial experiments, and manufacturing studies.</p>
+<hr />]]></content><author><name>Dr. M. Shamshad</name><email>shamshad.rattan@gmail.com</email></author><category term="experimental-design" /><category term="statistics" /><category term="agriculture" /><category term="strip-plot" /><category term="criss-cross" /><category term="anova" /><category term="whole-plot" /><category term="row-factor" /><category term="column-factor" /><category term="blocking" /><category term="mixed-models" /><category term="split-plot" /><summary type="html"><![CDATA[A Strip Plot Design (also called a Criss-Cross Design) is an experimental layout used when two factors are both difficult or costly to randomise at the level of individual plots. It is a natural extension of the split plot concept but treats both factors symmetrically — neither is nested within the other. In a strip plot: Factor A (the row factor) is applied to horizontal strips running across each block Factor B (the column factor) is applied to vertical strips running down each block The intersection of a row strip and a column strip forms the experimental unit for the interaction A×B]]></summary></entry><entry><title type="html">Split Plot Design</title><link href="https://shamshad.in/posts/2026/05/split-plot-design/" rel="alternate" type="text/html" title="Split Plot Design" /><published>2026-05-13T00:00:00+05:30</published><updated>2026-05-23T20:31:21+05:30</updated><id>https://shamshad.in/posts/2026/05/split-plot-design</id><content type="html" xml:base="https://shamshad.in/posts/2026/05/split-plot-design/"><![CDATA[<p>A <strong>Split Plot Design</strong> is a type of experimental design used when one or more factors are difficult or expensive to randomize at the level of individual experimental units. It is widely used in agricultural field trials, industrial experiments, and manufacturing studies.</p>
 
 <p>The design partitions experimental units into two levels:</p>
 
 <ul>
   <li><strong>Whole plots</strong> — the larger units to which the hard-to-change factor (the <em>whole-plot factor</em>) is applied</li>
   <li><strong>Subplots</strong> — subdivisions of whole plots, to which the easy-to-change factor (the <em>subplot factor</em>) is applied
-<!--more--></li>
+<!--more-->
+    <h2 id="what-is-a-split-plot-design">What is a Split-Plot Design?</h2>
+    <p>A split-plot design is an experimental arrangement that uses two levels of randomization. In this method, one factor is randomly applied to large experimental units known as whole plots called main plot. These whole plots are further divided into smaller sections called sub-plots, where the levels of a second factor are assigned randomly.</p>
+  </li>
 </ul>
 
-<blockquote>
-  <h2 id="key-idea-whole-plot-factors-are-randomized-among-whole-plots-subplot-factors-are-randomized-within-each-whole-plot"><strong>Key idea:</strong> Whole-plot factors are randomized among whole plots; subplot factors are randomized within each whole plot.</h2>
-</blockquote>
+<hr />
 
 <h2 id="when-to-use-a-split-plot-design">When to Use a Split Plot Design</h2>
 
