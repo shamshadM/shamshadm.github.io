@@ -5,6 +5,24 @@ search: false
 
 @charset "utf-8";
 
-@import "theme/{{ site.site_theme | default: 'contrast' | append: '_light' }}",
-        "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}"; // skin
-@import "minimal-partials"; // main partials
+// =============================================================================
+// assets/css/main.scss — Jekyll Sass entry point
+//
+// Uses Dart Sass @use module system (requires jekyll-sass-converter >= 3.0
+// and sass-embedded gem — see Gemfile).
+//
+// Theme skins: loaded first so their $color variables are available to
+// minimal-partials via the @forward "index" chain.
+//
+// NOTE: Liquid path interpolation is not supported with @use.
+//   Theme selection is handled by loading both skins at build time;
+//   the active one is toggled at runtime via a data-theme attribute on <html>
+//   and CSS custom properties defined in each theme file.
+// =============================================================================
+
+// ── Theme skins (light + dark) ───────────────────────────────────────────────
+@use "theme/default_light";   // sets light-mode CSS custom properties
+@use "theme/default_dark";    // sets dark-mode CSS custom properties
+
+// ── All partials ─────────────────────────────────────────────────────────────
+@use "minimal-partials";

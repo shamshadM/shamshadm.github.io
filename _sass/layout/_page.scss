@@ -2,6 +2,11 @@
    SINGLE PAGE/POST
    ========================================================================== */
 
+
+@use "sass:color";
+// Module imports — provides all $variables, mixins, and functions.
+@use "../index" as *;
+
 #main {
   @include clearfix;
   margin-inline: auto;
@@ -303,18 +308,8 @@ body {
    ========================================================================== */
 
 .page__meta {
-  margin-top: 2em;
-  color: var(--global-text-color-light);
-  font-family: $sans-serif;
-  font-size: $type-size-6;
-
-  p {
-    margin: 0;
-  }
-
-  a {
-    color: inherit;
-  }
+  // Base styles via mixin (shared with .comment__date — replaces cross-module @extend)
+  @include page-meta-base;
 }
 
 .page__meta-title {
@@ -348,7 +343,7 @@ body {
   margin-bottom: 8px;
   padding: 5px 10px;
   text-decoration: none;
-  border: 1px solid mix(#000, $border-color, 25%);
+  border: 1px solid color.mix(#000, $border-color, 25%);
   border-radius: $border-radius;
 
   &:hover {
@@ -514,7 +509,8 @@ body {
 }
 
 .comment__date {
-  @extend .page__meta;
+  // Was: @extend .page__meta — cross-module @extend unsupported in Dart Sass @use.
+  @include page-meta-base;
   margin: 0;
 
   a {

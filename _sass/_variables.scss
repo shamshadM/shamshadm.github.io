@@ -1,3 +1,6 @@
+@forward "theme/tokens";
+@use "theme/tokens" as *;
+
 /* ==========================================================================
    Variables
    ========================================================================== */
@@ -173,6 +176,11 @@ $max-width: 1400px !default;
 $right-sidebar-width-narrow: 200px !default;
 $right-sidebar-width: 300px !default;
 $right-sidebar-width-wide: 400px !default;
+
+/* Grid gutter — replaces Susy gutter() function (~2.1276% on a 12-col grid).
+   Used in _archive.scss for flex/grid gap and inline padding calculations.
+   Adjust here to change spacing site-wide. */
+$grid-gutter: 2% !default;
 
 /*
    Other

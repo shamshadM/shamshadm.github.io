@@ -2,6 +2,10 @@
    UTILITY CLASSES
    ========================================================================== */
 
+
+// Module imports — provides all $variables, mixins, and functions.
+@use "../index" as *;
+
 /*
    Visibility
    ========================================================================== */
@@ -118,7 +122,7 @@ body:hover .visually-hidden button {
    Alignment
    ========================================================================== */
 
-/* clearfix */
+/* clearfix — kept as simple block-formatting context, no Bourbon dependency */
 
 .cf {
   clear: both;
@@ -139,7 +143,8 @@ body:hover .visually-hidden button {
   display: block;
   margin-inline: auto;
 
-  @include breakpoint($small) {
+  /* ≥ small breakpoint — was @include breakpoint($small) */
+  @media (min-width: #{$small}) {
     float: left;
     margin-right: 1em;
   }
@@ -151,7 +156,8 @@ body:hover .visually-hidden button {
   display: block;
   margin-inline: auto;
 
-  @include breakpoint($small) {
+  /* ≥ small breakpoint — was @include breakpoint($small) */
+  @media (min-width: #{$small}) {
     float: right;
     margin-left: 1em;
   }
@@ -167,8 +173,11 @@ body:hover .visually-hidden button {
 /* file page content container */
 
 .full {
-  @include breakpoint($large) {
-    margin-inline-end: calc(-1 * span(2.5 of 12) ) !important;
+  /* ≥ large breakpoint
+     was: margin-inline-end: calc(-1 * span(2.5 of 12))
+     span(2.5 of 12) ≈ 20.8333% → equivalent negative pull */
+  @media (min-width: #{$large}) {
+    margin-inline-end: calc(-1 * 20.8333%) !important;
   }
 }
 
@@ -337,8 +346,10 @@ body:hover .visually-hidden button {
    ========================================================================== */
 
 .sticky {
-  @include breakpoint($large) {
-    @include clearfix();
+  /* ≥ large breakpoint — was @include breakpoint($large) */
+  @media (min-width: #{$large}) {
+    /* clearfix replaced with display:flow-root (modern block-formatting context) */
+    display: flow-root;
     position: -webkit-sticky;
     position: sticky;
     top: 2em;

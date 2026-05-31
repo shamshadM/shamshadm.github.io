@@ -1,3 +1,6 @@
+// Dart Sass: load shared font vars from _common.scss
+@use "common" as *;
+
 $baseurl-Amazon: "#{$baseurl-StaticWebfonts}/amazon";
 //$baseurl-Amazon: "https://cdn.jsdelivr.net/npm/amazon-fonts@1.0.1/fonts";
 $baseurl-AmazonEmber: "#{$baseurl-Amazon}/AmazonEmber";

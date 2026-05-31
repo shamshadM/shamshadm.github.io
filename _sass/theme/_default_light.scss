@@ -1,46 +1,20 @@
+// =============================================================================
+// theme/_default_light.scss — Light skin CSS output
+// =============================================================================
+// This file only outputs CSS (the :root custom properties block and
+// any theme-specific overrides). Sass variable definitions live in
+// theme/_tokens.scss which is forwarded through _sass/index.scss.
+//
+// Loaded in assets/css/main.scss via:  @use "theme/default_light";
+// =============================================================================
+
+@use "sass:color";
+@use "tokens" as *;   // brings $primary-color, $background-color etc. into scope
+
 /* ==========================================================================
-   CONTRAST THEME - LIGHT VERSION
+   CONTRAST THEME — LIGHT
    ========================================================================== */
-/* Color codes used for the theme */
-$primary-color              : #ff0078;
-$dark-primary-color         : mix(#000, $primary-color, 40%);
-$darker-primary-color       : mix(#000, $primary-color, 60%);
-$light-primary-color        : mix(#fff, $primary-color, 50%);
-$active-color               : mix(#fff, $primary-color, 80%);
-$lighter-primary-color      : mix(#fff, $primary-color, 90%);
-$background-color           : #f8fafc;
-$background-light           : #fbfcfd;
-$background-lighter         : #ffffff;
-$text                       : #0F172A;
-$text-muted                 : #475569;
-$link                       : #5927e5;
-$link-dark                  : #0066ff;
-$link-light                 : #10B981;
-$footer                     : #f1f5f9;
-$border-color               : #e2e8f0;
-$border-dark                : #808080;
-$selection-bg               : #008b74;
-$selection-text             : #0F172A;
-$tbl-header                 : #fbfcfd;
 
-/* Color codes used for the site */
-$danger-color               : #ff0000;
-$info-color                 : #0000ff;
-$notice-color               : #000000;
-$success-color              : #008000;
-$warning-color              : #ff8800;
-
-/* Other basic settings for the template */
-$border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
-$global-transition          : all 0.2s ease-in-out;
-$masthead-height            : 70px;
-$navicon-width              : 28px;
-$navicon-height             : 4px;
-$sidebar-link-max-width     : 250px;
-$sidebar-screen-min-width   : 1024px;
-
-/* Light theme for the site */
 :root {
   --global-base-color                 : #{$primary-color};
   --global-bg-color                   : #{$background-color};
@@ -67,7 +41,6 @@ $sidebar-screen-min-width   : 1024px;
   --global-tbl-header-color           : #{$tbl-header};
 }
 
-/* Text selection styling for light theme */
 ::selection {
   background-color: var(--global-selection-bg-color);
   color: var(--global-selection-text-color);
@@ -78,7 +51,7 @@ $sidebar-screen-min-width   : 1024px;
   color: var(--global-selection-text-color);
 }
 
-/* Override notice colors for high contrast */
+/* High-contrast notice overrides */
 .page__content {
   .notice,
   .notice--primary,

@@ -2,17 +2,31 @@
    ARCHIVE
    ========================================================================== */
 
+
+// Module imports — provides all $variables, mixins, and functions.
+@use "../index" as *;
+
+/*
+   Susy → Flex/Grid conversion notes:
+   - span(N of 12) → calc((N / 12) * 100% - gap)
+   - gutter(of 12) → replaced with CSS gap or margin using CSS custom property
+   - @include breakpoint($x) → @media (min-width: $x)
+   - float-based grid → CSS Grid / Flexbox
+   ========================================================================== */
+
+/* Grid gap token (replaces Susy gutter ~2.1276%) */
+
 .archive {
   margin-top: 1em;
   margin-bottom: 2em;
 
-  @include breakpoint($large) {
+  @media (min-width: #{$large}) {
     float: inline-end;
     width: calc(100% - #{$right-sidebar-width-narrow});
     padding-inline-end: $right-sidebar-width-narrow;
   }
 
-  @include breakpoint($x-large) {
+  @media (min-width: #{$x-large}) {
     width: calc(100% - #{$right-sidebar-width});
     padding-inline-end: $right-sidebar-width;
   }
@@ -108,7 +122,7 @@
   opacity: 0.5;
   border-radius: $border-radius 0 0 0;
 
-  @include breakpoint($large) {
+  @media (min-width: #{$large}) {
     padding: 5px 10px;
   }
 
@@ -128,7 +142,7 @@
   opacity: 0.5;
   border-radius: $border-radius 0 0 0;
 
-  @include breakpoint($large) {
+  @media (min-width: #{$large}) {
     padding: 5px 10px;
   }
 
@@ -150,67 +164,32 @@
 }
 
 /*
-   Grid view
+   Grid view — replaced float + span() with CSS Grid
    ========================================================================== */
 
 .archive {
   .grid__wrapper {
     /* extend grid elements to the right */
 
-    @include breakpoint($large) {
+    @media (min-width: #{$large}) {
       margin-inline-end: -1 * $right-sidebar-width-narrow;
     }
 
-    @include breakpoint($x-large) {
+    @media (min-width: #{$x-large}) {
       margin-inline-end: -1 * $right-sidebar-width;
     }
   }
 }
 
+/* .grid__item: was float + span(5 of 10) / span(3 of 12) */
+/* Converted to CSS Grid on the parent .grid__wrapper, items just declare themselves */
+
 .grid__item {
   margin-bottom: 2em;
 
-  @include breakpoint($small) {
-    float: inline-start;
-    width: span(5 of 10);
-
-    &:nth-child(2n + 1) {
-      clear: both;
-      margin-inline-start: 0;
-    }
-
-    &:nth-child(2n + 2) {
-      clear: none;
-      margin-inline-start: gutter(of 10);
-    }
-  }
-
-  @include breakpoint($medium) {
-    margin-inline: 0; /* override margin*/
-    width: span(3 of 12);
-
-    &:nth-child(2n + 1) {
-      clear: none;
-    }
-
-    &:nth-child(4n + 1) {
-      clear: both;
-    }
-
-    &:nth-child(4n + 2) {
-      clear: none;
-      margin-inline-start: gutter(1 of 12);
-    }
-
-    &:nth-child(4n + 3) {
-      clear: none;
-      margin-inline-start: gutter(1 of 12);
-    }
-
-    &:nth-child(4n + 4) {
-      clear: none;
-      margin-inline-start: gutter(1 of 12);
-    }
+  /* ≥ small: 2-column grid (was span(5 of 10) ≈ 50%) */
+  @media (min-width: #{$small}) {
+    display: contents; /* let grid__wrapper control layout */
   }
 
   .page__meta {
@@ -234,31 +213,57 @@
   .archive__item-excerpt {
     display: none;
 
-    @include breakpoint($medium) {
+    @media (min-width: #{$medium}) {
       display: block;
       font-size: $type-size-6;
     }
   }
 
   .archive__item-teaser {
-    @include breakpoint($small) {
+    @media (min-width: #{$small}) {
       max-height: 200px;
     }
 
-    @include breakpoint($medium) {
+    @media (min-width: #{$medium}) {
       max-height: 120px;
     }
   }
 }
 
+/* Grid wrapper: drives 2-col → 4-col responsive grid */
+.grid__wrapper {
+  display: grid;
+  gap: $grid-gutter;
+  grid-template-columns: 1fr;
+
+  @media (min-width: #{$small}) {
+    /* was: span(5 of 10) → 2 equal columns */
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: #{$medium}) {
+    /* was: span(3 of 12) → 4 equal columns */
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid__item {
+    display: block; /* override display:contents from above */
+    margin-bottom: 0;
+  }
+}
+
 /*
-   Features
+   Features — replaced float + span() with Flexbox
    ========================================================================== */
 
 .feature__wrapper {
-  @include clearfix();
+  display: flex;
+  flex-wrap: wrap;
+  gap: $grid-gutter;
   margin-bottom: 2em;
   border-bottom: 1px solid var(--global-border-color);
+
+  /* clearfix no longer needed with flex */
 
   .archive__item-title {
     margin-bottom: 0;
@@ -270,25 +275,10 @@
   margin-bottom: 2em;
   font-size: 1.125em;
 
-  @include breakpoint($small) {
-    float: inline-start;
+  /* ≥ small: 3-column flex layout (was span(4 of 12) ≈ 33.33%) */
+  @media (min-width: #{$small}) {
+    flex: 0 0 calc(33.3333% - #{$grid-gutter});
     margin-bottom: 0;
-    width: span(4 of 12);
-
-    &:nth-child(3n + 1) {
-      clear: both;
-      margin-inline-start: 0;
-    }
-
-    &:nth-child(3n + 2) {
-      clear: none;
-      margin-inline-start: gutter(of 12);
-    }
-
-    &:nth-child(3n + 3) {
-      clear: none;
-      margin-inline-start: gutter(of 12);
-    }
 
     .feature__item-teaser {
       max-height: 200px;
@@ -297,7 +287,8 @@
   }
 
   .archive__item-body {
-    padding-inline: gutter(1 of 12);
+    /* was padding-inline: gutter(1 of 12) ≈ 2.1276% */
+    padding-inline: $grid-gutter;
   }
 
   a.btn::before {
@@ -306,11 +297,13 @@
     inset: 0;
   }
 
+  /* ---- left / right / center variants ---- */
+
   &--left, &--right {
     position: relative;
     margin-inline: 0;
     width: 100%;
-    clear: both;
+    flex: 0 0 100%;
     font-size: 1.125em;
 
     a.btn::before {
@@ -325,37 +318,38 @@
   }
 
   &--left {
-    float: inline-start;
-
     .archive__item {
-      float: inline-start;
+      display: flex;
+      flex-wrap: wrap;
+      gap: $grid-gutter;
     }
 
-    @include breakpoint($small) {
+    @media (min-width: #{$small}) {
+      /* teaser ≈ span(5 of 12) = 41.666% | body ≈ span(7 of 12) = 58.333% */
       .archive__item-teaser {
-        float: inline-start;
-        width: span(5 of 12);
+        flex: 0 0 calc(41.6667% - #{$grid-gutter});
       }
 
       .archive__item-body {
-        float: inline-end;
-        width: span(7 of 12);
-        padding-inline-start: gutter(0.5 of 12);
-        padding-inline-end: gutter(1 of 12);
+        flex: 0 0 calc(58.3333% - #{$grid-gutter});
+        /* was padding-inline-start: gutter(0.5 of 12); padding-inline-end: gutter(1 of 12) */
+        padding-inline-start: calc(#{$grid-gutter} * 0.5);
+        padding-inline-end: $grid-gutter;
       }
     }
   }
 
   &--right {
     position: relative;
-    float: inline-end;
     margin-inline: 0;
     width: 100%;
-    clear: both;
+    flex: 0 0 100%;
     font-size: 1.125em;
 
     .archive__item {
-      float: inline-end;
+      display: flex;
+      flex-wrap: wrap;
+      gap: $grid-gutter;
     }
 
     .archive__item-teaser {
@@ -368,34 +362,35 @@
       inset: 0;
     }
 
-    @include breakpoint($small) {
+    @media (min-width: #{$small}) {
       text-align: end;
 
+      /* teaser ≈ span(5 of 12) | body ≈ span(7 of 12) — reversed order */
       .archive__item-teaser {
-        float: inline-end;
-        width: span(5 of 12);
+        order: 2;
+        flex: 0 0 calc(41.6667% - #{$grid-gutter});
       }
 
       .archive__item-body {
-        float: inline-start;
-        width: span(7 of 12);
-        padding-inline-start: gutter(1 of 12);
-        padding-inline-end: gutter(0.5 of 12);
+        order: 1;
+        flex: 0 0 calc(58.3333% - #{$grid-gutter});
+        padding-inline-start: $grid-gutter;
+        padding-inline-end: calc(#{$grid-gutter} * 0.5);
       }
     }
   }
 
   &--center {
     position: relative;
-    float: inline-start;
     margin-inline: 0;
     width: 100%;
-    clear: both;
+    flex: 0 0 100%;
     font-size: 1.125em;
 
     .archive__item {
-      float: inline-start;
-      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .archive__item-teaser {
@@ -408,17 +403,18 @@
       inset: 0;
     }
 
-    @include breakpoint($small) {
+    @media (min-width: #{$small}) {
       text-align: center;
 
+      /* was span(5 of 12) / span(7 of 12) centered */
       .archive__item-teaser {
+        width: 41.6667%;
         margin: 0 auto;
-        width: span(5 of 12);
       }
 
       .archive__item-body {
+        width: 58.3333%;
         margin: 0 auto;
-        width: span(7 of 12);
       }
     }
   }
@@ -446,13 +442,13 @@
    Wide Pages
    ========================================================================== */
 
-  .wide {
+.wide {
   .archive {
-    @include breakpoint($large) {
+    @media (min-width: #{$large}) {
       padding-inline-end: 0;
     }
 
-    @include breakpoint($x-large) {
+    @media (min-width: #{$x-large}) {
       padding-inline-end: 0;
     }
   }
@@ -461,7 +457,7 @@
 /* Place inside a single layout */
 
 .layout--single {
-	.feature__wrapper {
-		display: inline-block;
-	}
+  .feature__wrapper {
+    display: inline-flex;
+  }
 }

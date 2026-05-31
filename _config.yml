@@ -274,7 +274,14 @@ defaults:
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed
+  # Dart Sass (sass-embedded / jekyll-sass-converter >= 3.0) options:
+  # quiet_deps suppresses @import deprecation warnings from vendor files
+  # (Font Awesome etc.) that have not yet migrated to @use/@forward.
+  quiet_deps: true
+  silence_deprecations:
+    - import           # vendor files still use legacy @import — suppress until they upgrade
+    - global-builtin   # suppress global color/math function warnings in vendor code
 
 
 # Outputting
@@ -316,7 +323,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-last-modified-at
   - jekyll-gzip
-  - jekyll-brotli
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed

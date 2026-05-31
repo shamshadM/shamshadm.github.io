@@ -1,0 +1,60 @@
+// =============================================================================
+// theme/_tokens.scss — Compile-time Sass variable defaults
+// =============================================================================
+// This file contains ONLY Sass variable definitions (no CSS output).
+// It is @forwarded through _sass/index.scss so that all layout partials
+// can access these values at compile time via:  @use "../index" as *;
+//
+// The light theme values are used as compile-time defaults.
+// Dark theme overrides happen at runtime via CSS custom properties
+// (defined in the :root blocks in _default_light.scss / _default_dark.scss).
+// =============================================================================
+
+@use "sass:color";
+
+// ── Primary palette (light theme defaults) ───────────────────────────────────
+$primary-color:              #ff0078 !default;
+$dark-primary-color:         color.mix(#000, $primary-color, 40%) !default;
+$darker-primary-color:       color.mix(#000, $primary-color, 60%) !default;
+$light-primary-color:        color.mix(#fff, $primary-color, 50%) !default;
+$active-color:               color.mix(#fff, $primary-color, 80%) !default;
+$lighter-primary-color:      color.mix(#fff, $primary-color, 90%) !default;
+
+// ── Backgrounds ───────────────────────────────────────────────────────────────
+$background-color:           #f8fafc !default;
+$background-light:           #fbfcfd !default;
+$background-lighter:         #ffffff !default;
+
+// ── Text ─────────────────────────────────────────────────────────────────────
+$text:                       #0F172A !default;
+$text-muted:                 #475569 !default;
+
+// ── Links ────────────────────────────────────────────────────────────────────
+$link:                       #5927e5 !default;
+$link-dark:                  #0066ff !default;
+$link-light:                 #10B981 !default;
+
+// ── Borders & surfaces ────────────────────────────────────────────────────────
+$footer:                     #f1f5f9 !default;
+$border-color:               #e2e8f0 !default;
+$border-dark:                #808080 !default;
+$selection-bg:               #008b74 !default;
+$selection-text:             #0F172A !default;
+$tbl-header:                 #fbfcfd !default;
+
+// ── Semantic colors ───────────────────────────────────────────────────────────
+$danger-color:               #ff0000 !default;
+$info-color:                 #0000ff !default;
+$notice-color:               #000000 !default;
+$success-color:              #008000 !default;
+$warning-color:              #ff8800 !default;
+
+// ── Layout tokens (same in both themes) ──────────────────────────────────────
+$border-radius:              4px !default;
+$box-shadow:                 0 1px 1px rgba(0, 0, 0, 0.125) !default;
+$global-transition:          all 0.2s ease-in-out !default;
+$masthead-height:            70px !default;
+$navicon-width:              28px !default;
+$navicon-height:             4px !default;
+$sidebar-link-max-width:     250px !default;
+$sidebar-screen-min-width:   1024px !default;

@@ -2,6 +2,10 @@
    STYLE RESETS
    ========================================================================== */
 
+
+// Module imports — provides all $variables, mixins, and functions.
+@use "../index" as *;
+
 * { box-sizing: border-box; }
 
 html {
@@ -81,7 +85,8 @@ a {
 /* Apply focus state */
 
 a:focus {
-  @extend %tab-focus;
+  // Was: @extend %tab-focus — cross-module placeholder extend not supported in Dart Sass @use.
+  @include tab-focus;
 }
 
 /* Remove outline from links */

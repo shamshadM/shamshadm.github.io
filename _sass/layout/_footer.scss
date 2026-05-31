@@ -2,7 +2,11 @@
    FOOTER
    ========================================================================== */
 
-   .page__footer {
+   
+// Module imports — provides all $variables, mixins, and functions.
+@use "../index" as *;
+
+.page__footer {
     @include clearfix;
     display: grid;
     grid-template-rows: auto auto;
@@ -105,14 +109,22 @@
   }
 }
 
-  .footer-badge {
-    display: flexbox;
-    font-size: $doc-font-size;
-    font-weight: $type-size-2;
-    padding: 0.4rem;
-    border-radius: 2rem;
-    border: 2px solid var(--global-link-color);
-    color: var(--global-text-color);
-    background: transparent;
-    animation: slideIn 2s ease-out infinite;
-  }
+.footer-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: clamp(0.75rem, 1.2vw, 1rem);
+  font-weight: 600;
+
+  padding: clamp(0.25rem, 1vw, 0.5rem) clamp(0.6rem, 2vw, 1rem);
+
+  border-radius: 999px;
+
+  border: 2px solid var(--global-link-color);
+  color: var(--global-text-color);
+  background: transparent;
+
+  animation: slideIn 2s ease-out infinite;
+  white-space: nowrap;
+}

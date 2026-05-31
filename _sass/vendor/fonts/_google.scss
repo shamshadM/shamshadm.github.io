@@ -1,3 +1,6 @@
+// Dart Sass: load shared font vars from _common.scss
+@use "common" as *;
+
 @function url-googlefont($baseurl, $variant) {
   @return url("#{$baseurl}_#{$variant}.woff2") format("woff2"),
           url("#{$baseurl}_#{$variant}.woff") format("woff");

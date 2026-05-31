@@ -2,6 +2,10 @@
    Forms
    ========================================================================== */
 
+
+// Module imports — provides all $variables, mixins, and functions.
+@use "../index" as *;
+
 form {
   margin: 0 0 5px 0;
   padding: 1em;
@@ -388,5 +392,7 @@ select:focus {
 }
 
 #goog-wm-sb {
-  @extend .btn;
+  // Was: @extend .btn — cross-module @extend is unsupported in Dart Sass @use.
+  // Replaced with mixin call for equivalent styling.
+  @include btn-base;
 }

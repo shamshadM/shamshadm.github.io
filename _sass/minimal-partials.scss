@@ -1,44 +1,63 @@
-/* Copyright comment*/
+// =============================================================================
+// minimal-partials.scss — Main SCSS manifest
+//
+// Dart Sass module system (@use / @forward) replaces legacy @import.
+//   - @use      loads a module once; members are namespaced unless "as *"
+//   - @forward  re-exports a module's members to the parent importer
+//
+// Load order matters: variables/mixins must be forwarded before any
+// partial that needs them.  All partials pull their own deps via
+//   @use "../index" as *;
+// so this file only needs to emit their CSS — no variable forwarding needed.
+//
+// NOTE: Vendor files (Font Awesome, fonts) still use legacy @import internally.
+//   They are loaded here with @use which is fine — their *internal* @import
+//   calls are silenced via quiet_deps / silence_deprecations in _config.yml.
+// =============================================================================
 
-/* Variables */
-@import "variables";
+// ── Token layer ──────────────────────────────────────────────────────────────
+// Forward variables and mixins so that assets/css/main.scss can also
+// @use "minimal-partials" and get access to all tokens if needed.
+@forward "index";
 
-/* Mixins and functions */
-@import "vendor/breakpoint/breakpoint";
-@import "include/mixins";
+// ── Core resets & base styles ────────────────────────────────────────────────
+@use "layout/reset";
+@use "layout/base";
+@use "layout/forms";
+@use "layout/tables";
+@use "layout/animations";
 
-/* Core CSS */
-@import "layout/reset";
-@import "layout/base";
-@import "layout/forms";
-@import "layout/tables";
-@import "layout/animations";
+// ── Components ───────────────────────────────────────────────────────────────
+@use "layout/buttons";
+@use "layout/notices";
+@use "layout/masthead";
+@use "layout/navigation";
+@use "layout/footer";
+@use "layout/search";
+@use "syntax";
 
-/* Components */
-@import "layout/buttons";
-@import "layout/notices";
-@import "layout/masthead";
-@import "layout/navigation";
-@import "layout/footer";
-@import "layout/search";
-@import "syntax";
+// ── Utility classes ───────────────────────────────────────────────────────────
+@use "include/utilities";
 
-/* Utility classes */
-@import "include/utilities";
+// ── Layout-specific partials ─────────────────────────────────────────────────
+@use "layout/page";
+@use "layout/archive";
+@use "layout/sidebar";
+@use "layout/print";
 
-/* Layout specific */
-@import "layout/page";
-@import "layout/archive";
-@import "layout/sidebar";
-@import "layout/print";
+// ── Vendor: Font Awesome ─────────────────────────────────────────────────────
+// These files use @import internally; Dart Sass loads them via @use here.
+// Internal @import deprecation warnings suppressed in _config.yml.
+@use "vendor/font-awesome/6/scss/fontawesome";
+@use "vendor/font-awesome/6/scss/solid";
+@use "vendor/font-awesome/6/scss/brands";
+@use "vendor/font-awesome/6/scss/v4-shims";
+@use "vendor/font-awesome/6/scss/regular";
 
-@import "vendor/font-awesome/6/scss/fontawesome";
-@import "vendor/font-awesome/6/scss/solid";
-@import "vendor/font-awesome/6/scss/brands";
-@import "vendor/font-awesome/6/scss/v4-shims";
-@import "vendor/font-awesome/6/scss/regular";
-@import "vendor/fonts/common";
-@import "vendor/fonts/amazon";
-@import "vendor/fonts/google";
+// ── Vendor: Web fonts ────────────────────────────────────────────────────────
+// Loaded via _index.scss barrel which handles the common → amazon/google/hco
+// dependency chain (common defines $baseurl-StaticWebfonts used by others).
+@use "vendor/fonts/index";
 
-@import "layout/custom";
+// ── Site-specific overrides (last — highest specificity) ─────────────────────
+@use "layout/custom";

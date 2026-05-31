@@ -1,3 +1,6 @@
+// Dart Sass: load shared font vars from _common.scss
+@use "common" as *;
+
 // Use a Sass map for easier configuration
 $gotham-config: (
   "GothamPro": (

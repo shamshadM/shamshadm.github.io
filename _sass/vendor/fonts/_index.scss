@@ -1,0 +1,19 @@
+// =============================================================================
+// vendor/fonts/_index.scss — Font vendor barrel
+//
+// Previously these were loaded via @import which merged everything into one
+// global scope. Under Dart Sass @use, each file is isolated.
+// _amazon.scss and _hco.scss depend on $baseurl-StaticWebfonts from _common.scss,
+// so we @forward common first, then forward the others with "with" overrides.
+//
+// The vendor font files themselves are NOT modified — they still use legacy
+// variable references. We use @use with "as *" to replicate global-scope behaviour.
+// =============================================================================
+
+// Load common first (defines $baseurl-StaticWebfonts + define-font-face mixin)
+@use "common" as *;
+
+// Load dependent font files — they reference $baseurl-StaticWebfonts from above
+@use "amazon";
+@use "google";
+@use "hco";

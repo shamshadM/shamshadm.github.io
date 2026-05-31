@@ -2,6 +2,10 @@
    BASE ELEMENTS
    ========================================================================== */
 
+
+// Module imports — provides all $variables, mixins, and functions.
+@use "../index" as *;
+
 html {
   /* sticky footer fix */
   position: relative;
@@ -129,7 +133,8 @@ blockquote {
 
 a {
   &:focus {
-    @extend %tab-focus;
+    // Was: @extend %tab-focus — cross-module placeholder extend not supported in Dart Sass @use.
+  @include tab-focus;
   }
 
   &:visited {
@@ -145,7 +150,8 @@ a {
 /* buttons */
 
 button:focus {
-  @extend %tab-focus;
+  // Was: @extend %tab-focus — cross-module placeholder extend not supported in Dart Sass @use.
+  @include tab-focus;
 }
 
 /* code */

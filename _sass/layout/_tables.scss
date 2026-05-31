@@ -2,6 +2,10 @@
    TABLES
    ========================================================================== */
 
+
+// Module imports — provides all $variables, mixins, and functions.
+@use "../index" as *;
+
 table {
   display: block;
   margin-bottom: 1em;

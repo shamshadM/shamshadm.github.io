@@ -2,6 +2,10 @@
    ANIMATIONS
    ========================================================================== */
 
+
+// Module imports — provides all $variables, mixins, and functions.
+@use "../index" as *;
+
 @-webkit-keyframes intro {
   0% {
     opacity: 0;

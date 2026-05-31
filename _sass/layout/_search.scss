@@ -2,6 +2,11 @@
    SEARCH
    ========================================================================== */
 
+
+@use "sass:color";
+// Module imports — provides all $variables, mixins, and functions.
+@use "../index" as *;
+
 .layout--search {
   .archive__item-teaser {
     margin-bottom: 0.25em;
@@ -20,7 +25,7 @@
   transition: 0.2s;
 
   &:hover {
-    color: mix(#000, $primary-color, 25%);
+    color: color.mix(#000, $primary-color, 25%);
   }
 }
 

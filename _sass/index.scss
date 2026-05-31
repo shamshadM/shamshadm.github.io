@@ -1,0 +1,15 @@
+// =============================================================================
+// _sass/index.scss — Module barrel
+// =============================================================================
+// Every layout/include partial uses:  @use "../index" as *;
+// This gives them all $variables, theme tokens, mixins, and functions.
+//
+// Load order:
+//   1. theme/tokens  — compile-time $color and layout vars (no CSS output)
+//   2. variables     — typography, spacing, breakpoint vars
+//   3. include/mixins — functions, mixins, placeholder selectors
+// =============================================================================
+
+@forward "theme/tokens";     // $primary-color, $dark-primary-color, etc.
+@forward "variables";        // $small, $large, $type-size-*, etc.
+@forward "include/mixins";   // clearfix(), breakpoint(), em(), yiq-*

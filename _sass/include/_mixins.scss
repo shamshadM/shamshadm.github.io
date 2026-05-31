@@ -1,71 +1,92 @@
+// =============================================================================
+// _mixins.scss
+// Loaded via: @forward "include/mixins" in _sass/index.scss
+// Partials that need these mixins/functions use:  @use "../index" as *;
+// =============================================================================
+
+@use "sass:color";
+@use "sass:math";
+@use "../variables" as *;   // brings all $variables into scope
+
 /* ==========================================================================
-   MIXINS
+   Placeholder selectors
    ========================================================================== */
 
-%tab-focus {
-  /* Default*/
+// tab-focus: both a mixin and a placeholder selector.
+// Use @include tab-focus() — @extend across @use modules is NOT supported
+// in Dart Sass. The %placeholder is kept for potential same-file use only.
+@mixin tab-focus {
   outline: thin dotted var(--global-base-color);
-  /* Webkit*/
   outline: 5px auto var(--global-base-color);
   outline-offset: -2px;
 }
 
-/*
-   em function
+%tab-focus {
+  @include tab-focus;
+}
+
+/* ==========================================================================
+   em() — unit conversion helper
+   Dart Sass: slash-division is deprecated; use math.div() instead.
    ========================================================================== */
 
 @function em($target, $context: $doc-font-size) {
-  @return ($target / $context) * 1em;
+  @return math.div($target, $context) * 1em;
 }
 
-
-/*
-   Bourbon clearfix
+/* ==========================================================================
+   Clearfix — modern replacement for Bourbon clearfix
+   Uses display:flow-root (supported 97%+); @supports fallback for IE/older.
    ========================================================================== */
 
-/*
-  * Provides an easy way to include a clearfix for containing floats.
-  * link http://cssmojo.com/latest_new_clearfix_so_far/
-  *
-  * example scss - Usage
-  *
-  * .element {
-  *   @include clearfix;
-  * }
-  *
-  * example css - CSS Output
-  *
-  * .element::after {
-  *   clear: both;
-  *   content: "";
-  *   display: table;
-  * }
-*/
-
 @mixin clearfix {
-  clear: both;
+  display: flow-root;
 
-  &::after {
+  @supports not (display: flow-root) {
     clear: both;
-    content: "";
-    display: table;
+
+    &::after {
+      clear: both;
+      content: "";
+      display: table;
+    }
   }
 }
 
-/*
-   Compass YIQ Color Contrast
-   https://github.com/easy-designs/yiq-color-contrast
+/* ==========================================================================
+   Breakpoint — thin wrapper around native @media queries.
+   Replaces the Susy/Breakpoint-sass dependency.
+
+   Usage:
+     @include breakpoint($large)              → min-width
+     @include breakpoint(max-width $small)    → max-width
+     @include breakpoint(max-width $large - 1px)
+   ========================================================================== */
+
+@mixin breakpoint($query) {
+  @if length($query) == 2 and nth($query, 1) == max-width {
+    $bp: nth($query, 2);
+    @media (max-width: #{$bp}) { @content; }
+  } @else {
+    @media (min-width: #{$query}) { @content; }
+  }
+}
+
+/* ==========================================================================
+   YIQ Color Contrast  (https://github.com/easy-designs/yiq-color-contrast)
+   Dart Sass: color.red/green/blue deprecated → use color.channel() instead.
    ========================================================================== */
 
 @function yiq-is-light(
   $color,
   $threshold: $yiq-contrasted-threshold
 ) {
-  $red: red($color);
-  $green: green($color);
-  $blue: blue($color);
+  // color.channel() is the Dart Sass way; it returns 0–255 for sRGB channels.
+  $red:   color.channel($color, "red",   $space: rgb);
+  $green: color.channel($color, "green", $space: rgb);
+  $blue:  color.channel($color, "blue",  $space: rgb);
 
-  $yiq: (($red*299)+($green*587)+($blue*114))/1000;
+  $yiq: math.div(($red * 299) + ($green * 587) + ($blue * 114), 1000);
 
   @if $yiq-debug { @debug $yiq, $threshold; }
 
@@ -74,8 +95,8 @@
 
 @function yiq-contrast-color(
   $color,
-  $dark: $yiq-contrasted-dark-default,
-  $light: $yiq-contrasted-light-default,
+  $dark:      $yiq-contrasted-dark-default,
+  $light:     $yiq-contrasted-light-default,
   $threshold: $yiq-contrasted-threshold
 ) {
   @return if(yiq-is-light($color, $threshold), $dark, $light);
@@ -83,10 +104,42 @@
 
 @mixin yiq-contrasted(
   $background-color,
-  $dark: $yiq-contrasted-dark-default,
-  $light: $yiq-contrasted-light-default,
+  $dark:      $yiq-contrasted-dark-default,
+  $light:     $yiq-contrasted-light-default,
   $threshold: $yiq-contrasted-threshold
 ) {
   background-color: $background-color;
   color: yiq-contrast-color($background-color, $dark, $light, $threshold);
 }
+
+/* ==========================================================================
+   Shared style mixins — replaces cross-module @extend (unsupported in @use)
+   ========================================================================== */
+
+// btn-base: core button styles shared by .btn and any element that needs
+// button appearance (e.g. Google Custom Search submit button).
+@mixin btn-base {
+  display: inline-block;
+  margin-bottom: 0.25em;
+  padding: 0.5em 1em;
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-width: 0;
+  border-radius: $border-radius;
+  cursor: pointer;
+}
+
+// page-meta-base: shared metadata styles used by .page__meta and .comment__date.
+@mixin page-meta-base {
+  margin-top: 2em;
+  color: var(--global-text-color-light);
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+
+  p { margin: 0; }
+  a { color: inherit; }
+}
+

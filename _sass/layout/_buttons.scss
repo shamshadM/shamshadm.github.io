@@ -2,23 +2,18 @@
    BUTTONS
    ========================================================================== */
 
+
+@use "sass:color";
+// Module imports — provides all $variables, mixins, and functions.
+@use "../index" as *;
+
 /*
    Default button
    ========================================================================== */
 
 .btn {
-  /* default */
-  display: inline-block;
-  margin-bottom: 0.25em;
-  padding: 0.5em 1em;
-  font-family: $sans-serif;
-  font-size: $type-size-6;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  border-width: 0;
-  border-radius: $border-radius;
-  cursor: pointer;
+  /* default — base styles shared via btn-base() mixin in _mixins.scss */
+  @include btn-base;
 
   .icon {
    margin-inline-end: 0.5em;
@@ -60,7 +55,7 @@
       }
 
       &:hover {
-        @include yiq-contrasted(mix(#000, $color, 20%));
+        @include yiq-contrasted(color.mix(#000, $color, 20%));
       }
     }
   }

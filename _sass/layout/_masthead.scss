@@ -2,6 +2,10 @@
    MASTHEAD
    ========================================================================== */
 
+
+// Module imports — provides all $variables, mixins, and functions.
+@use "../index" as *;
+
 .masthead {
   position: relative;
   border-bottom: 1px solid var(--global-border-color);

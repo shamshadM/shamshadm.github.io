@@ -2,6 +2,10 @@
    PRINT STYLES
    ========================================================================== */
 
+
+// Module imports — provides all $variables, mixins, and functions.
+@use "../index" as *;
+
 @media print {
 
   [hidden] {
