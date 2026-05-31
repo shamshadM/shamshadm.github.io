@@ -31,17 +31,20 @@
 <!-- This command for the mathematics equations in the webpage -->
 
 {% if page.math %}
-<script>
-  MathJax = {
-    tex: {
-      inlineMath:  [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      tags: 'ams'   /* numbered equations with \label / \ref */
-    },
-    svg: { fontCache: 'global' }
-  };
+<script type="text/javascript">
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']], // inline math
+    displayMath: [['$$', '$$'], ['\\[', '\\]']] // block math
+  },
+  svg: {
+    fontCache: 'global'  // improves performance
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
 </script>
-<script defer
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js">
 </script>
 {% endif %}

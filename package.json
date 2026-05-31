@@ -1,23 +1,23 @@
 {
-  "name": "minimal-mistakes",
+  "name": "MS theme Jekyll",
   "private": true,
-  "version": "4.26.2",
-  "description": "Minimal Mistakes 2 column Jekyll theme.",
+  "version": "5.02.0",
+  "description": "MS 2 column Jekyll theme flex and grid based.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mmistakes/minimal-mistakes.git"
+    "url": "git://github.com/shamshadM/shamshadM.git"
   },
   "keywords": [
     "jekyll",
     "theme",
-    "minimal"
+    "MS"
   ],
-  "author": "Michael Rose",
+  "author": "Mohammad Shamshad",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
+    "url": "https://github.com/shamshadM/shamshadM/issues"
   },
-  "homepage": "https://mmistakes.github.io/minimal-mistakes/",
+  "homepage": "https://shamshadM.github.io/MS-theme-jekyll/",
   "engines": {
     "node": ">= 0.20.x"
   },

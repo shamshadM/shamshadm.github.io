@@ -261,6 +261,11 @@
         transform: scaleX(1); // reveal
       }
     }
+
+        // theme toggle has its own ::after underline bar — suppress the shared ::before one
+    #theme-toggle a {
+      &:before { display: none; }
+    }
   }
 
   .hidden-links {
@@ -355,7 +360,7 @@
       position: relative;
       display: inline-block;
       padding: 0.5em 2.5em 0.5em 1em;
-      color: $darker-primary-color;
+      color: var(--global-text-color);
       font-size: $type-size-6;
       font-weight: bold;
       border: 1px solid var(--global-border-color);
@@ -443,10 +448,33 @@
 
 .nav__list .nav__items {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 
-  a {
-    color: inherit;
+ a {
+  position: relative;
+  color: inherit; // inherit base color
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+
+  &:hover {
+    color: var(--global-link-color-hover); // hover color
+  }
+
+  &:hover::after {
+    transform: scaleX(1); // show underline
+  }
   }
 
   .active {
@@ -556,8 +584,8 @@
     border-bottom: 1px solid var(--global-border-color);
 
     &:hover {
-      color: var(--global-text-color);
-      background: color.mix(#fff, $primary-color, 20%);                                  
+      color: var(--global-bg-color);
+      background: color-mix(in srgb, var(--global-link-color-hover) 80%, white);;                                  
     }
   }
 

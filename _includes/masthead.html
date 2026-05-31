@@ -19,10 +19,10 @@
                 {% if link.target %} target="{{ link.target }}"{% endif %}>{{ link.title }}</a>
             </li>
           {%- endfor -%}
+          <li id="theme-toggle" class="masthead__menu-item">
+             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
+           </li> 
         </ul>
-         <li id="theme-toggle" class="masthead__menu-item">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
-          </li> 
         {% if site.search == true %}
         <button class="search__toggle" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>

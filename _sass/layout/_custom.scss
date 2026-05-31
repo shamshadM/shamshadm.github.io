@@ -48,10 +48,11 @@
 #theme-toggle {
   a {
     width: 25px;
-    display: flex;
+    display: inline-flex;
+  
     justify-content: center;
-    position: relative;
-    // padding-bottom: 0.05em; // Increased padding to account for thicker line
+
+    padding-bottom: 0.373em; // Increased padding to account for thicker line
     text-decoration: none;
     overflow: visible;
     /* Prevents the "I-beam" cursor and text selection */
@@ -305,4 +306,16 @@ main #g6219 {
 .mermaid {
     display: flex;
     justify-content: center;
+}
+
+/* MathJax mobile overflow fix — prevent equations from bleeding out of the page */
+.page__content {
+  mjx-container,
+  .MathJax_Display,
+  .MathJax_SVG_Display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
 }

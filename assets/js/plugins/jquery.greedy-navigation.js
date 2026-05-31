@@ -17,6 +17,9 @@ $(function() {
 
   var numOfItems, totalSpace, closingTime, breakWidths;
 
+  // Selector for nav items that should never be moved to hidden-links
+  var $pinned = $vlinks.children('#theme-toggle');
+
   // This function measures both hidden and visible links and sets the navbar breakpoints
   // This is called the first time the script runs and everytime the "check()" function detects a change of window width that reached a different CSS width breakpoint, which affects the size of navbar Items
   // Please note that "CSS width breakpoints" (which are only 4) !== "navbar breakpoints" (which are as many as the number of items on the navbar)
@@ -41,8 +44,8 @@ $(function() {
       addWidth(0, clone.outerWidth());
       clone.remove();
     }
-    // Measure both visible and hidden links widths
-    $vlinks.children().outerWidth(addWidth);
+    // Measure movable visible links only (exclude pinned items like #theme-toggle)
+    $vlinks.children(':not(#theme-toggle)').outerWidth(addWidth);
     $hlinks.children().each(function(){hiddenWidth($(this))});
   }
   // Get initial state
@@ -64,19 +67,20 @@ $(function() {
     // Set the last measured CSS width breakpoint with the current breakpoint
     lastBreakpoint = curBreakpoint;
 
-    // Get instant state
-    numOfVisibleItems = $vlinks.children().length;
+    // Get instant state — only count movable items
+    numOfVisibleItems = $vlinks.children(':not(#theme-toggle)').length;
     // Decrease the width of visible elements from the nav innerWidth to find out the available space for navItems
     availableSpace = /* nav */ $nav.innerWidth()
                    - /* logo */ ($logo.length !== 0 ? $logo.outerWidth(true) : 0)
                    - /* title */ $title.outerWidth(true)
                    - /* search */ ($search.length !== 0 ? $search.outerWidth(true) : 0)
+                   - /* pinned (theme toggle etc.) */ ($pinned.length !== 0 ? $pinned.outerWidth(true) : 0)
                    - /* toggle */ (numOfVisibleItems !== breakWidths.length ? $btn.outerWidth(true) : 0);
     requiredSpace = breakWidths[numOfVisibleItems - 1];
 
-    // There is not enought space
+    // There is not enough space
     if (requiredSpace > availableSpace) {
-      $vlinks.children().last().prependTo($hlinks);
+      $vlinks.children(':not(#theme-toggle)').last().prependTo($hlinks);
       numOfVisibleItems -= 1;
       check();
       // There is more than enough space. If only one element is hidden, add the toggle width to the available space

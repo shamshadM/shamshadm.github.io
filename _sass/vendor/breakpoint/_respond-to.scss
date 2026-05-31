@@ -87,3 +87,27 @@ $BREAKPOINTS: () !default;
     font-size: 70% !important;
   }
 }
+
+/* MathJax mobile overflow fix */
+mjx-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  display: block;
+  -webkit-overflow-scrolling: touch;
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.5em; /* space for scrollbar */
+}
+
+/* MathJax v2 fallback */
+.MathJax_Display,
+.MathJax_SVG_Display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}

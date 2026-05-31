@@ -20,6 +20,7 @@ A **Factorial Experimental Design** is an experimental strategy in which **two o
 - Use experimental resources more efficiently than one-factor-at-a-time (OFAT) experiments
 <!--more-->
 >**Key principle:** In a factorial design, every factor combination appears in the experiment — making it possible to separate the independent effect of each factor *and* assess how factors influence each other.
+
 ## Why Not One-Factor-at-a-Time (OFAT)?
 
 The traditional approach varies one factor while holding all others constant. This is inefficient and misleading:

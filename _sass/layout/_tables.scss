@@ -6,14 +6,22 @@
 // Module imports — provides all $variables, mixins, and functions.
 @use "../index" as *;
 
+/* Wrapper makes the whole table scroll on small screens without
+   forcing display:block on the table itself (which breaks MathJax in cells) */
+.page__content table,
+.archive table,
+article table {
+  display: block;           /* keeps overflow-x: auto working */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 table {
-  display: block;
   margin-bottom: 1em;
   width: 100%;
   font-family: $global-font-family;
   font-size: $type-size-6;
   border-collapse: collapse;
-  overflow-x: auto;
 
   & + table {
     margin-top: 1em;
@@ -41,4 +49,22 @@ tr,
 td,
 th {
   vertical-align: middle;
+}
+/* MathJax inside table cells — allow equations to scroll horizontally
+   rather than overflow or get clipped */
+td, th {
+  mjx-container,
+  .MathJax_Display,
+  .MathJax_SVG_Display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Inline MathJax shouldn't force a new line or break cell width */
+  mjx-container[display="false"] {
+    display: inline;
+    overflow-x: visible;
+  }
 }

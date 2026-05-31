@@ -1,4 +1,4 @@
-require "bundler/gem_tasks"
+# require "bundler/gem_tasks"
 require "jekyll"
 require "json"
 require "listen"
@@ -46,7 +46,7 @@ task :preview do
     "destination"   => base.join('test/_site').to_s,
     "force_polling" => false,
     "serving"       => true,
-    "theme"         => "minimal-mistakes-jekyll"
+    "theme"         => "msTheme-jekyll"
   }
 
   options = Jekyll.configuration(options)
@@ -109,7 +109,7 @@ file "docs/_docs/18-history.md" => "CHANGELOG.md" do |t|
     # Remove H1
     changelog = File.read(t.prerequisites.first)
       .gsub(/^# [^\n]*$/m, "")
-      .gsub(/\(#(\d+)\)$/m, "[#\\1](https://github.com/mmistakes/minimal-mistakes/issues/\\1)")
+      .gsub(/\(#(\d+)\)$/m, "[#\\1](https://github.com/shamshadM/msTheme/issues/\\1)")
       .strip
     f.write changelog
     f.puts ""
@@ -118,16 +118,16 @@ file "docs/_docs/18-history.md" => "CHANGELOG.md" do |t|
 end
 
 COPYRIGHT_LINES = [
-  "Minimal Mistakes Jekyll Theme #{package_json["version"]} by Michael Rose",
-  "Copyright 2013-#{Time.now.year} Michael Rose - mademistakes.com | @mmistakes",
+  "MS Jekyll Theme #{package_json["version"]} by Mohammad Shamshad",
+  "Copyright 2026-#{Time.now.year} Mohammad Shamshad - shamshad.in | @shamshadM",
   "Free for personal and commercial use under the MIT license",
-  "https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE",
+  "https://github.com/shamshadM/blob/master/LICENSE",
 ]
 
 COPYRIGHT_FILES = [
   "_includes/copyright.html",
   "_includes/copyright.js",
-  "_sass/minimal-mistakes/_copyright.scss",
+  "_sass/theme/_copyright.scss",
 ]
 
 def genenerate_copyright_file(filename, header, prefix, footer)
@@ -148,7 +148,7 @@ file "_includes/copyright.js" => "package.json" do |t|
   genenerate_copyright_file(t.name, "/*!", " * ", " */")
 end
 
-file "_sass/minimal-mistakes/_copyright.scss" => "package.json" do |t|
+file "_sass/theme/_copyright.scss" => "package.json" do |t|
   genenerate_copyright_file(t.name, "/*!", " * ", " */")
 end
 
@@ -196,7 +196,7 @@ end
 
 file "README.md" => "package.json" do |t|
   content = File.read(t.name)
-  content = content.gsub(/(mmistakes\/minimal-mistakes@)[\d.]+/, '\1' + package_json["version"])
+  content = content.gsub(/(msTheme\/msTheme@)[\d.]+/, '\1' + package_json["version"])
   File.write(t.name, content)
 end
 
