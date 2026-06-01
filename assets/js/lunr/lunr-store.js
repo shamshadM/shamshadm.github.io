@@ -6,33 +6,27 @@ var store = [{
         "teaser": null
       },{
         "title": "Combining PDF Documents the Smarter Way",
-        "excerpt":"My previous post on combining multiple PDF files had an important caveat that things would end up in the wrong order if you had files with leading ID numbers that started at 1 and ended at 12, you’d end up with PDFs combined in the order 1, 10, 11, 12,...","categories": ["PDF"],
+        "excerpt":"My previous post on combining multiple PDF files had an important caveat that things would end up in the wrong order if you had files with leading ID numbers that started at 1 and ended at 12, you'd end up with PDFs combined in the order 1, 10, 11, 12,...","categories": ["PDF"],
         "tags": ["references","bash"],
         "url": "/posts/2019/07/combining-pdfs-naturally/",
         "teaser": null
       },{
         "title": "Building an Academic Website",
-        "excerpt":"If you’re an academic, you need a website. Obviously I agree with this since you’re reading this on my website, but if you don’t have one, you should get one. Most universities these days provide a free option, usually powered by WordPress (both WashU and UNC use WordPress for their...","categories": ["website"],
+        "excerpt":"If you're an academic, you need a website. Obviously I agree with this since you're reading this on my website, but if you don't have one, you should get one. Most universities these days provide a free option. These are powered by WordPress (both WashU and UNC use WordPress for...","categories": ["website"],
         "tags": ["website","git","github"],
         "url": "/posts/2020/06/academic-website/",
         "teaser": null
       },{
         "title": "Customizing an Academic Website",
-        "excerpt":"This is a followup to my previous post on creating an academic website. If you’ve followed that guide, you should have a website that’s professional-looking and informative, but it’s probably lacking something to really make it feel like your own. There are an infinite number of ways you could customize...","categories": ["website"],
+        "excerpt":"This is a followup to my previous post on [creating an academic website](/posts/2020/06/academic-website/). If you've followed that guide, you should have a website that's professional-looking and informative, but it's probably lacking *something* to really make it feel like your own. There are an infinite number of ways you could customize...","categories": ["website"],
         "tags": ["website","git","github"],
         "url": "/posts/2020/07/customizing-website/",
         "teaser": null
       },{
         "title": "Adding Content to an Academic Website",
-        "excerpt":"One thing I haven’t covered in my previous posts on creating and customizing an academic website is how to actually add content to your site. You know, the stuff that’s the reason why people go to your website in the first place? If you’ve followed those guides, your website should...","categories": ["website"],
+        "excerpt":"One thing I haven't covered in my previous posts on creating and customizing an academic website is how to actually add content to your site. You know, the stuff that's the reason why people go to your website in the first place? If you've followed those guides, your website should...","categories": ["website"],
         "tags": ["website","git","github","bash"],
         "url": "/posts/2020/08/website-content/",
-        "teaser": null
-      },{
-        "title": "Add non-whitelisted plugins and Mermaid",
-        "excerpt":"GitHub Pages runs in safe mode and only allows a set of whitelisted plugins. To use the gem in GitHub Pages, one of the workarounds is to use CI (e.g. travis, github workflow) and deploy to your gh-pages branch like: jekyll-deploy-action, and I use this plugin: jekyll-spaceship in my github...","categories": ["CI","mermaid"],
-        "tags": ["Mermaid","graph","non-whitelisted plugins"],
-        "url": "/posts/2020/08/non-whitelisted-plugin-Mermaid/",
         "teaser": null
       },{
         "title": "Online submission of a scientific paper, a guideline for beginners",
@@ -42,13 +36,13 @@ var store = [{
         "teaser": null
       },{
         "title": "Plot Genetic Linkage Maps using MapChart software",
-        "excerpt":"MapChart is a free software to plot publishing quality genetic linkage maps as well as QTLs. This software was developed at Wageningen University by Roeland E. Voorrips and can be downloaded at this link . In this tutorial, We are going to learn how to prepare input files and plot...","categories": ["QTL","maps,","molecular","Analysis"],
-        "tags": ["MapChart","Linkage Mapping","QTLs maps"],
+        "excerpt":"MapChart is a freely available software package designed for drawing high-quality genetic linkage maps and displaying quantitative trait loci (QTLs). It helps researchers convert mapping data into clear, publication-ready diagrams, making it especially useful in genetics, genomics, and plant breeding studies. The software was developed at Wageningen University &amp; Research...","categories": ["QTL","maps,","molecular","Analysis"],
+        "tags": ["MapChart","Linkage Mapping","QTLs mapss"],
         "url": "/posts/2020/10/mapchart/",
         "teaser": null
       },{
-        "title": "A tutorial on investigate genetic admixture using STRUCTURE software",
-        "excerpt":"Structure Software is a freely available software package that one may use for rigorous investigation of admixed individuals; identification of point of hybridization and migrants; and estimate over all structure of a population using a commonly used genetic markers such as SNPs and SSRs. This software was developed by Pritchard...","categories": ["Structure","software"],
+        "title": "Investigate genetic admixture using STRUCTURE software",
+        "excerpt":"Structure Software is a freely available software package that one may use for rigorous investigation of admixed individuals; identification of point of hybridization and migrants; and estimate over all structure of a population using commonly used genetic markers such as single nucleotide polymorphism (SNPs) and simple sequence repeat (SSRs). This...","categories": ["Structure","software"],
         "tags": ["Structure software","Genetic Admixture","Genetic data","Population structure"],
         "url": "/posts/2021/01/investigate-genetic-admixture-using-STRUCTURE-software/",
         "teaser": null
@@ -72,7 +66,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Completely Randomized Design (CRD): Theory & Complete R Analysis",
-        "excerpt":"The Completely Randomized Design (CRD) is the simplest experimental design. Treatments are assigned to experimental units purely at random, with no restrictions. It is the starting point for understanding all other designs (RCBD, Latin Square, Alpha-lattice) and remains widely used in controlled laboratory and greenhouse experiments. — 1. When to...","categories": ["statistics","R","field-experiments"],
+        "excerpt":"The Completely Randomized Design (CRD) is the simplest experimental design. Treatments are assigned to experimental units purely at random, with no restrictions. It is the starting point for understanding all other designs (RCBD, Latin Square, Alpha-lattice) and remains widely used in controlled laboratory and greenhouse experiments. 1. When to Use...","categories": ["statistics","R","field-experiments"],
         "tags": ["CRD","ANOVA","post-hoc","R","experimental-design"],
         "url": "/posts/2024/05/crd-design-analysis/",
         "teaser": null
