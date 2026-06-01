@@ -13,9 +13,13 @@ tags:
   - git
   - github
 ---
-
-If you're an academic, you need a website. Obviously I agree with this since you're reading this on my website, but if you don't have one, you should get one. Most universities these days provide a free option, usually powered by [WordPress](https://wordpress.org/) (both [WashU](https://sites.wustl.edu/) and [UNC](https://web.unc.edu/) use WordPress for their respective offerings). While these sites are quick to set up and come with the prestige of a `.edu` URL, they have several drawbacks that have been [extensively](https://townsendcenter.berkeley.edu/blog/personal-academic-webpages-how-tos-and-tips-better-site) [written](https://martinlea.com/four-reasons-why-faculty-profile-pages-are-no-substitute-for-personal-academic-website/) [on](https://theacademicdesigner.com/2019/personal-academic-website-benefits/).
+<p>
+If you're an academic, you need a website. Obviously I agree with this since you're reading this on my website, but if you don't have one, you should get one. Most universities these days provide a free option.
+</p>
 <!--more-->
+
+These are powered by [WordPress](https://wordpress.org/) (both [WashU](https://sites.wustl.edu/) and [UNC](https://web.unc.edu/) use WordPress for their respective offerings). While these sites are quick to set up and come with the prestige of a `.edu` URL, they have several drawbacks that have been [extensively](https://townsendcenter.berkeley.edu/blog/personal-academic-webpages-how-tos-and-tips-better-site) [written](https://martinlea.com/four-reasons-why-faculty-profile-pages-are-no-substitute-for-personal-academic-website/) [on](https://theacademicdesigner.com/2019/personal-academic-website-benefits/).
+
 If you're a junior scholar, having your own personal webpage is even more important:
 - If (when) you move institutions, you'll lose your website
 - Even if you can export the contents of a WordPress site, there's no guarantee it will seamlessly integrate with another university's implementation

@@ -8,7 +8,7 @@ gem "jekyll-sass-converter", "~> 3.0"
 gem "sass-embedded"
 #  gem 'jekyll-brotli'
 
-gem "jekyll"
+gem "jekyll", "~> 4.4.1"
 gem 'tzinfo-data'
 gem "wdm" if Gem.win_platform?
 

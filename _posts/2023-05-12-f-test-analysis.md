@@ -19,6 +19,7 @@ fundamental questions in applied statistics:
 2. Do several group means differ? *(One-way ANOVA)*
 3. Does a regression model explain significant variation? *(Overall F in regression)*
 <!--more-->
+
 ---
 
 ## 1. The F-Distribution

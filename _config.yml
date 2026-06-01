@@ -195,10 +195,6 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-
-# kramdown + MathJax 3 (CDN, GitHub Pages compatible)
-markdown: kramdown
-kramdown:
   math_engine: mathjax
 
 # Collections

@@ -10,10 +10,11 @@ tags:
   - references
   - bash
 ---
+<p>
 
-My previous [post]({{ site.baseurl }}{% post_url 2019-06-25-combining-pdfs %}) on combining multiple PDF files had an important caveat that things would end up in the wrong order if you had files with leading ID numbers that started at 1 and ended at 12, you'd end up with PDFs combined in the order 1, 10, 11, 12, 2, 3, ..., 9.
+My previous post on combining multiple PDF files had an important caveat that things would end up in the wrong order if you had files with leading ID numbers that started at 1 and ended at 12, you'd end up with PDFs combined in the order 1, 10, 11, 12, 2, 3, ..., 9. This is because the default sort in Bash is an alphabetic sort. This is just our standard alphabetic sort, but it gets tripped up when dealing with numbers. We can think of it as a type of 'greedy' algorithm because it sorts all inputs by the first character, before moving onto the second character within each subset. This behavior is fine (and desirable!) for words, but fails with numbers.
+</p>
 <!--more-->
-This is because the default sort in Bash is an alphabetic sort. This is just our standard alphabetic sort, but it gets tripped up when dealing with numbers. We can think of it as a type of 'greedy' algorithm because it sorts all inputs by the first character, before moving onto the second character within each subset. This behavior is fine (and desirable!) for words, but fails with numbers.
 
 We want to use a [natural sort](https://en.wikipedia.org/wiki/Natural_sort_order), which is just an alphabetic sort that treats multi-digit numbers as numbers instead of a collection of characters. A natural sort of our files would combine them in the order 1, 2, 3, 4, 5, ..., 12, 13. That means a natural sort can handle a wider range of numbering styles!
 

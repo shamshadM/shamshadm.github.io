@@ -13,9 +13,9 @@ tags:
   - git
   - github
 ---
-
-This is a followup to my previous post on [creating an academic website]({{ site.baseurl }}{% post_url 2020-06-30-academic-website %}). If you've followed that guide, you should have a website that's professional-looking and informative, but it's probably lacking *something* to really make it feel like your own. There are an infinite number of ways you could customize the [academicpages template](https://academicpages.github.io/) (many of them far, far beyond my abilities) but I'm going to walk you through the process I used to start tweaking my website. The goal here isn't to tell you how you should personalize your website, but to give you the tools to learn how to implement whatever changes you want to make.
-
+<p>
+This is a followup to my previous post on [creating an academic website]({{ site.baseurl }}{% post_url 2020-06-30-academic-website %}). If you've followed that guide, you should have a website that's professional-looking and informative, but it's probably lacking *something* to really make it feel like your own. There are an infinite number of ways you could customize the any of the jekyll theme (many of them far, far beyond my abilities) but I'm going to walk you through the process I used to start tweaking my website. The goal here isn't to tell you how you should personalize your website, but to give you the tools to learn how to implement whatever changes you want to make.
+</p>
 <!--more-->
 
 You'll notice that the differences between my website and the template aren't limited to my mug in the sidebar on the left. These differences are especially apparent if you compare my [publications](https://jayrobwilliams.com/publications/) page with the [template's](https://academicpages.github.io/publications/). You'll notice on my page that article titles no longer link to separate pages and I've got fancy icons like <i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i> to link to my PDF copy and <i class="fa fa-fw fa-link" aria-hidden="true"></i> to link to the version of record.

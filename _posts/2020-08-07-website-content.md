@@ -14,9 +14,9 @@ tags:
   - github
   - bash
 ---
-
-One thing I haven't covered in my previous posts on [creating]({{ site.baseurl }}{% post_url 2020-06-30-academic-website %}) and [customizing]({{ site.baseurl }}{% post_url 2020-07-6-customizing-website %}) an academic website is how to actually add content to your site. You know, the stuff that's the reason why people go to your website in the first place? If you've followed those guides, your website should be professional looking and already feeling a little bit different from the stock template. However, adding new pages or tweaking the existing pages can be a little intimidating, and I realized I should probably walk through how to do so. Luckily Jekyll's use of Markdown makes it really easy to add new content!
-
+<p>
+  One thing I haven't covered in my previous posts on creating and customizing an academic website is how to actually add content to your site. You know, the stuff that's the reason why people go to your website in the first place? If you've followed those guides, your website should be professional looking and already feeling a little bit different from the stock template. However, adding new pages or tweaking the existing pages can be a little intimidating, and I realized I should probably walk through how to do so. Luckily, Jekyll's use of Markdown makes it really easy to add new content!
+</p>
 <!--more-->
 
 ## Content

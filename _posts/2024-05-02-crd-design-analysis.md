@@ -13,6 +13,7 @@ math: true
 
 The **Completely Randomized Design (CRD)** is the simplest experimental design. Treatments are assigned to experimental units **purely at random**, with no restrictions. It is the starting point for understanding all other designs (RCBD, Latin Square, Alpha-lattice) and remains widely used in controlled laboratory and greenhouse experiments.
 <!--more-->
+
 ---
 
 ## 1. When to Use CRD
