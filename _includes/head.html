@@ -14,11 +14,11 @@
     document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
-{% if site.enable_copy_code_button %}
+{% if site.enable_copy_code_button -%}
 <script defer>
   window.enable_copy_code_button = true;
 </script>
-{% endif %}
+{%- endif %}
 
 <link rel="stylesheet" href="{{ 'assets/academicons-1.9.6/css/academicons.min.css' | relative_url }}" fetchpriority="low"/>
 <!-- For all browsers -->

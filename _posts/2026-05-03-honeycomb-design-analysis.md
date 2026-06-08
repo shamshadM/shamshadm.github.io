@@ -2,8 +2,8 @@
 title: "Honeycomb Design Analysis in R"
 date: 2026-05-04
 permalink: /posts/2026/05/honeycomb-design-analysis/
-categories: [r, geometry, structural-analysis, data-visualization]
-tags: [r, ggplot2, hexagon, tessellation, honeycomb, geometry, structural-mechanics]
+categories: [R, geometry, structural-analysis, data-visualization]
+tags: [R, ggplot2, hexagon, tessellation, honeycomb, geometry, structural-mechanics]
 description: "A comprehensive guide to honeycomb hexagonal lattice design analysis in R — covering geometry, structural efficiency, tessellation plotting, and Gibson–Ashby mechanics."
 excerpt_separator: <!--more-->
 number_sections: true

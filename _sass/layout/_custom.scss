@@ -319,3 +319,36 @@ main #g6219 {
     -webkit-overflow-scrolling: touch;
   }
 }
+
+/* Post List Styling */
+.post-list .post-link {
+  text-decoration: none !important;
+}
+
+.post-list .author-logo {
+  margin: 6px;
+  border-radius: 50%;
+  float: left;
+}
+
+.post-list .teaser-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 15px;
+}
+
+.post-list .teaser-thumbnail {
+  transition: transform .2s;
+}
+
+.post-list .teaser-thumbnail:hover {
+  transform: scale(1.15);
+}
+
+.post-list .btn-tag {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 5%;
+}
