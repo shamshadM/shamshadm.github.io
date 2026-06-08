@@ -36,20 +36,14 @@
 <!-- This command for the mathematics equations in the webpage -->
 
 {% if page.math %}
-<script type="text/javascript">
+<script>
 window.MathJax = {
   tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']], // inline math
-    displayMath: [['$$', '$$'], ['\\[', '\\]']] // block math
-  },
-  svg: {
-    fontCache: 'global'  // improves performance
-  },
-  options: {
-    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
   }
 };
 </script>
-<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<script async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 {% endif %}
