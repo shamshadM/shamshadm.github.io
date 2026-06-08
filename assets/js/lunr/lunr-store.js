@@ -37,7 +37,7 @@ var store = [{
       },{
         "title": "Plot Genetic Linkage Maps using MapChart software",
         "excerpt":"MapChart is a freely available software package designed for drawing high-quality genetic linkage maps and displaying quantitative trait loci (QTLs). It helps researchers convert mapping data into clear, publication-ready diagrams, making it especially useful in genetics, genomics, and plant breeding studies. The software was developed at Wageningen University &amp; Research...","categories": ["QTL","maps,","molecular","Analysis"],
-        "tags": ["MapChart","Linkage Mapping","QTLs mapss"],
+        "tags": ["MapChart","Linkage Mapping","QTLs maps"],
         "url": "/posts/2020/10/mapchart/",
         "teaser": null
       },{
@@ -108,8 +108,8 @@ var store = [{
         "teaser": null
       },{
         "title": "Honeycomb Design Analysis in R",
-        "excerpt":"The Honeycomb (HC) design, developed by Fasoulas (1988) and later extended by Kyriakou and Fasoulas, is a field layout method used in plant breeding to improve the efficiency of mass selection under field variability. In this design, plants are arranged in a triangular (hexagonal) grid, so that each plant is...","categories": ["r","geometry","structural-analysis","data-visualization"],
-        "tags": ["r","ggplot2","hexagon","tessellation","honeycomb","geometry","structural-mechanics"],
+        "excerpt":"The Honeycomb (HC) design, developed by Fasoulas (1988) and later extended by Kyriakou and Fasoulas, is a field layout method used in plant breeding to improve the efficiency of mass selection under field variability. In this design, plants are arranged in a triangular (hexagonal) grid, so that each plant is...","categories": ["R","geometry","structural-analysis","data-visualization"],
+        "tags": ["R","ggplot2","hexagon","tessellation","honeycomb","geometry","structural-mechanics"],
         "url": "/posts/2026/05/honeycomb-design-analysis/",
         "teaser": null
       },{
