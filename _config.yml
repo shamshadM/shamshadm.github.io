@@ -128,8 +128,8 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
+    - label: "X (formerly Twitter)"
+      icon: "fa-brands fa-x-twitter"
       url: "https://twitter.com/DrShamshadM"
     - label: "Google Scholar"
       icon: "ai ai-google-scholar ai-fw icon-pad-right"
@@ -225,6 +225,7 @@ defaults:
       comments: true
       share: true
       related: true
+      toc_sticky: true
   # _pages
   - scope:
       path: ""

@@ -45,15 +45,6 @@
 @use "layout/sidebar";
 @use "layout/print";
 
-// ── Vendor: Font Awesome ─────────────────────────────────────────────────────
-// These files use @import internally; Dart Sass loads them via @use here.
-// Internal @import deprecation warnings suppressed in _config.yml.
-@use "vendor/font-awesome/6/scss/fontawesome";
-@use "vendor/font-awesome/6/scss/solid";
-@use "vendor/font-awesome/6/scss/brands";
-@use "vendor/font-awesome/6/scss/v4-shims";
-@use "vendor/font-awesome/6/scss/regular";
-
 // ── Vendor: Web fonts ────────────────────────────────────────────────────────
 // Loaded via _index.scss barrel which handles the common → amazon/google/hco
 // dependency chain (common defines $baseurl-StaticWebfonts used by others).

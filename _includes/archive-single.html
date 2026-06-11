@@ -16,19 +16,20 @@
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
-        <img loading="eager" src=
+        <img loading="eager"
           {% if teaser contains "://" %}
-            "{{ teaser }}"
+            src="{{ teaser }}"
           {% else %}
-            "{{ teaser | relative_path }}"
+            src="{{ teaser | relative_path }}"
           {% endif %}
-          alt="">
+          alt="{{ title }}">
       </div>
     {% endif %}
 
     <h2 class="archive__item-title" itemprop="headline">
       {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        <a href="{{ post.link }}">{{ title }}<span class="sr-only">External Link</span></a>
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="Permalink to post"></i></a>
       {% else %}
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       {% endif %}
@@ -47,41 +48,40 @@
         {% endif %}
 
   {% if post.excerpt and post.collection == 'research' and site.read_more != 'enabled' %}
-        <p class="archive__item-excerpt" itemprop="description">
-          <a href="{{ base_path }}{{ post.url }}" rel="permalink">
-          <div class="container"> {{ post.excerpt }}
+        <div class="archive__item-excerpt" itemprop="description">
+          <div class="container">{{ post.excerpt }}
             <div class="overlay"></div>
           </div>
-          </a>
-        </p>
+          <p><a href="{{ base_path }}{{ post.url }}" rel="permalink">View research</a></p>
+        </div>
 
     {% elsif post.content.size and site.read_more != 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
     {% elsif post.excerpt and site.read_more == 'enabled' %}
-    <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<u><strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></u></p></p>
+    <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }} <a href="{{ base_path }}{{ post.url }}" rel="permalink"><strong>Read more</strong></a></p>
     {% endif %}
 
     
     {% if post.citation and post.paperurl %}
-      <p>Recommended citation: {{ post.citation }} <a href="{{ post.paperurl }}"><u>{{ post.paperurl }}</u></a></p>
+      <p>Recommended citation: {{ post.citation }} <a href="{{ post.paperurl }}">{{ post.paperurl }}</a></p>
     {% elsif post.citation %}
       <p>Recommended citation: {{ post.citation }} </p>
     {% elsif post.paperurl %}
-      <p>Download <a href=" {{ post.paperurl }} "><u>here</u></a></p>
+      <p>Download <a href="{{ post.paperurl }}">here</a></p>
     {% endif %}
 
       <!-- citation and icon code -->  
       {% if post.clink %}
-        <a href="{{ post.clink }}"><i class="fas fa-fw fa-link zoom" aria-hidden="true"></i></a>
+        <a href="{{ post.clink }}" title="Link to project"><i class="fas fa-fw fa-link zoom" aria-hidden="true"></i><span class="sr-only">Project Link</span></a>
       {% endif %}
       {% if post.purl %}
-        <a href="{{ post.purl }}"><i class="fas fa-fw fa-file-pdf zoom" aria-hidden="true"></i></a>
+        <a href="{{ post.purl }}" title="Download PDF"><i class="fas fa-fw fa-file-pdf zoom" aria-hidden="true"></i><span class="sr-only">PDF Download</span></a>
       {% endif %}
       {% if post.code %}
-        <a href="{{ post.code }}"><i class="fas fa-fw fa-code zoom" aria-hidden="true"></i></a>
+        <a href="{{ post.code }}" title="View Code"><i class="fas fa-fw fa-code zoom" aria-hidden="true"></i><span class="sr-only">Source Code</span></a>
       {% endif %}
       {% if post.github %}
-        <a href="{{ post.github }}"><i class="fab fa-fw fa-github zoom" aria-hidden="true"></i></a>
+        <a href="{{ post.github }}" title="GitHub Repository"><i class="fab fa-fw fa-github zoom" aria-hidden="true"></i><span class="sr-only">GitHub</span></a>
       {% endif %}
       
 	 </article>

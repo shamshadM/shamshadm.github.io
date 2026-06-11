@@ -37,13 +37,13 @@ Professional expertise in Plant Breeding, Quantitative Genetics, Genomics, and C
 <div class="edu">
 <div class="container-item">
 <h3>Education <i class="fa-solid fa-school"></i></h3>
-<span class="fa-solid fa-graduation-cap"> PhD in Plant Breeding & Genetics, 2019 </span><br> 
+<i class="fa-solid fa-graduation-cap"></i><strong> PhD in Plant Breeding & Genetics, 2019 </strong><br> 
 <p><a href="https://www.bristol.ac.uk/life-sciences/">University of Bristol :uk:</a><br> 
 <a href="https://www.nottingham.ac.uk/biosciences/">University of Nottingham :uk: </a><br>
 <a href="https://www.pau.edu/">Punjab Agricultural University:india:</a></p>
-<span class="fa-solid fa-graduation-cap"> MSc in Plant Breeding & Genetics</span>
-<p><a href="https://www.pau.edu/">Punjab Agricultural University, 2014 :india:</a></p>
-<span class="fa-solid fa-graduation-cap"> BSc in  Agriculture [Crop Science]</span> 
+<i class="fa-solid fa-graduation-cap"></i> <strong>MSc in Plant Breeding & Genetics, 2014</strong>
+<p><a href="https://www.pau.edu/">Punjab Agricultural University, :india:</a></p>
+<i class="fa-solid fa-graduation-cap"></i> <strong > BSc in  Agriculture [Crop Science]</strong> 
 <p><a href="https://www.pau.edu/">Punjab Agricultural University, 2012 :india:</a></p>
 </div>
 <div class="container-item"><h3>Interests and Hobbies 👨‍💻📝🪴🏋️</h3>

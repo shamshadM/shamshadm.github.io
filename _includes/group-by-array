@@ -14,7 +14,7 @@
 {% assign __names =  include.collection | map: include.field %}
 
 <!-- Flatten -->
-{% assign __names =  __names | join: ',' | join: ',' | split: ',' %}
+{% assign __names =  __names | join: ',' | split: ',' %}
 
 <!-- Uniq -->
 {% assign __names =  __names | sort %}

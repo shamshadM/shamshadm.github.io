@@ -10,13 +10,12 @@
               <!-- Author -->
               {% assign author = site.data.authors[post.author] %}
               <div class="teaser-container">
-                <img class="author-logo" src="/images/{{ author.avatar }}" style="border: 2px solid {{ post.bcolor }};" />
+                <img class="author-logo" src="/images/{{ author.avatar }}" style="border: 2px solid {{ post.bcolor }};" alt="Author avatar">
                 {% if post.date %}
                 <p class="page__date"><strong><i class="fa fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
                 {% endif %}
               </div>
-              <img class="teaser-thumbnail" style="border-top:20px solid {{ post.bcolor }};border-right:20px solid {{ post.bcolor }};border-left:20px solid {{ post.bcolor }};border-bottom:1px solid {{ post.bcolor }};"
-              src="{{ site.baseurl }}/blog_images/{{ post.image }}" width="440" height="240"> 
+              <img class="teaser-thumbnail" style="border-top:20px solid {{ post.bcolor }};border-right:20px solid {{ post.bcolor }};border-left:20px solid {{ post.bcolor }};border-bottom:1px solid {{ post.bcolor }};" src="{{ site.baseurl }}/blog_images/{{ post.image }}" width="440" height="240" alt="{{ post.title }}"> 
               {{ post.excerpt }}
               <div class="btn-tag">
                 <a class="btn btn-default" href="{{ post.url | prepend: site.baseurl }}"> Read more </a>
@@ -31,7 +30,7 @@
                   </span>
                 </p>
               </div>
-              <hr/>
+              <hr>
         </li>
         {% endfor %}
 </ul>

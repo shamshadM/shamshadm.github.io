@@ -4,7 +4,6 @@
     document.documentElement.setAttribute('data-theme', 'dark');
   }
 
-
 /* ==========================================================================
    jQuery plugin settings and other scripts
    ========================================================================== */
@@ -14,9 +13,23 @@
     $("#main").fitVids();
   
     // Follow menu drop down
-    $(".author__urls-wrapper button").on("click", function () {
+    $(".author__urls-wrapper button").on("click", function (e) {
+      e.stopPropagation();
       $(".author__urls").toggleClass("is--visible");
       $(".author__urls-wrapper").find("button").toggleClass("open");
+    });
+
+    // Close Follow dropdown when tapping/clicking outside (mobile fix)
+    $(document).on("click touchstart", function (e) {
+      if (!$(e.target).closest(".author__urls-wrapper").length) {
+        $(".author__urls").removeClass("is--visible");
+        $(".author__urls-wrapper button").removeClass("open");
+      }
+    });
+
+    // Prevent taps inside the dropdown from closing it
+    $(".author__urls").on("click touchstart", function (e) {
+      e.stopPropagation();
     });
   
     // Close search screen with Esc key
@@ -143,7 +156,7 @@
             anchor.className = "header-link";
             anchor.href = "#" + id;
             anchor.innerHTML =
-              '<span class="sr-only">Permalink</span><i class="fas fa-link"></i>';
+              '<i class="fas fa-link"></i>';
             anchor.title = "Permalink";
             element.appendChild(anchor);
           }
@@ -152,7 +165,7 @@
   
     // Add copy button for <pre> blocks
     var copyText = function (text) {
-      if (document.getSelection("copy") && navigator.clipboard) {
+      if (navigator.clipboard) {
         navigator.clipboard.writeText(text).then(
           () => true,
           () => console.error("Failed to copy text to clipboard: " + text)
@@ -233,7 +246,7 @@
           var copyButton = document.createElement("button");
           copyButton.title = "Copy to clipboard";
           copyButton.className = "clipboard-copy-button";
-          copyButton.innerHTML = '<span class="sr-only">Copy code</span><i class="far fa-fw fa-copy"></i><i class="fas fa-fw fa-check copied"></i>';
+          copyButton.innerHTML = '<i class="far fa-fw fa-copy"></i><i class="fas fa-fw fa-check copied"></i>';
           copyButton.addEventListener("click", copyButtonEventListener);
           container.prepend(copyButton);
         });
@@ -241,27 +254,46 @@
   });
 
   // Dark theme setting
-      document.addEventListener('DOMContentLoaded', () => {
-  const toggleBtn = document.getElementById('theme-toggle');
-  const icon = document.getElementById('theme-icon');
-  
-  // Set initial icon state based on current theme
-  if (document.documentElement.getAttribute('data-theme') === 'dark') {
-    icon.classList.replace('fa-moon', 'fa-sun');
-  }
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+    if (!toggleBtn || !icon) return;
 
-  toggleBtn.addEventListener('click', () => {
-    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    const newTheme = isDark ? 'light' : 'dark';
-    
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    
-    // Swap icons
-    if (newTheme === 'dark') {
-      icon.classList.replace('fa-moon', 'fa-sun');
-    } else {
-      icon.classList.replace('fa-sun', 'fa-moon');
-    }
+    const toggleControl = toggleBtn.querySelector('a') || toggleBtn;
+
+    const updateThemeIcon = function (theme) {
+      if (theme === 'dark') {
+        icon.classList.replace('fa-moon', 'fa-sun');
+      } else {
+        icon.classList.replace('fa-sun', 'fa-moon');
+      }
+    };
+
+    const releaseThemeIconCursor = function () {
+      toggleControl.style.cursor = '';
+      icon.style.cursor = '';
+
+      if (document.activeElement === toggleControl) {
+        toggleControl.blur();
+      }
+    };
+    updateThemeIcon(document.documentElement.getAttribute('data-theme'));
+
+    toggleControl.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const newTheme = isDark ? 'light' : 'dark';
+
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+      releaseThemeIconCursor();
+    });
+
+    toggleControl.addEventListener('pointerup', releaseThemeIconCursor);
+    toggleControl.addEventListener('pointercancel', releaseThemeIconCursor);
+    toggleControl.addEventListener('mouseleave', releaseThemeIconCursor);
+    icon.addEventListener('mouseup', releaseThemeIconCursor);
+    icon.addEventListener('touchend', releaseThemeIconCursor);
   });
-}); 

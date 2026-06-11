@@ -127,12 +127,12 @@
   font-size: $doc-font-size;
 
 }
-.edu p {
-  font-style: italic;
+.edu a  {
   font-size: $doc-font-size;
   margin: auto;
   padding-left: 1.5em;
   padding-inline-end: 0;
+  text-decoration: none;
 }
 .edu p :hover {
   background-color: var(--global-masthead-link-color-hover);
