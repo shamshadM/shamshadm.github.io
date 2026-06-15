@@ -85,10 +85,6 @@
   }
 }
 
-/* Ensure the icon itself doesn't trigger a cursor */
-#theme-icon {
-  pointer-events: none;
-}
 
 // Photo for about me
 #about-me {
@@ -351,4 +347,74 @@ main #g6219 {
   align-items: center;
   flex-direction: row;
   gap: 5%;
+}
+
+/* /assets/css/viewer.css */
+
+#pdf-shield {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  margin: 2rem auto;
+  border: 1px solid var(--global-border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--global-bg-color);
+  user-select: none;          /* blocks text selection */
+  -webkit-user-select: none;
+}
+
+#capture-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;       /* lets clicks through to nav buttons */
+}
+
+#watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-35deg);
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.07);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 20;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+#pdf-canvas {
+  display: block;
+  width: 100%;
+}
+
+#pdf-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 10px;
+  background: var(--global-bg-color);
+  border-top: 1px solid var(--global-border-color);
+}
+
+#pdf-nav button {
+  padding: 6px 16px;
+  border: 1px solid var(--global-border-color);
+  border-radius: 6px;
+  background: var(--global-bg-color);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#pdf-nav button:hover { background: var(--global-hover-color); }
+
+#page-info {
+  font-size: 13px;
+  color: var(--global-text-color-light);
+  min-width: 90px;
+  text-align: center;
 }

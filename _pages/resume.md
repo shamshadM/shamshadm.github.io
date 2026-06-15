@@ -19,6 +19,118 @@ header:
 To contribute to improving the quality and sustainability (both environmental and economic) of life on Earth by developing plants that fit better into the natural world and produce more with less by means of plant breeding and agronomic methodologies.
 
 ------
+<style>
+.exp-wrap { max-width: 760px; margin: 0 auto; padding: 1rem 0; }
+.exp-section-label { font-size: 18px; font-weight: 500; color: var(--global-link-color); letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 20px 26px; }
+.exp-item { display: flex; gap: 16px; margin-bottom: 24px; }
+.exp-line { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+.exp-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--global-base-color); margin-top: 5px; flex-shrink: 0; }
+.exp-track { width: 1px; background: var(--global-bg-color); flex: 1; margin-top: 6px; }
+.exp-item:last-child .exp-track { display: none; }
+.exp-card { background: var(--global-bg-color); border: 0.5px solid var(--global-border-color); border-radius: 12px; padding: 14px 16px; flex: 1; }
+.exp-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.exp-title { font-size: 15px; font-weight: 500; color: var(--global-text-color); margin: 0; }
+.exp-badge { font-size: 11px; padding: 3px 8px; border-radius: 8px; background: var(--global-bg-color); color: var(--global-link-color); white-space: nowrap; flex-shrink: 0; }
+.exp-badge.current { background: var(--global-bg-color); color: var(--global-masterhead-link-color); }
+.exp-org { font-size: 15px; color: var(--global-base-color); margin: 0 0 10px; }
+.exp-bullets { list-style: none; padding: 0; margin: 0; }
+.exp-bullets li { list-style: none; font-size: 16px; color: var(--global-text-color); line-height: 1.65; padding: 2px 0 2px 14px; position: relative; }
+@media (max-width: 560px) {
+  .exp-header { flex-direction: column; gap: 4px; }
+  .exp-badge { align-self: flex-start; }
+}
+</style>
+<h1> Professional experience </h1>
+<div class="exp-wrap">
+
+  <div class="exp-item">
+    <div class="exp-line"><div class="exp-dot"></div><div class="exp-track"></div></div>
+    <div class="exp-card">
+      <div class="exp-header">
+        <p class="exp-title">Sugarcane Breeder</p>
+        <span class="exp-badge current">Present</span>
+      </div>
+      <p class="exp-org">PAU Regional Research Station, Kapurthala, Punjab, India</p>
+      <ul class="exp-bullets">
+        <li>Development and evaluation of improved sugarcane varieties for high sugar yield, disease resistance, and adaptability to Punjab agro-climatic conditions</li>
+        <li>Management and characterisation of sugarcane germplasm collections for breeding objectives</li>
+        <li>Multi-environment field trials for varietal testing and evaluation of ACRIP programme clones</li>
+        <li>Crossing programs targeting early maturity, ratoonability, and resistance to red rot and wilt diseases</li>
+        <li>Application of genomic and molecular tools for marker-assisted selection in sugarcane improvement</li>
+        <li>Coordination with state and national sugarcane improvement networks for germplasm exchange and variety testing</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-line"><div class="exp-dot"></div><div class="exp-track"></div></div>
+    <div class="exp-card">
+      <div class="exp-header">
+        <p class="exp-title">Plant Breeder – Cotton</p>
+        <span class="exp-badge">Previous</span>
+      </div>
+      <p class="exp-org"> PAU Regional Research Station, Faridkot, India</p>
+      <ul class="exp-bullets">
+        <li>Breeding and evaluation of <em>G. hirsutum</em> and <em>G. arboreum</em> for yield, fibre quality, and pest/disease resistance</li>
+        <li>Development and maintenance of cotton germplasm for pre-breeding and variety improvement programmes</li>
+        <li>Molecular marker-based assessment of genetic diversity and marker-assisted selection</li>
+        <li>Crossing programs targeting bollworm resistance, drought tolerance, and improved lint yield in upland cotton</li>
+        <li>Collaboration with national cotton research (ACRIP) for multi-location testing and variety release</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-line"><div class="exp-dot"></div><div class="exp-track"></div></div>
+    <div class="exp-card">
+      <div class="exp-header">
+        <p class="exp-title">Post Doctorate Research Associate (TIGR<sup>2</sup>ESS)</p>
+        <span class="exp-badge">Aug 2020 – Mar 2022</span>
+      </div>
+      <p class="exp-org">University of Cambridge, UK · Collaboration with PAU</p>
+      <ul class="exp-bullets">
+        <li>Pre-breeding and germplasm characterisation using novel genomics, phenomics, and statistical tools for irrigated, rainfed, and hybrid wheat breeding</li>
+        <li>Development of core panels and identification of potential trait gaps in phenotypic variation</li>
+        <li>Extensive field trials, crossing, phenotyping, and multi-environment data collection</li>
+        <li>Double haploid breeding in wheat using wheat × maize crosses</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-line"><div class="exp-dot"></div><div class="exp-track"></div></div>
+    <div class="exp-card">
+      <div class="exp-header">
+        <p class="exp-title">Junior Research Fellow</p>
+        <span class="exp-badge">Aug 2019 – Jul 2020</span>
+      </div>
+      <p class="exp-org">Plant Breeding &amp; Genetics, Punjab Agricultural University, Ludhiana</p>
+      <ul class="exp-bullets">
+        <li>Quantitative genetic analysis of field trials</li>
+        <li>Genome-wide analysis and genomic predictions for nitrogen use efficiency</li>
+        <li>Crosses in wheat for grain yield, heat, drought, salt, and stripe rust resistance</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-line"><div class="exp-dot"></div><div class="exp-track"></div></div>
+    <div class="exp-card">
+      <div class="exp-header">
+        <p class="exp-title">Research Assistant</p>
+        <span class="exp-badge">Jan 2015 – Dec 2015</span>
+      </div>
+      <p class="exp-org">Department of Plant Breeding and Genetics, PAU, Ludhiana</p>
+      <ul class="exp-bullets">
+        <li>Development of germplasm and core panel for yield, quality, and quantity oils</li>
+        <li>Extensive field trials, crossing of A, B, and R lines, and data collection of Advanced Variety Trials</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+------
 
 <h1>Qualifications/Certificates </h1>
 
@@ -37,42 +149,6 @@ To contribute to improving the quality and sustainability (both environmental an
 [Punjab Agricultural University](https://www.pau.edu/) - Ludhiana, India, June 2012
 
 **NET-Qualified, 2014**
-
- ------ 
- 
-<h1>Professional Positions</h1>
-
-------
-**[Post Doctorate Research Associate (TIGR<sup>2</sup>ESS)](https://tigr2ess.globalfood.cam.ac.uk/)**<br/>
-	August 2020 to present <br/>
-	Punjab Agricultural University, Ludhiana, India <br/>
-	100% Research <br/>
- 
- ------
-
-<h1> Research Experience </h1>
-
-------
-	
-**Research Fellow (TIGR<sup>2</sup>ESS)**<br/>
-	Agust 2019 to July 2020 <br/>
-	Department of Plant Breeding and Genetics, Punjab Agricultural University, Ludhiana India<br/>
-
-**Visiting Research Associate** <br/>
-	[School of Biosciences, University of Nottingham, United kingdom (UK)](https://www.nottingham.ac.uk/biosciences/).
-	
-**Visting Student Exchange** <br/>
-	[School of Biological Sciences, University of Bristol, United kingdom (UK)](https://www.bristol.ac.uk/life-sciences/).
-	
-**Ph. D (INEW International Fellow and Graduate Research Assistantship)**<br/>
-	January 2016 to September 2019 <br/>
-	
-**Research Assistant** <br/>
-	January 2015 to January 2016 <br/>
-	[Agricultural University, PAU, Ludhiana India](https://www.pau.edu/coa/index.php?_act=manageDepartments&DO=viewDepartment&intLinkID=9) <br/>
-	
-**Graduate Research Assistant (M.S.)** <br/>
-	July 2012 to November 2014 <br/>
 	
  ------ 
  
@@ -175,5 +251,29 @@ Quantitative Skills
 	*  DNA extractions, PCR, real-time PCR, electrophoresis, SSR marker and KASP marker genotyping
 
 ------
-<iframe src="https://drive.google.com/file/d/1PitDNdXiNqPTjLkKePm1px9A2NetjhvY/preview" width="100%" height="600px"></iframe>
+<!-- _layouts/default.html or any .html page -->
+
+<div id="pdf-shield">
+
+  <!-- Watermark overlay -->
+  <div id="watermark">Dr. Mohammad Shamshad · shamshad.in</div>
+
+  <!-- Transparent capture layer (blocks right-click / drag) -->
+  <div id="capture-layer"></div>
+
+  <!-- PDF rendered via PDF.js (no browser chrome, no download btn) -->
+  <canvas id="pdf-canvas"></canvas>
+
+  <!-- Custom navigation bar -->
+  <div id="pdf-nav">
+    <button onclick="prevPage()">‹ Prev</button>
+    <span id="page-info">Page 1 of 4</span>
+    <button onclick="nextPage()">Next ›</button>
+  </div>
+
+</div>
+
+<!-- PDF.js (no built-in UI) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="/assets/js/restrict.js" data-pdf="/files/pdf/cv.pdf"></script>
 ------
