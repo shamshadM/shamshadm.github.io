@@ -1,0 +1,4 @@
+user-agent: *
+Disallow: /* .pdf$
+Disallow: /404.html
+Sitemap: https://www.shamshad.in/sitemap.xml
