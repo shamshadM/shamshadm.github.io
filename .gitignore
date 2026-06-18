@@ -1,0 +1,10 @@
+.vscode/
+.vscode/settings.json
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
+.vss
+_site/
+package-lock.json
+package.json
+# End of https://mrkandreev.name/snippets/gitignore-generator/#Jekyll
