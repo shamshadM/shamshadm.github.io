@@ -1,7 +1,7 @@
 ---
 title: "Quantitative Genetics for Plant Breeding"
 layout: single-portfolio
-excerpt: "<img src ='/images/research/qtbc.webp' alt= ''>"
+excerpt: <img src='/images/research/qtbc.webp' alt=''>
 collection: research
 order_number: 10
 classes: wide

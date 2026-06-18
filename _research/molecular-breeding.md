@@ -1,7 +1,7 @@
 ---
 title: "Molecular Breeding and its implications"
 layout: single-portfolio
-excerpt: "<img src ='/images/research/mb.webp' alt= ''>"
+excerpt: <img src='/images/research/mb.webp' alt=''>
 collection: research
 order_number: 20
 classes: wide

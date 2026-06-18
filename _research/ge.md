@@ -1,7 +1,7 @@
 ---
 title: "Genotype x Environment Evaluation"
 layout: single-portfolio
-excerpt: "<img src ='/images/research/ge.webp' alt= ''>"
+excerpt: <img src='/images/research/ge.webp' alt=''>
 collection: research
 order_number: 40
 header: 

@@ -256,7 +256,7 @@ Quantitative Skills
 <div id="pdf-shield">
 
   <!-- Watermark overlay -->
-  <div id="watermark">Dr. Mohammad Shamshad · shamshad.in</div>
+  <div id="watermark">Dr. Mohammad Shamshad</div>
 
   <!-- Transparent capture layer (blocks right-click / drag) -->
   <div id="capture-layer"></div>

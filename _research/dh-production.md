@@ -1,7 +1,7 @@
 ---
 title: "Double Haploid Production in crop plants"
 layout: single-portfolio
-excerpt: "<img src ='/images/research/dh.webp' alt= ''>"
+excerpt: <img src='/images/research/dh.webp' alt=''>
 collection: research
 order_number: 30
 header: 

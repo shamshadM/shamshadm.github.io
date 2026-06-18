@@ -21,7 +21,139 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 100%;
+ 
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: $border-radius;
+  }
+}
+ 
+ 
+/*
+   Research Cards — responsive grid (mobile) / flex (desktop)
+   ========================================================================== */
+ 
+/* Grid wrapper: 1 col on mobile, 2 cols on tablet+ */
+.page__content .grid__wrapper {
+  display: grid !important;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  width: 100%;
+ 
+  @media (min-width: #{$small}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+  .grid__item {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}
+ 
+/* Research card: title on top, image below, links at bottom */
+.archive__item.research-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+ 
+  .research-card__content {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75em;
+ 
+    .archive__item-title {
+      font-size: 1em;
+      margin: 0 0 0.5em;
+ 
+      a { text-decoration: none; }
+    }
+ 
+    .research-card__image {
+      width: 100%;
+      flex: 1;
+ 
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: 180px;
+        object-fit: cover;
+        border-radius: $border-radius;
+      }
+    }
+ 
+    .research-card__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5em 1em;
+      font-size: 0.75em;
+      color: var(--global-text-color-light);
+      margin-bottom: 0.5em;
+ 
+      .research-card__date,
+      .research-card__updated {
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+ 
+        i { font-size: 0.9em; }
+      }
+    }
+ 
+    .research-card__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4em 1em;
+      margin-bottom: 0.6em;
+      font-size: 0.75em;
+      color: var(--global-text-color-light);
+ 
+      span {
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+ 
+        i { font-size: 0.9em; }
+      }
+    }
+ 
+    .research-card__links {
+      margin-top: 0.5em;
+      flex-shrink: 0;
+      a { margin-right: 0.5em; }
+    }
+  }
+}
+ 
+/* Tablet+ (>= 600px): image fills remaining card height */
+@media (min-width: #{$small}) {
+  .archive__item.research-card {
+    .research-card__content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+ 
+      .research-card__image {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+ 
+        img {
+          flex: 1;
+          height: 0;
+          min-height: 200px;
+        }
+      }
+    }
+  }
 }
 
 /* overlay effect (full height and width) - lays on top of the container */
@@ -145,9 +277,9 @@ font-style: italic;
 }
 
 #int {
-  line-height: 1.7em;
-  padding: 2px;
-  font-size: $doc-font-size-medium;
+  line-height: 1.8em;
+  padding: 3px;
+  font-size: $doc-font-size-large;
   margin-inline: 0;
   text-decoration: double;
   }
@@ -405,12 +537,12 @@ main #g6219 {
   padding: 6px 16px;
   border: 1px solid var(--global-border-color);
   border-radius: 6px;
-  background: var(--global-bg-color);
   cursor: pointer;
   font-size: 14px;
 }
 
-#pdf-nav button:hover { background: var(--global-hover-color); }
+#pdf-nav button:hover { background: var(--global-base-color); 
+                        text-combine-upright: var(--global-text-color);}
 
 #page-info {
   font-size: 13px;
