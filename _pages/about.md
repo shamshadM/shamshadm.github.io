@@ -37,25 +37,34 @@ Professional expertise in Plant Breeding, Quantitative Genetics, Genomics, and C
 <div class="edu">
 <div class="container-item">
 <h3>Education <i class="fa-solid fa-school"></i></h3>
-<i class="fa-solid fa-graduation-cap"></i><strong> PhD in Plant Breeding & Genetics, 2019 </strong><br> 
-<p><a href="https://www.bristol.ac.uk/life-sciences/">University of Bristol :uk:</a><br> 
-<a href="https://www.nottingham.ac.uk/biosciences/">University of Nottingham :uk: </a><br>
-<a href="https://www.pau.edu/">Punjab Agricultural University:india:</a></p>
+<div class="edu-item">
+<i class="fa-solid fa-graduation-cap"></i> <strong>PhD in Plant Breeding & Genetics, 2019</strong>
+<p>
+<a href="https://www.bristol.ac.uk/life-sciences/">University of Bristol :uk:</a> <br>
+<a href="https://www.nottingham.ac.uk/biosciences/">University of Nottingham :uk:</a> <br>
+<a href="https://www.pau.edu/">Punjab Agricultural University :india:</a> 
+</p>
+</div>
+<div class="edu-item">
 <i class="fa-solid fa-graduation-cap"></i> <strong>MSc in Plant Breeding & Genetics, 2014</strong>
-<p><a href="https://www.pau.edu/">Punjab Agricultural University, :india:</a></p>
-<i class="fa-solid fa-graduation-cap"></i> <strong > BSc in  Agriculture [Crop Science]</strong> 
-<p><a href="https://www.pau.edu/">Punjab Agricultural University, 2012 :india:</a></p>
+<p><a href="https://www.pau.edu/">Punjab Agricultural University :india:</a></p>
 </div>
-<div class="container-item"><h3>Interests and Hobbies 👨‍💻📝🪴🏋️</h3>
-<div id="int">
-  <li>:world_map: Breeding and Genetics<br></li>
-  <li>:desktop_computer: AI for Plant Breeding<br></li>                  
-  <li>:seedling: Knowledge sharing<br></li>
-  <li>:keyboard: Data Science<br></li>
-  <li>:writing_hand: Writing<br></li>
-  <li>:national_park: Gardening<br></li>
-  <li>:weight_lifting_man: Gym<br></li>
+<div class="edu-item">
+<i class="fa-solid fa-graduation-cap"></i> <strong>BSc in Agriculture [Crop Science], 2012</strong>
+<p><a href="https://www.pau.edu/">Punjab Agricultural University :india:</a></p>
 </div>
+</div>
+<div class="container-item">
+<h3>Interests and Hobbies 👨‍💻📝🪴🏋️</h3>
+<ul id="int">
+  <li>:world_map: Breeding and Genetics</li>
+  <li>:desktop_computer: AI for Plant Breeding</li>
+  <li>:seedling: Knowledge sharing</li>
+  <li>:keyboard: Data Science</li>
+  <li>:writing_hand: Writing</li>
+  <li>:national_park: Gardening</li>
+  <li>:weight_lifting_man: Gym</li>
+</ul>
 </div>
 </div>
 

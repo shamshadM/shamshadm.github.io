@@ -251,22 +251,29 @@
   font-size: $doc-font-size-large;
 }
 
+.edu-item {
+  margin-bottom: 1em;
+}
+
 .edu span {
   font-size: $doc-font-size;
 
 }
 .edu a  {
+  display: inline-block;
   font-size: $doc-font-size;
   margin: auto;
   padding-left: 1.5em;
   padding-inline-end: 0;
   text-decoration: none;
-}
-.edu p :hover {
-  background-color: var(--global-masthead-link-color-hover);
-  padding: 4px;
+  
   border-radius: 5px;
+  transition: all 0.3s ease;
+&:hover {
+  color: var(--global-link-color-hover);
+  border: 1px solid var(--global-link-color-hover);
 
+}
 }
 
 .earlyEdu  {
@@ -277,8 +284,8 @@ font-style: italic;
 }
 
 #int {
-  line-height: 1.8em;
-  padding: 3px;
+  line-height: 1.5em;
+  padding: 2px;
   font-size: $doc-font-size-large;
   margin-inline: 0;
   text-decoration: double;
