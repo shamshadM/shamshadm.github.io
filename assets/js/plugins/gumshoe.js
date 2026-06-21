@@ -8,15 +8,15 @@
 
 (function (root, factory) {
 	if ( typeof define === 'function' && define.amd ) {
-		define([], (function () {
+		define([], function () {
 			return factory(root);
-		}));
+		});
 	} else if ( typeof exports === 'object' ) {
 		module.exports = factory(root);
 	} else {
 		root.Gumshoe = factory(root);
 	}
-})(typeof global !== 'undefined' ? global : typeof window !== 'undefined' ? window : this, (function (window) {
+})(typeof global !== 'undefined' ? global : typeof window !== 'undefined' ? window : this, function (window) {
 
 	'use strict';
 
@@ -55,12 +55,12 @@
 	 */
 	var extend = function () {
 		var merged = {};
-		Array.prototype.forEach.call(arguments, (function (obj) {
+		Array.prototype.forEach.call(arguments, function (obj) {
 			for (var key in obj) {
 				if (!obj.hasOwnProperty(key)) return;
 				merged[key] = obj[key];
 			}
-		}));
+		});
 		return merged;
 	};
 
@@ -109,12 +109,12 @@
 	 */
 	var sortContents = function (contents) {
 		if(contents) {
-			contents.sort((function (item1, item2) {
+			contents.sort(function (item1, item2) {
 				var offset1 = getOffsetTop(item1.content);
 				var offset2 = getOffsetTop(item2.content);
 				if (offset1 < offset2) return -1;
 				return 1;
-			}));
+			});
 		}
 	};
 
@@ -206,7 +206,7 @@
 	var deactivateNested = function (nav, settings) {
 
 		// If nesting isn't activated, bail
-		if (!settings.nested) return;
+		if (!settings.nested || !nav.parentNode) return;
 
 		// Get the parent navigation
 		var li = nav.parentNode.closest('li');
@@ -227,7 +227,7 @@
 	 */
 	var deactivate = function (items, settings) {
 
-		// Make sure their are items to deactivate
+		// Make sure there are items to deactivate
 		if (!items) return;
 
 		// Get the parent list item
@@ -280,7 +280,7 @@
 	 */
 	var activate = function (items, settings) {
 
-		// Make sure their are items to activate
+		// Make sure there are items to activate
 		if (!items) return;
 
 		// Get the parent list item
@@ -334,7 +334,7 @@
 			contents = [];
 
 			// Loop through each item, get it's matching content, and push to the array
-			Array.prototype.forEach.call(navItems, (function (item) {
+			Array.prototype.forEach.call(navItems, function (item) {
 
 				// Get the content for the nav item
 				var content = document.getElementById(decodeURIComponent(item.hash.substr(1)));
@@ -346,7 +346,7 @@
 					content: content
 				});
 
-			}));
+			});
 
 			// Sort contents by the order they appear in the DOM
 			sortContents(contents);
@@ -410,10 +410,10 @@
 			}
 
 			// Setup debounce callback
-			timeout = window.requestAnimationFrame((function () {
+			timeout = window.requestAnimationFrame(function () {
 				sortContents(contents);
 				publicAPIs.detect();
-			}));
+			});
 
 		};
 
@@ -481,4 +481,4 @@
 
 	return Constructor;
 
-}));
+});

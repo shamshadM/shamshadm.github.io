@@ -2,7 +2,6 @@
    BASE ELEMENTS
    ========================================================================== */
 
-
 // Module imports — provides all $variables, mixins, and functions.
 @use "../index" as *;
 
@@ -10,14 +9,19 @@ html {
   /* sticky footer fix */
   position: relative;
   min-height: 100%;
-  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   padding: 0;
   max-width: 100%;
-  overflow-x: hidden;
+  /* NOTE: don't set overflow-x (or overflow) here. `overflow` on ANY
+     ancestor other than "visible" — including html/body, and #main, which
+     also wraps the sidebar — disables `position: sticky` on descendants.
+     That's what stopped the TOC sidebar (.sidebar__right.sticky) from
+     sticking while scrolling. If horizontal bleed shows up again, clip it
+     on the specific offending element (e.g. via `max-width: 100vw` or a
+     transform) rather than on html/body. */
   color: var(--global-text-color);
   font-family: $global-font-family;
   line-height: 1.5;
@@ -120,7 +124,7 @@ blockquote {
   padding-inline: 1em;
   font-style: italic;
   border-inline-start: 0.25em solid var(--global-base-color);
-   font-size: 0.85em;
+  font-size: 0.85em;
 
   cite {
     font-style: italic;
@@ -137,7 +141,7 @@ blockquote {
 a {
   &:focus {
     // Was: @extend %tab-focus — cross-module placeholder extend not supported in Dart Sass @use.
-  @include tab-focus;
+    @include tab-focus;
   }
 
   &:visited {
@@ -165,14 +169,14 @@ kbd,
 samp,
 pre {
   font-family: $monospace, $serif;
-   font-size: 0.95em;                                      
+  font-size: 0.95em;
 }
 
 pre {
   overflow-x: auto; /* add scrollbars to wide code blocks*/
 }
 
- p > code,
+p > code,
 a > code,
 li > code,
 figcaption > code,
@@ -189,7 +193,7 @@ td > code {
     content: "\00a0"; /* non-breaking space*/
   }
 }
-        
+
 /* horizontal rule */
 
 hr {
@@ -213,7 +217,7 @@ li ol {
 
 ul li {
   list-style-type: circle;
-}        
+}
 /*
    Media and embeds
    ========================================================================== */

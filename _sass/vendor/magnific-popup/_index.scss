@@ -1,0 +1,18 @@
+// =============================================================================
+// vendor/magnific-popup/_index.scss — Magnific Popup vendor barrel
+//
+// Pulls in the official Magnific Popup CSS (src/css/main.scss + _settings.scss
+// from https://github.com/dimsemenov/Magnific-Popup), adapted only to use
+// Dart Sass's @use module system instead of legacy @import — same approach as
+// vendor/fonts/_index.scss. Styles the .mfp-* markup that jquery.magnific-popup.js
+// (assets/js/plugins/jquery.magnific-popup.js) generates at runtime for the
+// image lightbox (see assets/js/_main.js's `.image-popup` init).
+//
+// To override any $mfp-* default (colors, spacing, etc.), use Sass's
+// `with (...)` syntax at the call site in minimal-partials.scss, e.g.:
+//   @use "vendor/magnific-popup/index" as magnific-popup with ($mfp-overlay-opacity: 0.9);
+// Plain !default reassignment elsewhere won't reach across @use boundaries.
+// =============================================================================
+
+@use "settings" as *;
+@use "main";

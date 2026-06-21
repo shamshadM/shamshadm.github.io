@@ -2,6 +2,14 @@
 GreedyNav.js - https://github.com/lukejacksonn/GreedyNav
 Licensed under the MIT license - http://opensource.org/licenses/MIT
 Copyright (c) 2015 Luke Jackson http://lukejacksonn.com
+
+Updated:
+- Replaced the deprecated `.resize()` event shorthand with `.on('resize', ...)`
+  (event shorthands have been deprecated since jQuery 3.3; using `.on()`
+  keeps this working cleanly on jQuery 3.x and 4.x alike).
+- Debounced the resize handler so the (relatively expensive) `check()`
+  recalculation doesn't run on every single resize tick while the user
+  is actively dragging the window edge — only after resizing pauses.
 */
 
 $(function() {
@@ -96,10 +104,17 @@ $(function() {
     } else $btn.removeClass('hidden');
   }
 
+  // Debounce resize handling so `check()` only runs once resizing has
+  // paused for 100ms, instead of on every resize tick.
+  var resizeTimer;
+  function debouncedCheck() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(check, 100);
+  }
+
   // Window listeners
-  $(window).resize(function() {
-    check();
-  });
+  // (.on('resize', ...) instead of the deprecated .resize(...) shorthand)
+  $(window).on('resize', debouncedCheck);
 
   $btn.on('click', function() {
     $hlinks.toggleClass('hidden');

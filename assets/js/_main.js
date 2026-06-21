@@ -125,6 +125,11 @@
       image: {
         tError: '<a href="%url%">Image #%curr%</a> could not be loaded.',
       },
+      // Magnific Popup 1.2.0 defaults status-indicator text to .text() (XSS
+      // hardening) instead of always using .html(). Our tError string above
+      // is a hardcoded developer string (not user/CMS input), so it's safe
+      // to opt back into HTML rendering here to keep the "Image #N" link.
+      allowHTMLInStatusIndicator: true,
       removalDelay: 500, // Delay in milliseconds before popup is removed
       // Class that is added to body when popup is open.
       // make it unique to apply your CSS animations just to this exact popup
