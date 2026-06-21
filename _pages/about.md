@@ -67,13 +67,12 @@ Professional expertise in Plant Breeding, Quantitative Genetics, Genomics, and C
 </ul>
 </div>
 </div>
-
-
-> **Early Schooling** <i class="fa-solid fa-school"></i><br>
+<hr>
+**Early Schooling** <i class="fa-solid fa-school"></i><br>
 > Classes IX–X · Islamia Senior Secondary School, Malerkotla (Punjabi medium)<br>
 > Classes VI–VIII · Islamia Senior Secondary School, Malerkotla (Urdu medium)<br>
 > Classes I–V · Local Madrasa, Jamalpura, Malerkotla (Urdu medium)
-
+<hr>
 Beyond scientific pursuits 🕌 ♻️, interests include coding and program development 🚩, as well as spending time with friends 😇 and family :family:. Raised in India 🇮🇳, with proficiency in Punjabi, English 🇬🇧, Hindi, and Urdu, along with basic knowledge of French 🇫🇷. Known for taking initiative 🍼 and maintaining a curious mindset 🦅.
 {: .text-justify}
 
