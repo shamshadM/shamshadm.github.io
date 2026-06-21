@@ -212,7 +212,7 @@ var store = [{
         "title": "Variability in iron, zinc, phytic acid and protein content in pre‑breeding wheat germplasm under diferent water regimes",
         "excerpt":"Download PDF here Abstract: More than one-third of the global population sufers from iron and zinc defciency, developing anaemia like diseases mostly in the developing countries. Therefore, the current study focuses on the investigation of variability and bioavailability of micronutrients such as iron and zinc in bread wheat mediated by...","categories": [],
         "tags": [],
-        "url": "/publication/2022-12-16-%C2%A0PULSE_project-Phyt",
+        "url": "/publication/2022-12-16-PULSE_project-Phyt",
         "teaser": null
       },{
         "title": "Double Haploid Production in crop plants",
