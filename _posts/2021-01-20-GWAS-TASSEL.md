@@ -7,6 +7,7 @@ categories: TASSEL software
 description: "Learn Genome-Wide Association Studies (GWAS)
   using TASSEL with this beginner-friendly tutorial."
 number_sections: true
+mermaid: true
 header: 
   og_image: "images/biostat/gwas/gwaslogo.webp"
 tags: 

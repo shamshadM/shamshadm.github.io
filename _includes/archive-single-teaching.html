@@ -16,7 +16,7 @@
   <article class="archive__item" itemscope itemtype="https://schema.org/EducationEvent">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
-        <img loading="eager"
+        <img loading="lazy"
           {% if teaser contains "://" %}
             src="{{ teaser }}"
           {% else %}

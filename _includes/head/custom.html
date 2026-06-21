@@ -6,10 +6,12 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="dns-prefetch" href="https://cdn.plot.ly">
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
 
+{% if page.plotly %}
+<link rel="dns-prefetch" href="https://cdn.plot.ly">
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" defer></script>
+{% endif %}
 <link rel="stylesheet" href="{{ 'assets/fontawesome/css/all.min.css' | relative_url }}" fetchpriority="low"> 
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">

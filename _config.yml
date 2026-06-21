@@ -138,9 +138,7 @@ footer:
       icon: "fab fa-fw fa-researchgate icon-pad-right"
       url: "https://www.researchgate.net/profile/Mohd-Shamshad"
 
-after_footer_scripts:
-  - assets/js/mermaid.min.js
-      
+
 # Reading Files
 include:
   - .htaccess

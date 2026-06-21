@@ -35,7 +35,8 @@
   <br><br>
   <span class="footer-badge">Proudly developed in India. :india: </span>
 </div>
+{% if include.mermaid %}
 {{/* content added for mermaid package for flow diagrams */}}
-
-<link defer rel="preload" href="/assets/js/mermaid.min.js" defer as="script">
+<link rel="preload" href="/assets/js/mermaid.min.js" as="script">
 <script defer src="{{ '/assets/js/mermaid.min.js' | relative_url }}"></script>
+{% endif %}
