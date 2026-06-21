@@ -2,7 +2,6 @@
    SIDEBAR
    ========================================================================== */
 
-
 // Module imports — provides all $variables, mixins, and functions.
 @use "../index" as *;
 
@@ -15,7 +14,7 @@
   margin-bottom: 1em;
 
   @media (orientation: portrait) {
-    margin-top: 1em;    
+    margin-top: 1em;
   }
 
   @include breakpoint($large) {
@@ -217,14 +216,16 @@
   button {
     position: relative;
     margin-bottom: 0;
-    min-height: 44px;
-    padding-inline: 1.25em;
-    border-radius: 999px;
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    min-height: clamp(40px, 5vw, 48px);
+    padding-inline: clamp(12px, 2vw, 20px);
+    border-radius: clamp(8px, 1vw, 12px);
+    transition:
+      box-shadow 0.2s ease,
+      transform 0.2s ease;
 
     &:before {
       @supports (pointer-events: none) {
-        content: '';
+        content: "";
         position: fixed;
         top: 0;
         inset-inline-start: 0;
@@ -251,6 +252,12 @@
     }
   }
 }
+@media (max-width: 768px) {
+  button {
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+  }
+}
 
 .author__urls {
   display: none;
@@ -264,7 +271,9 @@
   border: 1px solid var(--global-border-color);
   border-radius: $border-radius;
   background: var(--global-bg-color);
-  box-shadow: 0 2px 4px 0 rgba(#000, 0.16), 0 2px 10px 0 rgba(#000, 0.12);
+  box-shadow:
+    0 2px 4px 0 rgba(#000, 0.16),
+    0 2px 10px 0 rgba(#000, 0.12);
   cursor: default;
 
   &.is--visible {
@@ -335,7 +344,9 @@
     color: inherit;
     font-size: $type-size-5;
     text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease;
 
     &:hover {
       text-decoration: underline;

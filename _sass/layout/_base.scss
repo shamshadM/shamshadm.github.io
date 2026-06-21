@@ -10,11 +10,14 @@ html {
   /* sticky footer fix */
   position: relative;
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
   color: var(--global-text-color);
   font-family: $global-font-family;
   line-height: 1.5;
