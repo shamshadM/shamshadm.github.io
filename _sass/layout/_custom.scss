@@ -266,18 +266,10 @@
   margin: auto;
 
   li {
-    list-style: none;
+    list-style: disc;
     font-style: italic;
     font-size: $doc-font-size;
-    position: relative;
-    padding-left: 1.5em;
-
-    &::before {
-      content: "📚";
-      color: var(--global-btn-color);
-      margin-right: 0.25rem;
-      left: 0;
-    }
+    position: sticky;
   }
 }
 
