@@ -486,6 +486,109 @@ main #g6219 {
   gap: 5%;
 }
 
+// Experience section
+.exp-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+.exp-section-label {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--global-link-color);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 20px 26px;
+}
+.exp-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.exp-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+.exp-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--global-base-color);
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+.exp-track {
+  width: 1px;
+  background: var(--global-bg-color);
+  flex: 1;
+  margin-top: 6px;
+}
+.exp-item:last-child .exp-track {
+  display: none;
+}
+.exp-card {
+  background: var(--global-bg-color);
+  border: 0.5px solid var(--global-border-color);
+  border-radius: 12px;
+  padding: 14px 16px;
+  flex: 1;
+}
+.exp-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.exp-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--global-text-color);
+  margin: 0;
+}
+.exp-badge {
+  font-size: 13px;
+  padding: 3px 8px;
+  border-radius: 8px;
+  background: var(--global-bg-color);
+  color: var(--global-link-color);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.exp-badge.current {
+  background: var(--global-bg-color);
+  color: var(--global-btn-color);
+}
+.exp-org {
+  font-size: 15px;
+  color: var(--global-base-color);
+  margin: 0 0 10px;
+}
+.exp-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.exp-bullets li {
+  list-style: none;
+  font-size: 16px;
+  color: var(--global-text-color);
+  line-height: 1.65;
+  padding: 2px 0 2px 14px;
+  position: relative;
+}
+@media (max-width: 560px) {
+  .exp-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .exp-badge {
+    align-self: flex-start;
+  }
+}
+
 /* /assets/css/viewer.css */
 
 #pdf-shield {
