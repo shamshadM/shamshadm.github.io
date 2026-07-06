@@ -35,7 +35,6 @@ group :jekyll_plugins do
   gem 'faraday-retry'
   gem 'jekyll-last-modified-at'
   gem 'jekyll-gzip'
-  gem 'jekyll-brotli'
   gem 'jemoji'
   gem 'puma'
 end

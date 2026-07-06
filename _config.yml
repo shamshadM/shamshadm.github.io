@@ -308,7 +308,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-last-modified-at
   - jekyll-gzip
-  - jekyll-brotli
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
