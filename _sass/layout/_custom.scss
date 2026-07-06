@@ -260,23 +260,10 @@
   }
 }
 
-.earlyEdu {
-  list-style: none;
-  padding-left: 1rem;
-  margin: auto;
-
-  li {
-    list-style: disc;
-    font-style: italic;
-    font-size: $doc-font-size;
-    position: sticky;
-  }
-}
-
 #int {
   line-height: 1.5em;
   padding: 2px;
-  font-size: $doc-font-size-large;
+  font-size: $doc-font-size-medium;
   margin-inline: 0;
   text-decoration: double;
 }
@@ -304,7 +291,7 @@ main #errorLink {
   font-size: 20px;
   padding: 12px;
   border: 1px solid;
-  color: var(-global-base-color);
+  color: var(--global-base-color);
   background-color: transparent;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
@@ -406,7 +393,7 @@ main #g6219 {
 
 .btn-outline-primary {
   color: var(--global-text-color);
-  border-color: #007bff;
+  border-color: #60A5FA;
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -416,7 +403,7 @@ main #g6219 {
   -ms-user-select: none;
   user-select: none;
   background-color: transparent;
-  border: 1px var(--global-btn-color) solid;
+  border: 1px #60A5FA solid;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -426,14 +413,15 @@ main #g6219 {
     background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
-}
-.btn-outline-primary:hover {
-  background-color: var(--global-masthead-link-color-hover);
-  transition:
-    color 0.15s ease-in-out,
-    var(--global-bg-color) 0.15s ease-in-out,
-    var(--global-border-color) 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+  &:hover {
+    color: var(--global-text-color);
+    background-color: var(--global-masthead-link-color-hover);
+    transition:
+      color 0.15s ease-in-out,
+      var(--global-bg-color) 0.15s ease-in-out,
+      var(--global-border-color) 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+  }
 }
 
 .mermaid {
